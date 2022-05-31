@@ -242,6 +242,7 @@ def mel_to_python_type(type: str) -> str:
 
 def generate_stubs_content() -> str:
     lines = [
+        "# fmt: off",
         "from typing import *",
         "from _typeshed import Incomplete",
         "",
@@ -264,7 +265,9 @@ def generate_stubs_content() -> str:
 
 
 def write_stubs(stubs: str) -> None:
-    stubs_path = Path(__file__).parent.parent / "maya-stubs" / "cmds" / "__init__.pyi"
+    stubs_path = (
+        Path(__file__).parent.parent / "maya-stubs" / "cmds" / "__autogen__init__.pyi"
+    )
 
     logger.debug("Writing stubs in %s", stubs_path)
 
