@@ -1,0 +1,36 @@
+import logging
+
+import click
+
+from maya_stubgen.get_cmds_synopsis import get_cmds_synopsis
+
+from .generate_stubs import generate_stubs
+from .utils import initialize_maya, uninitialize_maya
+
+logger = logging.getLogger("maya_stubgen")
+
+
+@click.group
+def cli():
+    initialize_maya()
+
+
+@cli.result_callback()
+def result(result):
+    uninitialize_maya()
+
+
+@cli.command
+def test_log():
+    logger.setLevel(logging.DEBUG)
+
+    logger.debug("Debug")
+    logger.info("Info")
+    logger.success("Success")
+    logger.warning("Warning")
+    logger.error("Error")
+    logger.critical("Critical")
+
+
+cli.add_command(generate_stubs)
+cli.add_command(get_cmds_synopsis)

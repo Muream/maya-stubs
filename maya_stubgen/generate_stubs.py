@@ -2,28 +2,17 @@ import inspect
 import keyword
 import logging
 import re
-import sys
 from dataclasses import dataclass, field
 from pathlib import Path
 from textwrap import indent
 from typing import *
 from typing import Callable
 
+import click
+
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
 
 DEBUG = False
-
-if __name__ == "__main__":
-    import maya.standalone
-
-    try:
-        logger.info("Initializing Maya Standalone.")
-        maya.standalone.initialize()
-    except BaseException:
-        logger.info("Failed to initialize Maya Standalone.")
-    else:
-        logger.info("Initialized Maya Standalone Successfully.")
 
 
 from maya import cmds
@@ -137,43 +126,86 @@ def cmds_functions() -> List[Callable]:
     return inspect.getmembers(cmds, callable)
 
 
-def _args_from_docstring(docstring: str) -> List[Argument]:
-    if "No Flags" in docstring:
+def _args_from_help(synopsis: str) -> List[Argument]:
+    if "No Flags" in synopsis:
         arguments = []
-    elif "Quick help is not available" in docstring:
+    elif "Quick help is not available" in synopsis:
         arguments = ["*args", "**kwargs"]
     else:
         arguments = []
-        types_regex = (
-            r"(\s+((?P<types>[\w\|]+( \w+)?)) ?(?P<multi_use>\(multi-use\))?)?$"
+
+        # https://regex101.com/r/9595nC/1
+        header_regex = r"Synopsis: (?P<name>\w+)( \[flags\] ?(?P<implicit_args>.*))?"
+
+        # https://regex101.com/r/bBZoCh/3
+        flag_regex = (
+            r"-(?P<short_name>\w+)\s+"
+            r"-(?P<long_name>\w+)"
+            r"(?P<types>[\w\|\s\[\]]+)?\s?"
+            r"(?P<multi_use>\(multi-use\))?\s?"
+            r"(\(Query Arg (?P<query_arg_mandatory>Mandatory|Optional)\))?"
         )
-        flag_regex = r"^-(?P<short_name>\w+)\s+-(?P<long_name>\S+)" + types_regex
-        for line in docstring.splitlines():
+
+        for line in synopsis.splitlines():
             line = line.strip()
-            match = re.match(flag_regex, line)
-            if match:
-                long_name = match["long_name"]
-                short_name = match["short_name"]
+
+            match_header = re.match(header_regex, line)
+            if match_header:
+                implicit_args = match_header["implicit_args"]
+
+                if not implicit_args:
+                    continue
+
+                implicit_args = implicit_args.strip()
+
+                if "..." in implicit_args:
+                    # the type is a list. Eg [String...]
+                    implicit_args = implicit_args[1:-1].replace("...", "")
+                    list_type = mel_to_python_type(implicit_args)
+                    arg_type = f"List[{list_type}]"
+                    arg_name = "*args"
+                elif implicit_args.count(" ") > 0:
+                    # the type is a tuple
+                    implicit_args = implicit_args.replace("[", "").replace("]", "")
+                    tuple_types = map(mel_to_python_type, implicit_args.split())
+                    arg_type = f"Tuple[{', '.join(tuple_types)}]"
+                    arg_name = "*args"
+                else:
+                    # the type is a basic type
+                    arg_type = mel_to_python_type(implicit_args)
+                    arg_name = "arg0"
+
+                argument = Argument(arg_name, None, arg_type)
+                arguments.append(argument)
+
+                continue
+
+            match_flag = re.match(flag_regex, line)
+            if match_flag:
+                long_name = match_flag["long_name"]
+                short_name = match_flag["short_name"]
 
                 # types can be either
                 # - One type. eg: Float
                 # - Multiple types. eg: Float String Int
+                # - Union of types?. eg: [Float on|off]  # TODO: Unsupported
                 # - None (when no type is specified).
-                types = str(match["types"]).split()
+                types = str(match_flag["types"]).split()
                 types = [mel_to_python_type(t) for t in types]
 
                 if len(types) == 1:
-                    type_ = types[0]
+                    arg_type = types[0]
                 else:
-                    type_ = f"Tuple[{', '.join(types)}]"
+                    arg_type = f"Tuple[{', '.join(types)}]"
 
-                multi_use = match["multi_use"]
+                multi_use = match_flag["multi_use"]
                 if multi_use:
-                    type_ = f"List[{type_}]"
+                    arg_type = f"List[{arg_type}]"
 
-                argument = Argument(long_name, short_name, type_)
+                argument = Argument(long_name, short_name, arg_type)
                 if argument not in arguments:
                     arguments.append(argument)
+                continue
 
     return arguments
 
@@ -200,6 +232,8 @@ def mel_to_python_type(type: str) -> str:
         "UnsignedInt": "int",
         "Time": "int",
         # bool
+        "": "bool",
+        None: "bool",
         "None": "bool",
         "on|off": "bool",
     }
@@ -217,13 +251,13 @@ def generate_stubs_content() -> str:
     for func, _ in cmds_functions():
         logger.debug("Generating signature for %s", func)
         try:
-            docstring = cmds.help(func).strip("\n")
+            help = cmds.help(func).strip("\n")
         except RuntimeError:
-            docstring = ""
+            help = ""
 
-        args = _args_from_docstring(docstring)
+        args = _args_from_help(help)
 
-        function = Function(func, arguments=args, docstring=docstring)
+        function = Function(func, arguments=args, docstring=help)
         lines.append(function.stub)
 
     return "\n".join(lines)
@@ -231,38 +265,26 @@ def generate_stubs_content() -> str:
 
 def write_stubs(stubs: str) -> None:
     stubs_path = Path(__file__).parent.parent / "maya-stubs" / "cmds" / "__init__.pyi"
+
     logger.debug("Writing stubs in %s", stubs_path)
+
     stubs_path.parent.mkdir(parents=True, exist_ok=True)
 
     with stubs_path.open("w") as f:
         f.write(stubs)
 
+    return stubs_path
 
+
+@click.command()
 def generate_stubs() -> None:
     logger.info("Generating Stubs")
 
-    stubs = generate_stubs_content()
-    write_stubs(stubs)
-
-    logger.info("Stubs Generated Successfully")
-
-
-def main():
-    global DEBUG
-    DEBUG = "--debug" in sys.argv
-
-    generate_stubs()
-
-
-if __name__ == "__main__":
-    main()
-
-    import maya.standalone
-
     try:
-        logger.info("Uninitializing Maya Standalone.")
-        maya.standalone.uninitialize()
-    except BaseException:
-        logger.info("Failed to uninitialize Maya Standalone.")
+        stubs = generate_stubs_content()
+        stubs_path = write_stubs(stubs)
+    except BaseException as e:
+        logger.error("Failed to generate stubs")
+        raise e
     else:
-        logger.info("Uninitialized Maya Standalone Successfully.")
+        logger.success("Stubs generated in %s", stubs_path)
