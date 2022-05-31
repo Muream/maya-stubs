@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "maya-stubs"
+version = "0.1.0"
+description = "Stubs for Maya"
+authors = ["Loïc Pinsard <muream@gmail.com>"]
+license = "MIT"
+packages = [
+    { include = "maya-stubs" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+black = "*"
+pylint = "*"
+mypy = "^0.960"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

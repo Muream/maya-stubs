@@ -1,0 +1,20 @@
+{
+    "python.languageServer": "Pylance",
+    "editor.formatOnSave": true,
+    "python.formatting.provider": "black",
+    "python.sortImports.args": [
+        "--profile",
+        "black"
+    ],
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.analysis.extraPaths": [
+        "scripts",
+        "stubs"
+    ]
+}
