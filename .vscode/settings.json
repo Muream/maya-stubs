@@ -13,8 +13,4 @@
     },
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
-    "python.analysis.extraPaths": [
-        "scripts",
-        "stubs"
-    ]
 }

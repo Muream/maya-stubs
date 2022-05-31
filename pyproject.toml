@@ -4,6 +4,8 @@ version = "0.1.0"
 description = "Stubs for Maya"
 authors = ["Loïc Pinsard <muream@gmail.com>"]
 license = "MIT"
+readme = "README.md"
+repository = "https://github.com/Muream/maya-stubs"
 packages = [
     { include = "maya-stubs" },
 ]
