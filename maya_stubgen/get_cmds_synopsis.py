@@ -72,7 +72,7 @@ def get_cmds_synopsis(type):
     type = SynopsisType(type)
     cmds_synopsis = synopsis_for_type(type)
 
-    out_file = Path() / "out" / "synopsis" / f"{type}.txt"
+    out_file = Path() / "temp" / "synopsis" / f"{type}.txt"
     out_file.parent.mkdir(parents=True, exist_ok=True)
 
     with open(out_file, "w") as f:

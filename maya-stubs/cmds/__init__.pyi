@@ -1,5 +1,5 @@
 # fmt: off
-from .__autogen__init__ import *
+from .__init___generated import *
 
 
 def createNode(type: str, name: str, parent: str, shared: bool, skipSelect: bool) -> str: ...

@@ -11,10 +11,9 @@ from typing_extensions import Self
 
 STUB_HEADER = """\
 # fmt: off
-if False:
-    # Don't include any of typing's Objects in the stubs' __all__
-    from typing import *
-    from _typeshed import Incomplete
+from typing import *
+from typing_extensions import Self
+from _typeshed import Incomplete
 \n
 """
 
@@ -23,8 +22,7 @@ TAB = TAB_LENGTH * " "
 
 
 class MISSING:
-    """Used when a value is not specified as opposed to specified but purposefully None.
-    """
+    """Used when a value is not specified as opposed to specified but purposefully None."""
 
 
 class FunctionType(Enum):
@@ -151,7 +149,7 @@ class Function:
     name: str
     arguments: List[Variable] = field(default_factory=list)
     docstring: Optional[str] = None
-    return_type: Type = MISSING
+    return_type: Type = Any
     function_type: FunctionType = FunctionType.function
 
     def __post_init__(self):
@@ -190,7 +188,11 @@ class Function:
                 )
                 arg = Variable(arg_name, annotation, value, is_argument=True)
                 arguments.append(arg)
-            return_type = signature.return_annotation
+            return_type = (
+                signature.return_annotation
+                if signature.return_annotation is not signature.empty
+                else Any
+            )
         docstring = obj.__doc__
 
         return Function(name, arguments, docstring, return_type, function_type)

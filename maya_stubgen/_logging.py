@@ -98,14 +98,5 @@ def init_logger():
     stdout_handler.setLevel(logging.DEBUG)
     stdout_handler.setFormatter(CustomFormatter(stdout_fmt))
 
-    # Create file handler for logging to a file (logs all five levels)
-    today = datetime.date.today()
-    file_handler = logging.FileHandler(
-        "my_app_{}.log".format(today.strftime("%Y_%m_%d"))
-    )
-    file_handler.setLevel(logging.DEBUG)
-    file_handler.setFormatter(logging.Formatter(file_fmt))
-
     # Add both handlers to the logger
     root_logger.addHandler(stdout_handler)
-    root_logger.addHandler(file_handler)

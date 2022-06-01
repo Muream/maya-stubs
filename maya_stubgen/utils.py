@@ -1,5 +1,7 @@
 import logging
+import os
 from contextlib import contextmanager
+from pathlib import Path
 from typing import *
 
 logger = logging.getLogger(__name__)
@@ -7,10 +9,15 @@ logger = logging.getLogger(__name__)
 
 def initialize_maya():
     logger.info("Initializing Maya Standalone")
+
+    temp_maya_app_dir = Path() / "temp" / "maya_app_dir"
+    temp_maya_app_dir.mkdir(parents=True, exist_ok=True)
+
+    os.environ["MAYA_APP_DIR"] = str(temp_maya_app_dir)
+    os.environ["MAYA_MODULE_PATH"] = ""
+
     try:
         import maya.standalone
-
-        logging.getLogger().handlers
 
         maya.standalone.initialize()
     except BaseException:
