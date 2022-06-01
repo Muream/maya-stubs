@@ -12,5 +12,13 @@ This is not a small feat so the stubs will improve over time.
     - [ ] Accurate Arguments signatures all commands.
     - [ ] Return Types.
     - [ ] Docstrings.
-- ❌ OpenMaya 1.0: Missing
-- ❌ OpenMaya 2.0: Missing
+- 🚧 OpenMaya 1.0: Incomplete
+    - [x] Stubs for all members
+    - [ ] Accurate Argument Signatures
+    - [ ] Return Types
+    - [ ] Docstrings.
+- 🚧 OpenMaya 2.0: Incomplete
+    - [x] Stubs for all members
+    - [ ] Accurate Argument Signatures
+    - [ ] Return Types
+    - [x] Docstrings.

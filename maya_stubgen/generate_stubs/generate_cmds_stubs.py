@@ -145,7 +145,7 @@ def generate_cmds_stubs() -> str:
 
         args = _args_from_help(help_)
 
-        function = Function(func, arguments=args, docstring=help_)
+        function = Function(func, arguments=args)
         lines.append(function.stub)
 
     return STUB_HEADER + "\n".join(lines)

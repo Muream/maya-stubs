@@ -135,11 +135,8 @@ class Variable(StubItem):
         if self.type:
             res += f": {self.type_str}"
 
-        if self.value is not MISSING:
-            if self.is_argument:
-                res += " = ..."
-            # else:
-            #     res += f" = {self.value}"
+        if self.value is not MISSING and self.is_argument:
+            res += " = ..."
 
         return res
 
@@ -154,6 +151,7 @@ class Function:
 
     def __post_init__(self):
         self.docstring = self._process_docstring(self.docstring)
+
         if self.function_type is FunctionType.method:
             if len(self.arguments) == 0 or self.arguments[0].name != "self":
                 self.arguments.insert(0, Variable("self", Self, is_argument=True))
@@ -200,7 +198,11 @@ class Function:
     @property
     def stub(self):
         stub = self.signature
-        stub += " ..."
+
+        if self.docstring:
+            stub += indent(f"\n{self.docstring}\n...", TAB)
+        else:
+            stub += " ..."
 
         return stub
 
@@ -219,8 +221,6 @@ class Function:
             docstring = f'"""{docstring}"""'
         else:
             docstring = f'"""{docstring}\n"""'
-
-        docstring = indent(docstring, TAB)
 
         return docstring
 
