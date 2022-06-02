@@ -91,7 +91,6 @@ def init_logger():
 
     # Define format for logs
     stdout_fmt = "%(levelname)8s | %(message)s"
-    file_fmt = "%(asctime)s | %(levelname)8s | %(message)s"
 
     # Create stdout handler for logging to the console (logs all five levels)
     stdout_handler = logging.StreamHandler()
