@@ -2,10 +2,9 @@ import logging
 
 import click
 
-from maya_stubgen.get_cmds_synopsis import get_cmds_synopsis
-
+from ..utils import initialize_maya, uninitialize_maya
 from .generate_stubs import generate_stubs
-from .utils import initialize_maya, uninitialize_maya
+from .get_cmds_synopsis import get_cmds_synopsis
 
 logger = logging.getLogger("maya_stubgen")
 

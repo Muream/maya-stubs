@@ -75,7 +75,7 @@ def get_cmds_synopsis(type):
     out_file = Path() / "temp" / "synopsis" / f"{type}.txt"
     out_file.parent.mkdir(parents=True, exist_ok=True)
 
-    with open(out_file, "w") as f:
+    with out_file.open("w", encoding="utf8") as f:
         f.write(cmds_synopsis)
 
     logger.success("Generated synopsis: %s", out_file)

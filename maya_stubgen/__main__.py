@@ -23,6 +23,6 @@ def ensure_venv():
 if __name__ == "__main__":
     ensure_venv()
 
-    from ._cli import cli
+    from .cli import cli
 
     cli()
