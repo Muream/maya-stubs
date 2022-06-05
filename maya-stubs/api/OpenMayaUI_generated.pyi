@@ -7,69 +7,49 @@ from _typeshed import Incomplete
 class M3dView(object):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -78,55 +58,46 @@ class M3dView(object):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def active3dView(self: Self, *args: Any, **kwargs: Any) -> Any:
         """active3dView() -> M3dView
 
         Returns the active view in the form of a class (M3dView) that can operate on it.
         """
-        ...
     def activeAffectedColor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """activeAffectedColor() -> MColor
 
         Returns the color for active affected objects.
         """
-        ...
     def activeTemplateColor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """activeTemplateColor() -> MColor
 
         Returns the color for active template objects.
         """
-        ...
     def applicationShell(self: Self, *args: Any, **kwargs: Any) -> Any:
         """applicationShell() -> long
 
         Returns a long containing a C++ 'void' pointer which points to the native handle for Maya's main window.
         """
-        ...
     def backgroundColor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """backgroundColor() -> MColor
 
         Returns the value of the background color.
         """
-        ...
     def backgroundColorBottom(self: Self, *args: Any, **kwargs: Any) -> Any:
         """backgroundColorBottom() -> MColor
 
         Returns the value of the background gradient bottom color.
         """
-        ...
     def backgroundColorTop(self: Self, *args: Any, **kwargs: Any) -> Any:
         """backgroundColorTop() -> MColor
 
         Returns the value of the background gradient top color.
         """
-        ...
     def beginGL(self: Self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use Viewport 2.0 APIs instead.) beginGL() -> self
 
         Setup port for native OpenGL drawing calls.
         """
-        ...
     def beginProjMatrixOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use MHWRender::MRenderOverride instead.) beginProjMatrixOverride(projectionMatrix) -> self
 
@@ -135,7 +106,6 @@ class M3dView(object):
 
         * projectionMatrix (MMatrix) - Projection matrix used in openGL drawing
         """
-        ...
     def beginSelect(self: Self, *args: Any, **kwargs: Any) -> Any:
         """beginSelect(buffer=None, size=0) -> self
 
@@ -144,7 +114,6 @@ class M3dView(object):
         * buffer (bytearray) - OpenGl pick buffer
         * size (int) - Buffer size
         """
-        ...
     def beginXorDrawing(self: Self, *args: Any, **kwargs: Any) -> Any:
         """beginXorDrawing(drawOrthographic=True, disableDepthTesting=True, lineWidth=1.0, stipplePattern=kStippleNone, lineColor=MColor(1, 1, 1)) -> self
 
@@ -166,7 +135,6 @@ class M3dView(object):
           kStippleNone      No stipple. Solid line
           kStippleDashed    Dashed line stipple
         """
-        ...
     def colorAtIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """colorAtIndex(index, table=kActiveColors) -> MColor
 
@@ -182,25 +150,21 @@ class M3dView(object):
           kTemplateColor       Colors for templated objects
           kBackgroundColor     Colors for background color
         """
-        ...
     def colorMask(self: Self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use MHWRender::MUIDrawManager instead.) colorMask() -> [bool, bool, bool, bool]
 
         Get the current color mask
         """
-        ...
     def deviceContext(self: Self, *args: Any, **kwargs: Any) -> Any:
         """deviceContext() -> long
 
         Returns a long containing a C++ 'void' pointer which points to the Windows device context for this view.
         """
-        ...
     def disallowPolygonOffset(self: Self, *args: Any, **kwargs: Any) -> Any:
         """disallowPolygonOffset() -> bool
 
         Returns the current state of the disallow polygon offset bit.  See setDisallowPolygonOffset for more information.
         """
-        ...
     def display(self: Self, *args: Any, **kwargs: Any) -> Any:
         """display() -> long
 
@@ -209,7 +173,6 @@ class M3dView(object):
         On 64-bit OS X this is an NSOpenGLContext pointer.
         On Windows this is an HGLRC.
         """
-        ...
     def displayStatus(self: Self, *args: Any, **kwargs: Any) -> Any:
         """displayStatus(path) -> int
 
@@ -231,7 +194,6 @@ class M3dView(object):
           kActiveAffected       Affected by active object(s).
           kNoStatus             Object does not have a valid display status.
         """
-        ...
     def displayStyle(self: Self, *args: Any, **kwargs: Any) -> Any:
         """displayStyle() -> int
 
@@ -241,7 +203,6 @@ class M3dView(object):
           kWireFrame       Wire frame display.
           kPoints          Points only display.
         """
-        ...
     def drawText(self: Self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use MHWRender::MUIDrawManager in a MHWRender::MHUDRender operation instead.) drawText(text, position, textPosition=kLeft) -> self
 
@@ -256,25 +217,21 @@ class M3dView(object):
           kCenter    Draw text centered around the point
           kRight     Draw text to the right of the point
         """
-        ...
     def endGL(self: Self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use Viewport 2.0 APIs instead.) endGL() -> self
 
         End OpenGL drawing.
         """
-        ...
     def endProjMatrixOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use MHWRender::MRenderOverride instead.) endProjMatrixOverride() -> self
 
         End projection matrix override enabled by beginProjMatrixOverride().
         """
-        ...
     def endSelect(self: Self, *args: Any, **kwargs: Any) -> Any:
         """endSelect() -> int
 
         Finish a selection sequence. Result is stored in the buffer passed  in the beginSelect call.
         """
-        ...
     def endXorDrawing(self: Self, *args: Any, **kwargs: Any) -> Any:
         """endXorDrawing() -> self
 
@@ -282,13 +239,11 @@ class M3dView(object):
 
         If endXorDrawing() is called without first calling beginXorDrawing() an error will result.
         """
-        ...
     def filteredObjectList(self: Self, *args: Any, **kwargs: Any) -> Any:
         """filteredObjectList() -> MSelectionList
 
         Returns a selection list containing all of the objects that remain after filtering is applied to the view.
         """
-        ...
     def get3dView(self: Self, *args: Any, **kwargs: Any) -> Any:
         """get3dView(index) -> M3dView
 
@@ -296,13 +251,11 @@ class M3dView(object):
 
         * index (int) - index of the view to get
         """
-        ...
     def getCamera(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getCamera() -> MDagPath
 
         Get the camera for this view.
         """
-        ...
     def getColorIndexAndTable(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getColorIndexAndTable(glindex) -> [int, int]
 
@@ -310,7 +263,6 @@ class M3dView(object):
 
         * glindex (int) - Value of the OpenGL color-index to retrieve
         """
-        ...
     def getLightCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getLightCount(visible=True) -> int
 
@@ -318,7 +270,6 @@ class M3dView(object):
 
         * visible (bool) - Specify whether to count visible lights only. By Default this is set True.
         """
-        ...
     def getLightIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getLightIndex(lightNumber) -> int
 
@@ -326,7 +277,6 @@ class M3dView(object):
 
         * lightNumber (int) - Number of the light interested in
         """
-        ...
     def getLightPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getLightPath(lightNumber) -> MDagPath
 
@@ -334,7 +284,6 @@ class M3dView(object):
 
         * lightNumber (int) - Number of the light interested in
         """
-        ...
     def getLightingMode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getLightingMode() -> int
 
@@ -346,7 +295,6 @@ class M3dView(object):
           kUnused1          Not currently used in Maya
           kLightNone        No lights / lighting disabled
         """
-        ...
     def getM3dViewFromModelEditor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getM3dViewFromModelEditor(name) -> M3dView
 
@@ -354,7 +302,6 @@ class M3dView(object):
 
         * name (string) - The name of the model editor.
         """
-        ...
     def getM3dViewFromModelPanel(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getM3dViewFromModelPanel(name) -> M3dView
 
@@ -362,7 +309,6 @@ class M3dView(object):
 
         * name (string) - The name of the model panel.
         """
-        ...
     def getRendererName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getRendererName() -> int
 
@@ -372,7 +318,6 @@ class M3dView(object):
           kViewport2Renderer        Equivalent to the viewport 2.0 renderer
           kExternalRenderer         An externally defined renderer name has been set.
         """
-        ...
     def getScreenPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getScreenPosition() -> [int, int]
 
@@ -380,25 +325,21 @@ class M3dView(object):
 
         This is useful for finding out the exact location of the window as it appears on the screen. These values are in UI coordinate space so the y value increases from bottom to top.
         """
-        ...
     def hiliteColor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hiliteColor() -> MColor
 
         Returns the color for hilited objects.
         """
-        ...
     def initNames(self: Self, *args: Any, **kwargs: Any) -> Any:
         """initNames() -> self
 
         Reset the name stack. Valid only when beginSelect() has been called.
         """
-        ...
     def isBackgroundGradient(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isBackgroundGradient() -> bool
 
         Returns whether a gradient is being used as the background color.
         """
-        ...
     def isLightVisible(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isLightVisible(lightNumber) -> bool
 
@@ -406,19 +347,16 @@ class M3dView(object):
 
         * lightNumber (int) - Number of the light interested in
         """
-        ...
     def isShadeActiveOnly(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isShadeActiveOnly() -> bool
 
         Returns True if this view's display style is shaded for objects that are active and wireframe otherwise.
         """
-        ...
     def isVisible(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isVisible() -> bool
 
         Returns True if this viewport is visible.
         """
-        ...
     kActive: int = ...
     kActiveAffected: int = ...
     kActiveColors: int = ...
@@ -495,13 +433,11 @@ class M3dView(object):
 
         Returns the color for lead objects.
         """
-        ...
     def liveColor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """liveColor() -> MColor
 
         Returns the color for live objects.
         """
-        ...
     def loadName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """loadName(int) -> self
 
@@ -509,37 +445,31 @@ class M3dView(object):
 
         * name (int) - Name to be loaded onto the top of the stack.
         """
-        ...
     def modelViewMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
         """modelViewMatrix() -> MMatrix
 
         Returns the modelview matrix currently being used by OpenGL in the current view
         """
-        ...
     def multipleDrawEnabled(self: Self, *args: Any, **kwargs: Any) -> Any:
         """multipleDrawEnabled() -> bool
 
         This method returns the multiple draw enable state for this view.
         """
-        ...
     def multipleDrawPassCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use MHWRender::MRenderOverride instead.) multipleDrawPassCount() -> int
 
         This method returns the number of multiple draw passes that are going to be made. By default a 1 is returned.
         """
-        ...
     def numActiveColors(self: Self, *args: Any, **kwargs: Any) -> Any:
         """numActiveColors() -> int
 
         Returns the number of active object colors in the internal application color table.
         """
-        ...
     def numDormantColors(self: Self, *args: Any, **kwargs: Any) -> Any:
         """numDormantColors() -> int
 
         Returns the number of dormant object colors in the internal application color table.
         """
-        ...
     def numUserDefinedColors(self: Self, *args: Any, **kwargs: Any) -> Any:
         """numUserDefinedColors() -> int
 
@@ -547,13 +477,11 @@ class M3dView(object):
 
         The user defined colors are not a color table of their own.  They exist in the active and dormant color tables.
         """
-        ...
     def numberOf3dViews(self: Self, *args: Any, **kwargs: Any) -> Any:
         """numberOf3dViews() -> int
 
         Returns the number of 3D views currently in existance.
         """
-        ...
     def objectDisplay(self: Self, *args: Any, **kwargs: Any) -> Any:
         """objectDisplay() -> int
 
@@ -591,13 +519,11 @@ class M3dView(object):
           kExcludeMotionTrails          Show motion trails
           kExcludePluginShapes          Show plugin shapes
         """
-        ...
     def objectListFilterName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """objectListFilterName() -> string
 
         Get the current object list filter name. If none then an emptystring will be returned.
         """
-        ...
     def playblastPortHeight(self: Self, *args: Any, **kwargs: Any) -> Any:
         """playblastPortHeight() -> int
 
@@ -605,7 +531,6 @@ class M3dView(object):
         Valid only when playblast command has been called.
         Otherwise, an invalid value 0 is returned.
         """
-        ...
     def playblastPortWidth(self: Self, *args: Any, **kwargs: Any) -> Any:
         """playblastPortWidth() -> int
 
@@ -613,7 +538,6 @@ class M3dView(object):
         Valid only when playblast command has been called.
         Otherwise, an invalid value 0 is returned.
         """
-        ...
     def pluginObjectDisplay(self: Self, *args: Any, **kwargs: Any) -> Any:
         """pluginObjectDisplay(pluginDisplayFilter) -> bool
 
@@ -621,37 +545,31 @@ class M3dView(object):
 
         * pluginDisplayFilter (string) - The name of the plugin display filter.
         """
-        ...
     def popName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """popName() -> self
 
         Removes the top of the name stack. Valid only when beginSelect() has been called.
         """
-        ...
     def popViewport(self: Self, *args: Any, **kwargs: Any) -> Any:
         """popViewport() -> self
 
         Pops the current viewport off of the viewport stack.
         """
-        ...
     def portHeight(self: Self, *args: Any, **kwargs: Any) -> Any:
         """portHeight() -> int
 
         Returns the height of the current viewport.
         """
-        ...
     def portWidth(self: Self, *args: Any, **kwargs: Any) -> Any:
         """portWidth() -> int
 
         Returns the width of the current viewport.
         """
-        ...
     def projectionMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
         """projectionMatrix() -> MMatrix
 
         Returns the projection matrix currently being used by OpenGL in the current view
         """
-        ...
     def pushName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """pushName(int) -> self
 
@@ -659,7 +577,6 @@ class M3dView(object):
 
         * name (int) - Name to be loaded onto the top of the stack.
         """
-        ...
     def pushViewport(self: Self, *args: Any, **kwargs: Any) -> Any:
         """pushViewport(x, y, width, height) -> self
 
@@ -671,7 +588,6 @@ class M3dView(object):
         * width (int) - Width of the viewport.
         * height (int) - Height of the viewport.
         """
-        ...
     def readBufferTo2dTexture(self: Self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use MHWRender::MRenderTargetManager instead.) readBufferTo2dTexture(x, y, width, height) -> self
 
@@ -682,7 +598,6 @@ class M3dView(object):
         * width (int) - Number of pixels in x to read.
         * height (int) - Number of pixels in y to read.
         """
-        ...
     def readColorBuffer(self: Self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use MHWRender::MRenderTargetManager::acquireRenderTarget() instead.)readColorBuffer(image, readRGBA=False) -> self
 
@@ -692,7 +607,6 @@ class M3dView(object):
         * image (MImage) - The image contains the frame buffer pixels.
         * readRGBA (bool) - Read the image back in RGBA format. By default the format is BGRA.
         """
-        ...
     def readDepthMap(self: Self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use MHWRender::MRenderTargetManager::acquireRenderTarget() instead.) readDepthMap(x, y, width, heigth, bufferPtr, depthMapPrecision) -> self
 
@@ -708,13 +622,11 @@ class M3dView(object):
             kDepth_8          8 bits.
             kDepth_Float      Floating point.
         """
-        ...
     def referenceLayerColor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """referenceLayerColor() -> MColor
 
         Returns the color for objects which belong to a display layer whose display type is Reference. This color is also used for objects whose display override is set to Reference.
         """
-        ...
     def refresh(self: Self, *args: Any, **kwargs: Any) -> Any:
         """refresh(all=False, force=False, offscreen=False) -> self
 
@@ -725,37 +637,31 @@ class M3dView(object):
         * force (bool) - If True then force views to refresh even if they do not require it.
         * offscreen (bool) - Should the buffer be redrawn if it's offscreen?
         """
-        ...
     def renderOverrideName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """renderOverrideName() -> string
 
         Get the current render override name. If none then an empty string will be returned.
         """
-        ...
     def rendererString(self: Self, *args: Any, **kwargs: Any) -> Any:
         """rendererString() -> string
 
         Get the string name of the current renderer being used for drawing to this view
         """
-        ...
     def scheduleRefresh(self: Self, *args: Any, **kwargs: Any) -> Any:
         """scheduleRefresh() -> self
 
         Schedule a forced refresh for this 3d-view. This method may be called safely at any time from any thread. The refresh will occur on the main thread when Maya next becomes idle. If a refresh has already been scheduled for this view but has not yet occurred then this method will do nothing.
         """
-        ...
     def scheduleRefreshAllViews(self: Self, *args: Any, **kwargs: Any) -> Any:
         """scheduleRefreshAllViews() -> None
 
         Schedule a forced refresh for all 3d-views. This method may be called safely at any time from any thread. The refresh will occur on the main thread when Maya next becomes idle. If a refresh has already been scheduled but has not yet occurred then this method will do nothing.
         """
-        ...
     def selectMode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """selectMode() -> bool
 
         Tells if this M3dView is in selection mode.
         """
-        ...
     def setCamera(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setCamera(camera) -> self
 
@@ -763,7 +669,6 @@ class M3dView(object):
 
         * camera (MDagPath) - Dag path of the camera for this view
         """
-        ...
     def setColorMask(self: Self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use MHWRender::MUIDrawManager instead.) setColorMask(r, g, b, a) -> self
 
@@ -774,7 +679,6 @@ class M3dView(object):
         * b (bool) - Blue color mask flag.
         * a (bool) - Alpha color mask flag.
         """
-        ...
     def setDisallowPolygonOffset(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDisallowPolygonOffset(v) -> self
 
@@ -782,7 +686,6 @@ class M3dView(object):
 
         * v (bool) - enable/disable the polygon offset
         """
-        ...
     def setDisplayStyle(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDisplayStyle(style, activeOnly=False) -> self
 
@@ -791,7 +694,6 @@ class M3dView(object):
         * style (int) - The display style to be set for this view
         See displayStyle() description for a list a valid display style
         """
-        ...
     def setDrawColor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use MUIDrawManager::setColorIndex instead.) setDrawColor(index, table=kActiveColors) -> self
         setDrawColor(color) -> self
@@ -812,7 +714,6 @@ class M3dView(object):
 
         * color (MColor) - color to draw in
         """
-        ...
     def setDrawColorAndAlpha(self: Self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use MUIDrawManager::setColor instead.) setDrawColorAndAlpha(color) -> self
 
@@ -821,7 +722,6 @@ class M3dView(object):
 
         * color (MColor) - color to draw in
         """
-        ...
     def setMultipleDrawEnable(self: Self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use MHWRender::MRenderOverride instead.)setMultipleDrawEnable(enable) -> self
 
@@ -829,7 +729,6 @@ class M3dView(object):
 
         * enable (bool) - If True, then multiple draw is enabled.
         """
-        ...
     def setMultipleDrawPassCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use MHWRender::MRenderOverride instead.) setMultipleDrawPassCount(count) -> self
 
@@ -837,7 +736,6 @@ class M3dView(object):
 
         * count (int) - The number of multiple draw passes.
         """
-        ...
     def setObjectDisplay(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setObjectDisplay(displayMask) -> self
 
@@ -846,7 +744,6 @@ class M3dView(object):
         * displayMask (int) - A combination of display object mask
         See objectDisplay() description for a list of valid display mask
         """
-        ...
     def setObjectListFilterName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setObjectListFilterName(name) -> self
 
@@ -860,7 +757,6 @@ class M3dView(object):
 
         * name (string) - Name of the filter.
         """
-        ...
     def setPluginObjectDisplay(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setPluginObjectDisplay(pluginDisplayFilter, on) -> self
 
@@ -873,7 +769,6 @@ class M3dView(object):
         * pluginDisplayFilter (string) - The name of the plugin display filter.
         * on (bool) - Enable or disable the plugin display filter.
         """
-        ...
     def setRenderOverrideName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setRenderOverrideName(name) -> self
 
@@ -887,7 +782,6 @@ class M3dView(object):
 
         * name (string) - name Name of the override.
         """
-        ...
     def setShowObjectFilterNameInHUD(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setShowObjectFilterNameInHUD(show) -> self
 
@@ -895,7 +789,6 @@ class M3dView(object):
 
         * show (bool) - If True, show the filter UI name in the HUD
         """
-        ...
     def setShowViewSelectedChildren(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setShowViewSelectedChildren(show) -> self
 
@@ -903,7 +796,6 @@ class M3dView(object):
 
         * show (bool) - True if all of the children of view selected objects should be displayed. True is the default behavior for view selected.
         """
-        ...
     def setUserDefinedColor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setUserDefinedColor(index, color) -> self
 
@@ -913,7 +805,6 @@ class M3dView(object):
         * index (int) - index into the user defined color
         * color (MColor) - color to set to
         """
-        ...
     def setViewSelectedPrefix(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setViewSelectedPrefix(prefix) -> self
 
@@ -922,43 +813,36 @@ class M3dView(object):
 
         * prefix (string) - The prefix to use.
         """
-        ...
     def showObjectFilterNameInHUD(self: Self, *args: Any, **kwargs: Any) -> Any:
         """showObjectFilterNameInHUD() -> bool
 
         Returns whether the object filter UI name is shown in the heads up display when an object filter is active.
         """
-        ...
     def showViewSelectedChildren(self: Self, *args: Any, **kwargs: Any) -> Any:
         """showViewSelectedChildren() -> bool
 
         Returns turn if view selected shows all of the children of the obejcts that are flagged for view selected.
         """
-        ...
     def templateColor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """templateColor() -> MColor
 
         Returns the value of the template color.
         """
-        ...
     def textureMode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """textureMode() -> bool
 
         Tells if this M3dView is in texture mode.
         """
-        ...
     def twoSidedLighting(self: Self, *args: Any, **kwargs: Any) -> Any:
         """twoSidedLighting() -> bool
 
         Return True if the Two-sided lighting mode is enabled.
         """
-        ...
     def updateViewingParameters(self: Self, *args: Any, **kwargs: Any) -> Any:
         """updateViewingParameters() -> self
 
         This method tells the camera to set the view's transformation matrix.
         """
-        ...
     def userDefinedColorIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """userDefinedColorIndex(index) -> int
 
@@ -968,31 +852,26 @@ class M3dView(object):
 
         * index (int) - Index into user-defined colors
         """
-        ...
     def usingDefaultMaterial(self: Self, *args: Any, **kwargs: Any) -> Any:
         """usingDefaultMaterial() -> bool
 
         Returns True if the view is currently displaying objects using the default material.
         """
-        ...
     def usingMipmappedTextures(self: Self, *args: Any, **kwargs: Any) -> Any:
         """usingMipmappedTextures() -> bool
 
         Returns if the view is using mipmapped texture display.
         """
-        ...
     def viewIsFiltered(self: Self, *args: Any, **kwargs: Any) -> Any:
         """viewIsFiltered() -> bool
 
         Returns True if the view is filtered.
         """
-        ...
     def viewSelectedPrefix(self: Self, *args: Any, **kwargs: Any) -> Any:
         """viewSelectedPrefix() -> string
 
         Returns the prefix used when displaying the camera name in the heads up display when view selected in on
         """
-        ...
     def viewToObjectSpace(self: Self, *args: Any, **kwargs: Any) -> Any:
         """viewToObjectSpace(x_pos, y_pos, localMatrixInverse, oPt, oVector) -> self
 
@@ -1004,7 +883,6 @@ class M3dView(object):
         * oPt [OUT] (MPoint) - the source of the ray in object space
         * oVector [OUT] (MVector) - the direction of the ray in object space
         """
-        ...
     def viewToWorld(self: Self, *args: Any, **kwargs: Any) -> Any:
         """viewToWorld(x_pos, y_pos, worldPt, worldVector) -> self
         viewToWorld(x_pos, y_pos, nearClipPt, farClipPt) -> self
@@ -1024,31 +902,26 @@ class M3dView(object):
         * nearClipPt [OUT] (MPoint) - point on near clipping plane
         * farClipPt [OUT] (MPoint) - point on far clipping plane
         """
-        ...
     def viewport(self: Self, *args: Any, **kwargs: Any) -> Any:
         """viewport() -> [int, int, int, int]
 
         Get the current viewport dimensions.
         """
-        ...
     def widget(self: Self, *args: Any, **kwargs: Any) -> Any:
         """widget() -> long
 
         Returns a long containing a C++ 'void' pointer which points to the view's Qt widget.
         """
-        ...
     def window(self: Self, *args: Any, **kwargs: Any) -> Any:
         """window() -> long
 
         Returns a long containing a C++ 'void' pointer which points to the native window for this view.
         """
-        ...
     def wireframeOnShaded(self: Self, *args: Any, **kwargs: Any) -> Any:
         """wireframeOnShaded() -> bool
 
         Return whether we draw wireframe in shaded mode.
         """
-        ...
     def wireframeOnlyInShadedMode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """wireframeOnlyInShadedMode() -> bool
 
@@ -1056,7 +929,6 @@ class M3dView(object):
 
         In general it will return True only when the current renderer is "hwRender_OpenGL_Renderer". See the M3dView.rendererString() method for more details.
         """
-        ...
     def worldToView(self: Self, *args: Any, **kwargs: Any) -> Any:
         """worldToView(worldPt) -> [int, int, bool]
 
@@ -1065,7 +937,6 @@ class M3dView(object):
 
         * worldPt (MPoint) - the point to world space
         """
-        ...
     def writeColorBuffer(self: Self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use MHWRender::MQuadRender operation inside MHWRender::MRenderOverride instead.) writeColorBuffer(image, x=0, y=0) -> self
 
@@ -1076,84 +947,62 @@ class M3dView(object):
         * x (int) - The location in screen space of the lower left corner (X) of the image to write. The default value is 0.
         * y (int) - The location in screen space of the lower left corner (Y) of the image to write. The default value is 0.
         """
-        ...
     def xray(self: Self, *args: Any, **kwargs: Any) -> Any:
         """xray() -> bool
 
         Return True if the X-Ray mode is enabled.
         """
-        ...
     def xrayJoints(self: Self, *args: Any, **kwargs: Any) -> Any:
         """xrayJoints() -> bool
 
         Return True if the X-Ray Joints mode is enabled.
         """
-        ...
 
 class MCursor(object):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     __hash__: NoneType = ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -1162,7 +1011,6 @@ class MCursor(object):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     kCrossHairCursor: MCursor = ...
     kDefaultCursor: MCursor = ...
     kDoubleCrossHairCursor: MCursor = ...
@@ -1173,69 +1021,49 @@ class MCursor(object):
 class MDrawData(object):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -1244,81 +1072,59 @@ class MDrawData(object):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def geometry(self: Self, *args: Any, **kwargs: Any) -> Any:
         """geometry() -> long
 
         Returns a long containing a C++ 'void' pointer which points to the geometry associated with this draw data object.
         The geometry is set using the getDrawData method of MPxSurfaceShapeUI.
         """
-        ...
 
 class MDrawInfo(object):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -1327,7 +1133,6 @@ class MDrawInfo(object):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def canDrawComponent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """canDrawComponent(isDisplayOn, compMask) -> bool
 
@@ -1336,27 +1141,23 @@ class MDrawInfo(object):
         * isDisplayOn (bool) - component display is on
         * mask (MSelectionMask) - component mask to test
         """
-        ...
     def completelyInside(self: Self, *args: Any, **kwargs: Any) -> Any:
         """completelyInside() -> bool
 
         Returns True if the object being drawn is inside the viewing frustum.
         """
-        ...
     def displayStatus(self: Self, *args: Any, **kwargs: Any) -> Any:
         """displayStatus() -> int
 
         Returns the status of the object to draw.
         See M3dView.displayStatus() for a list of status.
         """
-        ...
     def displayStyle(self: Self, *args: Any, **kwargs: Any) -> Any:
         """displayStyle() -> int
 
         Returns the display appearance.
         See M3dView.displayStyle() for a list of styles.
         """
-        ...
     def getPrototype(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getPrototype(drawHandler) -> MDrawRequest
 
@@ -1366,31 +1167,26 @@ class MDrawInfo(object):
 
         * drawHandler (MPxSurfaceShapeUI) - the ui object that is doing the drawing
         """
-        ...
     def inSelect(self: Self, *args: Any, **kwargs: Any) -> Any:
         """inSelect() -> bool
 
         Returns True during any interactive refresh, as when user is interacting with the scene in any way including camera changes, object or component TRS changes, etc. Use userChangingViewContext for determining whether user is changing the view using view context tools such as tumble, dolly or track.
         """
-        ...
     def inUserInteraction(self: Self, *args: Any, **kwargs: Any) -> Any:
         """inUserInteraction() -> bool
 
         Returns True during any interactive refresh, as when user is changing the view using view context tools such as tumble, dolly or track.  Useful for changing drawing mode to something simpler to speed up interaction re-draw.  Use inUserInteraction for determining whether user is interacting with the scene in any way.
         """
-        ...
     def inclusiveMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
         """inclusiveMatrix() -> MMatrix
 
         Returns the world space inclusive matrix.
         """
-        ...
     def multiPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """multiPath() -> MDagPath
 
         Returns the path to the object to be drawn.
         """
-        ...
     def objectDisplayStatus(self: Self, *args: Any, **kwargs: Any) -> Any:
         """objectDisplayStatus(displayObj) -> bool
 
@@ -1398,7 +1194,6 @@ class MDrawInfo(object):
 
         * displayObj (int) - display object mask. See M3dView.objectDisplay() for a list of valid masks.
         """
-        ...
     def pluginObjectDisplayStatus(self: Self, *args: Any, **kwargs: Any) -> Any:
         """pluginObjectDisplayStatus(pluginDisplayFilter) -> bool
 
@@ -1406,13 +1201,11 @@ class MDrawInfo(object):
 
         * pluginDisplayFilter (string) - The name of the plugin display filter which is registered by pluginDisplayFilter command.
         """
-        ...
     def projectionMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
         """projectionMatrix() -> MMatrix
 
         Returns the camera*projection matrix.
         """
-        ...
     def setMultiPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setMultiPath(path) -> self
 
@@ -1420,86 +1213,63 @@ class MDrawInfo(object):
 
         * path (MDagPath) - the path of the object to be drawn
         """
-        ...
     def userChangingViewContext(self: Self, *args: Any, **kwargs: Any) -> Any:
         """userChangingViewContext() -> bool
 
         Returns True during any interactive refresh, as when user is interacting with the scene in any way including camera changes, object or component TRS changes, etc. Use userChangingViewContext for determining whether user is changing the view using view context tools such as tumble, dolly or track.
         """
-        ...
     def view(self: Self, *args: Any, **kwargs: Any) -> Any:
         """view() -> M3dView
 
         Returns the view that the drawing will take place.
         """
-        ...
 
 class MDrawProperties(object):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -1508,106 +1278,77 @@ class MDrawProperties(object):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     @property
     def color(*args: Any, **kwargs: Any) -> Any:
         """color"""
-        ...
     @color.setter
     def color(*args: Any, **kwargs: Any) -> Any:
         """color"""
-        ...
     @property
     def lineStyle(*args: Any, **kwargs: Any) -> Any:
         """line style"""
-        ...
     @lineStyle.setter
     def lineStyle(*args: Any, **kwargs: Any) -> Any:
         """line style"""
-        ...
     @property
     def lineWidth(*args: Any, **kwargs: Any) -> Any:
         """line width"""
-        ...
     @lineWidth.setter
     def lineWidth(*args: Any, **kwargs: Any) -> Any:
         """line width"""
-        ...
     @property
     def pointSize(*args: Any, **kwargs: Any) -> Any:
         """point size"""
-        ...
     @pointSize.setter
     def pointSize(*args: Any, **kwargs: Any) -> Any:
         """point size"""
-        ...
 
 class MDrawRequest(object):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -1616,111 +1357,86 @@ class MDrawRequest(object):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     @property
     def color(*args: Any, **kwargs: Any) -> Any:
         """The RGBA wireframe display color."""
-        ...
     @color.setter
     def color(*args: Any, **kwargs: Any) -> Any:
         """The RGBA wireframe display color."""
-        ...
     @property
     def component(*args: Any, **kwargs: Any) -> Any:
         """An optional component. If set draw the components that are specified, otherwise draw all components of this type for the object."""
-        ...
     @component.setter
     def component(*args: Any, **kwargs: Any) -> Any:
         """An optional component. If set draw the components that are specified, otherwise draw all components of this type for the object."""
-        ...
     @property
     def displayCullOpposite(*args: Any, **kwargs: Any) -> Any:
         """The state of the opposite culling flag for the object."""
-        ...
     @displayCullOpposite.setter
     def displayCullOpposite(*args: Any, **kwargs: Any) -> Any:
         """The state of the opposite culling flag for the object."""
-        ...
     @property
     def displayCulling(*args: Any, **kwargs: Any) -> Any:
         """The state of the culling flag for the object."""
-        ...
     @displayCulling.setter
     def displayCulling(*args: Any, **kwargs: Any) -> Any:
         """The state of the culling flag for the object."""
-        ...
     @property
     def displayStatus(*args: Any, **kwargs: Any) -> Any:
         """The state of object (active, dormant, etc.).
         See M3dView.displayStatus() for a list of display status.
         """
-        ...
     @displayStatus.setter
     def displayStatus(*args: Any, **kwargs: Any) -> Any:
         """The state of object (active, dormant, etc.).
         See M3dView.displayStatus() for a list of display status.
         """
-        ...
     @property
     def displayStyle(*args: Any, **kwargs: Any) -> Any:
         """How the object should be drawn (wireframe, shaded, etc.).
         See M3dView.displayStyle() for a list of display styles.
         """
-        ...
     @displayStyle.setter
     def displayStyle(*args: Any, **kwargs: Any) -> Any:
         """How the object should be drawn (wireframe, shaded, etc.).
         See M3dView.displayStyle() for a list of display styles.
         """
-        ...
     @property
     def drawData(*args: Any, **kwargs: Any) -> Any:
         """The object specific draw data."""
-        ...
     @drawData.setter
     def drawData(*args: Any, **kwargs: Any) -> Any:
         """The object specific draw data."""
-        ...
     @property
     def drawLast(*args: Any, **kwargs: Any) -> Any:
         """The order in which this object will be drawn."""
-        ...
     @drawLast.setter
     def drawLast(*args: Any, **kwargs: Any) -> Any:
         """The order in which this object will be drawn."""
-        ...
     @property
     def isTransparent(*args: Any, **kwargs: Any) -> Any:
         """The transparency state of the object."""
-        ...
     @isTransparent.setter
     def isTransparent(*args: Any, **kwargs: Any) -> Any:
         """The transparency state of the object."""
-        ...
     @property
     def material(*args: Any, **kwargs: Any) -> Any:
         """The shaded material."""
-        ...
     @material.setter
     def material(*args: Any, **kwargs: Any) -> Any:
         """The shaded material."""
-        ...
     @property
     def matrix(*args: Any, **kwargs: Any) -> Any:
         """The draw matrix."""
-        ...
     @matrix.setter
     def matrix(*args: Any, **kwargs: Any) -> Any:
         """The draw matrix."""
-        ...
     @property
     def multiPath(*args: Any, **kwargs: Any) -> Any:
         """The path to the object to be drawn."""
-        ...
     @multiPath.setter
     def multiPath(*args: Any, **kwargs: Any) -> Any:
         """The path to the object to be drawn."""
-        ...
     def planeColor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """planeColor(table) -> int
 
@@ -1730,7 +1446,6 @@ class MDrawRequest(object):
 
         See M3dView.colorAtIndex() for a list of color tables.
         """
-        ...
     def setPlaneColor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setPlaneColor(value, table) -> self
 
@@ -1741,96 +1456,71 @@ class MDrawRequest(object):
 
         See M3dView.colorAtIndex() for a list of color tables.
         """
-        ...
     @property
     def token(*args: Any, **kwargs: Any) -> Any:
         """The user-defined draw token for this request.
         The token is used to identify a particular part of an object to draw. It is also used to distinguish draw requests generated by derived UI objects from those generated by base classes.
         It some cases, it provides a way of indicating that a component should be displayed without creating a component MObject.
         """
-        ...
     @token.setter
     def token(*args: Any, **kwargs: Any) -> Any:
         """The user-defined draw token for this request.
         The token is used to identify a particular part of an object to draw. It is also used to distinguish draw requests generated by derived UI objects from those generated by base classes.
         It some cases, it provides a way of indicating that a component should be displayed without creating a component MObject.
         """
-        ...
     @property
     def view(*args: Any, **kwargs: Any) -> Any:
         """The view where drawing will be done."""
-        ...
     @view.setter
     def view(*args: Any, **kwargs: Any) -> Any:
         """The view where drawing will be done."""
-        ...
 
 class MEvent(object):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -1839,7 +1529,6 @@ class MEvent(object):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     controlKey: int = ...
     def getWindowPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getWindowPosition() -> (x, y)
@@ -1850,7 +1539,6 @@ class MEvent(object):
 
         Returns a tuple containing the x and y position of the event.
         """
-        ...
     def isModifierControl(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isModifierControl() -> bool
 
@@ -1859,7 +1547,6 @@ class MEvent(object):
 
         Returns True if the control key was pressed at the time the event was triggered, False otherwise.
         """
-        ...
     def isModifierKeyRelease(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isModifierKeyRelease() -> bool
 
@@ -1868,7 +1555,6 @@ class MEvent(object):
 
         Returns True if a modifier key was released, False otherwise.
         """
-        ...
     def isModifierLeftMouseButton(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isModifierLeftMouseButton() -> bool
 
@@ -1881,7 +1567,6 @@ class MEvent(object):
 
         Returns True if the left mouse button was pressed at the time the event was triggered, False otherwise.
         """
-        ...
     def isModifierMiddleMouseButton(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isModifierMiddleMouseButton() -> bool
 
@@ -1894,7 +1579,6 @@ class MEvent(object):
 
         Returns True if the left mouse button was pressed at the time the event was triggered, False otherwise.
         """
-        ...
     def isModifierNone(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isModifierNone() -> bool
 
@@ -1903,7 +1587,6 @@ class MEvent(object):
 
         Returns True if there are modifiers for this event, False otherwise.
         """
-        ...
     def isModifierShift(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isModifierShift() -> bool
 
@@ -1912,17 +1595,14 @@ class MEvent(object):
 
         Returns True if the shift key was pressed at the time the event was triggered, False otherwise.
         """
-        ...
     kLeftMouse: int = ...
     kMiddleMouse: int = ...
     @property
     def modifiers(*args: Any, **kwargs: Any) -> Any:
         """The state of the modifiers."""
-        ...
     @modifiers.setter
     def modifiers(*args: Any, **kwargs: Any) -> Any:
         """The state of the modifiers."""
-        ...
     def mouseButton(self: Self, *args: Any, **kwargs: Any) -> Any:
         """mouseButton() -> mouseButtonType
 
@@ -1931,83 +1611,60 @@ class MEvent(object):
 
         Returns the mouse button from last event.
         """
-        ...
     @property
     def position(*args: Any, **kwargs: Any) -> Any:
         """The location of the event."""
-        ...
     @position.setter
     def position(*args: Any, **kwargs: Any) -> Any:
         """The location of the event."""
-        ...
     shiftKey: int = ...
 
 class MFnCircleSweepManip(MFnManip3D):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -2016,84 +1673,64 @@ class MFnCircleSweepManip(MFnManip3D):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def absoluteName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the absolute name of this node.  The absolute name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself.  Regardless of relative name mode, absoluteName() will always return a full namespace path prefixed with a leading colon (the root namespace).  If the underlying node is a DAG node, then absoluteName() does not guarantee uniqueness, that is, two dependency nodes could have the same absoluteName().  In cases like this the uniqueName() method will guarantee that the name uniquely identifies the node."""
-        ...
     def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds a new dynamic attribute to the node."""
-        ...
     def addChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addChild(node, index=kNextPos, keepExistingParents=False) -> self
 
         Makes a node a child of this one.
         """
-        ...
     def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds content info to the specified table from a file path attribute."""
-        ...
     def affectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the changes to the node may affect animation."""
-        ...
     def allocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Allocates a flag on all nodes for use by the named plugin and returns the flag's index."""
-        ...
     def angleIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """angleIndex() -> int
 
         Returns the index for the angle of CircleSweepManip. The data type corresponding to this index is a double.
         """
-        ...
     def attribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns an attribute of the node, given either its index or name."""
-        ...
     def attributeClass(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the class of the specified attribute."""
-        ...
     def attributeCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the number of attributes on the node."""
-        ...
     def axisIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """axisIndex() -> int
 
         Returns the index for the axis of CircleSweepManip. The data type corresponding to this index is MFnNumericData.k3Double.
         """
-        ...
     @property
     def boundingBox(*args: Any, **kwargs: Any) -> Any:
         """Node's bounding box, in object space."""
-        ...
     @boundingBox.setter
     def boundingBox(*args: Any, **kwargs: Any) -> Any:
         """Node's bounding box, in object space."""
-        ...
     def canBeWritten(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the node will be written to file."""
-        ...
     def centerIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """centerIndex() -> int
 
         Returns the index for the center of the CircleSweepManip. The data type corresponding to this index is MFnNumericData.k3Double.
         """
-        ...
     def child(self: Self, *args: Any, **kwargs: Any) -> Any:
         """child(index) -> MObject
 
         Returns the specified child of this node.
         """
-        ...
     def childCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """childCount() -> int
 
         Returns the number of nodes which are children of this one.
         """
-        ...
     def classification(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the classification string for the named node type."""
-        ...
     def clearRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Clears the transform's rest position matrix."""
-        ...
     def connectToAnglePlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectToAnglePlug(anglePlug) -> self
 
@@ -2101,7 +1738,6 @@ class MFnCircleSweepManip(MFnManip3D):
 
         * anglePlug (MPlug) - the angle plug
         """
-        ...
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """create(manipName=None, angleName=None) -> MObject
 
@@ -2115,25 +1751,20 @@ class MFnCircleSweepManip(MFnManip3D):
         * manipName (string) - Name of the manip for UI purposes.
         * angleName (string) - Label for the angle value which appears in the feedback line.
         """
-        ...
     def dagPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dagPath() -> MDagPath
 
         Returns the DAG path to which this function set is attached. Raises a TypeError if the function set is attached to an MObject rather than a path.
         """
-        ...
     def dagRoot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dagRoot() -> MObject
 
         Returns the root node of the first path leading to this node.
         """
-        ...
     def deallocateAllFlags(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates all node flags which are currently allocated to the named plugin."""
-        ...
     def deallocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates the specified node flag, which was previously allocated by the named plugin using allocateFlag()."""
-        ...
     def deleteManipulator(self: Self, *args: Any, **kwargs: Any) -> Any:
         """deleteManipulator(manip) -> None
 
@@ -2141,261 +1772,199 @@ class MFnCircleSweepManip(MFnManip3D):
 
         * manip (MObject) - the manipulator to be deleted
         """
-        ...
     def dgCallbackIds(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information for a specific callback type, broken down by callbackId."""
-        ...
     def dgCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information broken down by callback type."""
-        ...
     def dgTimer(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a specific DG timer metric for a given timer type."""
-        ...
     def dgTimerOff(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing off for this node."""
-        ...
     def dgTimerOn(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing on for this node."""
-        ...
     def dgTimerQueryState(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the current DG timer state for this node."""
-        ...
     def dgTimerReset(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Resets all DG timers for this node."""
-        ...
     def drawPlaneHandles(self: Self, *args: Any, **kwargs: Any) -> Any:
         """drawPlaneHandles() -> bool
 
         This method returns the global option that says if the planar manipulator handles should be drawn or not.Setting this will affect the drawing of all manipulators that support the planar handles.
         """
-        ...
     def duplicate(self: Self, *args: Any, **kwargs: Any) -> Any:
         """duplicate(instance=False, instanceLeaf=False) -> MObject
 
         Duplicates the DAG hierarchy rooted at the current node.
         """
-        ...
     def enableLimit(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Enables or disables a specified limit type."""
-        ...
     def endCircleIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """endCircleIndex() -> int
 
         Returns the index for the end of the circle of CircleSweepManip. The data type corresponding to this index is a double.
         """
-        ...
     @property
     def endPoint(*args: Any, **kwargs: Any) -> Any:
         """The end point of the CircleSweepManip."""
-        ...
     @endPoint.setter
     def endPoint(*args: Any, **kwargs: Any) -> Any:
         """The end point of the CircleSweepManip."""
-        ...
     def findAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the attribute which has the given alias."""
-        ...
     def findPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a plug for the given attribute."""
-        ...
     def fullPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """fullPathName() -> string
 
         Returns the full path of the attached object, from the root of the DAG on down.
         """
-        ...
     def getAffectedAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which are affected by the specified attribute."""
-        ...
     def getAffectingAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which affect the specified attribute."""
-        ...
     def getAliasAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's alias attribute, which is a special attribute used to store information about the node's attribute aliases."""
-        ...
     def getAliasList(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the node's attribute aliases."""
-        ...
     def getAllPaths(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getAllPaths() -> MDagPathArray
 
         Returns all of the DAG paths which lead to the object to which this function set is attached.
         """
-        ...
     def getConnectedSetsAndMembers(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getConnectedSetsAndMembers(instance, renderableSetsOnly) -> (MObjectArray, MObjectArray)
 
         Returns a tuple containing an array of sets and an array of the
         components of the DAG object which are in those sets. If the entire object is in a set, then the corresponding entry in the comps array will have no elements in it.
         """
-        ...
     def getConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all the plugs which are connected to attributes of this node."""
-        ...
     def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Gets the external content (files) that this node depends on."""
-        ...
     def getPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getPath() -> MDagPath
 
         Returns the DAG path to which this function set is attached, or the first path to the node if the function set is attached to an MObject.
         """
-        ...
     def globalSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """globalSize() -> float
 
         Returns the global manipulator size.
         """
-        ...
     def handleSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """handleSize() -> float
 
         Returns the manipulator handle size.
         """
-        ...
     def hasAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node has an attribute with the given name."""
-        ...
     def hasChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasChild(node) -> bool
 
         Returns True if the specified node is a child of this one.
         """
-        ...
     def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the function set is compatible with the specified Maya object."""
-        ...
     def hasParent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasParent(node) -> bool
 
         Returns True if the specified node is a parent of this one.
         """
-        ...
     def hasUniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node's name is unique."""
-        ...
     @property
     def inModel(*args: Any, **kwargs: Any) -> Any:
         """True if the node has been added to the model."""
-        ...
     @inModel.setter
     def inModel(*args: Any, **kwargs: Any) -> Any:
         """True if the node has been added to the model."""
-        ...
     @property
     def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
         """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-        ...
     @inUnderWorld.setter
     def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
         """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-        ...
     def instanceCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """instanceCount(indirect) -> int
 
         Returns the number of instances for this node.
         """
-        ...
     def isChildOf(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isChildOf(node) -> bool
 
         Returns True if the specified node is a parent of this one.
         """
-        ...
     @property
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-        ...
     @isDefaultNode.setter
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-        ...
     def isFlagSet(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the state of the specified node flag."""
-        ...
     @property
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
         """True if the node is from a referenced file, False if the node is part of the main scene."""
-        ...
     @isFromReferencedFile.setter
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
         """True if the node is from a referenced file, False if the node is part of the main scene."""
-        ...
     @property
     def isInstanceable(*args: Any, **kwargs: Any) -> Any:
         """True if instancing is allowed for this node."""
-        ...
     @isInstanceable.setter
     def isInstanceable(*args: Any, **kwargs: Any) -> Any:
         """True if instancing is allowed for this node."""
-        ...
     def isInstanced(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isInstanced(indirect=True) -> bool
 
         Returns True if this node is instanced.
         """
-        ...
     def isInstancedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isInstancedAttribute(attr) -> bool
 
         Returns True if the specified attribute is an instanced attribute of this node.
         """
-        ...
     @property
     def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
         """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-        ...
     @isIntermediateObject.setter
     def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
         """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-        ...
     def isLimited(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the specified limit type is enabled."""
-        ...
     @property
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-        ...
     @isLocked.setter
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-        ...
     def isNewAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the specified attribute was added in the current scene, and not by by one of its referenced files."""
-        ...
     @property
     def isOptimizePlaybackOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not optimize playback is on."""
-        ...
     @isOptimizePlaybackOn.setter
     def isOptimizePlaybackOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not optimize playback is on."""
-        ...
     def isParentOf(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isParentOf(node) -> bool
 
         Returns True if the specified node is a child of this one.
         """
-        ...
     @property
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-        ...
     @isShared.setter
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-        ...
     def isTrackingEdits(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node is referenced or in an assembly that is tracking edits."""
-        ...
     @property
     def isVisible(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the manipulator is visible."""
-        ...
     @isVisible.setter
     def isVisible(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the manipulator is visible."""
-        ...
     kExtensionAttr: int = ...
     kInvalidAttr: int = ...
     kLocalDynamicAttr: int = ...
@@ -2445,127 +2014,96 @@ class MFnCircleSweepManip(MFnManip3D):
     kTranslateMinZ: int = ...
     def limitValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the value of the specified limit."""
-        ...
     def lineSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """lineSize() -> float
 
         Returns the manipulator line size.
         """
-        ...
     @property
     def manipScale(*args: Any, **kwargs: Any) -> Any:
         """The manipulator scale."""
-        ...
     @manipScale.setter
     def manipScale(*args: Any, **kwargs: Any) -> Any:
         """The manipulator scale."""
-        ...
     def name(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's name."""
-        ...
     @property
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-        ...
     @namespace.setter
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-        ...
     def object(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-        ...
     @property
     def objectColor(*args: Any, **kwargs: Any) -> Any:
         """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @objectColor.setter
     def objectColor(*args: Any, **kwargs: Any) -> Any:
         """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @property
     def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
         """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @objectColorRGB.setter
     def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
         """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @property
     def objectColorType(*args: Any, **kwargs: Any) -> Any:
         """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-        ...
     @objectColorType.setter
     def objectColorType(*args: Any, **kwargs: Any) -> Any:
         """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-        ...
     def parent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """parent(index) -> MObject
 
         Returns the specified parent of this node.
         """
-        ...
     def parentCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """parentCount() -> int
 
         Returns the number of parents this node has.
         """
-        ...
     def partialPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """partialPathName() -> string
 
         Returns the minimum path string necessary to uniquely identify the attached object.
         """
-        ...
     @property
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-        ...
     @pluginName.setter
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-        ...
     def plugsAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the alias for a plug's attribute."""
-        ...
     def removeAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Removes a dynamic attribute from the node."""
-        ...
     def removeChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeChild(node) -> self
 
         Removes the child, specified by MObject, reparenting it under the world.
         """
-        ...
     def removeChildAt(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeChildAt(index) -> self
 
         Removes the child, specified by index, reparenting it under the world.
         """
-        ...
     def reorderedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns one of the node's attribute, based on the order in which they are written to file."""
-        ...
     def resetFromRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Resets the transform from its rest position matrix."""
-        ...
     def restPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rest position matrix."""
-        ...
     def rotateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds an MEulerRotation or MQuaternion to the transform's rotation."""
-        ...
     def rotateByComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds to the transform's rotation using the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def rotateOrientation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the MQuaternion which orients the local rotation space."""
-        ...
     def rotatePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotate pivot."""
-        ...
     def rotatePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotate pivot translation."""
-        ...
     def rotateXYZValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """rotateXYZValue(valIndex) -> MEulerRotation
 
@@ -2573,34 +2111,24 @@ class MFnCircleSweepManip(MFnManip3D):
 
         * valIndex (int) - rotation index of the manipulator
         """
-        ...
     def rotation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotation as an MEulerRotation or MQuaternion."""
-        ...
     def rotationComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotation as the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def rotationOrder(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the order of rotations when the transform's rotation is expressed as an MEulerRotation."""
-        ...
     def scale(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transform's XYZ scale components."""
-        ...
     def scaleBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Multiplies the transform's XYZ scale components by a sequence of three floats."""
-        ...
     def scalePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's scale pivot."""
-        ...
     def scalePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's scale pivot translation."""
-        ...
     def setAffectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Specifies that modifications to a node could potentially affect the animation."""
-        ...
     def setAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds or removes an attribute alias."""
-        ...
     def setAngle(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setAngle(angle) -> self
 
@@ -2608,7 +2136,6 @@ class MFnCircleSweepManip(MFnManip3D):
 
         * angle (MAngle) - the angle of the CircleSweepManip
         """
-        ...
     def setCenterPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setCenterPoint(centerPoint) -> self
 
@@ -2616,10 +2143,8 @@ class MFnCircleSweepManip(MFnManip3D):
 
         * centerPoint (MPoint) - the center point of the CircleSweepManip
         """
-        ...
     def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Used to prevent the node from being written to file."""
-        ...
     def setDrawAsArc(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDrawAsArc(state) -> self
 
@@ -2627,46 +2152,36 @@ class MFnCircleSweepManip(MFnManip3D):
 
         * state (bool) - whether or not to draw as arc
         """
-        ...
     def setDrawPlaneHandles(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDrawPlaneHandles(bool) -> None
 
         Sets the global option to display planar handles or not on supported manipulators.
         """
-        ...
     def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Changes the location of external content."""
-        ...
     def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets content info in the specified attribute from the table."""
-        ...
     def setFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the state of the specified node flag."""
-        ...
     def setGlobalSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setGlobalSize(float) -> None
 
         Sets the global manipulator size.
         """
-        ...
     def setHandleSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setHandleSize(float) -> None
 
         Sets the manipulator handle size.
         """
-        ...
     def setLimit(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the value of the specified limit."""
-        ...
     def setLineSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setLineSize(float) -> None
 
         Sets the manipulator line size.
         """
-        ...
     def setName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's name."""
-        ...
     def setNormal(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setNormal(normal) -> self
 
@@ -2674,13 +2189,11 @@ class MFnCircleSweepManip(MFnManip3D):
 
         * normal (MVector) - the normal of the CircleSweepManip
         """
-        ...
     def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setObject(MObject or MDagPath) -> self
 
         Attaches the function set to the specified node or DAG path.
         """
-        ...
     def setRadius(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setRadius(radius) -> self
 
@@ -2688,187 +2201,133 @@ class MFnCircleSweepManip(MFnManip3D):
 
         * radius (float) - the radius of the CircleSweepManip
         """
-        ...
     def setRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rest position matrix."""
-        ...
     def setRotateOrientation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the MQuaternion which orients the local rotation space."""
-        ...
     def setRotatePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotate pivot."""
-        ...
     def setRotatePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotate pivot translation."""
-        ...
     def setRotation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation using an MEulerRotation or MQuaternion."""
-        ...
     def setRotationComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation using the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def setRotationOrder(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation order."""
-        ...
     def setScale(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale components."""
-        ...
     def setScalePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale pivot."""
-        ...
     def setScalePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale pivot translation."""
-        ...
     def setShear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's shear."""
-        ...
     def setTransformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's attribute values to represent the given transformation matrix."""
-        ...
     def setTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's translation."""
-        ...
     def setUuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's UUID."""
-        ...
     def shear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transform's shear components."""
-        ...
     def shearBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Multiplies the transform's shear components by a sequence of three floats."""
-        ...
     def startCircleIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """startCircleIndex() -> int
 
         Returns the index for the start of the circle of CircleSweepManip. The data type corresponding to this index is a double.
         """
-        ...
     @property
     def startPoint(*args: Any, **kwargs: Any) -> Any:
         """The start point of the CircleSweepManip."""
-        ...
     @startPoint.setter
     def startPoint(*args: Any, **kwargs: Any) -> Any:
         """The start point of the CircleSweepManip."""
-        ...
     def transformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transformation matrix represented by this transform."""
-        ...
     def transformationMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
         """transformationMatrix() -> MMatrix
 
         Returns the object space transformation matrix for this DAG node.
         """
-        ...
     def translateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds an MVector to the transform's translation."""
-        ...
     def translation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's translation as an MVector."""
-        ...
     def type(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the type of the function set."""
-        ...
     @property
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
-        ...
     @typeId.setter
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
-        ...
     @property
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-        ...
     @typeName.setter
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-        ...
     def uniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """For a DAG node, the unique name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself. For a non-DAG node, the uniqueName is just its name."""
-        ...
     @property
     def useObjectColor(*args: Any, **kwargs: Any) -> Any:
         """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-        ...
     @useObjectColor.setter
     def useObjectColor(*args: Any, **kwargs: Any) -> Any:
         """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-        ...
     def userNode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the MPxNode object for a plugin node."""
-        ...
     def uuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's UUID."""
-        ...
 
 class MFnCurveSegmentManip(MFnManip3D):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -2877,66 +2336,49 @@ class MFnCurveSegmentManip(MFnManip3D):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def absoluteName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the absolute name of this node.  The absolute name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself.  Regardless of relative name mode, absoluteName() will always return a full namespace path prefixed with a leading colon (the root namespace).  If the underlying node is a DAG node, then absoluteName() does not guarantee uniqueness, that is, two dependency nodes could have the same absoluteName().  In cases like this the uniqueName() method will guarantee that the name uniquely identifies the node."""
-        ...
     def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds a new dynamic attribute to the node."""
-        ...
     def addChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addChild(node, index=kNextPos, keepExistingParents=False) -> self
 
         Makes a node a child of this one.
         """
-        ...
     def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds content info to the specified table from a file path attribute."""
-        ...
     def affectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the changes to the node may affect animation."""
-        ...
     def allocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Allocates a flag on all nodes for use by the named plugin and returns the flag's index."""
-        ...
     def attribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns an attribute of the node, given either its index or name."""
-        ...
     def attributeClass(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the class of the specified attribute."""
-        ...
     def attributeCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the number of attributes on the node."""
-        ...
     @property
     def boundingBox(*args: Any, **kwargs: Any) -> Any:
         """Node's bounding box, in object space."""
-        ...
     @boundingBox.setter
     def boundingBox(*args: Any, **kwargs: Any) -> Any:
         """Node's bounding box, in object space."""
-        ...
     def canBeWritten(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the node will be written to file."""
-        ...
     def child(self: Self, *args: Any, **kwargs: Any) -> Any:
         """child(index) -> MObject
 
         Returns the specified child of this node.
         """
-        ...
     def childCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """childCount() -> int
 
         Returns the number of nodes which are children of this one.
         """
-        ...
     def classification(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the classification string for the named node type."""
-        ...
     def clearRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Clears the transform's rest position matrix."""
-        ...
     def connectToCurvePlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectToCurvePlug(curvePlug) -> self
 
@@ -2944,7 +2386,6 @@ class MFnCurveSegmentManip(MFnManip3D):
 
         * curvePlug (MPlug) - the curve plug
         """
-        ...
     def connectToEndParamPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectToEndParamPlug(endParamPlug) -> self
 
@@ -2952,7 +2393,6 @@ class MFnCurveSegmentManip(MFnManip3D):
 
         * endParamPlug (MPlug) - the endParam plug
         """
-        ...
     def connectToStartParamPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectToStartParamPlug(startParamPlug) -> self
 
@@ -2960,7 +2400,6 @@ class MFnCurveSegmentManip(MFnManip3D):
 
         * startParamPlug (MPlug) - the startParam plug
         """
-        ...
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """create(manipName=None, startParamName=None, endParamName=None) -> MObject
 
@@ -2975,31 +2414,25 @@ class MFnCurveSegmentManip(MFnManip3D):
         * startParamName (string) - Label for the startParam value which appears in the feedback line.
         * endParamName (string) - Label for the endParam value which appears in the feedback line.
         """
-        ...
     def curveIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """curveIndex() -> int
 
         Returns the index of the curve. The data type corresponding to this index is MFnData.kNurbsCurve.
         """
-        ...
     def dagPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dagPath() -> MDagPath
 
         Returns the DAG path to which this function set is attached. Raises a TypeError if the function set is attached to an MObject rather than a path.
         """
-        ...
     def dagRoot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dagRoot() -> MObject
 
         Returns the root node of the first path leading to this node.
         """
-        ...
     def deallocateAllFlags(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates all node flags which are currently allocated to the named plugin."""
-        ...
     def deallocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates the specified node flag, which was previously allocated by the named plugin using allocateFlag()."""
-        ...
     def deleteManipulator(self: Self, *args: Any, **kwargs: Any) -> Any:
         """deleteManipulator(manip) -> None
 
@@ -3007,261 +2440,199 @@ class MFnCurveSegmentManip(MFnManip3D):
 
         * manip (MObject) - the manipulator to be deleted
         """
-        ...
     def dgCallbackIds(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information for a specific callback type, broken down by callbackId."""
-        ...
     def dgCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information broken down by callback type."""
-        ...
     def dgTimer(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a specific DG timer metric for a given timer type."""
-        ...
     def dgTimerOff(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing off for this node."""
-        ...
     def dgTimerOn(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing on for this node."""
-        ...
     def dgTimerQueryState(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the current DG timer state for this node."""
-        ...
     def dgTimerReset(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Resets all DG timers for this node."""
-        ...
     def drawPlaneHandles(self: Self, *args: Any, **kwargs: Any) -> Any:
         """drawPlaneHandles() -> bool
 
         This method returns the global option that says if the planar manipulator handles should be drawn or not.Setting this will affect the drawing of all manipulators that support the planar handles.
         """
-        ...
     def duplicate(self: Self, *args: Any, **kwargs: Any) -> Any:
         """duplicate(instance=False, instanceLeaf=False) -> MObject
 
         Duplicates the DAG hierarchy rooted at the current node.
         """
-        ...
     def enableLimit(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Enables or disables a specified limit type."""
-        ...
     def endParamIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """endParamIndex() -> int
 
         Returns the index of the end parameter of the CurveSegmentManip. The data type corresponding this index is a double.
         """
-        ...
     @property
     def endParameter(*args: Any, **kwargs: Any) -> Any:
         """The end parameter of the CurveSegmentManip."""
-        ...
     @endParameter.setter
     def endParameter(*args: Any, **kwargs: Any) -> Any:
         """The end parameter of the CurveSegmentManip."""
-        ...
     def findAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the attribute which has the given alias."""
-        ...
     def findPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a plug for the given attribute."""
-        ...
     def fullPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """fullPathName() -> string
 
         Returns the full path of the attached object, from the root of the DAG on down.
         """
-        ...
     def getAffectedAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which are affected by the specified attribute."""
-        ...
     def getAffectingAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which affect the specified attribute."""
-        ...
     def getAliasAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's alias attribute, which is a special attribute used to store information about the node's attribute aliases."""
-        ...
     def getAliasList(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the node's attribute aliases."""
-        ...
     def getAllPaths(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getAllPaths() -> MDagPathArray
 
         Returns all of the DAG paths which lead to the object to which this function set is attached.
         """
-        ...
     def getConnectedSetsAndMembers(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getConnectedSetsAndMembers(instance, renderableSetsOnly) -> (MObjectArray, MObjectArray)
 
         Returns a tuple containing an array of sets and an array of the
         components of the DAG object which are in those sets. If the entire object is in a set, then the corresponding entry in the comps array will have no elements in it.
         """
-        ...
     def getConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all the plugs which are connected to attributes of this node."""
-        ...
     def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Gets the external content (files) that this node depends on."""
-        ...
     def getPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getPath() -> MDagPath
 
         Returns the DAG path to which this function set is attached, or the first path to the node if the function set is attached to an MObject.
         """
-        ...
     def globalSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """globalSize() -> float
 
         Returns the global manipulator size.
         """
-        ...
     def handleSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """handleSize() -> float
 
         Returns the manipulator handle size.
         """
-        ...
     def hasAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node has an attribute with the given name."""
-        ...
     def hasChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasChild(node) -> bool
 
         Returns True if the specified node is a child of this one.
         """
-        ...
     def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the function set is compatible with the specified Maya object."""
-        ...
     def hasParent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasParent(node) -> bool
 
         Returns True if the specified node is a parent of this one.
         """
-        ...
     def hasUniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node's name is unique."""
-        ...
     @property
     def inModel(*args: Any, **kwargs: Any) -> Any:
         """True if the node has been added to the model."""
-        ...
     @inModel.setter
     def inModel(*args: Any, **kwargs: Any) -> Any:
         """True if the node has been added to the model."""
-        ...
     @property
     def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
         """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-        ...
     @inUnderWorld.setter
     def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
         """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-        ...
     def instanceCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """instanceCount(indirect) -> int
 
         Returns the number of instances for this node.
         """
-        ...
     def isChildOf(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isChildOf(node) -> bool
 
         Returns True if the specified node is a parent of this one.
         """
-        ...
     @property
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-        ...
     @isDefaultNode.setter
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-        ...
     def isFlagSet(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the state of the specified node flag."""
-        ...
     @property
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
         """True if the node is from a referenced file, False if the node is part of the main scene."""
-        ...
     @isFromReferencedFile.setter
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
         """True if the node is from a referenced file, False if the node is part of the main scene."""
-        ...
     @property
     def isInstanceable(*args: Any, **kwargs: Any) -> Any:
         """True if instancing is allowed for this node."""
-        ...
     @isInstanceable.setter
     def isInstanceable(*args: Any, **kwargs: Any) -> Any:
         """True if instancing is allowed for this node."""
-        ...
     def isInstanced(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isInstanced(indirect=True) -> bool
 
         Returns True if this node is instanced.
         """
-        ...
     def isInstancedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isInstancedAttribute(attr) -> bool
 
         Returns True if the specified attribute is an instanced attribute of this node.
         """
-        ...
     @property
     def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
         """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-        ...
     @isIntermediateObject.setter
     def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
         """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-        ...
     def isLimited(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the specified limit type is enabled."""
-        ...
     @property
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-        ...
     @isLocked.setter
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-        ...
     def isNewAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the specified attribute was added in the current scene, and not by by one of its referenced files."""
-        ...
     @property
     def isOptimizePlaybackOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not optimize playback is on."""
-        ...
     @isOptimizePlaybackOn.setter
     def isOptimizePlaybackOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not optimize playback is on."""
-        ...
     def isParentOf(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isParentOf(node) -> bool
 
         Returns True if the specified node is a child of this one.
         """
-        ...
     @property
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-        ...
     @isShared.setter
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-        ...
     def isTrackingEdits(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node is referenced or in an assembly that is tracking edits."""
-        ...
     @property
     def isVisible(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the manipulator is visible."""
-        ...
     @isVisible.setter
     def isVisible(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the manipulator is visible."""
-        ...
     kExtensionAttr: int = ...
     kInvalidAttr: int = ...
     kLocalDynamicAttr: int = ...
@@ -3311,127 +2682,96 @@ class MFnCurveSegmentManip(MFnManip3D):
     kTranslateMinZ: int = ...
     def limitValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the value of the specified limit."""
-        ...
     def lineSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """lineSize() -> float
 
         Returns the manipulator line size.
         """
-        ...
     @property
     def manipScale(*args: Any, **kwargs: Any) -> Any:
         """The manipulator scale."""
-        ...
     @manipScale.setter
     def manipScale(*args: Any, **kwargs: Any) -> Any:
         """The manipulator scale."""
-        ...
     def name(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's name."""
-        ...
     @property
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-        ...
     @namespace.setter
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-        ...
     def object(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-        ...
     @property
     def objectColor(*args: Any, **kwargs: Any) -> Any:
         """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @objectColor.setter
     def objectColor(*args: Any, **kwargs: Any) -> Any:
         """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @property
     def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
         """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @objectColorRGB.setter
     def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
         """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @property
     def objectColorType(*args: Any, **kwargs: Any) -> Any:
         """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-        ...
     @objectColorType.setter
     def objectColorType(*args: Any, **kwargs: Any) -> Any:
         """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-        ...
     def parent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """parent(index) -> MObject
 
         Returns the specified parent of this node.
         """
-        ...
     def parentCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """parentCount() -> int
 
         Returns the number of parents this node has.
         """
-        ...
     def partialPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """partialPathName() -> string
 
         Returns the minimum path string necessary to uniquely identify the attached object.
         """
-        ...
     @property
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-        ...
     @pluginName.setter
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-        ...
     def plugsAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the alias for a plug's attribute."""
-        ...
     def removeAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Removes a dynamic attribute from the node."""
-        ...
     def removeChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeChild(node) -> self
 
         Removes the child, specified by MObject, reparenting it under the world.
         """
-        ...
     def removeChildAt(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeChildAt(index) -> self
 
         Removes the child, specified by index, reparenting it under the world.
         """
-        ...
     def reorderedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns one of the node's attribute, based on the order in which they are written to file."""
-        ...
     def resetFromRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Resets the transform from its rest position matrix."""
-        ...
     def restPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rest position matrix."""
-        ...
     def rotateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds an MEulerRotation or MQuaternion to the transform's rotation."""
-        ...
     def rotateByComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds to the transform's rotation using the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def rotateOrientation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the MQuaternion which orients the local rotation space."""
-        ...
     def rotatePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotate pivot."""
-        ...
     def rotatePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotate pivot translation."""
-        ...
     def rotateXYZValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """rotateXYZValue(valIndex) -> MEulerRotation
 
@@ -3439,262 +2779,188 @@ class MFnCurveSegmentManip(MFnManip3D):
 
         * valIndex (int) - rotation index of the manipulator
         """
-        ...
     def rotation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotation as an MEulerRotation or MQuaternion."""
-        ...
     def rotationComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotation as the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def rotationOrder(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the order of rotations when the transform's rotation is expressed as an MEulerRotation."""
-        ...
     def scale(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transform's XYZ scale components."""
-        ...
     def scaleBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Multiplies the transform's XYZ scale components by a sequence of three floats."""
-        ...
     def scalePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's scale pivot."""
-        ...
     def scalePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's scale pivot translation."""
-        ...
     def setAffectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Specifies that modifications to a node could potentially affect the animation."""
-        ...
     def setAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds or removes an attribute alias."""
-        ...
     def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Used to prevent the node from being written to file."""
-        ...
     def setDrawPlaneHandles(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDrawPlaneHandles(bool) -> None
 
         Sets the global option to display planar handles or not on supported manipulators.
         """
-        ...
     def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Changes the location of external content."""
-        ...
     def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets content info in the specified attribute from the table."""
-        ...
     def setFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the state of the specified node flag."""
-        ...
     def setGlobalSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setGlobalSize(float) -> None
 
         Sets the global manipulator size.
         """
-        ...
     def setHandleSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setHandleSize(float) -> None
 
         Sets the manipulator handle size.
         """
-        ...
     def setLimit(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the value of the specified limit."""
-        ...
     def setLineSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setLineSize(float) -> None
 
         Sets the manipulator line size.
         """
-        ...
     def setName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's name."""
-        ...
     def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setObject(MObject or MDagPath) -> self
 
         Attaches the function set to the specified node or DAG path.
         """
-        ...
     def setRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rest position matrix."""
-        ...
     def setRotateOrientation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the MQuaternion which orients the local rotation space."""
-        ...
     def setRotatePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotate pivot."""
-        ...
     def setRotatePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotate pivot translation."""
-        ...
     def setRotation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation using an MEulerRotation or MQuaternion."""
-        ...
     def setRotationComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation using the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def setRotationOrder(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation order."""
-        ...
     def setScale(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale components."""
-        ...
     def setScalePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale pivot."""
-        ...
     def setScalePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale pivot translation."""
-        ...
     def setShear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's shear."""
-        ...
     def setTransformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's attribute values to represent the given transformation matrix."""
-        ...
     def setTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's translation."""
-        ...
     def setUuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's UUID."""
-        ...
     def shear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transform's shear components."""
-        ...
     def shearBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Multiplies the transform's shear components by a sequence of three floats."""
-        ...
     def startParamIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """startParamIndex() -> int
 
         Returns the index of the start parameter of the CurveSegmentManip. The data type corresponding to this index is a double.
         """
-        ...
     @property
     def startParameter(*args: Any, **kwargs: Any) -> Any:
         """The start parameter of the CurveSegmentManip."""
-        ...
     @startParameter.setter
     def startParameter(*args: Any, **kwargs: Any) -> Any:
         """The start parameter of the CurveSegmentManip."""
-        ...
     def transformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transformation matrix represented by this transform."""
-        ...
     def transformationMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
         """transformationMatrix() -> MMatrix
 
         Returns the object space transformation matrix for this DAG node.
         """
-        ...
     def translateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds an MVector to the transform's translation."""
-        ...
     def translation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's translation as an MVector."""
-        ...
     def type(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the type of the function set."""
-        ...
     @property
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
-        ...
     @typeId.setter
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
-        ...
     @property
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-        ...
     @typeName.setter
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-        ...
     def uniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """For a DAG node, the unique name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself. For a non-DAG node, the uniqueName is just its name."""
-        ...
     @property
     def useObjectColor(*args: Any, **kwargs: Any) -> Any:
         """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-        ...
     @useObjectColor.setter
     def useObjectColor(*args: Any, **kwargs: Any) -> Any:
         """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-        ...
     def userNode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the MPxNode object for a plugin node."""
-        ...
     def uuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's UUID."""
-        ...
 
 class MFnDirectionManip(MFnManip3D):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -3703,66 +2969,49 @@ class MFnDirectionManip(MFnManip3D):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def absoluteName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the absolute name of this node.  The absolute name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself.  Regardless of relative name mode, absoluteName() will always return a full namespace path prefixed with a leading colon (the root namespace).  If the underlying node is a DAG node, then absoluteName() does not guarantee uniqueness, that is, two dependency nodes could have the same absoluteName().  In cases like this the uniqueName() method will guarantee that the name uniquely identifies the node."""
-        ...
     def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds a new dynamic attribute to the node."""
-        ...
     def addChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addChild(node, index=kNextPos, keepExistingParents=False) -> self
 
         Makes a node a child of this one.
         """
-        ...
     def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds content info to the specified table from a file path attribute."""
-        ...
     def affectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the changes to the node may affect animation."""
-        ...
     def allocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Allocates a flag on all nodes for use by the named plugin and returns the flag's index."""
-        ...
     def attribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns an attribute of the node, given either its index or name."""
-        ...
     def attributeClass(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the class of the specified attribute."""
-        ...
     def attributeCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the number of attributes on the node."""
-        ...
     @property
     def boundingBox(*args: Any, **kwargs: Any) -> Any:
         """Node's bounding box, in object space."""
-        ...
     @boundingBox.setter
     def boundingBox(*args: Any, **kwargs: Any) -> Any:
         """Node's bounding box, in object space."""
-        ...
     def canBeWritten(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the node will be written to file."""
-        ...
     def child(self: Self, *args: Any, **kwargs: Any) -> Any:
         """child(index) -> MObject
 
         Returns the specified child of this node.
         """
-        ...
     def childCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """childCount() -> int
 
         Returns the number of nodes which are children of this one.
         """
-        ...
     def classification(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the classification string for the named node type."""
-        ...
     def clearRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Clears the transform's rest position matrix."""
-        ...
     def connectToDirectionPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectToDirectionPlug(directionPlug) -> self
 
@@ -3770,7 +3019,6 @@ class MFnDirectionManip(MFnManip3D):
 
         * directionPlug (MPlug) - the direction plug
         """
-        ...
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """create(manipName=None, directionName=None) -> MObject
 
@@ -3784,25 +3032,20 @@ class MFnDirectionManip(MFnManip3D):
         * manipName (string) - Name of the manip for UI purposes.
         * directionName (string) - Label for the direction value which appears in the feedback line.
         """
-        ...
     def dagPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dagPath() -> MDagPath
 
         Returns the DAG path to which this function set is attached. Raises a TypeError if the function set is attached to an MObject rather than a path.
         """
-        ...
     def dagRoot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dagRoot() -> MObject
 
         Returns the root node of the first path leading to this node.
         """
-        ...
     def deallocateAllFlags(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates all node flags which are currently allocated to the named plugin."""
-        ...
     def deallocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates the specified node flag, which was previously allocated by the named plugin using allocateFlag()."""
-        ...
     def deleteManipulator(self: Self, *args: Any, **kwargs: Any) -> Any:
         """deleteManipulator(manip) -> None
 
@@ -3810,259 +3053,198 @@ class MFnDirectionManip(MFnManip3D):
 
         * manip (MObject) - the manipulator to be deleted
         """
-        ...
     def dgCallbackIds(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information for a specific callback type, broken down by callbackId."""
-        ...
     def dgCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information broken down by callback type."""
-        ...
     def dgTimer(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a specific DG timer metric for a given timer type."""
-        ...
     def dgTimerOff(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing off for this node."""
-        ...
     def dgTimerOn(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing on for this node."""
-        ...
     def dgTimerQueryState(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the current DG timer state for this node."""
-        ...
     def dgTimerReset(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Resets all DG timers for this node."""
-        ...
     def directionIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """directionIndex() -> int
 
         Returns the index of the direction. The data type corresponding to this index is MFnNumericData.k3Double.
         """
-        ...
     def drawPlaneHandles(self: Self, *args: Any, **kwargs: Any) -> Any:
         """drawPlaneHandles() -> bool
 
         This method returns the global option that says if the planar manipulator handles should be drawn or not.Setting this will affect the drawing of all manipulators that support the planar handles.
         """
-        ...
     def duplicate(self: Self, *args: Any, **kwargs: Any) -> Any:
         """duplicate(instance=False, instanceLeaf=False) -> MObject
 
         Duplicates the DAG hierarchy rooted at the current node.
         """
-        ...
     def enableLimit(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Enables or disables a specified limit type."""
-        ...
     def endPointIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """endPointIndex() -> int
 
         Returns the index of the end point of the DirectionManip. The data type corresponding to this index is MFnNumericData.k3Double.
         """
-        ...
     def findAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the attribute which has the given alias."""
-        ...
     def findPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a plug for the given attribute."""
-        ...
     def fullPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """fullPathName() -> string
 
         Returns the full path of the attached object, from the root of the DAG on down.
         """
-        ...
     def getAffectedAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which are affected by the specified attribute."""
-        ...
     def getAffectingAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which affect the specified attribute."""
-        ...
     def getAliasAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's alias attribute, which is a special attribute used to store information about the node's attribute aliases."""
-        ...
     def getAliasList(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the node's attribute aliases."""
-        ...
     def getAllPaths(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getAllPaths() -> MDagPathArray
 
         Returns all of the DAG paths which lead to the object to which this function set is attached.
         """
-        ...
     def getConnectedSetsAndMembers(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getConnectedSetsAndMembers(instance, renderableSetsOnly) -> (MObjectArray, MObjectArray)
 
         Returns a tuple containing an array of sets and an array of the
         components of the DAG object which are in those sets. If the entire object is in a set, then the corresponding entry in the comps array will have no elements in it.
         """
-        ...
     def getConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all the plugs which are connected to attributes of this node."""
-        ...
     def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Gets the external content (files) that this node depends on."""
-        ...
     def getPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getPath() -> MDagPath
 
         Returns the DAG path to which this function set is attached, or the first path to the node if the function set is attached to an MObject.
         """
-        ...
     def globalSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """globalSize() -> float
 
         Returns the global manipulator size.
         """
-        ...
     def handleSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """handleSize() -> float
 
         Returns the manipulator handle size.
         """
-        ...
     def hasAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node has an attribute with the given name."""
-        ...
     def hasChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasChild(node) -> bool
 
         Returns True if the specified node is a child of this one.
         """
-        ...
     def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the function set is compatible with the specified Maya object."""
-        ...
     def hasParent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasParent(node) -> bool
 
         Returns True if the specified node is a parent of this one.
         """
-        ...
     def hasUniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node's name is unique."""
-        ...
     @property
     def inModel(*args: Any, **kwargs: Any) -> Any:
         """True if the node has been added to the model."""
-        ...
     @inModel.setter
     def inModel(*args: Any, **kwargs: Any) -> Any:
         """True if the node has been added to the model."""
-        ...
     @property
     def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
         """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-        ...
     @inUnderWorld.setter
     def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
         """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-        ...
     def instanceCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """instanceCount(indirect) -> int
 
         Returns the number of instances for this node.
         """
-        ...
     def isChildOf(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isChildOf(node) -> bool
 
         Returns True if the specified node is a parent of this one.
         """
-        ...
     @property
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-        ...
     @isDefaultNode.setter
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-        ...
     def isFlagSet(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the state of the specified node flag."""
-        ...
     @property
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
         """True if the node is from a referenced file, False if the node is part of the main scene."""
-        ...
     @isFromReferencedFile.setter
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
         """True if the node is from a referenced file, False if the node is part of the main scene."""
-        ...
     @property
     def isInstanceable(*args: Any, **kwargs: Any) -> Any:
         """True if instancing is allowed for this node."""
-        ...
     @isInstanceable.setter
     def isInstanceable(*args: Any, **kwargs: Any) -> Any:
         """True if instancing is allowed for this node."""
-        ...
     def isInstanced(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isInstanced(indirect=True) -> bool
 
         Returns True if this node is instanced.
         """
-        ...
     def isInstancedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isInstancedAttribute(attr) -> bool
 
         Returns True if the specified attribute is an instanced attribute of this node.
         """
-        ...
     @property
     def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
         """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-        ...
     @isIntermediateObject.setter
     def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
         """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-        ...
     def isLimited(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the specified limit type is enabled."""
-        ...
     @property
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-        ...
     @isLocked.setter
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-        ...
     def isNewAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the specified attribute was added in the current scene, and not by by one of its referenced files."""
-        ...
     @property
     def isOptimizePlaybackOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not optimize playback is on."""
-        ...
     @isOptimizePlaybackOn.setter
     def isOptimizePlaybackOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not optimize playback is on."""
-        ...
     def isParentOf(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isParentOf(node) -> bool
 
         Returns True if the specified node is a child of this one.
         """
-        ...
     @property
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-        ...
     @isShared.setter
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-        ...
     def isTrackingEdits(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node is referenced or in an assembly that is tracking edits."""
-        ...
     @property
     def isVisible(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the manipulator is visible."""
-        ...
     @isVisible.setter
     def isVisible(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the manipulator is visible."""
-        ...
     kExtensionAttr: int = ...
     kInvalidAttr: int = ...
     kLocalDynamicAttr: int = ...
@@ -4112,127 +3294,96 @@ class MFnDirectionManip(MFnManip3D):
     kTranslateMinZ: int = ...
     def limitValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the value of the specified limit."""
-        ...
     def lineSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """lineSize() -> float
 
         Returns the manipulator line size.
         """
-        ...
     @property
     def manipScale(*args: Any, **kwargs: Any) -> Any:
         """The manipulator scale."""
-        ...
     @manipScale.setter
     def manipScale(*args: Any, **kwargs: Any) -> Any:
         """The manipulator scale."""
-        ...
     def name(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's name."""
-        ...
     @property
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-        ...
     @namespace.setter
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-        ...
     def object(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-        ...
     @property
     def objectColor(*args: Any, **kwargs: Any) -> Any:
         """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @objectColor.setter
     def objectColor(*args: Any, **kwargs: Any) -> Any:
         """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @property
     def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
         """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @objectColorRGB.setter
     def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
         """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @property
     def objectColorType(*args: Any, **kwargs: Any) -> Any:
         """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-        ...
     @objectColorType.setter
     def objectColorType(*args: Any, **kwargs: Any) -> Any:
         """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-        ...
     def parent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """parent(index) -> MObject
 
         Returns the specified parent of this node.
         """
-        ...
     def parentCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """parentCount() -> int
 
         Returns the number of parents this node has.
         """
-        ...
     def partialPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """partialPathName() -> string
 
         Returns the minimum path string necessary to uniquely identify the attached object.
         """
-        ...
     @property
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-        ...
     @pluginName.setter
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-        ...
     def plugsAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the alias for a plug's attribute."""
-        ...
     def removeAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Removes a dynamic attribute from the node."""
-        ...
     def removeChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeChild(node) -> self
 
         Removes the child, specified by MObject, reparenting it under the world.
         """
-        ...
     def removeChildAt(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeChildAt(index) -> self
 
         Removes the child, specified by index, reparenting it under the world.
         """
-        ...
     def reorderedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns one of the node's attribute, based on the order in which they are written to file."""
-        ...
     def resetFromRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Resets the transform from its rest position matrix."""
-        ...
     def restPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rest position matrix."""
-        ...
     def rotateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds an MEulerRotation or MQuaternion to the transform's rotation."""
-        ...
     def rotateByComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds to the transform's rotation using the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def rotateOrientation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the MQuaternion which orients the local rotation space."""
-        ...
     def rotatePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotate pivot."""
-        ...
     def rotatePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotate pivot translation."""
-        ...
     def rotateXYZValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """rotateXYZValue(valIndex) -> MEulerRotation
 
@@ -4240,34 +3391,24 @@ class MFnDirectionManip(MFnManip3D):
 
         * valIndex (int) - rotation index of the manipulator
         """
-        ...
     def rotation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotation as an MEulerRotation or MQuaternion."""
-        ...
     def rotationComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotation as the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def rotationOrder(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the order of rotations when the transform's rotation is expressed as an MEulerRotation."""
-        ...
     def scale(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transform's XYZ scale components."""
-        ...
     def scaleBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Multiplies the transform's XYZ scale components by a sequence of three floats."""
-        ...
     def scalePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's scale pivot."""
-        ...
     def scalePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's scale pivot translation."""
-        ...
     def setAffectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Specifies that modifications to a node could potentially affect the animation."""
-        ...
     def setAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds or removes an attribute alias."""
-        ...
     def setDirection(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDirection(direction) -> self
 
@@ -4275,16 +3416,13 @@ class MFnDirectionManip(MFnManip3D):
 
         * direction (MVector) - the direction of the DirectionManip
         """
-        ...
     def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Used to prevent the node from being written to file."""
-        ...
     def setDrawPlaneHandles(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDrawPlaneHandles(bool) -> None
 
         Sets the global option to display planar handles or not on supported manipulators.
         """
-        ...
     def setDrawStart(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDrawStart(bool) -> self
 
@@ -4292,86 +3430,64 @@ class MFnDirectionManip(MFnManip3D):
         The start of the DirectionManip is indicated by a grey dot.
         By default the start is not drawn.
         """
-        ...
     def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Changes the location of external content."""
-        ...
     def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets content info in the specified attribute from the table."""
-        ...
     def setFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the state of the specified node flag."""
-        ...
     def setGlobalSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setGlobalSize(float) -> None
 
         Sets the global manipulator size.
         """
-        ...
     def setHandleSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setHandleSize(float) -> None
 
         Sets the manipulator handle size.
         """
-        ...
     def setLimit(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the value of the specified limit."""
-        ...
     def setLineSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setLineSize(float) -> None
 
         Sets the manipulator line size.
         """
-        ...
     def setName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's name."""
-        ...
     def setNormalizeDirection(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setNormalizeDirection(bool) -> self
 
         Sets whether or not to the direction should be normalized.
         By default the direction is normalized.
         """
-        ...
     def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setObject(MObject or MDagPath) -> self
 
         Attaches the function set to the specified node or DAG path.
         """
-        ...
     def setRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rest position matrix."""
-        ...
     def setRotateOrientation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the MQuaternion which orients the local rotation space."""
-        ...
     def setRotatePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotate pivot."""
-        ...
     def setRotatePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotate pivot translation."""
-        ...
     def setRotation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation using an MEulerRotation or MQuaternion."""
-        ...
     def setRotationComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation using the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def setRotationOrder(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation order."""
-        ...
     def setScale(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale components."""
-        ...
     def setScalePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale pivot."""
-        ...
     def setScalePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale pivot translation."""
-        ...
     def setShear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's shear."""
-        ...
     def setStartPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setStartPoint(startPoint) -> self
 
@@ -4379,146 +3495,105 @@ class MFnDirectionManip(MFnManip3D):
 
         * startPoint (MPoint) - the start point of the DirectionManip
         """
-        ...
     def setTransformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's attribute values to represent the given transformation matrix."""
-        ...
     def setTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's translation."""
-        ...
     def setUuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's UUID."""
-        ...
     def shear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transform's shear components."""
-        ...
     def shearBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Multiplies the transform's shear components by a sequence of three floats."""
-        ...
     def startPointIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """startPointIndex() -> int
 
         Returns the index of the start point of the DirectionManip. The data type corresponding to this index is MFnNumericData.k3Double.
         """
-        ...
     def transformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transformation matrix represented by this transform."""
-        ...
     def transformationMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
         """transformationMatrix() -> MMatrix
 
         Returns the object space transformation matrix for this DAG node.
         """
-        ...
     def translateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds an MVector to the transform's translation."""
-        ...
     def translation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's translation as an MVector."""
-        ...
     def type(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the type of the function set."""
-        ...
     @property
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
-        ...
     @typeId.setter
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
-        ...
     @property
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-        ...
     @typeName.setter
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-        ...
     def uniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """For a DAG node, the unique name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself. For a non-DAG node, the uniqueName is just its name."""
-        ...
     @property
     def useObjectColor(*args: Any, **kwargs: Any) -> Any:
         """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-        ...
     @useObjectColor.setter
     def useObjectColor(*args: Any, **kwargs: Any) -> Any:
         """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-        ...
     def userNode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the MPxNode object for a plugin node."""
-        ...
     def uuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's UUID."""
-        ...
 
 class MFnDiscManip(MFnManip3D):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -4527,84 +3602,64 @@ class MFnDiscManip(MFnManip3D):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def absoluteName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the absolute name of this node.  The absolute name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself.  Regardless of relative name mode, absoluteName() will always return a full namespace path prefixed with a leading colon (the root namespace).  If the underlying node is a DAG node, then absoluteName() does not guarantee uniqueness, that is, two dependency nodes could have the same absoluteName().  In cases like this the uniqueName() method will guarantee that the name uniquely identifies the node."""
-        ...
     def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds a new dynamic attribute to the node."""
-        ...
     def addChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addChild(node, index=kNextPos, keepExistingParents=False) -> self
 
         Makes a node a child of this one.
         """
-        ...
     def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds content info to the specified table from a file path attribute."""
-        ...
     def affectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the changes to the node may affect animation."""
-        ...
     def allocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Allocates a flag on all nodes for use by the named plugin and returns the flag's index."""
-        ...
     def angleIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """angleIndex() -> int
 
         Returns the index of the angle. The data type corresponding to this index is a double.
         """
-        ...
     def attribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns an attribute of the node, given either its index or name."""
-        ...
     def attributeClass(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the class of the specified attribute."""
-        ...
     def attributeCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the number of attributes on the node."""
-        ...
     def axisIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """axisIndex() -> int
 
         Returns the index of the axis of the DiscManip. The data type corresponding to this index is MFnNumericData.k3Double.
         """
-        ...
     @property
     def boundingBox(*args: Any, **kwargs: Any) -> Any:
         """Node's bounding box, in object space."""
-        ...
     @boundingBox.setter
     def boundingBox(*args: Any, **kwargs: Any) -> Any:
         """Node's bounding box, in object space."""
-        ...
     def canBeWritten(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the node will be written to file."""
-        ...
     def centerIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """centerIndex() -> int
 
         Returns the index of the center of the DiscManip. The data type corresponding to this index is MFnNumericData.k3Double.
         """
-        ...
     def child(self: Self, *args: Any, **kwargs: Any) -> Any:
         """child(index) -> MObject
 
         Returns the specified child of this node.
         """
-        ...
     def childCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """childCount() -> int
 
         Returns the number of nodes which are children of this one.
         """
-        ...
     def classification(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the classification string for the named node type."""
-        ...
     def clearRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Clears the transform's rest position matrix."""
-        ...
     def connectToAnglePlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectToAnglePlug(directionPlug) -> self
 
@@ -4612,7 +3667,6 @@ class MFnDiscManip(MFnManip3D):
 
         * anglePlug (MPlug) - the angle plug
         """
-        ...
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """create(manipName=None, angleName=None) -> MObject
 
@@ -4626,25 +3680,20 @@ class MFnDiscManip(MFnManip3D):
         * manipName (string) - Name of the manip for UI purposes.
         * angleName (string) - Label for the angle value which appears in the feedback line.
         """
-        ...
     def dagPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dagPath() -> MDagPath
 
         Returns the DAG path to which this function set is attached. Raises a TypeError if the function set is attached to an MObject rather than a path.
         """
-        ...
     def dagRoot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dagRoot() -> MObject
 
         Returns the root node of the first path leading to this node.
         """
-        ...
     def deallocateAllFlags(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates all node flags which are currently allocated to the named plugin."""
-        ...
     def deallocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates the specified node flag, which was previously allocated by the named plugin using allocateFlag()."""
-        ...
     def deleteManipulator(self: Self, *args: Any, **kwargs: Any) -> Any:
         """deleteManipulator(manip) -> None
 
@@ -4652,247 +3701,188 @@ class MFnDiscManip(MFnManip3D):
 
         * manip (MObject) - the manipulator to be deleted
         """
-        ...
     def dgCallbackIds(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information for a specific callback type, broken down by callbackId."""
-        ...
     def dgCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information broken down by callback type."""
-        ...
     def dgTimer(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a specific DG timer metric for a given timer type."""
-        ...
     def dgTimerOff(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing off for this node."""
-        ...
     def dgTimerOn(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing on for this node."""
-        ...
     def dgTimerQueryState(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the current DG timer state for this node."""
-        ...
     def dgTimerReset(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Resets all DG timers for this node."""
-        ...
     def drawPlaneHandles(self: Self, *args: Any, **kwargs: Any) -> Any:
         """drawPlaneHandles() -> bool
 
         This method returns the global option that says if the planar manipulator handles should be drawn or not.Setting this will affect the drawing of all manipulators that support the planar handles.
         """
-        ...
     def duplicate(self: Self, *args: Any, **kwargs: Any) -> Any:
         """duplicate(instance=False, instanceLeaf=False) -> MObject
 
         Duplicates the DAG hierarchy rooted at the current node.
         """
-        ...
     def enableLimit(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Enables or disables a specified limit type."""
-        ...
     def findAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the attribute which has the given alias."""
-        ...
     def findPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a plug for the given attribute."""
-        ...
     def fullPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """fullPathName() -> string
 
         Returns the full path of the attached object, from the root of the DAG on down.
         """
-        ...
     def getAffectedAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which are affected by the specified attribute."""
-        ...
     def getAffectingAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which affect the specified attribute."""
-        ...
     def getAliasAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's alias attribute, which is a special attribute used to store information about the node's attribute aliases."""
-        ...
     def getAliasList(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the node's attribute aliases."""
-        ...
     def getAllPaths(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getAllPaths() -> MDagPathArray
 
         Returns all of the DAG paths which lead to the object to which this function set is attached.
         """
-        ...
     def getConnectedSetsAndMembers(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getConnectedSetsAndMembers(instance, renderableSetsOnly) -> (MObjectArray, MObjectArray)
 
         Returns a tuple containing an array of sets and an array of the
         components of the DAG object which are in those sets. If the entire object is in a set, then the corresponding entry in the comps array will have no elements in it.
         """
-        ...
     def getConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all the plugs which are connected to attributes of this node."""
-        ...
     def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Gets the external content (files) that this node depends on."""
-        ...
     def getPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getPath() -> MDagPath
 
         Returns the DAG path to which this function set is attached, or the first path to the node if the function set is attached to an MObject.
         """
-        ...
     def globalSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """globalSize() -> float
 
         Returns the global manipulator size.
         """
-        ...
     def handleSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """handleSize() -> float
 
         Returns the manipulator handle size.
         """
-        ...
     def hasAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node has an attribute with the given name."""
-        ...
     def hasChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasChild(node) -> bool
 
         Returns True if the specified node is a child of this one.
         """
-        ...
     def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the function set is compatible with the specified Maya object."""
-        ...
     def hasParent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasParent(node) -> bool
 
         Returns True if the specified node is a parent of this one.
         """
-        ...
     def hasUniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node's name is unique."""
-        ...
     @property
     def inModel(*args: Any, **kwargs: Any) -> Any:
         """True if the node has been added to the model."""
-        ...
     @inModel.setter
     def inModel(*args: Any, **kwargs: Any) -> Any:
         """True if the node has been added to the model."""
-        ...
     @property
     def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
         """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-        ...
     @inUnderWorld.setter
     def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
         """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-        ...
     def instanceCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """instanceCount(indirect) -> int
 
         Returns the number of instances for this node.
         """
-        ...
     def isChildOf(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isChildOf(node) -> bool
 
         Returns True if the specified node is a parent of this one.
         """
-        ...
     @property
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-        ...
     @isDefaultNode.setter
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-        ...
     def isFlagSet(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the state of the specified node flag."""
-        ...
     @property
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
         """True if the node is from a referenced file, False if the node is part of the main scene."""
-        ...
     @isFromReferencedFile.setter
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
         """True if the node is from a referenced file, False if the node is part of the main scene."""
-        ...
     @property
     def isInstanceable(*args: Any, **kwargs: Any) -> Any:
         """True if instancing is allowed for this node."""
-        ...
     @isInstanceable.setter
     def isInstanceable(*args: Any, **kwargs: Any) -> Any:
         """True if instancing is allowed for this node."""
-        ...
     def isInstanced(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isInstanced(indirect=True) -> bool
 
         Returns True if this node is instanced.
         """
-        ...
     def isInstancedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isInstancedAttribute(attr) -> bool
 
         Returns True if the specified attribute is an instanced attribute of this node.
         """
-        ...
     @property
     def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
         """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-        ...
     @isIntermediateObject.setter
     def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
         """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-        ...
     def isLimited(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the specified limit type is enabled."""
-        ...
     @property
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-        ...
     @isLocked.setter
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-        ...
     def isNewAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the specified attribute was added in the current scene, and not by by one of its referenced files."""
-        ...
     @property
     def isOptimizePlaybackOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not optimize playback is on."""
-        ...
     @isOptimizePlaybackOn.setter
     def isOptimizePlaybackOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not optimize playback is on."""
-        ...
     def isParentOf(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isParentOf(node) -> bool
 
         Returns True if the specified node is a child of this one.
         """
-        ...
     @property
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-        ...
     @isShared.setter
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-        ...
     def isTrackingEdits(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node is referenced or in an assembly that is tracking edits."""
-        ...
     @property
     def isVisible(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the manipulator is visible."""
-        ...
     @isVisible.setter
     def isVisible(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the manipulator is visible."""
-        ...
     kExtensionAttr: int = ...
     kInvalidAttr: int = ...
     kLocalDynamicAttr: int = ...
@@ -4942,127 +3932,96 @@ class MFnDiscManip(MFnManip3D):
     kTranslateMinZ: int = ...
     def limitValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the value of the specified limit."""
-        ...
     def lineSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """lineSize() -> float
 
         Returns the manipulator line size.
         """
-        ...
     @property
     def manipScale(*args: Any, **kwargs: Any) -> Any:
         """The manipulator scale."""
-        ...
     @manipScale.setter
     def manipScale(*args: Any, **kwargs: Any) -> Any:
         """The manipulator scale."""
-        ...
     def name(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's name."""
-        ...
     @property
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-        ...
     @namespace.setter
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-        ...
     def object(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-        ...
     @property
     def objectColor(*args: Any, **kwargs: Any) -> Any:
         """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @objectColor.setter
     def objectColor(*args: Any, **kwargs: Any) -> Any:
         """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @property
     def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
         """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @objectColorRGB.setter
     def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
         """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @property
     def objectColorType(*args: Any, **kwargs: Any) -> Any:
         """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-        ...
     @objectColorType.setter
     def objectColorType(*args: Any, **kwargs: Any) -> Any:
         """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-        ...
     def parent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """parent(index) -> MObject
 
         Returns the specified parent of this node.
         """
-        ...
     def parentCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """parentCount() -> int
 
         Returns the number of parents this node has.
         """
-        ...
     def partialPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """partialPathName() -> string
 
         Returns the minimum path string necessary to uniquely identify the attached object.
         """
-        ...
     @property
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-        ...
     @pluginName.setter
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-        ...
     def plugsAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the alias for a plug's attribute."""
-        ...
     def removeAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Removes a dynamic attribute from the node."""
-        ...
     def removeChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeChild(node) -> self
 
         Removes the child, specified by MObject, reparenting it under the world.
         """
-        ...
     def removeChildAt(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeChildAt(index) -> self
 
         Removes the child, specified by index, reparenting it under the world.
         """
-        ...
     def reorderedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns one of the node's attribute, based on the order in which they are written to file."""
-        ...
     def resetFromRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Resets the transform from its rest position matrix."""
-        ...
     def restPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rest position matrix."""
-        ...
     def rotateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds an MEulerRotation or MQuaternion to the transform's rotation."""
-        ...
     def rotateByComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds to the transform's rotation using the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def rotateOrientation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the MQuaternion which orients the local rotation space."""
-        ...
     def rotatePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotate pivot."""
-        ...
     def rotatePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotate pivot translation."""
-        ...
     def rotateXYZValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """rotateXYZValue(valIndex) -> MEulerRotation
 
@@ -5070,34 +4029,24 @@ class MFnDiscManip(MFnManip3D):
 
         * valIndex (int) - rotation index of the manipulator
         """
-        ...
     def rotation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotation as an MEulerRotation or MQuaternion."""
-        ...
     def rotationComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotation as the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def rotationOrder(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the order of rotations when the transform's rotation is expressed as an MEulerRotation."""
-        ...
     def scale(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transform's XYZ scale components."""
-        ...
     def scaleBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Multiplies the transform's XYZ scale components by a sequence of three floats."""
-        ...
     def scalePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's scale pivot."""
-        ...
     def scalePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's scale pivot translation."""
-        ...
     def setAffectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Specifies that modifications to a node could potentially affect the animation."""
-        ...
     def setAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds or removes an attribute alias."""
-        ...
     def setAngle(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setAngle(angle) -> self
 
@@ -5105,7 +4054,6 @@ class MFnDiscManip(MFnManip3D):
 
         * angle (MAngle) - the angle of the DiscManip
         """
-        ...
     def setCenterPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setCenterPoint(centerPoint) -> self
 
@@ -5113,49 +4061,38 @@ class MFnDiscManip(MFnManip3D):
 
         * centerPoint (MPoint) - the center point of the DiscManip
         """
-        ...
     def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Used to prevent the node from being written to file."""
-        ...
     def setDrawPlaneHandles(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDrawPlaneHandles(bool) -> None
 
         Sets the global option to display planar handles or not on supported manipulators.
         """
-        ...
     def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Changes the location of external content."""
-        ...
     def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets content info in the specified attribute from the table."""
-        ...
     def setFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the state of the specified node flag."""
-        ...
     def setGlobalSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setGlobalSize(float) -> None
 
         Sets the global manipulator size.
         """
-        ...
     def setHandleSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setHandleSize(float) -> None
 
         Sets the manipulator handle size.
         """
-        ...
     def setLimit(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the value of the specified limit."""
-        ...
     def setLineSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setLineSize(float) -> None
 
         Sets the manipulator line size.
         """
-        ...
     def setName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's name."""
-        ...
     def setNormal(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setNormal(normal) -> self
 
@@ -5163,13 +4100,11 @@ class MFnDiscManip(MFnManip3D):
 
         * normal (MVector) - the normal of the DiscManip
         """
-        ...
     def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setObject(MObject or MDagPath) -> self
 
         Attaches the function set to the specified node or DAG path.
         """
-        ...
     def setRadius(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setRadius(radius) -> self
 
@@ -5177,173 +4112,122 @@ class MFnDiscManip(MFnManip3D):
 
         * radius (float) - the radius of the DiscManip
         """
-        ...
     def setRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rest position matrix."""
-        ...
     def setRotateOrientation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the MQuaternion which orients the local rotation space."""
-        ...
     def setRotatePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotate pivot."""
-        ...
     def setRotatePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotate pivot translation."""
-        ...
     def setRotation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation using an MEulerRotation or MQuaternion."""
-        ...
     def setRotationComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation using the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def setRotationOrder(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation order."""
-        ...
     def setScale(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale components."""
-        ...
     def setScalePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale pivot."""
-        ...
     def setScalePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale pivot translation."""
-        ...
     def setShear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's shear."""
-        ...
     def setTransformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's attribute values to represent the given transformation matrix."""
-        ...
     def setTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's translation."""
-        ...
     def setUuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's UUID."""
-        ...
     def shear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transform's shear components."""
-        ...
     def shearBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Multiplies the transform's shear components by a sequence of three floats."""
-        ...
     def transformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transformation matrix represented by this transform."""
-        ...
     def transformationMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
         """transformationMatrix() -> MMatrix
 
         Returns the object space transformation matrix for this DAG node.
         """
-        ...
     def translateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds an MVector to the transform's translation."""
-        ...
     def translation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's translation as an MVector."""
-        ...
     def type(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the type of the function set."""
-        ...
     @property
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
-        ...
     @typeId.setter
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
-        ...
     @property
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-        ...
     @typeName.setter
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-        ...
     def uniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """For a DAG node, the unique name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself. For a non-DAG node, the uniqueName is just its name."""
-        ...
     @property
     def useObjectColor(*args: Any, **kwargs: Any) -> Any:
         """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-        ...
     @useObjectColor.setter
     def useObjectColor(*args: Any, **kwargs: Any) -> Any:
         """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-        ...
     def userNode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the MPxNode object for a plugin node."""
-        ...
     def uuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's UUID."""
-        ...
 
 class MFnDistanceManip(MFnManip3D):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -5352,66 +4236,49 @@ class MFnDistanceManip(MFnManip3D):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def absoluteName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the absolute name of this node.  The absolute name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself.  Regardless of relative name mode, absoluteName() will always return a full namespace path prefixed with a leading colon (the root namespace).  If the underlying node is a DAG node, then absoluteName() does not guarantee uniqueness, that is, two dependency nodes could have the same absoluteName().  In cases like this the uniqueName() method will guarantee that the name uniquely identifies the node."""
-        ...
     def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds a new dynamic attribute to the node."""
-        ...
     def addChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addChild(node, index=kNextPos, keepExistingParents=False) -> self
 
         Makes a node a child of this one.
         """
-        ...
     def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds content info to the specified table from a file path attribute."""
-        ...
     def affectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the changes to the node may affect animation."""
-        ...
     def allocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Allocates a flag on all nodes for use by the named plugin and returns the flag's index."""
-        ...
     def attribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns an attribute of the node, given either its index or name."""
-        ...
     def attributeClass(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the class of the specified attribute."""
-        ...
     def attributeCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the number of attributes on the node."""
-        ...
     @property
     def boundingBox(*args: Any, **kwargs: Any) -> Any:
         """Node's bounding box, in object space."""
-        ...
     @boundingBox.setter
     def boundingBox(*args: Any, **kwargs: Any) -> Any:
         """Node's bounding box, in object space."""
-        ...
     def canBeWritten(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the node will be written to file."""
-        ...
     def child(self: Self, *args: Any, **kwargs: Any) -> Any:
         """child(index) -> MObject
 
         Returns the specified child of this node.
         """
-        ...
     def childCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """childCount() -> int
 
         Returns the number of nodes which are children of this one.
         """
-        ...
     def classification(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the classification string for the named node type."""
-        ...
     def clearRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Clears the transform's rest position matrix."""
-        ...
     def connectToDistancePlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectToDistancePlug(directionPlug) -> self
 
@@ -5419,7 +4286,6 @@ class MFnDistanceManip(MFnManip3D):
 
         * distancePlug (MPlug) - the distance plug
         """
-        ...
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """create(manipName=None, distanceName=None) -> MObject
 
@@ -5433,31 +4299,25 @@ class MFnDistanceManip(MFnManip3D):
         * manipName (string) - Name of the manip for UI purposes.
         * distanceName (string) - Label for the distance value which appears in the feedback line.
         """
-        ...
     def currentPointIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """currentPointIndex() -> int
 
         Returns the index of the current point of the DistanceManip. The data type corresponding to this index is MFnNumericData.k3Double.
         """
-        ...
     def dagPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dagPath() -> MDagPath
 
         Returns the DAG path to which this function set is attached. Raises a TypeError if the function set is attached to an MObject rather than a path.
         """
-        ...
     def dagRoot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dagRoot() -> MObject
 
         Returns the root node of the first path leading to this node.
         """
-        ...
     def deallocateAllFlags(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates all node flags which are currently allocated to the named plugin."""
-        ...
     def deallocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates the specified node flag, which was previously allocated by the named plugin using allocateFlag()."""
-        ...
     def deleteManipulator(self: Self, *args: Any, **kwargs: Any) -> Any:
         """deleteManipulator(manip) -> None
 
@@ -5465,283 +4325,218 @@ class MFnDistanceManip(MFnManip3D):
 
         * manip (MObject) - the manipulator to be deleted
         """
-        ...
     def dgCallbackIds(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information for a specific callback type, broken down by callbackId."""
-        ...
     def dgCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information broken down by callback type."""
-        ...
     def dgTimer(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a specific DG timer metric for a given timer type."""
-        ...
     def dgTimerOff(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing off for this node."""
-        ...
     def dgTimerOn(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing on for this node."""
-        ...
     def dgTimerQueryState(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the current DG timer state for this node."""
-        ...
     def dgTimerReset(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Resets all DG timers for this node."""
-        ...
     def directionIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """directionIndex() -> int
 
         Returns the index of the direction. The data type corresponding to this index is MFnNumericData.k3Double.
         """
-        ...
     def distanceIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """distanceIndex() -> int
 
         Returns the index of the distance. The data type corresponding to this index is a double.
         """
-        ...
     def drawPlaneHandles(self: Self, *args: Any, **kwargs: Any) -> Any:
         """drawPlaneHandles() -> bool
 
         This method returns the global option that says if the planar manipulator handles should be drawn or not.Setting this will affect the drawing of all manipulators that support the planar handles.
         """
-        ...
     def duplicate(self: Self, *args: Any, **kwargs: Any) -> Any:
         """duplicate(instance=False, instanceLeaf=False) -> MObject
 
         Duplicates the DAG hierarchy rooted at the current node.
         """
-        ...
     def enableLimit(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Enables or disables a specified limit type."""
-        ...
     def findAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the attribute which has the given alias."""
-        ...
     def findPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a plug for the given attribute."""
-        ...
     def fullPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """fullPathName() -> string
 
         Returns the full path of the attached object, from the root of the DAG on down.
         """
-        ...
     def getAffectedAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which are affected by the specified attribute."""
-        ...
     def getAffectingAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which affect the specified attribute."""
-        ...
     def getAliasAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's alias attribute, which is a special attribute used to store information about the node's attribute aliases."""
-        ...
     def getAliasList(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the node's attribute aliases."""
-        ...
     def getAllPaths(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getAllPaths() -> MDagPathArray
 
         Returns all of the DAG paths which lead to the object to which this function set is attached.
         """
-        ...
     def getConnectedSetsAndMembers(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getConnectedSetsAndMembers(instance, renderableSetsOnly) -> (MObjectArray, MObjectArray)
 
         Returns a tuple containing an array of sets and an array of the
         components of the DAG object which are in those sets. If the entire object is in a set, then the corresponding entry in the comps array will have no elements in it.
         """
-        ...
     def getConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all the plugs which are connected to attributes of this node."""
-        ...
     def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Gets the external content (files) that this node depends on."""
-        ...
     def getPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getPath() -> MDagPath
 
         Returns the DAG path to which this function set is attached, or the first path to the node if the function set is attached to an MObject.
         """
-        ...
     def globalSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """globalSize() -> float
 
         Returns the global manipulator size.
         """
-        ...
     def handleSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """handleSize() -> float
 
         Returns the manipulator handle size.
         """
-        ...
     def hasAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node has an attribute with the given name."""
-        ...
     def hasChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasChild(node) -> bool
 
         Returns True if the specified node is a child of this one.
         """
-        ...
     def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the function set is compatible with the specified Maya object."""
-        ...
     def hasParent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasParent(node) -> bool
 
         Returns True if the specified node is a parent of this one.
         """
-        ...
     def hasUniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node's name is unique."""
-        ...
     @property
     def inModel(*args: Any, **kwargs: Any) -> Any:
         """True if the node has been added to the model."""
-        ...
     @inModel.setter
     def inModel(*args: Any, **kwargs: Any) -> Any:
         """True if the node has been added to the model."""
-        ...
     @property
     def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
         """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-        ...
     @inUnderWorld.setter
     def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
         """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-        ...
     def instanceCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """instanceCount(indirect) -> int
 
         Returns the number of instances for this node.
         """
-        ...
     def isChildOf(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isChildOf(node) -> bool
 
         Returns True if the specified node is a parent of this one.
         """
-        ...
     @property
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-        ...
     @isDefaultNode.setter
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-        ...
     @property
     def isDrawLineOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not to draw a line from the start to the end of the DistanceManip.
         By default the line is drawn.
         """
-        ...
     @isDrawLineOn.setter
     def isDrawLineOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not to draw a line from the start to the end of the DistanceManip.
         By default the line is drawn.
         """
-        ...
     @property
     def isDrawStartOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the start of the DistanceManip is being drawn.
         By default the start is not drawn.
         """
-        ...
     @isDrawStartOn.setter
     def isDrawStartOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the start of the DistanceManip is being drawn.
         By default the start is not drawn.
         """
-        ...
     def isFlagSet(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the state of the specified node flag."""
-        ...
     @property
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
         """True if the node is from a referenced file, False if the node is part of the main scene."""
-        ...
     @isFromReferencedFile.setter
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
         """True if the node is from a referenced file, False if the node is part of the main scene."""
-        ...
     @property
     def isInstanceable(*args: Any, **kwargs: Any) -> Any:
         """True if instancing is allowed for this node."""
-        ...
     @isInstanceable.setter
     def isInstanceable(*args: Any, **kwargs: Any) -> Any:
         """True if instancing is allowed for this node."""
-        ...
     def isInstanced(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isInstanced(indirect=True) -> bool
 
         Returns True if this node is instanced.
         """
-        ...
     def isInstancedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isInstancedAttribute(attr) -> bool
 
         Returns True if the specified attribute is an instanced attribute of this node.
         """
-        ...
     @property
     def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
         """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-        ...
     @isIntermediateObject.setter
     def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
         """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-        ...
     def isLimited(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the specified limit type is enabled."""
-        ...
     @property
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-        ...
     @isLocked.setter
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-        ...
     def isNewAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the specified attribute was added in the current scene, and not by by one of its referenced files."""
-        ...
     @property
     def isOptimizePlaybackOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not optimize playback is on."""
-        ...
     @isOptimizePlaybackOn.setter
     def isOptimizePlaybackOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not optimize playback is on."""
-        ...
     def isParentOf(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isParentOf(node) -> bool
 
         Returns True if the specified node is a child of this one.
         """
-        ...
     @property
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-        ...
     @isShared.setter
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-        ...
     def isTrackingEdits(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node is referenced or in an assembly that is tracking edits."""
-        ...
     @property
     def isVisible(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the manipulator is visible."""
-        ...
     @isVisible.setter
     def isVisible(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the manipulator is visible."""
-        ...
     kExtensionAttr: int = ...
     kInvalidAttr: int = ...
     kLocalDynamicAttr: int = ...
@@ -5791,127 +4586,96 @@ class MFnDistanceManip(MFnManip3D):
     kTranslateMinZ: int = ...
     def limitValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the value of the specified limit."""
-        ...
     def lineSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """lineSize() -> float
 
         Returns the manipulator line size.
         """
-        ...
     @property
     def manipScale(*args: Any, **kwargs: Any) -> Any:
         """The manipulator scale."""
-        ...
     @manipScale.setter
     def manipScale(*args: Any, **kwargs: Any) -> Any:
         """The manipulator scale."""
-        ...
     def name(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's name."""
-        ...
     @property
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-        ...
     @namespace.setter
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-        ...
     def object(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-        ...
     @property
     def objectColor(*args: Any, **kwargs: Any) -> Any:
         """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @objectColor.setter
     def objectColor(*args: Any, **kwargs: Any) -> Any:
         """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @property
     def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
         """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @objectColorRGB.setter
     def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
         """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @property
     def objectColorType(*args: Any, **kwargs: Any) -> Any:
         """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-        ...
     @objectColorType.setter
     def objectColorType(*args: Any, **kwargs: Any) -> Any:
         """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-        ...
     def parent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """parent(index) -> MObject
 
         Returns the specified parent of this node.
         """
-        ...
     def parentCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """parentCount() -> int
 
         Returns the number of parents this node has.
         """
-        ...
     def partialPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """partialPathName() -> string
 
         Returns the minimum path string necessary to uniquely identify the attached object.
         """
-        ...
     @property
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-        ...
     @pluginName.setter
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-        ...
     def plugsAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the alias for a plug's attribute."""
-        ...
     def removeAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Removes a dynamic attribute from the node."""
-        ...
     def removeChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeChild(node) -> self
 
         Removes the child, specified by MObject, reparenting it under the world.
         """
-        ...
     def removeChildAt(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeChildAt(index) -> self
 
         Removes the child, specified by index, reparenting it under the world.
         """
-        ...
     def reorderedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns one of the node's attribute, based on the order in which they are written to file."""
-        ...
     def resetFromRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Resets the transform from its rest position matrix."""
-        ...
     def restPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rest position matrix."""
-        ...
     def rotateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds an MEulerRotation or MQuaternion to the transform's rotation."""
-        ...
     def rotateByComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds to the transform's rotation using the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def rotateOrientation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the MQuaternion which orients the local rotation space."""
-        ...
     def rotatePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotate pivot."""
-        ...
     def rotatePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotate pivot translation."""
-        ...
     def rotateXYZValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """rotateXYZValue(valIndex) -> MEulerRotation
 
@@ -5919,46 +4683,34 @@ class MFnDistanceManip(MFnManip3D):
 
         * valIndex (int) - rotation index of the manipulator
         """
-        ...
     def rotation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotation as an MEulerRotation or MQuaternion."""
-        ...
     def rotationComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotation as the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def rotationOrder(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the order of rotations when the transform's rotation is expressed as an MEulerRotation."""
-        ...
     def scale(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transform's XYZ scale components."""
-        ...
     def scaleBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Multiplies the transform's XYZ scale components by a sequence of three floats."""
-        ...
     def scalePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's scale pivot."""
-        ...
     def scalePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's scale pivot translation."""
-        ...
     @property
     def scalingFactor(*args: Any, **kwargs: Any) -> Any:
         """The scaling factor is used to determine how int the DistanceManip appears when it is drawn.
         The default scaling factor is 1.0.
         """
-        ...
     @scalingFactor.setter
     def scalingFactor(*args: Any, **kwargs: Any) -> Any:
         """The scaling factor is used to determine how int the DistanceManip appears when it is drawn.
         The default scaling factor is 1.0.
         """
-        ...
     def setAffectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Specifies that modifications to a node could potentially affect the animation."""
-        ...
     def setAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds or removes an attribute alias."""
-        ...
     def setDirection(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDirection(direction) -> self
 
@@ -5966,88 +4718,65 @@ class MFnDistanceManip(MFnManip3D):
 
         * direction (MVector) - the direction of the DistanceManip
         """
-        ...
     def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Used to prevent the node from being written to file."""
-        ...
     def setDrawPlaneHandles(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDrawPlaneHandles(bool) -> None
 
         Sets the global option to display planar handles or not on supported manipulators.
         """
-        ...
     def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Changes the location of external content."""
-        ...
     def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets content info in the specified attribute from the table."""
-        ...
     def setFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the state of the specified node flag."""
-        ...
     def setGlobalSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setGlobalSize(float) -> None
 
         Sets the global manipulator size.
         """
-        ...
     def setHandleSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setHandleSize(float) -> None
 
         Sets the manipulator handle size.
         """
-        ...
     def setLimit(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the value of the specified limit."""
-        ...
     def setLineSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setLineSize(float) -> None
 
         Sets the manipulator line size.
         """
-        ...
     def setName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's name."""
-        ...
     def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setObject(MObject or MDagPath) -> self
 
         Attaches the function set to the specified node or DAG path.
         """
-        ...
     def setRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rest position matrix."""
-        ...
     def setRotateOrientation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the MQuaternion which orients the local rotation space."""
-        ...
     def setRotatePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotate pivot."""
-        ...
     def setRotatePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotate pivot translation."""
-        ...
     def setRotation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation using an MEulerRotation or MQuaternion."""
-        ...
     def setRotationComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation using the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def setRotationOrder(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation order."""
-        ...
     def setScale(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale components."""
-        ...
     def setScalePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale pivot."""
-        ...
     def setScalePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale pivot translation."""
-        ...
     def setShear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's shear."""
-        ...
     def setStartPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setStartPoint(startPoint) -> self
 
@@ -6055,146 +4784,105 @@ class MFnDistanceManip(MFnManip3D):
 
         * startPoint (MPoint) - the start point of the DistanceManip
         """
-        ...
     def setTransformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's attribute values to represent the given transformation matrix."""
-        ...
     def setTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's translation."""
-        ...
     def setUuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's UUID."""
-        ...
     def shear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transform's shear components."""
-        ...
     def shearBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Multiplies the transform's shear components by a sequence of three floats."""
-        ...
     def startPointIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """startPointIndex() -> int
 
         Returns the index of the start point of the DistanceManip. The data type corresponding to this index is MFnNumericData.k3Double.
         """
-        ...
     def transformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transformation matrix represented by this transform."""
-        ...
     def transformationMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
         """transformationMatrix() -> MMatrix
 
         Returns the object space transformation matrix for this DAG node.
         """
-        ...
     def translateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds an MVector to the transform's translation."""
-        ...
     def translation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's translation as an MVector."""
-        ...
     def type(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the type of the function set."""
-        ...
     @property
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
-        ...
     @typeId.setter
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
-        ...
     @property
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-        ...
     @typeName.setter
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-        ...
     def uniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """For a DAG node, the unique name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself. For a non-DAG node, the uniqueName is just its name."""
-        ...
     @property
     def useObjectColor(*args: Any, **kwargs: Any) -> Any:
         """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-        ...
     @useObjectColor.setter
     def useObjectColor(*args: Any, **kwargs: Any) -> Any:
         """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-        ...
     def userNode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the MPxNode object for a plugin node."""
-        ...
     def uuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's UUID."""
-        ...
 
 class MFnFreePointTriadManip(MFnManip3D):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -6203,66 +4891,49 @@ class MFnFreePointTriadManip(MFnManip3D):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def absoluteName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the absolute name of this node.  The absolute name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself.  Regardless of relative name mode, absoluteName() will always return a full namespace path prefixed with a leading colon (the root namespace).  If the underlying node is a DAG node, then absoluteName() does not guarantee uniqueness, that is, two dependency nodes could have the same absoluteName().  In cases like this the uniqueName() method will guarantee that the name uniquely identifies the node."""
-        ...
     def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds a new dynamic attribute to the node."""
-        ...
     def addChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addChild(node, index=kNextPos, keepExistingParents=False) -> self
 
         Makes a node a child of this one.
         """
-        ...
     def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds content info to the specified table from a file path attribute."""
-        ...
     def affectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the changes to the node may affect animation."""
-        ...
     def allocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Allocates a flag on all nodes for use by the named plugin and returns the flag's index."""
-        ...
     def attribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns an attribute of the node, given either its index or name."""
-        ...
     def attributeClass(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the class of the specified attribute."""
-        ...
     def attributeCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the number of attributes on the node."""
-        ...
     @property
     def boundingBox(*args: Any, **kwargs: Any) -> Any:
         """Node's bounding box, in object space."""
-        ...
     @boundingBox.setter
     def boundingBox(*args: Any, **kwargs: Any) -> Any:
         """Node's bounding box, in object space."""
-        ...
     def canBeWritten(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the node will be written to file."""
-        ...
     def child(self: Self, *args: Any, **kwargs: Any) -> Any:
         """child(index) -> MObject
 
         Returns the specified child of this node.
         """
-        ...
     def childCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """childCount() -> int
 
         Returns the number of nodes which are children of this one.
         """
-        ...
     def classification(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the classification string for the named node type."""
-        ...
     def clearRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Clears the transform's rest position matrix."""
-        ...
     def connectToPointPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectToPointPlug(pointPlug) -> self
 
@@ -6270,7 +4941,6 @@ class MFnFreePointTriadManip(MFnManip3D):
 
         * pointPlug (MPlug) - the point plug
         """
-        ...
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """create(manipName=None, pointName=None) -> MObject
 
@@ -6284,25 +4954,20 @@ class MFnFreePointTriadManip(MFnManip3D):
         * manipName (string) - Name of the manip for UI purposes.
         * pointName (string) - Label for the position value which appears in the feedback line.
         """
-        ...
     def dagPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dagPath() -> MDagPath
 
         Returns the DAG path to which this function set is attached. Raises a TypeError if the function set is attached to an MObject rather than a path.
         """
-        ...
     def dagRoot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dagRoot() -> MObject
 
         Returns the root node of the first path leading to this node.
         """
-        ...
     def deallocateAllFlags(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates all node flags which are currently allocated to the named plugin."""
-        ...
     def deallocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates the specified node flag, which was previously allocated by the named plugin using allocateFlag()."""
-        ...
     def deleteManipulator(self: Self, *args: Any, **kwargs: Any) -> Any:
         """deleteManipulator(manip) -> None
 
@@ -6310,271 +4975,206 @@ class MFnFreePointTriadManip(MFnManip3D):
 
         * manip (MObject) - the manipulator to be deleted
         """
-        ...
     def dgCallbackIds(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information for a specific callback type, broken down by callbackId."""
-        ...
     def dgCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information broken down by callback type."""
-        ...
     def dgTimer(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a specific DG timer metric for a given timer type."""
-        ...
     def dgTimerOff(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing off for this node."""
-        ...
     def dgTimerOn(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing on for this node."""
-        ...
     def dgTimerQueryState(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the current DG timer state for this node."""
-        ...
     def dgTimerReset(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Resets all DG timers for this node."""
-        ...
     def drawPlaneHandles(self: Self, *args: Any, **kwargs: Any) -> Any:
         """drawPlaneHandles() -> bool
 
         This method returns the global option that says if the planar manipulator handles should be drawn or not.Setting this will affect the drawing of all manipulators that support the planar handles.
         """
-        ...
     def duplicate(self: Self, *args: Any, **kwargs: Any) -> Any:
         """duplicate(instance=False, instanceLeaf=False) -> MObject
 
         Duplicates the DAG hierarchy rooted at the current node.
         """
-        ...
     def enableLimit(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Enables or disables a specified limit type."""
-        ...
     def findAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the attribute which has the given alias."""
-        ...
     def findPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a plug for the given attribute."""
-        ...
     def fullPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """fullPathName() -> string
 
         Returns the full path of the attached object, from the root of the DAG on down.
         """
-        ...
     def getAffectedAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which are affected by the specified attribute."""
-        ...
     def getAffectingAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which affect the specified attribute."""
-        ...
     def getAliasAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's alias attribute, which is a special attribute used to store information about the node's attribute aliases."""
-        ...
     def getAliasList(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the node's attribute aliases."""
-        ...
     def getAllPaths(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getAllPaths() -> MDagPathArray
 
         Returns all of the DAG paths which lead to the object to which this function set is attached.
         """
-        ...
     def getConnectedSetsAndMembers(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getConnectedSetsAndMembers(instance, renderableSetsOnly) -> (MObjectArray, MObjectArray)
 
         Returns a tuple containing an array of sets and an array of the
         components of the DAG object which are in those sets. If the entire object is in a set, then the corresponding entry in the comps array will have no elements in it.
         """
-        ...
     def getConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all the plugs which are connected to attributes of this node."""
-        ...
     def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Gets the external content (files) that this node depends on."""
-        ...
     def getPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getPath() -> MDagPath
 
         Returns the DAG path to which this function set is attached, or the first path to the node if the function set is attached to an MObject.
         """
-        ...
     def globalSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """globalSize() -> float
 
         Returns the global manipulator size.
         """
-        ...
     def handleSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """handleSize() -> float
 
         Returns the manipulator handle size.
         """
-        ...
     def hasAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node has an attribute with the given name."""
-        ...
     def hasChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasChild(node) -> bool
 
         Returns True if the specified node is a child of this one.
         """
-        ...
     def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the function set is compatible with the specified Maya object."""
-        ...
     def hasParent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasParent(node) -> bool
 
         Returns True if the specified node is a parent of this one.
         """
-        ...
     def hasUniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node's name is unique."""
-        ...
     @property
     def inModel(*args: Any, **kwargs: Any) -> Any:
         """True if the node has been added to the model."""
-        ...
     @inModel.setter
     def inModel(*args: Any, **kwargs: Any) -> Any:
         """True if the node has been added to the model."""
-        ...
     @property
     def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
         """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-        ...
     @inUnderWorld.setter
     def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
         """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-        ...
     def instanceCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """instanceCount(indirect) -> int
 
         Returns the number of instances for this node.
         """
-        ...
     def isChildOf(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isChildOf(node) -> bool
 
         Returns True if the specified node is a parent of this one.
         """
-        ...
     @property
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-        ...
     @isDefaultNode.setter
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-        ...
     @property
     def isDrawAxesOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the axes of the FreePointTriadManip are being drawn. By default the axes are drawn."""
-        ...
     @isDrawAxesOn.setter
     def isDrawAxesOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the axes of the FreePointTriadManip are being drawn. By default the axes are drawn."""
-        ...
     def isFlagSet(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the state of the specified node flag."""
-        ...
     @property
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
         """True if the node is from a referenced file, False if the node is part of the main scene."""
-        ...
     @isFromReferencedFile.setter
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
         """True if the node is from a referenced file, False if the node is part of the main scene."""
-        ...
     @property
     def isInstanceable(*args: Any, **kwargs: Any) -> Any:
         """True if instancing is allowed for this node."""
-        ...
     @isInstanceable.setter
     def isInstanceable(*args: Any, **kwargs: Any) -> Any:
         """True if instancing is allowed for this node."""
-        ...
     def isInstanced(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isInstanced(indirect=True) -> bool
 
         Returns True if this node is instanced.
         """
-        ...
     def isInstancedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isInstancedAttribute(attr) -> bool
 
         Returns True if the specified attribute is an instanced attribute of this node.
         """
-        ...
     @property
     def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
         """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-        ...
     @isIntermediateObject.setter
     def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
         """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-        ...
     @property
     def isKeyframeAllOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the FreePointTriadManip is in keyframeAll mode."""
-        ...
     @isKeyframeAllOn.setter
     def isKeyframeAllOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the FreePointTriadManip is in keyframeAll mode."""
-        ...
     def isLimited(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the specified limit type is enabled."""
-        ...
     @property
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-        ...
     @isLocked.setter
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-        ...
     def isNewAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the specified attribute was added in the current scene, and not by by one of its referenced files."""
-        ...
     @property
     def isOptimizePlaybackOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not optimize playback is on."""
-        ...
     @isOptimizePlaybackOn.setter
     def isOptimizePlaybackOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not optimize playback is on."""
-        ...
     def isParentOf(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isParentOf(node) -> bool
 
         Returns True if the specified node is a child of this one.
         """
-        ...
     @property
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-        ...
     @isShared.setter
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-        ...
     @property
     def isSnapModeOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the FreePointTriadManip is in snap mode."""
-        ...
     @isSnapModeOn.setter
     def isSnapModeOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the FreePointTriadManip is in snap mode."""
-        ...
     def isTrackingEdits(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node is referenced or in an assembly that is tracking edits."""
-        ...
     @property
     def isVisible(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the manipulator is visible."""
-        ...
     @isVisible.setter
     def isVisible(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the manipulator is visible."""
-        ...
     kExtensionAttr: int = ...
     kInvalidAttr: int = ...
     kLocalDynamicAttr: int = ...
@@ -6628,133 +5228,101 @@ class MFnFreePointTriadManip(MFnManip3D):
     kYZPlane: int = ...
     def limitValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the value of the specified limit."""
-        ...
     def lineSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """lineSize() -> float
 
         Returns the manipulator line size.
         """
-        ...
     @property
     def manipScale(*args: Any, **kwargs: Any) -> Any:
         """The manipulator scale."""
-        ...
     @manipScale.setter
     def manipScale(*args: Any, **kwargs: Any) -> Any:
         """The manipulator scale."""
-        ...
     def name(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's name."""
-        ...
     @property
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-        ...
     @namespace.setter
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-        ...
     def object(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-        ...
     @property
     def objectColor(*args: Any, **kwargs: Any) -> Any:
         """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @objectColor.setter
     def objectColor(*args: Any, **kwargs: Any) -> Any:
         """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @property
     def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
         """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @objectColorRGB.setter
     def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
         """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @property
     def objectColorType(*args: Any, **kwargs: Any) -> Any:
         """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-        ...
     @objectColorType.setter
     def objectColorType(*args: Any, **kwargs: Any) -> Any:
         """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-        ...
     def parent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """parent(index) -> MObject
 
         Returns the specified parent of this node.
         """
-        ...
     def parentCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """parentCount() -> int
 
         Returns the number of parents this node has.
         """
-        ...
     def partialPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """partialPathName() -> string
 
         Returns the minimum path string necessary to uniquely identify the attached object.
         """
-        ...
     @property
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-        ...
     @pluginName.setter
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-        ...
     def plugsAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the alias for a plug's attribute."""
-        ...
     def pointIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """pointIndex() -> int
 
         Returns the index of the point of the FreePointTriadManip. The data type corresponding to this index is MFnNumericData.k3Double.
         """
-        ...
     def removeAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Removes a dynamic attribute from the node."""
-        ...
     def removeChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeChild(node) -> self
 
         Removes the child, specified by MObject, reparenting it under the world.
         """
-        ...
     def removeChildAt(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeChildAt(index) -> self
 
         Removes the child, specified by index, reparenting it under the world.
         """
-        ...
     def reorderedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns one of the node's attribute, based on the order in which they are written to file."""
-        ...
     def resetFromRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Resets the transform from its rest position matrix."""
-        ...
     def restPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rest position matrix."""
-        ...
     def rotateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds an MEulerRotation or MQuaternion to the transform's rotation."""
-        ...
     def rotateByComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds to the transform's rotation using the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def rotateOrientation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the MQuaternion which orients the local rotation space."""
-        ...
     def rotatePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotate pivot."""
-        ...
     def rotatePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotate pivot translation."""
-        ...
     def rotateXYZValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """rotateXYZValue(valIndex) -> MEulerRotation
 
@@ -6762,34 +5330,24 @@ class MFnFreePointTriadManip(MFnManip3D):
 
         * valIndex (int) - rotation index of the manipulator
         """
-        ...
     def rotation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotation as an MEulerRotation or MQuaternion."""
-        ...
     def rotationComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotation as the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def rotationOrder(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the order of rotations when the transform's rotation is expressed as an MEulerRotation."""
-        ...
     def scale(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transform's XYZ scale components."""
-        ...
     def scaleBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Multiplies the transform's XYZ scale components by a sequence of three floats."""
-        ...
     def scalePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's scale pivot."""
-        ...
     def scalePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's scale pivot translation."""
-        ...
     def setAffectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Specifies that modifications to a node could potentially affect the animation."""
-        ...
     def setAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds or removes an attribute alias."""
-        ...
     def setDirection(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDirection(direction) -> self
 
@@ -6797,10 +5355,8 @@ class MFnFreePointTriadManip(MFnManip3D):
 
         * direction (MVector) - the new direction for freePointTriadManip.
         """
-        ...
     def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Used to prevent the node from being written to file."""
-        ...
     def setDrawArrowHead(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDrawArrowHead(state) -> self
 
@@ -6808,28 +5364,22 @@ class MFnFreePointTriadManip(MFnManip3D):
 
         * state (bool) - whether or not drawArrowHead is on
         """
-        ...
     def setDrawPlaneHandles(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDrawPlaneHandles(bool) -> None
 
         Sets the global option to display planar handles or not on supported manipulators.
         """
-        ...
     def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Changes the location of external content."""
-        ...
     def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets content info in the specified attribute from the table."""
-        ...
     def setFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the state of the specified node flag."""
-        ...
     def setGlobalSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setGlobalSize(float) -> None
 
         Sets the global manipulator size.
         """
-        ...
     def setGlobalTriadPlane(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setGlobalTriadPlane(whichPlane) -> self
 
@@ -6843,31 +5393,25 @@ class MFnFreePointTriadManip(MFnManip3D):
           kXYPlane       X-Y Plane
           kViewPlane     View Plane
         """
-        ...
     def setHandleSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setHandleSize(float) -> None
 
         Sets the manipulator handle size.
         """
-        ...
     def setLimit(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the value of the specified limit."""
-        ...
     def setLineSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setLineSize(float) -> None
 
         Sets the manipulator line size.
         """
-        ...
     def setName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's name."""
-        ...
     def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setObject(MObject or MDagPath) -> self
 
         Attaches the function set to the specified node or DAG path.
         """
-        ...
     def setPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setPoint(pointValue) -> self
 
@@ -6875,173 +5419,122 @@ class MFnFreePointTriadManip(MFnManip3D):
 
         * pointValue (MPoint) - The new value of the point manipValue
         """
-        ...
     def setRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rest position matrix."""
-        ...
     def setRotateOrientation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the MQuaternion which orients the local rotation space."""
-        ...
     def setRotatePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotate pivot."""
-        ...
     def setRotatePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotate pivot translation."""
-        ...
     def setRotation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation using an MEulerRotation or MQuaternion."""
-        ...
     def setRotationComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation using the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def setRotationOrder(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation order."""
-        ...
     def setScale(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale components."""
-        ...
     def setScalePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale pivot."""
-        ...
     def setScalePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale pivot translation."""
-        ...
     def setShear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's shear."""
-        ...
     def setTransformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's attribute values to represent the given transformation matrix."""
-        ...
     def setTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's translation."""
-        ...
     def setUuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's UUID."""
-        ...
     def shear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transform's shear components."""
-        ...
     def shearBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Multiplies the transform's shear components by a sequence of three floats."""
-        ...
     def transformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transformation matrix represented by this transform."""
-        ...
     def transformationMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
         """transformationMatrix() -> MMatrix
 
         Returns the object space transformation matrix for this DAG node.
         """
-        ...
     def translateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds an MVector to the transform's translation."""
-        ...
     def translation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's translation as an MVector."""
-        ...
     def type(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the type of the function set."""
-        ...
     @property
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
-        ...
     @typeId.setter
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
-        ...
     @property
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-        ...
     @typeName.setter
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-        ...
     def uniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """For a DAG node, the unique name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself. For a non-DAG node, the uniqueName is just its name."""
-        ...
     @property
     def useObjectColor(*args: Any, **kwargs: Any) -> Any:
         """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-        ...
     @useObjectColor.setter
     def useObjectColor(*args: Any, **kwargs: Any) -> Any:
         """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-        ...
     def userNode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the MPxNode object for a plugin node."""
-        ...
     def uuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's UUID."""
-        ...
 
 class MFnManip3D(MFnTransform):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -7050,87 +5543,65 @@ class MFnManip3D(MFnTransform):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def absoluteName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the absolute name of this node.  The absolute name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself.  Regardless of relative name mode, absoluteName() will always return a full namespace path prefixed with a leading colon (the root namespace).  If the underlying node is a DAG node, then absoluteName() does not guarantee uniqueness, that is, two dependency nodes could have the same absoluteName().  In cases like this the uniqueName() method will guarantee that the name uniquely identifies the node."""
-        ...
     def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds a new dynamic attribute to the node."""
-        ...
     def addChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addChild(node, index=kNextPos, keepExistingParents=False) -> self
 
         Makes a node a child of this one.
         """
-        ...
     def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds content info to the specified table from a file path attribute."""
-        ...
     def affectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the changes to the node may affect animation."""
-        ...
     def allocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Allocates a flag on all nodes for use by the named plugin and returns the flag's index."""
-        ...
     def attribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns an attribute of the node, given either its index or name."""
-        ...
     def attributeClass(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the class of the specified attribute."""
-        ...
     def attributeCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the number of attributes on the node."""
-        ...
     @property
     def boundingBox(*args: Any, **kwargs: Any) -> Any:
         """Node's bounding box, in object space."""
-        ...
     @boundingBox.setter
     def boundingBox(*args: Any, **kwargs: Any) -> Any:
         """Node's bounding box, in object space."""
-        ...
     def canBeWritten(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the node will be written to file."""
-        ...
     def child(self: Self, *args: Any, **kwargs: Any) -> Any:
         """child(index) -> MObject
 
         Returns the specified child of this node.
         """
-        ...
     def childCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """childCount() -> int
 
         Returns the number of nodes which are children of this one.
         """
-        ...
     def classification(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the classification string for the named node type."""
-        ...
     def clearRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Clears the transform's rest position matrix."""
-        ...
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new transform node and attaches it to the function set."""
-        ...
     def dagPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dagPath() -> MDagPath
 
         Returns the DAG path to which this function set is attached. Raises a TypeError if the function set is attached to an MObject rather than a path.
         """
-        ...
     def dagRoot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dagRoot() -> MObject
 
         Returns the root node of the first path leading to this node.
         """
-        ...
     def deallocateAllFlags(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates all node flags which are currently allocated to the named plugin."""
-        ...
     def deallocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates the specified node flag, which was previously allocated by the named plugin using allocateFlag()."""
-        ...
     def deleteManipulator(self: Self, *args: Any, **kwargs: Any) -> Any:
         """deleteManipulator(manip) -> None
 
@@ -7138,247 +5609,188 @@ class MFnManip3D(MFnTransform):
 
         * manip (MObject) - the manipulator to be deleted
         """
-        ...
     def dgCallbackIds(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information for a specific callback type, broken down by callbackId."""
-        ...
     def dgCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information broken down by callback type."""
-        ...
     def dgTimer(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a specific DG timer metric for a given timer type."""
-        ...
     def dgTimerOff(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing off for this node."""
-        ...
     def dgTimerOn(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing on for this node."""
-        ...
     def dgTimerQueryState(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the current DG timer state for this node."""
-        ...
     def dgTimerReset(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Resets all DG timers for this node."""
-        ...
     def drawPlaneHandles(self: Self, *args: Any, **kwargs: Any) -> Any:
         """drawPlaneHandles() -> bool
 
         This method returns the global option that says if the planar manipulator handles should be drawn or not.Setting this will affect the drawing of all manipulators that support the planar handles.
         """
-        ...
     def duplicate(self: Self, *args: Any, **kwargs: Any) -> Any:
         """duplicate(instance=False, instanceLeaf=False) -> MObject
 
         Duplicates the DAG hierarchy rooted at the current node.
         """
-        ...
     def enableLimit(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Enables or disables a specified limit type."""
-        ...
     def findAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the attribute which has the given alias."""
-        ...
     def findPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a plug for the given attribute."""
-        ...
     def fullPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """fullPathName() -> string
 
         Returns the full path of the attached object, from the root of the DAG on down.
         """
-        ...
     def getAffectedAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which are affected by the specified attribute."""
-        ...
     def getAffectingAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which affect the specified attribute."""
-        ...
     def getAliasAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's alias attribute, which is a special attribute used to store information about the node's attribute aliases."""
-        ...
     def getAliasList(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the node's attribute aliases."""
-        ...
     def getAllPaths(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getAllPaths() -> MDagPathArray
 
         Returns all of the DAG paths which lead to the object to which this function set is attached.
         """
-        ...
     def getConnectedSetsAndMembers(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getConnectedSetsAndMembers(instance, renderableSetsOnly) -> (MObjectArray, MObjectArray)
 
         Returns a tuple containing an array of sets and an array of the
         components of the DAG object which are in those sets. If the entire object is in a set, then the corresponding entry in the comps array will have no elements in it.
         """
-        ...
     def getConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all the plugs which are connected to attributes of this node."""
-        ...
     def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Gets the external content (files) that this node depends on."""
-        ...
     def getPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getPath() -> MDagPath
 
         Returns the DAG path to which this function set is attached, or the first path to the node if the function set is attached to an MObject.
         """
-        ...
     def globalSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """globalSize() -> float
 
         Returns the global manipulator size.
         """
-        ...
     def handleSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """handleSize() -> float
 
         Returns the manipulator handle size.
         """
-        ...
     def hasAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node has an attribute with the given name."""
-        ...
     def hasChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasChild(node) -> bool
 
         Returns True if the specified node is a child of this one.
         """
-        ...
     def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the function set is compatible with the specified Maya object."""
-        ...
     def hasParent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasParent(node) -> bool
 
         Returns True if the specified node is a parent of this one.
         """
-        ...
     def hasUniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node's name is unique."""
-        ...
     @property
     def inModel(*args: Any, **kwargs: Any) -> Any:
         """True if the node has been added to the model."""
-        ...
     @inModel.setter
     def inModel(*args: Any, **kwargs: Any) -> Any:
         """True if the node has been added to the model."""
-        ...
     @property
     def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
         """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-        ...
     @inUnderWorld.setter
     def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
         """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-        ...
     def instanceCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """instanceCount(indirect) -> int
 
         Returns the number of instances for this node.
         """
-        ...
     def isChildOf(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isChildOf(node) -> bool
 
         Returns True if the specified node is a parent of this one.
         """
-        ...
     @property
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-        ...
     @isDefaultNode.setter
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-        ...
     def isFlagSet(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the state of the specified node flag."""
-        ...
     @property
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
         """True if the node is from a referenced file, False if the node is part of the main scene."""
-        ...
     @isFromReferencedFile.setter
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
         """True if the node is from a referenced file, False if the node is part of the main scene."""
-        ...
     @property
     def isInstanceable(*args: Any, **kwargs: Any) -> Any:
         """True if instancing is allowed for this node."""
-        ...
     @isInstanceable.setter
     def isInstanceable(*args: Any, **kwargs: Any) -> Any:
         """True if instancing is allowed for this node."""
-        ...
     def isInstanced(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isInstanced(indirect=True) -> bool
 
         Returns True if this node is instanced.
         """
-        ...
     def isInstancedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isInstancedAttribute(attr) -> bool
 
         Returns True if the specified attribute is an instanced attribute of this node.
         """
-        ...
     @property
     def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
         """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-        ...
     @isIntermediateObject.setter
     def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
         """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-        ...
     def isLimited(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the specified limit type is enabled."""
-        ...
     @property
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-        ...
     @isLocked.setter
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-        ...
     def isNewAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the specified attribute was added in the current scene, and not by by one of its referenced files."""
-        ...
     @property
     def isOptimizePlaybackOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not optimize playback is on."""
-        ...
     @isOptimizePlaybackOn.setter
     def isOptimizePlaybackOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not optimize playback is on."""
-        ...
     def isParentOf(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isParentOf(node) -> bool
 
         Returns True if the specified node is a child of this one.
         """
-        ...
     @property
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-        ...
     @isShared.setter
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-        ...
     def isTrackingEdits(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node is referenced or in an assembly that is tracking edits."""
-        ...
     @property
     def isVisible(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the manipulator is visible."""
-        ...
     @isVisible.setter
     def isVisible(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the manipulator is visible."""
-        ...
     kExtensionAttr: int = ...
     kInvalidAttr: int = ...
     kLocalDynamicAttr: int = ...
@@ -7428,127 +5840,96 @@ class MFnManip3D(MFnTransform):
     kTranslateMinZ: int = ...
     def limitValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the value of the specified limit."""
-        ...
     def lineSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """lineSize() -> float
 
         Returns the manipulator line size.
         """
-        ...
     @property
     def manipScale(*args: Any, **kwargs: Any) -> Any:
         """The manipulator scale."""
-        ...
     @manipScale.setter
     def manipScale(*args: Any, **kwargs: Any) -> Any:
         """The manipulator scale."""
-        ...
     def name(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's name."""
-        ...
     @property
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-        ...
     @namespace.setter
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-        ...
     def object(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-        ...
     @property
     def objectColor(*args: Any, **kwargs: Any) -> Any:
         """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @objectColor.setter
     def objectColor(*args: Any, **kwargs: Any) -> Any:
         """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @property
     def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
         """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @objectColorRGB.setter
     def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
         """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @property
     def objectColorType(*args: Any, **kwargs: Any) -> Any:
         """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-        ...
     @objectColorType.setter
     def objectColorType(*args: Any, **kwargs: Any) -> Any:
         """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-        ...
     def parent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """parent(index) -> MObject
 
         Returns the specified parent of this node.
         """
-        ...
     def parentCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """parentCount() -> int
 
         Returns the number of parents this node has.
         """
-        ...
     def partialPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """partialPathName() -> string
 
         Returns the minimum path string necessary to uniquely identify the attached object.
         """
-        ...
     @property
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-        ...
     @pluginName.setter
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-        ...
     def plugsAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the alias for a plug's attribute."""
-        ...
     def removeAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Removes a dynamic attribute from the node."""
-        ...
     def removeChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeChild(node) -> self
 
         Removes the child, specified by MObject, reparenting it under the world.
         """
-        ...
     def removeChildAt(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeChildAt(index) -> self
 
         Removes the child, specified by index, reparenting it under the world.
         """
-        ...
     def reorderedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns one of the node's attribute, based on the order in which they are written to file."""
-        ...
     def resetFromRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Resets the transform from its rest position matrix."""
-        ...
     def restPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rest position matrix."""
-        ...
     def rotateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds an MEulerRotation or MQuaternion to the transform's rotation."""
-        ...
     def rotateByComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds to the transform's rotation using the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def rotateOrientation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the MQuaternion which orients the local rotation space."""
-        ...
     def rotatePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotate pivot."""
-        ...
     def rotatePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotate pivot translation."""
-        ...
     def rotateXYZValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """rotateXYZValue(valIndex) -> MEulerRotation
 
@@ -7556,248 +5937,177 @@ class MFnManip3D(MFnTransform):
 
         * valIndex (int) - rotation index of the manipulator
         """
-        ...
     def rotation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotation as an MEulerRotation or MQuaternion."""
-        ...
     def rotationComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotation as the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def rotationOrder(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the order of rotations when the transform's rotation is expressed as an MEulerRotation."""
-        ...
     def scale(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transform's XYZ scale components."""
-        ...
     def scaleBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Multiplies the transform's XYZ scale components by a sequence of three floats."""
-        ...
     def scalePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's scale pivot."""
-        ...
     def scalePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's scale pivot translation."""
-        ...
     def setAffectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Specifies that modifications to a node could potentially affect the animation."""
-        ...
     def setAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds or removes an attribute alias."""
-        ...
     def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Used to prevent the node from being written to file."""
-        ...
     def setDrawPlaneHandles(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDrawPlaneHandles(bool) -> None
 
         Sets the global option to display planar handles or not on supported manipulators.
         """
-        ...
     def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Changes the location of external content."""
-        ...
     def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets content info in the specified attribute from the table."""
-        ...
     def setFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the state of the specified node flag."""
-        ...
     def setGlobalSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setGlobalSize(float) -> None
 
         Sets the global manipulator size.
         """
-        ...
     def setHandleSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setHandleSize(float) -> None
 
         Sets the manipulator handle size.
         """
-        ...
     def setLimit(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the value of the specified limit."""
-        ...
     def setLineSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setLineSize(float) -> None
 
         Sets the manipulator line size.
         """
-        ...
     def setName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's name."""
-        ...
     def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setObject(MObject or MDagPath) -> self
 
         Attaches the function set to the specified node or DAG path.
         """
-        ...
     def setRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rest position matrix."""
-        ...
     def setRotateOrientation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the MQuaternion which orients the local rotation space."""
-        ...
     def setRotatePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotate pivot."""
-        ...
     def setRotatePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotate pivot translation."""
-        ...
     def setRotation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation using an MEulerRotation or MQuaternion."""
-        ...
     def setRotationComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation using the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def setRotationOrder(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation order."""
-        ...
     def setScale(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale components."""
-        ...
     def setScalePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale pivot."""
-        ...
     def setScalePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale pivot translation."""
-        ...
     def setShear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's shear."""
-        ...
     def setTransformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's attribute values to represent the given transformation matrix."""
-        ...
     def setTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's translation."""
-        ...
     def setUuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's UUID."""
-        ...
     def shear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transform's shear components."""
-        ...
     def shearBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Multiplies the transform's shear components by a sequence of three floats."""
-        ...
     def transformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transformation matrix represented by this transform."""
-        ...
     def transformationMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
         """transformationMatrix() -> MMatrix
 
         Returns the object space transformation matrix for this DAG node.
         """
-        ...
     def translateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds an MVector to the transform's translation."""
-        ...
     def translation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's translation as an MVector."""
-        ...
     def type(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the type of the function set."""
-        ...
     @property
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
-        ...
     @typeId.setter
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
-        ...
     @property
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-        ...
     @typeName.setter
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-        ...
     def uniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """For a DAG node, the unique name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself. For a non-DAG node, the uniqueName is just its name."""
-        ...
     @property
     def useObjectColor(*args: Any, **kwargs: Any) -> Any:
         """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-        ...
     @useObjectColor.setter
     def useObjectColor(*args: Any, **kwargs: Any) -> Any:
         """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-        ...
     def userNode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the MPxNode object for a plugin node."""
-        ...
     def uuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's UUID."""
-        ...
 
 class MFnPointOnCurveManip(MFnManip3D):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -7806,66 +6116,49 @@ class MFnPointOnCurveManip(MFnManip3D):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def absoluteName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the absolute name of this node.  The absolute name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself.  Regardless of relative name mode, absoluteName() will always return a full namespace path prefixed with a leading colon (the root namespace).  If the underlying node is a DAG node, then absoluteName() does not guarantee uniqueness, that is, two dependency nodes could have the same absoluteName().  In cases like this the uniqueName() method will guarantee that the name uniquely identifies the node."""
-        ...
     def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds a new dynamic attribute to the node."""
-        ...
     def addChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addChild(node, index=kNextPos, keepExistingParents=False) -> self
 
         Makes a node a child of this one.
         """
-        ...
     def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds content info to the specified table from a file path attribute."""
-        ...
     def affectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the changes to the node may affect animation."""
-        ...
     def allocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Allocates a flag on all nodes for use by the named plugin and returns the flag's index."""
-        ...
     def attribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns an attribute of the node, given either its index or name."""
-        ...
     def attributeClass(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the class of the specified attribute."""
-        ...
     def attributeCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the number of attributes on the node."""
-        ...
     @property
     def boundingBox(*args: Any, **kwargs: Any) -> Any:
         """Node's bounding box, in object space."""
-        ...
     @boundingBox.setter
     def boundingBox(*args: Any, **kwargs: Any) -> Any:
         """Node's bounding box, in object space."""
-        ...
     def canBeWritten(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the node will be written to file."""
-        ...
     def child(self: Self, *args: Any, **kwargs: Any) -> Any:
         """child(index) -> MObject
 
         Returns the specified child of this node.
         """
-        ...
     def childCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """childCount() -> int
 
         Returns the number of nodes which are children of this one.
         """
-        ...
     def classification(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the classification string for the named node type."""
-        ...
     def clearRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Clears the transform's rest position matrix."""
-        ...
     def connectToCurvePlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectToCurvePlug(curvePlug) -> self
 
@@ -7873,7 +6166,6 @@ class MFnPointOnCurveManip(MFnManip3D):
 
         * curvePlug (MPlug) - the curve plug
         """
-        ...
     def connectToParamPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectToParamPlug(paramPlug) -> self
 
@@ -7881,7 +6173,6 @@ class MFnPointOnCurveManip(MFnManip3D):
 
         * paramPlug (MPlug) - the param plug
         """
-        ...
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """create(manipName=None, paramName=None) -> MObject
 
@@ -7895,37 +6186,30 @@ class MFnPointOnCurveManip(MFnManip3D):
         * manipName (string) - Name of the manip for UI purposes.
         * paramName (string) - Label for the parameter value that appears in the feedback line.
         """
-        ...
     def curveIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """curveIndex() -> int
 
         Returns the index of the curve. The data type corresponding to this index is MFnData::kNurbsCurve.
         """
-        ...
     def curvePoint(self: Self, *args: Any, **kwargs: Any) -> Any:
         """curvePoint() -> MPoint
 
         Returns the curve point.
         """
-        ...
     def dagPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dagPath() -> MDagPath
 
         Returns the DAG path to which this function set is attached. Raises a TypeError if the function set is attached to an MObject rather than a path.
         """
-        ...
     def dagRoot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dagRoot() -> MObject
 
         Returns the root node of the first path leading to this node.
         """
-        ...
     def deallocateAllFlags(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates all node flags which are currently allocated to the named plugin."""
-        ...
     def deallocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates the specified node flag, which was previously allocated by the named plugin using allocateFlag()."""
-        ...
     def deleteManipulator(self: Self, *args: Any, **kwargs: Any) -> Any:
         """deleteManipulator(manip) -> None
 
@@ -7933,255 +6217,194 @@ class MFnPointOnCurveManip(MFnManip3D):
 
         * manip (MObject) - the manipulator to be deleted
         """
-        ...
     def dgCallbackIds(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information for a specific callback type, broken down by callbackId."""
-        ...
     def dgCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information broken down by callback type."""
-        ...
     def dgTimer(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a specific DG timer metric for a given timer type."""
-        ...
     def dgTimerOff(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing off for this node."""
-        ...
     def dgTimerOn(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing on for this node."""
-        ...
     def dgTimerQueryState(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the current DG timer state for this node."""
-        ...
     def dgTimerReset(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Resets all DG timers for this node."""
-        ...
     def drawPlaneHandles(self: Self, *args: Any, **kwargs: Any) -> Any:
         """drawPlaneHandles() -> bool
 
         This method returns the global option that says if the planar manipulator handles should be drawn or not.Setting this will affect the drawing of all manipulators that support the planar handles.
         """
-        ...
     def duplicate(self: Self, *args: Any, **kwargs: Any) -> Any:
         """duplicate(instance=False, instanceLeaf=False) -> MObject
 
         Duplicates the DAG hierarchy rooted at the current node.
         """
-        ...
     def enableLimit(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Enables or disables a specified limit type."""
-        ...
     def findAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the attribute which has the given alias."""
-        ...
     def findPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a plug for the given attribute."""
-        ...
     def fullPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """fullPathName() -> string
 
         Returns the full path of the attached object, from the root of the DAG on down.
         """
-        ...
     def getAffectedAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which are affected by the specified attribute."""
-        ...
     def getAffectingAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which affect the specified attribute."""
-        ...
     def getAliasAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's alias attribute, which is a special attribute used to store information about the node's attribute aliases."""
-        ...
     def getAliasList(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the node's attribute aliases."""
-        ...
     def getAllPaths(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getAllPaths() -> MDagPathArray
 
         Returns all of the DAG paths which lead to the object to which this function set is attached.
         """
-        ...
     def getConnectedSetsAndMembers(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getConnectedSetsAndMembers(instance, renderableSetsOnly) -> (MObjectArray, MObjectArray)
 
         Returns a tuple containing an array of sets and an array of the
         components of the DAG object which are in those sets. If the entire object is in a set, then the corresponding entry in the comps array will have no elements in it.
         """
-        ...
     def getConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all the plugs which are connected to attributes of this node."""
-        ...
     def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Gets the external content (files) that this node depends on."""
-        ...
     def getPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getPath() -> MDagPath
 
         Returns the DAG path to which this function set is attached, or the first path to the node if the function set is attached to an MObject.
         """
-        ...
     def globalSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """globalSize() -> float
 
         Returns the global manipulator size.
         """
-        ...
     def handleSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """handleSize() -> float
 
         Returns the manipulator handle size.
         """
-        ...
     def hasAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node has an attribute with the given name."""
-        ...
     def hasChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasChild(node) -> bool
 
         Returns True if the specified node is a child of this one.
         """
-        ...
     def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the function set is compatible with the specified Maya object."""
-        ...
     def hasParent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasParent(node) -> bool
 
         Returns True if the specified node is a parent of this one.
         """
-        ...
     def hasUniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node's name is unique."""
-        ...
     @property
     def inModel(*args: Any, **kwargs: Any) -> Any:
         """True if the node has been added to the model."""
-        ...
     @inModel.setter
     def inModel(*args: Any, **kwargs: Any) -> Any:
         """True if the node has been added to the model."""
-        ...
     @property
     def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
         """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-        ...
     @inUnderWorld.setter
     def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
         """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-        ...
     def instanceCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """instanceCount(indirect) -> int
 
         Returns the number of instances for this node.
         """
-        ...
     def isChildOf(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isChildOf(node) -> bool
 
         Returns True if the specified node is a parent of this one.
         """
-        ...
     @property
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-        ...
     @isDefaultNode.setter
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-        ...
     @property
     def isDrawCurveOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the curve is drawn."""
-        ...
     @isDrawCurveOn.setter
     def isDrawCurveOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the curve is drawn."""
-        ...
     def isFlagSet(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the state of the specified node flag."""
-        ...
     @property
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
         """True if the node is from a referenced file, False if the node is part of the main scene."""
-        ...
     @isFromReferencedFile.setter
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
         """True if the node is from a referenced file, False if the node is part of the main scene."""
-        ...
     @property
     def isInstanceable(*args: Any, **kwargs: Any) -> Any:
         """True if instancing is allowed for this node."""
-        ...
     @isInstanceable.setter
     def isInstanceable(*args: Any, **kwargs: Any) -> Any:
         """True if instancing is allowed for this node."""
-        ...
     def isInstanced(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isInstanced(indirect=True) -> bool
 
         Returns True if this node is instanced.
         """
-        ...
     def isInstancedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isInstancedAttribute(attr) -> bool
 
         Returns True if the specified attribute is an instanced attribute of this node.
         """
-        ...
     @property
     def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
         """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-        ...
     @isIntermediateObject.setter
     def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
         """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-        ...
     def isLimited(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the specified limit type is enabled."""
-        ...
     @property
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-        ...
     @isLocked.setter
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-        ...
     def isNewAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the specified attribute was added in the current scene, and not by by one of its referenced files."""
-        ...
     @property
     def isOptimizePlaybackOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not optimize playback is on."""
-        ...
     @isOptimizePlaybackOn.setter
     def isOptimizePlaybackOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not optimize playback is on."""
-        ...
     def isParentOf(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isParentOf(node) -> bool
 
         Returns True if the specified node is a child of this one.
         """
-        ...
     @property
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-        ...
     @isShared.setter
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-        ...
     def isTrackingEdits(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node is referenced or in an assembly that is tracking edits."""
-        ...
     @property
     def isVisible(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the manipulator is visible."""
-        ...
     @isVisible.setter
     def isVisible(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the manipulator is visible."""
-        ...
     kExtensionAttr: int = ...
     kInvalidAttr: int = ...
     kLocalDynamicAttr: int = ...
@@ -8231,141 +6454,107 @@ class MFnPointOnCurveManip(MFnManip3D):
     kTranslateMinZ: int = ...
     def limitValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the value of the specified limit."""
-        ...
     def lineSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """lineSize() -> float
 
         Returns the manipulator line size.
         """
-        ...
     @property
     def manipScale(*args: Any, **kwargs: Any) -> Any:
         """The manipulator scale."""
-        ...
     @manipScale.setter
     def manipScale(*args: Any, **kwargs: Any) -> Any:
         """The manipulator scale."""
-        ...
     def name(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's name."""
-        ...
     @property
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-        ...
     @namespace.setter
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-        ...
     def object(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-        ...
     @property
     def objectColor(*args: Any, **kwargs: Any) -> Any:
         """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @objectColor.setter
     def objectColor(*args: Any, **kwargs: Any) -> Any:
         """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @property
     def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
         """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @objectColorRGB.setter
     def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
         """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @property
     def objectColorType(*args: Any, **kwargs: Any) -> Any:
         """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-        ...
     @objectColorType.setter
     def objectColorType(*args: Any, **kwargs: Any) -> Any:
         """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-        ...
     def paramIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """paramIndex() -> int
 
         Returns the index of the parameter of the PointOnCurveManip. The data type corresponding to this index is a double.
         """
-        ...
     @property
     def parameter(*args: Any, **kwargs: Any) -> Any:
         """The parameter of the PointOnCurveManip."""
-        ...
     @parameter.setter
     def parameter(*args: Any, **kwargs: Any) -> Any:
         """The parameter of the PointOnCurveManip."""
-        ...
     def parent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """parent(index) -> MObject
 
         Returns the specified parent of this node.
         """
-        ...
     def parentCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """parentCount() -> int
 
         Returns the number of parents this node has.
         """
-        ...
     def partialPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """partialPathName() -> string
 
         Returns the minimum path string necessary to uniquely identify the attached object.
         """
-        ...
     @property
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-        ...
     @pluginName.setter
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-        ...
     def plugsAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the alias for a plug's attribute."""
-        ...
     def removeAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Removes a dynamic attribute from the node."""
-        ...
     def removeChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeChild(node) -> self
 
         Removes the child, specified by MObject, reparenting it under the world.
         """
-        ...
     def removeChildAt(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeChildAt(index) -> self
 
         Removes the child, specified by index, reparenting it under the world.
         """
-        ...
     def reorderedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns one of the node's attribute, based on the order in which they are written to file."""
-        ...
     def resetFromRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Resets the transform from its rest position matrix."""
-        ...
     def restPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rest position matrix."""
-        ...
     def rotateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds an MEulerRotation or MQuaternion to the transform's rotation."""
-        ...
     def rotateByComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds to the transform's rotation using the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def rotateOrientation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the MQuaternion which orients the local rotation space."""
-        ...
     def rotatePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotate pivot."""
-        ...
     def rotatePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotate pivot translation."""
-        ...
     def rotateXYZValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """rotateXYZValue(valIndex) -> MEulerRotation
 
@@ -8373,248 +6562,177 @@ class MFnPointOnCurveManip(MFnManip3D):
 
         * valIndex (int) - rotation index of the manipulator
         """
-        ...
     def rotation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotation as an MEulerRotation or MQuaternion."""
-        ...
     def rotationComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotation as the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def rotationOrder(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the order of rotations when the transform's rotation is expressed as an MEulerRotation."""
-        ...
     def scale(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transform's XYZ scale components."""
-        ...
     def scaleBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Multiplies the transform's XYZ scale components by a sequence of three floats."""
-        ...
     def scalePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's scale pivot."""
-        ...
     def scalePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's scale pivot translation."""
-        ...
     def setAffectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Specifies that modifications to a node could potentially affect the animation."""
-        ...
     def setAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds or removes an attribute alias."""
-        ...
     def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Used to prevent the node from being written to file."""
-        ...
     def setDrawPlaneHandles(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDrawPlaneHandles(bool) -> None
 
         Sets the global option to display planar handles or not on supported manipulators.
         """
-        ...
     def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Changes the location of external content."""
-        ...
     def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets content info in the specified attribute from the table."""
-        ...
     def setFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the state of the specified node flag."""
-        ...
     def setGlobalSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setGlobalSize(float) -> None
 
         Sets the global manipulator size.
         """
-        ...
     def setHandleSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setHandleSize(float) -> None
 
         Sets the manipulator handle size.
         """
-        ...
     def setLimit(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the value of the specified limit."""
-        ...
     def setLineSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setLineSize(float) -> None
 
         Sets the manipulator line size.
         """
-        ...
     def setName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's name."""
-        ...
     def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setObject(MObject or MDagPath) -> self
 
         Attaches the function set to the specified node or DAG path.
         """
-        ...
     def setRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rest position matrix."""
-        ...
     def setRotateOrientation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the MQuaternion which orients the local rotation space."""
-        ...
     def setRotatePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotate pivot."""
-        ...
     def setRotatePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotate pivot translation."""
-        ...
     def setRotation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation using an MEulerRotation or MQuaternion."""
-        ...
     def setRotationComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation using the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def setRotationOrder(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation order."""
-        ...
     def setScale(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale components."""
-        ...
     def setScalePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale pivot."""
-        ...
     def setScalePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale pivot translation."""
-        ...
     def setShear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's shear."""
-        ...
     def setTransformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's attribute values to represent the given transformation matrix."""
-        ...
     def setTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's translation."""
-        ...
     def setUuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's UUID."""
-        ...
     def shear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transform's shear components."""
-        ...
     def shearBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Multiplies the transform's shear components by a sequence of three floats."""
-        ...
     def transformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transformation matrix represented by this transform."""
-        ...
     def transformationMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
         """transformationMatrix() -> MMatrix
 
         Returns the object space transformation matrix for this DAG node.
         """
-        ...
     def translateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds an MVector to the transform's translation."""
-        ...
     def translation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's translation as an MVector."""
-        ...
     def type(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the type of the function set."""
-        ...
     @property
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
-        ...
     @typeId.setter
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
-        ...
     @property
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-        ...
     @typeName.setter
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-        ...
     def uniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """For a DAG node, the unique name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself. For a non-DAG node, the uniqueName is just its name."""
-        ...
     @property
     def useObjectColor(*args: Any, **kwargs: Any) -> Any:
         """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-        ...
     @useObjectColor.setter
     def useObjectColor(*args: Any, **kwargs: Any) -> Any:
         """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-        ...
     def userNode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the MPxNode object for a plugin node."""
-        ...
     def uuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's UUID."""
-        ...
 
 class MFnPointOnSurfaceManip(MFnManip3D):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -8623,66 +6741,49 @@ class MFnPointOnSurfaceManip(MFnManip3D):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def absoluteName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the absolute name of this node.  The absolute name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself.  Regardless of relative name mode, absoluteName() will always return a full namespace path prefixed with a leading colon (the root namespace).  If the underlying node is a DAG node, then absoluteName() does not guarantee uniqueness, that is, two dependency nodes could have the same absoluteName().  In cases like this the uniqueName() method will guarantee that the name uniquely identifies the node."""
-        ...
     def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds a new dynamic attribute to the node."""
-        ...
     def addChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addChild(node, index=kNextPos, keepExistingParents=False) -> self
 
         Makes a node a child of this one.
         """
-        ...
     def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds content info to the specified table from a file path attribute."""
-        ...
     def affectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the changes to the node may affect animation."""
-        ...
     def allocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Allocates a flag on all nodes for use by the named plugin and returns the flag's index."""
-        ...
     def attribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns an attribute of the node, given either its index or name."""
-        ...
     def attributeClass(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the class of the specified attribute."""
-        ...
     def attributeCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the number of attributes on the node."""
-        ...
     @property
     def boundingBox(*args: Any, **kwargs: Any) -> Any:
         """Node's bounding box, in object space."""
-        ...
     @boundingBox.setter
     def boundingBox(*args: Any, **kwargs: Any) -> Any:
         """Node's bounding box, in object space."""
-        ...
     def canBeWritten(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the node will be written to file."""
-        ...
     def child(self: Self, *args: Any, **kwargs: Any) -> Any:
         """child(index) -> MObject
 
         Returns the specified child of this node.
         """
-        ...
     def childCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """childCount() -> int
 
         Returns the number of nodes which are children of this one.
         """
-        ...
     def classification(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the classification string for the named node type."""
-        ...
     def clearRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Clears the transform's rest position matrix."""
-        ...
     def connectToParamPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectToParamPlug(paramPlug) -> self
 
@@ -8690,7 +6791,6 @@ class MFnPointOnSurfaceManip(MFnManip3D):
 
         * paramPlug (MPlug) - the param plug
         """
-        ...
     def connectToSurfacePlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectToSurfacePlug(surfacePlug) -> self
 
@@ -8698,7 +6798,6 @@ class MFnPointOnSurfaceManip(MFnManip3D):
 
         * surfacePlug (MPlug) - the surface plug
         """
-        ...
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """create(manipName=None, paramName=None) -> MObject
 
@@ -8712,25 +6811,20 @@ class MFnPointOnSurfaceManip(MFnManip3D):
         * manipName (string) - Name of the manip for UI purposes.
         * paramName (string) - Label for the parameter value which appears in the feedback line
         """
-        ...
     def dagPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dagPath() -> MDagPath
 
         Returns the DAG path to which this function set is attached. Raises a TypeError if the function set is attached to an MObject rather than a path.
         """
-        ...
     def dagRoot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dagRoot() -> MObject
 
         Returns the root node of the first path leading to this node.
         """
-        ...
     def deallocateAllFlags(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates all node flags which are currently allocated to the named plugin."""
-        ...
     def deallocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates the specified node flag, which was previously allocated by the named plugin using allocateFlag()."""
-        ...
     def deleteManipulator(self: Self, *args: Any, **kwargs: Any) -> Any:
         """deleteManipulator(manip) -> None
 
@@ -8738,255 +6832,194 @@ class MFnPointOnSurfaceManip(MFnManip3D):
 
         * manip (MObject) - the manipulator to be deleted
         """
-        ...
     def dgCallbackIds(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information for a specific callback type, broken down by callbackId."""
-        ...
     def dgCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information broken down by callback type."""
-        ...
     def dgTimer(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a specific DG timer metric for a given timer type."""
-        ...
     def dgTimerOff(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing off for this node."""
-        ...
     def dgTimerOn(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing on for this node."""
-        ...
     def dgTimerQueryState(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the current DG timer state for this node."""
-        ...
     def dgTimerReset(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Resets all DG timers for this node."""
-        ...
     def drawPlaneHandles(self: Self, *args: Any, **kwargs: Any) -> Any:
         """drawPlaneHandles() -> bool
 
         This method returns the global option that says if the planar manipulator handles should be drawn or not.Setting this will affect the drawing of all manipulators that support the planar handles.
         """
-        ...
     def duplicate(self: Self, *args: Any, **kwargs: Any) -> Any:
         """duplicate(instance=False, instanceLeaf=False) -> MObject
 
         Duplicates the DAG hierarchy rooted at the current node.
         """
-        ...
     def enableLimit(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Enables or disables a specified limit type."""
-        ...
     def findAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the attribute which has the given alias."""
-        ...
     def findPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a plug for the given attribute."""
-        ...
     def fullPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """fullPathName() -> string
 
         Returns the full path of the attached object, from the root of the DAG on down.
         """
-        ...
     def getAffectedAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which are affected by the specified attribute."""
-        ...
     def getAffectingAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which affect the specified attribute."""
-        ...
     def getAliasAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's alias attribute, which is a special attribute used to store information about the node's attribute aliases."""
-        ...
     def getAliasList(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the node's attribute aliases."""
-        ...
     def getAllPaths(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getAllPaths() -> MDagPathArray
 
         Returns all of the DAG paths which lead to the object to which this function set is attached.
         """
-        ...
     def getConnectedSetsAndMembers(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getConnectedSetsAndMembers(instance, renderableSetsOnly) -> (MObjectArray, MObjectArray)
 
         Returns a tuple containing an array of sets and an array of the
         components of the DAG object which are in those sets. If the entire object is in a set, then the corresponding entry in the comps array will have no elements in it.
         """
-        ...
     def getConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all the plugs which are connected to attributes of this node."""
-        ...
     def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Gets the external content (files) that this node depends on."""
-        ...
     def getPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getPath() -> MDagPath
 
         Returns the DAG path to which this function set is attached, or the first path to the node if the function set is attached to an MObject.
         """
-        ...
     def globalSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """globalSize() -> float
 
         Returns the global manipulator size.
         """
-        ...
     def handleSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """handleSize() -> float
 
         Returns the manipulator handle size.
         """
-        ...
     def hasAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node has an attribute with the given name."""
-        ...
     def hasChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasChild(node) -> bool
 
         Returns True if the specified node is a child of this one.
         """
-        ...
     def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the function set is compatible with the specified Maya object."""
-        ...
     def hasParent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasParent(node) -> bool
 
         Returns True if the specified node is a parent of this one.
         """
-        ...
     def hasUniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node's name is unique."""
-        ...
     @property
     def inModel(*args: Any, **kwargs: Any) -> Any:
         """True if the node has been added to the model."""
-        ...
     @inModel.setter
     def inModel(*args: Any, **kwargs: Any) -> Any:
         """True if the node has been added to the model."""
-        ...
     @property
     def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
         """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-        ...
     @inUnderWorld.setter
     def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
         """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-        ...
     def instanceCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """instanceCount(indirect) -> int
 
         Returns the number of instances for this node.
         """
-        ...
     def isChildOf(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isChildOf(node) -> bool
 
         Returns True if the specified node is a parent of this one.
         """
-        ...
     @property
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-        ...
     @isDefaultNode.setter
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-        ...
     @property
     def isDrawSurfaceOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the surface is drawn."""
-        ...
     @isDrawSurfaceOn.setter
     def isDrawSurfaceOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the surface is drawn."""
-        ...
     def isFlagSet(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the state of the specified node flag."""
-        ...
     @property
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
         """True if the node is from a referenced file, False if the node is part of the main scene."""
-        ...
     @isFromReferencedFile.setter
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
         """True if the node is from a referenced file, False if the node is part of the main scene."""
-        ...
     @property
     def isInstanceable(*args: Any, **kwargs: Any) -> Any:
         """True if instancing is allowed for this node."""
-        ...
     @isInstanceable.setter
     def isInstanceable(*args: Any, **kwargs: Any) -> Any:
         """True if instancing is allowed for this node."""
-        ...
     def isInstanced(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isInstanced(indirect=True) -> bool
 
         Returns True if this node is instanced.
         """
-        ...
     def isInstancedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isInstancedAttribute(attr) -> bool
 
         Returns True if the specified attribute is an instanced attribute of this node.
         """
-        ...
     @property
     def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
         """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-        ...
     @isIntermediateObject.setter
     def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
         """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-        ...
     def isLimited(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the specified limit type is enabled."""
-        ...
     @property
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-        ...
     @isLocked.setter
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-        ...
     def isNewAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the specified attribute was added in the current scene, and not by by one of its referenced files."""
-        ...
     @property
     def isOptimizePlaybackOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not optimize playback is on."""
-        ...
     @isOptimizePlaybackOn.setter
     def isOptimizePlaybackOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not optimize playback is on."""
-        ...
     def isParentOf(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isParentOf(node) -> bool
 
         Returns True if the specified node is a child of this one.
         """
-        ...
     @property
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-        ...
     @isShared.setter
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-        ...
     def isTrackingEdits(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node is referenced or in an assembly that is tracking edits."""
-        ...
     @property
     def isVisible(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the manipulator is visible."""
-        ...
     @isVisible.setter
     def isVisible(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the manipulator is visible."""
-        ...
     kExtensionAttr: int = ...
     kInvalidAttr: int = ...
     kLocalDynamicAttr: int = ...
@@ -9036,133 +7069,101 @@ class MFnPointOnSurfaceManip(MFnManip3D):
     kTranslateMinZ: int = ...
     def limitValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the value of the specified limit."""
-        ...
     def lineSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """lineSize() -> float
 
         Returns the manipulator line size.
         """
-        ...
     @property
     def manipScale(*args: Any, **kwargs: Any) -> Any:
         """The manipulator scale."""
-        ...
     @manipScale.setter
     def manipScale(*args: Any, **kwargs: Any) -> Any:
         """The manipulator scale."""
-        ...
     def name(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's name."""
-        ...
     @property
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-        ...
     @namespace.setter
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-        ...
     def object(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-        ...
     @property
     def objectColor(*args: Any, **kwargs: Any) -> Any:
         """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @objectColor.setter
     def objectColor(*args: Any, **kwargs: Any) -> Any:
         """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @property
     def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
         """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @objectColorRGB.setter
     def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
         """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @property
     def objectColorType(*args: Any, **kwargs: Any) -> Any:
         """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-        ...
     @objectColorType.setter
     def objectColorType(*args: Any, **kwargs: Any) -> Any:
         """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-        ...
     def paramIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """paramIndex() -> int
 
         Returns the index of the parameter of the PointOnSurfaceManip. The data type corresponding to this index is MFnNumericData.k2Double.
         """
-        ...
     def parent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """parent(index) -> MObject
 
         Returns the specified parent of this node.
         """
-        ...
     def parentCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """parentCount() -> int
 
         Returns the number of parents this node has.
         """
-        ...
     def partialPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """partialPathName() -> string
 
         Returns the minimum path string necessary to uniquely identify the attached object.
         """
-        ...
     @property
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-        ...
     @pluginName.setter
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-        ...
     def plugsAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the alias for a plug's attribute."""
-        ...
     def removeAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Removes a dynamic attribute from the node."""
-        ...
     def removeChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeChild(node) -> self
 
         Removes the child, specified by MObject, reparenting it under the world.
         """
-        ...
     def removeChildAt(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeChildAt(index) -> self
 
         Removes the child, specified by index, reparenting it under the world.
         """
-        ...
     def reorderedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns one of the node's attribute, based on the order in which they are written to file."""
-        ...
     def resetFromRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Resets the transform from its rest position matrix."""
-        ...
     def restPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rest position matrix."""
-        ...
     def rotateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds an MEulerRotation or MQuaternion to the transform's rotation."""
-        ...
     def rotateByComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds to the transform's rotation using the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def rotateOrientation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the MQuaternion which orients the local rotation space."""
-        ...
     def rotatePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotate pivot."""
-        ...
     def rotatePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotate pivot translation."""
-        ...
     def rotateXYZValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """rotateXYZValue(valIndex) -> MEulerRotation
 
@@ -9170,37 +7171,26 @@ class MFnPointOnSurfaceManip(MFnManip3D):
 
         * valIndex (int) - rotation index of the manipulator
         """
-        ...
     def rotation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotation as an MEulerRotation or MQuaternion."""
-        ...
     def rotationComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotation as the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def rotationOrder(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the order of rotations when the transform's rotation is expressed as an MEulerRotation."""
-        ...
     def scale(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transform's XYZ scale components."""
-        ...
     def scaleBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Multiplies the transform's XYZ scale components by a sequence of three floats."""
-        ...
     def scalePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's scale pivot."""
-        ...
     def scalePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's scale pivot translation."""
-        ...
     def setAffectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Specifies that modifications to a node could potentially affect the animation."""
-        ...
     def setAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds or removes an attribute alias."""
-        ...
     def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Used to prevent the node from being written to file."""
-        ...
     def setDrawArrows(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDrawArrows(state) -> self
 
@@ -9208,240 +7198,174 @@ class MFnPointOnSurfaceManip(MFnManip3D):
 
         * state (bool) - whether or not the arrows should be drawn
         """
-        ...
     def setDrawPlaneHandles(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDrawPlaneHandles(bool) -> None
 
         Sets the global option to display planar handles or not on supported manipulators.
         """
-        ...
     def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Changes the location of external content."""
-        ...
     def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets content info in the specified attribute from the table."""
-        ...
     def setFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the state of the specified node flag."""
-        ...
     def setGlobalSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setGlobalSize(float) -> None
 
         Sets the global manipulator size.
         """
-        ...
     def setHandleSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setHandleSize(float) -> None
 
         Sets the manipulator handle size.
         """
-        ...
     def setLimit(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the value of the specified limit."""
-        ...
     def setLineSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setLineSize(float) -> None
 
         Sets the manipulator line size.
         """
-        ...
     def setName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's name."""
-        ...
     def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setObject(MObject or MDagPath) -> self
 
         Attaches the function set to the specified node or DAG path.
         """
-        ...
     def setRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rest position matrix."""
-        ...
     def setRotateOrientation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the MQuaternion which orients the local rotation space."""
-        ...
     def setRotatePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotate pivot."""
-        ...
     def setRotatePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotate pivot translation."""
-        ...
     def setRotation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation using an MEulerRotation or MQuaternion."""
-        ...
     def setRotationComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation using the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def setRotationOrder(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation order."""
-        ...
     def setScale(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale components."""
-        ...
     def setScalePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale pivot."""
-        ...
     def setScalePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale pivot translation."""
-        ...
     def setShear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's shear."""
-        ...
     def setTransformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's attribute values to represent the given transformation matrix."""
-        ...
     def setTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's translation."""
-        ...
     def setUuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's UUID."""
-        ...
     def shear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transform's shear components."""
-        ...
     def shearBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Multiplies the transform's shear components by a sequence of three floats."""
-        ...
     def surfaceIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """surfaceIndex() -> int
 
         Returns the index of the surface. The data type corresponding to this index is MFnData.kNurbsSurface.
         """
-        ...
     def transformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transformation matrix represented by this transform."""
-        ...
     def transformationMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
         """transformationMatrix() -> MMatrix
 
         Returns the object space transformation matrix for this DAG node.
         """
-        ...
     def translateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds an MVector to the transform's translation."""
-        ...
     def translation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's translation as an MVector."""
-        ...
     def type(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the type of the function set."""
-        ...
     @property
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
-        ...
     @typeId.setter
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
-        ...
     @property
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-        ...
     @typeName.setter
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-        ...
     @property
     def uParam(*args: Any, **kwargs: Any) -> Any:
         """The u parameter"""
-        ...
     @uParam.setter
     def uParam(*args: Any, **kwargs: Any) -> Any:
         """The u parameter"""
-        ...
     def uniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """For a DAG node, the unique name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself. For a non-DAG node, the uniqueName is just its name."""
-        ...
     @property
     def useObjectColor(*args: Any, **kwargs: Any) -> Any:
         """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-        ...
     @useObjectColor.setter
     def useObjectColor(*args: Any, **kwargs: Any) -> Any:
         """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-        ...
     def userNode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the MPxNode object for a plugin node."""
-        ...
     def uuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's UUID."""
-        ...
     @property
     def vParam(*args: Any, **kwargs: Any) -> Any:
         """The v parameter"""
-        ...
     @vParam.setter
     def vParam(*args: Any, **kwargs: Any) -> Any:
         """The v parameter"""
-        ...
 
 class MFnRotateManip(MFnManip3D):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -9450,66 +7374,49 @@ class MFnRotateManip(MFnManip3D):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def absoluteName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the absolute name of this node.  The absolute name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself.  Regardless of relative name mode, absoluteName() will always return a full namespace path prefixed with a leading colon (the root namespace).  If the underlying node is a DAG node, then absoluteName() does not guarantee uniqueness, that is, two dependency nodes could have the same absoluteName().  In cases like this the uniqueName() method will guarantee that the name uniquely identifies the node."""
-        ...
     def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds a new dynamic attribute to the node."""
-        ...
     def addChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addChild(node, index=kNextPos, keepExistingParents=False) -> self
 
         Makes a node a child of this one.
         """
-        ...
     def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds content info to the specified table from a file path attribute."""
-        ...
     def affectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the changes to the node may affect animation."""
-        ...
     def allocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Allocates a flag on all nodes for use by the named plugin and returns the flag's index."""
-        ...
     def attribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns an attribute of the node, given either its index or name."""
-        ...
     def attributeClass(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the class of the specified attribute."""
-        ...
     def attributeCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the number of attributes on the node."""
-        ...
     @property
     def boundingBox(*args: Any, **kwargs: Any) -> Any:
         """Node's bounding box, in object space."""
-        ...
     @boundingBox.setter
     def boundingBox(*args: Any, **kwargs: Any) -> Any:
         """Node's bounding box, in object space."""
-        ...
     def canBeWritten(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the node will be written to file."""
-        ...
     def child(self: Self, *args: Any, **kwargs: Any) -> Any:
         """child(index) -> MObject
 
         Returns the specified child of this node.
         """
-        ...
     def childCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """childCount() -> int
 
         Returns the number of nodes which are children of this one.
         """
-        ...
     def classification(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the classification string for the named node type."""
-        ...
     def clearRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Clears the transform's rest position matrix."""
-        ...
     def connectToRotationCenterPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectToRotationCenterPlug(rotationCenterPlug) -> self
 
@@ -9519,7 +7426,6 @@ class MFnRotateManip(MFnManip3D):
 
         * rotationCenterPlug (MPlug) - The plug to connect the rotation center to
         """
-        ...
     def connectToRotationPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectToRotationPlug(rotationPlug) -> self
 
@@ -9529,7 +7435,6 @@ class MFnRotateManip(MFnManip3D):
 
         * rotationPlug (MPlug) - The plug to connect the rotation value to
         """
-        ...
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """create(manipName=None, rotationName=None) -> MObject
 
@@ -9542,25 +7447,20 @@ class MFnRotateManip(MFnManip3D):
         * manipName (string) - Name of the manip for UI purposes.
         * rotationName (string) - Label for the rotation value displayed in the feedback line.
         """
-        ...
     def dagPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dagPath() -> MDagPath
 
         Returns the DAG path to which this function set is attached. Raises a TypeError if the function set is attached to an MObject rather than a path.
         """
-        ...
     def dagRoot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dagRoot() -> MObject
 
         Returns the root node of the first path leading to this node.
         """
-        ...
     def deallocateAllFlags(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates all node flags which are currently allocated to the named plugin."""
-        ...
     def deallocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates the specified node flag, which was previously allocated by the named plugin using allocateFlag()."""
-        ...
     def deleteManipulator(self: Self, *args: Any, **kwargs: Any) -> Any:
         """deleteManipulator(manip) -> None
 
@@ -9568,28 +7468,20 @@ class MFnRotateManip(MFnManip3D):
 
         * manip (MObject) - the manipulator to be deleted
         """
-        ...
     def dgCallbackIds(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information for a specific callback type, broken down by callbackId."""
-        ...
     def dgCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information broken down by callback type."""
-        ...
     def dgTimer(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a specific DG timer metric for a given timer type."""
-        ...
     def dgTimerOff(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing off for this node."""
-        ...
     def dgTimerOn(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing on for this node."""
-        ...
     def dgTimerQueryState(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the current DG timer state for this node."""
-        ...
     def dgTimerReset(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Resets all DG timers for this node."""
-        ...
     def displayWithNode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """displayWithNode(node) -> self
 
@@ -9597,234 +7489,180 @@ class MFnRotateManip(MFnManip3D):
 
         * node (MObject) - The node the manipulator should display with
         """
-        ...
     def drawPlaneHandles(self: Self, *args: Any, **kwargs: Any) -> Any:
         """drawPlaneHandles() -> bool
 
         This method returns the global option that says if the planar manipulator handles should be drawn or not.Setting this will affect the drawing of all manipulators that support the planar handles.
         """
-        ...
     def duplicate(self: Self, *args: Any, **kwargs: Any) -> Any:
         """duplicate(instance=False, instanceLeaf=False) -> MObject
 
         Duplicates the DAG hierarchy rooted at the current node.
         """
-        ...
     def enableLimit(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Enables or disables a specified limit type."""
-        ...
     def findAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the attribute which has the given alias."""
-        ...
     def findPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a plug for the given attribute."""
-        ...
     def fullPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """fullPathName() -> string
 
         Returns the full path of the attached object, from the root of the DAG on down.
         """
-        ...
     def getAffectedAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which are affected by the specified attribute."""
-        ...
     def getAffectingAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which affect the specified attribute."""
-        ...
     def getAliasAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's alias attribute, which is a special attribute used to store information about the node's attribute aliases."""
-        ...
     def getAliasList(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the node's attribute aliases."""
-        ...
     def getAllPaths(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getAllPaths() -> MDagPathArray
 
         Returns all of the DAG paths which lead to the object to which this function set is attached.
         """
-        ...
     def getConnectedSetsAndMembers(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getConnectedSetsAndMembers(instance, renderableSetsOnly) -> (MObjectArray, MObjectArray)
 
         Returns a tuple containing an array of sets and an array of the
         components of the DAG object which are in those sets. If the entire object is in a set, then the corresponding entry in the comps array will have no elements in it.
         """
-        ...
     def getConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all the plugs which are connected to attributes of this node."""
-        ...
     def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Gets the external content (files) that this node depends on."""
-        ...
     def getPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getPath() -> MDagPath
 
         Returns the DAG path to which this function set is attached, or the first path to the node if the function set is attached to an MObject.
         """
-        ...
     def globalSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """globalSize() -> float
 
         Returns the global manipulator size.
         """
-        ...
     def handleSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """handleSize() -> float
 
         Returns the manipulator handle size.
         """
-        ...
     def hasAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node has an attribute with the given name."""
-        ...
     def hasChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasChild(node) -> bool
 
         Returns True if the specified node is a child of this one.
         """
-        ...
     def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the function set is compatible with the specified Maya object."""
-        ...
     def hasParent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasParent(node) -> bool
 
         Returns True if the specified node is a parent of this one.
         """
-        ...
     def hasUniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node's name is unique."""
-        ...
     @property
     def inModel(*args: Any, **kwargs: Any) -> Any:
         """True if the node has been added to the model."""
-        ...
     @inModel.setter
     def inModel(*args: Any, **kwargs: Any) -> Any:
         """True if the node has been added to the model."""
-        ...
     @property
     def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
         """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-        ...
     @inUnderWorld.setter
     def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
         """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-        ...
     def instanceCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """instanceCount(indirect) -> int
 
         Returns the number of instances for this node.
         """
-        ...
     def isChildOf(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isChildOf(node) -> bool
 
         Returns True if the specified node is a parent of this one.
         """
-        ...
     @property
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-        ...
     @isDefaultNode.setter
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-        ...
     def isFlagSet(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the state of the specified node flag."""
-        ...
     @property
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
         """True if the node is from a referenced file, False if the node is part of the main scene."""
-        ...
     @isFromReferencedFile.setter
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
         """True if the node is from a referenced file, False if the node is part of the main scene."""
-        ...
     @property
     def isInstanceable(*args: Any, **kwargs: Any) -> Any:
         """True if instancing is allowed for this node."""
-        ...
     @isInstanceable.setter
     def isInstanceable(*args: Any, **kwargs: Any) -> Any:
         """True if instancing is allowed for this node."""
-        ...
     def isInstanced(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isInstanced(indirect=True) -> bool
 
         Returns True if this node is instanced.
         """
-        ...
     def isInstancedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isInstancedAttribute(attr) -> bool
 
         Returns True if the specified attribute is an instanced attribute of this node.
         """
-        ...
     @property
     def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
         """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-        ...
     @isIntermediateObject.setter
     def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
         """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-        ...
     def isLimited(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the specified limit type is enabled."""
-        ...
     @property
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-        ...
     @isLocked.setter
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-        ...
     def isNewAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the specified attribute was added in the current scene, and not by by one of its referenced files."""
-        ...
     @property
     def isOptimizePlaybackOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not optimize playback is on."""
-        ...
     @isOptimizePlaybackOn.setter
     def isOptimizePlaybackOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not optimize playback is on."""
-        ...
     def isParentOf(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isParentOf(node) -> bool
 
         Returns True if the specified node is a child of this one.
         """
-        ...
     @property
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-        ...
     @isShared.setter
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-        ...
     @property
     def isSnapModeOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the snap mode is on. When snap mode is on, rotation manip values will snap to the values within some increment apart."""
-        ...
     @isSnapModeOn.setter
     def isSnapModeOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the snap mode is on. When snap mode is on, rotation manip values will snap to the values within some increment apart."""
-        ...
     def isTrackingEdits(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node is referenced or in an assembly that is tracking edits."""
-        ...
     @property
     def isVisible(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the manipulator is visible."""
-        ...
     @isVisible.setter
     def isVisible(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the manipulator is visible."""
-        ...
     kExtensionAttr: int = ...
     kGimbal: int = ...
     kInvalidAttr: int = ...
@@ -9877,118 +7715,90 @@ class MFnRotateManip(MFnManip3D):
     kWorldSpace: int = ...
     def limitValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the value of the specified limit."""
-        ...
     def lineSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """lineSize() -> float
 
         Returns the manipulator line size.
         """
-        ...
     @property
     def manipScale(*args: Any, **kwargs: Any) -> Any:
         """The manipulator scale."""
-        ...
     @manipScale.setter
     def manipScale(*args: Any, **kwargs: Any) -> Any:
         """The manipulator scale."""
-        ...
     def name(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's name."""
-        ...
     @property
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-        ...
     @namespace.setter
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-        ...
     def object(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-        ...
     @property
     def objectColor(*args: Any, **kwargs: Any) -> Any:
         """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @objectColor.setter
     def objectColor(*args: Any, **kwargs: Any) -> Any:
         """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @property
     def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
         """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @objectColorRGB.setter
     def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
         """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @property
     def objectColorType(*args: Any, **kwargs: Any) -> Any:
         """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-        ...
     @objectColorType.setter
     def objectColorType(*args: Any, **kwargs: Any) -> Any:
         """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-        ...
     def parent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """parent(index) -> MObject
 
         Returns the specified parent of this node.
         """
-        ...
     def parentCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """parentCount() -> int
 
         Returns the number of parents this node has.
         """
-        ...
     def partialPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """partialPathName() -> string
 
         Returns the minimum path string necessary to uniquely identify the attached object.
         """
-        ...
     @property
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-        ...
     @pluginName.setter
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-        ...
     def plugsAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the alias for a plug's attribute."""
-        ...
     def removeAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Removes a dynamic attribute from the node."""
-        ...
     def removeChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeChild(node) -> self
 
         Removes the child, specified by MObject, reparenting it under the world.
         """
-        ...
     def removeChildAt(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeChildAt(index) -> self
 
         Removes the child, specified by index, reparenting it under the world.
         """
-        ...
     def reorderedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns one of the node's attribute, based on the order in which they are written to file."""
-        ...
     def resetFromRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Resets the transform from its rest position matrix."""
-        ...
     def restPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rest position matrix."""
-        ...
     def rotateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds an MEulerRotation or MQuaternion to the transform's rotation."""
-        ...
     def rotateByComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds to the transform's rotation using the individual components of an MEulerRotation or MQuaternion."""
-        ...
     @property
     def rotateMode(*args: Any, **kwargs: Any) -> Any:
         """The mode for the rotation manipulator.  The manipulator mode controls the appearance of the manipulator when is it used.
@@ -9999,7 +7809,6 @@ class MFnRotateManip(MFnManip3D):
         * kWorldSpace This mode forces the manipulator to display in the default orientation regardless of the manipulator value.  The manipulator is displayed the same as in object space mode, except it does not rotate when the manip value is changed.
         * kGimbal In gimbal mode, only the constrained axis rotation discs are allowed to be manipulated.  Gimbal mode treats the X,Y, and Z axis rotations as a sequence of operations on the default manipulator display.  First, the X rotation is applied.  Then, the Y rotation is applied, causing the X rotation disc to become transformed.  Finally, the Z rotation is applied, transforming both the X and Y rotation discs.  The Z rotation disc remains fixed during the operation.  No view disc can be manipulated in gimbal mode.
         """
-        ...
     @rotateMode.setter
     def rotateMode(*args: Any, **kwargs: Any) -> Any:
         """The mode for the rotation manipulator.  The manipulator mode controls the appearance of the manipulator when is it used.
@@ -10010,16 +7819,12 @@ class MFnRotateManip(MFnManip3D):
         * kWorldSpace This mode forces the manipulator to display in the default orientation regardless of the manipulator value.  The manipulator is displayed the same as in object space mode, except it does not rotate when the manip value is changed.
         * kGimbal In gimbal mode, only the constrained axis rotation discs are allowed to be manipulated.  Gimbal mode treats the X,Y, and Z axis rotations as a sequence of operations on the default manipulator display.  First, the X rotation is applied.  Then, the Y rotation is applied, causing the X rotation disc to become transformed.  Finally, the Z rotation is applied, transforming both the X and Y rotation discs.  The Z rotation disc remains fixed during the operation.  No view disc can be manipulated in gimbal mode.
         """
-        ...
     def rotateOrientation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the MQuaternion which orients the local rotation space."""
-        ...
     def rotatePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotate pivot."""
-        ...
     def rotatePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotate pivot translation."""
-        ...
     def rotateXYZValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """rotateXYZValue(valIndex) -> MEulerRotation
 
@@ -10027,10 +7832,8 @@ class MFnRotateManip(MFnManip3D):
 
         * valIndex (int) - rotation index of the manipulator
         """
-        ...
     def rotation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotation as an MEulerRotation or MQuaternion."""
-        ...
     def rotationCenterIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """rotationCenterIndex() -> int
 
@@ -10038,67 +7841,50 @@ class MFnRotateManip(MFnManip3D):
 
         Note that the rotation center is only used for positioning the display of the manipulator, and has no effect on the rotation values generated by the manipulator.
         """
-        ...
     def rotationComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotation as the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def rotationIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """rotationIndex() -> int
 
         Returns the index of the rotation manipVal for the manipulator.  When plugToManip conversion functions are used to produce the rotation manipVal, the manipulator data must be of the type MFnNumericData.k3Double, with X,Y, and Z rotations given in radians.  This is easily accomplished by using the MEulerRotation class to manage the rotations.
         """
-        ...
     def rotationOrder(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the order of rotations when the transform's rotation is expressed as an MEulerRotation."""
-        ...
     def scale(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transform's XYZ scale components."""
-        ...
     def scaleBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Multiplies the transform's XYZ scale components by a sequence of three floats."""
-        ...
     def scalePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's scale pivot."""
-        ...
     def scalePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's scale pivot translation."""
-        ...
     def setAffectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Specifies that modifications to a node could potentially affect the animation."""
-        ...
     def setAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds or removes an attribute alias."""
-        ...
     def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Used to prevent the node from being written to file."""
-        ...
     def setDrawPlaneHandles(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDrawPlaneHandles(bool) -> None
 
         Sets the global option to display planar handles or not on supported manipulators.
         """
-        ...
     def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Changes the location of external content."""
-        ...
     def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets content info in the specified attribute from the table."""
-        ...
     def setFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the state of the specified node flag."""
-        ...
     def setGlobalSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setGlobalSize(float) -> None
 
         Sets the global manipulator size.
         """
-        ...
     def setHandleSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setHandleSize(float) -> None
 
         Sets the manipulator handle size.
         """
-        ...
     def setInitialRotation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setInitialRotation(rotation) -> self
 
@@ -10106,40 +7892,30 @@ class MFnRotateManip(MFnManip3D):
 
         * rotation (MEulerRotation) - The initial rotation
         """
-        ...
     def setLimit(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the value of the specified limit."""
-        ...
     def setLineSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setLineSize(float) -> None
 
         Sets the manipulator line size.
         """
-        ...
     def setName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's name."""
-        ...
     def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setObject(MObject or MDagPath) -> self
 
         Attaches the function set to the specified node or DAG path.
         """
-        ...
     def setRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rest position matrix."""
-        ...
     def setRotateOrientation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the MQuaternion which orients the local rotation space."""
-        ...
     def setRotatePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotate pivot."""
-        ...
     def setRotatePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotate pivot translation."""
-        ...
     def setRotation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation using an MEulerRotation or MQuaternion."""
-        ...
     def setRotationCenter(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setRotationCenter(rotationCenter) -> self
 
@@ -10151,166 +7927,118 @@ class MFnRotateManip(MFnManip3D):
 
         * rotationCenter (MPoint) - The world space position of the rotation center.
         """
-        ...
     def setRotationComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation using the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def setRotationOrder(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation order."""
-        ...
     def setScale(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale components."""
-        ...
     def setScalePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale pivot."""
-        ...
     def setScalePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale pivot translation."""
-        ...
     def setShear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's shear."""
-        ...
     def setTransformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's attribute values to represent the given transformation matrix."""
-        ...
     def setTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's translation."""
-        ...
     def setUuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's UUID."""
-        ...
     def shear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transform's shear components."""
-        ...
     def shearBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Multiplies the transform's shear components by a sequence of three floats."""
-        ...
     @property
     def snapIncrement(*args: Any, **kwargs: Any) -> Any:
         """The snap increment is specified in degrees. Manipulator values will snap to the next rotation at an angle of snapIncrement from the original rotation.  Note that snap rotate does not apply to the trackball rotations (when dragging between the rotate discs)."""
-        ...
     @snapIncrement.setter
     def snapIncrement(*args: Any, **kwargs: Any) -> Any:
         """The snap increment is specified in degrees. Manipulator values will snap to the next rotation at an angle of snapIncrement from the original rotation.  Note that snap rotate does not apply to the trackball rotations (when dragging between the rotate discs)."""
-        ...
     def transformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transformation matrix represented by this transform."""
-        ...
     def transformationMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
         """transformationMatrix() -> MMatrix
 
         Returns the object space transformation matrix for this DAG node.
         """
-        ...
     def translateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds an MVector to the transform's translation."""
-        ...
     def translation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's translation as an MVector."""
-        ...
     def type(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the type of the function set."""
-        ...
     @property
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
-        ...
     @typeId.setter
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
-        ...
     @property
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-        ...
     @typeName.setter
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-        ...
     def uniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """For a DAG node, the unique name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself. For a non-DAG node, the uniqueName is just its name."""
-        ...
     @property
     def useObjectColor(*args: Any, **kwargs: Any) -> Any:
         """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-        ...
     @useObjectColor.setter
     def useObjectColor(*args: Any, **kwargs: Any) -> Any:
         """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-        ...
     def userNode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the MPxNode object for a plugin node."""
-        ...
     def uuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's UUID."""
-        ...
 
 class MFnScaleManip(MFnManip3D):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -10319,66 +8047,49 @@ class MFnScaleManip(MFnManip3D):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def absoluteName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the absolute name of this node.  The absolute name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself.  Regardless of relative name mode, absoluteName() will always return a full namespace path prefixed with a leading colon (the root namespace).  If the underlying node is a DAG node, then absoluteName() does not guarantee uniqueness, that is, two dependency nodes could have the same absoluteName().  In cases like this the uniqueName() method will guarantee that the name uniquely identifies the node."""
-        ...
     def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds a new dynamic attribute to the node."""
-        ...
     def addChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addChild(node, index=kNextPos, keepExistingParents=False) -> self
 
         Makes a node a child of this one.
         """
-        ...
     def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds content info to the specified table from a file path attribute."""
-        ...
     def affectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the changes to the node may affect animation."""
-        ...
     def allocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Allocates a flag on all nodes for use by the named plugin and returns the flag's index."""
-        ...
     def attribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns an attribute of the node, given either its index or name."""
-        ...
     def attributeClass(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the class of the specified attribute."""
-        ...
     def attributeCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the number of attributes on the node."""
-        ...
     @property
     def boundingBox(*args: Any, **kwargs: Any) -> Any:
         """Node's bounding box, in object space."""
-        ...
     @boundingBox.setter
     def boundingBox(*args: Any, **kwargs: Any) -> Any:
         """Node's bounding box, in object space."""
-        ...
     def canBeWritten(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the node will be written to file."""
-        ...
     def child(self: Self, *args: Any, **kwargs: Any) -> Any:
         """child(index) -> MObject
 
         Returns the specified child of this node.
         """
-        ...
     def childCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """childCount() -> int
 
         Returns the number of nodes which are children of this one.
         """
-        ...
     def classification(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the classification string for the named node type."""
-        ...
     def clearRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Clears the transform's rest position matrix."""
-        ...
     def connectToScaleCenterPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectToScaleCenterPlug(scaleCenterPlug) -> self
 
@@ -10388,7 +8099,6 @@ class MFnScaleManip(MFnManip3D):
 
         * scaleCenterPlug (MPlug) - The plug to connect the scale center to
         """
-        ...
     def connectToScalePlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectToScalePlug(scalePlug) -> self
 
@@ -10398,7 +8108,6 @@ class MFnScaleManip(MFnManip3D):
 
         * scalePlug (MPlug) - The plug to connect the scale value to
         """
-        ...
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """create(manipName=None, scaleName=None) -> MObject
 
@@ -10411,25 +8120,20 @@ class MFnScaleManip(MFnManip3D):
         * manipName (string) - Name of the manip for UI purposes.
         * scaleName (string) - Label for the scale value displayed in the feedback line.
         """
-        ...
     def dagPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dagPath() -> MDagPath
 
         Returns the DAG path to which this function set is attached. Raises a TypeError if the function set is attached to an MObject rather than a path.
         """
-        ...
     def dagRoot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dagRoot() -> MObject
 
         Returns the root node of the first path leading to this node.
         """
-        ...
     def deallocateAllFlags(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates all node flags which are currently allocated to the named plugin."""
-        ...
     def deallocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates the specified node flag, which was previously allocated by the named plugin using allocateFlag()."""
-        ...
     def deleteManipulator(self: Self, *args: Any, **kwargs: Any) -> Any:
         """deleteManipulator(manip) -> None
 
@@ -10437,28 +8141,20 @@ class MFnScaleManip(MFnManip3D):
 
         * manip (MObject) - the manipulator to be deleted
         """
-        ...
     def dgCallbackIds(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information for a specific callback type, broken down by callbackId."""
-        ...
     def dgCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information broken down by callback type."""
-        ...
     def dgTimer(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a specific DG timer metric for a given timer type."""
-        ...
     def dgTimerOff(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing off for this node."""
-        ...
     def dgTimerOn(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing on for this node."""
-        ...
     def dgTimerQueryState(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the current DG timer state for this node."""
-        ...
     def dgTimerReset(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Resets all DG timers for this node."""
-        ...
     def displayWithNode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """displayWithNode(node) -> self
 
@@ -10466,234 +8162,180 @@ class MFnScaleManip(MFnManip3D):
 
         * node (MObject) - The node the manipulator should display with
         """
-        ...
     def drawPlaneHandles(self: Self, *args: Any, **kwargs: Any) -> Any:
         """drawPlaneHandles() -> bool
 
         This method returns the global option that says if the planar manipulator handles should be drawn or not.Setting this will affect the drawing of all manipulators that support the planar handles.
         """
-        ...
     def duplicate(self: Self, *args: Any, **kwargs: Any) -> Any:
         """duplicate(instance=False, instanceLeaf=False) -> MObject
 
         Duplicates the DAG hierarchy rooted at the current node.
         """
-        ...
     def enableLimit(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Enables or disables a specified limit type."""
-        ...
     def findAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the attribute which has the given alias."""
-        ...
     def findPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a plug for the given attribute."""
-        ...
     def fullPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """fullPathName() -> string
 
         Returns the full path of the attached object, from the root of the DAG on down.
         """
-        ...
     def getAffectedAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which are affected by the specified attribute."""
-        ...
     def getAffectingAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which affect the specified attribute."""
-        ...
     def getAliasAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's alias attribute, which is a special attribute used to store information about the node's attribute aliases."""
-        ...
     def getAliasList(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the node's attribute aliases."""
-        ...
     def getAllPaths(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getAllPaths() -> MDagPathArray
 
         Returns all of the DAG paths which lead to the object to which this function set is attached.
         """
-        ...
     def getConnectedSetsAndMembers(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getConnectedSetsAndMembers(instance, renderableSetsOnly) -> (MObjectArray, MObjectArray)
 
         Returns a tuple containing an array of sets and an array of the
         components of the DAG object which are in those sets. If the entire object is in a set, then the corresponding entry in the comps array will have no elements in it.
         """
-        ...
     def getConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all the plugs which are connected to attributes of this node."""
-        ...
     def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Gets the external content (files) that this node depends on."""
-        ...
     def getPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getPath() -> MDagPath
 
         Returns the DAG path to which this function set is attached, or the first path to the node if the function set is attached to an MObject.
         """
-        ...
     def globalSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """globalSize() -> float
 
         Returns the global manipulator size.
         """
-        ...
     def handleSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """handleSize() -> float
 
         Returns the manipulator handle size.
         """
-        ...
     def hasAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node has an attribute with the given name."""
-        ...
     def hasChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasChild(node) -> bool
 
         Returns True if the specified node is a child of this one.
         """
-        ...
     def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the function set is compatible with the specified Maya object."""
-        ...
     def hasParent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasParent(node) -> bool
 
         Returns True if the specified node is a parent of this one.
         """
-        ...
     def hasUniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node's name is unique."""
-        ...
     @property
     def inModel(*args: Any, **kwargs: Any) -> Any:
         """True if the node has been added to the model."""
-        ...
     @inModel.setter
     def inModel(*args: Any, **kwargs: Any) -> Any:
         """True if the node has been added to the model."""
-        ...
     @property
     def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
         """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-        ...
     @inUnderWorld.setter
     def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
         """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-        ...
     def instanceCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """instanceCount(indirect) -> int
 
         Returns the number of instances for this node.
         """
-        ...
     def isChildOf(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isChildOf(node) -> bool
 
         Returns True if the specified node is a parent of this one.
         """
-        ...
     @property
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-        ...
     @isDefaultNode.setter
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-        ...
     def isFlagSet(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the state of the specified node flag."""
-        ...
     @property
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
         """True if the node is from a referenced file, False if the node is part of the main scene."""
-        ...
     @isFromReferencedFile.setter
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
         """True if the node is from a referenced file, False if the node is part of the main scene."""
-        ...
     @property
     def isInstanceable(*args: Any, **kwargs: Any) -> Any:
         """True if instancing is allowed for this node."""
-        ...
     @isInstanceable.setter
     def isInstanceable(*args: Any, **kwargs: Any) -> Any:
         """True if instancing is allowed for this node."""
-        ...
     def isInstanced(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isInstanced(indirect=True) -> bool
 
         Returns True if this node is instanced.
         """
-        ...
     def isInstancedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isInstancedAttribute(attr) -> bool
 
         Returns True if the specified attribute is an instanced attribute of this node.
         """
-        ...
     @property
     def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
         """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-        ...
     @isIntermediateObject.setter
     def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
         """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-        ...
     def isLimited(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the specified limit type is enabled."""
-        ...
     @property
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-        ...
     @isLocked.setter
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-        ...
     def isNewAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the specified attribute was added in the current scene, and not by by one of its referenced files."""
-        ...
     @property
     def isOptimizePlaybackOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not optimize playback is on."""
-        ...
     @isOptimizePlaybackOn.setter
     def isOptimizePlaybackOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not optimize playback is on."""
-        ...
     def isParentOf(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isParentOf(node) -> bool
 
         Returns True if the specified node is a child of this one.
         """
-        ...
     @property
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-        ...
     @isShared.setter
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-        ...
     @property
     def isSnapModeOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the snap mode is on."""
-        ...
     @isSnapModeOn.setter
     def isSnapModeOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the snap mode is on."""
-        ...
     def isTrackingEdits(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node is referenced or in an assembly that is tracking edits."""
-        ...
     @property
     def isVisible(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the manipulator is visible."""
-        ...
     @isVisible.setter
     def isVisible(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the manipulator is visible."""
-        ...
     kArbitraryOrientation: int = ...
     kDefaultOrientation: int = ...
     kExtensionAttr: int = ...
@@ -10745,143 +8387,108 @@ class MFnScaleManip(MFnManip3D):
     kTranslateMinZ: int = ...
     def limitValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the value of the specified limit."""
-        ...
     def lineSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """lineSize() -> float
 
         Returns the manipulator line size.
         """
-        ...
     @property
     def manipScale(*args: Any, **kwargs: Any) -> Any:
         """The manipulator scale."""
-        ...
     @manipScale.setter
     def manipScale(*args: Any, **kwargs: Any) -> Any:
         """The manipulator scale."""
-        ...
     def name(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's name."""
-        ...
     @property
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-        ...
     @namespace.setter
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-        ...
     def object(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-        ...
     @property
     def objectColor(*args: Any, **kwargs: Any) -> Any:
         """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @objectColor.setter
     def objectColor(*args: Any, **kwargs: Any) -> Any:
         """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @property
     def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
         """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @objectColorRGB.setter
     def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
         """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @property
     def objectColorType(*args: Any, **kwargs: Any) -> Any:
         """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-        ...
     @objectColorType.setter
     def objectColorType(*args: Any, **kwargs: Any) -> Any:
         """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-        ...
     @property
     def orientation(*args: Any, **kwargs: Any) -> Any:
         """The arbitrary orientation of the MFnScaleManip. This only has any effect when the orientation mode is set to kArbitraryOrientation."""
-        ...
     @orientation.setter
     def orientation(*args: Any, **kwargs: Any) -> Any:
         """The arbitrary orientation of the MFnScaleManip. This only has any effect when the orientation mode is set to kArbitraryOrientation."""
-        ...
     @property
     def orientationMode(*args: Any, **kwargs: Any) -> Any:
         """When the manipulator's orientationMode is set to kArbitraryOrientation the manipulator will be oriented according to oritentation value. When the orientationMode is set to kDefaultOrientation the manipulator will be aligned with the world-space axes."""
-        ...
     @orientationMode.setter
     def orientationMode(*args: Any, **kwargs: Any) -> Any:
         """When the manipulator's orientationMode is set to kArbitraryOrientation the manipulator will be oriented according to oritentation value. When the orientationMode is set to kDefaultOrientation the manipulator will be aligned with the world-space axes."""
-        ...
     def parent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """parent(index) -> MObject
 
         Returns the specified parent of this node.
         """
-        ...
     def parentCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """parentCount() -> int
 
         Returns the number of parents this node has.
         """
-        ...
     def partialPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """partialPathName() -> string
 
         Returns the minimum path string necessary to uniquely identify the attached object.
         """
-        ...
     @property
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-        ...
     @pluginName.setter
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-        ...
     def plugsAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the alias for a plug's attribute."""
-        ...
     def removeAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Removes a dynamic attribute from the node."""
-        ...
     def removeChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeChild(node) -> self
 
         Removes the child, specified by MObject, reparenting it under the world.
         """
-        ...
     def removeChildAt(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeChildAt(index) -> self
 
         Removes the child, specified by index, reparenting it under the world.
         """
-        ...
     def reorderedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns one of the node's attribute, based on the order in which they are written to file."""
-        ...
     def resetFromRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Resets the transform from its rest position matrix."""
-        ...
     def restPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rest position matrix."""
-        ...
     def rotateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds an MEulerRotation or MQuaternion to the transform's rotation."""
-        ...
     def rotateByComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds to the transform's rotation using the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def rotateOrientation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the MQuaternion which orients the local rotation space."""
-        ...
     def rotatePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotate pivot."""
-        ...
     def rotatePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotate pivot translation."""
-        ...
     def rotateXYZValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """rotateXYZValue(valIndex) -> MEulerRotation
 
@@ -10889,22 +8496,16 @@ class MFnScaleManip(MFnManip3D):
 
         * valIndex (int) - rotation index of the manipulator
         """
-        ...
     def rotation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotation as an MEulerRotation or MQuaternion."""
-        ...
     def rotationComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotation as the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def rotationOrder(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the order of rotations when the transform's rotation is expressed as an MEulerRotation."""
-        ...
     def scale(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transform's XYZ scale components."""
-        ...
     def scaleBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Multiplies the transform's XYZ scale components by a sequence of three floats."""
-        ...
     def scaleCenterIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """scaleCenterIndex() -> int
 
@@ -10912,55 +8513,42 @@ class MFnScaleManip(MFnManip3D):
 
         Note that the scale center is only used for display of the manipulator and has no effect on scale values produced by the manipulator.
         """
-        ...
     def scaleIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """scaleIndex() -> int
 
         Returns the index of the scale manipVal for this manipulator.
         """
-        ...
     def scalePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's scale pivot."""
-        ...
     def scalePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's scale pivot translation."""
-        ...
     def setAffectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Specifies that modifications to a node could potentially affect the animation."""
-        ...
     def setAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds or removes an attribute alias."""
-        ...
     def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Used to prevent the node from being written to file."""
-        ...
     def setDrawPlaneHandles(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDrawPlaneHandles(bool) -> None
 
         Sets the global option to display planar handles or not on supported manipulators.
         """
-        ...
     def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Changes the location of external content."""
-        ...
     def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets content info in the specified attribute from the table."""
-        ...
     def setFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the state of the specified node flag."""
-        ...
     def setGlobalSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setGlobalSize(float) -> None
 
         Sets the global manipulator size.
         """
-        ...
     def setHandleSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setHandleSize(float) -> None
 
         Sets the manipulator handle size.
         """
-        ...
     def setInitialScale(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setInitialScale(scale) -> self
 
@@ -10968,199 +8556,142 @@ class MFnScaleManip(MFnManip3D):
 
         * scale (MVector) - The initial scale
         """
-        ...
     def setLimit(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the value of the specified limit."""
-        ...
     def setLineSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setLineSize(float) -> None
 
         Sets the manipulator line size.
         """
-        ...
     def setName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's name."""
-        ...
     def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setObject(MObject or MDagPath) -> self
 
         Attaches the function set to the specified node or DAG path.
         """
-        ...
     def setRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rest position matrix."""
-        ...
     def setRotateOrientation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the MQuaternion which orients the local rotation space."""
-        ...
     def setRotatePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotate pivot."""
-        ...
     def setRotatePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotate pivot translation."""
-        ...
     def setRotation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation using an MEulerRotation or MQuaternion."""
-        ...
     def setRotationComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation using the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def setRotationOrder(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation order."""
-        ...
     def setScale(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale components."""
-        ...
     def setScalePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale pivot."""
-        ...
     def setScalePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale pivot translation."""
-        ...
     def setShear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's shear."""
-        ...
     def setTransformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's attribute values to represent the given transformation matrix."""
-        ...
     def setTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's translation."""
-        ...
     def setUuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's UUID."""
-        ...
     def shear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transform's shear components."""
-        ...
     def shearBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Multiplies the transform's shear components by a sequence of three floats."""
-        ...
     @property
     def snapIncrement(*args: Any, **kwargs: Any) -> Any:
         """The snap increment is specified in the working	unit, and is the distance between snap points when dragging the scale handles."""
-        ...
     @snapIncrement.setter
     def snapIncrement(*args: Any, **kwargs: Any) -> Any:
         """The snap increment is specified in the working	unit, and is the distance between snap points when dragging the scale handles."""
-        ...
     def transformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transformation matrix represented by this transform."""
-        ...
     def transformationMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
         """transformationMatrix() -> MMatrix
 
         Returns the object space transformation matrix for this DAG node.
         """
-        ...
     def translateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds an MVector to the transform's translation."""
-        ...
     def translation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's translation as an MVector."""
-        ...
     def type(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the type of the function set."""
-        ...
     @property
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
-        ...
     @typeId.setter
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
-        ...
     @property
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-        ...
     @typeName.setter
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-        ...
     def uniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """For a DAG node, the unique name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself. For a non-DAG node, the uniqueName is just its name."""
-        ...
     @property
     def useObjectColor(*args: Any, **kwargs: Any) -> Any:
         """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-        ...
     @useObjectColor.setter
     def useObjectColor(*args: Any, **kwargs: Any) -> Any:
         """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-        ...
     def userNode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the MPxNode object for a plugin node."""
-        ...
     def uuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's UUID."""
-        ...
 
 class MFnStateManip(MFnManip3D):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -11169,66 +8700,49 @@ class MFnStateManip(MFnManip3D):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def absoluteName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the absolute name of this node.  The absolute name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself.  Regardless of relative name mode, absoluteName() will always return a full namespace path prefixed with a leading colon (the root namespace).  If the underlying node is a DAG node, then absoluteName() does not guarantee uniqueness, that is, two dependency nodes could have the same absoluteName().  In cases like this the uniqueName() method will guarantee that the name uniquely identifies the node."""
-        ...
     def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds a new dynamic attribute to the node."""
-        ...
     def addChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addChild(node, index=kNextPos, keepExistingParents=False) -> self
 
         Makes a node a child of this one.
         """
-        ...
     def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds content info to the specified table from a file path attribute."""
-        ...
     def affectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the changes to the node may affect animation."""
-        ...
     def allocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Allocates a flag on all nodes for use by the named plugin and returns the flag's index."""
-        ...
     def attribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns an attribute of the node, given either its index or name."""
-        ...
     def attributeClass(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the class of the specified attribute."""
-        ...
     def attributeCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the number of attributes on the node."""
-        ...
     @property
     def boundingBox(*args: Any, **kwargs: Any) -> Any:
         """Node's bounding box, in object space."""
-        ...
     @boundingBox.setter
     def boundingBox(*args: Any, **kwargs: Any) -> Any:
         """Node's bounding box, in object space."""
-        ...
     def canBeWritten(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the node will be written to file."""
-        ...
     def child(self: Self, *args: Any, **kwargs: Any) -> Any:
         """child(index) -> MObject
 
         Returns the specified child of this node.
         """
-        ...
     def childCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """childCount() -> int
 
         Returns the number of nodes which are children of this one.
         """
-        ...
     def classification(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the classification string for the named node type."""
-        ...
     def clearRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Clears the transform's rest position matrix."""
-        ...
     def connectToStatePlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectToStatePlug(statePlug) -> self
 
@@ -11236,7 +8750,6 @@ class MFnStateManip(MFnManip3D):
 
         * statePlug (MPlug) - the state plug
         """
-        ...
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """create(manipName=None, stateName=None) -> MObject
 
@@ -11250,25 +8763,20 @@ class MFnStateManip(MFnManip3D):
         * manipName (string) - Name of the manip for UI purposes.
         * stateName (string) - Label for the state value which appears in the feedback line.
         """
-        ...
     def dagPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dagPath() -> MDagPath
 
         Returns the DAG path to which this function set is attached. Raises a TypeError if the function set is attached to an MObject rather than a path.
         """
-        ...
     def dagRoot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dagRoot() -> MObject
 
         Returns the root node of the first path leading to this node.
         """
-        ...
     def deallocateAllFlags(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates all node flags which are currently allocated to the named plugin."""
-        ...
     def deallocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates the specified node flag, which was previously allocated by the named plugin using allocateFlag()."""
-        ...
     def deleteManipulator(self: Self, *args: Any, **kwargs: Any) -> Any:
         """deleteManipulator(manip) -> None
 
@@ -11276,247 +8784,188 @@ class MFnStateManip(MFnManip3D):
 
         * manip (MObject) - the manipulator to be deleted
         """
-        ...
     def dgCallbackIds(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information for a specific callback type, broken down by callbackId."""
-        ...
     def dgCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information broken down by callback type."""
-        ...
     def dgTimer(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a specific DG timer metric for a given timer type."""
-        ...
     def dgTimerOff(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing off for this node."""
-        ...
     def dgTimerOn(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing on for this node."""
-        ...
     def dgTimerQueryState(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the current DG timer state for this node."""
-        ...
     def dgTimerReset(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Resets all DG timers for this node."""
-        ...
     def drawPlaneHandles(self: Self, *args: Any, **kwargs: Any) -> Any:
         """drawPlaneHandles() -> bool
 
         This method returns the global option that says if the planar manipulator handles should be drawn or not.Setting this will affect the drawing of all manipulators that support the planar handles.
         """
-        ...
     def duplicate(self: Self, *args: Any, **kwargs: Any) -> Any:
         """duplicate(instance=False, instanceLeaf=False) -> MObject
 
         Duplicates the DAG hierarchy rooted at the current node.
         """
-        ...
     def enableLimit(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Enables or disables a specified limit type."""
-        ...
     def findAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the attribute which has the given alias."""
-        ...
     def findPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a plug for the given attribute."""
-        ...
     def fullPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """fullPathName() -> string
 
         Returns the full path of the attached object, from the root of the DAG on down.
         """
-        ...
     def getAffectedAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which are affected by the specified attribute."""
-        ...
     def getAffectingAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which affect the specified attribute."""
-        ...
     def getAliasAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's alias attribute, which is a special attribute used to store information about the node's attribute aliases."""
-        ...
     def getAliasList(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the node's attribute aliases."""
-        ...
     def getAllPaths(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getAllPaths() -> MDagPathArray
 
         Returns all of the DAG paths which lead to the object to which this function set is attached.
         """
-        ...
     def getConnectedSetsAndMembers(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getConnectedSetsAndMembers(instance, renderableSetsOnly) -> (MObjectArray, MObjectArray)
 
         Returns a tuple containing an array of sets and an array of the
         components of the DAG object which are in those sets. If the entire object is in a set, then the corresponding entry in the comps array will have no elements in it.
         """
-        ...
     def getConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all the plugs which are connected to attributes of this node."""
-        ...
     def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Gets the external content (files) that this node depends on."""
-        ...
     def getPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getPath() -> MDagPath
 
         Returns the DAG path to which this function set is attached, or the first path to the node if the function set is attached to an MObject.
         """
-        ...
     def globalSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """globalSize() -> float
 
         Returns the global manipulator size.
         """
-        ...
     def handleSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """handleSize() -> float
 
         Returns the manipulator handle size.
         """
-        ...
     def hasAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node has an attribute with the given name."""
-        ...
     def hasChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasChild(node) -> bool
 
         Returns True if the specified node is a child of this one.
         """
-        ...
     def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the function set is compatible with the specified Maya object."""
-        ...
     def hasParent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasParent(node) -> bool
 
         Returns True if the specified node is a parent of this one.
         """
-        ...
     def hasUniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node's name is unique."""
-        ...
     @property
     def inModel(*args: Any, **kwargs: Any) -> Any:
         """True if the node has been added to the model."""
-        ...
     @inModel.setter
     def inModel(*args: Any, **kwargs: Any) -> Any:
         """True if the node has been added to the model."""
-        ...
     @property
     def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
         """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-        ...
     @inUnderWorld.setter
     def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
         """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-        ...
     def instanceCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """instanceCount(indirect) -> int
 
         Returns the number of instances for this node.
         """
-        ...
     def isChildOf(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isChildOf(node) -> bool
 
         Returns True if the specified node is a parent of this one.
         """
-        ...
     @property
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-        ...
     @isDefaultNode.setter
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-        ...
     def isFlagSet(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the state of the specified node flag."""
-        ...
     @property
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
         """True if the node is from a referenced file, False if the node is part of the main scene."""
-        ...
     @isFromReferencedFile.setter
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
         """True if the node is from a referenced file, False if the node is part of the main scene."""
-        ...
     @property
     def isInstanceable(*args: Any, **kwargs: Any) -> Any:
         """True if instancing is allowed for this node."""
-        ...
     @isInstanceable.setter
     def isInstanceable(*args: Any, **kwargs: Any) -> Any:
         """True if instancing is allowed for this node."""
-        ...
     def isInstanced(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isInstanced(indirect=True) -> bool
 
         Returns True if this node is instanced.
         """
-        ...
     def isInstancedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isInstancedAttribute(attr) -> bool
 
         Returns True if the specified attribute is an instanced attribute of this node.
         """
-        ...
     @property
     def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
         """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-        ...
     @isIntermediateObject.setter
     def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
         """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-        ...
     def isLimited(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the specified limit type is enabled."""
-        ...
     @property
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-        ...
     @isLocked.setter
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-        ...
     def isNewAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the specified attribute was added in the current scene, and not by by one of its referenced files."""
-        ...
     @property
     def isOptimizePlaybackOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not optimize playback is on."""
-        ...
     @isOptimizePlaybackOn.setter
     def isOptimizePlaybackOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not optimize playback is on."""
-        ...
     def isParentOf(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isParentOf(node) -> bool
 
         Returns True if the specified node is a child of this one.
         """
-        ...
     @property
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-        ...
     @isShared.setter
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-        ...
     def isTrackingEdits(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node is referenced or in an assembly that is tracking edits."""
-        ...
     @property
     def isVisible(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the manipulator is visible."""
-        ...
     @isVisible.setter
     def isVisible(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the manipulator is visible."""
-        ...
     kExtensionAttr: int = ...
     kInvalidAttr: int = ...
     kLocalDynamicAttr: int = ...
@@ -11566,145 +9015,111 @@ class MFnStateManip(MFnManip3D):
     kTranslateMinZ: int = ...
     def limitValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the value of the specified limit."""
-        ...
     def lineSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """lineSize() -> float
 
         Returns the manipulator line size.
         """
-        ...
     @property
     def manipScale(*args: Any, **kwargs: Any) -> Any:
         """The manipulator scale."""
-        ...
     @manipScale.setter
     def manipScale(*args: Any, **kwargs: Any) -> Any:
         """The manipulator scale."""
-        ...
     @property
     def maxStates(*args: Any, **kwargs: Any) -> Any:
         """The maximum number of states that the StateManip will have.
         The default number of maximum states is 4.
         """
-        ...
     @maxStates.setter
     def maxStates(*args: Any, **kwargs: Any) -> Any:
         """The maximum number of states that the StateManip will have.
         The default number of maximum states is 4.
         """
-        ...
     def name(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's name."""
-        ...
     @property
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-        ...
     @namespace.setter
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-        ...
     def object(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-        ...
     @property
     def objectColor(*args: Any, **kwargs: Any) -> Any:
         """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @objectColor.setter
     def objectColor(*args: Any, **kwargs: Any) -> Any:
         """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @property
     def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
         """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @objectColorRGB.setter
     def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
         """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @property
     def objectColorType(*args: Any, **kwargs: Any) -> Any:
         """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-        ...
     @objectColorType.setter
     def objectColorType(*args: Any, **kwargs: Any) -> Any:
         """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-        ...
     def parent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """parent(index) -> MObject
 
         Returns the specified parent of this node.
         """
-        ...
     def parentCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """parentCount() -> int
 
         Returns the number of parents this node has.
         """
-        ...
     def partialPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """partialPathName() -> string
 
         Returns the minimum path string necessary to uniquely identify the attached object.
         """
-        ...
     @property
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-        ...
     @pluginName.setter
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-        ...
     def plugsAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the alias for a plug's attribute."""
-        ...
     def positionIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """positionIndex() -> int
 
         Returns the index of the position of the StateManip. The data type corresponding to this index is MFnNumericData.k3Double.
         """
-        ...
     def removeAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Removes a dynamic attribute from the node."""
-        ...
     def removeChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeChild(node) -> self
 
         Removes the child, specified by MObject, reparenting it under the world.
         """
-        ...
     def removeChildAt(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeChildAt(index) -> self
 
         Removes the child, specified by index, reparenting it under the world.
         """
-        ...
     def reorderedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns one of the node's attribute, based on the order in which they are written to file."""
-        ...
     def resetFromRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Resets the transform from its rest position matrix."""
-        ...
     def restPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rest position matrix."""
-        ...
     def rotateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds an MEulerRotation or MQuaternion to the transform's rotation."""
-        ...
     def rotateByComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds to the transform's rotation using the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def rotateOrientation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the MQuaternion which orients the local rotation space."""
-        ...
     def rotatePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotate pivot."""
-        ...
     def rotatePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotate pivot translation."""
-        ...
     def rotateXYZValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """rotateXYZValue(valIndex) -> MEulerRotation
 
@@ -11712,64 +9127,47 @@ class MFnStateManip(MFnManip3D):
 
         * valIndex (int) - rotation index of the manipulator
         """
-        ...
     def rotation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotation as an MEulerRotation or MQuaternion."""
-        ...
     def rotationComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotation as the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def rotationOrder(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the order of rotations when the transform's rotation is expressed as an MEulerRotation."""
-        ...
     def scale(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transform's XYZ scale components."""
-        ...
     def scaleBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Multiplies the transform's XYZ scale components by a sequence of three floats."""
-        ...
     def scalePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's scale pivot."""
-        ...
     def scalePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's scale pivot translation."""
-        ...
     def setAffectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Specifies that modifications to a node could potentially affect the animation."""
-        ...
     def setAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds or removes an attribute alias."""
-        ...
     def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Used to prevent the node from being written to file."""
-        ...
     def setDrawPlaneHandles(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDrawPlaneHandles(bool) -> None
 
         Sets the global option to display planar handles or not on supported manipulators.
         """
-        ...
     def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Changes the location of external content."""
-        ...
     def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets content info in the specified attribute from the table."""
-        ...
     def setFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the state of the specified node flag."""
-        ...
     def setGlobalSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setGlobalSize(float) -> None
 
         Sets the global manipulator size.
         """
-        ...
     def setHandleSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setHandleSize(float) -> None
 
         Sets the manipulator handle size.
         """
-        ...
     def setInitialState(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setInitialState(initialState) -> self
 
@@ -11777,203 +9175,146 @@ class MFnStateManip(MFnManip3D):
 
         * initialState (int) - initial state of the StateManip
         """
-        ...
     def setLimit(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the value of the specified limit."""
-        ...
     def setLineSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setLineSize(float) -> None
 
         Sets the manipulator line size.
         """
-        ...
     def setName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's name."""
-        ...
     def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setObject(MObject or MDagPath) -> self
 
         Attaches the function set to the specified node or DAG path.
         """
-        ...
     def setRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rest position matrix."""
-        ...
     def setRotateOrientation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the MQuaternion which orients the local rotation space."""
-        ...
     def setRotatePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotate pivot."""
-        ...
     def setRotatePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotate pivot translation."""
-        ...
     def setRotation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation using an MEulerRotation or MQuaternion."""
-        ...
     def setRotationComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation using the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def setRotationOrder(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation order."""
-        ...
     def setScale(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale components."""
-        ...
     def setScalePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale pivot."""
-        ...
     def setScalePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale pivot translation."""
-        ...
     def setShear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's shear."""
-        ...
     def setTransformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's attribute values to represent the given transformation matrix."""
-        ...
     def setTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's translation."""
-        ...
     def setUuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's UUID."""
-        ...
     def shear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transform's shear components."""
-        ...
     def shearBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Multiplies the transform's shear components by a sequence of three floats."""
-        ...
     def state(self: Self, *args: Any, **kwargs: Any) -> Any:
         """state() -> int
 
         Returns the current state.
         """
-        ...
     def stateIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """stateIndex() -> int
 
         Returns the index of the state. The data type corresponding to this index is a int integer.
         """
-        ...
     def transformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transformation matrix represented by this transform."""
-        ...
     def transformationMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
         """transformationMatrix() -> MMatrix
 
         Returns the object space transformation matrix for this DAG node.
         """
-        ...
     def translateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds an MVector to the transform's translation."""
-        ...
     def translation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's translation as an MVector."""
-        ...
     def type(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the type of the function set."""
-        ...
     @property
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
-        ...
     @typeId.setter
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
-        ...
     @property
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-        ...
     @typeName.setter
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-        ...
     def uniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """For a DAG node, the unique name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself. For a non-DAG node, the uniqueName is just its name."""
-        ...
     @property
     def useObjectColor(*args: Any, **kwargs: Any) -> Any:
         """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-        ...
     @useObjectColor.setter
     def useObjectColor(*args: Any, **kwargs: Any) -> Any:
         """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-        ...
     def userNode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the MPxNode object for a plugin node."""
-        ...
     def uuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's UUID."""
-        ...
 
 class MFnToggleManip(MFnManip3D):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -11982,66 +9323,49 @@ class MFnToggleManip(MFnManip3D):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def absoluteName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the absolute name of this node.  The absolute name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself.  Regardless of relative name mode, absoluteName() will always return a full namespace path prefixed with a leading colon (the root namespace).  If the underlying node is a DAG node, then absoluteName() does not guarantee uniqueness, that is, two dependency nodes could have the same absoluteName().  In cases like this the uniqueName() method will guarantee that the name uniquely identifies the node."""
-        ...
     def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds a new dynamic attribute to the node."""
-        ...
     def addChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addChild(node, index=kNextPos, keepExistingParents=False) -> self
 
         Makes a node a child of this one.
         """
-        ...
     def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds content info to the specified table from a file path attribute."""
-        ...
     def affectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the changes to the node may affect animation."""
-        ...
     def allocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Allocates a flag on all nodes for use by the named plugin and returns the flag's index."""
-        ...
     def attribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns an attribute of the node, given either its index or name."""
-        ...
     def attributeClass(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the class of the specified attribute."""
-        ...
     def attributeCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the number of attributes on the node."""
-        ...
     @property
     def boundingBox(*args: Any, **kwargs: Any) -> Any:
         """Node's bounding box, in object space."""
-        ...
     @boundingBox.setter
     def boundingBox(*args: Any, **kwargs: Any) -> Any:
         """Node's bounding box, in object space."""
-        ...
     def canBeWritten(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the node will be written to file."""
-        ...
     def child(self: Self, *args: Any, **kwargs: Any) -> Any:
         """child(index) -> MObject
 
         Returns the specified child of this node.
         """
-        ...
     def childCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """childCount() -> int
 
         Returns the number of nodes which are children of this one.
         """
-        ...
     def classification(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the classification string for the named node type."""
-        ...
     def clearRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Clears the transform's rest position matrix."""
-        ...
     def connectToTogglePlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectToTogglePlug(togglePlug) -> self
 
@@ -12049,7 +9373,6 @@ class MFnToggleManip(MFnManip3D):
 
         * togglePlug (MPlug) - the toggle plug
         """
-        ...
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """create(manipName=None, toggleName=None) -> MObject
 
@@ -12063,25 +9386,20 @@ class MFnToggleManip(MFnManip3D):
         * manipName (string) - Name of the manip for UI purposes.
         * toggleName (string) - Label for the toggle value which appears in the feedback line.
         """
-        ...
     def dagPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dagPath() -> MDagPath
 
         Returns the DAG path to which this function set is attached. Raises a TypeError if the function set is attached to an MObject rather than a path.
         """
-        ...
     def dagRoot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dagRoot() -> MObject
 
         Returns the root node of the first path leading to this node.
         """
-        ...
     def deallocateAllFlags(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates all node flags which are currently allocated to the named plugin."""
-        ...
     def deallocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates the specified node flag, which was previously allocated by the named plugin using allocateFlag()."""
-        ...
     def deleteManipulator(self: Self, *args: Any, **kwargs: Any) -> Any:
         """deleteManipulator(manip) -> None
 
@@ -12089,261 +9407,199 @@ class MFnToggleManip(MFnManip3D):
 
         * manip (MObject) - the manipulator to be deleted
         """
-        ...
     def dgCallbackIds(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information for a specific callback type, broken down by callbackId."""
-        ...
     def dgCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information broken down by callback type."""
-        ...
     def dgTimer(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a specific DG timer metric for a given timer type."""
-        ...
     def dgTimerOff(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing off for this node."""
-        ...
     def dgTimerOn(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing on for this node."""
-        ...
     def dgTimerQueryState(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the current DG timer state for this node."""
-        ...
     def dgTimerReset(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Resets all DG timers for this node."""
-        ...
     @property
     def direction(*args: Any, **kwargs: Any) -> Any:
         """The direction of the ToggleManip."""
-        ...
     @direction.setter
     def direction(*args: Any, **kwargs: Any) -> Any:
         """The direction of the ToggleManip."""
-        ...
     def directionIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """directionIndex() -> int
 
         Returns the index of the direction. The data type corresponding to this index is MFnNumericData.k3Double.
         """
-        ...
     def drawPlaneHandles(self: Self, *args: Any, **kwargs: Any) -> Any:
         """drawPlaneHandles() -> bool
 
         This method returns the global option that says if the planar manipulator handles should be drawn or not.Setting this will affect the drawing of all manipulators that support the planar handles.
         """
-        ...
     def duplicate(self: Self, *args: Any, **kwargs: Any) -> Any:
         """duplicate(instance=False, instanceLeaf=False) -> MObject
 
         Duplicates the DAG hierarchy rooted at the current node.
         """
-        ...
     def enableLimit(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Enables or disables a specified limit type."""
-        ...
     def findAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the attribute which has the given alias."""
-        ...
     def findPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a plug for the given attribute."""
-        ...
     def fullPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """fullPathName() -> string
 
         Returns the full path of the attached object, from the root of the DAG on down.
         """
-        ...
     def getAffectedAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which are affected by the specified attribute."""
-        ...
     def getAffectingAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which affect the specified attribute."""
-        ...
     def getAliasAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's alias attribute, which is a special attribute used to store information about the node's attribute aliases."""
-        ...
     def getAliasList(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the node's attribute aliases."""
-        ...
     def getAllPaths(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getAllPaths() -> MDagPathArray
 
         Returns all of the DAG paths which lead to the object to which this function set is attached.
         """
-        ...
     def getConnectedSetsAndMembers(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getConnectedSetsAndMembers(instance, renderableSetsOnly) -> (MObjectArray, MObjectArray)
 
         Returns a tuple containing an array of sets and an array of the
         components of the DAG object which are in those sets. If the entire object is in a set, then the corresponding entry in the comps array will have no elements in it.
         """
-        ...
     def getConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all the plugs which are connected to attributes of this node."""
-        ...
     def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Gets the external content (files) that this node depends on."""
-        ...
     def getPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getPath() -> MDagPath
 
         Returns the DAG path to which this function set is attached, or the first path to the node if the function set is attached to an MObject.
         """
-        ...
     def globalSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """globalSize() -> float
 
         Returns the global manipulator size.
         """
-        ...
     def handleSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """handleSize() -> float
 
         Returns the manipulator handle size.
         """
-        ...
     def hasAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node has an attribute with the given name."""
-        ...
     def hasChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasChild(node) -> bool
 
         Returns True if the specified node is a child of this one.
         """
-        ...
     def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the function set is compatible with the specified Maya object."""
-        ...
     def hasParent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasParent(node) -> bool
 
         Returns True if the specified node is a parent of this one.
         """
-        ...
     def hasUniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node's name is unique."""
-        ...
     @property
     def inModel(*args: Any, **kwargs: Any) -> Any:
         """True if the node has been added to the model."""
-        ...
     @inModel.setter
     def inModel(*args: Any, **kwargs: Any) -> Any:
         """True if the node has been added to the model."""
-        ...
     @property
     def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
         """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-        ...
     @inUnderWorld.setter
     def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
         """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-        ...
     def instanceCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """instanceCount(indirect) -> int
 
         Returns the number of instances for this node.
         """
-        ...
     def isChildOf(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isChildOf(node) -> bool
 
         Returns True if the specified node is a parent of this one.
         """
-        ...
     @property
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-        ...
     @isDefaultNode.setter
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-        ...
     def isFlagSet(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the state of the specified node flag."""
-        ...
     @property
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
         """True if the node is from a referenced file, False if the node is part of the main scene."""
-        ...
     @isFromReferencedFile.setter
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
         """True if the node is from a referenced file, False if the node is part of the main scene."""
-        ...
     @property
     def isInstanceable(*args: Any, **kwargs: Any) -> Any:
         """True if instancing is allowed for this node."""
-        ...
     @isInstanceable.setter
     def isInstanceable(*args: Any, **kwargs: Any) -> Any:
         """True if instancing is allowed for this node."""
-        ...
     def isInstanced(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isInstanced(indirect=True) -> bool
 
         Returns True if this node is instanced.
         """
-        ...
     def isInstancedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isInstancedAttribute(attr) -> bool
 
         Returns True if the specified attribute is an instanced attribute of this node.
         """
-        ...
     @property
     def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
         """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-        ...
     @isIntermediateObject.setter
     def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
         """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-        ...
     def isLimited(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the specified limit type is enabled."""
-        ...
     @property
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-        ...
     @isLocked.setter
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-        ...
     def isNewAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the specified attribute was added in the current scene, and not by by one of its referenced files."""
-        ...
     @property
     def isOptimizePlaybackOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not optimize playback is on."""
-        ...
     @isOptimizePlaybackOn.setter
     def isOptimizePlaybackOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not optimize playback is on."""
-        ...
     def isParentOf(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isParentOf(node) -> bool
 
         Returns True if the specified node is a child of this one.
         """
-        ...
     @property
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-        ...
     @isShared.setter
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-        ...
     def isTrackingEdits(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node is referenced or in an assembly that is tracking edits."""
-        ...
     @property
     def isVisible(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the manipulator is visible."""
-        ...
     @isVisible.setter
     def isVisible(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the manipulator is visible."""
-        ...
     kExtensionAttr: int = ...
     kInvalidAttr: int = ...
     kLocalDynamicAttr: int = ...
@@ -12394,140 +9650,106 @@ class MFnToggleManip(MFnManip3D):
     @property
     def length(*args: Any, **kwargs: Any) -> Any:
         """The length of the ToggleManip."""
-        ...
     @length.setter
     def length(*args: Any, **kwargs: Any) -> Any:
         """The length of the ToggleManip."""
-        ...
     def lengthIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """lengthIndex() -> int
 
         Returns the index of the length of the ToggleManip. The data type corresponding to this index is a double.
         """
-        ...
     def limitValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the value of the specified limit."""
-        ...
     def lineSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """lineSize() -> float
 
         Returns the manipulator line size.
         """
-        ...
     @property
     def manipScale(*args: Any, **kwargs: Any) -> Any:
         """The manipulator scale."""
-        ...
     @manipScale.setter
     def manipScale(*args: Any, **kwargs: Any) -> Any:
         """The manipulator scale."""
-        ...
     def name(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's name."""
-        ...
     @property
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-        ...
     @namespace.setter
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-        ...
     def object(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-        ...
     @property
     def objectColor(*args: Any, **kwargs: Any) -> Any:
         """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @objectColor.setter
     def objectColor(*args: Any, **kwargs: Any) -> Any:
         """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @property
     def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
         """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @objectColorRGB.setter
     def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
         """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-        ...
     @property
     def objectColorType(*args: Any, **kwargs: Any) -> Any:
         """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-        ...
     @objectColorType.setter
     def objectColorType(*args: Any, **kwargs: Any) -> Any:
         """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-        ...
     def parent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """parent(index) -> MObject
 
         Returns the specified parent of this node.
         """
-        ...
     def parentCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """parentCount() -> int
 
         Returns the number of parents this node has.
         """
-        ...
     def partialPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """partialPathName() -> string
 
         Returns the minimum path string necessary to uniquely identify the attached object.
         """
-        ...
     @property
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-        ...
     @pluginName.setter
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-        ...
     def plugsAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the alias for a plug's attribute."""
-        ...
     def removeAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Removes a dynamic attribute from the node."""
-        ...
     def removeChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeChild(node) -> self
 
         Removes the child, specified by MObject, reparenting it under the world.
         """
-        ...
     def removeChildAt(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeChildAt(index) -> self
 
         Removes the child, specified by index, reparenting it under the world.
         """
-        ...
     def reorderedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns one of the node's attribute, based on the order in which they are written to file."""
-        ...
     def resetFromRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Resets the transform from its rest position matrix."""
-        ...
     def restPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rest position matrix."""
-        ...
     def rotateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds an MEulerRotation or MQuaternion to the transform's rotation."""
-        ...
     def rotateByComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds to the transform's rotation using the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def rotateOrientation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the MQuaternion which orients the local rotation space."""
-        ...
     def rotatePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotate pivot."""
-        ...
     def rotatePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotate pivot translation."""
-        ...
     def rotateXYZValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """rotateXYZValue(valIndex) -> MEulerRotation
 
@@ -12535,276 +9757,199 @@ class MFnToggleManip(MFnManip3D):
 
         * valIndex (int) - rotation index of the manipulator
         """
-        ...
     def rotation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotation as an MEulerRotation or MQuaternion."""
-        ...
     def rotationComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotation as the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def rotationOrder(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the order of rotations when the transform's rotation is expressed as an MEulerRotation."""
-        ...
     def scale(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transform's XYZ scale components."""
-        ...
     def scaleBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Multiplies the transform's XYZ scale components by a sequence of three floats."""
-        ...
     def scalePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's scale pivot."""
-        ...
     def scalePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's scale pivot translation."""
-        ...
     def setAffectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Specifies that modifications to a node could potentially affect the animation."""
-        ...
     def setAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds or removes an attribute alias."""
-        ...
     def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Used to prevent the node from being written to file."""
-        ...
     def setDrawPlaneHandles(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDrawPlaneHandles(bool) -> None
 
         Sets the global option to display planar handles or not on supported manipulators.
         """
-        ...
     def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Changes the location of external content."""
-        ...
     def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets content info in the specified attribute from the table."""
-        ...
     def setFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the state of the specified node flag."""
-        ...
     def setGlobalSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setGlobalSize(float) -> None
 
         Sets the global manipulator size.
         """
-        ...
     def setHandleSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setHandleSize(float) -> None
 
         Sets the manipulator handle size.
         """
-        ...
     def setLimit(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the value of the specified limit."""
-        ...
     def setLineSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setLineSize(float) -> None
 
         Sets the manipulator line size.
         """
-        ...
     def setName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's name."""
-        ...
     def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setObject(MObject or MDagPath) -> self
 
         Attaches the function set to the specified node or DAG path.
         """
-        ...
     def setRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rest position matrix."""
-        ...
     def setRotateOrientation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the MQuaternion which orients the local rotation space."""
-        ...
     def setRotatePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotate pivot."""
-        ...
     def setRotatePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotate pivot translation."""
-        ...
     def setRotation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation using an MEulerRotation or MQuaternion."""
-        ...
     def setRotationComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation using the individual components of an MEulerRotation or MQuaternion."""
-        ...
     def setRotationOrder(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation order."""
-        ...
     def setScale(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale components."""
-        ...
     def setScalePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale pivot."""
-        ...
     def setScalePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale pivot translation."""
-        ...
     def setShear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's shear."""
-        ...
     def setTransformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's attribute values to represent the given transformation matrix."""
-        ...
     def setTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's translation."""
-        ...
     def setUuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's UUID."""
-        ...
     def shear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transform's shear components."""
-        ...
     def shearBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Multiplies the transform's shear components by a sequence of three floats."""
-        ...
     @property
     def startPoint(*args: Any, **kwargs: Any) -> Any:
         """The start point of the ToggleManip."""
-        ...
     @startPoint.setter
     def startPoint(*args: Any, **kwargs: Any) -> Any:
         """The start point of the ToggleManip."""
-        ...
     def startPointIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """startPointIndex() -> int
 
         Returns the index of the start point of the ToggleManip. The data type corresponding to this index is MFnNumericData.k3Double.
         """
-        ...
     @property
     def toggle(*args: Any, **kwargs: Any) -> Any:
         """The toggle of the ToggleManip."""
-        ...
     @toggle.setter
     def toggle(*args: Any, **kwargs: Any) -> Any:
         """The toggle of the ToggleManip."""
-        ...
     def toggleIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """toggleIndex() -> int
 
         Returns the index of the toggle of the ToggleManip. The data type corresponding to this index is a boolean.
         """
-        ...
     def transformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transformation matrix represented by this transform."""
-        ...
     def transformationMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
         """transformationMatrix() -> MMatrix
 
         Returns the object space transformation matrix for this DAG node.
         """
-        ...
     def translateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds an MVector to the transform's translation."""
-        ...
     def translation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's translation as an MVector."""
-        ...
     def type(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the type of the function set."""
-        ...
     @property
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
-        ...
     @typeId.setter
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
-        ...
     @property
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-        ...
     @typeName.setter
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-        ...
     def uniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """For a DAG node, the unique name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself. For a non-DAG node, the uniqueName is just its name."""
-        ...
     @property
     def useObjectColor(*args: Any, **kwargs: Any) -> Any:
         """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-        ...
     @useObjectColor.setter
     def useObjectColor(*args: Any, **kwargs: Any) -> Any:
         """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-        ...
     def userNode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the MPxNode object for a plugin node."""
-        ...
     def uuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's UUID."""
-        ...
 
 class MHWShaderSwatchGenerator(MSwatchRenderBase):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -12813,7 +9958,6 @@ class MHWShaderSwatchGenerator(MSwatchRenderBase):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def cancelCurrentSwatchRender(self: Self, *args: Any, **kwargs: Any) -> Any:
         """cancelCurrentSwatchRender() -> None
 
@@ -12821,14 +9965,12 @@ class MHWShaderSwatchGenerator(MSwatchRenderBase):
 
         The render plugins should make sure that MSwatchRenderBase.cancelParallelRendering() is implemented acoordingly.
         """
-        ...
     def cancelParallelRendering(self: Self, *args: Any, **kwargs: Any) -> Any:
         """cancelParallelRendering() -> self
 
         Method to cancel the parallel rendering.
         The derived classes should provide the implementation accordingly if required.
         """
-        ...
     def createObj(self: Self, *args: Any, **kwargs: Any) -> Any:
         """createObj(obj, renderObj, res) -> MSwatchRenderBase
 
@@ -12838,7 +9980,6 @@ class MHWShaderSwatchGenerator(MSwatchRenderBase):
         * obj (MObject) - The node object for which the swatch needs to be generated.
         * renderObj (MObject) - The node used to actually compute the swatch. In most situations, this can be the same as <b>obj</b>. This parameter can be used to request the computation of the swatch on another node, and display the swatch on the obj node.* resolution (int) - The expected resolution of the swatch image.
         """
-        ...
     def doIteration(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doIteration() -> bool
 
@@ -12848,133 +9989,102 @@ class MHWShaderSwatchGenerator(MSwatchRenderBase):
 
         Returns False as long as the swatch computation is not completed.
         """
-        ...
     def finishParallelRender(self: Self, *args: Any, **kwargs: Any) -> Any:
         """finishParallelRender() -> self
 
         Method to update the swatch image when the parallel rendering is finished.
         If swatch is rendered parallel, this method must be called after parallel rendering finished.
         """
-        ...
     def getSwatchBackgroundColor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getSwatchBackgroundColor() -> MColor
 
         Returns the default background color for the hardware rendered swatch.
         """
-        ...
     def image(self: Self, *args: Any, **kwargs: Any) -> Any:
         """image() -> MImage
 
         This method returns the render swatch as an image.
         """
-        ...
     def initialize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """initialize() -> string
 
         This method sets a swatch name, and registers a new swatch generator creation function for the swatch name.
         The string returned from this method can be used for node classification purpose.
         """
-        ...
     def node(self: Self, *args: Any, **kwargs: Any) -> Any:
         """node() -> MObject
 
         This method returns the node that is used to compute the swatch.
         """
-        ...
     def renderParallel(self: Self, *args: Any, **kwargs: Any) -> Any:
         """renderParallel() -> bool
 
         Method indicates if the swatch is rendered parallel.
         Default is False.
         """
-        ...
     @property
     def renderQuality(*args: Any, **kwargs: Any) -> Any:
         """The quality in which the swatch will be rendered (the larger the number is set, the better quality is applied)."""
-        ...
     @renderQuality.setter
     def renderQuality(*args: Any, **kwargs: Any) -> Any:
         """The quality in which the swatch will be rendered (the larger the number is set, the better quality is applied)."""
-        ...
     def resolution(self: Self, *args: Any, **kwargs: Any) -> Any:
         """resolution() -> int
 
         This method returns the expected resolution of the swatch.
         """
-        ...
     def swatchNode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """swatchNode() -> MObject
 
         This method returns the node for which the swatch is required to be generated.
         """
-        ...
 
 class MManipData(object):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -12983,31 +10093,26 @@ class MManipData(object):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def asBool(self: Self, *args: Any, **kwargs: Any) -> Any:
         """asBool() -> bool
 
         Returns the manipulator data as a bool
         """
-        ...
     def asDouble(self: Self, *args: Any, **kwargs: Any) -> Any:
         """asDouble() -> float
 
         Returns the manipulator data as a double
         """
-        ...
     def asFloat(self: Self, *args: Any, **kwargs: Any) -> Any:
         """asFloat() -> float
 
         Returns the manipulator data as a float
         """
-        ...
     def asLong(self: Self, *args: Any, **kwargs: Any) -> Any:
         """asLong() -> int
 
         Returns the manipulator data as a long
         """
-        ...
     def asMObject(self: Self, *args: Any, **kwargs: Any) -> Any:
         """asMObject() -> int
 
@@ -13015,19 +10120,16 @@ class MManipData(object):
         The MObjects returned from this method are created and used
         by MFnData or classes derived from MFnData.
         """
-        ...
     def asShort(self: Self, *args: Any, **kwargs: Any) -> Any:
         """asShort() -> int
 
         Returns the manipulator data as a short
         """
-        ...
     def asUnsigned(self: Self, *args: Any, **kwargs: Any) -> Any:
         """asUnsigned() -> int
 
         Returns the manipulator data as a unsigned
         """
-        ...
     def isSimple(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isSimple() -> bool
 
@@ -13036,74 +10138,53 @@ class MManipData(object):
         Complex data is used to represent MObjects created by MFnData,
         or classes derived from MFnData.
         """
-        ...
 
 class MMaterial(object):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -13112,7 +10193,6 @@ class MMaterial(object):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def applyTexture(self: Self, *args: Any, **kwargs: Any) -> Any:
         """applyTexture(view, data) -> self
 
@@ -13122,25 +10202,21 @@ class MMaterial(object):
         * view (M3dView) - the view in which the textured drawing is to take place
         * data (MDrawData) - the draw data from the draw request
         """
-        ...
     def defaultMaterial(self: Self, *args: Any, **kwargs: Any) -> Any:
         """defaultMaterial() -> MMaterial
 
         Get the default material. There will always be a default material in the scene and therefore the result of this function should always succeed.  The default material will correspond to the initialShadingGroup node that is in the scene.
         """
-        ...
     def evaluateDiffuse(self: Self, *args: Any, **kwargs: Any) -> Any:
         """evaluateDiffuse() -> self
 
         Perform necessary evaluation to be able to get diffuse back.
         """
-        ...
     def evaluateEmission(self: Self, *args: Any, **kwargs: Any) -> Any:
         """evaluateEmission() -> self
 
         Perform necessary evaluation to be able to get emission back.
         """
-        ...
     def evaluateMaterial(self: Self, *args: Any, **kwargs: Any) -> Any:
         """evaluateMaterial(view, path) -> self
 
@@ -13149,19 +10225,16 @@ class MMaterial(object):
         * view (M3dView) - the view
         * path (MDagPath) - path to the object
         """
-        ...
     def evaluateShininess(self: Self, *args: Any, **kwargs: Any) -> Any:
         """evaluateShininess() -> self
 
         Perform necessary evaluation to be able to get shininess back.
         """
-        ...
     def evaluateSpecular(self: Self, *args: Any, **kwargs: Any) -> Any:
         """evaluateSpecular() -> self
 
         Perform necessary evaluation to be able to get specular back.
         """
-        ...
     def evaluateTexture(self: Self, *args: Any, **kwargs: Any) -> Any:
         """evaluateTexture(data) -> self
 
@@ -13172,43 +10245,36 @@ class MMaterial(object):
 
         * data (MDrawData) - draw request data to carry the texture information
         """
-        ...
     def getDiffuse(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getDiffuse() -> MColor
 
         Get the GL diffuse color.
         """
-        ...
     def getEmission(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getEmission() -> MColor
 
         Get the GL emission color.
         """
-        ...
     def getHasTransparency(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getHasTransparency() -> bool
 
         Returns True if material or texture has transparency, False otherwise.
         """
-        ...
     def getHwShaderNode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getHwShaderNode() -> MPxHwShaderNode
 
         Get the hardware shader node.
         """
-        ...
     def getShininess(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getShininess() -> float
 
         Get the GL shininess.
         """
-        ...
     def getSpecular(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getSpecular() -> MColor
 
         Get the GL specular color.
         """
-        ...
     def getTextureTransformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getTextureTransformation(data, texXform) -> self
         getTextureTransformation(data) -> [float, float, float, float, float, float]
@@ -13228,7 +10294,6 @@ class MMaterial(object):
            translateV (float) - storage for v translation value
            rotateFrame (float) - storage for rotatation value of the frame coordinates
         """
-        ...
     kAmbientColor: int = ...
     kBumpMap: int = ...
     kColor: int = ...
@@ -13250,7 +10315,6 @@ class MMaterial(object):
 
         Returns True if the material is textured, False otherwise.
         """
-        ...
     def setMaterial(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setMaterial(path, hasTransparency) -> self
 
@@ -13259,13 +10323,11 @@ class MMaterial(object):
         * path (MDagPath) - path to the object
         * hasTransparency (bool) - whether the material has transparency
         """
-        ...
     def shadingEngine(self: Self, *args: Any, **kwargs: Any) -> Any:
         """shadingEngine() -> MObject
 
         Get the shading engined associated with this material.
         """
-        ...
     def textureImage(self: Self, *args: Any, **kwargs: Any) -> Any:
         """textureImage(image, color, chan, dagPath, xRes=-1, yRes=-1) -> self
 
@@ -13306,80 +10368,57 @@ class MMaterial(object):
           kReflectivity        Blinn and Phong(E) only
           kReflectedColor      Blinn and Phong(E) only
         """
-        ...
 
 class MMaterialArray(object):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -13388,7 +10427,6 @@ class MMaterialArray(object):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def append(self: Self, *args: Any, **kwargs: Any) -> Any:
         """append(element) -> self
 
@@ -13396,13 +10434,11 @@ class MMaterialArray(object):
 
         * element (MMaterial) - the value for the new last element.
         """
-        ...
     def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """clear() -> self
 
         Clear the contents of the array. After this operation the length will be 0.  This does not change the amount of memory allocated to the array, only the number of valid elements in it.
         """
-        ...
     def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """copy(source) -> self
 
@@ -13410,7 +10446,6 @@ class MMaterialArray(object):
 
         * source (MMaterialArray) - array to copy from.
         """
-        ...
     def insert(self: Self, *args: Any, **kwargs: Any) -> Any:
         """insert(element, index) -> self
 
@@ -13419,7 +10454,6 @@ class MMaterialArray(object):
         * element (MMaterial) - the new value to insert into the array.
         * index (int) - the index of the element to set.
         """
-        ...
     def remove(self: Self, *args: Any, **kwargs: Any) -> Any:
         """remove(index) -> self
 
@@ -13427,7 +10461,6 @@ class MMaterialArray(object):
 
         * index (int) - the index of the element to remove.
         """
-        ...
     def set(self: Self, *args: Any, **kwargs: Any) -> Any:
         """set(element, index) -> self
 
@@ -13436,7 +10469,6 @@ class MMaterialArray(object):
         * element (MMaterial) - the new value for the specified element.
         * index (int) - the index of the element to be set.
         """
-        ...
     def setLength(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setLength(length) -> self
 
@@ -13444,82 +10476,59 @@ class MMaterialArray(object):
 
         * length (int) - the new size of the array.
         """
-        ...
     @property
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
         """The size by which the array will be expanded whenever expansion is necessary."""
-        ...
     @sizeIncrement.setter
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
         """The size by which the array will be expanded whenever expansion is necessary."""
-        ...
 
 class MPaintMessage(MMessage):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -13528,7 +10537,6 @@ class MPaintMessage(MMessage):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def addVertexColorCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addVertexColorCallback(function, clientData=None) -> id
 
@@ -13548,7 +10556,6 @@ class MPaintMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-        ...
     def currentCallbackId(self: Self, *args: Any, **kwargs: Any) -> Any:
         """currentCallbackId() -> id
 
@@ -13556,7 +10563,6 @@ class MPaintMessage(MMessage):
         outside of a callback, an invalid MCallbackId and failed status will
         be returned.
         """
-        ...
     kDefaultAction: int = ...
     kDoAction: int = ...
     kDoNotDoAction: int = ...
@@ -13568,7 +10574,6 @@ class MPaintMessage(MMessage):
          * node (MObject) - Node to query for callbacks.
          * ids (MCallbackIdArray) - Array to store the list of callback IDs.
         """
-        ...
     def removeCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeCallback(id) -> None
 
@@ -13578,7 +10583,6 @@ class MPaintMessage(MMessage):
 
          * id (MCallbackId) - identifier of callback to be removed
         """
-        ...
     def removeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeCallbacks(ids) -> None
 
@@ -13588,74 +10592,53 @@ class MPaintMessage(MMessage):
 
          * idList (MCallbackIdArray) - list of callbacks to be removed.
         """
-        ...
 
 class MPanelCanvas(object):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -13664,7 +10647,6 @@ class MPanelCanvas(object):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def addPrimitive(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addPrimitive( int, int )
 
@@ -13672,7 +10654,6 @@ class MPanelCanvas(object):
         primitives to be drawn at the given layer.
         Return: None
         """
-        ...
     def createFloatVertexBuffer(self: Self, *args: Any, **kwargs: Any) -> Any:
         """createFloatVertexBuffer( tVals, yVals, colors ) -> int
 
@@ -13681,7 +10662,6 @@ class MPanelCanvas(object):
         are passed as arrays of float values
         Return: int
         """
-        ...
     def createPrimitive(self: Self, *args: Any, **kwargs: Any) -> Any:
         """createPrimitive( primType, bufferId, startIndex, numVertices, props ) -> int
 
@@ -13691,7 +10671,6 @@ class MPanelCanvas(object):
         created primitive is returned.
         Return: int
         """
-        ...
     def createTimeVertexBuffer(self: Self, *args: Any, **kwargs: Any) -> Any:
         """createTimeVertexBuffer( tVals, yVals, colors ) -> int
 
@@ -13700,14 +10679,12 @@ class MPanelCanvas(object):
         are passed as arrays of OpenMaya.MTime values
         Return: int
         """
-        ...
     def destroyPrimitive(self: Self, *args: Any, **kwargs: Any) -> Any:
         """destroyPrimitive( primitiveId )
 
         Destroy the primitive referred to by the given id.
         Return: None
         """
-        ...
     def destroyVertexBuffer(self: Self, *args: Any, **kwargs: Any) -> Any:
         """destroyVertexBuffer( bufferId )
 
@@ -13715,7 +10692,6 @@ class MPanelCanvas(object):
         buffer is being used by a primitive, an error will be generated.
         Return: None
         """
-        ...
     def isAutoRefresh(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isAutoRefresh() -> bool
 
@@ -13724,14 +10700,12 @@ class MPanelCanvas(object):
 
         Return: bool
         """
-        ...
     def isLayerVisible(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isLayerVisible( int) -> bool
 
         Return whether the given layer is visible.
         Return: bool
         """
-        ...
     def isValid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isValid() -> bool
 
@@ -13739,7 +10713,6 @@ class MPanelCanvas(object):
         Editor object, False otherwise.
         Return: bool
         """
-        ...
     kGraphEditorAxisLabels: int = ...
     kGraphEditorBackground: int = ...
     kGraphEditorCurveNames: int = ...
@@ -13757,7 +10730,6 @@ class MPanelCanvas(object):
         Force the associated Graph Editor to refresh
         Return: None
         """
-        ...
     def registerDrawUICallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """registerDrawUICallback( layer, cb, clientData ) -> callbackId
 
@@ -13767,7 +10739,6 @@ class MPanelCanvas(object):
         and whatever client data was passed to this method.
         Return: int
         """
-        ...
     def removePrimitive(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removePrimitive( int, int )
 
@@ -13776,7 +10747,6 @@ class MPanelCanvas(object):
         be destroyed.
         Return: None
         """
-        ...
     def setAutoRefresh(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setAutoRefresh()
 
@@ -13784,7 +10754,6 @@ class MPanelCanvas(object):
         Initially, automatic refresh is enabled.
         Return: None
         """
-        ...
     def setLayerVisible(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setLayerVisible( int, bool )
 
@@ -13793,7 +10762,6 @@ class MPanelCanvas(object):
         their visibility set.
         Return: None
         """
-        ...
     def supportsUIDrawing(self: Self, *args: Any, **kwargs: Any) -> Any:
         """supportsUIDrawing() -> bool
 
@@ -13806,81 +10774,59 @@ class MPanelCanvas(object):
         Graph Editor when it has not yet been opened, but exists by default).
         Return: bool
         """
-        ...
     def unregisterDrawUICallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """unregisterDrawUICallback( callbackId )
 
          Unregister the callback specified by the given id.
         Return: None
         """
-        ...
 
 class MPanelCanvasInfo(object):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -13889,7 +10835,6 @@ class MPanelCanvasInfo(object):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def getViewportBounds(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getViewportBounds()
 
@@ -13897,7 +10842,6 @@ class MPanelCanvasInfo(object):
         viewing region: [left, right, bottom, top].
         Return: float[]
         """
-        ...
     def getViewportSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getViewportSize()
 
@@ -13905,14 +10849,12 @@ class MPanelCanvasInfo(object):
         viewing region: [width, height].
         Return: int[]
         """
-        ...
     def name(self: Self, *args: Any, **kwargs: Any) -> Any:
         """name() -> MString
 
         Return the name of the currently attached panel.
         Return: MString
         """
-        ...
     def setViewportBounds(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setViewportBounds( bounds )
 
@@ -13921,7 +10863,6 @@ class MPanelCanvasInfo(object):
         bottom, top].
         Return: None
         """
-        ...
     def supportsUIDrawing(self: Self, *args: Any, **kwargs: Any) -> Any:
         """supportsUIDrawing() -> bool
 
@@ -13934,74 +10875,53 @@ class MPanelCanvasInfo(object):
         Graph Editor when it has not yet been opened, but exists by default).
         Return: bool
         """
-        ...
 
 class MPxContext(object):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -14010,7 +10930,6 @@ class MPxContext(object):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def abortAction(self: Self, *args: Any, **kwargs: Any) -> Any:
         """abortAction() -> None
 
@@ -14019,7 +10938,6 @@ class MPxContext(object):
         Users can override this method if they wish to perform
         certain operations when the abort key is pressed.
         """
-        ...
     def addManipulator(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addManipulator(manipulator) -> None
 
@@ -14027,7 +10945,6 @@ class MPxContext(object):
 
         * manipulator (MObject) - the manipulator to be added to the context.
         """
-        ...
     def argTypeNumericalInput(self: Self, *args: Any, **kwargs: Any) -> Any:
         """argTypeNumericalInput(index) -> MSyntax.MArgType
 
@@ -14042,7 +10959,6 @@ class MPxContext(object):
 
         * index (int) - the index of the numerical input whose argument type is requested.
         """
-        ...
     def beginMarquee(self: Self, *args: Any, **kwargs: Any) -> Any:
         """beginMarquee(event) -> self
 
@@ -14055,7 +10971,6 @@ class MPxContext(object):
 
         * event (MEvent) - current event information.
         """
-        ...
     def completeAction(self: Self, *args: Any, **kwargs: Any) -> Any:
         """completeAction() -> None
 
@@ -14065,7 +10980,6 @@ class MPxContext(object):
         For example, a tool may have several steps where the user must
         select objects and then press the completion key before proceeding.
         """
-        ...
     def deleteAction(self: Self, *args: Any, **kwargs: Any) -> Any:
         """deleteAction() -> None
 
@@ -14075,14 +10989,12 @@ class MPxContext(object):
         Users can override this method if they wish to do anything else
         when this event occurs.
         """
-        ...
     def deleteManipulators(self: Self, *args: Any, **kwargs: Any) -> Any:
         """deleteManipulators() -> None
 
         This method deletes all the manipulators that belong
         to the context.
         """
-        ...
     def doDrag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doDrag(event, drawMgr, context) -> None
 
@@ -14107,7 +11019,6 @@ class MPxContext(object):
         * drawMgr (MHWRender::MUIDrawManager) - The UI draw manager, it can be used to draw some simple geometry including text.
         * context (MHWRender::MFrameContextFrame) - level context information.
         """
-        ...
     def doDragLegacy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doDragLegacy(event) -> None
 
@@ -14124,7 +11035,6 @@ class MPxContext(object):
 
         * event (MEvent) - The button drag event information.
         """
-        ...
     def doEnterRegion(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doEnterRegion(event) -> None
 
@@ -14141,7 +11051,6 @@ class MPxContext(object):
 
         * event (MEvent) - The button press event information.
         """
-        ...
     def doHold(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doHold(event, drawMgr, context) -> None
 
@@ -14167,7 +11076,6 @@ class MPxContext(object):
         * drawMgr (MHWRender::MUIDrawManager) - The UI draw manager, it can be used to draw some simple geometry including text.
         * context (MHWRender::MFrameContextFrame) - level context information.
         """
-        ...
     def doHoldLegacy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doHoldLegacy(event) -> None
 
@@ -14185,7 +11093,6 @@ class MPxContext(object):
 
         * event (MEvent) - The button hold event information.
         """
-        ...
     def doPress(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doPress(event, drawMgr, context) -> None
 
@@ -14210,7 +11117,6 @@ class MPxContext(object):
         * drawMgr (MHWRender::MUIDrawManager) - The UI draw manager, it can be used to draw some simple geometry including text.
         * context (MHWRender::MFrameContextFrame) - level context information.
         """
-        ...
     def doPressLegacy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doPressLegacy(event) -> None
 
@@ -14227,7 +11133,6 @@ class MPxContext(object):
 
         * event (MEvent) - The button press event information.
         """
-        ...
     def doPtrMoved(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doPtrMoved(event, drawMgr, context ) -> None
 
@@ -14252,7 +11157,6 @@ class MPxContext(object):
         * drawMgr (MHWRender::MUIDrawManager) - The UI draw manager, it can be used to draw some simple geometry including text.
         * context (MHWRender::MFrameContextFrame) - level context information.
         """
-        ...
     def doPtrMovedLegacy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doPtrMovedLegacy(event) -> None
 
@@ -14269,7 +11173,6 @@ class MPxContext(object):
 
         * event (MEvent) - The button press event information.
         """
-        ...
     def doRelease(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doRelease(event, drawMgr, context) -> None
 
@@ -14294,7 +11197,6 @@ class MPxContext(object):
         * drawMgr (MHWRender::MUIDrawManager) - The UI draw manager, it can be used to draw some simple geometry including text.
         * context (MHWRender::MFrameContextFrame) - level context information.
         """
-        ...
     def doReleaseLegacy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doReleaseLegacy(event) -> None
 
@@ -14311,7 +11213,6 @@ class MPxContext(object):
 
         * event (MEvent) - The button release event information.
         """
-        ...
     def dragMarquee(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dragMarquee(event) -> self
 
@@ -14320,7 +11221,6 @@ class MPxContext(object):
 
         * event (MEvent) - current event information.
         """
-        ...
     def drawFeedback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """drawFeedback(event, drawMgr, context ) -> None
 
@@ -14338,7 +11238,6 @@ class MPxContext(object):
         * drawMgr (MHWRender::MUIDrawManager) - The UI draw manager, it can be used to draw some simple geometry including text.
         * context (MHWRender::MFrameContextFrame) - level context information.
         """
-        ...
     def feedbackNumericalInput(self: Self, *args: Any, **kwargs: Any) -> Any:
         """feedbackNumericalInput() -> bool
 
@@ -14348,7 +11247,6 @@ class MPxContext(object):
         The return value should indicate whether or not the numerical feedback
         has been provided.  The default return value is false.
         """
-        ...
     def helpStateHasChanged(self: Self, *args: Any, **kwargs: Any) -> Any:
         """helpStateHasChanged(event) -> None
 
@@ -14362,7 +11260,6 @@ class MPxContext(object):
 
         * event (MEvent) - The event information.
         """
-        ...
     def image(self: Self, *args: Any, **kwargs: Any) -> Any:
         """image(index) -> string
 
@@ -14375,7 +11272,6 @@ class MPxContext(object):
         * index (ImageIndex) - the index of the image being retrieved; three image
         representations are permitted: kImage1, kImage2, kImage3.
         """
-        ...
     kImage1: int = ...
     kImage2: int = ...
     kImage3: int = ...
@@ -14388,7 +11284,6 @@ class MPxContext(object):
 
         Returns a new instance of the MPxToolCommand.
         """
-        ...
     def processNumericalInput(self: Self, *args: Any, **kwargs: Any) -> Any:
         """processNumericalInput(values, flags, isAbsolute) -> bool
 
@@ -14409,7 +11304,6 @@ class MPxContext(object):
         determines whether or not a given entry should be ignored.
         * isAbsolute (bool) - whether or not the input should be interpreted as absolute.
         """
-        ...
     def releaseMarquee(self: Self, *args: Any, **kwargs: Any) -> Any:
         """releaseMarquee(event) -> (top, left, bottom, right)
 
@@ -14420,7 +11314,6 @@ class MPxContext(object):
         Returns a tuple consisting of the top, left, bottom, and right corners of the marquee area.
         * event (MEvent) - current event information.
         """
-        ...
     def setCursor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setCursor(newCursor) -> self
 
@@ -14428,7 +11321,6 @@ class MPxContext(object):
 
         * newCursor (MCursor) - The new cursor.
         """
-        ...
     def setHelpString(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setHelpString(str) -> self
 
@@ -14437,7 +11329,6 @@ class MPxContext(object):
 
         * str (string) - The new help string.
         """
-        ...
     def setImage(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setImage(image, index) -> self
 
@@ -14450,7 +11341,6 @@ class MPxContext(object):
         * index (ImageIndex) - the index of the image being set; three image
         representations are permitted: kImage1, kImage2, kImage3.
         """
-        ...
     def setTitleString(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setTitleString(str) -> self
 
@@ -14460,7 +11350,6 @@ class MPxContext(object):
 
         * str (string) - The new title string.
         """
-        ...
     def stringClassName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """stringClassName() -> string
 
@@ -14480,7 +11369,6 @@ class MPxContext(object):
         the string to 'defaultTool'.  The method returns a string
         that uniquely identifies the context.
         """
-        ...
     def toolOffCleanup(self: Self, *args: Any, **kwargs: Any) -> Any:
         """toolOffCleanup() -> None
 
@@ -14489,7 +11377,6 @@ class MPxContext(object):
         Users can override this method and use it to reset any user
         defined data to a specific state.
         """
-        ...
     def toolOnSetup(self: Self, *args: Any, **kwargs: Any) -> Any:
         """toolOnSetup(event) -> None
 
@@ -14501,74 +11388,53 @@ class MPxContext(object):
 
         * event (MEvent) - The button press event information.
         """
-        ...
 
 class MPxContextCommand(object):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -14577,7 +11443,6 @@ class MPxContextCommand(object):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def appendSyntax(self: Self, *args: Any, **kwargs: Any) -> Any:
         """appendSyntax() -> None
 
@@ -14588,7 +11453,6 @@ class MPxContextCommand(object):
         flags as they are reserved for edit and query:
         '-e', '-edit', '-q', '-query'.
         """
-        ...
     def doEditFlags(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doEditFlags() -> None
 
@@ -14601,7 +11465,6 @@ class MPxContextCommand(object):
         If the command is called with both the edit flag and
         the query flag, then the query flag will be ignored.
         """
-        ...
     def doQueryFlags(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doQueryFlags() -> None
 
@@ -14614,7 +11477,6 @@ class MPxContextCommand(object):
         If the command is called with both the edit flag and
         the query flag, then the query flag will be ignored.
         """
-        ...
     def makeObj(self: Self, *args: Any, **kwargs: Any) -> Any:
         """makeObj() -> MPxContext
 
@@ -14626,87 +11488,63 @@ class MPxContextCommand(object):
 
         where userContextClass is derived from MPxContext.
         """
-        ...
     def parser(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the context command's MArgParser object, if it has one."""
-        ...
     def setResult(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setResult() -> None
 
         Set the value of the result to be returned by the command.  The value can be
         either a boolean, integer, floating point value, or string.
         """
-        ...
     def syntax(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the context command's MSyntax object, if it has one."""
-        ...
 
 class MPxDragAndDropBehavior(object):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -14715,7 +11553,6 @@ class MPxDragAndDropBehavior(object):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def connectAttrToAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectAttrToAttr(sourcePlug, destinationPlug, force) -> None
 
@@ -14727,7 +11564,6 @@ class MPxDragAndDropBehavior(object):
         * destinationPlug (MPlug) - Destination plug in the connection.
         * force (bool) - Tells whether or not to break any existing connections to the destination attribute.
         """
-        ...
     def connectAttrToNode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectAttrToNode(sourcePlug, destinationNode, force) -> None
 
@@ -14739,7 +11575,6 @@ class MPxDragAndDropBehavior(object):
         * destinationNode (MObject) - Destination node for the connection.
         * force (bool) - Tells whether or not to break any existing connections to the destination node.
         """
-        ...
     def connectNodeToAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectNodeToAttr(sourceNode, destinationPlug, force) -> None
 
@@ -14751,7 +11586,6 @@ class MPxDragAndDropBehavior(object):
         * destinationPlug (MPlug) - Destination plug for the connection.
         * force (bool) - Tells whether or not to break any existing connections to the destination attribute.
         """
-        ...
     def connectNodeToNode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectNodeToNode(sourceNode, destinationNode, force) -> None
 
@@ -14763,7 +11597,6 @@ class MPxDragAndDropBehavior(object):
         * destinationNode (MObject) - Destination node for the connection.
         * force (bool) - Tells whether or not to break any existing connections to the destination node.
         """
-        ...
     def shouldBeUsedFor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """shouldBeUsedFor(sourceNode, destinationNode, sourcePlug, destinationPlug) -> bool
 
@@ -14776,74 +11609,53 @@ class MPxDragAndDropBehavior(object):
         * sourcePlug (MPlug) - The source plug of the drag and drop or the plug being dragged (this may be null).
         * destinationPlug (MPlug) - The destination plug of the drag and drop or the plug being dropped upon (this may be null).
         """
-        ...
 
 class MPxHardwareShader(MPxNode):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -14852,7 +11664,6 @@ class MPxHardwareShader(MPxNode):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addAttribute(attr) -> None
 
@@ -14865,7 +11676,6 @@ class MPxHardwareShader(MPxNode):
 
         * attr (MObject) - new attribute to add.
         """
-        ...
     def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addExternalContentForFileAttr(table, attr) -> bool
 
@@ -14878,7 +11688,6 @@ class MPxHardwareShader(MPxNode):
 
         Returns True if an item was sucessfully added to the table.  False if the attribute does not describe a non-empty location, or an item with the same key was already present in the table.
         """
-        ...
     def attributeAffects(self: Self, *args: Any, **kwargs: Any) -> Any:
         """attributeAffects(whenChanges, isAffected) -> None
 
@@ -14891,7 +11700,6 @@ class MPxHardwareShader(MPxNode):
         * whenChanges (MObject) - input attribute - MObject that points to an input attribute that has already been added.
         * isAffected (MObject) - affected output attribute - MObject that points to an output attribute that has already been added.
         """
-        ...
     def compute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """compute(plug, dataBlock) -> self
 
@@ -14910,7 +11718,6 @@ class MPxHardwareShader(MPxNode):
         * plug (MPlug) - plug representing the attribute that needs to be recomputed.
         * block (MDataBlock) - data block containing storage for the node's attributes.
         """
-        ...
     def configCache(self: Self, *args: Any, **kwargs: Any) -> Any:
         """configCache(evalNode, schema) -> None
 
@@ -14921,7 +11728,6 @@ class MPxHardwareShader(MPxNode):
         * evalNode (MEvaluationNode)  - This node's evaluation node, contains animated plug information
         * schema (MCacheSchema)       - Specification about what attributes to cache
         """
-        ...
     def connectionBroken(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectionBroken( plug, otherPlug, asSrc) -> self
 
@@ -14931,7 +11737,6 @@ class MPxHardwareShader(MPxNode):
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (bool) - is this plug a source of the connection.
         """
-        ...
     def connectionMade(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectionMade(plug, otherPlug, asSrc) -> self
 
@@ -14941,7 +11746,6 @@ class MPxHardwareShader(MPxNode):
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (bool) - is this plug a source of the connection.
         """
-        ...
     def copyInternalData(self: Self, *args: Any, **kwargs: Any) -> Any:
         """copyInternalData(node) -> self
 
@@ -14951,7 +11755,6 @@ class MPxHardwareShader(MPxNode):
 
         * node (MPxNode) - the node that is being duplicated.
         """
-        ...
     def dependsOn(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dependsOn( plug, otherPlug) -> bool/None
 
@@ -14966,13 +11769,11 @@ class MPxHardwareShader(MPxNode):
         * plug (MPlug) - attribute on this node.
         * otherPlug (MPlug) - attribute on other node.
         """
-        ...
     def doNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doNotWrite() -> bool
 
         use this method to query the "do not write" state of this proxy node. True is returned if this node will not be saved when the maya model is written out.
         """
-        ...
     def existWithoutInConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """existWithoutInConnections() -> bool
 
@@ -14985,7 +11786,6 @@ class MPxHardwareShader(MPxNode):
 
         Returns true if this node can exist without input connections, false otherwise
         """
-        ...
     def existWithoutOutConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """existWithoutOutConnections() -> bool
 
@@ -14998,7 +11798,6 @@ class MPxHardwareShader(MPxNode):
 
         Returns true if this node can exist without output connections, false otherwise
         """
-        ...
     def findResource(self: Self, *args: Any, **kwargs: Any) -> Any:
         """findResource(name, shaderPath) -> string
 
@@ -15010,7 +11809,6 @@ class MPxHardwareShader(MPxNode):
 
         Return the full path of the resource (e.g. 'C:/shaders/textures/normals.dds').
         """
-        ...
     def forceCache(self: Self, *args: Any, **kwargs: Any) -> Any:
         """forceCache(ctx=MDGContext::current()) -> MDataBlock
 
@@ -15019,7 +11817,6 @@ class MPxHardwareShader(MPxNode):
 
         * ctx (MDGContext) - The context in which the datablock will be retrieved.
         """
-        ...
     def getAvailableImages(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getAvailableImages(context, uvSetName) -> list of string/None
 
@@ -15031,7 +11828,6 @@ class MPxHardwareShader(MPxNode):
         Returns the names of the images this shader defines which are valid for the uvSetName specified.
         Returns None if method is not implemented : Use the default behaviour.
         """
-        ...
     def getCacheSetup(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getCacheSetup(evalNode, disablingInfo, setupInfo, objectArray) -> None
 
@@ -15052,7 +11848,6 @@ class MPxHardwareShader(MPxNode):
         * cacheSetupInfo (MNodeCacheSetupInfo)    - Preferences and requirements this node has for Cached Playback
         * monitoredAttributes (MObjectArray)      - Attributes impacting the behavior of this method that will be monitored for change
         """
-        ...
     def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getExternalContent(table) -> self
 
@@ -15066,7 +11861,6 @@ class MPxHardwareShader(MPxNode):
 
         * table [OUT] (MExternalContentInfoTable) - Content information table that this method must populate.
         """
-        ...
     def getFilesToArchive(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getFilesToArchive(shortName=False, unresolvedName=False, markCouldBeImageSequence=False) -> list of strings
 
@@ -15082,7 +11876,6 @@ class MPxHardwareShader(MPxNode):
         * unresolvedName (bool) - If True, add paths before any resolution, rather than absolute paths.
         * markCouldBeImageSequence (bool) - If True, append an asterisk after any file path that could be an image sequence (note: only used by maya.exe -archive).
         """
-        ...
     def getHardwareShader(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getHardwareShader(object) -> TODO
 
@@ -15092,7 +11885,6 @@ class MPxHardwareShader(MPxNode):
 
         Return a MPxHardwareShader. If the method failed for any reason then None will be returned.
         """
-        ...
     def getInternalValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getInternalValue(plug, dataHandle) -> bool
 
@@ -15107,7 +11899,6 @@ class MPxHardwareShader(MPxNode):
         * plug (MPlug) - the attribute that is being queried.
         * dataHandle [OUT] (MDataHandle) - the dataHandle to store the attribute value.
         """
-        ...
     def getInternalValueInContext(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getInternalValueInContext(plug, dataHandle, ctx) -> bool [OBSOLETE]
 
@@ -15117,13 +11908,11 @@ class MPxHardwareShader(MPxNode):
         * dataHandle [OUT] (MDataHandle) - the dataHandle to store the attribute value.
         * ctx (MDGContext) - the context the method is being evaluated in.
         """
-        ...
     def hasInvalidationRangeTransformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasInvalidationRangeTransformation() -> bool
 
         Checks if this MPxNode derived node overrides the MPxNode::transformInvalidationRange method
         """
-        ...
     def inheritAttributesFrom(self: Self, *args: Any, **kwargs: Any) -> Any:
         """inheritAttributesFrom(parentClassName) -> None
 
@@ -15137,7 +11926,6 @@ class MPxHardwareShader(MPxNode):
 
         * parentClassName (string) - class of node to inherit attributes from.
         """
-        ...
     def internalArrayCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """internalArrayCount(plug) -> int
         internalArrayCount(plug, ctx) -> int  [OBSOLETE]
@@ -15153,7 +11941,6 @@ class MPxHardwareShader(MPxNode):
         * plug (MPlug) - the array plug.
         * ctx (MDGContext) - the context, default to MDGContext.current().
         """
-        ...
     def isAbstractClass(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isAbstractClass() -> bool
 
@@ -15161,7 +11948,6 @@ class MPxHardwareShader(MPxNode):
 
         It is not necessary to override this method.
         """
-        ...
     def isPassiveOutput(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isPassiveOutput(plug) -> bool
 
@@ -15169,7 +11955,6 @@ class MPxHardwareShader(MPxNode):
 
         * plug (MPlug) - plug representing output in question.
         """
-        ...
     kAssembly: int = ...
     kBlendShape: int = ...
     kCameraSetNode: int = ...
@@ -15215,7 +12000,6 @@ class MPxHardwareShader(MPxNode):
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (bool) - is this plug a source of the connection.
         """
-        ...
     def legalDisconnection(self: Self, *args: Any, **kwargs: Any) -> Any:
         """legalDisconnection(plug, otherPlug, arsSrc) -> bool/None
 
@@ -15227,7 +12011,6 @@ class MPxHardwareShader(MPxNode):
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (boool) - is this plug a source of the connection.
         """
-        ...
     def name(self: Self, *args: Any, **kwargs: Any) -> Any:
         """name() -> string
 
@@ -15237,7 +12020,6 @@ class MPxHardwareShader(MPxNode):
 
         Returns the name of the node
         """
-        ...
     outColor: MObject = ...
     outColorB: MObject = ...
     outColorG: MObject = ...
@@ -15252,7 +12034,6 @@ class MPxHardwareShader(MPxNode):
         * plug (MPlug) - the plug.
         * plugArray (MPlugArray) - the corresponding plugs.
         """
-        ...
     def passThroughToOne(self: Self, *args: Any, **kwargs: Any) -> Any:
         """passThroughToOne(plug) -> plug
 
@@ -15264,7 +12045,6 @@ class MPxHardwareShader(MPxNode):
 
         * plug (MPlug) - the plug.
         """
-        ...
     def postConstructor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """postConstructor() -> self
 
@@ -15272,7 +12052,6 @@ class MPxHardwareShader(MPxNode):
         The association between the these two objects is not made until after the MPxNode constructor is called. This implies that no MPxNode member function can be called from the MPxNode constructor.
         The postConstructor will get called immediately after the constructor when it is safe to call any MPxNode member function.
         """
-        ...
     def postEvaluation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """postEvaluation(context, evalNode, evalType) -> None
 
@@ -15300,7 +12079,6 @@ class MPxHardwareShader(MPxNode):
           * kLeaveDirty          : Evaluation was performed without updating this node. Internal
                                    state should be updated to reflect that the node is dirty.
         """
-        ...
     def preEvaluation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """preEvaluation(context, evalNode) -> None
 
@@ -15322,7 +12100,6 @@ class MPxHardwareShader(MPxNode):
                                              are about to be evaluated for the context.
                                              Should be only used to query information.
         """
-        ...
     def profile(self: Self, *args: Any, **kwargs: Any) -> Any:
         """profile() -> MRenderProfile
 
@@ -15332,7 +12109,6 @@ class MPxHardwareShader(MPxNode):
 
         Return a reference to the render profile for this Shader. Your shader class should create this once (usually for the whole class) and return the same object each time this method is called.
         """
-        ...
     def renderImage(self: Self, *args: Any, **kwargs: Any) -> Any:
         """renderImage(context, imageName, region, parameters) -> [int, int]/None
         renderImage(context, uiDrawManager, imageName, region, parameters) -> [int, int]/None
@@ -15356,7 +12132,6 @@ class MPxHardwareShader(MPxNode):
 
         Returns None if method is not implemented : No rendering will occur.
         """
-        ...
     def renderSwatchImage(self: Self, *args: Any, **kwargs: Any) -> Any:
         """renderSwatchImage(image) -> self
 
@@ -15377,7 +12152,6 @@ class MPxHardwareShader(MPxNode):
 
         Returns None if method is not implemented : No rendering will occur.
         """
-        ...
     def setDependentsDirty(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDependentsDirty(plug, plugArray) -> self
 
@@ -15398,7 +12172,6 @@ class MPxHardwareShader(MPxNode):
         * plug (MPlug) - plug which is being set dirty by Maya.
         * plugArray the programmer should add any plugs which they want to set dirty to this list.
         """
-        ...
     def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDoNotWrite(bool) -> self
 
@@ -15408,7 +12181,6 @@ class MPxHardwareShader(MPxNode):
         1. Plug-in "requires" information will be written out with the model when saved.  But a subsequent reload and resave of the file will cause these to go away.
         2. If this node is a DAG and has a parent or children, the "do not write" flag of the parent or children will not be set. It is the developer's responsibility to ensure that the resulting scene file is capable of being read in without errors due to unwritten nodes.
         """
-        ...
     def setExistWithoutInConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setExistWithoutInConnections(bool) -> bool
 
@@ -15422,7 +12194,6 @@ class MPxHardwareShader(MPxNode):
 
         * flag (bool) true if this node can exist without input connections, false otherwise
         """
-        ...
     def setExistWithoutOutConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setExistWithoutOutConnections(bool) -> bool
 
@@ -15436,7 +12207,6 @@ class MPxHardwareShader(MPxNode):
 
         * flag (bool) true if this node can exist without output connections, false otherwise
         """
-        ...
     def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setExternalContent(table) -> self
 
@@ -15450,7 +12220,6 @@ class MPxHardwareShader(MPxNode):
 
         * table Key->location table with new content locations.
         """
-        ...
     def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setExternalContentForFileAttr(attr, table) -> bool
 
@@ -15463,7 +12232,6 @@ class MPxHardwareShader(MPxNode):
 
         Returns True if the plug was successfully written to. False if no entry in the table was named after the attribute or if no plug was found.
         """
-        ...
     def setInternalValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setInternalValue(plug, dataHandle) -> bool
 
@@ -15481,7 +12249,6 @@ class MPxHardwareShader(MPxNode):
         * plug (MPlug) - the attribute that is being set.
         * dataHandle (MDataHandle) - the dataHandle containing the value to set.
         """
-        ...
     def setInternalValueInContext(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setInternalValueInContext(plug, dataHandle, ctx) -> bool  [OBSOLETE]
 
@@ -15491,7 +12258,6 @@ class MPxHardwareShader(MPxNode):
         * dataHandle (MDataHandle) - the dataHandle containing the value to set.
         * ctx (MDGContext) - the context the method is being evaluated in.
         """
-        ...
     def setMPSafe(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setMPSafe(bool) -> self
 
@@ -15501,7 +12267,6 @@ class MPxHardwareShader(MPxNode):
 
         NOTE: This should be called from the postConstructor() method for shading node plug-ins only. If a shading node is non-safe, then it will only be useful during single processor rendering.
         """
-        ...
     def setUniformParameters(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setUniformParameters(parameters, remapCurrentValues=True, dagModifier=None) -> self
 
@@ -15509,7 +12274,6 @@ class MPxHardwareShader(MPxNode):
         * remapCurrentValues (bool) - if True (the default), Maya will attempt to initialise the value of new parameters based on any equivalently named parameters that currently exist on the node. Otherwise, the parameters will be setup using default values. Unless you wish to forcibly reset parameter values, the default value of True should be used.
         * dagModifier (MDagModifier) - an optional DG modifier to use when managing the attributes used to represent the geometry parameters on this shader.
         """
-        ...
     def setVaryingParameters(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setVaryingParameters(parameters, remapCurrentValues=True, dagModifier=None) -> self
 
@@ -15523,7 +12287,6 @@ class MPxHardwareShader(MPxNode):
         * remapCurrentValues (bool) - if True (the default), Maya will attempt to initialise the value of new parameters based on any equivalently named parameters that currently exist on the node. Otherwise, the parameters will be setup using default values. Unless you wish to forcibly reset parameter values, the default value of True should be used.
         * dagModifier (MDagModifier) - an optional DG modifier to use when managing the attributes used to represent the geometry parameters on this shader.
         """
-        ...
     def shouldSave(self: Self, *args: Any, **kwargs: Any) -> Any:
         """shouldSave(plug) -> bool/None
 
@@ -15534,13 +12297,11 @@ class MPxHardwareShader(MPxNode):
 
         * plug (MPlug) - plug representing the attribute to be saved.
         """
-        ...
     def thisMObject(self: Self, *args: Any, **kwargs: Any) -> Any:
         """thisMObject() -> MObject
 
         Returns the MObject associated with this user defined node.  This makes it possible to use MFnDependencyNode or to construct plugs to this node's attributes.
         """
-        ...
     def transformInvalidationRange(self: Self, *args: Any, **kwargs: Any) -> Any:
         """transformInvalidationRange(plug, timeRange) -> timeRange
 
@@ -15556,7 +12317,6 @@ class MPxHardwareShader(MPxNode):
         WARNING: Do *not* call MPxNode::transformInvalidationRange from your override method
         NOTE: If a plugin node have invalidation-range-transformation *conditionally* Only transform the invalidation range when attribute 'enableIRT' is set The plugin should call MPxNode::transformInvalidationRange to signal it does not perform any IRT.
         """
-        ...
     def transparencyOptions(self: Self, *args: Any, **kwargs: Any) -> Any:
         """transparencyOptions() -> int
 
@@ -15567,7 +12327,6 @@ class MPxHardwareShader(MPxNode):
           - kNoTransparencyFrontBackCull : When kisTransparent is set and this flag is set, do not perform transparency drawing using the internal 2-pass front-face + back-face culling algorithm.
           - kNoTransparencyPolygonSort : When kisTransparent is set and this flag is set, do not perform transparency drawing using the internal 2-pass drawing of back-to-front sorted triangles.
         """
-        ...
     def type(self: Self, *args: Any, **kwargs: Any) -> Any:
         """type() -> int
 
@@ -15601,86 +12360,63 @@ class MPxHardwareShader(MPxNode):
           kGeometryFilter				Custom deformer derived from MPxGeometryFilter
         	 kBlendShape					Custom deformer derived from MPxBlendShape
         """
-        ...
     def typeId(self: Self, *args: Any, **kwargs: Any) -> Any:
         """typeId() -> MTypeId
 
         Returns the TYPEID of this node.
         """
-        ...
     def typeName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """typeName() -> string
 
         Returns the type name of this node.  The type name identifies the node type to the ASCII file format
         """
-        ...
 
 class MPxHwShaderNode(MPxNode):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -15689,7 +12425,6 @@ class MPxHwShaderNode(MPxNode):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addAttribute(attr) -> None
 
@@ -15702,7 +12437,6 @@ class MPxHwShaderNode(MPxNode):
 
         * attr (MObject) - new attribute to add.
         """
-        ...
     def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addExternalContentForFileAttr(table, attr) -> bool
 
@@ -15715,7 +12449,6 @@ class MPxHwShaderNode(MPxNode):
 
         Returns True if an item was sucessfully added to the table.  False if the attribute does not describe a non-empty location, or an item with the same key was already present in the table.
         """
-        ...
     def attributeAffects(self: Self, *args: Any, **kwargs: Any) -> Any:
         """attributeAffects(whenChanges, isAffected) -> None
 
@@ -15728,7 +12461,6 @@ class MPxHwShaderNode(MPxNode):
         * whenChanges (MObject) - input attribute - MObject that points to an input attribute that has already been added.
         * isAffected (MObject) - affected output attribute - MObject that points to an output attribute that has already been added.
         """
-        ...
     def bind(self: Self, *args: Any, **kwargs: Any) -> Any:
         """bind(request, view) -> self
 
@@ -15741,7 +12473,6 @@ class MPxHwShaderNode(MPxNode):
         * request (MDrawRequest) - the draw request.
         * view (M3dView) - the view in which to draw.
         """
-        ...
     def colorsPerVertex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """colorsPerVertex() -> int
 
@@ -15749,7 +12480,6 @@ class MPxHwShaderNode(MPxNode):
 
         Returns the number of color values desired
         """
-        ...
     def compute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """compute(plug, dataBlock) -> self
 
@@ -15768,7 +12498,6 @@ class MPxHwShaderNode(MPxNode):
         * plug (MPlug) - plug representing the attribute that needs to be recomputed.
         * block (MDataBlock) - data block containing storage for the node's attributes.
         """
-        ...
     def configCache(self: Self, *args: Any, **kwargs: Any) -> Any:
         """configCache(evalNode, schema) -> None
 
@@ -15779,7 +12508,6 @@ class MPxHwShaderNode(MPxNode):
         * evalNode (MEvaluationNode)  - This node's evaluation node, contains animated plug information
         * schema (MCacheSchema)       - Specification about what attributes to cache
         """
-        ...
     def connectionBroken(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectionBroken( plug, otherPlug, asSrc) -> self
 
@@ -15789,7 +12517,6 @@ class MPxHwShaderNode(MPxNode):
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (bool) - is this plug a source of the connection.
         """
-        ...
     def connectionMade(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectionMade(plug, otherPlug, asSrc) -> self
 
@@ -15799,7 +12526,6 @@ class MPxHwShaderNode(MPxNode):
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (bool) - is this plug a source of the connection.
         """
-        ...
     def copyInternalData(self: Self, *args: Any, **kwargs: Any) -> Any:
         """copyInternalData(node) -> self
 
@@ -15809,7 +12535,6 @@ class MPxHwShaderNode(MPxNode):
 
         * node (MPxNode) - the node that is being duplicated.
         """
-        ...
     def currentPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """currentPath() -> MDagPath
 
@@ -15838,7 +12563,6 @@ class MPxHwShaderNode(MPxNode):
         Returns an MDagPath. Note that this path can be invalid
         Use MDagPath.isValid() to confirm the validity of the path.
         """
-        ...
     def currentShadingEngine(self: Self, *args: Any, **kwargs: Any) -> Any:
         """currentShadingEngine() -> MObject
 
@@ -15856,7 +12580,6 @@ class MPxHwShaderNode(MPxNode):
           geometry(), glGeometry()
           unbind(), glUnbind()
         """
-        ...
     def dependsOn(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dependsOn( plug, otherPlug) -> bool/None
 
@@ -15871,7 +12594,6 @@ class MPxHwShaderNode(MPxNode):
         * plug (MPlug) - attribute on this node.
         * otherPlug (MPlug) - attribute on other node.
         """
-        ...
     def dirtyMask(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dirtyMask() -> int
 
@@ -15894,13 +12616,11 @@ class MPxHwShaderNode(MPxNode):
           kDirtyTexCoordArrays
           kDirtyAll
         """
-        ...
     def doNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doNotWrite() -> bool
 
         use this method to query the "do not write" state of this proxy node. True is returned if this node will not be saved when the maya model is written out.
         """
-        ...
     def existWithoutInConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """existWithoutInConnections() -> bool
 
@@ -15913,7 +12633,6 @@ class MPxHwShaderNode(MPxNode):
 
         Returns true if this node can exist without input connections, false otherwise
         """
-        ...
     def existWithoutOutConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """existWithoutOutConnections() -> bool
 
@@ -15926,7 +12645,6 @@ class MPxHwShaderNode(MPxNode):
 
         Returns true if this node can exist without output connections, false otherwise
         """
-        ...
     def forceCache(self: Self, *args: Any, **kwargs: Any) -> Any:
         """forceCache(ctx=MDGContext::current()) -> MDataBlock
 
@@ -15935,7 +12653,6 @@ class MPxHwShaderNode(MPxNode):
 
         * ctx (MDGContext) - The context in which the datablock will be retrieved.
         """
-        ...
     def geometry(self: Self, *args: Any, **kwargs: Any) -> Any:
         """geometry(request, view, prim, writable, indexCount, indexArray, vertexCount, vertexIDs, vertexArray, normalCount, normalArrays, colorCount, colorArrays, texCoordCount, texCoordArrays) -> self
 
@@ -15975,7 +12692,6 @@ class MPxHwShaderNode(MPxNode):
         * texCoordCount (int) - the number of texture coordinate arrays. Each array contains one set of UV texture coordinates.
         * texCoordArrays (array of buffer - float values) - the arrays of texture coordinate data. The first set of texture coordinate data is pointed to by texCoordArrays[0].  Each array contains vertexCount coordinate values, each of which is 2 floating point values long.  Each individual array is suitable for passing to glTexCoordPointer().
         """
-        ...
     def getAvailableImages(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getAvailableImages(uvSetName) -> list of strings/None
 
@@ -15986,7 +12702,6 @@ class MPxHwShaderNode(MPxNode):
         Returns the names of the images this shader defines which are valid for the uvSetName specified.
         Returns None if method is not implemented : Use the default behaviour.
         """
-        ...
     def getCacheSetup(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getCacheSetup(evalNode, disablingInfo, setupInfo, objectArray) -> None
 
@@ -16007,7 +12722,6 @@ class MPxHwShaderNode(MPxNode):
         * cacheSetupInfo (MNodeCacheSetupInfo)    - Preferences and requirements this node has for Cached Playback
         * monitoredAttributes (MObjectArray)      - Attributes impacting the behavior of this method that will be monitored for change
         """
-        ...
     def getColorSetNames(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getColorSetNames(names) -> int
 
@@ -16017,7 +12731,6 @@ class MPxHwShaderNode(MPxNode):
 
         Returns the number of elements in the names array.
         """
-        ...
     def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getExternalContent(table) -> self
 
@@ -16031,7 +12744,6 @@ class MPxHwShaderNode(MPxNode):
 
         * table [OUT] (MExternalContentInfoTable) - Content information table that this method must populate.
         """
-        ...
     def getFilesToArchive(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getFilesToArchive(shortName=False, unresolvedName=False, markCouldBeImageSequence=False) -> list of strings
 
@@ -16047,7 +12759,6 @@ class MPxHwShaderNode(MPxNode):
         * unresolvedName (bool) - If True, add paths before any resolution, rather than absolute paths.
         * markCouldBeImageSequence (bool) - If True, append an asterisk after any file path that could be an image sequence (note: only used by maya.exe -archive).
         """
-        ...
     def getHwShaderNode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getHwShaderNode(object) -> MPxHwShaderNode
 
@@ -16055,7 +12766,6 @@ class MPxHwShaderNode(MPxNode):
 
         * object (MObject) - The object to examine.
         """
-        ...
     def getInternalValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getInternalValue(plug, dataHandle) -> bool
 
@@ -16070,7 +12780,6 @@ class MPxHwShaderNode(MPxNode):
         * plug (MPlug) - the attribute that is being queried.
         * dataHandle [OUT] (MDataHandle) - the dataHandle to store the attribute value.
         """
-        ...
     def getInternalValueInContext(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getInternalValueInContext(plug, dataHandle, ctx) -> bool [OBSOLETE]
 
@@ -16080,7 +12789,6 @@ class MPxHwShaderNode(MPxNode):
         * dataHandle [OUT] (MDataHandle) - the dataHandle to store the attribute value.
         * ctx (MDGContext) - the context the method is being evaluated in.
         """
-        ...
     def getTexCoordSetNames(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getTexCoordSetNames(names) -> int
 
@@ -16090,7 +12798,6 @@ class MPxHwShaderNode(MPxNode):
 
         Returns the number of elements in the names array.
         """
-        ...
     def glBind(self: Self, *args: Any, **kwargs: Any) -> Any:
         """glBind(shapePath) -> self
 
@@ -16102,7 +12809,6 @@ class MPxHwShaderNode(MPxNode):
 
         * shapePath (MDagPath) - Path to the surface being drawn.
         """
-        ...
     def glGeometry(self: Self, *args: Any, **kwargs: Any) -> Any:
         """glGeometry(shapePath, prim, writable, indexCount, indexArray, vertexCount, vertexIDs, vertexArray, normalCount, normalArrays, colorCount, colorArrays, texCoordCount, texCoordArrays) -> self
 
@@ -16123,7 +12829,6 @@ class MPxHwShaderNode(MPxNode):
         * shapePath (MDagPath) - Path to the surface being drawn.
         See geometry() description for detail on the other parameters.
         """
-        ...
     def glUnbind(self: Self, *args: Any, **kwargs: Any) -> Any:
         """glUnbind(shapePath) -> self
 
@@ -16137,13 +12842,11 @@ class MPxHwShaderNode(MPxNode):
 
         * shapePath (MDagPath) - Path to the surface being drawn.
         """
-        ...
     def hasInvalidationRangeTransformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasInvalidationRangeTransformation() -> bool
 
         Checks if this MPxNode derived node overrides the MPxNode::transformInvalidationRange method
         """
-        ...
     def hasTransparency(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasTransparency() -> bool
 
@@ -16155,7 +12858,6 @@ class MPxHwShaderNode(MPxNode):
 
         Returns True if the object will be transparent or False if it will not.
         """
-        ...
     def inheritAttributesFrom(self: Self, *args: Any, **kwargs: Any) -> Any:
         """inheritAttributesFrom(parentClassName) -> None
 
@@ -16169,7 +12871,6 @@ class MPxHwShaderNode(MPxNode):
 
         * parentClassName (string) - class of node to inherit attributes from.
         """
-        ...
     def internalArrayCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """internalArrayCount(plug) -> int
         internalArrayCount(plug, ctx) -> int  [OBSOLETE]
@@ -16185,7 +12886,6 @@ class MPxHwShaderNode(MPxNode):
         * plug (MPlug) - the array plug.
         * ctx (MDGContext) - the context, default to MDGContext.current().
         """
-        ...
     def invertTexCoords(self: Self, *args: Any, **kwargs: Any) -> Any:
         """invertTexCoords() -> bool
 
@@ -16193,7 +12893,6 @@ class MPxHwShaderNode(MPxNode):
 
         By default, this method will return False to ensure compatibility with existing shader code.
         """
-        ...
     def isAbstractClass(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isAbstractClass() -> bool
 
@@ -16201,7 +12900,6 @@ class MPxHwShaderNode(MPxNode):
 
         It is not necessary to override this method.
         """
-        ...
     def isPassiveOutput(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isPassiveOutput(plug) -> bool
 
@@ -16209,7 +12907,6 @@ class MPxHwShaderNode(MPxNode):
 
         * plug (MPlug) - plug representing output in question.
         """
-        ...
     kAssembly: int = ...
     kBlendShape: int = ...
     kCameraSetNode: int = ...
@@ -16267,7 +12964,6 @@ class MPxHwShaderNode(MPxNode):
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (bool) - is this plug a source of the connection.
         """
-        ...
     def legalDisconnection(self: Self, *args: Any, **kwargs: Any) -> Any:
         """legalDisconnection(plug, otherPlug, arsSrc) -> bool/None
 
@@ -16279,7 +12975,6 @@ class MPxHwShaderNode(MPxNode):
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (boool) - is this plug a source of the connection.
         """
-        ...
     def name(self: Self, *args: Any, **kwargs: Any) -> Any:
         """name() -> string
 
@@ -16289,7 +12984,6 @@ class MPxHwShaderNode(MPxNode):
 
         Returns the name of the node
         """
-        ...
     def normalsPerVertex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """normalsPerVertex() -> int
 
@@ -16307,7 +13001,6 @@ class MPxHwShaderNode(MPxNode):
 
         Returns the number of normal values desired. (0 = none, 1 = surface normal only, 2 = surface normal + tangent, 3 = surface normal + tangent + binormal)
         """
-        ...
     outColor: MObject = ...
     outColorB: MObject = ...
     outColorG: MObject = ...
@@ -16334,7 +13027,6 @@ class MPxHwShaderNode(MPxNode):
         * plug (MPlug) - the plug.
         * plugArray (MPlugArray) - the corresponding plugs.
         """
-        ...
     def passThroughToOne(self: Self, *args: Any, **kwargs: Any) -> Any:
         """passThroughToOne(plug) -> plug
 
@@ -16346,7 +13038,6 @@ class MPxHwShaderNode(MPxNode):
 
         * plug (MPlug) - the plug.
         """
-        ...
     def postConstructor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """postConstructor() -> self
 
@@ -16354,7 +13045,6 @@ class MPxHwShaderNode(MPxNode):
         The association between the these two objects is not made until after the MPxNode constructor is called. This implies that no MPxNode member function can be called from the MPxNode constructor.
         The postConstructor will get called immediately after the constructor when it is safe to call any MPxNode member function.
         """
-        ...
     def postEvaluation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """postEvaluation(context, evalNode, evalType) -> None
 
@@ -16382,7 +13072,6 @@ class MPxHwShaderNode(MPxNode):
           * kLeaveDirty          : Evaluation was performed without updating this node. Internal
                                    state should be updated to reflect that the node is dirty.
         """
-        ...
     def preEvaluation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """preEvaluation(context, evalNode) -> None
 
@@ -16404,7 +13093,6 @@ class MPxHwShaderNode(MPxNode):
                                              are about to be evaluated for the context.
                                              Should be only used to query information.
         """
-        ...
     def provideVertexIDs(self: Self, *args: Any, **kwargs: Any) -> Any:
         """provideVertexIDs() -> bool
 
@@ -16412,7 +13100,6 @@ class MPxHwShaderNode(MPxNode):
 
         Returns True if vertex IDs should be provided to the geometry method.
         """
-        ...
     def renderImage(self: Self, *args: Any, **kwargs: Any) -> Any:
         """renderImage(imageName, region, parameters) -> [int, int]/None
         renderImage(uiDrawManager, imageName, region, parameters) -> [int, int]/None
@@ -16435,7 +13122,6 @@ class MPxHwShaderNode(MPxNode):
 
         Returns None if method is not implemented : No rendering will occur.
         """
-        ...
     def renderSwatchImage(self: Self, *args: Any, **kwargs: Any) -> Any:
         """renderSwatchImage(image) -> self/None
 
@@ -16456,7 +13142,6 @@ class MPxHwShaderNode(MPxNode):
 
         Returns None if method is not implemented : No rendering will occur.
         """
-        ...
     def setDependentsDirty(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDependentsDirty(plug, plugArray) -> self
 
@@ -16477,7 +13162,6 @@ class MPxHwShaderNode(MPxNode):
         * plug (MPlug) - plug which is being set dirty by Maya.
         * plugArray the programmer should add any plugs which they want to set dirty to this list.
         """
-        ...
     def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDoNotWrite(bool) -> self
 
@@ -16487,7 +13171,6 @@ class MPxHwShaderNode(MPxNode):
         1. Plug-in "requires" information will be written out with the model when saved.  But a subsequent reload and resave of the file will cause these to go away.
         2. If this node is a DAG and has a parent or children, the "do not write" flag of the parent or children will not be set. It is the developer's responsibility to ensure that the resulting scene file is capable of being read in without errors due to unwritten nodes.
         """
-        ...
     def setExistWithoutInConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setExistWithoutInConnections(bool) -> bool
 
@@ -16501,7 +13184,6 @@ class MPxHwShaderNode(MPxNode):
 
         * flag (bool) true if this node can exist without input connections, false otherwise
         """
-        ...
     def setExistWithoutOutConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setExistWithoutOutConnections(bool) -> bool
 
@@ -16515,7 +13197,6 @@ class MPxHwShaderNode(MPxNode):
 
         * flag (bool) true if this node can exist without output connections, false otherwise
         """
-        ...
     def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setExternalContent(table) -> self
 
@@ -16529,7 +13210,6 @@ class MPxHwShaderNode(MPxNode):
 
         * table Key->location table with new content locations.
         """
-        ...
     def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setExternalContentForFileAttr(attr, table) -> bool
 
@@ -16542,7 +13222,6 @@ class MPxHwShaderNode(MPxNode):
 
         Returns True if the plug was successfully written to. False if no entry in the table was named after the attribute or if no plug was found.
         """
-        ...
     def setInternalValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setInternalValue(plug, dataHandle) -> bool
 
@@ -16560,7 +13239,6 @@ class MPxHwShaderNode(MPxNode):
         * plug (MPlug) - the attribute that is being set.
         * dataHandle (MDataHandle) - the dataHandle containing the value to set.
         """
-        ...
     def setInternalValueInContext(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setInternalValueInContext(plug, dataHandle, ctx) -> bool  [OBSOLETE]
 
@@ -16570,7 +13248,6 @@ class MPxHwShaderNode(MPxNode):
         * dataHandle (MDataHandle) - the dataHandle containing the value to set.
         * ctx (MDGContext) - the context the method is being evaluated in.
         """
-        ...
     def setMPSafe(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setMPSafe(bool) -> self
 
@@ -16580,7 +13257,6 @@ class MPxHwShaderNode(MPxNode):
 
         NOTE: This should be called from the postConstructor() method for shading node plug-ins only. If a shading node is non-safe, then it will only be useful during single processor rendering.
         """
-        ...
     def shouldSave(self: Self, *args: Any, **kwargs: Any) -> Any:
         """shouldSave(plug) -> bool/None
 
@@ -16591,7 +13267,6 @@ class MPxHwShaderNode(MPxNode):
 
         * plug (MPlug) - plug representing the attribute to be saved.
         """
-        ...
     def supportsBatching(self: Self, *args: Any, **kwargs: Any) -> Any:
         """supportsBatching() -> bool
 
@@ -16603,7 +13278,6 @@ class MPxHwShaderNode(MPxNode):
 
         By default, this method will return False to ensure compatibility with existing shader code.
         """
-        ...
     def texCoordsPerVertex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """texCoordsPerVertex() -> int
 
@@ -16613,13 +13287,11 @@ class MPxHwShaderNode(MPxNode):
 
         Returns the number of texture coordinate values desired
         """
-        ...
     def thisMObject(self: Self, *args: Any, **kwargs: Any) -> Any:
         """thisMObject() -> MObject
 
         Returns the MObject associated with this user defined node.  This makes it possible to use MFnDependencyNode or to construct plugs to this node's attributes.
         """
-        ...
     def transformInvalidationRange(self: Self, *args: Any, **kwargs: Any) -> Any:
         """transformInvalidationRange(plug, timeRange) -> timeRange
 
@@ -16635,7 +13307,6 @@ class MPxHwShaderNode(MPxNode):
         WARNING: Do *not* call MPxNode::transformInvalidationRange from your override method
         NOTE: If a plugin node have invalidation-range-transformation *conditionally* Only transform the invalidation range when attribute 'enableIRT' is set The plugin should call MPxNode::transformInvalidationRange to signal it does not perform any IRT.
         """
-        ...
     def transparencyOptions(self: Self, *args: Any, **kwargs: Any) -> Any:
         """transparencyOptions() -> int
 
@@ -16652,7 +13323,6 @@ class MPxHwShaderNode(MPxNode):
 
         Retuns an integer containing the appropriate options set via masks.
         """
-        ...
     def type(self: Self, *args: Any, **kwargs: Any) -> Any:
         """type() -> int
 
@@ -16686,19 +13356,16 @@ class MPxHwShaderNode(MPxNode):
           kGeometryFilter				Custom deformer derived from MPxGeometryFilter
         	 kBlendShape					Custom deformer derived from MPxBlendShape
         """
-        ...
     def typeId(self: Self, *args: Any, **kwargs: Any) -> Any:
         """typeId() -> MTypeId
 
         Returns the TYPEID of this node.
         """
-        ...
     def typeName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """typeName() -> string
 
         Returns the type name of this node.  The type name identifies the node type to the ASCII file format
         """
-        ...
     def unbind(self: Self, *args: Any, **kwargs: Any) -> Any:
         """unbind(request, view) -> self
 
@@ -16713,74 +13380,53 @@ class MPxHwShaderNode(MPxNode):
         * request (MDrawRequest) - the draw request.
         * view (M3dView) - the view in which to draw.
         """
-        ...
 
 class MPxLocatorNode(MPxNode):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -16789,7 +13435,6 @@ class MPxLocatorNode(MPxNode):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addAttribute(attr) -> None
 
@@ -16802,7 +13447,6 @@ class MPxLocatorNode(MPxNode):
 
         * attr (MObject) - new attribute to add.
         """
-        ...
     def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addExternalContentForFileAttr(table, attr) -> bool
 
@@ -16815,7 +13459,6 @@ class MPxLocatorNode(MPxNode):
 
         Returns True if an item was sucessfully added to the table.  False if the attribute does not describe a non-empty location, or an item with the same key was already present in the table.
         """
-        ...
     def attributeAffects(self: Self, *args: Any, **kwargs: Any) -> Any:
         """attributeAffects(whenChanges, isAffected) -> None
 
@@ -16828,14 +13471,12 @@ class MPxLocatorNode(MPxNode):
         * whenChanges (MObject) - input attribute - MObject that points to an input attribute that has already been added.
         * isAffected (MObject) - affected output attribute - MObject that points to an output attribute that has already been added.
         """
-        ...
     def boundingBox(self: Self, *args: Any, **kwargs: Any) -> Any:
         """boundingBox() -> MBoundingBox
 
         This method should be overridden to return a bounding box for the locator.
         If this method is overridden, then MPxLocatorNode.isBounded should also be overridden to return True.
         """
-        ...
     boundingBoxCenterX: MObject = ...
     boundingBoxCenterY: MObject = ...
     boundingBoxCenterZ: MObject = ...
@@ -16852,7 +13493,6 @@ class MPxLocatorNode(MPxNode):
         * rayPoint (MPoint) - The base point defining the ray in space
         * rayDir (MVector) - The ray direction in space
         """
-        ...
     def color(self: Self, *args: Any, **kwargs: Any) -> Any:
         """color(status) -> int
 
@@ -16862,7 +13502,6 @@ class MPxLocatorNode(MPxNode):
 
         * displayStatus (int) - display status. See M3dView.displayStatus() for a list of valid status.
         """
-        ...
     def colorRGB(self: Self, *args: Any, **kwargs: Any) -> Any:
         """colorRGB(status) -> MColor
 
@@ -16870,7 +13509,6 @@ class MPxLocatorNode(MPxNode):
 
         * displayStatus (int) - display status. See M3dView.displayStatus() for a list of valid status.
         """
-        ...
     def compute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """compute(plug, dataBlock) -> self
 
@@ -16889,7 +13527,6 @@ class MPxLocatorNode(MPxNode):
         * plug (MPlug) - plug representing the attribute that needs to be recomputed.
         * block (MDataBlock) - data block containing storage for the node's attributes.
         """
-        ...
     def configCache(self: Self, *args: Any, **kwargs: Any) -> Any:
         """configCache(evalNode, schema) -> None
 
@@ -16900,7 +13537,6 @@ class MPxLocatorNode(MPxNode):
         * evalNode (MEvaluationNode)  - This node's evaluation node, contains animated plug information
         * schema (MCacheSchema)       - Specification about what attributes to cache
         """
-        ...
     def connectionBroken(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectionBroken( plug, otherPlug, asSrc) -> self
 
@@ -16910,7 +13546,6 @@ class MPxLocatorNode(MPxNode):
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (bool) - is this plug a source of the connection.
         """
-        ...
     def connectionMade(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectionMade(plug, otherPlug, asSrc) -> self
 
@@ -16920,7 +13555,6 @@ class MPxLocatorNode(MPxNode):
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (bool) - is this plug a source of the connection.
         """
-        ...
     def copyInternalData(self: Self, *args: Any, **kwargs: Any) -> Any:
         """copyInternalData(node) -> self
 
@@ -16930,7 +13564,6 @@ class MPxLocatorNode(MPxNode):
 
         * node (MPxNode) - the node that is being duplicated.
         """
-        ...
     def dependsOn(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dependsOn( plug, otherPlug) -> bool/None
 
@@ -16945,13 +13578,11 @@ class MPxLocatorNode(MPxNode):
         * plug (MPlug) - attribute on this node.
         * otherPlug (MPlug) - attribute on other node.
         """
-        ...
     def doNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doNotWrite() -> bool
 
         use this method to query the "do not write" state of this proxy node. True is returned if this node will not be saved when the maya model is written out.
         """
-        ...
     def draw(self: Self, *args: Any, **kwargs: Any) -> Any:
         """draw(view, path, style, status) -> self
 
@@ -16973,7 +13604,6 @@ class MPxLocatorNode(MPxNode):
         * style (int) - style to draw object in. See M3dView.displayStyle() for a list of valid styles.
         * status (int) - selection status of object. See M3dView.displayStatus() for a list of valid status.
         """
-        ...
     def drawLast(self: Self, *args: Any, **kwargs: Any) -> Any:
         """drawLast() -> bool
 
@@ -16981,7 +13611,6 @@ class MPxLocatorNode(MPxNode):
 
         The default return value is True.
         """
-        ...
     def excludeAsLocator(self: Self, *args: Any, **kwargs: Any) -> Any:
         """excludeAsLocator() -> bool
 
@@ -16989,7 +13618,6 @@ class MPxLocatorNode(MPxNode):
 
         The default return value is True.
         """
-        ...
     def existWithoutInConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """existWithoutInConnections() -> bool
 
@@ -17002,7 +13630,6 @@ class MPxLocatorNode(MPxNode):
 
         Returns true if this node can exist without input connections, false otherwise
         """
-        ...
     def existWithoutOutConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """existWithoutOutConnections() -> bool
 
@@ -17015,7 +13642,6 @@ class MPxLocatorNode(MPxNode):
 
         Returns true if this node can exist without output connections, false otherwise
         """
-        ...
     def forceCache(self: Self, *args: Any, **kwargs: Any) -> Any:
         """forceCache(ctx=MDGContext::current()) -> MDataBlock
 
@@ -17024,7 +13650,6 @@ class MPxLocatorNode(MPxNode):
 
         * ctx (MDGContext) - The context in which the datablock will be retrieved.
         """
-        ...
     def getCacheSetup(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getCacheSetup(evalNode, disablingInfo, setupInfo, objectArray) -> None
 
@@ -17045,7 +13670,6 @@ class MPxLocatorNode(MPxNode):
         * cacheSetupInfo (MNodeCacheSetupInfo)    - Preferences and requirements this node has for Cached Playback
         * monitoredAttributes (MObjectArray)      - Attributes impacting the behavior of this method that will be monitored for change
         """
-        ...
     def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getExternalContent(table) -> self
 
@@ -17059,7 +13683,6 @@ class MPxLocatorNode(MPxNode):
 
         * table [OUT] (MExternalContentInfoTable) - Content information table that this method must populate.
         """
-        ...
     def getFilesToArchive(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getFilesToArchive(shortName=False, unresolvedName=False, markCouldBeImageSequence=False) -> list of strings
 
@@ -17075,7 +13698,6 @@ class MPxLocatorNode(MPxNode):
         * unresolvedName (bool) - If True, add paths before any resolution, rather than absolute paths.
         * markCouldBeImageSequence (bool) - If True, append an asterisk after any file path that could be an image sequence (note: only used by maya.exe -archive).
         """
-        ...
     def getInternalValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getInternalValue(plug, dataHandle) -> bool
 
@@ -17090,7 +13712,6 @@ class MPxLocatorNode(MPxNode):
         * plug (MPlug) - the attribute that is being queried.
         * dataHandle [OUT] (MDataHandle) - the dataHandle to store the attribute value.
         """
-        ...
     def getInternalValueInContext(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getInternalValueInContext(plug, dataHandle, ctx) -> bool [OBSOLETE]
 
@@ -17100,19 +13721,16 @@ class MPxLocatorNode(MPxNode):
         * dataHandle [OUT] (MDataHandle) - the dataHandle to store the attribute value.
         * ctx (MDGContext) - the context the method is being evaluated in.
         """
-        ...
     def getShapeSelectionMask(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getShapeSelectionMask() -> MSelectionMask
 
         This routine can be overridden to provide information aboutthe selection mask of the locator. By default the selection maskfor locators is returned.
         """
-        ...
     def hasInvalidationRangeTransformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasInvalidationRangeTransformation() -> bool
 
         Checks if this MPxNode derived node overrides the MPxNode::transformInvalidationRange method
         """
-        ...
     def inheritAttributesFrom(self: Self, *args: Any, **kwargs: Any) -> Any:
         """inheritAttributesFrom(parentClassName) -> None
 
@@ -17126,7 +13744,6 @@ class MPxLocatorNode(MPxNode):
 
         * parentClassName (string) - class of node to inherit attributes from.
         """
-        ...
     instObjGroups: MObject = ...
     intermediateObject: MObject = ...
     def internalArrayCount(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -17144,7 +13761,6 @@ class MPxLocatorNode(MPxNode):
         * plug (MPlug) - the array plug.
         * ctx (MDGContext) - the context, default to MDGContext.current().
         """
-        ...
     inverseMatrix: MObject = ...
     def isAbstractClass(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isAbstractClass() -> bool
@@ -17153,13 +13769,11 @@ class MPxLocatorNode(MPxNode):
 
         It is not necessary to override this method.
         """
-        ...
     def isBounded(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isBounded() -> bool
 
         This method should be overridden to return True if the user supplies a bounding box routine.  Supplying a bounding box routine makes refresh and selection more efficient.
         """
-        ...
     def isPassiveOutput(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isPassiveOutput(plug) -> bool
 
@@ -17167,7 +13781,6 @@ class MPxLocatorNode(MPxNode):
 
         * plug (MPlug) - plug representing output in question.
         """
-        ...
     isTemplated: MObject = ...
     def isTransparent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isTransparent() -> bool
@@ -17176,7 +13789,6 @@ class MPxLocatorNode(MPxNode):
 
         The default return value is False.
         """
-        ...
     kAssembly: int = ...
     kBlendShape: int = ...
     kCameraSetNode: int = ...
@@ -17219,7 +13831,6 @@ class MPxLocatorNode(MPxNode):
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (bool) - is this plug a source of the connection.
         """
-        ...
     def legalDisconnection(self: Self, *args: Any, **kwargs: Any) -> Any:
         """legalDisconnection(plug, otherPlug, arsSrc) -> bool/None
 
@@ -17231,7 +13842,6 @@ class MPxLocatorNode(MPxNode):
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (boool) - is this plug a source of the connection.
         """
-        ...
     localPosition: MObject = ...
     localPositionX: MObject = ...
     localPositionY: MObject = ...
@@ -17250,7 +13860,6 @@ class MPxLocatorNode(MPxNode):
 
         Returns the name of the node
         """
-        ...
     nodeBoundingBox: MObject = ...
     nodeBoundingBoxMax: MObject = ...
     nodeBoundingBoxMaxX: MObject = ...
@@ -17281,7 +13890,6 @@ class MPxLocatorNode(MPxNode):
         * plug (MPlug) - the plug.
         * plugArray (MPlugArray) - the corresponding plugs.
         """
-        ...
     def passThroughToOne(self: Self, *args: Any, **kwargs: Any) -> Any:
         """passThroughToOne(plug) -> plug
 
@@ -17293,7 +13901,6 @@ class MPxLocatorNode(MPxNode):
 
         * plug (MPlug) - the plug.
         """
-        ...
     def postConstructor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """postConstructor() -> self
 
@@ -17301,7 +13908,6 @@ class MPxLocatorNode(MPxNode):
         The association between the these two objects is not made until after the MPxNode constructor is called. This implies that no MPxNode member function can be called from the MPxNode constructor.
         The postConstructor will get called immediately after the constructor when it is safe to call any MPxNode member function.
         """
-        ...
     def postEvaluation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """postEvaluation(context, evalNode, evalType) -> None
 
@@ -17329,7 +13935,6 @@ class MPxLocatorNode(MPxNode):
           * kLeaveDirty          : Evaluation was performed without updating this node. Internal
                                    state should be updated to reflect that the node is dirty.
         """
-        ...
     def preEvaluation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """preEvaluation(context, evalNode) -> None
 
@@ -17351,7 +13956,6 @@ class MPxLocatorNode(MPxNode):
                                              are about to be evaluated for the context.
                                              Should be only used to query information.
         """
-        ...
     def setDependentsDirty(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDependentsDirty(plug, plugArray) -> self
 
@@ -17372,7 +13976,6 @@ class MPxLocatorNode(MPxNode):
         * plug (MPlug) - plug which is being set dirty by Maya.
         * plugArray the programmer should add any plugs which they want to set dirty to this list.
         """
-        ...
     def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDoNotWrite(bool) -> self
 
@@ -17382,7 +13985,6 @@ class MPxLocatorNode(MPxNode):
         1. Plug-in "requires" information will be written out with the model when saved.  But a subsequent reload and resave of the file will cause these to go away.
         2. If this node is a DAG and has a parent or children, the "do not write" flag of the parent or children will not be set. It is the developer's responsibility to ensure that the resulting scene file is capable of being read in without errors due to unwritten nodes.
         """
-        ...
     def setExistWithoutInConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setExistWithoutInConnections(bool) -> bool
 
@@ -17396,7 +13998,6 @@ class MPxLocatorNode(MPxNode):
 
         * flag (bool) true if this node can exist without input connections, false otherwise
         """
-        ...
     def setExistWithoutOutConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setExistWithoutOutConnections(bool) -> bool
 
@@ -17410,7 +14011,6 @@ class MPxLocatorNode(MPxNode):
 
         * flag (bool) true if this node can exist without output connections, false otherwise
         """
-        ...
     def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setExternalContent(table) -> self
 
@@ -17424,7 +14024,6 @@ class MPxLocatorNode(MPxNode):
 
         * table Key->location table with new content locations.
         """
-        ...
     def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setExternalContentForFileAttr(attr, table) -> bool
 
@@ -17437,7 +14036,6 @@ class MPxLocatorNode(MPxNode):
 
         Returns True if the plug was successfully written to. False if no entry in the table was named after the attribute or if no plug was found.
         """
-        ...
     def setInternalValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setInternalValue(plug, dataHandle) -> bool
 
@@ -17455,7 +14053,6 @@ class MPxLocatorNode(MPxNode):
         * plug (MPlug) - the attribute that is being set.
         * dataHandle (MDataHandle) - the dataHandle containing the value to set.
         """
-        ...
     def setInternalValueInContext(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setInternalValueInContext(plug, dataHandle, ctx) -> bool  [OBSOLETE]
 
@@ -17465,7 +14062,6 @@ class MPxLocatorNode(MPxNode):
         * dataHandle (MDataHandle) - the dataHandle containing the value to set.
         * ctx (MDGContext) - the context the method is being evaluated in.
         """
-        ...
     def setMPSafe(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setMPSafe(bool) -> self
 
@@ -17475,7 +14071,6 @@ class MPxLocatorNode(MPxNode):
 
         NOTE: This should be called from the postConstructor() method for shading node plug-ins only. If a shading node is non-safe, then it will only be useful during single processor rendering.
         """
-        ...
     def shouldSave(self: Self, *args: Any, **kwargs: Any) -> Any:
         """shouldSave(plug) -> bool/None
 
@@ -17486,13 +14081,11 @@ class MPxLocatorNode(MPxNode):
 
         * plug (MPlug) - plug representing the attribute to be saved.
         """
-        ...
     def thisMObject(self: Self, *args: Any, **kwargs: Any) -> Any:
         """thisMObject() -> MObject
 
         Returns the MObject associated with this user defined node.  This makes it possible to use MFnDependencyNode or to construct plugs to this node's attributes.
         """
-        ...
     def transformInvalidationRange(self: Self, *args: Any, **kwargs: Any) -> Any:
         """transformInvalidationRange(plug, timeRange) -> timeRange
 
@@ -17508,7 +14101,6 @@ class MPxLocatorNode(MPxNode):
         WARNING: Do *not* call MPxNode::transformInvalidationRange from your override method
         NOTE: If a plugin node have invalidation-range-transformation *conditionally* Only transform the invalidation range when attribute 'enableIRT' is set The plugin should call MPxNode::transformInvalidationRange to signal it does not perform any IRT.
         """
-        ...
     def type(self: Self, *args: Any, **kwargs: Any) -> Any:
         """type() -> int
 
@@ -17542,19 +14134,16 @@ class MPxLocatorNode(MPxNode):
           kGeometryFilter				Custom deformer derived from MPxGeometryFilter
         	 kBlendShape					Custom deformer derived from MPxBlendShape
         """
-        ...
     def typeId(self: Self, *args: Any, **kwargs: Any) -> Any:
         """typeId() -> MTypeId
 
         Returns the TYPEID of this node.
         """
-        ...
     def typeName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """typeName() -> string
 
         Returns the type name of this node.  The type name identifies the node type to the ASCII file format
         """
-        ...
     underWorldObject: MObject = ...
     def useClosestPointForSelection(self: Self, *args: Any, **kwargs: Any) -> Any:
         """useClosestPointForSelection() -> bool
@@ -17565,7 +14154,6 @@ class MPxLocatorNode(MPxNode):
 
         If this method is overridden to return True, then rather than using the locator's center to determine its distance from the selection ray, Maya will pass the ray to the closestPoint() method and use the point it returns. Note that you will have override closestPoint() as well to provide an appropriate point.
         """
-        ...
     useObjectColor: MObject = ...
     visibility: MObject = ...
     worldInverseMatrix: MObject = ...
@@ -17578,69 +14166,49 @@ class MPxLocatorNode(MPxNode):
 class MPxManipContainer(MPxNode):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -17649,7 +14217,6 @@ class MPxManipContainer(MPxNode):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addAttribute(attr) -> None
 
@@ -17662,7 +14229,6 @@ class MPxManipContainer(MPxNode):
 
         * attr (MObject) - new attribute to add.
         """
-        ...
     def addCircleSweepManip(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addCircleSweepManip(manipName, angleName) -> MDagPath
 
@@ -17674,7 +14240,6 @@ class MPxManipContainer(MPxNode):
 
         Returns the new CircleSweepManip
         """
-        ...
     def addCurveSegmentManip(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addCurveSegmentManip(manipName, startParamName, endParamName ) -> MDagPath
 
@@ -17687,7 +14252,6 @@ class MPxManipContainer(MPxNode):
 
         Returns the new CurveSegmentManip
         """
-        ...
     def addDirectionManip(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addDirectionManip(manipName, directionName) -> MDagPath
 
@@ -17699,7 +14263,6 @@ class MPxManipContainer(MPxNode):
 
         Returns the new DirectionManip
         """
-        ...
     def addDiscManip(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addDiscManip(manipName, angleName) -> MDagPath
 
@@ -17711,7 +14274,6 @@ class MPxManipContainer(MPxNode):
 
         Returns the new DiscManip
         """
-        ...
     def addDistanceManip(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addDistanceManip(manipName, distanceName) -> MDagPath
 
@@ -17723,7 +14285,6 @@ class MPxManipContainer(MPxNode):
 
         Returns the new DistanceManip
         """
-        ...
     def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addExternalContentForFileAttr(table, attr) -> bool
 
@@ -17736,7 +14297,6 @@ class MPxManipContainer(MPxNode):
 
         Returns True if an item was sucessfully added to the table.  False if the attribute does not describe a non-empty location, or an item with the same key was already present in the table.
         """
-        ...
     def addFreePointTriadManip(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addFreePointTriadManip(manipName, pointName) -> MDagPath
 
@@ -17748,7 +14308,6 @@ class MPxManipContainer(MPxNode):
 
         Returns the new FreePointTriadManip
         """
-        ...
     def addMPxManipulatorNode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addMPxManipulatorNode(manipTypeName, manipName, proxyManip) -> None
 
@@ -17759,7 +14318,6 @@ class MPxManipContainer(MPxNode):
         * manipName (string) name of the manip
         Returns a pointer to the new manipulator
         """
-        ...
     def addManipToPlugConversion(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addManipToPlugConversion(plug) -> unsigned int
 
@@ -17777,7 +14335,6 @@ class MPxManipContainer(MPxNode):
         Returns the index used to identify the plug inside the
         manipToPlugConversion() method.
         """
-        ...
     def addPlugToInViewEditor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addPlugToInViewEditor(plug)
 
@@ -17790,7 +14347,6 @@ class MPxManipContainer(MPxNode):
 
         * plug (MPlug) - The plug that the slider should control
         """
-        ...
     def addPlugToManipConversion(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addPlugToManipConversion(manipIndex)
 
@@ -17809,7 +14365,6 @@ class MPxManipContainer(MPxNode):
         appropriate method of the manipulator's functionset (e.g.
         MFnDistanceManip::startPointIndex).
         """
-        ...
     def addPointOnCurveManip(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addPointOnCurveManip(manipName, paramName) -> MDagPath
 
@@ -17821,7 +14376,6 @@ class MPxManipContainer(MPxNode):
 
         Returns the new PointOnCurveManip
         """
-        ...
     def addPointOnSurfaceManip(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addPointOnSurfaceManip(manipName, paramName) -> MDagPath
 
@@ -17833,7 +14387,6 @@ class MPxManipContainer(MPxNode):
 
         Returns the new PointOnSurfaceManip
         """
-        ...
     def addRotateManip(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addRotateManip(manipName, rotationName) -> MDagPath
 
@@ -17845,7 +14398,6 @@ class MPxManipContainer(MPxNode):
 
         Returns the dag path to the new rotate manipulator
         """
-        ...
     def addScaleManip(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addScaleManip(manipName, scaleName) -> MDagPath
 
@@ -17857,7 +14409,6 @@ class MPxManipContainer(MPxNode):
 
         Returns the dag path to the new scale manipulator
         """
-        ...
     def addStateManip(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addStateManip(manipName, stateName) -> MDagPath
 
@@ -17869,7 +14420,6 @@ class MPxManipContainer(MPxNode):
 
         Returns the new StateManip
         """
-        ...
     def addToManipConnectTable(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addToManipConnectTable( typeId )
 
@@ -17881,7 +14431,6 @@ class MPxManipContainer(MPxNode):
 
         * mid (MTypeId) - Id of the user defined node
         """
-        ...
     def addToggleManip(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addToggleManip(manipName, toggleName) -> MDagPath
 
@@ -17893,7 +14442,6 @@ class MPxManipContainer(MPxNode):
 
         Returns the new ToggleManip
         """
-        ...
     def attributeAffects(self: Self, *args: Any, **kwargs: Any) -> Any:
         """attributeAffects(whenChanges, isAffected) -> None
 
@@ -17906,7 +14454,6 @@ class MPxManipContainer(MPxNode):
         * whenChanges (MObject) - input attribute - MObject that points to an input attribute that has already been added.
         * isAffected (MObject) - affected output attribute - MObject that points to an output attribute that has already been added.
         """
-        ...
     def compute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """compute(plug, dataBlock) -> self
 
@@ -17925,7 +14472,6 @@ class MPxManipContainer(MPxNode):
         * plug (MPlug) - plug representing the attribute that needs to be recomputed.
         * block (MDataBlock) - data block containing storage for the node's attributes.
         """
-        ...
     def configCache(self: Self, *args: Any, **kwargs: Any) -> Any:
         """configCache(evalNode, schema) -> None
 
@@ -17936,7 +14482,6 @@ class MPxManipContainer(MPxNode):
         * evalNode (MEvaluationNode)  - This node's evaluation node, contains animated plug information
         * schema (MCacheSchema)       - Specification about what attributes to cache
         """
-        ...
     def connectToDependNode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectToDependNode(node) -> None
 
@@ -17945,7 +14490,6 @@ class MPxManipContainer(MPxNode):
 
         * node (MObject) - the node to which the manipulator should be connected
         """
-        ...
     def connectionBroken(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectionBroken( plug, otherPlug, asSrc) -> self
 
@@ -17955,7 +14499,6 @@ class MPxManipContainer(MPxNode):
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (bool) - is this plug a source of the connection.
         """
-        ...
     def connectionMade(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectionMade(plug, otherPlug, asSrc) -> self
 
@@ -17965,7 +14508,6 @@ class MPxManipContainer(MPxNode):
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (bool) - is this plug a source of the connection.
         """
-        ...
     def copyInternalData(self: Self, *args: Any, **kwargs: Any) -> Any:
         """copyInternalData(node) -> self
 
@@ -17975,7 +14517,6 @@ class MPxManipContainer(MPxNode):
 
         * node (MPxNode) - the node that is being duplicated.
         """
-        ...
     def createChildren(self: Self, *args: Any, **kwargs: Any) -> Any:
         """createChildren() -> None
 
@@ -17983,7 +14524,6 @@ class MPxManipContainer(MPxNode):
         This method is called after the user node derived from
         MPxManipContainer is set up.
         """
-        ...
     def dependsOn(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dependsOn( plug, otherPlug) -> bool/None
 
@@ -17998,7 +14538,6 @@ class MPxManipContainer(MPxNode):
         * plug (MPlug) - attribute on this node.
         * otherPlug (MPlug) - attribute on other node.
         """
-        ...
     def doDrag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doDrag() -> None
 
@@ -18007,13 +14546,11 @@ class MPxManipContainer(MPxNode):
         Returns None if successful.  Otherwise, returns MStatus.kUnknownParameter
         to allow Maya to further process the event.
         """
-        ...
     def doNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doNotWrite() -> bool
 
         use this method to query the "do not write" state of this proxy node. True is returned if this node will not be saved when the maya model is written out.
         """
-        ...
     def doPress(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doPress() -> None
 
@@ -18022,7 +14559,6 @@ class MPxManipContainer(MPxNode):
         Returns None if successful.  Otherwise, returns MStatus.kUnknownParameter
         to allow Maya to further process the event.
         """
-        ...
     def doRelease(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doRelease() -> None
 
@@ -18032,7 +14568,6 @@ class MPxManipContainer(MPxNode):
         Returns None if successful.  Otherwise, returns MStatus.kUnknownParameter
         to allow Maya to further process the event.
         """
-        ...
     def draw(self: Self, *args: Any, **kwargs: Any) -> Any:
         """draw(view, path, style, status) -> None
 
@@ -18045,7 +14580,6 @@ class MPxManipContainer(MPxNode):
         * style (M3dView.DisplayStyle) - the display appearance
         * status (M3dView.DisplayStatus) - the display status
         """
-        ...
     def drawUI(self: Self, *args: Any, **kwargs: Any) -> Any:
         """drawUI(drawManager, frameContext) -> None
 
@@ -18068,7 +14602,6 @@ class MPxManipContainer(MPxNode):
                                          drawing some simple UI
         * frameContext (MFrameContext) - Frame level context information
         """
-        ...
     def existWithoutInConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """existWithoutInConnections() -> bool
 
@@ -18081,7 +14614,6 @@ class MPxManipContainer(MPxNode):
 
         Returns true if this node can exist without input connections, false otherwise
         """
-        ...
     def existWithoutOutConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """existWithoutOutConnections() -> bool
 
@@ -18094,7 +14626,6 @@ class MPxManipContainer(MPxNode):
 
         Returns true if this node can exist without output connections, false otherwise
         """
-        ...
     def finishAddingManips(self: Self, *args: Any, **kwargs: Any) -> Any:
         """finishAddingManips()
 
@@ -18104,7 +14635,6 @@ class MPxManipContainer(MPxNode):
         cannot be initialized until all the connections from the manip
         values to the plug values have been specified.
         """
-        ...
     def forceCache(self: Self, *args: Any, **kwargs: Any) -> Any:
         """forceCache(ctx=MDGContext::current()) -> MDataBlock
 
@@ -18113,7 +14643,6 @@ class MPxManipContainer(MPxNode):
 
         * ctx (MDGContext) - The context in which the datablock will be retrieved.
         """
-        ...
     def getCacheSetup(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getCacheSetup(evalNode, disablingInfo, setupInfo, objectArray) -> None
 
@@ -18134,7 +14663,6 @@ class MPxManipContainer(MPxNode):
         * cacheSetupInfo (MNodeCacheSetupInfo)    - Preferences and requirements this node has for Cached Playback
         * monitoredAttributes (MObjectArray)      - Attributes impacting the behavior of this method that will be monitored for change
         """
-        ...
     def getConverterManipDoubleValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getConverterManipDoubleValue() -> double
 
@@ -18143,7 +14671,6 @@ class MPxManipContainer(MPxNode):
 
         * manipIndex (unsigned int) - The index of the value
         """
-        ...
     def getConverterManipMEulerRotationValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getConverterManipMEulerRotationValue() -> MEulereRotation
 
@@ -18152,7 +14679,6 @@ class MPxManipContainer(MPxNode):
 
         * manipIndex (unsigned int) - The index of the value
         """
-        ...
     def getConverterManipMMatrixValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getConverterManipMMatrixValue() -> MMatrix
 
@@ -18161,7 +14687,6 @@ class MPxManipContainer(MPxNode):
 
         * manipIndex (unsigned int) - The index of the value
         """
-        ...
     def getConverterManipMPointValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getConverterManipMPointValue() -> MPoint
 
@@ -18170,7 +14695,6 @@ class MPxManipContainer(MPxNode):
 
         * manipIndex (unsigned int) - The index of the value
         """
-        ...
     def getConverterManipMTransformationMatrixValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getConverterManipMTransformationMatrixValue() -> MTransformationMatrix
 
@@ -18179,7 +14703,6 @@ class MPxManipContainer(MPxNode):
 
         * manipIndex (unsigned int) - The index of the value
         """
-        ...
     def getConverterManipMVectorValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getConverterManipMVectorValue() -> MVector
 
@@ -18188,7 +14711,6 @@ class MPxManipContainer(MPxNode):
 
         * manipIndex (unsigned int) - The index of the value
         """
-        ...
     def getConverterManipUIntValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getConverterManipUIntValue() -> unsigned int
 
@@ -18197,7 +14719,6 @@ class MPxManipContainer(MPxNode):
 
         * manipIndex (unsigned int) - The index of the value
         """
-        ...
     def getConverterManipValues(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getConverterManipValues() -> [double,double]
 
@@ -18206,7 +14727,6 @@ class MPxManipContainer(MPxNode):
 
         * manipIndex (unsigned int) - The index of the value
         """
-        ...
     def getConverterPlugDoubleValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getConverterPlugDoubleValue() -> double
 
@@ -18215,7 +14735,6 @@ class MPxManipContainer(MPxNode):
 
         * plugIndex (unsigned int) - The index of the value
         """
-        ...
     def getConverterPlugMEulerRotationValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getConverterPlugMEulerRotationValue() -> MEulerRotation
 
@@ -18224,7 +14743,6 @@ class MPxManipContainer(MPxNode):
 
         * plugIndex (unsigned int) - The index of the value
         """
-        ...
     def getConverterPlugMMatrixValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getConverterPlugMMatrixValue() -> MMatrix
 
@@ -18233,7 +14751,6 @@ class MPxManipContainer(MPxNode):
 
         * plugIndex (unsigned int) - The index of the value
         """
-        ...
     def getConverterPlugMPointValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getConverterPlugMPointValue() -> MPoint
 
@@ -18242,7 +14759,6 @@ class MPxManipContainer(MPxNode):
 
         * plugIndex (unsigned int) - The index of the value
         """
-        ...
     def getConverterPlugMVectorValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getConverterPlugMVectorValue() -> MVector
 
@@ -18251,7 +14767,6 @@ class MPxManipContainer(MPxNode):
 
         * plugIndex (unsigned int) - The index of the value
         """
-        ...
     def getConverterPlugValues(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getConverterPlugValues() -> [double, double]
 
@@ -18260,7 +14775,6 @@ class MPxManipContainer(MPxNode):
 
         * plugIndex (unsigned int) - The index of the value
         """
-        ...
     def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getExternalContent(table) -> self
 
@@ -18274,7 +14788,6 @@ class MPxManipContainer(MPxNode):
 
         * table [OUT] (MExternalContentInfoTable) - Content information table that this method must populate.
         """
-        ...
     def getFilesToArchive(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getFilesToArchive(shortName=False, unresolvedName=False, markCouldBeImageSequence=False) -> list of strings
 
@@ -18290,7 +14803,6 @@ class MPxManipContainer(MPxNode):
         * unresolvedName (bool) - If True, add paths before any resolution, rather than absolute paths.
         * markCouldBeImageSequence (bool) - If True, append an asterisk after any file path that could be an image sequence (note: only used by maya.exe -archive).
         """
-        ...
     def getInternalValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getInternalValue(plug, dataHandle) -> bool
 
@@ -18305,7 +14817,6 @@ class MPxManipContainer(MPxNode):
         * plug (MPlug) - the attribute that is being queried.
         * dataHandle [OUT] (MDataHandle) - the dataHandle to store the attribute value.
         """
-        ...
     def getInternalValueInContext(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getInternalValueInContext(plug, dataHandle, ctx) -> bool [OBSOLETE]
 
@@ -18315,13 +14826,11 @@ class MPxManipContainer(MPxNode):
         * dataHandle [OUT] (MDataHandle) - the dataHandle to store the attribute value.
         * ctx (MDGContext) - the context the method is being evaluated in.
         """
-        ...
     def hasInvalidationRangeTransformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasInvalidationRangeTransformation() -> bool
 
         Checks if this MPxNode derived node overrides the MPxNode::transformInvalidationRange method
         """
-        ...
     def inheritAttributesFrom(self: Self, *args: Any, **kwargs: Any) -> Any:
         """inheritAttributesFrom(parentClassName) -> None
 
@@ -18335,7 +14844,6 @@ class MPxManipContainer(MPxNode):
 
         * parentClassName (string) - class of node to inherit attributes from.
         """
-        ...
     def initialize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """initialize() -> None
 
@@ -18345,7 +14853,6 @@ class MPxManipContainer(MPxNode):
         Return: Status of the operation.
         The base class always returns MS::kSuccess.
         """
-        ...
     def internalArrayCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """internalArrayCount(plug) -> int
         internalArrayCount(plug, ctx) -> int  [OBSOLETE]
@@ -18361,7 +14868,6 @@ class MPxManipContainer(MPxNode):
         * plug (MPlug) - the array plug.
         * ctx (MDGContext) - the context, default to MDGContext.current().
         """
-        ...
     def isAbstractClass(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isAbstractClass() -> bool
 
@@ -18369,7 +14875,6 @@ class MPxManipContainer(MPxNode):
 
         It is not necessary to override this method.
         """
-        ...
     def isManipActive(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isManipActive(manipName, stateName) -> MDagPath
 
@@ -18379,7 +14884,6 @@ class MPxManipContainer(MPxNode):
         * manipType (MFn Type constant) - The type of the custom manip
         * manipObject (MObject) - Manipulator object
         """
-        ...
     def isPassiveOutput(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isPassiveOutput(plug) -> bool
 
@@ -18387,7 +14891,6 @@ class MPxManipContainer(MPxNode):
 
         * plug (MPlug) - plug representing output in question.
         """
-        ...
     kAssembly: int = ...
     kBlendShape: int = ...
     kCameraSetNode: int = ...
@@ -18430,7 +14933,6 @@ class MPxManipContainer(MPxNode):
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (bool) - is this plug a source of the connection.
         """
-        ...
     def legalDisconnection(self: Self, *args: Any, **kwargs: Any) -> Any:
         """legalDisconnection(plug, otherPlug, arsSrc) -> bool/None
 
@@ -18442,7 +14944,6 @@ class MPxManipContainer(MPxNode):
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (boool) - is this plug a source of the connection.
         """
-        ...
     def manipToPlugConversion(self: Self, *args: Any, **kwargs: Any) -> Any:
         """manipToPlugConversion(manipIndex) -> MManipData
 
@@ -18462,7 +14963,6 @@ class MPxManipContainer(MPxNode):
         return
         New manipulator value.
         """
-        ...
     def name(self: Self, *args: Any, **kwargs: Any) -> Any:
         """name() -> string
 
@@ -18472,7 +14972,6 @@ class MPxManipContainer(MPxNode):
 
         Returns the name of the node
         """
-        ...
     def newManipulator(self: Self, *args: Any, **kwargs: Any) -> Any:
         """newManipulator(manipName) -> (MPxManipContainer, MObject)
 
@@ -18491,7 +14990,6 @@ class MPxManipContainer(MPxNode):
 
         * manipName (string) - manipulator name
         """
-        ...
     def passThroughToMany(self: Self, *args: Any, **kwargs: Any) -> Any:
         """passThroughToMany(plug, plugArray) -> bool
 
@@ -18502,7 +15000,6 @@ class MPxManipContainer(MPxNode):
         * plug (MPlug) - the plug.
         * plugArray (MPlugArray) - the corresponding plugs.
         """
-        ...
     def passThroughToOne(self: Self, *args: Any, **kwargs: Any) -> Any:
         """passThroughToOne(plug) -> plug
 
@@ -18514,7 +15011,6 @@ class MPxManipContainer(MPxNode):
 
         * plug (MPlug) - the plug.
         """
-        ...
     def plugToManipConversion(self: Self, *args: Any, **kwargs: Any) -> Any:
         """plugToManipConversion(manipIndex) -> MManipData
 
@@ -18531,7 +15027,6 @@ class MPxManipContainer(MPxNode):
         return
         New plug value.
         """
-        ...
     def postConstructor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """postConstructor() -> self
 
@@ -18539,7 +15034,6 @@ class MPxManipContainer(MPxNode):
         The association between the these two objects is not made until after the MPxNode constructor is called. This implies that no MPxNode member function can be called from the MPxNode constructor.
         The postConstructor will get called immediately after the constructor when it is safe to call any MPxNode member function.
         """
-        ...
     def postEvaluation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """postEvaluation(context, evalNode, evalType) -> None
 
@@ -18567,7 +15061,6 @@ class MPxManipContainer(MPxNode):
           * kLeaveDirty          : Evaluation was performed without updating this node. Internal
                                    state should be updated to reflect that the node is dirty.
         """
-        ...
     def preDrawUI(self: Self, *args: Any, **kwargs: Any) -> Any:
         """preDrawUI(view) -> None
 
@@ -18586,7 +15079,6 @@ class MPxManipContainer(MPxNode):
 
         * view (M3dView) * The view in which to draw
         """
-        ...
     def preEvaluation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """preEvaluation(context, evalNode) -> None
 
@@ -18608,7 +15100,6 @@ class MPxManipContainer(MPxNode):
                                              are about to be evaluated for the context.
                                              Should be only used to query information.
         """
-        ...
     def removeFromManipConnectTable(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeFromManipConnectTable( typeId )
 
@@ -18620,7 +15111,6 @@ class MPxManipContainer(MPxNode):
 
         * mid (MTypeId) - Id of the user defined node
         """
-        ...
     def setDependentsDirty(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDependentsDirty(plug, plugArray) -> self
 
@@ -18641,7 +15131,6 @@ class MPxManipContainer(MPxNode):
         * plug (MPlug) - plug which is being set dirty by Maya.
         * plugArray the programmer should add any plugs which they want to set dirty to this list.
         """
-        ...
     def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDoNotWrite(bool) -> self
 
@@ -18651,7 +15140,6 @@ class MPxManipContainer(MPxNode):
         1. Plug-in "requires" information will be written out with the model when saved.  But a subsequent reload and resave of the file will cause these to go away.
         2. If this node is a DAG and has a parent or children, the "do not write" flag of the parent or children will not be set. It is the developer's responsibility to ensure that the resulting scene file is capable of being read in without errors due to unwritten nodes.
         """
-        ...
     def setExistWithoutInConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setExistWithoutInConnections(bool) -> bool
 
@@ -18665,7 +15153,6 @@ class MPxManipContainer(MPxNode):
 
         * flag (bool) true if this node can exist without input connections, false otherwise
         """
-        ...
     def setExistWithoutOutConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setExistWithoutOutConnections(bool) -> bool
 
@@ -18679,7 +15166,6 @@ class MPxManipContainer(MPxNode):
 
         * flag (bool) true if this node can exist without output connections, false otherwise
         """
-        ...
     def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setExternalContent(table) -> self
 
@@ -18693,7 +15179,6 @@ class MPxManipContainer(MPxNode):
 
         * table Key->location table with new content locations.
         """
-        ...
     def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setExternalContentForFileAttr(attr, table) -> bool
 
@@ -18706,7 +15191,6 @@ class MPxManipContainer(MPxNode):
 
         Returns True if the plug was successfully written to. False if no entry in the table was named after the attribute or if no plug was found.
         """
-        ...
     def setInternalValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setInternalValue(plug, dataHandle) -> bool
 
@@ -18724,7 +15208,6 @@ class MPxManipContainer(MPxNode):
         * plug (MPlug) - the attribute that is being set.
         * dataHandle (MDataHandle) - the dataHandle containing the value to set.
         """
-        ...
     def setInternalValueInContext(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setInternalValueInContext(plug, dataHandle, ctx) -> bool  [OBSOLETE]
 
@@ -18734,7 +15217,6 @@ class MPxManipContainer(MPxNode):
         * dataHandle (MDataHandle) - the dataHandle containing the value to set.
         * ctx (MDGContext) - the context the method is being evaluated in.
         """
-        ...
     def setMPSafe(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setMPSafe(bool) -> self
 
@@ -18744,7 +15226,6 @@ class MPxManipContainer(MPxNode):
 
         NOTE: This should be called from the postConstructor() method for shading node plug-ins only. If a shading node is non-safe, then it will only be useful during single processor rendering.
         """
-        ...
     def shouldSave(self: Self, *args: Any, **kwargs: Any) -> Any:
         """shouldSave(plug) -> bool/None
 
@@ -18755,13 +15236,11 @@ class MPxManipContainer(MPxNode):
 
         * plug (MPlug) - plug representing the attribute to be saved.
         """
-        ...
     def thisMObject(self: Self, *args: Any, **kwargs: Any) -> Any:
         """thisMObject() -> MObject
 
         Returns the MObject associated with this user defined node.  This makes it possible to use MFnDependencyNode or to construct plugs to this node's attributes.
         """
-        ...
     def transformInvalidationRange(self: Self, *args: Any, **kwargs: Any) -> Any:
         """transformInvalidationRange(plug, timeRange) -> timeRange
 
@@ -18777,7 +15256,6 @@ class MPxManipContainer(MPxNode):
         WARNING: Do *not* call MPxNode::transformInvalidationRange from your override method
         NOTE: If a plugin node have invalidation-range-transformation *conditionally* Only transform the invalidation range when attribute 'enableIRT' is set The plugin should call MPxNode::transformInvalidationRange to signal it does not perform any IRT.
         """
-        ...
     def type(self: Self, *args: Any, **kwargs: Any) -> Any:
         """type() -> int
 
@@ -18811,86 +15289,63 @@ class MPxManipContainer(MPxNode):
           kGeometryFilter				Custom deformer derived from MPxGeometryFilter
         	 kBlendShape					Custom deformer derived from MPxBlendShape
         """
-        ...
     def typeId(self: Self, *args: Any, **kwargs: Any) -> Any:
         """typeId() -> MTypeId
 
         Returns the TYPEID of this node.
         """
-        ...
     def typeName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """typeName() -> string
 
         Returns the type name of this node.  The type name identifies the node type to the ASCII file format
         """
-        ...
 
 class MPxManipulatorNode(MPxNode):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -18899,7 +15354,6 @@ class MPxManipulatorNode(MPxNode):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addAttribute(attr) -> None
 
@@ -18912,7 +15366,6 @@ class MPxManipulatorNode(MPxNode):
 
         * attr (MObject) - new attribute to add.
         """
-        ...
     def addDependentPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addDependentPlug(plug) -> None
 
@@ -18926,7 +15379,6 @@ class MPxManipulatorNode(MPxNode):
 
         * plug (MPlug) - the plug to keyframe when using this manipulator
         """
-        ...
     def addDoubleValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addDoubleValue(valueName, defaultValue) -> int
 
@@ -18938,7 +15390,6 @@ class MPxManipulatorNode(MPxNode):
         * valueName (string) - Name of the value.
         * defaultValue (float) - Default value.
         """
-        ...
     def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addExternalContentForFileAttr(table, attr) -> bool
 
@@ -18951,7 +15402,6 @@ class MPxManipulatorNode(MPxNode):
 
         Returns True if an item was sucessfully added to the table.  False if the attribute does not describe a non-empty location, or an item with the same key was already present in the table.
         """
-        ...
     def addPointValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addPointValue(valueName, defaultValue) -> int
 
@@ -18963,7 +15413,6 @@ class MPxManipulatorNode(MPxNode):
         * valueName (string) - Name of the value.
         * defaultValue (MPoint) - Default value.
         """
-        ...
     def addVectorValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addVectorValue(valueName, defaultValue) -> int
 
@@ -18975,7 +15424,6 @@ class MPxManipulatorNode(MPxNode):
         * valueName (string) - Name of the value.
         * defaultValue (MVector) - Default value.
         """
-        ...
     def attributeAffects(self: Self, *args: Any, **kwargs: Any) -> Any:
         """attributeAffects(whenChanges, isAffected) -> None
 
@@ -18988,7 +15436,6 @@ class MPxManipulatorNode(MPxNode):
         * whenChanges (MObject) - input attribute - MObject that points to an input attribute that has already been added.
         * isAffected (MObject) - affected output attribute - MObject that points to an output attribute that has already been added.
         """
-        ...
     def colorAndName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """colorAndName(view, glName, glNameIsPickable, colorIndex) -> None
 
@@ -19002,7 +15449,6 @@ class MPxManipulatorNode(MPxNode):
         * colorIndex (half) - Color to use, as provided by one of the *Color()
                               methods in this class.
         """
-        ...
     def compute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """compute(plug, dataBlock) -> self
 
@@ -19021,7 +15467,6 @@ class MPxManipulatorNode(MPxNode):
         * plug (MPlug) - plug representing the attribute that needs to be recomputed.
         * block (MDataBlock) - data block containing storage for the node's attributes.
         """
-        ...
     def configCache(self: Self, *args: Any, **kwargs: Any) -> Any:
         """configCache(evalNode, schema) -> None
 
@@ -19032,7 +15477,6 @@ class MPxManipulatorNode(MPxNode):
         * evalNode (MEvaluationNode)  - This node's evaluation node, contains animated plug information
         * schema (MCacheSchema)       - Specification about what attributes to cache
         """
-        ...
     def connectPlugToValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectPlugToValue(plug, valueIndex) -> int
 
@@ -19046,7 +15490,6 @@ class MPxManipulatorNode(MPxNode):
         * plug (MPlug) - the plug to connect the value to
         * valueIndex (int) - the index of the value. index is set by add*Value() method
         """
-        ...
     def connectToDependNode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectToDependNode(node) -> None
 
@@ -19055,7 +15498,6 @@ class MPxManipulatorNode(MPxNode):
 
         * node (MObject) - the node to which the manipulator should be connected
         """
-        ...
     def connectionBroken(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectionBroken( plug, otherPlug, asSrc) -> self
 
@@ -19065,7 +15507,6 @@ class MPxManipulatorNode(MPxNode):
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (bool) - is this plug a source of the connection.
         """
-        ...
     def connectionMade(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectionMade(plug, otherPlug, asSrc) -> self
 
@@ -19075,7 +15516,6 @@ class MPxManipulatorNode(MPxNode):
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (bool) - is this plug a source of the connection.
         """
-        ...
     def copyInternalData(self: Self, *args: Any, **kwargs: Any) -> Any:
         """copyInternalData(node) -> self
 
@@ -19085,7 +15525,6 @@ class MPxManipulatorNode(MPxNode):
 
         * node (MPxNode) - the node that is being duplicated.
         """
-        ...
     def dependentPlugsReset(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dependentPlugsReset() -> None
 
@@ -19093,7 +15532,6 @@ class MPxManipulatorNode(MPxNode):
         Call this method prior to adding plugs via addDependentPlug() such as
         from your doPress() method.
         """
-        ...
     def dependsOn(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dependsOn( plug, otherPlug) -> bool/None
 
@@ -19108,20 +15546,17 @@ class MPxManipulatorNode(MPxNode):
         * plug (MPlug) - attribute on this node.
         * otherPlug (MPlug) - attribute on other node.
         """
-        ...
     def deregisterForMouseMove(self: Self, *args: Any, **kwargs: Any) -> Any:
         """deregisterForMouseMove() -> None
 
         This method deregisters this manipulator from receiving
         mouse move events.
         """
-        ...
     def dimmedColor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dimmedColor() -> half
 
         This method returns the color index for a dimmed or unselectable component.
         """
-        ...
     def doDrag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doDrag(view) -> None
 
@@ -19132,7 +15567,6 @@ class MPxManipulatorNode(MPxNode):
 
         * view (M3dView) - the view in which to draw
         """
-        ...
     def doMove(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doMove(view, refresh) -> None
 
@@ -19147,13 +15581,11 @@ class MPxManipulatorNode(MPxNode):
         * view (M3dView) - the view in which to draw
         * refresh (bool) - if true, refresh the view on this event. Default is false.
         """
-        ...
     def doNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doNotWrite() -> bool
 
         use this method to query the "do not write" state of this proxy node. True is returned if this node will not be saved when the maya model is written out.
         """
-        ...
     def doPress(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doPress(view) -> None
 
@@ -19164,7 +15596,6 @@ class MPxManipulatorNode(MPxNode):
 
         * view (M3dView) - the view in which to draw
         """
-        ...
     def doRelease(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doRelease(view) -> None
 
@@ -19175,7 +15606,6 @@ class MPxManipulatorNode(MPxNode):
 
         * view (M3dView) - the view in which to draw
         """
-        ...
     def draw(self: Self, *args: Any, **kwargs: Any) -> Any:
         """draw(view, path, style, status) -> None
 
@@ -19188,7 +15618,6 @@ class MPxManipulatorNode(MPxNode):
         * style (M3dView.DisplayStyle) - the display appearance
         * status (M3dView.DisplayStatus) - the display status
         """
-        ...
     def drawUI(self: Self, *args: Any, **kwargs: Any) -> Any:
         """drawUI(drawManager, frameContext) -> None
 
@@ -19205,7 +15634,6 @@ class MPxManipulatorNode(MPxNode):
         * drawManager (MUIDrawManager) - The MUIDrawManager used to draw some simple UI
         * frameContext (MFrameContext) - Frame level context information
         """
-        ...
     def existWithoutInConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """existWithoutInConnections() -> bool
 
@@ -19218,7 +15646,6 @@ class MPxManipulatorNode(MPxNode):
 
         Returns true if this node can exist without input connections, false otherwise
         """
-        ...
     def existWithoutOutConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """existWithoutOutConnections() -> bool
 
@@ -19231,7 +15658,6 @@ class MPxManipulatorNode(MPxNode):
 
         Returns true if this node can exist without output connections, false otherwise
         """
-        ...
     def finishAddingManips(self: Self, *args: Any, **kwargs: Any) -> Any:
         """finishAddingManips() -> None
 
@@ -19241,7 +15667,6 @@ class MPxManipulatorNode(MPxNode):
         cannot be initialized until all the connections from the manip
         values to the plug values have been specified.
         """
-        ...
     def forceCache(self: Self, *args: Any, **kwargs: Any) -> Any:
         """forceCache(ctx=MDGContext::current()) -> MDataBlock
 
@@ -19250,7 +15675,6 @@ class MPxManipulatorNode(MPxNode):
 
         * ctx (MDGContext) - The context in which the datablock will be retrieved.
         """
-        ...
     def getCacheSetup(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getCacheSetup(evalNode, disablingInfo, setupInfo, objectArray) -> None
 
@@ -19271,7 +15695,6 @@ class MPxManipulatorNode(MPxNode):
         * cacheSetupInfo (MNodeCacheSetupInfo)    - Preferences and requirements this node has for Cached Playback
         * monitoredAttributes (MObjectArray)      - Attributes impacting the behavior of this method that will be monitored for change
         """
-        ...
     def getDoubleValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getDoubleValue(valueIndex, previousValue) -> float
 
@@ -19282,7 +15705,6 @@ class MPxManipulatorNode(MPxNode):
         * valueIndex (int) - the index of the value to be retrieved
         * previousValue (bool) - if true, get the previous value. if false, get the current value
         """
-        ...
     def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getExternalContent(table) -> self
 
@@ -19296,7 +15718,6 @@ class MPxManipulatorNode(MPxNode):
 
         * table [OUT] (MExternalContentInfoTable) - Content information table that this method must populate.
         """
-        ...
     def getFilesToArchive(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getFilesToArchive(shortName=False, unresolvedName=False, markCouldBeImageSequence=False) -> list of strings
 
@@ -19312,7 +15733,6 @@ class MPxManipulatorNode(MPxNode):
         * unresolvedName (bool) - If True, add paths before any resolution, rather than absolute paths.
         * markCouldBeImageSequence (bool) - If True, append an asterisk after any file path that could be an image sequence (note: only used by maya.exe -archive).
         """
-        ...
     def getInternalValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getInternalValue(plug, dataHandle) -> bool
 
@@ -19327,7 +15747,6 @@ class MPxManipulatorNode(MPxNode):
         * plug (MPlug) - the attribute that is being queried.
         * dataHandle [OUT] (MDataHandle) - the dataHandle to store the attribute value.
         """
-        ...
     def getInternalValueInContext(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getInternalValueInContext(plug, dataHandle, ctx) -> bool [OBSOLETE]
 
@@ -19337,7 +15756,6 @@ class MPxManipulatorNode(MPxNode):
         * dataHandle [OUT] (MDataHandle) - the dataHandle to store the attribute value.
         * ctx (MDGContext) - the context the method is being evaluated in.
         """
-        ...
     def getPointValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getPointValue(valueIndex, previousValue) -> MPoint
 
@@ -19348,7 +15766,6 @@ class MPxManipulatorNode(MPxNode):
         * valueIndex (int) - the index of the value to be retrieved
         * previousValue (bool) - if true, get the previous value. if false, get the current value
         """
-        ...
     def getVectorValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getVectorValue(valueIndex, previousValue) -> float
 
@@ -19359,7 +15776,6 @@ class MPxManipulatorNode(MPxNode):
         * valueIndex (int) - the index of the value to be retrieved
         * previousValue (bool) - if true, get the previous value. if false, get the current value
         """
-        ...
     def glActiveName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """glActiveName() -> MGLuint
 
@@ -19368,7 +15784,6 @@ class MPxManipulatorNode(MPxNode):
 
         Returns the active handle name.
         """
-        ...
     def glFirstHandle(self: Self, *args: Any, **kwargs: Any) -> Any:
         """glFirstHandle() -> MGLuint
 
@@ -19377,13 +15792,11 @@ class MPxManipulatorNode(MPxNode):
 
         Returns the first handle name.
         """
-        ...
     def hasInvalidationRangeTransformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasInvalidationRangeTransformation() -> bool
 
         Checks if this MPxNode derived node overrides the MPxNode::transformInvalidationRange method
         """
-        ...
     def inheritAttributesFrom(self: Self, *args: Any, **kwargs: Any) -> Any:
         """inheritAttributesFrom(parentClassName) -> None
 
@@ -19397,7 +15810,6 @@ class MPxManipulatorNode(MPxNode):
 
         * parentClassName (string) - class of node to inherit attributes from.
         """
-        ...
     def internalArrayCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """internalArrayCount(plug) -> int
         internalArrayCount(plug, ctx) -> int  [OBSOLETE]
@@ -19413,7 +15825,6 @@ class MPxManipulatorNode(MPxNode):
         * plug (MPlug) - the array plug.
         * ctx (MDGContext) - the context, default to MDGContext.current().
         """
-        ...
     def isAbstractClass(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isAbstractClass() -> bool
 
@@ -19421,7 +15832,6 @@ class MPxManipulatorNode(MPxNode):
 
         It is not necessary to override this method.
         """
-        ...
     def isPassiveOutput(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isPassiveOutput(plug) -> bool
 
@@ -19429,7 +15839,6 @@ class MPxManipulatorNode(MPxNode):
 
         * plug (MPlug) - plug representing output in question.
         """
-        ...
     kAssembly: int = ...
     kBlendShape: int = ...
     kCameraSetNode: int = ...
@@ -19466,13 +15875,11 @@ class MPxManipulatorNode(MPxNode):
 
         This method returns the color index of a label background.
         """
-        ...
     def labelColor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """labelColor() -> half
 
         This method returns the color index of a label.
         """
-        ...
     def legalConnection(self: Self, *args: Any, **kwargs: Any) -> Any:
         """legalConnection(plug, otherPlug, asSrc) -> bool/None
 
@@ -19484,7 +15891,6 @@ class MPxManipulatorNode(MPxNode):
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (bool) - is this plug a source of the connection.
         """
-        ...
     def legalDisconnection(self: Self, *args: Any, **kwargs: Any) -> Any:
         """legalDisconnection(plug, otherPlug, arsSrc) -> bool/None
 
@@ -19496,19 +15902,16 @@ class MPxManipulatorNode(MPxNode):
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (boool) - is this plug a source of the connection.
         """
-        ...
     def lineColor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """lineColor() -> half
 
         This method returns the color index of a line
         """
-        ...
     def mainColor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """mainColor() -> half
 
         This method returns the main color index.
         """
-        ...
     def mouseDown(self: Self, *args: Any, **kwargs: Any) -> Any:
         """mouseDown() -> (half, half)
 
@@ -19517,7 +15920,6 @@ class MPxManipulatorNode(MPxNode):
 
         Returns a tuple consisting of the x and y port coodinates.
         """
-        ...
     def mousePosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """mousePosition() -> (half, half)
 
@@ -19526,7 +15928,6 @@ class MPxManipulatorNode(MPxNode):
 
         Returns a tuple consisting of the x and y port coodinates.
         """
-        ...
     def mouseRay(self: Self, *args: Any, **kwargs: Any) -> Any:
         """mouseRay() -> (MPoint, MVector)
 
@@ -19537,7 +15938,6 @@ class MPxManipulatorNode(MPxNode):
 
         Returns a tuple consisting the local space point and direction.
         """
-        ...
     def mouseRayWorld(self: Self, *args: Any, **kwargs: Any) -> Any:
         """mouseRayWorld() -> (MPoint, MVector)
 
@@ -19548,7 +15948,6 @@ class MPxManipulatorNode(MPxNode):
 
         Returns a tuple consisting the world space point and direction.
         """
-        ...
     def mouseUp(self: Self, *args: Any, **kwargs: Any) -> Any:
         """mouseUp() -> (half, half)
 
@@ -19557,7 +15956,6 @@ class MPxManipulatorNode(MPxNode):
 
         Returns a tuple consisting of the x and y port coodinates.
         """
-        ...
     def name(self: Self, *args: Any, **kwargs: Any) -> Any:
         """name() -> string
 
@@ -19567,7 +15965,6 @@ class MPxManipulatorNode(MPxNode):
 
         Returns the name of the node
         """
-        ...
     def newManipulator(self: Self, *args: Any, **kwargs: Any) -> Any:
         """newManipulator(manipName) -> (MPxManipulatorNode, MObject)
 
@@ -19586,7 +15983,6 @@ class MPxManipulatorNode(MPxNode):
 
         * manipName (string) - manipulator name
         """
-        ...
     def passThroughToMany(self: Self, *args: Any, **kwargs: Any) -> Any:
         """passThroughToMany(plug, plugArray) -> bool
 
@@ -19597,7 +15993,6 @@ class MPxManipulatorNode(MPxNode):
         * plug (MPlug) - the plug.
         * plugArray (MPlugArray) - the corresponding plugs.
         """
-        ...
     def passThroughToOne(self: Self, *args: Any, **kwargs: Any) -> Any:
         """passThroughToOne(plug) -> plug
 
@@ -19609,7 +16004,6 @@ class MPxManipulatorNode(MPxNode):
 
         * plug (MPlug) - the plug.
         """
-        ...
     def postConstructor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """postConstructor() -> self
 
@@ -19617,7 +16011,6 @@ class MPxManipulatorNode(MPxNode):
         The association between the these two objects is not made until after the MPxNode constructor is called. This implies that no MPxNode member function can be called from the MPxNode constructor.
         The postConstructor will get called immediately after the constructor when it is safe to call any MPxNode member function.
         """
-        ...
     def postEvaluation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """postEvaluation(context, evalNode, evalType) -> None
 
@@ -19645,7 +16038,6 @@ class MPxManipulatorNode(MPxNode):
           * kLeaveDirty          : Evaluation was performed without updating this node. Internal
                                    state should be updated to reflect that the node is dirty.
         """
-        ...
     def preDrawUI(self: Self, *args: Any, **kwargs: Any) -> Any:
         """preDrawUI(view) -> None
 
@@ -19662,7 +16054,6 @@ class MPxManipulatorNode(MPxNode):
 
         * view (M3dView) - The view in which to draw
         """
-        ...
     def preEvaluation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """preEvaluation(context, evalNode) -> None
 
@@ -19684,13 +16075,11 @@ class MPxManipulatorNode(MPxNode):
                                              are about to be evaluated for the context.
                                              Should be only used to query information.
         """
-        ...
     def prevColor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """prevColor() -> half
 
         This method returns the previously color used by the colorAndName() method.
         """
-        ...
     def registerForMouseMove(self: Self, *args: Any, **kwargs: Any) -> Any:
         """registerForMouseMove() -> None
 
@@ -19698,13 +16087,11 @@ class MPxManipulatorNode(MPxNode):
         move events. When registered, the doMove() function will
         be invoked on mouse move events.
         """
-        ...
     def selectedColor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """selectedColor() -> half
 
         This method returns the color index of a selected component.
         """
-        ...
     def setDependentsDirty(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDependentsDirty(plug, plugArray) -> self
 
@@ -19725,7 +16112,6 @@ class MPxManipulatorNode(MPxNode):
         * plug (MPlug) - plug which is being set dirty by Maya.
         * plugArray the programmer should add any plugs which they want to set dirty to this list.
         """
-        ...
     def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDoNotWrite(bool) -> self
 
@@ -19735,7 +16121,6 @@ class MPxManipulatorNode(MPxNode):
         1. Plug-in "requires" information will be written out with the model when saved.  But a subsequent reload and resave of the file will cause these to go away.
         2. If this node is a DAG and has a parent or children, the "do not write" flag of the parent or children will not be set. It is the developer's responsibility to ensure that the resulting scene file is capable of being read in without errors due to unwritten nodes.
         """
-        ...
     def setDoubleValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDoubleValue(valueIndex, value) -> None
 
@@ -19745,7 +16130,6 @@ class MPxManipulatorNode(MPxNode):
         * valueIndex (int) - the index of the value to be set
         * value (float) - the value to set it to
         """
-        ...
     def setExistWithoutInConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setExistWithoutInConnections(bool) -> bool
 
@@ -19759,7 +16143,6 @@ class MPxManipulatorNode(MPxNode):
 
         * flag (bool) true if this node can exist without input connections, false otherwise
         """
-        ...
     def setExistWithoutOutConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setExistWithoutOutConnections(bool) -> bool
 
@@ -19773,7 +16156,6 @@ class MPxManipulatorNode(MPxNode):
 
         * flag (bool) true if this node can exist without output connections, false otherwise
         """
-        ...
     def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setExternalContent(table) -> self
 
@@ -19787,7 +16169,6 @@ class MPxManipulatorNode(MPxNode):
 
         * table Key->location table with new content locations.
         """
-        ...
     def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setExternalContentForFileAttr(attr, table) -> bool
 
@@ -19800,7 +16181,6 @@ class MPxManipulatorNode(MPxNode):
 
         Returns True if the plug was successfully written to. False if no entry in the table was named after the attribute or if no plug was found.
         """
-        ...
     def setHandleColor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setHandleColor(drawManager, handleName, colorIndex) -> None
 
@@ -19813,7 +16193,6 @@ class MPxManipulatorNode(MPxNode):
                               methods in this class.  If the component is neither highlighted nor selected,
                               this colorIndex will be used.
         """
-        ...
     def setInternalValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setInternalValue(plug, dataHandle) -> bool
 
@@ -19831,7 +16210,6 @@ class MPxManipulatorNode(MPxNode):
         * plug (MPlug) - the attribute that is being set.
         * dataHandle (MDataHandle) - the dataHandle containing the value to set.
         """
-        ...
     def setInternalValueInContext(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setInternalValueInContext(plug, dataHandle, ctx) -> bool  [OBSOLETE]
 
@@ -19841,7 +16219,6 @@ class MPxManipulatorNode(MPxNode):
         * dataHandle (MDataHandle) - the dataHandle containing the value to set.
         * ctx (MDGContext) - the context the method is being evaluated in.
         """
-        ...
     def setMPSafe(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setMPSafe(bool) -> self
 
@@ -19851,7 +16228,6 @@ class MPxManipulatorNode(MPxNode):
 
         NOTE: This should be called from the postConstructor() method for shading node plug-ins only. If a shading node is non-safe, then it will only be useful during single processor rendering.
         """
-        ...
     def setPointValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setPointValue(valueIndex, value) -> None
 
@@ -19861,7 +16237,6 @@ class MPxManipulatorNode(MPxNode):
         * valueIndex (int) - the index of the value to be set
         * value (MPoint) - the value to set it to
         """
-        ...
     def setVectorValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setVectorValue(valueIndex, value) -> None
 
@@ -19871,7 +16246,6 @@ class MPxManipulatorNode(MPxNode):
         * valueIndex (int) - the index of the value to be set
         * value (MVector) - the value to set it to
         """
-        ...
     def shouldDrawHandleAsSelected(self: Self, *args: Any, **kwargs: Any) -> Any:
         """shouldDrawHandleAsSelected(name) -> bool
         This function is obsolete, please use 'setHandleColor' instead
@@ -19883,7 +16257,6 @@ class MPxManipulatorNode(MPxNode):
 
         Returns true if the handle is active or highlighted.
         """
-        ...
     def shouldSave(self: Self, *args: Any, **kwargs: Any) -> Any:
         """shouldSave(plug) -> bool/None
 
@@ -19894,13 +16267,11 @@ class MPxManipulatorNode(MPxNode):
 
         * plug (MPlug) - plug representing the attribute to be saved.
         """
-        ...
     def thisMObject(self: Self, *args: Any, **kwargs: Any) -> Any:
         """thisMObject() -> MObject
 
         Returns the MObject associated with this user defined node.  This makes it possible to use MFnDependencyNode or to construct plugs to this node's attributes.
         """
-        ...
     def transformInvalidationRange(self: Self, *args: Any, **kwargs: Any) -> Any:
         """transformInvalidationRange(plug, timeRange) -> timeRange
 
@@ -19916,7 +16287,6 @@ class MPxManipulatorNode(MPxNode):
         WARNING: Do *not* call MPxNode::transformInvalidationRange from your override method
         NOTE: If a plugin node have invalidation-range-transformation *conditionally* Only transform the invalidation range when attribute 'enableIRT' is set The plugin should call MPxNode::transformInvalidationRange to signal it does not perform any IRT.
         """
-        ...
     def type(self: Self, *args: Any, **kwargs: Any) -> Any:
         """type() -> int
 
@@ -19950,104 +16320,78 @@ class MPxManipulatorNode(MPxNode):
           kGeometryFilter				Custom deformer derived from MPxGeometryFilter
         	 kBlendShape					Custom deformer derived from MPxBlendShape
         """
-        ...
     def typeId(self: Self, *args: Any, **kwargs: Any) -> Any:
         """typeId() -> MTypeId
 
         Returns the TYPEID of this node.
         """
-        ...
     def typeName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """typeName() -> string
 
         Returns the type name of this node.  The type name identifies the node type to the ASCII file format
         """
-        ...
     def xColor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """xColor() -> half
 
         This method returns the color index of the x axis.
         """
-        ...
     def yColor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """yColor() -> half
 
         This method returns the color index of the y axis.
         """
-        ...
     def zColor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """zColor() -> half
 
         This method returns the color index of the z axis.
         """
-        ...
 
 class MPxSelectionContext(MPxContext):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -20056,7 +16400,6 @@ class MPxSelectionContext(MPxContext):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def abortAction(self: Self, *args: Any, **kwargs: Any) -> Any:
         """abortAction() -> None
 
@@ -20065,7 +16408,6 @@ class MPxSelectionContext(MPxContext):
         Users can override this method if they wish to perform
         certain operations when the abort key is pressed.
         """
-        ...
     def addManipulator(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addManipulator(manipulator) -> None
 
@@ -20073,7 +16415,6 @@ class MPxSelectionContext(MPxContext):
 
         * manipulator (MObject) - the manipulator to be added to the context.
         """
-        ...
     def argTypeNumericalInput(self: Self, *args: Any, **kwargs: Any) -> Any:
         """argTypeNumericalInput(index) -> MSyntax.MArgType
 
@@ -20088,7 +16429,6 @@ class MPxSelectionContext(MPxContext):
 
         * index (int) - the index of the numerical input whose argument type is requested.
         """
-        ...
     def beginMarquee(self: Self, *args: Any, **kwargs: Any) -> Any:
         """beginMarquee(event) -> self
 
@@ -20101,7 +16441,6 @@ class MPxSelectionContext(MPxContext):
 
         * event (MEvent) - current event information.
         """
-        ...
     def completeAction(self: Self, *args: Any, **kwargs: Any) -> Any:
         """completeAction() -> None
 
@@ -20111,7 +16450,6 @@ class MPxSelectionContext(MPxContext):
         For example, a tool may have several steps where the user must
         select objects and then press the completion key before proceeding.
         """
-        ...
     def deleteAction(self: Self, *args: Any, **kwargs: Any) -> Any:
         """deleteAction() -> None
 
@@ -20121,14 +16459,12 @@ class MPxSelectionContext(MPxContext):
         Users can override this method if they wish to do anything else
         when this event occurs.
         """
-        ...
     def deleteManipulators(self: Self, *args: Any, **kwargs: Any) -> Any:
         """deleteManipulators() -> None
 
         This method deletes all the manipulators that belong
         to the context.
         """
-        ...
     def doDrag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doDrag(event, drawManager, frameContext) -> None
 
@@ -20147,7 +16483,6 @@ class MPxSelectionContext(MPxContext):
         * drawManager (MUIDrawManager) - Draw manager to use to draw custom shape
         * frameContext (MFrameContext) - Context of the frame being rendered.
         """
-        ...
     def doDragLegacy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doDragLegacy(event) -> None
 
@@ -20166,7 +16501,6 @@ class MPxSelectionContext(MPxContext):
 
             DEPRECATED in 2023, please use doDrag.
         """
-        ...
     def doEnterRegion(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doEnterRegion(event) -> None
 
@@ -20183,7 +16517,6 @@ class MPxSelectionContext(MPxContext):
 
         * event (MEvent) - The button press event information.
         """
-        ...
     def doHold(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doHold(event, drawManager, frameContext) -> None
 
@@ -20203,7 +16536,6 @@ class MPxSelectionContext(MPxContext):
         * drawManager (MUIDrawManager) - Draw manager to use to draw custom shape
         * frameContext (MFrameContext) - Context of the frame being rendered.
         """
-        ...
     def doHoldLegacy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doHoldLegacy(event) -> None
 
@@ -20223,7 +16555,6 @@ class MPxSelectionContext(MPxContext):
 
             DEPRECATED in 2023, please use doHold.
         """
-        ...
     def doPress(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doPress(event, drawManager, frameContext) -> None
 
@@ -20242,7 +16573,6 @@ class MPxSelectionContext(MPxContext):
         * drawManager (MUIDrawManager) - Draw manager to use to draw custom shape
         * frameContext (MFrameContext) - Context of the frame being rendered.
         """
-        ...
     def doPressLegacy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doPressLegacy(event) -> None
 
@@ -20261,7 +16591,6 @@ class MPxSelectionContext(MPxContext):
 
             DEPRECATED in 2023, please use doPress.
         """
-        ...
     def doPtrMoved(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doPtrMoved(event, drawMgr, context ) -> None
 
@@ -20286,7 +16615,6 @@ class MPxSelectionContext(MPxContext):
         * drawMgr (MHWRender::MUIDrawManager) - The UI draw manager, it can be used to draw some simple geometry including text.
         * context (MHWRender::MFrameContextFrame) - level context information.
         """
-        ...
     def doPtrMovedLegacy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doPtrMovedLegacy(event) -> None
 
@@ -20303,7 +16631,6 @@ class MPxSelectionContext(MPxContext):
 
         * event (MEvent) - The button press event information.
         """
-        ...
     def doRelease(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doRelease(event, drawManager, frameContext) -> None
 
@@ -20322,7 +16649,6 @@ class MPxSelectionContext(MPxContext):
         * drawManager (MUIDrawManager) - Draw manager to use to draw custom shape
         * frameContext (MFrameContext) - Context of the frame being rendered.
         """
-        ...
     def doReleaseLegacy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doReleaseLegacy(event) -> None
 
@@ -20341,7 +16667,6 @@ class MPxSelectionContext(MPxContext):
 
             DEPRECATED in 2023, please use doRelease.
         """
-        ...
     def dragMarquee(self: Self, *args: Any, **kwargs: Any) -> Any:
         """dragMarquee(event) -> self
 
@@ -20350,7 +16675,6 @@ class MPxSelectionContext(MPxContext):
 
         * event (MEvent) - current event information.
         """
-        ...
     def drawFeedback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """drawFeedback(event, drawMgr, context ) -> None
 
@@ -20368,7 +16692,6 @@ class MPxSelectionContext(MPxContext):
         * drawMgr (MHWRender::MUIDrawManager) - The UI draw manager, it can be used to draw some simple geometry including text.
         * context (MHWRender::MFrameContextFrame) - level context information.
         """
-        ...
     def feedbackNumericalInput(self: Self, *args: Any, **kwargs: Any) -> Any:
         """feedbackNumericalInput() -> bool
 
@@ -20378,7 +16701,6 @@ class MPxSelectionContext(MPxContext):
         The return value should indicate whether or not the numerical feedback
         has been provided.  The default return value is false.
         """
-        ...
     def helpStateHasChanged(self: Self, *args: Any, **kwargs: Any) -> Any:
         """helpStateHasChanged(event) -> None
 
@@ -20392,7 +16714,6 @@ class MPxSelectionContext(MPxContext):
 
         * event (MEvent) - The event information.
         """
-        ...
     def image(self: Self, *args: Any, **kwargs: Any) -> Any:
         """image(index) -> string
 
@@ -20405,14 +16726,12 @@ class MPxSelectionContext(MPxContext):
         * index (ImageIndex) - the index of the image being retrieved; three image
         representations are permitted: kImage1, kImage2, kImage3.
         """
-        ...
     def isSelecting(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isSelecting() -> bool
 
         Determines whether an object is selected.
         returns True if an object(s) is selected, False otherwise.
         """
-        ...
     kImage1: int = ...
     kImage2: int = ...
     kImage3: int = ...
@@ -20421,7 +16740,6 @@ class MPxSelectionContext(MPxContext):
 
         Returns the position of the last drag point.
         """
-        ...
     def newToolCommand(self: Self, *args: Any, **kwargs: Any) -> Any:
         """newToolCommand() -> MPxToolCommand
 
@@ -20431,7 +16749,6 @@ class MPxSelectionContext(MPxContext):
 
         Returns a new instance of the MPxToolCommand.
         """
-        ...
     def processNumericalInput(self: Self, *args: Any, **kwargs: Any) -> Any:
         """processNumericalInput(values, flags, isAbsolute) -> bool
 
@@ -20452,7 +16769,6 @@ class MPxSelectionContext(MPxContext):
         determines whether or not a given entry should be ignored.
         * isAbsolute (bool) - whether or not the input should be interpreted as absolute.
         """
-        ...
     def releaseMarquee(self: Self, *args: Any, **kwargs: Any) -> Any:
         """releaseMarquee(event) -> (top, left, bottom, right)
 
@@ -20463,38 +16779,32 @@ class MPxSelectionContext(MPxContext):
         Returns a tuple consisting of the top, left, bottom, and right corners of the marquee area.
         * event (MEvent) - current event information.
         """
-        ...
     def setAllowDoubleClickAction(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setAllowDoubleClickAction() -> None
 
         This method enables the support of double click smart selection for this context.
         """
-        ...
     def setAllowPaintSelect(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setAllowPaintSelect() -> None
 
         This method enables drag selection mode for this context.
         """
-        ...
     def setAllowPreSelectHilight(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setAllowPreSelectHilight() -> None
 
         This method enables the support of pre-selection highlight for this context.
         It needs to be called by the user-overriden MPxContext::toolOnSetup method.
         """
-        ...
     def setAllowSoftSelect(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setAllowSoftSelect() -> None
 
         This method enables the support of soft selection for this context.
         """
-        ...
     def setAllowSymmetry(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setAllowSymmetry() -> None
 
         This method enables the support of symmetrical selection for this context.
         """
-        ...
     def setCursor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setCursor(newCursor) -> self
 
@@ -20502,7 +16812,6 @@ class MPxSelectionContext(MPxContext):
 
         * newCursor (MCursor) - The new cursor.
         """
-        ...
     def setHelpString(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setHelpString(str) -> self
 
@@ -20511,7 +16820,6 @@ class MPxSelectionContext(MPxContext):
 
         * str (string) - The new help string.
         """
-        ...
     def setImage(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setImage(image, index) -> self
 
@@ -20524,7 +16832,6 @@ class MPxSelectionContext(MPxContext):
         * index (ImageIndex) - the index of the image being set; three image
         representations are permitted: kImage1, kImage2, kImage3.
         """
-        ...
     def setTitleString(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setTitleString(str) -> self
 
@@ -20534,13 +16841,11 @@ class MPxSelectionContext(MPxContext):
 
         * str (string) - The new title string.
         """
-        ...
     def startPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
         """startPoint() -> MPoint
 
         Returns the position of the button press.
         """
-        ...
     def stringClassName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """stringClassName() -> string
 
@@ -20560,7 +16865,6 @@ class MPxSelectionContext(MPxContext):
         the string to 'defaultTool'.  The method returns a string
         that uniquely identifies the context.
         """
-        ...
     def toolOffCleanup(self: Self, *args: Any, **kwargs: Any) -> Any:
         """toolOffCleanup() -> None
 
@@ -20569,7 +16873,6 @@ class MPxSelectionContext(MPxContext):
         Users can override this method and use it to reset any user
         defined data to a specific state.
         """
-        ...
     def toolOnSetup(self: Self, *args: Any, **kwargs: Any) -> Any:
         """toolOnSetup(event) -> None
 
@@ -20581,74 +16884,53 @@ class MPxSelectionContext(MPxContext):
 
         * event (MEvent) - The button press event information.
         """
-        ...
 
 class MPxSurfaceShapeUI(object):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -20657,13 +16939,11 @@ class MPxSurfaceShapeUI(object):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def canDrawUV(self: Self, *args: Any, **kwargs: Any) -> Any:
         """canDrawUV() -> bool
 
         Called by Maya to determine if this surface shape supports UV drawing.
         """
-        ...
     def drawUV(self: Self, *args: Any, **kwargs: Any) -> Any:
         """drawUV(view, info) -> self
 
@@ -20672,7 +16952,6 @@ class MPxSurfaceShapeUI(object):
         * view (M3dView) - Texture view in which to draw UVs.
         * info (MTextureEditorDrawInfo) - Drawing parameters.
         """
-        ...
     kSelectMeshEdges: int = ...
     kSelectMeshFaces: int = ...
     kSelectMeshUVs: int = ...
@@ -20682,7 +16961,6 @@ class MPxSurfaceShapeUI(object):
 
         COMMENT
         """
-        ...
     def materials(self: Self, *args: Any, **kwargs: Any) -> Any:
         """materials(path, componentFilter, materials, componentSet=None) -> self
 
@@ -20691,7 +16969,6 @@ class MPxSurfaceShapeUI(object):
 
         * path (MDagPath) - the path for which to get the material
         """
-        ...
     def select(self: Self, *args: Any, **kwargs: Any) -> Any:
         """select(selectInfo, selectionList, worldSpaceSelectPts) -> bool
 
@@ -20703,7 +16980,6 @@ class MPxSurfaceShapeUI(object):
         * selectionList [OUT] (MSelectionList) - List of items selected by this method. Do not update directly: use MSelectInfo.addSelection instead.
         * worldSpaceSelectPts [OUT] (MPointArray) - List of points used to sort corresponding selections in single-select mode. (Closest to camera wins.) Do not update directly: use MSelectInfo.addSelection instead.
         """
-        ...
     def selectUV(self: Self, *args: Any, **kwargs: Any) -> Any:
         """selectUV(view, selType, xmin, ymin, xmax, ymax, singleSelect, selList) -> bool
 
@@ -20732,7 +17008,6 @@ class MPxSurfaceShapeUI(object):
           kSelectMeshFaces    The UV selection type is faces.
           kSelectMeshEdges    The UV selection type is edges.
         """
-        ...
     def snap(self: Self, *args: Any, **kwargs: Any) -> Any:
         """snap(snapInfo) -> bool
 
@@ -20744,13 +17019,11 @@ class MPxSurfaceShapeUI(object):
 
         * snapInfo (MSelectInfo) - the Selection state information.
         """
-        ...
     def surfaceShape(self: Self, *args: Any, **kwargs: Any) -> Any:
         """surfaceShape() -> MPxSurfaceShape
 
         Returns the non-ui shape associated with current instance.
         """
-        ...
     def surfaceShapeUI(self: Self, *args: Any, **kwargs: Any) -> Any:
         """surfaceShapeUI(path) -> MPxSurfaceShapeUI
 
@@ -20760,74 +17033,53 @@ class MPxSurfaceShapeUI(object):
 
         * path (MDagPath) - The full path to a surface shape, including the shape.
         """
-        ...
 
 class MPxToolCommand(MPxCommand):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -20836,10 +17088,8 @@ class MPxToolCommand(MPxCommand):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def appendToResult(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Append a value to the result to be returned by the command."""
-        ...
     def cancel(self: Self, *args: Any, **kwargs: Any) -> Any:
         """cancel() -> None
 
@@ -20847,33 +17097,24 @@ class MPxToolCommand(MPxCommand):
         The user should override this method when the original program state
         needs to be restored.
         """
-        ...
     def clearResult(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Clears the command's result."""
-        ...
     @property
     def commandString(*args: Any, **kwargs: Any) -> Any:
         """Command string to be echoed to the user."""
-        ...
     @commandString.setter
     def commandString(*args: Any, **kwargs: Any) -> Any:
         """Command string to be echoed to the user."""
-        ...
     def currentResult(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the command's current result."""
-        ...
     def currentResultType(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the type of the current result."""
-        ...
     def displayError(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Display an error message."""
-        ...
     def displayInfo(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Display an informational message."""
-        ...
     def displayWarning(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Display a warning message."""
-        ...
     def doFinalize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """doFinalize() -> None
 
@@ -20883,10 +17124,8 @@ class MPxToolCommand(MPxCommand):
 
         * command (MArgList) Reference representing an equivalent
         """
-        ...
     def doIt(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Called by Maya to execute the command."""
-        ...
     def finalize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """finalize() -> None
 
@@ -20895,107 +17134,77 @@ class MPxToolCommand(MPxCommand):
         Users should override this method and contruct an MArgList and
         then pass it to <b>doFinalize</b> for journalling.
         """
-        ...
     def hasSyntax(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Called by Maya to determine if the command provides an MSyntax object describing its syntax."""
-        ...
     @property
     def historyOn(*args: Any, **kwargs: Any) -> Any:
         """Determines if construction history is on for the command."""
-        ...
     @historyOn.setter
     def historyOn(*args: Any, **kwargs: Any) -> Any:
         """Determines if construction history is on for the command."""
-        ...
     def isCurrentResultArray(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the command's current result is an array of values."""
-        ...
     def isUndoable(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Called by Maya to determine if the command supports undo."""
-        ...
     kDouble: int = ...
     kLong: int = ...
     kNoArg: int = ...
     kString: int = ...
     def redoIt(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Called by Maya to redo a previously undone command."""
-        ...
     def setResult(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Set the value of the result to be returned by the command."""
-        ...
     def syntax(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the command's MSyntax object, if it has one."""
-        ...
     def undoIt(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Called by Maya to undo a previously executed command."""
-        ...
 
 class MSelectInfo(MDrawInfo):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -21004,7 +17213,6 @@ class MSelectInfo(MDrawInfo):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def addSelection(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addSelection(item, point, list, points, mask, isComponent) -> self
 
@@ -21017,7 +17225,6 @@ class MSelectInfo(MDrawInfo):
         * mask (MSelectionMask) - Mask used to determine selection priority
         * isComponent (bool) - Indicates whether item to be added is an object or a component
         """
-        ...
     def canDrawComponent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """canDrawComponent(isDisplayOn, compMask) -> bool
 
@@ -21026,41 +17233,35 @@ class MSelectInfo(MDrawInfo):
         * isDisplayOn (bool) - component display is on
         * mask (MSelectionMask) - component mask to test
         """
-        ...
     def completelyInside(self: Self, *args: Any, **kwargs: Any) -> Any:
         """completelyInside() -> bool
 
         Returns True if the object being drawn is inside the viewing frustum.
         """
-        ...
     def displayStatus(self: Self, *args: Any, **kwargs: Any) -> Any:
         """displayStatus() -> int
 
         Returns the status of the object to draw.
         See M3dView.displayStatus() for a list of status.
         """
-        ...
     def displayStyle(self: Self, *args: Any, **kwargs: Any) -> Any:
         """displayStyle() -> int
 
         Returns the display appearance.
         See M3dView.displayStyle() for a list of styles.
         """
-        ...
     def getAlignmentMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getAlignmentMatrix() -> MMatrix
 
         Returns the alignment matrix.
         This method is used to find ray object intersection.
         """
-        ...
     def getLocalRay(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getLocalRay() -> [MPoint, MVector]
 
         Returns the selection ray defined by its starting point (MPoint) and its direction (MVector).
         This method is used to find ray object intersection.
         """
-        ...
     def getPrototype(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getPrototype(drawHandler) -> MDrawRequest
 
@@ -21070,46 +17271,38 @@ class MSelectInfo(MDrawInfo):
 
         * drawHandler (MPxSurfaceShapeUI) - the ui object that is doing the drawing
         """
-        ...
     @property
     def highestPriority(*args: Any, **kwargs: Any) -> Any:
         """The highest selection priority value."""
-        ...
     @highestPriority.setter
     def highestPriority(*args: Any, **kwargs: Any) -> Any:
         """The highest selection priority value."""
-        ...
     def inSelect(self: Self, *args: Any, **kwargs: Any) -> Any:
         """inSelect() -> bool
 
         Returns True during any interactive refresh, as when user is interacting with the scene in any way including camera changes, object or component TRS changes, etc. Use userChangingViewContext for determining whether user is changing the view using view context tools such as tumble, dolly or track.
         """
-        ...
     def inUserInteraction(self: Self, *args: Any, **kwargs: Any) -> Any:
         """inUserInteraction() -> bool
 
         Returns True during any interactive refresh, as when user is changing the view using view context tools such as tumble, dolly or track.  Useful for changing drawing mode to something simpler to speed up interaction re-draw.  Use inUserInteraction for determining whether user is interacting with the scene in any way.
         """
-        ...
     def inclusiveMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
         """inclusiveMatrix() -> MMatrix
 
         Returns the world space inclusive matrix.
         """
-        ...
     def isRay(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isRay() -> bool
 
         Returns True if there is a selection ray.
         This method isused to find ray object intersection.
         """
-        ...
     def multiPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """multiPath() -> MDagPath
 
         Returns the path to the object to be drawn.
         """
-        ...
     def objectDisplayStatus(self: Self, *args: Any, **kwargs: Any) -> Any:
         """objectDisplayStatus(displayObj) -> bool
 
@@ -21117,7 +17310,6 @@ class MSelectInfo(MDrawInfo):
 
         * displayObj (int) - display object mask. See M3dView.objectDisplay() for a list of valid masks.
         """
-        ...
     def pluginObjectDisplayStatus(self: Self, *args: Any, **kwargs: Any) -> Any:
         """pluginObjectDisplayStatus(pluginDisplayFilter) -> bool
 
@@ -21125,19 +17317,16 @@ class MSelectInfo(MDrawInfo):
 
         * pluginDisplayFilter (string) - The name of the plugin display filter which is registered by pluginDisplayFilter command.
         """
-        ...
     def projectionMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
         """projectionMatrix() -> MMatrix
 
         Returns the camera*projection matrix.
         """
-        ...
     def selectClosest(self: Self, *args: Any, **kwargs: Any) -> Any:
         """selectClosest() -> bool
 
         Returns True if we want to select the closest object.
         """
-        ...
     def selectForHilite(self: Self, *args: Any, **kwargs: Any) -> Any:
         """selectForHilite(mask) -> bool
 
@@ -21145,19 +17334,16 @@ class MSelectInfo(MDrawInfo):
 
         * mask (MSelectionMask) - the mask to test
         """
-        ...
     def selectOnHilitedOnly(self: Self, *args: Any, **kwargs: Any) -> Any:
         """selectOnHilitedOnly() -> bool
 
         Returns True if you can only select components if the object is hilited.
         """
-        ...
     def selectPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """selectPath() -> MDagPath
 
         Returns a path to the item that is being selected.
         """
-        ...
     def selectRect(self: Self, *args: Any, **kwargs: Any) -> Any:
         """selectRect() -> [int, int, int, int]
 
@@ -21167,7 +17353,6 @@ class MSelectInfo(MDrawInfo):
           its width,
           its height.
         """
-        ...
     def selectable(self: Self, *args: Any, **kwargs: Any) -> Any:
         """selectable(mask) -> bool
 
@@ -21175,7 +17360,6 @@ class MSelectInfo(MDrawInfo):
 
         * mask (MSelectionMask) - the mask to test
         """
-        ...
     def selectableComponent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """selectableComponent(displayed, mask) -> bool
 
@@ -21184,7 +17368,6 @@ class MSelectInfo(MDrawInfo):
         * displayed (bool) - is the component displayed
         * mask (MSelectionMask) - selection mask
         """
-        ...
     def setMultiPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setMultiPath(path) -> self
 
@@ -21192,7 +17375,6 @@ class MSelectInfo(MDrawInfo):
 
         * path (MDagPath) - the path of the object to be drawn
         """
-        ...
     def setSnapPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setSnapPoint(point) -> bool
 
@@ -21200,92 +17382,68 @@ class MSelectInfo(MDrawInfo):
 
         * point (MPoint) - The point to be snapped to, must be given in world space coordinates.
         """
-        ...
     def singleSelection(self: Self, *args: Any, **kwargs: Any) -> Any:
         """singleSelection() -> bool
 
         This method determines if we want to select a single object.
         """
-        ...
     def userChangingViewContext(self: Self, *args: Any, **kwargs: Any) -> Any:
         """userChangingViewContext() -> bool
 
         Returns True during any interactive refresh, as when user is interacting with the scene in any way including camera changes, object or component TRS changes, etc. Use userChangingViewContext for determining whether user is changing the view using view context tools such as tumble, dolly or track.
         """
-        ...
     def view(self: Self, *args: Any, **kwargs: Any) -> Any:
         """view() -> M3dView
 
         Returns the view that the current selection is taking place in.
         """
-        ...
 
 class MTextureEditorDrawInfo(object):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -21294,7 +17452,6 @@ class MTextureEditorDrawInfo(object):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     @property
     def drawingFunction(*args: Any, **kwargs: Any) -> Any:
         """The current drawing state for a drawUV method call.
@@ -21306,7 +17463,6 @@ class MTextureEditorDrawInfo(object):
           kDrawFacetForSelect    Draw faces for selection
           kDrawUVForSelect       Draw uvs for selection
         """
-        ...
     @drawingFunction.setter
     def drawingFunction(*args: Any, **kwargs: Any) -> Any:
         """The current drawing state for a drawUV method call.
@@ -21318,7 +17474,6 @@ class MTextureEditorDrawInfo(object):
           kDrawFacetForSelect    Draw faces for selection
           kDrawUVForSelect       Draw uvs for selection
         """
-        ...
     kDrawEdgeForSelect: int = ...
     kDrawEverything: int = ...
     kDrawFacetForSelect: int = ...
@@ -21331,69 +17486,49 @@ class MTextureEditorDrawInfo(object):
 class MTimeSliderCustomDrawManager(object):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -21402,7 +17537,6 @@ class MTimeSliderCustomDrawManager(object):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def clearDrawPrimitives(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     def deregisterCustomDraw(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     kAbove: int = ...
@@ -21426,69 +17560,49 @@ class MTimeSliderCustomDrawManager(object):
 class MTimeSliderDrawPrimitive(object):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -21497,23 +17611,18 @@ class MTimeSliderDrawPrimitive(object):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     @property
     def bottom(*args: Any, **kwargs: Any) -> Any:
         """Bottom offset."""
-        ...
     @bottom.setter
     def bottom(*args: Any, **kwargs: Any) -> Any:
         """Bottom offset."""
-        ...
     @property
     def color(*args: Any, **kwargs: Any) -> Any:
         """Color of the primitive."""
-        ...
     @color.setter
     def color(*args: Any, **kwargs: Any) -> Any:
         """Color of the primitive."""
-        ...
     @property
     def drawType(*args: Any, **kwargs: Any) -> Any:
         """One of the primitive type.
@@ -21523,7 +17632,6 @@ class MTimeSliderDrawPrimitive(object):
         kVerticalLine Draws a vertical line at startTime.
         kBracket      Draws a bracket from start to end time.
         """
-        ...
     @drawType.setter
     def drawType(*args: Any, **kwargs: Any) -> Any:
         """One of the primitive type.
@@ -21533,23 +17641,18 @@ class MTimeSliderDrawPrimitive(object):
         kVerticalLine Draws a vertical line at startTime.
         kBracket      Draws a bracket from start to end time.
         """
-        ...
     @property
     def endTime(*args: Any, **kwargs: Any) -> Any:
         """End time of the primitive."""
-        ...
     @endTime.setter
     def endTime(*args: Any, **kwargs: Any) -> Any:
         """End time of the primitive."""
-        ...
     @property
     def height(*args: Any, **kwargs: Any) -> Any:
         """The drawing height."""
-        ...
     @height.setter
     def height(*args: Any, **kwargs: Any) -> Any:
         """The drawing height."""
-        ...
     kBracket: int = ...
     kFilledRect: int = ...
     kFullOutline: int = ...
@@ -21562,102 +17665,74 @@ class MTimeSliderDrawPrimitive(object):
     @property
     def label(*args: Any, **kwargs: Any) -> Any:
         """Label of the primitive."""
-        ...
     @label.setter
     def label(*args: Any, **kwargs: Any) -> Any:
         """Label of the primitive."""
-        ...
     @property
     def priority(*args: Any, **kwargs: Any) -> Any:
         """The drawing priority."""
-        ...
     @priority.setter
     def priority(*args: Any, **kwargs: Any) -> Any:
         """The drawing priority."""
-        ...
     @property
     def startTime(*args: Any, **kwargs: Any) -> Any:
         """Start time of the primitive."""
-        ...
     @startTime.setter
     def startTime(*args: Any, **kwargs: Any) -> Any:
         """Start time of the primitive."""
-        ...
     @property
     def tooltip(*args: Any, **kwargs: Any) -> Any:
         """Tooltip of the primitive."""
-        ...
     @tooltip.setter
     def tooltip(*args: Any, **kwargs: Any) -> Any:
         """Tooltip of the primitive."""
-        ...
 
 class MUiMessage(MMessage):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -21666,7 +17741,6 @@ class MUiMessage(MMessage):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def add3dViewDestroyMsgCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """add3dViewDestroyMsgCallback(panelName, function, clientData=None) -> id
 
@@ -21683,7 +17757,6 @@ class MUiMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-        ...
     def add3dViewPostRenderMsgCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """add3dViewPostRenderMsgCallback(panelName, function, clientData=None) -> id
 
@@ -21702,7 +17775,6 @@ class MUiMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-        ...
     def add3dViewPreRenderMsgCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """add3dViewPreRenderMsgCallback(panelName, function, clientData=None) -> id
 
@@ -21720,7 +17792,6 @@ class MUiMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-        ...
     def add3dViewRenderOverrideChangedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """add3dViewRenderOverrideChangedCallback(panelName, function, clientData=None) -> id
 
@@ -21739,7 +17810,6 @@ class MUiMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-        ...
     def add3dViewRendererChangedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """add3dViewRendererChangedCallback(panelName, function, clientData=None) -> id
 
@@ -21758,7 +17828,6 @@ class MUiMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-        ...
     def addCameraChangedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addCameraChangedCallback(panelName, function, clientData=None) -> id
 
@@ -21778,7 +17847,6 @@ class MUiMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-        ...
     def addUiDeletedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addUiDeletedCallback(uiName, function, clientData=None) -> id
 
@@ -21793,7 +17861,6 @@ class MUiMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-        ...
     def currentCallbackId(self: Self, *args: Any, **kwargs: Any) -> Any:
         """currentCallbackId() -> id
 
@@ -21801,7 +17868,6 @@ class MUiMessage(MMessage):
         outside of a callback, an invalid MCallbackId and failed status will
         be returned.
         """
-        ...
     kDefaultAction: int = ...
     kDoAction: int = ...
     kDoNotDoAction: int = ...
@@ -21813,7 +17879,6 @@ class MUiMessage(MMessage):
          * node (MObject) - Node to query for callbacks.
          * ids (MCallbackIdArray) - Array to store the list of callback IDs.
         """
-        ...
     def removeCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeCallback(id) -> None
 
@@ -21823,7 +17888,6 @@ class MUiMessage(MMessage):
 
          * id (MCallbackId) - identifier of callback to be removed
         """
-        ...
     def removeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeCallbacks(ids) -> None
 
@@ -21833,74 +17897,53 @@ class MUiMessage(MMessage):
 
          * idList (MCallbackIdArray) - list of callbacks to be removed.
         """
-        ...
 
 class RenderParameters(object):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -21909,98 +17952,71 @@ class RenderParameters(object):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     @property
     def baseColor(*args: Any, **kwargs: Any) -> Any:
         """Base color"""
-        ...
     @baseColor.setter
     def baseColor(*args: Any, **kwargs: Any) -> Any:
         """Base color"""
-        ...
     @property
     def showAlphaMask(*args: Any, **kwargs: Any) -> Any:
         """ShowAlphaMask state"""
-        ...
     @showAlphaMask.setter
     def showAlphaMask(*args: Any, **kwargs: Any) -> Any:
         """ShowAlphaMask state"""
-        ...
     @property
     def unfiltered(*args: Any, **kwargs: Any) -> Any:
         """Unfiltered state"""
-        ...
     @unfiltered.setter
     def unfiltered(*args: Any, **kwargs: Any) -> Any:
         """Unfiltered state"""
-        ...
 
 class ShaderContext(object):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -22009,23 +18025,18 @@ class ShaderContext(object):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     @property
     def path(*args: Any, **kwargs: Any) -> Any:
         """DAG path for the given invocation of the shader"""
-        ...
     @path.setter
     def path(*args: Any, **kwargs: Any) -> Any:
         """DAG path for the given invocation of the shader"""
-        ...
     @property
     def shadingEngine(*args: Any, **kwargs: Any) -> Any:
         """Shading engine node for the given invocation of the shader"""
-        ...
     @shadingEngine.setter
     def shadingEngine(*args: Any, **kwargs: Any) -> Any:
         """Shading engine node for the given invocation of the shader"""
-        ...
 
 __builtins__: dict
 __cached__: str

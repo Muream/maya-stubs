@@ -7,69 +7,49 @@ from _typeshed import Incomplete
 class MAnimControl(object):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -78,55 +58,46 @@ class MAnimControl(object):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def animationEndTime(self: Self, *args: Any, **kwargs: Any) -> Any:
         """animationEndTime() -> MTime
 
         Return an MTime specifying the last frame of the animation, as specified by the Maya user in the Range Slider UI.
         """
-        ...
     def animationStartTime(self: Self, *args: Any, **kwargs: Any) -> Any:
         """animationStartTime() -> MTime
 
         Return an MTime specifying the first frame of the animation, as specified by the Maya user in the Range Slider UI.
         """
-        ...
     def autoKeyMode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """autoKeyMode() -> bool
 
         Return the autoKeyMode.
         """
-        ...
     def currentTime(self: Self, *args: Any, **kwargs: Any) -> Any:
         """currentTime() -> MTime
 
         Return an MTime instance containing the current animation frame.
         """
-        ...
     def globalInTangentType(self: Self, *args: Any, **kwargs: Any) -> Any:
         """globalInTangentType() -> int
 
         Return the current global in tangent type.
         """
-        ...
     def globalOutTangentType(self: Self, *args: Any, **kwargs: Any) -> Any:
         """globalOutTangentType() -> int
 
         Return the current global out tangent type.
         """
-        ...
     def isPlaying(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isPlaying() -> bool
 
         Return a value indicating whether Maya is currently playing the animation
         """
-        ...
     def isScrubbing(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isScrubbing() -> bool
 
         Return a value indicating whether interactive scrubbing is occuring while Maya is not currently playing an animation.
         """
-        ...
     kPlaybackLoop: int = ...
     kPlaybackOnce: int = ...
     kPlaybackOscillate: int = ...
@@ -137,31 +108,26 @@ class MAnimControl(object):
 
         Return an MTime specifying the last frame of the current playback time range.
         """
-        ...
     def minTime(self: Self, *args: Any, **kwargs: Any) -> Any:
         """minTime() -> MTime
 
         Return an MTime specifying the first frame of the current playback time range.
         """
-        ...
     def playBackward(self: Self, *args: Any, **kwargs: Any) -> Any:
         """playBackward() -> None
 
         Start playing the current animation backwards.
         """
-        ...
     def playForward(self: Self, *args: Any, **kwargs: Any) -> Any:
         """playForward() -> None
 
         Start playing the current animation forwards.
         """
-        ...
     def playbackBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """playbackBy() -> float
 
         Return a float specifying the increment between times viewed during the playing of the animation.
         """
-        ...
     def playbackMode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """playbackMode() -> int
 
@@ -170,110 +136,92 @@ class MAnimControl(object):
           MAnimControl.kPlaybackLoop         Play continuously.
           MAnimControl.kPlaybackOscillate    Play forwards, then backwards continuously.
         """
-        ...
     def playbackSpeed(self: Self, *args: Any, **kwargs: Any) -> Any:
         """playbackSpeed() -> float
 
         Return the speed with with to play the animation.
         """
-        ...
     def setAnimationEndTime(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setAnimationEndTime(MTime) -> None
 
         Set the value of the last frame in the animation.
         """
-        ...
     def setAnimationStartEndTime(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setAnimationStartEndTime(MTime, MTime) -> None
 
         Set the values of the first and last frames in the animation.
         """
-        ...
     def setAnimationStartTime(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setAnimationStartTime(MTime) -> None
 
         Set the value of the first frame in the animation.
         """
-        ...
     def setAutoKeyMode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setAutoKeyMode(bool) -> None
 
         Set the autoKeyMode.
         """
-        ...
     def setCurrentTime(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setMinTime(MTime) -> None
 
         Set the current animation frame.
         """
-        ...
     def setGlobalInTangentType(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setGlobalInTangentType(int) -> None
 
         Set the current global in tangent type
         """
-        ...
     def setGlobalOutTangentType(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setGlobalOutTangentType(int) -> None
 
         Set the current global out tangent type.
         """
-        ...
     def setMaxTime(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setMaxTime(MTime) -> None
 
         Set the value of the last frame of the current playback time range.
         """
-        ...
     def setMinMaxTime(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setMinMaxTime(MTime, MTime) -> None
 
         Set the values of the first and last frames of the playback time range.
         """
-        ...
     def setMinTime(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setMinTime(MTime) -> None
 
         Set the value of the first frame of the current playback time range.
         """
-        ...
     def setPlaybackBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setPlaybackBy(float) -> None
 
         Specify the increment between times viewed during the playing of the animation.
         """
-        ...
     def setPlaybackMode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setPlaybackMode(int) -> None
 
         Set the current playback mode.
         """
-        ...
     def setPlaybackSpeed(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setPlaybackSpeed(float) -> None
 
         Set the desired speed factor at which the animation will play back.
         """
-        ...
     def setViewMode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setViewMode(int) -> None
 
         Set the current viewing mode.
         Controls whether the animation is run in only the active view, or simultaneously in all views.
         """
-        ...
     def setWeightedTangents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setWeightedTangents(bool) -> None
 
         Sets whether or not the tangents on the Anim Curve are weighted.
         """
-        ...
     def stop(self: Self, *args: Any, **kwargs: Any) -> Any:
         """stop() -> None
 
         Stop playing the current animation.
         """
-        ...
     def viewMode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """viewMode() -> int
 
@@ -281,80 +229,58 @@ class MAnimControl(object):
           MAnimControl.kPlaybackViewAll      Playback in all views.
           MAnimControl.kPlaybackViewActive   Playback in only the active view.
         """
-        ...
     def weightedTangents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """weightedTangents() -> bool
 
         Determine whether or not the tangents on the Anim Curve are weighted.
         """
-        ...
 
 class MAnimCurveChange(object):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -363,80 +289,57 @@ class MAnimCurveChange(object):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def redoIt(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Redo all of the Anim Curve changes in this cache."""
-        ...
     def undoIt(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Undo all of the Anim Curve changes in this cache."""
-        ...
 
 class MAnimCurveClipboard(object):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -445,43 +348,34 @@ class MAnimCurveClipboard(object):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """clear() -> self
 
         Clears the clipboard.
         """
-        ...
     def clipboardItems(self: Self, *args: Any, **kwargs: Any) -> Any:
         """clipboardItems() -> MAnimCurveClipboardItemArray
 
         Returns the clipboard items.
         """
-        ...
     @property
     def endTime(*args: Any, **kwargs: Any) -> Any:
         """The end time of the clipboard."""
-        ...
     @endTime.setter
     def endTime(*args: Any, **kwargs: Any) -> Any:
         """The end time of the clipboard."""
-        ...
     @property
     def endUnitlessInput(*args: Any, **kwargs: Any) -> Any:
         """The end unitless input of the clipboard."""
-        ...
     @endUnitlessInput.setter
     def endUnitlessInput(*args: Any, **kwargs: Any) -> Any:
         """The end unitless input of the clipboard."""
-        ...
     @property
     def isEmpty(*args: Any, **kwargs: Any) -> Any:
         """Whether the clipboard is empty."""
-        ...
     @isEmpty.setter
     def isEmpty(*args: Any, **kwargs: Any) -> Any:
         """Whether the clipboard is empty."""
-        ...
     def set(self: Self, *args: Any, **kwargs: Any) -> Any:
         """set( clipboard ) -> self
         set( items ) -> self
@@ -490,91 +384,66 @@ class MAnimCurveClipboard(object):
         Sets the content of the clipboard.
         'items' may be either an MAnimClipboardItemArray or a sequence of MAnimClipboardItems.
         """
-        ...
     @property
     def startTime(*args: Any, **kwargs: Any) -> Any:
         """The start time of the clipboard."""
-        ...
     @startTime.setter
     def startTime(*args: Any, **kwargs: Any) -> Any:
         """The start time of the clipboard."""
-        ...
     @property
     def startUnitlessInput(*args: Any, **kwargs: Any) -> Any:
         """The start unitless input of the clipboard."""
-        ...
     @startUnitlessInput.setter
     def startUnitlessInput(*args: Any, **kwargs: Any) -> Any:
         """The start unitless input of the clipboard."""
-        ...
     theAPIClipboard: MAnimCurveClipboard = ...
 
 class MAnimCurveClipboardItem(object):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -583,167 +452,123 @@ class MAnimCurveClipboardItem(object):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     @property
     def animCurve(*args: Any, **kwargs: Any) -> Any:
         """The anim curve."""
-        ...
     @animCurve.setter
     def animCurve(*args: Any, **kwargs: Any) -> Any:
         """The anim curve."""
-        ...
     def animCurveType(self: Self, *args: Any, **kwargs: Any) -> Any:
         """animCurveType() -> MFnAnimCurve.AnimCurveType
 
         Returns the type of the item's anim curve.
         """
-        ...
     @property
     def fullAttributeName(*args: Any, **kwargs: Any) -> Any:
         """The full attribute name."""
-        ...
     @fullAttributeName.setter
     def fullAttributeName(*args: Any, **kwargs: Any) -> Any:
         """The full attribute name."""
-        ...
     def getAddressingInfo(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getAddressingInfo() -> (unsigned int, unsigned int, unsigned int)
 
         Returns the addressing information for this clipboard item
         as (rowCount, childCount, attributeCount).
         """
-        ...
     @property
     def leafAttributeName(*args: Any, **kwargs: Any) -> Any:
         """The leaf attribute name."""
-        ...
     @leafAttributeName.setter
     def leafAttributeName(*args: Any, **kwargs: Any) -> Any:
         """The leaf attribute name."""
-        ...
     @property
     def nodeName(*args: Any, **kwargs: Any) -> Any:
         """The node name."""
-        ...
     @nodeName.setter
     def nodeName(*args: Any, **kwargs: Any) -> Any:
         """The node name."""
-        ...
     def setAddressingInfo(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setAddressingInfo(rowCount, childCount, attributeCount) -> self
 
         Sets the addressing information for this clipboard item.
         """
-        ...
     def setAnimCurve(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setAnimCurve(object) -> self
 
         Sets the anim curve MObject.
         """
-        ...
     def setNameInfo(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setNameInfo(nodeName, fullName, leafName) -> self
 
         Sets the name information for this clipboard item.
         """
-        ...
 
 class MAnimCurveClipboardItemArray(object):
     def __add__(self: Self, value: Any) -> Any:
         """Return self+value."""
-        ...
     def __contains__(self: Self, key: Any) -> Any:
         """Return key in self."""
-        ...
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __iadd__(self: Self, value: Any) -> Any:
         """Implement self+=value."""
-        ...
     def __imul__(self: Self, value: Any) -> Any:
         """Implement self*=value."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __mul__(self: Self, value: Any) -> Any:
         """Return self*value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __rmul__(self: Self, value: Any) -> Any:
         """Return value*self."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -752,100 +577,71 @@ class MAnimCurveClipboardItemArray(object):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def append(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
-        ...
     def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Remove all elements from the array."""
-        ...
     def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Replace the array contents with that of another or of a compatible Python sequence."""
-        ...
     def insert(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Insert a new value into the array at the given index."""
-        ...
     def remove(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Remove an element from the array."""
-        ...
     def setLength(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Grow or shrink the array to contain a specific number of elements."""
-        ...
     @property
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
         """Number of elements by which to grow the array when necessary."""
-        ...
     @sizeIncrement.setter
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
         """Number of elements by which to grow the array when necessary."""
-        ...
 
 class MAnimMessage(MMessage):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -854,7 +650,6 @@ class MAnimMessage(MMessage):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def addAnimCurveEditedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addAnimCurveEditedCallback(function, clientData=None) -> id
 
@@ -867,7 +662,6 @@ class MAnimMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-        ...
     def addAnimKeyframeEditCheckCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addAnimKeyframeEditCheckCallback(function, clientData=None) -> id
 
@@ -883,7 +677,6 @@ class MAnimMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-        ...
     def addAnimKeyframeEditedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addAnimKeyframeEditedCallback(function, clientData=None) -> id
 
@@ -902,7 +695,6 @@ class MAnimMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-        ...
     def addDisableImplicitControlCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addDisableImplicitControlCallback(function, clientData=None) -> id
 
@@ -920,7 +712,6 @@ class MAnimMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-        ...
     def addNodeAnimKeyframeEditedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addNodeAnimKeyframeEditedCallback(animNode, function, clientData=None) -> id
 
@@ -942,7 +733,6 @@ class MAnimMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-        ...
     def addPostBakeResultsCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addPostBakeResultsCallback(function, clientData=None) -> id
 
@@ -959,7 +749,6 @@ class MAnimMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-        ...
     def addPreBakeResultsCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addPreBakeResultsCallback(function, clientData=None) -> id
 
@@ -976,7 +765,6 @@ class MAnimMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-        ...
     def currentCallbackId(self: Self, *args: Any, **kwargs: Any) -> Any:
         """currentCallbackId() -> id
 
@@ -984,7 +772,6 @@ class MAnimMessage(MMessage):
         outside of a callback, an invalid MCallbackId and failed status will
         be returned.
         """
-        ...
     def flushAnimKeyframeEditedCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
         """flushAnimKeyframeEditedCallbacks() -> None
 
@@ -994,7 +781,6 @@ class MAnimMessage(MMessage):
         flush all animation keyframe edited callbacks and force them to issue
         their callbacks with the data contained within.
         """
-        ...
     kDefaultAction: int = ...
     kDoAction: int = ...
     kDoNotDoAction: int = ...
@@ -1006,7 +792,6 @@ class MAnimMessage(MMessage):
          * node (MObject) - Node to query for callbacks.
          * ids (MCallbackIdArray) - Array to store the list of callback IDs.
         """
-        ...
     def removeCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeCallback(id) -> None
 
@@ -1016,7 +801,6 @@ class MAnimMessage(MMessage):
 
          * id (MCallbackId) - identifier of callback to be removed
         """
-        ...
     def removeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeCallbacks(ids) -> None
 
@@ -1026,74 +810,53 @@ class MAnimMessage(MMessage):
 
          * idList (MCallbackIdArray) - list of callbacks to be removed.
         """
-        ...
 
 class MAnimUtil(object):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -1102,7 +865,6 @@ class MAnimUtil(object):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def findAnimatablePlugs(self: Self, *args: Any, **kwargs: Any) -> Any:
         """findAnimatablePlugs(MSelectionList) -> MPlugArray
 
@@ -1113,7 +875,6 @@ class MAnimUtil(object):
         faces can be easily described on an MSelectionList, making this a
         good way to determine if parts of a shape are animatable or not.
         """
-        ...
     def findAnimatedPlugs(self: Self, *args: Any, **kwargs: Any) -> Any:
         """findAnimatedPlugs(MObject, bool) -> MPlugArray
         findAnimatedPlugs(MDagPath, bool) -> MPlugArray
@@ -1121,7 +882,6 @@ class MAnimUtil(object):
 
         Find the list of attributes (MPlugs) on the input object that is animated.
         """
-        ...
     def findAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """findAnimation(MPlug) -> MObjectArray
 
@@ -1132,7 +892,6 @@ class MAnimUtil(object):
         one animCurve, although Maya does not currently offer a UI to do so.
         Compound attributes are not expanded to include any child attributes.
         """
-        ...
     def findConstraint(self: Self, *args: Any, **kwargs: Any) -> Any:
         """findConstraint(Mplug) -> (MObject, MObjectArray)
 
@@ -1142,7 +901,6 @@ class MAnimUtil(object):
 
         Compound attributes are not expanded to include any child attributes.
         """
-        ...
     def findSetDrivenKeyAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """findSetDrivenKeyAnimation(MPlug) -> (MObjectArray, MPlugArray)
 
@@ -1162,7 +920,6 @@ class MAnimUtil(object):
 
         Compound attributes are not expanded to include any child attributes.
         """
-        ...
     def isAnimated(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isAnimated(MObject, bool) -> bool
         isAnimated(MDagPath, bool) -> bool
@@ -1173,74 +930,53 @@ class MAnimUtil(object):
         If the MObject is a hierarchical object (such as a dag node) then
         you may also specify whether or not the input object's parents are examined.
         """
-        ...
 
 class MFnAnimCurve(MFnDependencyNode):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -1249,16 +985,12 @@ class MFnAnimCurve(MFnDependencyNode):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def absoluteName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the absolute name of this node.  The absolute name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself.  Regardless of relative name mode, absoluteName() will always return a full namespace path prefixed with a leading colon (the root namespace).  If the underlying node is a DAG node, then absoluteName() does not guarantee uniqueness, that is, two dependency nodes could have the same absoluteName().  In cases like this the uniqueName() method will guarantee that the name uniquely identifies the node."""
-        ...
     def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds a new dynamic attribute to the node."""
-        ...
     def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds content info to the specified table from a file path attribute."""
-        ...
     def addKey(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addKey(at, value, tangentInType=kTangentGlobal, tangentOutType=kTangentGlobal, change=None) -> unsigned int
 
@@ -1266,48 +998,36 @@ class MFnAnimCurve(MFnDependencyNode):
         at and value can both be either MTime or double,depending on what is appropriate for the animCurve type.
         change is an optional MAnimCurveChange.
         """
-        ...
     def addKeys(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addKeys(times, values, tangentInType=kTangentGlobal, tangentOutType=kTangentGlobal, keepExistingKeys=False, change=None) -> self
 
         Add a set of new keys with the given corresponding values and tangent typesat the specified times.  This method only works for animCurves of typekAnimCurveTA, kAnimCurveTL and kAnimCurveTU.
         """
-        ...
     def addKeysWithTangents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addKeysWithTangents(times, values, tangentInType=kTangentGlobal, tangentOutType=kTangentGlobal, tangentInTypeArray=None, tangentOutTypeArray=None, tangentInXArray=None, tangentInYArray=None, tangentOutXArray=None, tangentOutYArray=None, tangentsLockedArray=None, weightsLockedArray=None, convertUnits=True, keepExistingKeys=False, change=None) -> self
 
         Add a set of new keys with the given corresponding values, tangent types and tangents at the specified times.  This method only works for animCurves of typekAnimCurveTA, kAnimCurveTL and kAnimCurveTU.
         """
-        ...
     def affectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the changes to the node may affect animation."""
-        ...
     def allocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Allocates a flag on all nodes for use by the named plugin and returns the flag's index."""
-        ...
     @property
     def animCurveType(*args: Any, **kwargs: Any) -> Any:
         """Anim curve type."""
-        ...
     @animCurveType.setter
     def animCurveType(*args: Any, **kwargs: Any) -> Any:
         """Anim curve type."""
-        ...
     def attribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns an attribute of the node, given either its index or name."""
-        ...
     def attributeClass(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the class of the specified attribute."""
-        ...
     def attributeCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the number of attributes on the node."""
-        ...
     def canBeWritten(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the node will be written to file."""
-        ...
     def classification(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the classification string for the named node type."""
-        ...
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """create(node, attribute, animCurveType=kAnimCurveUnknown [, modifier] ) -> MObject
         create(plug, animCurveType=kAnimCurveUnknown [, modifier] ) -> MObject
@@ -1328,34 +1048,24 @@ class MFnAnimCurve(MFnDependencyNode):
         kAnimCurveUU		Unitless to Unitless
         kAnimCurveUnknown	Unknown type
         """
-        ...
     def deallocateAllFlags(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates all node flags which are currently allocated to the named plugin."""
-        ...
     def deallocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates the specified node flag, which was previously allocated by the named plugin using allocateFlag()."""
-        ...
     def dgCallbackIds(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information for a specific callback type, broken down by callbackId."""
-        ...
     def dgCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information broken down by callback type."""
-        ...
     def dgTimer(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a specific DG timer metric for a given timer type."""
-        ...
     def dgTimerOff(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing off for this node."""
-        ...
     def dgTimerOn(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing on for this node."""
-        ...
     def dgTimerQueryState(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the current DG timer state for this node."""
-        ...
     def dgTimerReset(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Resets all DG timers for this node."""
-        ...
     def evaluate(self: Self, *args: Any, **kwargs: Any) -> Any:
         """evaluate(at) -> value
 
@@ -1363,77 +1073,59 @@ class MFnAnimCurve(MFnDependencyNode):
         For curves of type kAnimCurveTA, kAnimCurveTL and kAnimCurveTU,the at parameter is an MTime, otherwise it is a double.
         For curves of type kAnimCurveTT and kAnimCurveUT,the value is an MTime, otherwise it is a double.
         """
-        ...
     def find(self: Self, *args: Any, **kwargs: Any) -> Any:
         """find(at) -> unsigned int
 
         Determines the index of the key which is set at the specifiedMTime (time-input curves) or double (unitless-input curves).
         Returns None if the key is not found.
         """
-        ...
     def findAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the attribute which has the given alias."""
-        ...
     def findClosest(self: Self, *args: Any, **kwargs: Any) -> Any:
         """findClosest(at) -> unsigned int
 
         Determines the index of the key which is set at theMTime (time-input curves) or double (unitless-input curves)closest to the specified time.
         """
-        ...
     def findPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a plug for the given attribute."""
-        ...
     def getAffectedAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which are affected by the specified attribute."""
-        ...
     def getAffectingAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which affect the specified attribute."""
-        ...
     def getAliasAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's alias attribute, which is a special attribute used to store information about the node's attribute aliases."""
-        ...
     def getAliasList(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the node's attribute aliases."""
-        ...
     def getConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all the plugs which are connected to attributes of this node."""
-        ...
     def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Gets the external content (files) that this node depends on."""
-        ...
     def getTangentAngleWeight(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getTangentAngleWeight(index, isInTangent) -> (MAngle,double)
 
         Determines the angle and weight of the in- or out-tangent to the curvefor the key at the specified index
         """
-        ...
     def getTangentXY(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getTangentXY(index, isInTangent) -> (x,y)
 
         Determines the x,y value representing the vector of the in- orout-tangent (depending on the value of the isInTangent parameter) tothe curve for the key at the specified index.  The values returnedwill be in Maya's internal units (seconds for time, centimeters forlinear, radians for angles).
         """
-        ...
     def hasAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node has an attribute with the given name."""
-        ...
     def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the function set is compatible with the specified Maya object."""
-        ...
     def hasUniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node's name is unique."""
-        ...
     def inTangentType(self: Self, *args: Any, **kwargs: Any) -> Any:
         """inTangentType(index) -> TangentType
 
         Determines the type of the tangent to the curve entering the current key.
         """
-        ...
     def input(self: Self, *args: Any, **kwargs: Any) -> Any:
         """input(index) -> MTime or double
 
         Determines the input (MTime for T* curves or double for U* curves) of the key at the specified index.
         """
-        ...
     def insertKey(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addKey(time, breakdown=False, change=None) -> unsigned int
 
@@ -1444,86 +1136,65 @@ class MFnAnimCurve(MFnDependencyNode):
         change is an optional MAnimCurveChange.
         Returns the index of the newly inserted key.
         """
-        ...
     def isBreakdown(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isBreakdown(index) -> bool
 
         Determines whether or not a key is a breakdown.
         """
-        ...
     @property
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-        ...
     @isDefaultNode.setter
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-        ...
     def isFlagSet(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the state of the specified node flag."""
-        ...
     @property
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
         """True if the node is from a referenced file, False if the node is part of the main scene."""
-        ...
     @isFromReferencedFile.setter
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
         """True if the node is from a referenced file, False if the node is part of the main scene."""
-        ...
     @property
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-        ...
     @isLocked.setter
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-        ...
     def isNewAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the specified attribute was added in the current scene, and not by by one of its referenced files."""
-        ...
     @property
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-        ...
     @isShared.setter
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-        ...
     @property
     def isStatic(*args: Any, **kwargs: Any) -> Any:
         """Whether the curve is static."""
-        ...
     @isStatic.setter
     def isStatic(*args: Any, **kwargs: Any) -> Any:
         """Whether the curve is static."""
-        ...
     @property
     def isTimeInput(*args: Any, **kwargs: Any) -> Any:
         """Whether the curve has time as an input."""
-        ...
     @isTimeInput.setter
     def isTimeInput(*args: Any, **kwargs: Any) -> Any:
         """Whether the curve has time as an input."""
-        ...
     def isTrackingEdits(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node is referenced or in an assembly that is tracking edits."""
-        ...
     @property
     def isUnitlessInput(*args: Any, **kwargs: Any) -> Any:
         """Whether the curve has unitless input."""
-        ...
     @isUnitlessInput.setter
     def isUnitlessInput(*args: Any, **kwargs: Any) -> Any:
         """Whether the curve has unitless input."""
-        ...
     @property
     def isWeighted(*args: Any, **kwargs: Any) -> Any:
         """Whether the curve has weighted tangents."""
-        ...
     @isWeighted.setter
     def isWeighted(*args: Any, **kwargs: Any) -> Any:
         """Whether the curve has weighted tangents."""
-        ...
     kAnimCurveTA: int = ...
     kAnimCurveTL: int = ...
     kAnimCurveTT: int = ...
@@ -1588,97 +1259,73 @@ class MFnAnimCurve(MFnDependencyNode):
     kTimerUninitialized: int = ...
     def name(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's name."""
-        ...
     @property
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-        ...
     @namespace.setter
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-        ...
     @property
     def numKeys(*args: Any, **kwargs: Any) -> Any:
         """Number of keys."""
-        ...
     @numKeys.setter
     def numKeys(*args: Any, **kwargs: Any) -> Any:
         """Number of keys."""
-        ...
     def object(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-        ...
     def outTangentType(self: Self, *args: Any, **kwargs: Any) -> Any:
         """outTangentType(index) -> TangentType
 
         Determines the type of the tangent to the curve leaving the current key.
         """
-        ...
     @property
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-        ...
     @pluginName.setter
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-        ...
     def plugsAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the alias for a plug's attribute."""
-        ...
     @property
     def postInfinityType(*args: Any, **kwargs: Any) -> Any:
         """The curve's post-infinity type."""
-        ...
     @postInfinityType.setter
     def postInfinityType(*args: Any, **kwargs: Any) -> Any:
         """The curve's post-infinity type."""
-        ...
     @property
     def preInfinityType(*args: Any, **kwargs: Any) -> Any:
         """The curve's pre-infinity type."""
-        ...
     @preInfinityType.setter
     def preInfinityType(*args: Any, **kwargs: Any) -> Any:
         """The curve's pre-infinity type."""
-        ...
     def remove(self: Self, *args: Any, **kwargs: Any) -> Any:
         """remove(index, change=None) -> self
 
         Removes the key at the specified index.
         change is an optional MAnimCurveChange.
         """
-        ...
     def removeAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Removes a dynamic attribute from the node."""
-        ...
     def reorderedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns one of the node's attribute, based on the order in which they are written to file."""
-        ...
     def setAffectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Specifies that modifications to a node could potentially affect the animation."""
-        ...
     def setAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds or removes an attribute alias."""
-        ...
     def setAngle(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setAngle(index, setAngle, isInTangent, change=None) -> self
 
         Sets the in- or out-angle of the tangent for the key at the given index.
         isInTangent is True to modify the inTangent or False to modify the outTangent.
         """
-        ...
     def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Used to prevent the node from being written to file."""
-        ...
     def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Changes the location of external content."""
-        ...
     def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets content info in the specified attribute from the table."""
-        ...
     def setFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the state of the specified node flag."""
-        ...
     def setInTangentType(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setInTangentType(index, tangentType, change=None) -> self
 
@@ -1697,43 +1344,35 @@ class MFnAnimCurve(MFnDependencyNode):
         kTangentStepNext	StepNext
         kTangentAuto		AutokTangentAutoMix		AutoMixkTangentAutoEase		AutoEasekTangentAutoCustom		AutoCustom
         """
-        ...
     def setInput(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setInput(index, at, change=None) -> self
 
         Sets the input (MTime for T* curves or double for U* curves) of the key at the specified index.  This will fail ifsetting the input would require re-ordering of the keys.
         """
-        ...
     def setIsBreakdown(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setIsBreakdown(index, isBreakdown, change=None) -> self
 
         Sets the breakdown state of a key at a given index.
         """
-        ...
     def setIsWeighted(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setIsWeighted(isWeighted, change=None) -> self
 
         Sets whether or not the curve has weighted tangents.
         """
-        ...
     def setName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's name."""
-        ...
     def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Attaches the function set to the specified Maya object."""
-        ...
     def setOutTangentType(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setOutTangentType(index, tangentType, change=None) -> self
 
         Sets the type of the tangent to the curve leaving the key at thespecified index.
         """
-        ...
     def setPostInfinityType(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setPostInfinityType(infinityType, change=None) -> self
 
         Sets the behaviour of the curve for the range occurring after the last key.
         """
-        ...
     def setPreInfinityType(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setPreInfinityType(infinityType, change=None) -> self
 
@@ -1745,7 +1384,6 @@ class MFnAnimCurve(MFnDependencyNode):
         kCycleRelative		Cycle relative
         kOscillate			Oscillate
         """
-        ...
     def setTangent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setTangent(index, xOrAngle, yOrWeight, isInTangent, change=None, convertUnits=True) -> self
 
@@ -1753,166 +1391,126 @@ class MFnAnimCurve(MFnDependencyNode):
         The tangent can be specified as an x/y pair, oras an MAngle and a weight.
         isInTangent is True to modify the inTangent or False to modify the outTangent.
         """
-        ...
     def setTangentTypes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setTangentTypes(indexArray, tangentInType=kTangentGlobal, tangentOutType=kTangentGlobal, change=None) -> self
 
         Sets the tangent types for multiple keys.
         """
-        ...
     def setTangentsLocked(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setTangentsLocked(index, locked, change=None) -> self
 
         Lock or unlock the tangents at the given key.
         """
-        ...
     def setUuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's UUID."""
-        ...
     def setValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setValue(index, value, change=None) -> self
 
         Sets the value of the key at the specified index.  This methodshould only be used on Anim Curves of type kAnimCurve*A, kAnimCurve*Lor kAnimCurve*U.
         """
-        ...
     def setWeight(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setWeight(index, weight, isInTangent, change=None) -> self
 
         Sets the in- or out-weight of the tangent for the key at the given index.
         isInTangent is True to modify the inTangent or False to modify the outTangent.
         """
-        ...
     def setWeightsLocked(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setWeightsLocked(index, locked, change=None) -> self
 
         Lock or unlock the weights at the given key.
         """
-        ...
     def tangentsLocked(self: Self, *args: Any, **kwargs: Any) -> Any:
         """tangentsLocked(index) -> bool
 
         Determines whether the tangents are locked at the given key.
         """
-        ...
     def timedAnimCurveTypeForPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """timedAnimCurveTypeForPlug(plug) -> AnimCurveType
 
         Returns the timed animCurve type appropriate for the specified plug.
         """
-        ...
     def type(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the type of the function set."""
-        ...
     @property
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
-        ...
     @typeId.setter
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
-        ...
     @property
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-        ...
     @typeName.setter
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-        ...
     def uniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """For a DAG node, the unique name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself. For a non-DAG node, the uniqueName is just its name."""
-        ...
     def unitlessAnimCurveTypeForPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """unitlessAnimCurveTypeForPlug(plug) -> AnimCurveType
 
         Returns the unitless animCurve type appropriate for the specified plug.
         """
-        ...
     def userNode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the MPxNode object for a plugin node."""
-        ...
     def uuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's UUID."""
-        ...
     def value(self: Self, *args: Any, **kwargs: Any) -> Any:
         """value(index) -> double
 
         Determines the value of the key at the specified index.  This methodshould only be used on Anim Curves of type kAnimCurve*A, kAnimCurve*Lor kAnimCurve*U.
         """
-        ...
     def weightsLocked(self: Self, *args: Any, **kwargs: Any) -> Any:
         """weightsLocked(index) -> bool
 
         Determines whether the weights are locked at the given key.
         """
-        ...
 
 class MFnGeometryFilter(MFnDependencyNode):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -1921,46 +1519,32 @@ class MFnGeometryFilter(MFnDependencyNode):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def absoluteName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the absolute name of this node.  The absolute name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself.  Regardless of relative name mode, absoluteName() will always return a full namespace path prefixed with a leading colon (the root namespace).  If the underlying node is a DAG node, then absoluteName() does not guarantee uniqueness, that is, two dependency nodes could have the same absoluteName().  In cases like this the uniqueName() method will guarantee that the name uniquely identifies the node."""
-        ...
     def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds a new dynamic attribute to the node."""
-        ...
     def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds content info to the specified table from a file path attribute."""
-        ...
     def affectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the changes to the node may affect animation."""
-        ...
     def allocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Allocates a flag on all nodes for use by the named plugin and returns the flag's index."""
-        ...
     def attribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns an attribute of the node, given either its index or name."""
-        ...
     def attributeClass(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the class of the specified attribute."""
-        ...
     def attributeCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the number of attributes on the node."""
-        ...
     def canBeWritten(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the node will be written to file."""
-        ...
     def classification(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the classification string for the named node type."""
-        ...
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new node of the given type."""
-        ...
     def deallocateAllFlags(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates all node flags which are currently allocated to the named plugin."""
-        ...
     def deallocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates the specified node flag, which was previously allocated by the named plugin using allocateFlag()."""
-        ...
     @property
     def deformerSet(*args: Any, **kwargs: Any) -> Any:
         """Object set containing the objects that are deformed. Adding new
@@ -1973,7 +1557,6 @@ class MFnGeometryFilter(MFnDependencyNode):
         wrap/skinCluster, so adding additional geometries to them will have
         no effect.
         """
-        ...
     @deformerSet.setter
     def deformerSet(*args: Any, **kwargs: Any) -> Any:
         """Object set containing the objects that are deformed. Adding new
@@ -1986,67 +1569,48 @@ class MFnGeometryFilter(MFnDependencyNode):
         wrap/skinCluster, so adding additional geometries to them will have
         no effect.
         """
-        ...
     def dgCallbackIds(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information for a specific callback type, broken down by callbackId."""
-        ...
     def dgCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information broken down by callback type."""
-        ...
     def dgTimer(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a specific DG timer metric for a given timer type."""
-        ...
     def dgTimerOff(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing off for this node."""
-        ...
     def dgTimerOn(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing on for this node."""
-        ...
     def dgTimerQueryState(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the current DG timer state for this node."""
-        ...
     def dgTimerReset(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Resets all DG timers for this node."""
-        ...
     @property
     def envelope(*args: Any, **kwargs: Any) -> Any:
         """A global scale factor that is applied to all the values."""
-        ...
     @envelope.setter
     def envelope(*args: Any, **kwargs: Any) -> Any:
         """A global scale factor that is applied to all the values."""
-        ...
     def findAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the attribute which has the given alias."""
-        ...
     def findPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a plug for the given attribute."""
-        ...
     def getAffectedAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which are affected by the specified attribute."""
-        ...
     def getAffectingAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which affect the specified attribute."""
-        ...
     def getAliasAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's alias attribute, which is a special attribute used to store information about the node's attribute aliases."""
-        ...
     def getAliasList(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the node's attribute aliases."""
-        ...
     def getComponentAtIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getComponentAtIndex(index) -> MObject
 
         Returns the component which contains the members of the deformer
         at the given index.
         """
-        ...
     def getConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all the plugs which are connected to attributes of this node."""
-        ...
     def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Gets the external content (files) that this node depends on."""
-        ...
     def getInputGeometry(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getInputGeometry() -> MObjectArray
 
@@ -2059,13 +1623,11 @@ class MFnGeometryFilter(MFnDependencyNode):
         accessed by using MPlug::getValue() to query the inputGeometry
         attribute on the deformer.
         """
-        ...
     def getOutputGeometry(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getOutputGeometry() -> MObjectArray
 
         Returns the DAG nodes which receive output geometry from the deformer.
         """
-        ...
     def getPathAtIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getPathAtIndex(plugIndex) -> MDagPath
 
@@ -2073,7 +1635,6 @@ class MFnGeometryFilter(MFnDependencyNode):
 
         * plugIndex (unsigned int) - Plug index of the desired geometry.
         """
-        ...
     def groupIdAtIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """groupIdAtIndex(plugIndex) -> long
 
@@ -2081,16 +1642,12 @@ class MFnGeometryFilter(MFnDependencyNode):
 
         * plugIndex (unsigned int) - Plug index of the desired geometry.
         """
-        ...
     def hasAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node has an attribute with the given name."""
-        ...
     def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the function set is compatible with the specified Maya object."""
-        ...
     def hasUniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node's name is unique."""
-        ...
     def indexForGroupId(self: Self, *args: Any, **kwargs: Any) -> Any:
         """indexForGroupId(groupId) -> plugIndex
 
@@ -2098,7 +1655,6 @@ class MFnGeometryFilter(MFnDependencyNode):
 
         * groupId (unsigned int) - groupId of the desired geometry.
         """
-        ...
     def indexForOutputConnection(self: Self, *args: Any, **kwargs: Any) -> Any:
         """indexForOutputConnection(connIndex) -> plugIndex
 
@@ -2109,7 +1665,6 @@ class MFnGeometryFilter(MFnDependencyNode):
 
         * connIndex (unsigned int) - Connection index of the desired geometry.
         """
-        ...
     def indexForOutputShape(self: Self, *args: Any, **kwargs: Any) -> Any:
         """indexForOutputShape(shape) -> plugIndex
 
@@ -2117,7 +1672,6 @@ class MFnGeometryFilter(MFnDependencyNode):
 
         * shape (MObject) - Shape for which the plug index is requested.
         """
-        ...
     def inputShapeAtIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """inputShapeAtIndex(plugIndex) -> MObject
 
@@ -2125,48 +1679,36 @@ class MFnGeometryFilter(MFnDependencyNode):
 
         * plugIndex (unsigned int) - Plug index of the desired shape.
         """
-        ...
     @property
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-        ...
     @isDefaultNode.setter
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-        ...
     def isFlagSet(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the state of the specified node flag."""
-        ...
     @property
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
         """True if the node is from a referenced file, False if the node is part of the main scene."""
-        ...
     @isFromReferencedFile.setter
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
         """True if the node is from a referenced file, False if the node is part of the main scene."""
-        ...
     @property
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-        ...
     @isLocked.setter
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-        ...
     def isNewAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the specified attribute was added in the current scene, and not by by one of its referenced files."""
-        ...
     @property
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-        ...
     @isShared.setter
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-        ...
     def isTrackingEdits(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node is referenced or in an assembly that is tracking edits."""
-        ...
     kExtensionAttr: int = ...
     kInvalidAttr: int = ...
     kLocalDynamicAttr: int = ...
@@ -2191,15 +1733,12 @@ class MFnGeometryFilter(MFnDependencyNode):
     kTimerUninitialized: int = ...
     def name(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's name."""
-        ...
     @property
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-        ...
     @namespace.setter
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-        ...
     def numOutputConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """numOutputConnections() -> long
 
@@ -2211,155 +1750,110 @@ class MFnGeometryFilter(MFnDependencyNode):
         This method is useful in conjunction with indexForOutputConnection()
         to iterate through the affected objects.
         """
-        ...
     def object(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-        ...
     def outputShapeAtIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """outputShapeAtIndex(index) -> MObject
 
         Returns the DAG path to which this function set is attached, or the first path to the node if the function set is attached to an MObject.
         """
-        ...
     @property
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-        ...
     @pluginName.setter
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-        ...
     def plugsAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the alias for a plug's attribute."""
-        ...
     def removeAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Removes a dynamic attribute from the node."""
-        ...
     def reorderedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns one of the node's attribute, based on the order in which they are written to file."""
-        ...
     def setAffectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Specifies that modifications to a node could potentially affect the animation."""
-        ...
     def setAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds or removes an attribute alias."""
-        ...
     def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Used to prevent the node from being written to file."""
-        ...
     def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Changes the location of external content."""
-        ...
     def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets content info in the specified attribute from the table."""
-        ...
     def setFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the state of the specified node flag."""
-        ...
     def setName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's name."""
-        ...
     def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Attaches the function set to the specified Maya object."""
-        ...
     def setUuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's UUID."""
-        ...
     def type(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the type of the function set."""
-        ...
     @property
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
-        ...
     @typeId.setter
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
-        ...
     @property
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-        ...
     @typeName.setter
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-        ...
     def uniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """For a DAG node, the unique name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself. For a non-DAG node, the uniqueName is just its name."""
-        ...
     def userNode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the MPxNode object for a plugin node."""
-        ...
     def uuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's UUID."""
-        ...
 
 class MFnSkinCluster(MFnGeometryFilter):
     def __delattr__(self: Self, name: Any) -> Any:
         """Implement delattr(self, name)."""
-        ...
     def __dir__(self: Self) -> Any:
         """Default dir() implementation."""
-        ...
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-        ...
     def __format__(self: Self, format_spec: Any) -> Any:
         """Default object formatter."""
-        ...
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-        ...
     def __getattribute__(self: Self, name: Any) -> Any:
         """Return getattr(self, name)."""
-        ...
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
-        ...
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-        ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-        ...
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """This method is called when a class is subclassed.
 
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-        ...
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
-        ...
     def __lt__(self: Self, value: Any) -> Any:
         """Return self<value."""
-        ...
     def __ne__(self: Self, value: Any) -> Any:
         """Return self!=value."""
-        ...
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-        ...
     def __reduce__(self: Self) -> Any:
         """Helper for pickle."""
-        ...
     def __reduce_ex__(self: Self, protocol: Any) -> Any:
         """Helper for pickle."""
-        ...
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-        ...
     def __setattr__(self: Self, name: Any, value: Any) -> Any:
         """Implement setattr(self, name, value)."""
-        ...
     def __sizeof__(self: Self) -> Any:
         """Size of object in memory, in bytes."""
-        ...
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-        ...
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -2368,46 +1862,32 @@ class MFnSkinCluster(MFnGeometryFilter):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-        ...
     def absoluteName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the absolute name of this node.  The absolute name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself.  Regardless of relative name mode, absoluteName() will always return a full namespace path prefixed with a leading colon (the root namespace).  If the underlying node is a DAG node, then absoluteName() does not guarantee uniqueness, that is, two dependency nodes could have the same absoluteName().  In cases like this the uniqueName() method will guarantee that the name uniquely identifies the node."""
-        ...
     def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds a new dynamic attribute to the node."""
-        ...
     def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds content info to the specified table from a file path attribute."""
-        ...
     def affectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the changes to the node may affect animation."""
-        ...
     def allocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Allocates a flag on all nodes for use by the named plugin and returns the flag's index."""
-        ...
     def attribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns an attribute of the node, given either its index or name."""
-        ...
     def attributeClass(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the class of the specified attribute."""
-        ...
     def attributeCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the number of attributes on the node."""
-        ...
     def canBeWritten(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the node will be written to file."""
-        ...
     def classification(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the classification string for the named node type."""
-        ...
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new node of the given type."""
-        ...
     def deallocateAllFlags(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates all node flags which are currently allocated to the named plugin."""
-        ...
     def deallocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates the specified node flag, which was previously allocated by the named plugin using allocateFlag()."""
-        ...
     @property
     def deformerSet(*args: Any, **kwargs: Any) -> Any:
         """Object set containing the objects that are deformed. Adding new
@@ -2420,7 +1900,6 @@ class MFnSkinCluster(MFnGeometryFilter):
         wrap/skinCluster, so adding additional geometries to them will have
         no effect.
         """
-        ...
     @deformerSet.setter
     def deformerSet(*args: Any, **kwargs: Any) -> Any:
         """Object set containing the objects that are deformed. Adding new
@@ -2433,54 +1912,38 @@ class MFnSkinCluster(MFnGeometryFilter):
         wrap/skinCluster, so adding additional geometries to them will have
         no effect.
         """
-        ...
     def dgCallbackIds(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information for a specific callback type, broken down by callbackId."""
-        ...
     def dgCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information broken down by callback type."""
-        ...
     def dgTimer(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a specific DG timer metric for a given timer type."""
-        ...
     def dgTimerOff(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing off for this node."""
-        ...
     def dgTimerOn(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing on for this node."""
-        ...
     def dgTimerQueryState(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the current DG timer state for this node."""
-        ...
     def dgTimerReset(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Resets all DG timers for this node."""
-        ...
     @property
     def envelope(*args: Any, **kwargs: Any) -> Any:
         """A global scale factor that is applied to all the values."""
-        ...
     @envelope.setter
     def envelope(*args: Any, **kwargs: Any) -> Any:
         """A global scale factor that is applied to all the values."""
-        ...
     def findAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the attribute which has the given alias."""
-        ...
     def findPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a plug for the given attribute."""
-        ...
     def getAffectedAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which are affected by the specified attribute."""
-        ...
     def getAffectingAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which affect the specified attribute."""
-        ...
     def getAliasAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's alias attribute, which is a special attribute used to store information about the node's attribute aliases."""
-        ...
     def getAliasList(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the node's attribute aliases."""
-        ...
     def getBlendWeights(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getBlendWeights(shape, components) -> MDoubleArray
 
@@ -2493,20 +1956,16 @@ class MFnSkinCluster(MFnGeometryFilter):
         * shape     (MDagPath) - the object being deformed by the skinCluster
         * components (MObject) - components for which weights should be returned
         """
-        ...
     def getComponentAtIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getComponentAtIndex(index) -> MObject
 
         Returns the component which contains the members of the deformer
         at the given index.
         """
-        ...
     def getConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns all the plugs which are connected to attributes of this node."""
-        ...
     def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Gets the external content (files) that this node depends on."""
-        ...
     def getInputGeometry(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getInputGeometry() -> MObjectArray
 
@@ -2519,13 +1978,11 @@ class MFnSkinCluster(MFnGeometryFilter):
         accessed by using MPlug::getValue() to query the inputGeometry
         attribute on the deformer.
         """
-        ...
     def getOutputGeometry(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getOutputGeometry() -> MObjectArray
 
         Returns the DAG nodes which receive output geometry from the deformer.
         """
-        ...
     def getPathAtIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getPathAtIndex(plugIndex) -> MDagPath
 
@@ -2533,7 +1990,6 @@ class MFnSkinCluster(MFnGeometryFilter):
 
         * plugIndex (unsigned int) - Plug index of the desired geometry.
         """
-        ...
     def getPointsAffectedByInfluence(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getPointsAffectedByInfluence(influence) -> (MSelectionList, MDoubleArray)
 
@@ -2550,7 +2006,6 @@ class MFnSkinCluster(MFnGeometryFilter):
 
         * influence (MDagPath) - the influence object of interest
         """
-        ...
     def getWeights(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getWeights(shape, components) -> (MDoubleArray, int)
         getWeights(shape, components, influence) -> MDoubleArray
@@ -2578,7 +2033,6 @@ class MFnSkinCluster(MFnGeometryFilter):
         * influence        (int) - index of the single influence to return weights for
         * influences (MIntArray) - indices of multiple influences to return weights for
         """
-        ...
     def groupIdAtIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """groupIdAtIndex(plugIndex) -> long
 
@@ -2586,16 +2040,12 @@ class MFnSkinCluster(MFnGeometryFilter):
 
         * plugIndex (unsigned int) - Plug index of the desired geometry.
         """
-        ...
     def hasAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node has an attribute with the given name."""
-        ...
     def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the function set is compatible with the specified Maya object."""
-        ...
     def hasUniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node's name is unique."""
-        ...
     def indexForGroupId(self: Self, *args: Any, **kwargs: Any) -> Any:
         """indexForGroupId(groupId) -> plugIndex
 
@@ -2603,7 +2053,6 @@ class MFnSkinCluster(MFnGeometryFilter):
 
         * groupId (unsigned int) - groupId of the desired geometry.
         """
-        ...
     def indexForInfluenceObject(self: Self, *args: Any, **kwargs: Any) -> Any:
         """indexForInfluenceObject(influenceObj) -> long
 
@@ -2612,7 +2061,6 @@ class MFnSkinCluster(MFnGeometryFilter):
 
         * influenceObj (MObject) - influence object for which the index is requested.
         """
-        ...
     def indexForOutputConnection(self: Self, *args: Any, **kwargs: Any) -> Any:
         """indexForOutputConnection(connIndex) -> plugIndex
 
@@ -2623,7 +2071,6 @@ class MFnSkinCluster(MFnGeometryFilter):
 
         * connIndex (unsigned int) - Connection index of the desired geometry.
         """
-        ...
     def indexForOutputShape(self: Self, *args: Any, **kwargs: Any) -> Any:
         """indexForOutputShape(shape) -> plugIndex
 
@@ -2631,13 +2078,11 @@ class MFnSkinCluster(MFnGeometryFilter):
 
         * shape (MObject) - Shape for which the plug index is requested.
         """
-        ...
     def influenceObjects(self: Self, *args: Any, **kwargs: Any) -> Any:
         """influenceObjects() -> MDagPathArray
 
         Returns an array of paths to the influence objects for the skinCluster.
         """
-        ...
     def inputShapeAtIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """inputShapeAtIndex(plugIndex) -> MObject
 
@@ -2645,48 +2090,36 @@ class MFnSkinCluster(MFnGeometryFilter):
 
         * plugIndex (unsigned int) - Plug index of the desired shape.
         """
-        ...
     @property
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-        ...
     @isDefaultNode.setter
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-        ...
     def isFlagSet(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the state of the specified node flag."""
-        ...
     @property
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
         """True if the node is from a referenced file, False if the node is part of the main scene."""
-        ...
     @isFromReferencedFile.setter
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
         """True if the node is from a referenced file, False if the node is part of the main scene."""
-        ...
     @property
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-        ...
     @isLocked.setter
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-        ...
     def isNewAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the specified attribute was added in the current scene, and not by by one of its referenced files."""
-        ...
     @property
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-        ...
     @isShared.setter
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-        ...
     def isTrackingEdits(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node is referenced or in an assembly that is tracking edits."""
-        ...
     kExtensionAttr: int = ...
     kInvalidAttr: int = ...
     kLocalDynamicAttr: int = ...
@@ -2711,15 +2144,12 @@ class MFnSkinCluster(MFnGeometryFilter):
     kTimerUninitialized: int = ...
     def name(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's name."""
-        ...
     @property
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-        ...
     @namespace.setter
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-        ...
     def numOutputConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """numOutputConnections() -> long
 
@@ -2731,39 +2161,29 @@ class MFnSkinCluster(MFnGeometryFilter):
         This method is useful in conjunction with indexForOutputConnection()
         to iterate through the affected objects.
         """
-        ...
     def object(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-        ...
     def outputShapeAtIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """outputShapeAtIndex(index) -> MObject
 
         Returns the DAG path to which this function set is attached, or the first path to the node if the function set is attached to an MObject.
         """
-        ...
     @property
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-        ...
     @pluginName.setter
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-        ...
     def plugsAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the alias for a plug's attribute."""
-        ...
     def removeAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Removes a dynamic attribute from the node."""
-        ...
     def reorderedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns one of the node's attribute, based on the order in which they are written to file."""
-        ...
     def setAffectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Specifies that modifications to a node could potentially affect the animation."""
-        ...
     def setAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds or removes an attribute alias."""
-        ...
     def setBlendWeights(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setBlendWeights(shape, components, weights) -> self
 
@@ -2779,28 +2199,20 @@ class MFnSkinCluster(MFnGeometryFilter):
                                    of components provided then the lesser of
                                    the two will be used.
         """
-        ...
     def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Used to prevent the node from being written to file."""
-        ...
     def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Changes the location of external content."""
-        ...
     def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets content info in the specified attribute from the table."""
-        ...
     def setFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the state of the specified node flag."""
-        ...
     def setName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's name."""
-        ...
     def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Attaches the function set to the specified Maya object."""
-        ...
     def setUuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's UUID."""
-        ...
     def setWeights(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setWeights(shape, components, influence, weight, normalize=True, returnOldWeights=False) -> None or MDoubleArray
         setWeights(shape, components, influences, weights, normalize=True, returnOldWeights=False) -> None or MDoubleArray
@@ -2843,35 +2255,26 @@ class MFnSkinCluster(MFnGeometryFilter):
         * normalize       (bool) - if True, normalize weights on other influence objects
         * returnOldWeights(bool) - if True, return the old weights, otherwise return None
         """
-        ...
     def type(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the type of the function set."""
-        ...
     @property
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
-        ...
     @typeId.setter
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
-        ...
     @property
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-        ...
     @typeName.setter
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-        ...
     def uniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """For a DAG node, the unique name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself. For a non-DAG node, the uniqueName is just its name."""
-        ...
     def userNode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the MPxNode object for a plugin node."""
-        ...
     def uuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's UUID."""
-        ...
 
 __builtins__: dict
 __cached__: str

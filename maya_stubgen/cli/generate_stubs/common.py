@@ -200,7 +200,7 @@ class Function:
         stub = self.signature
 
         if self.docstring:
-            stub += indent(f"\n{self.docstring}\n...", TAB)
+            stub += indent(f"\n{self.docstring}", TAB)
         else:
             stub += " ..."
 

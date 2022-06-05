@@ -24,7 +24,5 @@ def initialize(*args: Any, **kwargs: Any) -> Any:
     This function takes one optional argument:
     name - name of the application (defaults to 'python')
     """
-    ...
 def uninitialize(*args: Any, **kwargs: Any) -> Any:
     """This function uninitializes Maya within a standalone Python interpreter"""
-    ...
