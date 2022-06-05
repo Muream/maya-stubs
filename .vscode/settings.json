@@ -1,5 +1,8 @@
 {
     "python.languageServer": "Pylance",
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportMissingModuleSource": "none",
+    },
     "editor.formatOnSave": true,
     "python.formatting.provider": "black",
     "python.sortImports.args": [
