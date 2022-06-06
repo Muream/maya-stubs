@@ -120,7 +120,7 @@ def generate_stubs() -> None:
                 continue
             if module.name in whitelist:  # temporary work on a specific stub
                 generate_stubs_for_module(module)
-    except BaseException as e:
+    except BaseException:
         logger.error("Failed to generate stubs: %s", traceback.format_exc())
     else:
         logger.success("Stubs generated")
