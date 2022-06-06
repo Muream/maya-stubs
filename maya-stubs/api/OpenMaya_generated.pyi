@@ -4,50 +4,14 @@ from typing_extensions import Self
 from _typeshed import Incomplete
 
 
-class MAngle(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MAngle:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -98,23 +62,7 @@ class MAngle(object):
         """Value of the angle."""
 
 class MArgDatabase(MArgParser):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -123,142 +71,18 @@ class MArgDatabase(MArgParser):
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-    def commandArgumentBool(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """commandArgumentBool(argIndex) -> bool
-
-        Returns the specified command argument as a bool.
-        """
-    def commandArgumentDouble(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Alias for commandArgumentFloat()."""
-    def commandArgumentFloat(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """commandArgumentFloat(argIndex) -> float
-
-        Returns the specified command argument as a float.
-        """
-    def commandArgumentInt(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """commandArgumentInt(argIndex) -> int
-
-        Returns the specified command argument as an int.
-        """
-    def commandArgumentMAngle(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """commandArgumentMAngle(argIndex) -> MAngle
-
-        Returns the specified command argument as an MAngle.
-        """
-    def commandArgumentMDistance(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """commandArgumentMDistance(argIndex) -> MDistance
-
-        Returns the specified command argument as an MDistance.
-        """
     def commandArgumentMSelectionList(self: Self, *args: Any, **kwargs: Any) -> Any:
         """commandArgumentMSelectionList(argIndex) -> MSelectionList
 
         Returns the specified command argument as an MSelectionList.
-        """
-    def commandArgumentMTime(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """commandArgumentMTime(argIndex) -> MTime
-
-        Returns the specified command argument as an MTime.
-        """
-    def commandArgumentString(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """commandArgumentString(argIndex) -> unicode string
-
-        Returns the specified command argument as a string.
-        """
-    def flagArgumentBool(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """flagArgumentBool(flagName, argIndex) -> bool
-
-        Returns the specified argument of the specified single-use flag as
-        a bool.
-        """
-    def flagArgumentDouble(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """flagArgumentDouble(flagName, argIndex) -> float
-
-        Alias for flagArgumentFloat().
-        """
-    def flagArgumentFloat(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """flagArgumentFloat(flagName, argIndex) -> float
-
-        Returns the specified argument of the specified single-use flag as
-        a float.
-        """
-    def flagArgumentInt(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """flagArgumentInt(flagName, argIndex) -> int
-
-        Returns the specified argument of the specified single-use flag as
-        an int.
-        """
-    def flagArgumentMAngle(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """flagArgumentMAngle(flagName, argIndex) -> MAngle
-
-        Returns the specified argument of the specified single-use flag as
-        an MAngle.
-        """
-    def flagArgumentMDistance(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """flagArgumentMDistance(flagName, argIndex) -> MDistance
-
-        Returns the specified argument of the specified single-use flag as
-        an MDistance.
         """
     def flagArgumentMSelectionList(self: Self, *args: Any, **kwargs: Any) -> Any:
         """flagArgumentMSelectionList(flagName, argIndex) -> MSelectionList
 
         Returns the specified argument of the specified single-use flag as
         an MSelectionList.
-        """
-    def flagArgumentMTime(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """flagArgumentMTime(flagName, argIndex) -> MTime
-
-        Returns the specified argument of the specified single-use flag as
-        an MTime.
-        """
-    def flagArgumentString(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """flagArgumentString(flagName, argIndex) -> string
-
-        Returns the specified argument of the specified single-use flag as
-        a string.
-        """
-    def getFlagArgumentList(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getFlagArgumentList(flagName, occurrence) -> MArgList
-
-        Returns the arguments for the specified occurrence of the given
-        multi-use flag as an MArgList. Raises RuntimeError if the flag has
-        not been enabled for multi-use. Raises IndexError if occurrence is
-        out of range.
-        """
-    def getFlagArgumentPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getFlagArgumentPosition(flagName, occurrence) -> int
-
-        Returns the position in the argument list of the specified occurrence
-        of the given flag. Raises IndexError if occurrence is out of range.
         """
     def getObjectList(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getObjectList() -> MSelectionList
@@ -268,100 +92,15 @@ class MArgDatabase(MArgParser):
         MSelectionList. If any other object format is set then an empty
         selection list will be returned.
         """
-    def getObjectStrings(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getObjectStrings() -> tuple of unicode strings
 
-        If the command's MSyntax has set the object format to kStringObjects
-        then this method will return the objects passed to the command as a
-        tuple of strings. If any other object format is set then an empty
-        tuple will be returned.
-        """
-    @property
-    def isEdit(*args: Any, **kwargs: Any) -> Any:
-        """True if the edit flag is present."""
-    @isEdit.setter
-    def isEdit(*args: Any, **kwargs: Any) -> Any:
-        """True if the edit flag is present."""
-    def isFlagSet(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """isFlagSet(flagName) -> bool
-
-        Returns True if the given flag appears on the command line.
-        """
-    @property
-    def isQuery(*args: Any, **kwargs: Any) -> Any:
-        """True if the query flag is present."""
-    @isQuery.setter
-    def isQuery(*args: Any, **kwargs: Any) -> Any:
-        """True if the query flag is present."""
-    def numberOfFlagUses(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """numberOfFlagUses(flagName) -> int
-
-        Returns the number of times that the flag appears on the command
-        line.
-        """
-    @property
-    def numberOfFlagsUsed(*args: Any, **kwargs: Any) -> Any:
-        """Number of different flags used on the command line. If the same flag appears multiple times it is only counted once."""
-    @numberOfFlagsUsed.setter
-    def numberOfFlagsUsed(*args: Any, **kwargs: Any) -> Any:
-        """Number of different flags used on the command line. If the same flag appears multiple times it is only counted once."""
-
-class MArgList(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MArgList:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addArg(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addArg(arg) -> self , 'arg' is a numeric value, MAngle, MDistance,
         MTime, MPoint or	MVector.
@@ -450,52 +189,12 @@ class MArgList(object):
         Return index of last argument used by the most recent as*() method.
         """
 
-class MArgParser(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MArgParser:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -640,62 +339,14 @@ class MArgParser(object):
     def numberOfFlagsUsed(*args: Any, **kwargs: Any) -> Any:
         """Number of different flags used on the command line. If the same flag appears multiple times it is only counted once."""
 
-class MArrayDataBuilder(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MArrayDataBuilder:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addElement(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addElement(index) -> MDataHandle
 
@@ -757,62 +408,14 @@ class MArrayDataBuilder(object):
         * size (int) - the number of elements to allocate when growing the array
         """
 
-class MArrayDataHandle(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MArrayDataHandle:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def builder(self: Self, *args: Any, **kwargs: Any) -> Any:
         """builder() -> MArrayDataBuilder
 
@@ -916,31 +519,17 @@ class MArrayDataHandle(object):
         Do not use with an MArrayDataHandle which was returned by MPlug.asMDataHandle().
         """
 
-class MAttributeIndex(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MAttributeIndex:
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
     __hash__: NoneType = ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
     def __lt__(self: Self, value: Any) -> Any:
@@ -949,26 +538,6 @@ class MAttributeIndex(object):
         """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """copy(source) -> self
 
@@ -1054,60 +623,14 @@ class MAttributeIndex(object):
           kFloat		Floating-poing index (e.g. curve.u[1.3])
         """
 
-class MAttributePattern(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MAttributePattern:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addRootAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Add the given root attribute to this pattern."""
     def attrPattern(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -1125,20 +648,12 @@ class MAttributePattern(object):
     def rootAttrCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Return the number of root attributes in this pattern."""
 
-class MAttributeSpec(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MAttributeSpec:
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
     def __gt__(self: Self, value: Any) -> Any:
@@ -1146,12 +661,6 @@ class MAttributeSpec(object):
     __hash__: NoneType = ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
     def __len__(self: Self) -> Any:
@@ -1162,26 +671,6 @@ class MAttributeSpec(object):
         """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """copy(source) -> self
 
@@ -1202,70 +691,34 @@ class MAttributeSpec(object):
     def name(*args: Any, **kwargs: Any) -> Any:
         """The name of the attribute specification."""
 
-class MAttributeSpecArray(object):
+class MAttributeSpecArray:
     def __add__(self: Self, value: Any) -> Any:
         """Return self+value."""
     def __contains__(self: Self, key: Any) -> Any:
         """Return key in self."""
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __iadd__(self: Self, value: Any) -> Any:
         """Implement self+=value."""
     def __imul__(self: Self, value: Any) -> Any:
         """Implement self*=value."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     def __mul__(self: Self, value: Any) -> Any:
         """Return self*value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
     def __rmul__(self: Self, value: Any) -> Any:
         """Return value*self."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -1295,50 +748,14 @@ class MAttributeSpecArray(object):
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
         """Number of elements by which to grow the array when necessary."""
 
-class MBoundingBox(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MBoundingBox:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -1396,60 +813,12 @@ class MBoundingBox(object):
     def width(*args: Any, **kwargs: Any) -> Any:
         """Size in X"""
 
-class MCacheSchema(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MCacheSchema:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def add(self: Self, *args: Any, **kwargs: Any) -> Any:
         """add(attribute) -> self
 
@@ -1465,70 +834,34 @@ class MCacheSchema(object):
         Reset this schema to the minimal.
         """
 
-class MCallbackIdArray(object):
+class MCallbackIdArray:
     def __add__(self: Self, value: Any) -> Any:
         """Return self+value."""
     def __contains__(self: Self, key: Any) -> Any:
         """Return key in self."""
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __iadd__(self: Self, value: Any) -> Any:
         """Implement self+=value."""
     def __imul__(self: Self, value: Any) -> Any:
         """Implement self*=value."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     def __mul__(self: Self, value: Any) -> Any:
         """Return self*value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
     def __rmul__(self: Self, value: Any) -> Any:
         """Return value*self."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -1559,59 +892,7 @@ class MCallbackIdArray(object):
         """Number of elements by which to grow the array when necessary."""
 
 class MCameraMessage(MMessage):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
-    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addBeginManipulationCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addBeginManipulationCallback(node, function, clientData=None) -> id
 
@@ -1634,61 +915,17 @@ class MCameraMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def currentCallbackId(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """currentCallbackId() -> id
 
-        Returns the callback ID of the currently executing callback. If called
-        outside of a callback, an invalid MCallbackId and failed status will
-        be returned.
-        """
-    kDefaultAction: int = ...
-    kDoAction: int = ...
-    kDoNotDoAction: int = ...
-    def nodeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """nodeCallbacks(node) -> ids
-
-        Returns a list of callback IDs registered to a given node.
-
-         * node (MObject) - Node to query for callbacks.
-         * ids (MCallbackIdArray) - Array to store the list of callback IDs.
-        """
-    def removeCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeCallback(id) -> None
-
-        Removes the specified callback from Maya.
-        This method must be called for all callbacks registered by a
-        plug-in before that plug-in is unloaded.
-
-         * id (MCallbackId) - identifier of callback to be removed
-        """
-    def removeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeCallbacks(ids) -> None
-
-        Removes all of the specified callbacks from Maya.
-        This method must be called for all callbacks registered by a
-        plug-in before that plug-in is unloaded.
-
-         * idList (MCallbackIdArray) - list of callbacks to be removed.
-        """
-
-class MColor(object):
+class MColor:
     def __add__(self: Self, value: Any) -> Any:
         """Return self+value."""
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
     def __gt__(self: Self, value: Any) -> Any:
@@ -1700,12 +937,6 @@ class MColor(object):
         """Return self*=value."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __itruediv__(self: Self, value: Any) -> Any:
         """Return self/=value."""
     def __le__(self: Self, value: Any) -> Any:
@@ -1722,22 +953,14 @@ class MColor(object):
         """Create and return a new object.  See help(type) for accurate signature."""
     def __radd__(self: Self, value: Any) -> Any:
         """Return value+self."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
     def __rmul__(self: Self, value: Any) -> Any:
         """Return value*self."""
     def __rtruediv__(self: Self, value: Any) -> Any:
         """Return value/self."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -1787,70 +1010,34 @@ class MColor(object):
     def setColor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the color's components and color model."""
 
-class MColorArray(object):
+class MColorArray:
     def __add__(self: Self, value: Any) -> Any:
         """Return self+value."""
     def __contains__(self: Self, key: Any) -> Any:
         """Return key in self."""
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __iadd__(self: Self, value: Any) -> Any:
         """Implement self+=value."""
     def __imul__(self: Self, value: Any) -> Any:
         """Implement self*=value."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     def __mul__(self: Self, value: Any) -> Any:
         """Return self*value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
     def __rmul__(self: Self, value: Any) -> Any:
         """Return value*self."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -1881,59 +1068,7 @@ class MColorArray(object):
         """Number of elements by which to grow the array when necessary."""
 
 class MCommandMessage(MMessage):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
-    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addCommandCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addCommandCallback(function, clientData=None) -> id
 
@@ -2009,106 +1144,13 @@ class MCommandMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def currentCallbackId(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """currentCallbackId() -> id
-
-        Returns the callback ID of the currently executing callback. If called
-        outside of a callback, an invalid MCallbackId and failed status will
-        be returned.
-        """
-    kDefaultAction: int = ...
-    kDisplay: int = ...
-    kDoAction: int = ...
-    kDoNotDoAction: int = ...
     kError: int = ...
-    kHistory: int = ...
-    kInfo: int = ...
-    kMELCommand: int = ...
-    kMELProc: int = ...
     kResult: int = ...
     kStackTrace: int = ...
     kWarning: int = ...
-    def nodeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """nodeCallbacks(node) -> ids
-
-        Returns a list of callback IDs registered to a given node.
-
-         * node (MObject) - Node to query for callbacks.
-         * ids (MCallbackIdArray) - Array to store the list of callback IDs.
-        """
-    def removeCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeCallback(id) -> None
-
-        Removes the specified callback from Maya.
-        This method must be called for all callbacks registered by a
-        plug-in before that plug-in is unloaded.
-
-         * id (MCallbackId) - identifier of callback to be removed
-        """
-    def removeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeCallbacks(ids) -> None
-
-        Removes all of the specified callbacks from Maya.
-        This method must be called for all callbacks registered by a
-        plug-in before that plug-in is unloaded.
-
-         * idList (MCallbackIdArray) - list of callbacks to be removed.
-        """
 
 class MConditionMessage(MMessage):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
-    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addConditionCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addConditionCallback(conditionName, function, clientData=None) -> id
 
@@ -2123,13 +1165,6 @@ class MConditionMessage(MMessage):
          * clientData - User defined data passed to the callback function
 
          * return: Identifier used for removing the callback.
-        """
-    def currentCallbackId(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """currentCallbackId() -> id
-
-        Returns the callback ID of the currently executing callback. If called
-        outside of a callback, an invalid MCallbackId and failed status will
-        be returned.
         """
     def getConditionNames(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getConditionNames() -> (string, string, ...)
@@ -2148,90 +1183,9 @@ class MConditionMessage(MMessage):
 
          * return: The current state of the condition.
         """
-    kDefaultAction: int = ...
-    kDoAction: int = ...
-    kDoNotDoAction: int = ...
-    def nodeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """nodeCallbacks(node) -> ids
-
-        Returns a list of callback IDs registered to a given node.
-
-         * node (MObject) - Node to query for callbacks.
-         * ids (MCallbackIdArray) - Array to store the list of callback IDs.
-        """
-    def removeCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeCallback(id) -> None
-
-        Removes the specified callback from Maya.
-        This method must be called for all callbacks registered by a
-        plug-in before that plug-in is unloaded.
-
-         * id (MCallbackId) - identifier of callback to be removed
-        """
-    def removeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeCallbacks(ids) -> None
-
-        Removes all of the specified callbacks from Maya.
-        This method must be called for all callbacks registered by a
-        plug-in before that plug-in is unloaded.
-
-         * idList (MCallbackIdArray) - list of callbacks to be removed.
-        """
 
 class MContainerMessage(MMessage):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
-    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addBoundAttrCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addBoundAttrCallback(function, clientData=None) -> id
 
@@ -2258,97 +1212,13 @@ class MContainerMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def currentCallbackId(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """currentCallbackId() -> id
 
-        Returns the callback ID of the currently executing callback. If called
-        outside of a callback, an invalid MCallbackId and failed status will
-        be returned.
-        """
-    kDefaultAction: int = ...
-    kDoAction: int = ...
-    kDoNotDoAction: int = ...
-    def nodeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """nodeCallbacks(node) -> ids
-
-        Returns a list of callback IDs registered to a given node.
-
-         * node (MObject) - Node to query for callbacks.
-         * ids (MCallbackIdArray) - Array to store the list of callback IDs.
-        """
-    def removeCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeCallback(id) -> None
-
-        Removes the specified callback from Maya.
-        This method must be called for all callbacks registered by a
-        plug-in before that plug-in is unloaded.
-
-         * id (MCallbackId) - identifier of callback to be removed
-        """
-    def removeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeCallbacks(ids) -> None
-
-        Removes all of the specified callbacks from Maya.
-        This method must be called for all callbacks registered by a
-        plug-in before that plug-in is unloaded.
-
-         * idList (MCallbackIdArray) - list of callbacks to be removed.
-        """
-
-class MDAGDrawOverrideInfo(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MDAGDrawOverrideInfo:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def displayType(*args: Any, **kwargs: Any) -> Any:
         """Display type (kDisplayTypeNormal, kDisplayTypeReference or kDisplayTypeTemplate)"""
@@ -2397,52 +1267,12 @@ class MDAGDrawOverrideInfo(object):
     def playbackVisible(*args: Any, **kwargs: Any) -> Any:
         """Whether the object is visible during playback"""
 
-class MDGContext(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MDGContext:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -2471,59 +1301,7 @@ class MDGContext(object):
         """Makes this context the new current one being used for evaluation. Returns the previous evaluation context."""
 
 class MDGMessage(MMessage):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
-    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addConnectionCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addConnectionCallback(function, clientData=None) -> id
 
@@ -2672,97 +1450,13 @@ class MDGMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def currentCallbackId(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """currentCallbackId() -> id
 
-        Returns the callback ID of the currently executing callback. If called
-        outside of a callback, an invalid MCallbackId and failed status will
-        be returned.
-        """
-    kDefaultAction: int = ...
-    kDoAction: int = ...
-    kDoNotDoAction: int = ...
-    def nodeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """nodeCallbacks(node) -> ids
-
-        Returns a list of callback IDs registered to a given node.
-
-         * node (MObject) - Node to query for callbacks.
-         * ids (MCallbackIdArray) - Array to store the list of callback IDs.
-        """
-    def removeCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeCallback(id) -> None
-
-        Removes the specified callback from Maya.
-        This method must be called for all callbacks registered by a
-        plug-in before that plug-in is unloaded.
-
-         * id (MCallbackId) - identifier of callback to be removed
-        """
-    def removeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeCallbacks(ids) -> None
-
-        Removes all of the specified callbacks from Maya.
-        This method must be called for all callbacks registered by a
-        plug-in before that plug-in is unloaded.
-
-         * idList (MCallbackIdArray) - list of callbacks to be removed.
-        """
-
-class MDGModifier(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MDGModifier:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addAttribute(MObject node, MObject attribute) -> self
 
@@ -3013,59 +1707,7 @@ class MDGModifier(object):
         """
 
 class MDagMessage(MMessage):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
-    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addAllDagChangesCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addAllDagChangesCallback(function, clientData=None) -> id
 
@@ -3398,26 +2040,13 @@ class MDagMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def currentCallbackId(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """currentCallbackId() -> id
-
-        Returns the callback ID of the currently executing callback. If called
-        outside of a callback, an invalid MCallbackId and failed status will
-        be returned.
-        """
     kAll: int = ...
-    kChildAdded: int = ...
     kChildRemoved: int = ...
     kChildReordered: int = ...
-    kDefaultAction: int = ...
-    kDoAction: int = ...
-    kDoNotDoAction: int = ...
     kInstanceAdded: int = ...
     kInstanceRemoved: int = ...
     kInvalidMsg: int = ...
     kLast: int = ...
-    kParentAdded: int = ...
-    kParentRemoved: int = ...
     kRotateOrder: int = ...
     kRotateOrient: int = ...
     kRotateOrientX: int = ...
@@ -3444,8 +2073,6 @@ class MDagMessage(MMessage):
     kScaleTransX: int = ...
     kScaleTransY: int = ...
     kScaleTransZ: int = ...
-    kScaleX: int = ...
-    kScaleY: int = ...
     kScaleZ: int = ...
     kShear: int = ...
     kShearXY: int = ...
@@ -3455,126 +2082,13 @@ class MDagMessage(MMessage):
     kTranslateY: int = ...
     kTranslateZ: int = ...
     kTranslation: int = ...
-    def nodeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """nodeCallbacks(node) -> ids
-
-        Returns a list of callback IDs registered to a given node.
-
-         * node (MObject) - Node to query for callbacks.
-         * ids (MCallbackIdArray) - Array to store the list of callback IDs.
-        """
-    def removeCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeCallback(id) -> None
-
-        Removes the specified callback from Maya.
-        This method must be called for all callbacks registered by a
-        plug-in before that plug-in is unloaded.
-
-         * id (MCallbackId) - identifier of callback to be removed
-        """
-    def removeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeCallbacks(ids) -> None
-
-        Removes all of the specified callbacks from Maya.
-        This method must be called for all callbacks registered by a
-        plug-in before that plug-in is unloaded.
-
-         * idList (MCallbackIdArray) - list of callbacks to be removed.
-        """
 
 class MDagModifier(MDGModifier):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-    def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """addAttribute(MObject node, MObject attribute) -> self
-
-        Adds an operation to the modifier to add a new dynamic attribute to the
-        given dependency node. If the attribute is a compound its children will
-        be added as well, so only the parent needs to be added using this method.
-        """
-    def addExtensionAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """addExtensionAttribute(MNodeClass nodeClass, MObject attribute) -> self
-
-        Adds an operation to the modifier to add a new extension attribute to
-        the given node class. If the attribute is a compound its children will be
-        added as well, so only the parent needs to be added using this method.
-        """
-    def commandToExecute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """commandToExecute(command) -> self
-
-        Adds an operation to the modifier to execute a MEL command. The command
-        should be fully undoable otherwise unexpected results may occur. If 
-        the command contains no undoable portions whatsoever, the call to
-        doIt() may fail, but only after executing the command. It is best to
-        use multiple commandToExecute() calls rather than batching multiple
-        commands into a single call to commandToExecute(). They will still be
-        undone together, as a single undo action by the user, but Maya will
-        better be able to recover if one of the commands fails.
-        """
-    def connect(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """connect(MPlug source, MPlug dest) -> self
-        connect(MObject sourceNode, MObject sourceAttr,
-                MObject destNode,   MObject destAttr) -> self
-
-        Adds an operation to the modifier that connects two plugs in the
-        dependency graph. It is the user's responsibility to ensure that the
-        source and destination attributes are of compatible types. For instance,
-        if the source attribute is a nurbs surface then the destination must
-        also be a nurbs surface.
-        Plugs can either be specified with node and attribute MObjects or with
-        MPlugs.
-        """
     def createNode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """createNode(typeName, parent=MObject.kNullObj) -> new DAG node MObject
         createNode(typeId,   parent=MObject.kNullObj) -> new DAG node MObject
@@ -3592,179 +2106,6 @@ class MDagModifier(MDGModifier):
         None of the newly created nodes will be added to the DAG until the
         modifier's doIt() method is called.
         """
-    def deleteNode(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """deleteNode(MObject node) -> selfdeleteNode(MObject node, bool includeParents) -> self
-
-        Adds an operation to the modifier which deletes the specified node from
-        the Dependency Graph. If deleteNode() is called to delete nodes in a graph
-        while other items are also in the queue, it might end up deleting the nodes
-        before all the other tasks in the queue.
-
-        In order to prevent unexpected outcomes, the modifier's doIt() should be called
-        before the deleteNode operation is added so that the queue is emptied. Then,
-        deleteNode() can be called and added to the queue. doIt() should be called
-        immediately after to ensure that the queue is emptied before any other
-        operations are added to it.
-
-        The default behaviour when deleting a DAG node is to also include empty
-        parents of the DAG node in the delete operation. If you do not want this
-        behaviour set the includeParents argument to False.
-        """
-    def disconnect(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """disconnect(MPlug source, MPlug dest) -> self
-        disconnect(MObject sourceNode, MObject sourceAttr,
-                   MObject destNode,   MObject destAttr) -> self
-
-        Adds an operation to the modifier that breaks a connection between two
-        plugs in the dependency graph.
-        Plugs can either be specified with node and attribute MObjects or with
-        MPlugs.
-        """
-    def doIt(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """doIt() -> self
-
-        Executes the modifier's operations. If doIt() is called multiple times
-        in a row, without any intervening calls to undoIt(), then only the
-        operations which were added since the previous doIt() call will be
-        executed. If undoIt() has been called then the next call to doIt() will
-        do all operations.
-        """
-    def linkExtensionAttributeToPlugin(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """linkExtensionAttributeToPlugin(MObject plugin, MObject attribute) -> self
-
-        The plugin can call this method to indicate that the extension attribute
-        defines part of the plugin, regardless of the node type to which it
-        attaches itself. This requirement is used when the plugin is checked to
-        see if it is in use or if is able to be unloaded or if it is required as
-        part of a stored file. For compound attributes only the topmost parent
-        attribute may be passed in and all of its children will be included,
-        recursively. Thus it's not possible to link a child attribute to a
-        plugin by itself. Note that the link is established immediately and is
-        not affected by the modifier's doIt() or undoIt() methods.
-        """
-    def newPlugValue(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """newPlugValue(MPlug plug, MObject value) -> self
-
-        Adds an operation to the modifier to set the value of a plug, where
-        value is an MObject data wrapper, such as created by the various
-        MFn*Data classes.
-        """
-    def newPlugValueBool(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """newPlugValueBool(MPlug plug, bool value) -> self
-
-        Adds an operation to the modifier to set a value onto a bool plug.
-        """
-    def newPlugValueChar(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """newPlugValueChar(MPlug plug, int value) -> self
-
-        Adds an operation to the modifier to set a value onto a char (single
-        byte signed integer) plug.
-        """
-    def newPlugValueDouble(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """newPlugValueDouble(MPlug plug, float value) -> self
-
-        Adds an operation to the modifier to set a value onto a double-precision
-        float plug.
-        """
-    def newPlugValueFloat(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """newPlugValueFloat(MPlug plug, float value) -> self
-
-        Adds an operation to the modifier to set a value onto a single-precision
-        float plug.
-        """
-    def newPlugValueInt(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """newPlugValueInt(MPlug plug, int value) -> self
-
-        Adds an operation to the modifier to set a value onto an int plug.
-        """
-    def newPlugValueMAngle(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """newPlugValueMAngle(MPlug plug, MAngle value) -> self
-
-        Adds an operation to the modifier to set a value onto an angle plug.
-        """
-    def newPlugValueMDistance(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """newPlugValueMDistance(MPlug plug, MDistance value) -> self
-
-        Adds an operation to the modifier to set a value onto a distance plug.
-        """
-    def newPlugValueMTime(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """newPlugValueMTime(MPlug plug, MTime value) -> self
-
-        Adds an operation to the modifier to set a value onto a time plug.
-        """
-    def newPlugValueShort(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """newPlugValueShort(MPlug plug, int value) -> self
-
-        Adds an operation to the modifier to set a value onto a short
-        integer plug.
-        """
-    def newPlugValueString(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """newPlugValueString(MPlug plug, string value) -> self
-
-        Adds an operation to the modifier to set a value onto a string plug.
-        """
-    def pythonCommandToExecute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """pythonCommandToExecute(callable) -> selfpythonCommandToExecute(commandString) -> self
-
-        Adds an operation to the modifier to execute a Python command, which
-        can be passed as either a Python callable or a string containing the
-        text of the Python code to be executed. The command should be fully
-        undoable otherwise unexpected results may occur. If the command
-        contains no undoable portions whatsoever, the call to doIt() may fail,
-        but only after executing the command. It is best to use multiple calls
-        rather than batching multiple commands into a single call to
-        pythonCommandToExecute(). They will still be undone together, as a
-        single undo action by the user, but Maya will better be able to
-        recover if one of the commands fails.
-        """
-    def removeAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeAttribute(MObject node, MObject attribute) -> self
-
-        Adds an operation to the modifier to remove a dynamic attribute from the
-        given dependency node. If the attribute is a compound its children will
-        be removed as well, so only the parent needs to be removed using this
-        method. The attribute MObject passed in will be set to kNullObj. There
-        should be no function sets attached to the attribute at the time of the
-        call as their behaviour may become unpredictable.
-        """
-    def removeExtensionAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeExtensionAttribute(MNodeClass nodeClass, MObject attribute) -> self
-
-        Adds an operation to the modifier to remove an extension attribute from
-        the given node class. If the attribute is a compound its children will
-        be removed as well, so only the parent needs to be removed using this
-        method. The attribute MObject passed in will be set to kNullObj. There
-        should be no function sets attached to the attribute at the time of the
-        call as their behaviour may become unpredictable.
-        """
-    def removeExtensionAttributeIfUnset(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeExtensionAttributeIfUnset(MNodeClass nodeClass,
-                                        MObject attribute) -> self
-
-        Adds an operation to the modifier to remove an extension attribute from
-        the given node class, but only if there are no nodes in the graph with
-        non-default values for this attribute. If the attribute is a compound
-        its children will be removed as well, so only the parent needs to be
-        removed using this method. The attribute MObject passed in will be set
-        to kNullObj. There should be no function sets attached to the attribute
-        at the time of the call as their behaviour may become unpredictable.
-        """
-    def removeMultiInstance(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeMultiInstance(MPlug plug, bool breakConnections) -> self
-
-        Adds an operation to the modifier to remove an element of a multi (array) plug.
-        """
-    def renameAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """renameAttribute(MObject node, MObject attribute, 
-        string newShortName, string newShortName) -> self
-
-        Adds an operation to the modifer that renames a dynamic attribute on the given dependency node.
-        """
-    def renameNode(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """renameNode(MObject node, string newName) -> self
-
-        Adds an operation to the modifer to rename a node.
-        """
     def reparentNode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """reparentNode(MObject node, newParent=MObject.kNullObj) -> self
 
@@ -3775,58 +2116,18 @@ class MDagModifier(MDGModifier):
         world, so long as it is a transform type. If it is not a transform type
         then the doIt() will raise a RuntimeError.
         """
-    def setNodeLockState(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """setNodeLockState(MObject node, bool newState) -> self
 
-        Adds an operation to the modifier to set the lockState of a node.
-        """
-    def undoIt(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """undoIt() -> self
-
-        Undoes all of the operations that have been given to this modifier. It
-        is only valid to call this method after the doIt() method has been
-        called.
-        """
-    def unlinkExtensionAttributeFromPlugin(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """unlinkExtensionAttributeFromPlugin(MObject plugin,
-                                           MObject attribute) -> self
-
-        The plugin can call this method to indicate that it no longer requires
-        an extension attribute for its operation. This requirement is used when
-        the plugin is checked to see if it is in use or if is able to be unloaded
-        or if it is required as part of a stored file. For compound attributes
-        only the topmost parent attribute may be passed in and all of its
-        children will be unlinked, recursively. Thus it's not possible to unlink
-        a child attribute from a plugin by itself. Note that the link is broken
-        immediately and is not affected by the modifier's doIt() or undoIt()
-        methods.
-        """
-
-class MDagPath(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MDagPath:
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
     __hash__: NoneType = ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
     def __lt__(self: Self, value: Any) -> Any:
@@ -3835,26 +2136,8 @@ class MDagPath(object):
         """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def apiType(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the type of the object at the end of the path."""
     def child(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -3916,70 +2199,34 @@ class MDagPath(object):
     def transform(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the last transform node on the path."""
 
-class MDagPathArray(object):
+class MDagPathArray:
     def __add__(self: Self, value: Any) -> Any:
         """Return self+value."""
     def __contains__(self: Self, key: Any) -> Any:
         """Return key in self."""
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __iadd__(self: Self, value: Any) -> Any:
         """Implement self+=value."""
     def __imul__(self: Self, value: Any) -> Any:
         """Implement self*=value."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     def __mul__(self: Self, value: Any) -> Any:
         """Return self*value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
     def __rmul__(self: Self, value: Any) -> Any:
         """Return value*self."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -4009,52 +2256,12 @@ class MDagPathArray(object):
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
         """Number of elements by which to grow the array when necessary."""
 
-class MDataBlock(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MDataBlock:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -4140,60 +2347,12 @@ class MDataBlock(object):
         * ctx (MDGContext) - the dependency graph context
         """
 
-class MDataHandle(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MDataHandle:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def acceptedTypeIds(self: Self, *args: Any, **kwargs: Any) -> Any:
         """acceptedTypeIds() -> array of MTypeIds
 
@@ -4659,50 +2818,14 @@ class MDataHandle(object):
         If no data exists for this handle, the type id will be 0x0.
         """
 
-class MDistance(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MDistance:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -4764,70 +2887,34 @@ class MDistance(object):
     def value(*args: Any, **kwargs: Any) -> Any:
         """Value of the distance in the current units."""
 
-class MDoubleArray(object):
+class MDoubleArray:
     def __add__(self: Self, value: Any) -> Any:
         """Return self+value."""
     def __contains__(self: Self, key: Any) -> Any:
         """Return key in self."""
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __iadd__(self: Self, value: Any) -> Any:
         """Implement self+=value."""
     def __imul__(self: Self, value: Any) -> Any:
         """Implement self*=value."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     def __mul__(self: Self, value: Any) -> Any:
         """Return self*value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
     def __rmul__(self: Self, value: Any) -> Any:
         """Return value*self."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -4857,24 +2944,16 @@ class MDoubleArray(object):
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
         """Number of elements by which to grow the array when necessary."""
 
-class MEulerRotation(object):
+class MEulerRotation:
     def __add__(self: Self, value: Any) -> Any:
         """Return self+value."""
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
     def __gt__(self: Self, value: Any) -> Any:
@@ -4886,12 +2965,6 @@ class MEulerRotation(object):
         """Return self*=value."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __isub__(self: Self, value: Any) -> Any:
         """Return self-=value."""
     def __le__(self: Self, value: Any) -> Any:
@@ -4910,34 +2983,18 @@ class MEulerRotation(object):
         """Create and return a new object.  See help(type) for accurate signature."""
     def __radd__(self: Self, value: Any) -> Any:
         """Return value+self."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
     def __rmul__(self: Self, value: Any) -> Any:
         """Return value*self."""
     def __rsub__(self: Self, value: Any) -> Any:
         """Return value-self."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __sub__(self: Self, value: Any) -> Any:
         """Return self-value."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def alternateSolution(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns an equivalent rotation which is not simply a multiple."""
     def asMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -5019,60 +3076,12 @@ class MEulerRotation(object):
     def z(*args: Any, **kwargs: Any) -> Any:
         """Z rotation in radians"""
 
-class MEvaluationNode(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MEvaluationNode:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def datablock(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the datablock for this node."""
     def dependencyNode(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -5084,60 +3093,12 @@ class MEvaluationNode(object):
     def iterator(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns an iterator at the beginning of the dirty plug list."""
 
-class MEvaluationNodeIterator(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MEvaluationNodeIterator:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def isDone(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Checks to see if the iterator has reached the end of the iteration."""
     def next(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -5148,59 +3109,7 @@ class MEvaluationNodeIterator(object):
         """Resets the iterator to the first position in the dirty plug list."""
 
 class MEventMessage(MMessage):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
-    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addEventCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addEventCallback(eventName, function, clientData=None) -> id
 
@@ -5215,13 +3124,6 @@ class MEventMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def currentCallbackId(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """currentCallbackId() -> id
-
-        Returns the callback ID of the currently executing callback. If called
-        outside of a callback, an invalid MCallbackId and failed status will
-        be returned.
-        """
     def getEventNames(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getEventNames() -> (string, string, ...)
 
@@ -5229,94 +3131,17 @@ class MEventMessage(MMessage):
 
          * return: tuple of available event names.
         """
-    kDefaultAction: int = ...
-    kDoAction: int = ...
-    kDoNotDoAction: int = ...
-    def nodeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """nodeCallbacks(node) -> ids
 
-        Returns a list of callback IDs registered to a given node.
-
-         * node (MObject) - Node to query for callbacks.
-         * ids (MCallbackIdArray) - Array to store the list of callback IDs.
-        """
-    def removeCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeCallback(id) -> None
-
-        Removes the specified callback from Maya.
-        This method must be called for all callbacks registered by a
-        plug-in before that plug-in is unloaded.
-
-         * id (MCallbackId) - identifier of callback to be removed
-        """
-    def removeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeCallbacks(ids) -> None
-
-        Removes all of the specified callbacks from Maya.
-        This method must be called for all callbacks registered by a
-        plug-in before that plug-in is unloaded.
-
-         * idList (MCallbackIdArray) - list of callbacks to be removed.
-        """
-
-class MExternalContentInfoTable(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MExternalContentInfoTable:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addResolvedEntry(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addResolvedEntry(key, unresolvedLocation, resolvedLocation, contextNodeFullName, roles) -> self
 
@@ -5353,64 +3178,16 @@ class MExternalContentInfoTable(object):
         * key (string) - See documentation of MExternalContentInfoTable.addResolvedEntry().
         """
 
-class MExternalContentLocationTable(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MExternalContentLocationTable:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addEntry(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addEntry(key, location) -> self
 
@@ -5433,60 +3210,12 @@ class MExternalContentLocationTable(object):
         * key (string) - See documentation of MExternalContentLocationTable.addEntry().
         """
 
-class MFileObject(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MFileObject:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """copy(source) -> self
 
@@ -5706,70 +3435,34 @@ class MFileObject(object):
         * uri (string or MURI) - The unresolved URI.
         """
 
-class MFloatArray(object):
+class MFloatArray:
     def __add__(self: Self, value: Any) -> Any:
         """Return self+value."""
     def __contains__(self: Self, key: Any) -> Any:
         """Return key in self."""
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __iadd__(self: Self, value: Any) -> Any:
         """Implement self+=value."""
     def __imul__(self: Self, value: Any) -> Any:
         """Implement self*=value."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     def __mul__(self: Self, value: Any) -> Any:
         """Return self*value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
     def __rmul__(self: Self, value: Any) -> Any:
         """Return value*self."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -5799,24 +3492,16 @@ class MFloatArray(object):
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
         """Number of elements by which to grow the array when necessary."""
 
-class MFloatMatrix(object):
+class MFloatMatrix:
     def __add__(self: Self, value: Any) -> Any:
         """Return self+value."""
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
     def __gt__(self: Self, value: Any) -> Any:
@@ -5828,12 +3513,6 @@ class MFloatMatrix(object):
         """Return self*=value."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __isub__(self: Self, value: Any) -> Any:
         """Return self-=value."""
     def __le__(self: Self, value: Any) -> Any:
@@ -5850,34 +3529,18 @@ class MFloatMatrix(object):
         """Create and return a new object.  See help(type) for accurate signature."""
     def __radd__(self: Self, value: Any) -> Any:
         """Return value+self."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
     def __rmul__(self: Self, value: Any) -> Any:
         """Return value*self."""
     def __rsub__(self: Self, value: Any) -> Any:
         """Return value-self."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __sub__(self: Self, value: Any) -> Any:
         """Return self-value."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def adjoint(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a new matrix containing this matrix's adjoint."""
     def det3x3(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -5902,24 +3565,16 @@ class MFloatMatrix(object):
     def transpose(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a new matrix containing this matrix's transpose."""
 
-class MFloatPoint(object):
+class MFloatPoint:
     def __add__(self: Self, value: Any) -> Any:
         """Return self+value."""
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
     def __gt__(self: Self, value: Any) -> Any:
@@ -5931,12 +3586,6 @@ class MFloatPoint(object):
         """Return self*=value."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __isub__(self: Self, value: Any) -> Any:
         """Return self-=value."""
     def __le__(self: Self, value: Any) -> Any:
@@ -5953,10 +3602,6 @@ class MFloatPoint(object):
         """Create and return a new object.  See help(type) for accurate signature."""
     def __radd__(self: Self, value: Any) -> Any:
         """Return value+self."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
     def __rmul__(self: Self, value: Any) -> Any:
@@ -5965,24 +3610,12 @@ class MFloatPoint(object):
         """Return value-self."""
     def __rtruediv__(self: Self, value: Any) -> Any:
         """Return value/self."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __sub__(self: Self, value: Any) -> Any:
         """Return self-value."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __truediv__(self: Self, value: Any) -> Any:
         """Return self/value."""
     def cartesianize(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -6022,70 +3655,34 @@ class MFloatPoint(object):
     def z(*args: Any, **kwargs: Any) -> Any:
         """Z coordinate"""
 
-class MFloatPointArray(object):
+class MFloatPointArray:
     def __add__(self: Self, value: Any) -> Any:
         """Return self+value."""
     def __contains__(self: Self, key: Any) -> Any:
         """Return key in self."""
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __iadd__(self: Self, value: Any) -> Any:
         """Implement self+=value."""
     def __imul__(self: Self, value: Any) -> Any:
         """Implement self*=value."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     def __mul__(self: Self, value: Any) -> Any:
         """Return self*value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
     def __rmul__(self: Self, value: Any) -> Any:
         """Return value*self."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -6115,24 +3712,16 @@ class MFloatPointArray(object):
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
         """Number of elements by which to grow the array when necessary."""
 
-class MFloatVector(object):
+class MFloatVector:
     def __add__(self: Self, value: Any) -> Any:
         """Return self+value."""
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
     def __gt__(self: Self, value: Any) -> Any:
@@ -6144,12 +3733,6 @@ class MFloatVector(object):
         """Return self*=value."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __isub__(self: Self, value: Any) -> Any:
         """Return self-=value."""
     def __itruediv__(self: Self, value: Any) -> Any:
@@ -6170,10 +3753,6 @@ class MFloatVector(object):
         """Create and return a new object.  See help(type) for accurate signature."""
     def __radd__(self: Self, value: Any) -> Any:
         """Return value+self."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
     def __rmul__(self: Self, value: Any) -> Any:
@@ -6184,24 +3763,12 @@ class MFloatVector(object):
         """Return value/self."""
     def __rxor__(self: Self, value: Any) -> Any:
         """Return value^self."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __sub__(self: Self, value: Any) -> Any:
         """Return self-value."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __truediv__(self: Self, value: Any) -> Any:
         """Return self/value."""
     def __xor__(self: Self, value: Any) -> Any:
@@ -6248,70 +3815,34 @@ class MFloatVector(object):
     def z(*args: Any, **kwargs: Any) -> Any:
         """Z coordinate"""
 
-class MFloatVectorArray(object):
+class MFloatVectorArray:
     def __add__(self: Self, value: Any) -> Any:
         """Return self+value."""
     def __contains__(self: Self, key: Any) -> Any:
         """Return key in self."""
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __iadd__(self: Self, value: Any) -> Any:
         """Implement self+=value."""
     def __imul__(self: Self, value: Any) -> Any:
         """Implement self*=value."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     def __mul__(self: Self, value: Any) -> Any:
         """Return self*value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
     def __rmul__(self: Self, value: Any) -> Any:
         """Return value*self."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -6341,60 +3872,8 @@ class MFloatVectorArray(object):
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
         """Number of elements by which to grow the array when necessary."""
 
-class MFn(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MFn:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
-    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     kAISEnvFacade: int = ...
     kAddDoubleLinear: int = ...
     kAdskMaterial: int = ...
@@ -7547,23 +5026,7 @@ class MFn(object):
     kXsectionSubdivEdit: int = ...
 
 class MFnAttribute(MFnBase):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -7572,34 +5035,8 @@ class MFnAttribute(MFnBase):
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def accepts(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if this attribute can accept a connection of the given type."""
     def acceptsAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -7664,8 +5101,6 @@ class MFnAttribute(MFnBase):
         """Returns a string containing a MEL 'addAttr' command capable of recreating the attribute."""
     def hasCategory(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Checks to see if the attribute has a given category"""
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
     @property
     def hidden(*args: Any, **kwargs: Any) -> Any:
         """If True the attribute will not be displayed in the Attribute Editor."""
@@ -7711,8 +5146,6 @@ class MFnAttribute(MFnBase):
     @name.setter
     def name(*args: Any, **kwargs: Any) -> Any:
         """Attribute's long name."""
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
     @property
     def parent(*args: Any, **kwargs: Any) -> Any:
         """Parent attribute. MObject::kNullObj if attr has no parent."""
@@ -7733,8 +5166,6 @@ class MFnAttribute(MFnBase):
         """Is the attribute a render source?"""
     def setNiceNameOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets a nice UI name for this attribute rather than using the default derived from it's long name."""
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
     @property
     def shortName(*args: Any, **kwargs: Any) -> Any:
         """Attribute's short name."""
@@ -7747,8 +5178,6 @@ class MFnAttribute(MFnBase):
     @storable.setter
     def storable(*args: Any, **kwargs: Any) -> Any:
         """Should the attribute's value be preserved when the node is written to file?"""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
     @property
     def usedAsColor(*args: Any, **kwargs: Any) -> Any:
         """Should the attribute be treated as a color in the UI?"""
@@ -7780,52 +5209,12 @@ class MFnAttribute(MFnBase):
     def writable(*args: Any, **kwargs: Any) -> Any:
         """Is the attribute writable?"""
 
-class MFnBase(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MFnBase:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -7844,51 +5233,11 @@ class MFnBase(object):
         """Returns the type of the function set."""
 
 class MFnCamera(MFnDagNode):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -7897,46 +5246,17 @@ class MFnCamera(MFnDagNode):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-    def absoluteName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the absolute name of this node.  The absolute name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself.  Regardless of relative name mode, absoluteName() will always return a full namespace path prefixed with a leading colon (the root namespace).  If the underlying node is a DAG node, then absoluteName() does not guarantee uniqueness, that is, two dependency nodes could have the same absoluteName().  In cases like this the uniqueName() method will guarantee that the name uniquely identifies the node."""
-    def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds a new dynamic attribute to the node."""
-    def addChild(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """addChild(node, index=kNextPos, keepExistingParents=False) -> self
-
-        Makes a node a child of this one.
-        """
-    def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds content info to the specified table from a file path attribute."""
-    def affectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns true if the changes to the node may affect animation."""
-    def allocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Allocates a flag on all nodes for use by the named plugin and returns the flag's index."""
     def aspectRatio(self: Self, *args: Any, **kwargs: Any) -> Any:
         """aspectRatio() -> float
 
         Returns the aspect ratio for the camera.
         """
-    def attribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns an attribute of the node, given either its index or name."""
-    def attributeClass(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the class of the specified attribute."""
-    def attributeCount(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the number of attributes on the node."""
-    @property
-    def boundingBox(*args: Any, **kwargs: Any) -> Any:
-        """Node's bounding box, in object space."""
-    @boundingBox.setter
-    def boundingBox(*args: Any, **kwargs: Any) -> Any:
-        """Node's bounding box, in object space."""
     @property
     def cameraScale(*args: Any, **kwargs: Any) -> Any:
         """The camera scale."""
     @cameraScale.setter
     def cameraScale(*args: Any, **kwargs: Any) -> Any:
         """The camera scale."""
-    def canBeWritten(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns true if the node will be written to file."""
     @property
     def centerOfInterest(*args: Any, **kwargs: Any) -> Any:
         """The linear distance from the camera's eye point to the center of interest."""
@@ -7950,18 +5270,6 @@ class MFnCamera(MFnDagNode):
 
         * space (int) - Specifies the coordinate system for this operation
         """
-    def child(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """child(index) -> MObject
-
-        Returns the specified child of this node.
-        """
-    def childCount(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """childCount() -> int
-
-        Returns the number of nodes which are children of this one.
-        """
-    def classification(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the classification string for the named node type."""
     def computeDepthOfField(self: Self, *args: Any, **kwargs: Any) -> Any:
         """computeDepthOfField(nearLimit=None) -> self
 
@@ -7986,39 +5294,6 @@ class MFnCamera(MFnDagNode):
         The camera is positioned at (0, 0, 0), its center of interest at (0, 0, -1), which implies that the view-direction is pointing in the direction of the negative z-axis, and its up-direction along the positive Y axis.
 
         * parent (MObject) - The parent of the new camera
-        """
-    def dagPath(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """dagPath() -> MDagPath
-
-        Returns the DAG path to which this function set is attached. Raises a TypeError if the function set is attached to an MObject rather than a path.
-        """
-    def dagRoot(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """dagRoot() -> MObject
-
-        Returns the root node of the first path leading to this node.
-        """
-    def deallocateAllFlags(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Deallocates all node flags which are currently allocated to the named plugin."""
-    def deallocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Deallocates the specified node flag, which was previously allocated by the named plugin using allocateFlag()."""
-    def dgCallbackIds(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns DG timing information for a specific callback type, broken down by callbackId."""
-    def dgCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns DG timing information broken down by callback type."""
-    def dgTimer(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a specific DG timer metric for a given timer type."""
-    def dgTimerOff(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Turns DG timing off for this node."""
-    def dgTimerOn(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Turns DG timing on for this node."""
-    def dgTimerQueryState(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the current DG timer state for this node."""
-    def dgTimerReset(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Resets all DG timers for this node."""
-    def duplicate(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """duplicate(instance=False, instanceLeaf=False) -> MObject
-
-        Duplicates the DAG hierarchy rooted at the current node.
         """
     def eyePoint(self: Self, *args: Any, **kwargs: Any) -> Any:
         """eyePoint(space=kObject) -> MPoint
@@ -8101,10 +5376,6 @@ class MFnCamera(MFnDagNode):
     @filmTranslateV.setter
     def filmTranslateV(*args: Any, **kwargs: Any) -> Any:
         """The vertical film translate value. This value corresponds to the normalized viewport, [-1,1]."""
-    def findAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the attribute which has the given alias."""
-    def findPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a plug for the given attribute."""
     @property
     def focalLength(*args: Any, **kwargs: Any) -> Any:
         """The focal length for the camera.
@@ -8121,39 +5392,11 @@ class MFnCamera(MFnDagNode):
     @focusDistance.setter
     def focusDistance(*args: Any, **kwargs: Any) -> Any:
         """The focus distance for the camera. This value sets the focus at a certain distance in front of the camera."""
-    def fullPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """fullPathName() -> string
-
-        Returns the full path of the attached object, from the root of the DAG on down.
-        """
-    def getAffectedAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all of the attributes which are affected by the specified attribute."""
-    def getAffectingAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all of the attributes which affect the specified attribute."""
-    def getAliasAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the node's alias attribute, which is a special attribute used to store information about the node's attribute aliases."""
-    def getAliasList(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all of the node's attribute aliases."""
-    def getAllPaths(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getAllPaths() -> MDagPathArray
-
-        Returns all of the DAG paths which lead to the object to which this function set is attached.
-        """
     def getAspectRatioLimits(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getAspectRatioLimits() -> (float, float)
 
         Returns the minimum and maximum aspect ratio limits for the camera.
         """
-    def getConnectedSetsAndMembers(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getConnectedSetsAndMembers(instance, renderableSetsOnly) -> (MObjectArray, MObjectArray)
-
-        Returns a tuple containing an array of sets and an array of the
-        components of the DAG object which are in those sets. If the entire object is in a set, then the corresponding entry in the comps array will have no elements in it.
-        """
-    def getConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all the plugs which are connected to attributes of this node."""
-    def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Gets the external content (files) that this node depends on."""
     def getFilmApertureLimits(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getFilmApertureLimits() -> (float, float)
 
@@ -8184,11 +5427,6 @@ class MFnCamera(MFnDagNode):
         """getFocalLengthLimits() -> (float, float)
 
         Returns the maximum and minimum focal length limits for the camera.
-        """
-    def getPath(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getPath() -> MDagPath
-
-        Returns the DAG path to which this function set is attached, or the first path to the node if the function set is attached to an MObject.
         """
     def getPortFieldOfView(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getPortFieldOfView(int, int) -> (float, float)
@@ -8233,20 +5471,6 @@ class MFnCamera(MFnDagNode):
         * applySqueeze (bool) - specifies whether to apply the lens squeeze ratio of the camera
         * applyPanZoom (bool) - specifies whether to apply 2D pan/zoom
         """
-    def hasAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the node has an attribute with the given name."""
-    def hasChild(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """hasChild(node) -> bool
-
-        Returns True if the specified node is a child of this one.
-        """
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
-    def hasParent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """hasParent(node) -> bool
-
-        Returns True if the specified node is a parent of this one.
-        """
     def hasSamePerspective(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasSamePerspective(otherCamera) -> bool
 
@@ -8256,8 +5480,6 @@ class MFnCamera(MFnDagNode):
 
         * otherCamera (MDagPath) - Camera to compare perspective with
         """
-    def hasUniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the node's name is unique."""
     def horizontalFieldOfView(self: Self, *args: Any, **kwargs: Any) -> Any:
         """horizontalFieldOfView() -> float
 
@@ -8294,39 +5516,11 @@ class MFnCamera(MFnDagNode):
     def horizontalShake(*args: Any, **kwargs: Any) -> Any:
         """The horizontal offset of the film due to the shake attribute. Unit used is inches."""
     @property
-    def inModel(*args: Any, **kwargs: Any) -> Any:
-        """True if the node has been added to the model."""
-    @inModel.setter
-    def inModel(*args: Any, **kwargs: Any) -> Any:
-        """True if the node has been added to the model."""
-    @property
-    def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
-        """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-    @inUnderWorld.setter
-    def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
-        """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-    def instanceCount(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """instanceCount(indirect) -> int
-
-        Returns the number of instances for this node.
-        """
-    def isChildOf(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """isChildOf(node) -> bool
-
-        Returns True if the specified node is a parent of this one.
-        """
-    @property
     def isClippingPlanes(*args: Any, **kwargs: Any) -> Any:
         """Whether or not manual clipping planes are activated."""
     @isClippingPlanes.setter
     def isClippingPlanes(*args: Any, **kwargs: Any) -> Any:
         """Whether or not manual clipping planes are activated."""
-    @property
-    def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
-        """True if this is a default node, created automatically by Maya."""
-    @isDefaultNode.setter
-    def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
-        """True if this is a default node, created automatically by Maya."""
     @property
     def isDepthOfField(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the depth of field calculation is performed for the camera."""
@@ -8345,118 +5539,29 @@ class MFnCamera(MFnDagNode):
     @isDisplayGateMask.setter
     def isDisplayGateMask(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the film gate is displayed shaded."""
-    def isFlagSet(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the state of the specified node flag."""
-    @property
-    def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is from a referenced file, False if the node is part of the main scene."""
-    @isFromReferencedFile.setter
-    def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is from a referenced file, False if the node is part of the main scene."""
-    @property
-    def isInstanceable(*args: Any, **kwargs: Any) -> Any:
-        """True if instancing is allowed for this node."""
-    @isInstanceable.setter
-    def isInstanceable(*args: Any, **kwargs: Any) -> Any:
-        """True if instancing is allowed for this node."""
-    def isInstanced(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """isInstanced(indirect=True) -> bool
-
-        Returns True if this node is instanced.
-        """
-    def isInstancedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """isInstancedAttribute(attr) -> bool
-
-        Returns True if the specified attribute is an instanced attribute of this node.
-        """
-    @property
-    def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
-        """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-    @isIntermediateObject.setter
-    def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
-        """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-    @property
-    def isLocked(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is locked against changes."""
-    @isLocked.setter
-    def isLocked(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is locked against changes."""
     @property
     def isMotionBlur(*args: Any, **kwargs: Any) -> Any:
         """Wheter or not motion blur is on/off for the camera."""
     @isMotionBlur.setter
     def isMotionBlur(*args: Any, **kwargs: Any) -> Any:
         """Wheter or not motion blur is on/off for the camera."""
-    def isNewAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the specified attribute was added in the current scene, and not by by one of its referenced files."""
     def isOrtho(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isOrtho() -> bool
 
         Returns True if the camera is in orthographic mode.
         """
-    def isParentOf(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """isParentOf(node) -> bool
-
-        Returns True if the specified node is a child of this one.
-        """
-    @property
-    def isShared(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is shared."""
-    @isShared.setter
-    def isShared(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is shared."""
-    def isTrackingEdits(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the node is referenced or in an assembly that is tracking edits."""
     @property
     def isVerticalLock(*args: Any, **kwargs: Any) -> Any:
         """Determines if vertical lock is turned on for the camera."""
     @isVerticalLock.setter
     def isVerticalLock(*args: Any, **kwargs: Any) -> Any:
         """Determines if vertical lock is turned on for the camera."""
-    kExtensionAttr: int = ...
-    kFillFilmFit: int = ...
-    kHorizontalFilmFit: int = ...
-    kInvalid: int = ...
-    kInvalidAttr: int = ...
-    kLocalDynamicAttr: int = ...
-    kNextPos: int = ...
-    kNormalAttr: int = ...
-    kOverscanFilmFit: int = ...
-    kRotateTranslate: int = ...
-    kTimerInvalidState: int = ...
-    kTimerMetric_callback: int = ...
-    kTimerMetric_callbackNotViaAPI: int = ...
-    kTimerMetric_callbackViaAPI: int = ...
-    kTimerMetric_compute: int = ...
-    kTimerMetric_computeDuringCallback: int = ...
-    kTimerMetric_computeNotDuringCallback: int = ...
-    kTimerMetric_dirty: int = ...
-    kTimerMetric_draw: int = ...
-    kTimerMetric_fetch: int = ...
-    kTimerMetrics: int = ...
-    kTimerOff: int = ...
-    kTimerOn: int = ...
-    kTimerType_count: int = ...
-    kTimerType_inclusive: int = ...
-    kTimerType_self: int = ...
-    kTimerTypes: int = ...
-    kTimerUninitialized: int = ...
-    kTranslateRotate: int = ...
-    kVerticalFilmFit: int = ...
     @property
     def lensSqueezeRatio(*args: Any, **kwargs: Any) -> Any:
         """The lens squeeze ratio for the camera"""
     @lensSqueezeRatio.setter
     def lensSqueezeRatio(*args: Any, **kwargs: Any) -> Any:
         """The lens squeeze ratio for the camera"""
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the node's name."""
-    @property
-    def namespace(*args: Any, **kwargs: Any) -> Any:
-        """Name of the namespace which contains the node."""
-    @namespace.setter
-    def namespace(*args: Any, **kwargs: Any) -> Any:
-        """Name of the namespace which contains the node."""
     @property
     def nearClippingPlane(*args: Any, **kwargs: Any) -> Any:
         """The distance to the near clipping plane."""
@@ -8469,26 +5574,6 @@ class MFnCamera(MFnDagNode):
     @nearFocusDistance.setter
     def nearFocusDistance(*args: Any, **kwargs: Any) -> Any:
         """The nearest distance within the well-focus region"""
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-    @property
-    def objectColor(*args: Any, **kwargs: Any) -> Any:
-        """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-    @objectColor.setter
-    def objectColor(*args: Any, **kwargs: Any) -> Any:
-        """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-    @property
-    def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
-        """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-    @objectColorRGB.setter
-    def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
-        """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-    @property
-    def objectColorType(*args: Any, **kwargs: Any) -> Any:
-        """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-    @objectColorType.setter
-    def objectColorType(*args: Any, **kwargs: Any) -> Any:
-        """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
     @property
     def orthoWidth(*args: Any, **kwargs: Any) -> Any:
         """The orthographic projection width."""
@@ -8511,29 +5596,6 @@ class MFnCamera(MFnDagNode):
         """The toggle value for the camera 2D pan/zoom enabled attribute.
         If this attribute is False, the 2D pan/zoom values are ignored by the camera.
         """
-    def parent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """parent(index) -> MObject
-
-        Returns the specified parent of this node.
-        """
-    def parentCount(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """parentCount() -> int
-
-        Returns the number of parents this node has.
-        """
-    def partialPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """partialPathName() -> string
-
-        Returns the minimum path string necessary to uniquely identify the attached object.
-        """
-    @property
-    def pluginName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the plugin which registered the node type, if any."""
-    @pluginName.setter
-    def pluginName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the plugin which registered the node type, if any."""
-    def plugsAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the alias for a plug's attribute."""
     def postProjectionMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
         """postProjectionMatrix(context=None) -> MFloatMatrix
 
@@ -8561,18 +5623,6 @@ class MFnCamera(MFnDagNode):
 
         * context (MDGContext) - DG time-context to specify time of evaluation
         """
-    def removeAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Removes a dynamic attribute from the node."""
-    def removeChild(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeChild(node) -> self
-
-        Removes the child, specified by MObject, reparenting it under the world.
-        """
-    def removeChildAt(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeChildAt(index) -> self
-
-        Removes the child, specified by index, reparenting it under the world.
-        """
     @property
     def renderPanZoom(*args: Any, **kwargs: Any) -> Any:
         """The toggle value for the camera render 2D pan/zoom attribute.
@@ -8583,8 +5633,6 @@ class MFnCamera(MFnDagNode):
         """The toggle value for the camera render 2D pan/zoom attribute.
         If this attribute is False, the 2D pan/zoom values will not affect the output render.
         """
-    def reorderedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns one of the node's attribute, based on the order in which they are written to file."""
     def rightDirection(self: Self, *args: Any, **kwargs: Any) -> Any:
         """rightDirection(space=kObject) -> MVector
 
@@ -8605,10 +5653,6 @@ class MFnCamera(MFnDagNode):
         * horizFieldOfView (float) - The horizontal field of view to set
         * aspectRatio (float) - The aspect ratio to set
         """
-    def setAffectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Specifies that modifications to a node could potentially affect the animation."""
-    def setAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds or removes an attribute alias."""
     def setAspectRatio(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setAspectRatio(aspectRatio) -> self
 
@@ -8626,12 +5670,6 @@ class MFnCamera(MFnDagNode):
         * centerOfInterest (MPoint) - Center of interest point to be set
         * space (int) - Specifies the coordinate system for this operation
         """
-    def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Used to prevent the node from being written to file."""
-    def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Changes the location of external content."""
-    def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets content info in the specified attribute from the table."""
     def setEyePoint(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setEyePoint(eyeLocation, space=kObject) -> self
 
@@ -8642,8 +5680,6 @@ class MFnCamera(MFnDagNode):
         * eyeLocation (MPoint) - The eye location to set
         * space (int) - Specifies the coordinate system for this operation
         """
-    def setFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets the state of the specified node flag."""
     def setHorizontalFieldOfView(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setHorizontalFieldOfView(fov) -> self
 
@@ -8659,8 +5695,6 @@ class MFnCamera(MFnDagNode):
         * orthoState (bool) - If True then the camera will be orthographic
         * useDist (float) - distance to use.
         """
-    def setName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets the node's name."""
     def setNearFarClippingPlanes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setNearFarClippingPlanes(near, far) -> self
 
@@ -8669,13 +5703,6 @@ class MFnCamera(MFnDagNode):
         * near (float) - The near clipping plane value to be set
         * far (float) - The far clipping plane value to be set
         """
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """setObject(MObject or MDagPath) -> self
-
-        Attaches the function set to the specified node or DAG path.
-        """
-    def setUuid(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets the node's UUID."""
     def setVerticalFieldOfView(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setVerticalFieldOfView(fov) -> self
 
@@ -8731,33 +5758,12 @@ class MFnCamera(MFnDagNode):
         """The toggle value for the stereo HIT enabled attribute.
         If this attribute is False, the stereoHIT value is ignored by the camera.
         """
-    def transformationMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """transformationMatrix() -> MMatrix
-
-        Returns the object space transformation matrix for this DAG node.
-        """
     @property
     def tumblePivot(*args: Any, **kwargs: Any) -> Any:
         """The tumble pivot value for the camera. The pivot value will be in world space coordinates unless usePivotAsLocalSpace is True in which case the pivot is a relative offset."""
     @tumblePivot.setter
     def tumblePivot(*args: Any, **kwargs: Any) -> Any:
         """The tumble pivot value for the camera. The pivot value will be in world space coordinates unless usePivotAsLocalSpace is True in which case the pivot is a relative offset."""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
-    @property
-    def typeId(*args: Any, **kwargs: Any) -> Any:
-        """MTypeId for the node's type."""
-    @typeId.setter
-    def typeId(*args: Any, **kwargs: Any) -> Any:
-        """MTypeId for the node's type."""
-    @property
-    def typeName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the node's type."""
-    @typeName.setter
-    def typeName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the node's type."""
-    def uniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """For a DAG node, the unique name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself. For a non-DAG node, the uniqueName is just its name."""
     def upDirection(self: Self, *args: Any, **kwargs: Any) -> Any:
         """upDirection(space=kObject) -> MVector
 
@@ -8766,21 +5772,11 @@ class MFnCamera(MFnDagNode):
         * space (int) - Specifies the coordinate system for this operation
         """
     @property
-    def useObjectColor(*args: Any, **kwargs: Any) -> Any:
-        """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-    @useObjectColor.setter
-    def useObjectColor(*args: Any, **kwargs: Any) -> Any:
-        """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-    @property
     def usePivotAsLocalSpace(*args: Any, **kwargs: Any) -> Any:
         """The local axis tumble setting for this camera.True if using local space tumbling for this camera, or False if using the current global tumble setting in Maya."""
     @usePivotAsLocalSpace.setter
     def usePivotAsLocalSpace(*args: Any, **kwargs: Any) -> Any:
         """The local axis tumble setting for this camera.True if using local space tumbling for this camera, or False if using the current global tumble setting in Maya."""
-    def userNode(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the MPxNode object for a plugin node."""
-    def uuid(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the node's UUID."""
     def verticalFieldOfView(self: Self, *args: Any, **kwargs: Any) -> Any:
         """verticalFieldOfView() -> float
 
@@ -8831,23 +5827,7 @@ class MFnCamera(MFnDagNode):
         """The camera 2D zoom value, which is the percent over the film viewable frustum to display"""
 
 class MFnComponent(MFnBase):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -8856,34 +5836,8 @@ class MFnComponent(MFnBase):
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def componentType(*args: Any, **kwargs: Any) -> Any:
         """Type of the component. (MFn Type constant)"""
@@ -8896,8 +5850,6 @@ class MFnComponent(MFnBase):
     @elementCount.setter
     def elementCount(*args: Any, **kwargs: Any) -> Any:
         """Number of elements in the component."""
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
     @property
     def hasWeights(*args: Any, **kwargs: Any) -> Any:
         """True if the component has weights associated with its elements."""
@@ -8926,12 +5878,6 @@ class MFnComponent(MFnBase):
         Returns True if other refers to the same component as the
         one to which the function set is currently attached.
         """
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
     def weight(self: Self, *args: Any, **kwargs: Any) -> Any:
         """weight(index) -> MWeight
 
@@ -8940,59 +5886,11 @@ class MFnComponent(MFnBase):
         """
 
 class MFnComponentListData(MFnData):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def add(self: Self, *args: Any, **kwargs: Any) -> Any:
         """add(MObject) -> self
 
@@ -9021,42 +5919,11 @@ class MFnComponentListData(MFnData):
         Returns True if the list contains the specified
         component, False otherwise.
         """
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
-    kAny: int = ...
-    kComponentList: int = ...
-    kDoubleArray: int = ...
-    kDynArrayAttrs: int = ...
-    kDynSweptGeometry: int = ...
-    kFalloffFunction: int = ...
-    kFloatArray: int = ...
-    kIntArray: int = ...
-    kInvalid: int = ...
-    kLast: int = ...
-    kLattice: int = ...
-    kMatrix: int = ...
-    kMatrixArray: int = ...
-    kMesh: int = ...
-    kNId: int = ...
-    kNObject: int = ...
-    kNumeric: int = ...
-    kNurbsCurve: int = ...
-    kNurbsSurface: int = ...
-    kPlugin: int = ...
-    kPluginGeometry: int = ...
-    kPointArray: int = ...
-    kSphere: int = ...
-    kString: int = ...
-    kStringArray: int = ...
-    kSubdSurface: int = ...
-    kVectorArray: int = ...
     def length(self: Self, *args: Any, **kwargs: Any) -> Any:
         """length() -> int
 
         Returns the number of components in the list.
         """
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
     def remove(self: Self, *args: Any, **kwargs: Any) -> Any:
         """remove(MObject) -> self
         remove(index) -> self
@@ -9065,303 +5932,32 @@ class MFnComponentListData(MFnData):
         No exception is raised if the component is not in the list,
         raises IndexError if index is out of range
         """
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
 
 class MFnCompoundAttribute(MFnAttribute):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-    def accepts(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if this attribute can accept a connection of the given type."""
-    def acceptsAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if this attribute can accept a connection with the given attribute."""
     def addChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Add a child attribute."""
-    def addToCategory(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds the attribute to a category"""
-    @property
-    def affectsAppearance(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect how the node is drawn in Maya's viewport?"""
-    @affectsAppearance.setter
-    def affectsAppearance(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect how the node is drawn in Maya's viewport?"""
-    @property
-    def affectsWorldSpace(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect the node's worldSpace matrix?"""
-    @affectsWorldSpace.setter
-    def affectsWorldSpace(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect the node's worldSpace matrix?"""
-    @property
-    def array(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an array?"""
-    @array.setter
-    def array(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an array?"""
-    @property
-    def cached(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be cached in the datablock?"""
-    @cached.setter
-    def cached(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be cached in the datablock?"""
-    @property
-    def channelBox(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be displayed in the Channel Box?"""
-    @channelBox.setter
-    def channelBox(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be displayed in the Channel Box?"""
     def child(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns one of the attribute's children, specified by index."""
-    @property
-    def connectable(*args: Any, **kwargs: Any) -> Any:
-        """Can connections be made to the attribute?"""
-    @connectable.setter
-    def connectable(*args: Any, **kwargs: Any) -> Any:
-        """Can connections be made to the attribute?"""
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new compound attribute, attaches it to the function set and returns it as an MObject."""
-    @property
-    def disconnectBehavior(*args: Any, **kwargs: Any) -> Any:
-        """What should happen when the attribute loses an incoming connection?"""
-    @disconnectBehavior.setter
-    def disconnectBehavior(*args: Any, **kwargs: Any) -> Any:
-        """What should happen when the attribute loses an incoming connection?"""
-    @property
-    def dynamic(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a dynamic attribute?"""
-    @dynamic.setter
-    def dynamic(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a dynamic attribute?"""
-    @property
-    def extension(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an extension attribute?"""
-    @extension.setter
-    def extension(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an extension attribute?"""
-    def getAddAttrCmd(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a string containing a MEL 'addAttr' command capable of recreating the attribute."""
     def getAddAttrCmds(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list of MEL 'addAttr' commands capable of recreating the attribute and all of its children."""
-    def hasCategory(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Checks to see if the attribute has a given category"""
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
-    @property
-    def hidden(*args: Any, **kwargs: Any) -> Any:
-        """If True the attribute will not be displayed in the Attribute Editor."""
-    @hidden.setter
-    def hidden(*args: Any, **kwargs: Any) -> Any:
-        """If True the attribute will not be displayed in the Attribute Editor."""
-    @property
-    def indeterminant(*args: Any, **kwargs: Any) -> Any:
-        """Hint to DG that this attribute may not always be used when computing the attributes which are dependent upon it."""
-    @indeterminant.setter
-    def indeterminant(*args: Any, **kwargs: Any) -> Any:
-        """Hint to DG that this attribute may not always be used when computing the attributes which are dependent upon it."""
-    @property
-    def indexMatters(*args: Any, **kwargs: Any) -> Any:
-        """If False, connectAttr -nextAvailable can be used with this attribute. If True then an explicit index must be provided."""
-    @indexMatters.setter
-    def indexMatters(*args: Any, **kwargs: Any) -> Any:
-        """If False, connectAttr -nextAvailable can be used with this attribute. If True then an explicit index must be provided."""
-    @property
-    def internal(*args: Any, **kwargs: Any) -> Any:
-        """Will the node handle the attribute's data storage itself, outside of the node's data block?"""
-    @internal.setter
-    def internal(*args: Any, **kwargs: Any) -> Any:
-        """Will the node handle the attribute's data storage itself, outside of the node's data block?"""
-    @property
-    def isProxyAttribute(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute is a proxy attribute?"""
-    @isProxyAttribute.setter
-    def isProxyAttribute(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute is a proxy attribute?"""
-    kDelete: int = ...
-    kNothing: int = ...
-    kReset: int = ...
-    @property
-    def keyable(*args: Any, **kwargs: Any) -> Any:
-        """Can keys be set on the attribute?"""
-    @keyable.setter
-    def keyable(*args: Any, **kwargs: Any) -> Any:
-        """Can keys be set on the attribute?"""
-    @property
-    def name(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's long name."""
-    @name.setter
-    def name(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's long name."""
     def numChildren(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns number of child attributes currently parented under the compound attribute."""
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-    @property
-    def parent(*args: Any, **kwargs: Any) -> Any:
-        """Parent attribute. MObject::kNullObj if attr has no parent."""
-    @parent.setter
-    def parent(*args: Any, **kwargs: Any) -> Any:
-        """Parent attribute. MObject::kNullObj if attr has no parent."""
-    @property
-    def readable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute readable?"""
-    @readable.setter
-    def readable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute readable?"""
     def removeChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Remove a child attribute."""
-    @property
-    def renderSource(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a render source?"""
-    @renderSource.setter
-    def renderSource(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a render source?"""
-    def setNiceNameOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets a nice UI name for this attribute rather than using the default derived from it's long name."""
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
-    @property
-    def shortName(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's short name."""
-    @shortName.setter
-    def shortName(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's short name."""
-    @property
-    def storable(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be preserved when the node is written to file?"""
-    @storable.setter
-    def storable(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be preserved when the node is written to file?"""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
-    @property
-    def usedAsColor(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a color in the UI?"""
-    @usedAsColor.setter
-    def usedAsColor(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a color in the UI?"""
-    @property
-    def usedAsFilename(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a file name in the UI?"""
-    @usedAsFilename.setter
-    def usedAsFilename(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a file name in the UI?"""
-    @property
-    def usesArrayDataBuilder(*args: Any, **kwargs: Any) -> Any:
-        """Array attributes only: does the attribute create elements using MArrayDataBuilder?"""
-    @usesArrayDataBuilder.setter
-    def usesArrayDataBuilder(*args: Any, **kwargs: Any) -> Any:
-        """Array attributes only: does the attribute create elements using MArrayDataBuilder?"""
-    @property
-    def worldSpace(*args: Any, **kwargs: Any) -> Any:
-        """DAG nodes only: if the node is instanced, will the attribute have separate values for each instance?"""
-    @worldSpace.setter
-    def worldSpace(*args: Any, **kwargs: Any) -> Any:
-        """DAG nodes only: if the node is instanced, will the attribute have separate values for each instance?"""
-    @property
-    def writable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute writable?"""
-    @writable.setter
-    def writable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute writable?"""
 
 class MFnContainerNode(MFnDependencyNode):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -9370,72 +5966,16 @@ class MFnContainerNode(MFnDependencyNode):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-    def absoluteName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the absolute name of this node.  The absolute name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself.  Regardless of relative name mode, absoluteName() will always return a full namespace path prefixed with a leading colon (the root namespace).  If the underlying node is a DAG node, then absoluteName() does not guarantee uniqueness, that is, two dependency nodes could have the same absoluteName().  In cases like this the uniqueName() method will guarantee that the name uniquely identifies the node."""
-    def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds a new dynamic attribute to the node."""
-    def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds content info to the specified table from a file path attribute."""
-    def affectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns true if the changes to the node may affect animation."""
-    def allocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Allocates a flag on all nodes for use by the named plugin and returns the flag's index."""
-    def attribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns an attribute of the node, given either its index or name."""
-    def attributeClass(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the class of the specified attribute."""
-    def attributeCount(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the number of attributes on the node."""
-    def canBeWritten(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns true if the node will be written to file."""
-    def classification(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the classification string for the named node type."""
     def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """clear()
 
         Delete all members of the container.
         """
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Creates a new node of the given type."""
-    def deallocateAllFlags(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Deallocates all node flags which are currently allocated to the named plugin."""
-    def deallocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Deallocates the specified node flag, which was previously allocated by the named plugin using allocateFlag()."""
-    def dgCallbackIds(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns DG timing information for a specific callback type, broken down by callbackId."""
-    def dgCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns DG timing information broken down by callback type."""
-    def dgTimer(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a specific DG timer metric for a given timer type."""
-    def dgTimerOff(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Turns DG timing off for this node."""
-    def dgTimerOn(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Turns DG timing on for this node."""
-    def dgTimerQueryState(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the current DG timer state for this node."""
-    def dgTimerReset(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Resets all DG timers for this node."""
-    def findAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the attribute which has the given alias."""
-    def findPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a plug for the given attribute."""
-    def getAffectedAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all of the attributes which are affected by the specified attribute."""
-    def getAffectingAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all of the attributes which affect the specified attribute."""
-    def getAliasAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the node's alias attribute, which is a special attribute used to store information about the node's attribute aliases."""
-    def getAliasList(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all of the node's attribute aliases."""
-    def getConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all the plugs which are connected to attributes of this node."""
     def getCurrentAsMObject(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getCurrentAsMObject() -> MObject
 
         Retrieve the current container node.
         """
-    def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Gets the external content (files) that this node depends on."""
     def getMembers(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getMembers() -> MObjectArray
 
@@ -9471,72 +6011,11 @@ class MFnContainerNode(MFnDependencyNode):
 
         Return an array of the container nodes included in this container.
         """
-    def hasAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the node has an attribute with the given name."""
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
-    def hasUniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the node's name is unique."""
     def isCurrent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isCurrent() -> bool
 
         Return whether the container node managed by this function set is the current container.
         """
-    @property
-    def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
-        """True if this is a default node, created automatically by Maya."""
-    @isDefaultNode.setter
-    def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
-        """True if this is a default node, created automatically by Maya."""
-    def isFlagSet(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the state of the specified node flag."""
-    @property
-    def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is from a referenced file, False if the node is part of the main scene."""
-    @isFromReferencedFile.setter
-    def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is from a referenced file, False if the node is part of the main scene."""
-    @property
-    def isLocked(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is locked against changes."""
-    @isLocked.setter
-    def isLocked(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is locked against changes."""
-    def isNewAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the specified attribute was added in the current scene, and not by by one of its referenced files."""
-    @property
-    def isShared(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is shared."""
-    @isShared.setter
-    def isShared(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is shared."""
-    def isTrackingEdits(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the node is referenced or in an assembly that is tracking edits."""
-    kChildAnchor: int = ...
-    kExtensionAttr: int = ...
-    kGeneric: int = ...
-    kInvalidAttr: int = ...
-    kLocalDynamicAttr: int = ...
-    kNormalAttr: int = ...
-    kParentAnchor: int = ...
-    kTimerInvalidState: int = ...
-    kTimerMetric_callback: int = ...
-    kTimerMetric_callbackNotViaAPI: int = ...
-    kTimerMetric_callbackViaAPI: int = ...
-    kTimerMetric_compute: int = ...
-    kTimerMetric_computeDuringCallback: int = ...
-    kTimerMetric_computeNotDuringCallback: int = ...
-    kTimerMetric_dirty: int = ...
-    kTimerMetric_draw: int = ...
-    kTimerMetric_fetch: int = ...
-    kTimerMetrics: int = ...
-    kTimerOff: int = ...
-    kTimerOn: int = ...
-    kTimerType_count: int = ...
-    kTimerType_inclusive: int = ...
-    kTimerType_self: int = ...
-    kTimerTypes: int = ...
-    kTimerUninitialized: int = ...
     def makeCurrent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """makeCurrent(isCurrent) -> self
 
@@ -9548,150 +6027,24 @@ class MFnContainerNode(MFnDependencyNode):
 
         * isCurrent (True/False) - Specifies whether this container shall be current.
         """
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the node's name."""
-    @property
-    def namespace(*args: Any, **kwargs: Any) -> Any:
-        """Name of the namespace which contains the node."""
-    @namespace.setter
-    def namespace(*args: Any, **kwargs: Any) -> Any:
-        """Name of the namespace which contains the node."""
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-    @property
-    def pluginName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the plugin which registered the node type, if any."""
-    @pluginName.setter
-    def pluginName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the plugin which registered the node type, if any."""
-    def plugsAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the alias for a plug's attribute."""
-    def removeAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Removes a dynamic attribute from the node."""
-    def reorderedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns one of the node's attribute, based on the order in which they are written to file."""
-    def setAffectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Specifies that modifications to a node could potentially affect the animation."""
-    def setAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds or removes an attribute alias."""
-    def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Used to prevent the node from being written to file."""
-    def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Changes the location of external content."""
-    def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets content info in the specified attribute from the table."""
-    def setFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets the state of the specified node flag."""
-    def setName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets the node's name."""
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
-    def setUuid(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets the node's UUID."""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
-    @property
-    def typeId(*args: Any, **kwargs: Any) -> Any:
-        """MTypeId for the node's type."""
-    @typeId.setter
-    def typeId(*args: Any, **kwargs: Any) -> Any:
-        """MTypeId for the node's type."""
-    @property
-    def typeName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the node's type."""
-    @typeName.setter
-    def typeName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the node's type."""
-    def uniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """For a DAG node, the unique name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself. For a non-DAG node, the uniqueName is just its name."""
-    def userNode(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the MPxNode object for a plugin node."""
-    def uuid(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the node's UUID."""
 
 class MFnDagNode(MFnDependencyNode):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-    def absoluteName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the absolute name of this node.  The absolute name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself.  Regardless of relative name mode, absoluteName() will always return a full namespace path prefixed with a leading colon (the root namespace).  If the underlying node is a DAG node, then absoluteName() does not guarantee uniqueness, that is, two dependency nodes could have the same absoluteName().  In cases like this the uniqueName() method will guarantee that the name uniquely identifies the node."""
-    def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds a new dynamic attribute to the node."""
     def addChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addChild(node, index=kNextPos, keepExistingParents=False) -> self
 
         Makes a node a child of this one.
         """
-    def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds content info to the specified table from a file path attribute."""
-    def affectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns true if the changes to the node may affect animation."""
-    def allocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Allocates a flag on all nodes for use by the named plugin and returns the flag's index."""
-    def attribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns an attribute of the node, given either its index or name."""
-    def attributeClass(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the class of the specified attribute."""
-    def attributeCount(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the number of attributes on the node."""
     @property
     def boundingBox(*args: Any, **kwargs: Any) -> Any:
         """Node's bounding box, in object space."""
     @boundingBox.setter
     def boundingBox(*args: Any, **kwargs: Any) -> Any:
         """Node's bounding box, in object space."""
-    def canBeWritten(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns true if the node will be written to file."""
     def child(self: Self, *args: Any, **kwargs: Any) -> Any:
         """child(index) -> MObject
 
@@ -9702,8 +6055,6 @@ class MFnDagNode(MFnDependencyNode):
 
         Returns the number of nodes which are children of this one.
         """
-    def classification(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the classification string for the named node type."""
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """create(type, name=None, parent=MObject.kNullObj) -> MObject
 
@@ -9735,46 +6086,16 @@ class MFnDagNode(MFnDependencyNode):
 
         Returns the root node of the first path leading to this node.
         """
-    def deallocateAllFlags(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Deallocates all node flags which are currently allocated to the named plugin."""
-    def deallocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Deallocates the specified node flag, which was previously allocated by the named plugin using allocateFlag()."""
-    def dgCallbackIds(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns DG timing information for a specific callback type, broken down by callbackId."""
-    def dgCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns DG timing information broken down by callback type."""
-    def dgTimer(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a specific DG timer metric for a given timer type."""
-    def dgTimerOff(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Turns DG timing off for this node."""
-    def dgTimerOn(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Turns DG timing on for this node."""
-    def dgTimerQueryState(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the current DG timer state for this node."""
-    def dgTimerReset(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Resets all DG timers for this node."""
     def duplicate(self: Self, *args: Any, **kwargs: Any) -> Any:
         """duplicate(instance=False, instanceLeaf=False) -> MObject
 
         Duplicates the DAG hierarchy rooted at the current node.
         """
-    def findAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the attribute which has the given alias."""
-    def findPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a plug for the given attribute."""
     def fullPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """fullPathName() -> string
 
         Returns the full path of the attached object, from the root of the DAG on down.
         """
-    def getAffectedAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all of the attributes which are affected by the specified attribute."""
-    def getAffectingAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all of the attributes which affect the specified attribute."""
-    def getAliasAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the node's alias attribute, which is a special attribute used to store information about the node's attribute aliases."""
-    def getAliasList(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all of the node's attribute aliases."""
     def getAllPaths(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getAllPaths() -> MDagPathArray
 
@@ -9786,31 +6107,21 @@ class MFnDagNode(MFnDependencyNode):
         Returns a tuple containing an array of sets and an array of the
         components of the DAG object which are in those sets. If the entire object is in a set, then the corresponding entry in the comps array will have no elements in it.
         """
-    def getConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all the plugs which are connected to attributes of this node."""
-    def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Gets the external content (files) that this node depends on."""
     def getPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getPath() -> MDagPath
 
         Returns the DAG path to which this function set is attached, or the first path to the node if the function set is attached to an MObject.
         """
-    def hasAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the node has an attribute with the given name."""
     def hasChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasChild(node) -> bool
 
         Returns True if the specified node is a child of this one.
         """
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
     def hasParent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasParent(node) -> bool
 
         Returns True if the specified node is a parent of this one.
         """
-    def hasUniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the node's name is unique."""
     @property
     def inModel(*args: Any, **kwargs: Any) -> Any:
         """True if the node has been added to the model."""
@@ -9834,20 +6145,6 @@ class MFnDagNode(MFnDependencyNode):
         Returns True if the specified node is a parent of this one.
         """
     @property
-    def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
-        """True if this is a default node, created automatically by Maya."""
-    @isDefaultNode.setter
-    def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
-        """True if this is a default node, created automatically by Maya."""
-    def isFlagSet(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the state of the specified node flag."""
-    @property
-    def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is from a referenced file, False if the node is part of the main scene."""
-    @isFromReferencedFile.setter
-    def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is from a referenced file, False if the node is part of the main scene."""
-    @property
     def isInstanceable(*args: Any, **kwargs: Any) -> Any:
         """True if instancing is allowed for this node."""
     @isInstanceable.setter
@@ -9869,60 +6166,12 @@ class MFnDagNode(MFnDependencyNode):
     @isIntermediateObject.setter
     def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
         """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-    @property
-    def isLocked(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is locked against changes."""
-    @isLocked.setter
-    def isLocked(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is locked against changes."""
-    def isNewAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the specified attribute was added in the current scene, and not by by one of its referenced files."""
     def isParentOf(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isParentOf(node) -> bool
 
         Returns True if the specified node is a child of this one.
         """
-    @property
-    def isShared(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is shared."""
-    @isShared.setter
-    def isShared(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is shared."""
-    def isTrackingEdits(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the node is referenced or in an assembly that is tracking edits."""
-    kExtensionAttr: int = ...
-    kInvalidAttr: int = ...
-    kLocalDynamicAttr: int = ...
     kNextPos: int = ...
-    kNormalAttr: int = ...
-    kTimerInvalidState: int = ...
-    kTimerMetric_callback: int = ...
-    kTimerMetric_callbackNotViaAPI: int = ...
-    kTimerMetric_callbackViaAPI: int = ...
-    kTimerMetric_compute: int = ...
-    kTimerMetric_computeDuringCallback: int = ...
-    kTimerMetric_computeNotDuringCallback: int = ...
-    kTimerMetric_dirty: int = ...
-    kTimerMetric_draw: int = ...
-    kTimerMetric_fetch: int = ...
-    kTimerMetrics: int = ...
-    kTimerOff: int = ...
-    kTimerOn: int = ...
-    kTimerType_count: int = ...
-    kTimerType_inclusive: int = ...
-    kTimerType_self: int = ...
-    kTimerTypes: int = ...
-    kTimerUninitialized: int = ...
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the node's name."""
-    @property
-    def namespace(*args: Any, **kwargs: Any) -> Any:
-        """Name of the namespace which contains the node."""
-    @namespace.setter
-    def namespace(*args: Any, **kwargs: Any) -> Any:
-        """Name of the namespace which contains the node."""
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
     @property
     def objectColor(*args: Any, **kwargs: Any) -> Any:
         """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
@@ -9956,16 +6205,6 @@ class MFnDagNode(MFnDependencyNode):
 
         Returns the minimum path string necessary to uniquely identify the attached object.
         """
-    @property
-    def pluginName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the plugin which registered the node type, if any."""
-    @pluginName.setter
-    def pluginName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the plugin which registered the node type, if any."""
-    def plugsAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the alias for a plug's attribute."""
-    def removeAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Removes a dynamic attribute from the node."""
     def removeChild(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeChild(node) -> self
 
@@ -9976,79 +6215,25 @@ class MFnDagNode(MFnDependencyNode):
 
         Removes the child, specified by index, reparenting it under the world.
         """
-    def reorderedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns one of the node's attribute, based on the order in which they are written to file."""
-    def setAffectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Specifies that modifications to a node could potentially affect the animation."""
-    def setAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds or removes an attribute alias."""
-    def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Used to prevent the node from being written to file."""
-    def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Changes the location of external content."""
-    def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets content info in the specified attribute from the table."""
-    def setFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets the state of the specified node flag."""
-    def setName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets the node's name."""
     def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setObject(MObject or MDagPath) -> self
 
         Attaches the function set to the specified node or DAG path.
         """
-    def setUuid(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets the node's UUID."""
     def transformationMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
         """transformationMatrix() -> MMatrix
 
         Returns the object space transformation matrix for this DAG node.
         """
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
-    @property
-    def typeId(*args: Any, **kwargs: Any) -> Any:
-        """MTypeId for the node's type."""
-    @typeId.setter
-    def typeId(*args: Any, **kwargs: Any) -> Any:
-        """MTypeId for the node's type."""
-    @property
-    def typeName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the node's type."""
-    @typeName.setter
-    def typeName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the node's type."""
-    def uniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """For a DAG node, the unique name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself. For a non-DAG node, the uniqueName is just its name."""
     @property
     def useObjectColor(*args: Any, **kwargs: Any) -> Any:
         """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
     @useObjectColor.setter
     def useObjectColor(*args: Any, **kwargs: Any) -> Any:
         """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-    def userNode(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the MPxNode object for a plugin node."""
-    def uuid(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the node's UUID."""
 
 class MFnData(MFnBase):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -10057,36 +6242,8 @@ class MFnData(MFnBase):
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
     kAny: int = ...
     kComponentList: int = ...
     kDoubleArray: int = ...
@@ -10114,31 +6271,9 @@ class MFnData(MFnBase):
     kStringArray: int = ...
     kSubdSurface: int = ...
     kVectorArray: int = ...
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
 
 class MFnDependencyNode(MFnBase):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -10147,34 +6282,8 @@ class MFnDependencyNode(MFnBase):
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def absoluteName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the absolute name of this node.  The absolute name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself.  Regardless of relative name mode, absoluteName() will always return a full namespace path prefixed with a leading colon (the root namespace).  If the underlying node is a DAG node, then absoluteName() does not guarantee uniqueness, that is, two dependency nodes could have the same absoluteName().  In cases like this the uniqueName() method will guarantee that the name uniquely identifies the node."""
     def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -10233,8 +6342,6 @@ class MFnDependencyNode(MFnBase):
         """Gets the external content (files) that this node depends on."""
     def hasAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node has an attribute with the given name."""
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
     def hasUniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node's name is unique."""
     @property
@@ -10297,8 +6404,6 @@ class MFnDependencyNode(MFnBase):
     @namespace.setter
     def namespace(*args: Any, **kwargs: Any) -> Any:
         """Name of the namespace which contains the node."""
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
     @property
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
@@ -10325,12 +6430,8 @@ class MFnDependencyNode(MFnBase):
         """Sets the state of the specified node flag."""
     def setName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's name."""
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
     def setUuid(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's UUID."""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
     @property
     def typeId(*args: Any, **kwargs: Any) -> Any:
         """MTypeId for the node's type."""
@@ -10351,165 +6452,33 @@ class MFnDependencyNode(MFnBase):
         """Returns the node's UUID."""
 
 class MFnDoubleArrayData(MFnData):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
-    __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def array(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the encapsulated array as an MDoubleArray."""
     def copyTo(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Replaces the elements of an array with those in the encapsulated array."""
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new double array data object."""
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
-    kAny: int = ...
-    kComponentList: int = ...
-    kDoubleArray: int = ...
-    kDynArrayAttrs: int = ...
-    kDynSweptGeometry: int = ...
-    kFalloffFunction: int = ...
-    kFloatArray: int = ...
-    kIntArray: int = ...
-    kInvalid: int = ...
-    kLast: int = ...
-    kLattice: int = ...
-    kMatrix: int = ...
-    kMatrixArray: int = ...
-    kMesh: int = ...
-    kNId: int = ...
-    kNObject: int = ...
-    kNumeric: int = ...
-    kNurbsCurve: int = ...
-    kNurbsSurface: int = ...
-    kPlugin: int = ...
-    kPluginGeometry: int = ...
-    kPointArray: int = ...
-    kSphere: int = ...
-    kString: int = ...
-    kStringArray: int = ...
-    kSubdSurface: int = ...
-    kVectorArray: int = ...
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
     def set(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets values in the encapsulated array."""
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
 
 class MFnDoubleIndexedComponent(MFnComponent):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addElement(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addElement(uIndex, vIndex) -> self
         addElement([uIndex, vIndex]) -> self
@@ -10523,24 +6492,12 @@ class MFnDoubleIndexedComponent(MFnComponent):
         elements sequence is itself a sequence of two ints which are the U and
         V indices of an element to be added.
         """
-    @property
-    def componentType(*args: Any, **kwargs: Any) -> Any:
-        """Type of the component. (MFn Type constant)"""
-    @componentType.setter
-    def componentType(*args: Any, **kwargs: Any) -> Any:
-        """Type of the component. (MFn Type constant)"""
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """create(MFn Type constant) -> MObject
 
         Creates a new, empty component, attaches it to the function set and
         returns an MObject which references it.
         """
-    @property
-    def elementCount(*args: Any, **kwargs: Any) -> Any:
-        """Number of elements in the component."""
-    @elementCount.setter
-    def elementCount(*args: Any, **kwargs: Any) -> Any:
-        """Number of elements in the component."""
     def getCompleteData(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getCompleteData() -> (numU, numV)
 
@@ -10559,38 +6516,6 @@ class MFnDoubleIndexedComponent(MFnComponent):
         Returns all of the component's elements as a list of tuples with each
         tuple containing the U and V indices of a single element.
         """
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
-    @property
-    def hasWeights(*args: Any, **kwargs: Any) -> Any:
-        """True if the component has weights associated with its elements."""
-    @hasWeights.setter
-    def hasWeights(*args: Any, **kwargs: Any) -> Any:
-        """True if the component has weights associated with its elements."""
-    @property
-    def isComplete(*args: Any, **kwargs: Any) -> Any:
-        """Marking a component as complete means that it represents a full set
-        of indices from 0 to elementCount-1
-        """
-    @isComplete.setter
-    def isComplete(*args: Any, **kwargs: Any) -> Any:
-        """Marking a component as complete means that it represents a full set
-        of indices from 0 to elementCount-1
-        """
-    @property
-    def isEmpty(*args: Any, **kwargs: Any) -> Any:
-        """True if the component contains no elements."""
-    @isEmpty.setter
-    def isEmpty(*args: Any, **kwargs: Any) -> Any:
-        """True if the component contains no elements."""
-    def isEqual(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """isEqual(MObject other) -> bool
-
-        Returns True if other refers to the same component as the
-        one to which the function set is currently attached.
-        """
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
     def setCompleteData(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setCompleteData(numU, numV) -> self
 
@@ -10598,115 +6523,15 @@ class MFnDoubleIndexedComponent(MFnComponent):
         numU and numV indicate the number of U and V indices in the complete
         component (i.e. the max U index is numU-1 and the max V index is numV-1).
         """
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
-    def weight(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """weight(index) -> MWeight
-
-        Returns the weight associated with the specified element,
-        where index can range from 0 to elementCount-1.
-        """
 
 class MFnEnumAttribute(MFnAttribute):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-    def accepts(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if this attribute can accept a connection of the given type."""
-    def acceptsAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if this attribute can accept a connection with the given attribute."""
     def addField(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Add an item to the enumeration with a specified UI name and corresponding attribute value."""
-    def addToCategory(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds the attribute to a category"""
-    @property
-    def affectsAppearance(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect how the node is drawn in Maya's viewport?"""
-    @affectsAppearance.setter
-    def affectsAppearance(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect how the node is drawn in Maya's viewport?"""
-    @property
-    def affectsWorldSpace(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect the node's worldSpace matrix?"""
-    @affectsWorldSpace.setter
-    def affectsWorldSpace(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect the node's worldSpace matrix?"""
-    @property
-    def array(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an array?"""
-    @array.setter
-    def array(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an array?"""
-    @property
-    def cached(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be cached in the datablock?"""
-    @cached.setter
-    def cached(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be cached in the datablock?"""
-    @property
-    def channelBox(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be displayed in the Channel Box?"""
-    @channelBox.setter
-    def channelBox(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be displayed in the Channel Box?"""
-    @property
-    def connectable(*args: Any, **kwargs: Any) -> Any:
-        """Can connections be made to the attribute?"""
-    @connectable.setter
-    def connectable(*args: Any, **kwargs: Any) -> Any:
-        """Can connections be made to the attribute?"""
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new enumeration attribute, attaches it to the function set and returns it as an MObject."""
     @property
@@ -10715,456 +6540,44 @@ class MFnEnumAttribute(MFnAttribute):
     @default.setter
     def default(*args: Any, **kwargs: Any) -> Any:
         """Default value"""
-    @property
-    def disconnectBehavior(*args: Any, **kwargs: Any) -> Any:
-        """What should happen when the attribute loses an incoming connection?"""
-    @disconnectBehavior.setter
-    def disconnectBehavior(*args: Any, **kwargs: Any) -> Any:
-        """What should happen when the attribute loses an incoming connection?"""
-    @property
-    def dynamic(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a dynamic attribute?"""
-    @dynamic.setter
-    def dynamic(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a dynamic attribute?"""
-    @property
-    def extension(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an extension attribute?"""
-    @extension.setter
-    def extension(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an extension attribute?"""
     def fieldName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the name of the enumeration item which has a given value."""
     def fieldValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the value of the enumeration item which has a given name."""
-    def getAddAttrCmd(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a string containing a MEL 'addAttr' command capable of recreating the attribute."""
     def getMax(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the maximum value of all the enumeration items."""
     def getMin(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the minimum value of all the enumeration items."""
-    def hasCategory(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Checks to see if the attribute has a given category"""
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
-    @property
-    def hidden(*args: Any, **kwargs: Any) -> Any:
-        """If True the attribute will not be displayed in the Attribute Editor."""
-    @hidden.setter
-    def hidden(*args: Any, **kwargs: Any) -> Any:
-        """If True the attribute will not be displayed in the Attribute Editor."""
-    @property
-    def indeterminant(*args: Any, **kwargs: Any) -> Any:
-        """Hint to DG that this attribute may not always be used when computing the attributes which are dependent upon it."""
-    @indeterminant.setter
-    def indeterminant(*args: Any, **kwargs: Any) -> Any:
-        """Hint to DG that this attribute may not always be used when computing the attributes which are dependent upon it."""
-    @property
-    def indexMatters(*args: Any, **kwargs: Any) -> Any:
-        """If False, connectAttr -nextAvailable can be used with this attribute. If True then an explicit index must be provided."""
-    @indexMatters.setter
-    def indexMatters(*args: Any, **kwargs: Any) -> Any:
-        """If False, connectAttr -nextAvailable can be used with this attribute. If True then an explicit index must be provided."""
-    @property
-    def internal(*args: Any, **kwargs: Any) -> Any:
-        """Will the node handle the attribute's data storage itself, outside of the node's data block?"""
-    @internal.setter
-    def internal(*args: Any, **kwargs: Any) -> Any:
-        """Will the node handle the attribute's data storage itself, outside of the node's data block?"""
-    @property
-    def isProxyAttribute(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute is a proxy attribute?"""
-    @isProxyAttribute.setter
-    def isProxyAttribute(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute is a proxy attribute?"""
-    kDelete: int = ...
-    kNothing: int = ...
-    kReset: int = ...
-    @property
-    def keyable(*args: Any, **kwargs: Any) -> Any:
-        """Can keys be set on the attribute?"""
-    @keyable.setter
-    def keyable(*args: Any, **kwargs: Any) -> Any:
-        """Can keys be set on the attribute?"""
-    @property
-    def name(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's long name."""
-    @name.setter
-    def name(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's long name."""
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-    @property
-    def parent(*args: Any, **kwargs: Any) -> Any:
-        """Parent attribute. MObject::kNullObj if attr has no parent."""
-    @parent.setter
-    def parent(*args: Any, **kwargs: Any) -> Any:
-        """Parent attribute. MObject::kNullObj if attr has no parent."""
-    @property
-    def readable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute readable?"""
-    @readable.setter
-    def readable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute readable?"""
-    @property
-    def renderSource(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a render source?"""
-    @renderSource.setter
-    def renderSource(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a render source?"""
     def setDefaultByName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Set the default value using the name of an enumeration item. Equivalent to: attr.default = attr.fieldValue(name)"""
-    def setNiceNameOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets a nice UI name for this attribute rather than using the default derived from it's long name."""
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
-    @property
-    def shortName(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's short name."""
-    @shortName.setter
-    def shortName(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's short name."""
-    @property
-    def storable(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be preserved when the node is written to file?"""
-    @storable.setter
-    def storable(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be preserved when the node is written to file?"""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
-    @property
-    def usedAsColor(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a color in the UI?"""
-    @usedAsColor.setter
-    def usedAsColor(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a color in the UI?"""
-    @property
-    def usedAsFilename(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a file name in the UI?"""
-    @usedAsFilename.setter
-    def usedAsFilename(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a file name in the UI?"""
-    @property
-    def usesArrayDataBuilder(*args: Any, **kwargs: Any) -> Any:
-        """Array attributes only: does the attribute create elements using MArrayDataBuilder?"""
-    @usesArrayDataBuilder.setter
-    def usesArrayDataBuilder(*args: Any, **kwargs: Any) -> Any:
-        """Array attributes only: does the attribute create elements using MArrayDataBuilder?"""
-    @property
-    def worldSpace(*args: Any, **kwargs: Any) -> Any:
-        """DAG nodes only: if the node is instanced, will the attribute have separate values for each instance?"""
-    @worldSpace.setter
-    def worldSpace(*args: Any, **kwargs: Any) -> Any:
-        """DAG nodes only: if the node is instanced, will the attribute have separate values for each instance?"""
-    @property
-    def writable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute writable?"""
-    @writable.setter
-    def writable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute writable?"""
 
 class MFnGenericAttribute(MFnAttribute):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-    def accepts(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if this attribute can accept a connection of the given type."""
-    def acceptsAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if this attribute can accept a connection with the given attribute."""
     def addDataType(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds the specified Maya data type to the list of those accepted by the attribute."""
     def addNumericType(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds the specified numeric type to the list of those accepted by the attribute."""
-    def addToCategory(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds the attribute to a category"""
     def addTypeId(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds the specified data typeId to the list of those accepted by the attribute."""
-    @property
-    def affectsAppearance(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect how the node is drawn in Maya's viewport?"""
-    @affectsAppearance.setter
-    def affectsAppearance(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect how the node is drawn in Maya's viewport?"""
-    @property
-    def affectsWorldSpace(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect the node's worldSpace matrix?"""
-    @affectsWorldSpace.setter
-    def affectsWorldSpace(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect the node's worldSpace matrix?"""
-    @property
-    def array(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an array?"""
-    @array.setter
-    def array(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an array?"""
-    @property
-    def cached(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be cached in the datablock?"""
-    @cached.setter
-    def cached(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be cached in the datablock?"""
-    @property
-    def channelBox(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be displayed in the Channel Box?"""
-    @channelBox.setter
-    def channelBox(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be displayed in the Channel Box?"""
-    @property
-    def connectable(*args: Any, **kwargs: Any) -> Any:
-        """Can connections be made to the attribute?"""
-    @connectable.setter
-    def connectable(*args: Any, **kwargs: Any) -> Any:
-        """Can connections be made to the attribute?"""
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new generic attribute, attaches it to the function set and returns it as an MObject."""
-    @property
-    def disconnectBehavior(*args: Any, **kwargs: Any) -> Any:
-        """What should happen when the attribute loses an incoming connection?"""
-    @disconnectBehavior.setter
-    def disconnectBehavior(*args: Any, **kwargs: Any) -> Any:
-        """What should happen when the attribute loses an incoming connection?"""
-    @property
-    def dynamic(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a dynamic attribute?"""
-    @dynamic.setter
-    def dynamic(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a dynamic attribute?"""
-    @property
-    def extension(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an extension attribute?"""
-    @extension.setter
-    def extension(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an extension attribute?"""
-    def getAddAttrCmd(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a string containing a MEL 'addAttr' command capable of recreating the attribute."""
-    def hasCategory(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Checks to see if the attribute has a given category"""
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
-    @property
-    def hidden(*args: Any, **kwargs: Any) -> Any:
-        """If True the attribute will not be displayed in the Attribute Editor."""
-    @hidden.setter
-    def hidden(*args: Any, **kwargs: Any) -> Any:
-        """If True the attribute will not be displayed in the Attribute Editor."""
-    @property
-    def indeterminant(*args: Any, **kwargs: Any) -> Any:
-        """Hint to DG that this attribute may not always be used when computing the attributes which are dependent upon it."""
-    @indeterminant.setter
-    def indeterminant(*args: Any, **kwargs: Any) -> Any:
-        """Hint to DG that this attribute may not always be used when computing the attributes which are dependent upon it."""
-    @property
-    def indexMatters(*args: Any, **kwargs: Any) -> Any:
-        """If False, connectAttr -nextAvailable can be used with this attribute. If True then an explicit index must be provided."""
-    @indexMatters.setter
-    def indexMatters(*args: Any, **kwargs: Any) -> Any:
-        """If False, connectAttr -nextAvailable can be used with this attribute. If True then an explicit index must be provided."""
-    @property
-    def internal(*args: Any, **kwargs: Any) -> Any:
-        """Will the node handle the attribute's data storage itself, outside of the node's data block?"""
-    @internal.setter
-    def internal(*args: Any, **kwargs: Any) -> Any:
-        """Will the node handle the attribute's data storage itself, outside of the node's data block?"""
-    @property
-    def isProxyAttribute(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute is a proxy attribute?"""
-    @isProxyAttribute.setter
-    def isProxyAttribute(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute is a proxy attribute?"""
-    kDelete: int = ...
-    kNothing: int = ...
-    kReset: int = ...
-    @property
-    def keyable(*args: Any, **kwargs: Any) -> Any:
-        """Can keys be set on the attribute?"""
-    @keyable.setter
-    def keyable(*args: Any, **kwargs: Any) -> Any:
-        """Can keys be set on the attribute?"""
-    @property
-    def name(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's long name."""
-    @name.setter
-    def name(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's long name."""
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-    @property
-    def parent(*args: Any, **kwargs: Any) -> Any:
-        """Parent attribute. MObject::kNullObj if attr has no parent."""
-    @parent.setter
-    def parent(*args: Any, **kwargs: Any) -> Any:
-        """Parent attribute. MObject::kNullObj if attr has no parent."""
-    @property
-    def readable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute readable?"""
-    @readable.setter
-    def readable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute readable?"""
     def removeDataType(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Removes the specified Maya data type from the list of those accepted by the attribute."""
     def removeNumericType(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Removes the specified numeric type from the list of those accepted by the attribute."""
     def removeTypeId(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Removes the specified data typeId from the list of those accepted by the attribute."""
-    @property
-    def renderSource(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a render source?"""
-    @renderSource.setter
-    def renderSource(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a render source?"""
-    def setNiceNameOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets a nice UI name for this attribute rather than using the default derived from it's long name."""
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
-    @property
-    def shortName(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's short name."""
-    @shortName.setter
-    def shortName(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's short name."""
-    @property
-    def storable(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be preserved when the node is written to file?"""
-    @storable.setter
-    def storable(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be preserved when the node is written to file?"""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
-    @property
-    def usedAsColor(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a color in the UI?"""
-    @usedAsColor.setter
-    def usedAsColor(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a color in the UI?"""
-    @property
-    def usedAsFilename(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a file name in the UI?"""
-    @usedAsFilename.setter
-    def usedAsFilename(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a file name in the UI?"""
-    @property
-    def usesArrayDataBuilder(*args: Any, **kwargs: Any) -> Any:
-        """Array attributes only: does the attribute create elements using MArrayDataBuilder?"""
-    @usesArrayDataBuilder.setter
-    def usesArrayDataBuilder(*args: Any, **kwargs: Any) -> Any:
-        """Array attributes only: does the attribute create elements using MArrayDataBuilder?"""
-    @property
-    def worldSpace(*args: Any, **kwargs: Any) -> Any:
-        """DAG nodes only: if the node is instanced, will the attribute have separate values for each instance?"""
-    @worldSpace.setter
-    def worldSpace(*args: Any, **kwargs: Any) -> Any:
-        """DAG nodes only: if the node is instanced, will the attribute have separate values for each instance?"""
-    @property
-    def writable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute writable?"""
-    @writable.setter
-    def writable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute writable?"""
 
 class MFnGeometryData(MFnData):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addComponentTag(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addComponentTag(key) -> self
 
@@ -11218,8 +6631,6 @@ class MFnGeometryData(MFnData):
 
         Returns True if a componentTag with the given key exists.
         """
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
     def hasObjectGroup(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasObjectGroup(id) -> self
 
@@ -11238,51 +6649,12 @@ class MFnGeometryData(MFnData):
     @isNotIdentity.setter
     def isNotIdentity(*args: Any, **kwargs: Any) -> Any:
         """True if the matrix for the geometry is not the identity."""
-    kAny: int = ...
-    kAuto: int = ...
-    kCompleteGroup: int = ...
-    kComponentList: int = ...
-    kDoubleArray: int = ...
-    kDynArrayAttrs: int = ...
-    kDynSweptGeometry: int = ...
-    kEdges: int = ...
-    kEmptyGroup: int = ...
-    kFaces: int = ...
-    kFalloffFunction: int = ...
-    kFloatArray: int = ...
-    kIntArray: int = ...
-    kInvalid: int = ...
-    kInvalidGroup: int = ...
-    kLast: int = ...
-    kLattice: int = ...
-    kMatrix: int = ...
-    kMatrixArray: int = ...
-    kMesh: int = ...
-    kNId: int = ...
-    kNObject: int = ...
-    kNull: int = ...
-    kNumeric: int = ...
-    kNurbsCurve: int = ...
-    kNurbsSurface: int = ...
-    kPartialGroup: int = ...
-    kPlugin: int = ...
-    kPluginGeometry: int = ...
-    kPointArray: int = ...
-    kSphere: int = ...
-    kString: int = ...
-    kStringArray: int = ...
-    kSubdSurface: int = ...
-    kUnsupported: int = ...
-    kVectorArray: int = ...
-    kVerts: int = ...
     @property
     def matrix(*args: Any, **kwargs: Any) -> Any:
         """MMatrix used to convert the object into local space."""
     @matrix.setter
     def matrix(*args: Any, **kwargs: Any) -> Any:
         """MMatrix used to convert the object into local space."""
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
     def objectGroup(self: Self, *args: Any, **kwargs: Any) -> Any:
         """objectGroup(index) -> int
 
@@ -11345,221 +6717,43 @@ class MFnGeometryData(MFnData):
         Sets the members of the componentTag with the given key
         to be those in the given component.
         """
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
     def setObjectGroupComponent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setObjectGroupComponent(id, MObject component) -> self
 
         Sets the members of the object group with the given id
         to be only those in the given component.
         """
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
 
 class MFnIntArrayData(MFnData):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
-    __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def array(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the encapsulated array as an MIntArray."""
     def copyTo(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Replaces the elements of an array with those in the encapsulated array."""
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new int array data object."""
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
-    kAny: int = ...
-    kComponentList: int = ...
-    kDoubleArray: int = ...
-    kDynArrayAttrs: int = ...
-    kDynSweptGeometry: int = ...
-    kFalloffFunction: int = ...
-    kFloatArray: int = ...
-    kIntArray: int = ...
-    kInvalid: int = ...
-    kLast: int = ...
-    kLattice: int = ...
-    kMatrix: int = ...
-    kMatrixArray: int = ...
-    kMesh: int = ...
-    kNId: int = ...
-    kNObject: int = ...
-    kNumeric: int = ...
-    kNurbsCurve: int = ...
-    kNurbsSurface: int = ...
-    kPlugin: int = ...
-    kPluginGeometry: int = ...
-    kPointArray: int = ...
-    kSphere: int = ...
-    kString: int = ...
-    kStringArray: int = ...
-    kSubdSurface: int = ...
-    kVectorArray: int = ...
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
     def set(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets values in the encapsulated array."""
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
 
 class MFnLightDataAttribute(MFnAttribute):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-    def accepts(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if this attribute can accept a connection of the given type."""
-    def acceptsAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if this attribute can accept a connection with the given attribute."""
-    def addToCategory(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds the attribute to a category"""
-    @property
-    def affectsAppearance(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect how the node is drawn in Maya's viewport?"""
-    @affectsAppearance.setter
-    def affectsAppearance(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect how the node is drawn in Maya's viewport?"""
-    @property
-    def affectsWorldSpace(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect the node's worldSpace matrix?"""
-    @affectsWorldSpace.setter
-    def affectsWorldSpace(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect the node's worldSpace matrix?"""
-    @property
-    def array(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an array?"""
-    @array.setter
-    def array(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an array?"""
-    @property
-    def cached(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be cached in the datablock?"""
-    @cached.setter
-    def cached(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be cached in the datablock?"""
-    @property
-    def channelBox(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be displayed in the Channel Box?"""
-    @channelBox.setter
-    def channelBox(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be displayed in the Channel Box?"""
     def child(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns one of the attribute's children, specified by index."""
-    @property
-    def connectable(*args: Any, **kwargs: Any) -> Any:
-        """Can connections be made to the attribute?"""
-    @connectable.setter
-    def connectable(*args: Any, **kwargs: Any) -> Any:
-        """Can connections be made to the attribute?"""
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new light data attribute, attaches it to the function set and returns it as an MObject."""
     @property
@@ -11568,346 +6762,35 @@ class MFnLightDataAttribute(MFnAttribute):
     @default.setter
     def default(*args: Any, **kwargs: Any) -> Any:
         """Default values for the light data attribute's child attributes."""
-    @property
-    def disconnectBehavior(*args: Any, **kwargs: Any) -> Any:
-        """What should happen when the attribute loses an incoming connection?"""
-    @disconnectBehavior.setter
-    def disconnectBehavior(*args: Any, **kwargs: Any) -> Any:
-        """What should happen when the attribute loses an incoming connection?"""
-    @property
-    def dynamic(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a dynamic attribute?"""
-    @dynamic.setter
-    def dynamic(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a dynamic attribute?"""
-    @property
-    def extension(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an extension attribute?"""
-    @extension.setter
-    def extension(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an extension attribute?"""
-    def getAddAttrCmd(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a string containing a MEL 'addAttr' command capable of recreating the attribute."""
-    def hasCategory(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Checks to see if the attribute has a given category"""
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
-    @property
-    def hidden(*args: Any, **kwargs: Any) -> Any:
-        """If True the attribute will not be displayed in the Attribute Editor."""
-    @hidden.setter
-    def hidden(*args: Any, **kwargs: Any) -> Any:
-        """If True the attribute will not be displayed in the Attribute Editor."""
-    @property
-    def indeterminant(*args: Any, **kwargs: Any) -> Any:
-        """Hint to DG that this attribute may not always be used when computing the attributes which are dependent upon it."""
-    @indeterminant.setter
-    def indeterminant(*args: Any, **kwargs: Any) -> Any:
-        """Hint to DG that this attribute may not always be used when computing the attributes which are dependent upon it."""
-    @property
-    def indexMatters(*args: Any, **kwargs: Any) -> Any:
-        """If False, connectAttr -nextAvailable can be used with this attribute. If True then an explicit index must be provided."""
-    @indexMatters.setter
-    def indexMatters(*args: Any, **kwargs: Any) -> Any:
-        """If False, connectAttr -nextAvailable can be used with this attribute. If True then an explicit index must be provided."""
-    @property
-    def internal(*args: Any, **kwargs: Any) -> Any:
-        """Will the node handle the attribute's data storage itself, outside of the node's data block?"""
-    @internal.setter
-    def internal(*args: Any, **kwargs: Any) -> Any:
-        """Will the node handle the attribute's data storage itself, outside of the node's data block?"""
-    @property
-    def isProxyAttribute(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute is a proxy attribute?"""
-    @isProxyAttribute.setter
-    def isProxyAttribute(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute is a proxy attribute?"""
-    kDelete: int = ...
-    kNothing: int = ...
-    kReset: int = ...
-    @property
-    def keyable(*args: Any, **kwargs: Any) -> Any:
-        """Can keys be set on the attribute?"""
-    @keyable.setter
-    def keyable(*args: Any, **kwargs: Any) -> Any:
-        """Can keys be set on the attribute?"""
-    @property
-    def name(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's long name."""
-    @name.setter
-    def name(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's long name."""
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-    @property
-    def parent(*args: Any, **kwargs: Any) -> Any:
-        """Parent attribute. MObject::kNullObj if attr has no parent."""
-    @parent.setter
-    def parent(*args: Any, **kwargs: Any) -> Any:
-        """Parent attribute. MObject::kNullObj if attr has no parent."""
-    @property
-    def readable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute readable?"""
-    @readable.setter
-    def readable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute readable?"""
-    @property
-    def renderSource(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a render source?"""
-    @renderSource.setter
-    def renderSource(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a render source?"""
-    def setNiceNameOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets a nice UI name for this attribute rather than using the default derived from it's long name."""
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
-    @property
-    def shortName(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's short name."""
-    @shortName.setter
-    def shortName(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's short name."""
-    @property
-    def storable(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be preserved when the node is written to file?"""
-    @storable.setter
-    def storable(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be preserved when the node is written to file?"""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
-    @property
-    def usedAsColor(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a color in the UI?"""
-    @usedAsColor.setter
-    def usedAsColor(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a color in the UI?"""
-    @property
-    def usedAsFilename(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a file name in the UI?"""
-    @usedAsFilename.setter
-    def usedAsFilename(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a file name in the UI?"""
-    @property
-    def usesArrayDataBuilder(*args: Any, **kwargs: Any) -> Any:
-        """Array attributes only: does the attribute create elements using MArrayDataBuilder?"""
-    @usesArrayDataBuilder.setter
-    def usesArrayDataBuilder(*args: Any, **kwargs: Any) -> Any:
-        """Array attributes only: does the attribute create elements using MArrayDataBuilder?"""
-    @property
-    def worldSpace(*args: Any, **kwargs: Any) -> Any:
-        """DAG nodes only: if the node is instanced, will the attribute have separate values for each instance?"""
-    @worldSpace.setter
-    def worldSpace(*args: Any, **kwargs: Any) -> Any:
-        """DAG nodes only: if the node is instanced, will the attribute have separate values for each instance?"""
-    @property
-    def writable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute writable?"""
-    @writable.setter
-    def writable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute writable?"""
 
 class MFnMatrixArrayData(MFnData):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
-    __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def array(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the encapsulated array as an MMatrixArray."""
     def copyTo(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Replaces the elements of an array with those in the encapsulated array."""
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new MMatrix array data object."""
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
-    kAny: int = ...
-    kComponentList: int = ...
-    kDoubleArray: int = ...
-    kDynArrayAttrs: int = ...
-    kDynSweptGeometry: int = ...
-    kFalloffFunction: int = ...
-    kFloatArray: int = ...
-    kIntArray: int = ...
-    kInvalid: int = ...
-    kLast: int = ...
-    kLattice: int = ...
-    kMatrix: int = ...
-    kMatrixArray: int = ...
-    kMesh: int = ...
-    kNId: int = ...
-    kNObject: int = ...
-    kNumeric: int = ...
-    kNurbsCurve: int = ...
-    kNurbsSurface: int = ...
-    kPlugin: int = ...
-    kPluginGeometry: int = ...
-    kPointArray: int = ...
-    kSphere: int = ...
-    kString: int = ...
-    kStringArray: int = ...
-    kSubdSurface: int = ...
-    kVectorArray: int = ...
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
     def set(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets values in the encapsulated array."""
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
 
 class MFnMatrixAttribute(MFnAttribute):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-    def accepts(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if this attribute can accept a connection of the given type."""
-    def acceptsAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if this attribute can accept a connection with the given attribute."""
-    def addToCategory(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds the attribute to a category"""
-    @property
-    def affectsAppearance(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect how the node is drawn in Maya's viewport?"""
-    @affectsAppearance.setter
-    def affectsAppearance(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect how the node is drawn in Maya's viewport?"""
-    @property
-    def affectsWorldSpace(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect the node's worldSpace matrix?"""
-    @affectsWorldSpace.setter
-    def affectsWorldSpace(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect the node's worldSpace matrix?"""
-    @property
-    def array(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an array?"""
-    @array.setter
-    def array(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an array?"""
-    @property
-    def cached(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be cached in the datablock?"""
-    @cached.setter
-    def cached(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be cached in the datablock?"""
-    @property
-    def channelBox(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be displayed in the Channel Box?"""
-    @channelBox.setter
-    def channelBox(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be displayed in the Channel Box?"""
-    @property
-    def connectable(*args: Any, **kwargs: Any) -> Any:
-        """Can connections be made to the attribute?"""
-    @connectable.setter
-    def connectable(*args: Any, **kwargs: Any) -> Any:
-        """Can connections be made to the attribute?"""
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new matrix attribute, attaches it to the function set and returns it as an MObject."""
     @property
@@ -11916,311 +6799,30 @@ class MFnMatrixAttribute(MFnAttribute):
     @default.setter
     def default(*args: Any, **kwargs: Any) -> Any:
         """Default value"""
-    @property
-    def disconnectBehavior(*args: Any, **kwargs: Any) -> Any:
-        """What should happen when the attribute loses an incoming connection?"""
-    @disconnectBehavior.setter
-    def disconnectBehavior(*args: Any, **kwargs: Any) -> Any:
-        """What should happen when the attribute loses an incoming connection?"""
-    @property
-    def dynamic(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a dynamic attribute?"""
-    @dynamic.setter
-    def dynamic(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a dynamic attribute?"""
-    @property
-    def extension(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an extension attribute?"""
-    @extension.setter
-    def extension(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an extension attribute?"""
-    def getAddAttrCmd(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a string containing a MEL 'addAttr' command capable of recreating the attribute."""
-    def hasCategory(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Checks to see if the attribute has a given category"""
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
-    @property
-    def hidden(*args: Any, **kwargs: Any) -> Any:
-        """If True the attribute will not be displayed in the Attribute Editor."""
-    @hidden.setter
-    def hidden(*args: Any, **kwargs: Any) -> Any:
-        """If True the attribute will not be displayed in the Attribute Editor."""
-    @property
-    def indeterminant(*args: Any, **kwargs: Any) -> Any:
-        """Hint to DG that this attribute may not always be used when computing the attributes which are dependent upon it."""
-    @indeterminant.setter
-    def indeterminant(*args: Any, **kwargs: Any) -> Any:
-        """Hint to DG that this attribute may not always be used when computing the attributes which are dependent upon it."""
-    @property
-    def indexMatters(*args: Any, **kwargs: Any) -> Any:
-        """If False, connectAttr -nextAvailable can be used with this attribute. If True then an explicit index must be provided."""
-    @indexMatters.setter
-    def indexMatters(*args: Any, **kwargs: Any) -> Any:
-        """If False, connectAttr -nextAvailable can be used with this attribute. If True then an explicit index must be provided."""
-    @property
-    def internal(*args: Any, **kwargs: Any) -> Any:
-        """Will the node handle the attribute's data storage itself, outside of the node's data block?"""
-    @internal.setter
-    def internal(*args: Any, **kwargs: Any) -> Any:
-        """Will the node handle the attribute's data storage itself, outside of the node's data block?"""
-    @property
-    def isProxyAttribute(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute is a proxy attribute?"""
-    @isProxyAttribute.setter
-    def isProxyAttribute(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute is a proxy attribute?"""
-    kDelete: int = ...
-    kDouble: int = ...
-    kFloat: int = ...
-    kNothing: int = ...
-    kReset: int = ...
-    @property
-    def keyable(*args: Any, **kwargs: Any) -> Any:
-        """Can keys be set on the attribute?"""
-    @keyable.setter
-    def keyable(*args: Any, **kwargs: Any) -> Any:
-        """Can keys be set on the attribute?"""
-    @property
-    def name(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's long name."""
-    @name.setter
-    def name(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's long name."""
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-    @property
-    def parent(*args: Any, **kwargs: Any) -> Any:
-        """Parent attribute. MObject::kNullObj if attr has no parent."""
-    @parent.setter
-    def parent(*args: Any, **kwargs: Any) -> Any:
-        """Parent attribute. MObject::kNullObj if attr has no parent."""
-    @property
-    def readable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute readable?"""
-    @readable.setter
-    def readable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute readable?"""
-    @property
-    def renderSource(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a render source?"""
-    @renderSource.setter
-    def renderSource(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a render source?"""
-    def setNiceNameOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets a nice UI name for this attribute rather than using the default derived from it's long name."""
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
-    @property
-    def shortName(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's short name."""
-    @shortName.setter
-    def shortName(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's short name."""
-    @property
-    def storable(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be preserved when the node is written to file?"""
-    @storable.setter
-    def storable(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be preserved when the node is written to file?"""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
-    @property
-    def usedAsColor(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a color in the UI?"""
-    @usedAsColor.setter
-    def usedAsColor(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a color in the UI?"""
-    @property
-    def usedAsFilename(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a file name in the UI?"""
-    @usedAsFilename.setter
-    def usedAsFilename(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a file name in the UI?"""
-    @property
-    def usesArrayDataBuilder(*args: Any, **kwargs: Any) -> Any:
-        """Array attributes only: does the attribute create elements using MArrayDataBuilder?"""
-    @usesArrayDataBuilder.setter
-    def usesArrayDataBuilder(*args: Any, **kwargs: Any) -> Any:
-        """Array attributes only: does the attribute create elements using MArrayDataBuilder?"""
-    @property
-    def worldSpace(*args: Any, **kwargs: Any) -> Any:
-        """DAG nodes only: if the node is instanced, will the attribute have separate values for each instance?"""
-    @worldSpace.setter
-    def worldSpace(*args: Any, **kwargs: Any) -> Any:
-        """DAG nodes only: if the node is instanced, will the attribute have separate values for each instance?"""
-    @property
-    def writable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute writable?"""
-    @writable.setter
-    def writable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute writable?"""
 
 class MFnMatrixData(MFnData):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new matrix data object."""
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
     def isTransformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the attached object is an MTransformationMatrix, False if it is an MMatrix."""
-    kAny: int = ...
-    kComponentList: int = ...
-    kDoubleArray: int = ...
-    kDynArrayAttrs: int = ...
-    kDynSweptGeometry: int = ...
-    kFalloffFunction: int = ...
-    kFloatArray: int = ...
-    kIntArray: int = ...
-    kInvalid: int = ...
-    kLast: int = ...
-    kLattice: int = ...
-    kMatrix: int = ...
-    kMatrixArray: int = ...
-    kMesh: int = ...
-    kNId: int = ...
-    kNObject: int = ...
-    kNumeric: int = ...
-    kNurbsCurve: int = ...
-    kNurbsSurface: int = ...
-    kPlugin: int = ...
-    kPluginGeometry: int = ...
-    kPointArray: int = ...
-    kSphere: int = ...
-    kString: int = ...
-    kStringArray: int = ...
-    kSubdSurface: int = ...
-    kVectorArray: int = ...
     def matrix(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the encapsulated matrix as an MMatrix."""
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
     def set(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the value of the encapsulated matrix."""
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
     def transformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the encapsulated matrix as an MTransformationMatrix."""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
 
 class MFnMesh(MFnDagNode):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-    def absoluteName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the absolute name of this node.  The absolute name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself.  Regardless of relative name mode, absoluteName() will always return a full namespace path prefixed with a leading colon (the root namespace).  If the underlying node is a DAG node, then absoluteName() does not guarantee uniqueness, that is, two dependency nodes could have the same absoluteName().  In cases like this the uniqueName() method will guarantee that the name uniquely identifies the node."""
-    def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds a new dynamic attribute to the node."""
-    def addChild(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """addChild(node, index=kNextPos, keepExistingParents=False) -> self
-
-        Makes a node a child of this one.
-        """
-    def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds content info to the specified table from a file path attribute."""
     def addHoles(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addHoles(faceIndex, vertices, loopCounts, mergeVertices=True, pointTolerance=kPointTolerance) -> self
 
@@ -12253,8 +6855,6 @@ class MFnMesh(MFnDagNode):
         Note that holes should normally be specified with the opposite winding order
         to the exterior polygon.
         """
-    def affectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns true if the changes to the node may affect animation."""
     def allIntersections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """allIntersections(raySource, rayDirection, space, maxParam,
             testBothDirections, faceIds=None, triIds=None, idsSorted=False,
@@ -12306,8 +6906,6 @@ class MFnMesh(MFnDagNode):
           points hit.
         If no point was hit then the arrays will all be empty.
         """
-    def allocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Allocates a flag on all nodes for use by the named plugin and returns the flag's index."""
     def anyIntersection(self: Self, *args: Any, **kwargs: Any) -> Any:
         """anyIntersection(raySource, rayDirection, space, maxParam,
             testBothDirections, faceIds=None, triIds=None, idsSorted=False,
@@ -12386,12 +6984,6 @@ class MFnMesh(MFnDagNode):
         corresponding face or be 0 to indicate that no UVs will be assigned
         to that face.
         """
-    def attribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns an attribute of the node, given either its index or name."""
-    def attributeClass(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the class of the specified attribute."""
-    def attributeCount(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the number of attributes on the node."""
     def autoUniformGridParams(self: Self, *args: Any, **kwargs: Any) -> Any:
         """autoUniformGridParams() -> MMeshIsectAccelParams
 
@@ -12415,12 +7007,6 @@ class MFnMesh(MFnDagNode):
         Replaces this mesh's geometry with the result of a boolean operation
         on the specified meshes.
         """
-    @property
-    def boundingBox(*args: Any, **kwargs: Any) -> Any:
-        """Node's bounding box, in object space."""
-    @boundingBox.setter
-    def boundingBox(*args: Any, **kwargs: Any) -> Any:
-        """Node's bounding box, in object space."""
     def cachedIntersectionAcceleratorInfo(self: Self, *args: Any, **kwargs: Any) -> Any:
         """cachedIntersectionAcceleratorInfo() -> string
 
@@ -12435,8 +7021,6 @@ class MFnMesh(MFnDagNode):
         memory it is currently occupying. If the mesh has no cached
         intersection accelerator, the empty string is returned.
         """
-    def canBeWritten(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns true if the node will be written to file."""
     @property
     def checkSamePointTwice(*args: Any, **kwargs: Any) -> Any:
         """Controls whether polygons created or added through the functionset
@@ -12447,18 +7031,6 @@ class MFnMesh(MFnDagNode):
         """Controls whether polygons created or added through the functionset
         are checked for duplicate points.
         """
-    def child(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """child(index) -> MObject
-
-        Returns the specified child of this node.
-        """
-    def childCount(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """childCount() -> int
-
-        Returns the number of nodes which are children of this one.
-        """
-    def classification(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the classification string for the named node type."""
     def cleanupEdgeSmoothing(self: Self, *args: Any, **kwargs: Any) -> Any:
         """cleanupEdgeSmoothing() -> self
 
@@ -12749,20 +7321,6 @@ class MFnMesh(MFnDagNode):
         If there is no current uv set, then an empty string will be
         returned.
         """
-    def dagPath(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """dagPath() -> MDagPath
-
-        Returns the DAG path to which this function set is attached. Raises a TypeError if the function set is attached to an MObject rather than a path.
-        """
-    def dagRoot(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """dagRoot() -> MObject
-
-        Returns the root node of the first path leading to this node.
-        """
-    def deallocateAllFlags(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Deallocates all node flags which are currently allocated to the named plugin."""
-    def deallocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Deallocates the specified node flag, which was previously allocated by the named plugin using allocateFlag()."""
     def deleteColorSet(self: Self, *args: Any, **kwargs: Any) -> Any:
         """deleteColorSet(colorSet, modifier=None, currentSelection=None) -> self
 
@@ -12794,20 +7352,6 @@ class MFnMesh(MFnDagNode):
 
         Deletes the specified vertex.
         """
-    def dgCallbackIds(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns DG timing information for a specific callback type, broken down by callbackId."""
-    def dgCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns DG timing information broken down by callback type."""
-    def dgTimer(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a specific DG timer metric for a given timer type."""
-    def dgTimerOff(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Turns DG timing off for this node."""
-    def dgTimerOn(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Turns DG timing on for this node."""
-    def dgTimerQueryState(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the current DG timer state for this node."""
-    def dgTimerReset(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Resets all DG timers for this node."""
     @property
     def displayColors(*args: Any, **kwargs: Any) -> Any:
         """Determines if the mesh's colors are displayed. Attempting to turn
@@ -12819,11 +7363,6 @@ class MFnMesh(MFnDagNode):
         """Determines if the mesh's colors are displayed. Attempting to turn
         color display on when the functionset is attached to mesh data (as
         opposed to a mesh node) will raise TypeError.
-        """
-    def duplicate(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """duplicate(instance=False, instanceLeaf=False) -> MObject
-
-        Duplicates the DAG hierarchy rooted at the current node.
         """
     def duplicateFaces(self: Self, *args: Any, **kwargs: Any) -> Any:
         """duplicateFaces(faces, translation=None) -> self
@@ -12883,10 +7422,6 @@ class MFnMesh(MFnDagNode):
         a distance that will maintain angles between edges at the border of the
         extrusion.
         """
-    def findAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the attribute which has the given alias."""
-    def findPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a plug for the given attribute."""
     def freeCachedIntersectionAccelerator(self: Self, *args: Any, **kwargs: Any) -> Any:
         """freeCachedIntersectionAccelerator() -> self
 
@@ -12897,11 +7432,6 @@ class MFnMesh(MFnDagNode):
         structure. Once the client is finished with these intersection
         operations, however, they are responsible for freeing the acceleration
         structure, which is what this method does.
-        """
-    def fullPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """fullPathName() -> string
-
-        Returns the full path of the attached object, from the root of the DAG on down.
         """
     def generateSmoothMesh(self: Self, *args: Any, **kwargs: Any) -> Any:
         """generateSmoothMesh(parent=kNullObj, options=None) -> MObject
@@ -12925,19 +7455,6 @@ class MFnMesh(MFnDagNode):
         Note that, unlike the create functions, this function does not set
         the functionset to operate on the new mesh, but leaves it attached
         to the original mesh.
-        """
-    def getAffectedAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all of the attributes which are affected by the specified attribute."""
-    def getAffectingAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all of the attributes which affect the specified attribute."""
-    def getAliasAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the node's alias attribute, which is a special attribute used to store information about the node's attribute aliases."""
-    def getAliasList(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all of the node's attribute aliases."""
-    def getAllPaths(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getAllPaths() -> MDagPathArray
-
-        Returns all of the DAG paths which lead to the object to which this function set is attached.
         """
     def getAssignedUVs(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getAssignedUVs(uvSet='') -> (counts, uvIds)
@@ -13118,12 +7635,6 @@ class MFnMesh(MFnDagNode):
         Use the index returned by getColorIndex() to access the returned
         array.
         """
-    def getConnectedSetsAndMembers(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getConnectedSetsAndMembers(instance, renderableSetsOnly) -> (MObjectArray, MObjectArray)
-
-        Returns a tuple containing an array of sets and an array of the
-        components of the DAG object which are in those sets. If the entire object is in a set, then the corresponding entry in the comps array will have no elements in it.
-        """
     def getConnectedShaders(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getConnectedShaders(instance) -> (MObjectArray, MIntArray)
 
@@ -13138,8 +7649,6 @@ class MFnMesh(MFnDagNode):
         node. It will raise RuntimeError if the functionset is attached to
         mesh data.
         """
-    def getConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all the plugs which are connected to attributes of this node."""
     def getCreaseEdges(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getCreaseEdges() -> (MUintArray, MDoubleArray)
 
@@ -13183,8 +7692,6 @@ class MFnMesh(MFnDagNode):
         edge's two vertices. The indices can be used to refer to the
         elements in the array returned by the getPoints() method.
         """
-    def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Gets the external content (files) that this node depends on."""
     def getFaceAndVertexIndices(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getFaceAndVertexIndices(faceVertexIndex, localVertex=True) -> (int, int)
 
@@ -13377,11 +7884,6 @@ class MFnMesh(MFnDagNode):
         use getFaceNormalIds() to get the index into the array.
 
         This method is not threadsafe.
-        """
-    def getPath(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getPath() -> MDagPath
-
-        Returns the DAG path to which this function set is attached, or the first path to the node if the function set is attached to an MObject.
         """
     def getPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getPoint(vertexId, space=MSpace.kObject) -> MPoint
@@ -13643,8 +8145,6 @@ class MFnMesh(MFnDagNode):
 
         Returns True if the color set has an alpha channel.
         """
-    def hasAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the node has an attribute with the given name."""
     def hasBlindData(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasBlindData(compType, compId=None, blindDataId=None) -> bool
 
@@ -13653,41 +8153,10 @@ class MFnMesh(MFnDagNode):
         component is checked. If a blind data ID is provided then only blind
         data of that type is checked.
         """
-    def hasChild(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """hasChild(node) -> bool
-
-        Returns True if the specified node is a child of this one.
-        """
     def hasColorChannels(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasColorChannels(colorSet) -> bool
 
         Returns True if the color set has RGB channels.
-        """
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
-    def hasParent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """hasParent(node) -> bool
-
-        Returns True if the specified node is a parent of this one.
-        """
-    def hasUniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the node's name is unique."""
-    @property
-    def inModel(*args: Any, **kwargs: Any) -> Any:
-        """True if the node has been added to the model."""
-    @inModel.setter
-    def inModel(*args: Any, **kwargs: Any) -> Any:
-        """True if the node has been added to the model."""
-    @property
-    def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
-        """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-    @inUnderWorld.setter
-    def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
-        """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-    def instanceCount(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """instanceCount(indirect) -> int
-
-        Returns the number of instances for this node.
         """
     def intersectFaceAtUV(self: Self, *args: Any, **kwargs: Any) -> Any:
         """intersectFaceAtUV(u, v, uvSet='') -> int
@@ -13703,11 +8172,6 @@ class MFnMesh(MFnDagNode):
 
         Returns True if the blind data type is already in use anywhere in the scene.
         """
-    def isChildOf(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """isChildOf(node) -> bool
-
-        Returns True if the specified node is a parent of this one.
-        """
     def isColorClamped(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isColorClamped(colorSet) -> bool
 
@@ -13720,64 +8184,15 @@ class MFnMesh(MFnDagNode):
         Returns True if the color set is per-instance, and False if it is
         shared across all instances.
         """
-    @property
-    def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
-        """True if this is a default node, created automatically by Maya."""
-    @isDefaultNode.setter
-    def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
-        """True if this is a default node, created automatically by Maya."""
     def isEdgeSmooth(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isEdgeSmooth(edgeId) -> bool
 
         Returns True if the edge is smooth, False if it is hard.
         """
-    def isFlagSet(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the state of the specified node flag."""
-    @property
-    def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is from a referenced file, False if the node is part of the main scene."""
-    @isFromReferencedFile.setter
-    def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is from a referenced file, False if the node is part of the main scene."""
-    @property
-    def isInstanceable(*args: Any, **kwargs: Any) -> Any:
-        """True if instancing is allowed for this node."""
-    @isInstanceable.setter
-    def isInstanceable(*args: Any, **kwargs: Any) -> Any:
-        """True if instancing is allowed for this node."""
-    def isInstanced(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """isInstanced(indirect=True) -> bool
-
-        Returns True if this node is instanced.
-        """
-    def isInstancedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """isInstancedAttribute(attr) -> bool
-
-        Returns True if the specified attribute is an instanced attribute of this node.
-        """
-    @property
-    def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
-        """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-    @isIntermediateObject.setter
-    def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
-        """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-    @property
-    def isLocked(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is locked against changes."""
-    @isLocked.setter
-    def isLocked(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is locked against changes."""
-    def isNewAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the specified attribute was added in the current scene, and not by by one of its referenced files."""
     def isNormalLocked(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isNormalLocked(normalId) -> bool
 
         Returns True if the normal is locked, False otherwise.
-        """
-    def isParentOf(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """isParentOf(node) -> bool
-
-        Returns True if the specified node is a child of this one.
         """
     def isPolygonConvex(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isPolygonConvex(faceId) -> bool
@@ -13796,61 +8211,17 @@ class MFnMesh(MFnDagNode):
         Returns True if the normal, tangent, and binormal form a right handed
         coordinate system, False otherwise.
         """
-    @property
-    def isShared(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is shared."""
-    @isShared.setter
-    def isShared(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is shared."""
-    def isTrackingEdits(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the node is referenced or in an assembly that is tracking edits."""
     def isUVSetPerInstance(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isUVSetPerInstance(uvSet) -> bool
 
         Returns True if the UV set is per-instance, and False if it is shared
         across all instances.
         """
-    kAlpha: int = ...
-    kDifference: int = ...
-    kEdgeClassification: int = ...
-    kExtensionAttr: int = ...
     kGeomBorder: int = ...
     kInstanceUnspecified: int = ...
-    kInternalPoint: int = ...
     kIntersectTolerance: float = ...
-    kIntersection: int = ...
-    kInvalid: int = ...
-    kInvalidAttr: int = ...
-    kLocalDynamicAttr: int = ...
-    kNextPos: int = ...
-    kNormalAttr: int = ...
-    kNormalClassification: int = ...
-    kOnEdge: int = ...
     kPointTolerance: float = ...
-    kRGB: int = ...
-    kRGBA: int = ...
-    kSharedUV: int = ...
-    kTimerInvalidState: int = ...
-    kTimerMetric_callback: int = ...
-    kTimerMetric_callbackNotViaAPI: int = ...
-    kTimerMetric_callbackViaAPI: int = ...
-    kTimerMetric_compute: int = ...
-    kTimerMetric_computeDuringCallback: int = ...
-    kTimerMetric_computeNotDuringCallback: int = ...
-    kTimerMetric_dirty: int = ...
-    kTimerMetric_draw: int = ...
-    kTimerMetric_fetch: int = ...
-    kTimerMetrics: int = ...
-    kTimerOff: int = ...
-    kTimerOn: int = ...
-    kTimerType_count: int = ...
-    kTimerType_inclusive: int = ...
-    kTimerType_self: int = ...
-    kTimerTypes: int = ...
-    kTimerUninitialized: int = ...
     kUVBorder: int = ...
-    kUnion: int = ...
-    kUnsharedUV: int = ...
     def lockFaceVertexNormals(self: Self, *args: Any, **kwargs: Any) -> Any:
         """lockFaceVertexNormals(seq of faceIds, seq of vertIds) -> self
 
@@ -13861,14 +8232,6 @@ class MFnMesh(MFnDagNode):
 
         Locks the shared normals for the specified vertices.
         """
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the node's name."""
-    @property
-    def namespace(*args: Any, **kwargs: Any) -> Any:
-        """Name of the namespace which contains the node."""
-    @namespace.setter
-    def namespace(*args: Any, **kwargs: Any) -> Any:
-        """Name of the namespace which contains the node."""
     @property
     def numColorSets(*args: Any, **kwargs: Any) -> Any:
         """Number of color sets."""
@@ -13927,72 +8290,17 @@ class MFnMesh(MFnDagNode):
     @numVertices.setter
     def numVertices(*args: Any, **kwargs: Any) -> Any:
         """Number of distinct vertices. Shared vertices are only counted once."""
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-    @property
-    def objectColor(*args: Any, **kwargs: Any) -> Any:
-        """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-    @objectColor.setter
-    def objectColor(*args: Any, **kwargs: Any) -> Any:
-        """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-    @property
-    def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
-        """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-    @objectColorRGB.setter
-    def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
-        """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-    @property
-    def objectColorType(*args: Any, **kwargs: Any) -> Any:
-        """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-    @objectColorType.setter
-    def objectColorType(*args: Any, **kwargs: Any) -> Any:
-        """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
     def onBoundary(self: Self, *args: Any, **kwargs: Any) -> Any:
         """onBoundary(faceId) -> bool
 
         Returns true if the face is on the border of the mesh, meaning that
         one or more of its edges is a border edge.
         """
-    def parent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """parent(index) -> MObject
-
-        Returns the specified parent of this node.
-        """
-    def parentCount(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """parentCount() -> int
-
-        Returns the number of parents this node has.
-        """
-    def partialPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """partialPathName() -> string
-
-        Returns the minimum path string necessary to uniquely identify the attached object.
-        """
-    @property
-    def pluginName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the plugin which registered the node type, if any."""
-    @pluginName.setter
-    def pluginName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the plugin which registered the node type, if any."""
-    def plugsAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the alias for a plug's attribute."""
     def polygonVertexCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """polygonVertexCount(faceId) -> int
 
         Returns the number of vertices in the given polygon. Raises
         ValueError if the polygon ID is invalid.
-        """
-    def removeAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Removes a dynamic attribute from the node."""
-    def removeChild(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeChild(node) -> self
-
-        Removes the child, specified by MObject, reparenting it under the world.
-        """
-    def removeChildAt(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeChildAt(index) -> self
-
-        Removes the child, specified by index, reparenting it under the world.
         """
     def removeFaceColors(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeFaceColors(seq of faceIds) -> self
@@ -14019,12 +8327,6 @@ class MFnMesh(MFnDagNode):
         This method is only valid for functionsets which are attached to mesh
         nodes, not mesh data.
         """
-    def reorderedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns one of the node's attribute, based on the order in which they are written to file."""
-    def setAffectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Specifies that modifications to a node could potentially affect the animation."""
-    def setAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds or removes an attribute alias."""
     def setBinaryBlindData(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setBinaryBlindData(compId, compType, blindDataId, attr, data) -> self
         setBinaryBlindData(seq of compId, compType, blindDataId, attr, data) -> self
@@ -14136,8 +8438,6 @@ class MFnMesh(MFnDagNode):
         This method is only valid for functionsets which are attached to mesh
         nodes, not mesh data.
         """
-    def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Used to prevent the node from being written to file."""
     def setDoubleBlindData(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDoubleBlindData(compId, compType, blindDataId, attr, data) -> self
         setDoubleBlindData(seq of compId, compType, blindDataId, attr, data) -> self
@@ -14167,10 +8467,6 @@ class MFnMesh(MFnDagNode):
         mesh have had setEdgeSmoothings() done. Use the updateSurface() method
         to indicate the mesh needs to be redrawn.
         """
-    def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Changes the location of external content."""
-    def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets content info in the specified attribute from the table."""
     def setFaceColor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setFaceColor(color, faceId, rep=kRGBA) -> self
 
@@ -14215,8 +8511,6 @@ class MFnMesh(MFnDagNode):
 
         Sets normals for the given face/vertex pairs.
         """
-    def setFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets the state of the specified node flag."""
     def setFloatBlindData(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setFloatBlindData(compId, compType, blindDataId, attr, data) -> self
         setFloatBlindData(seq of compId, compType, blindDataId, attr, data) -> self
@@ -14255,17 +8549,10 @@ class MFnMesh(MFnDagNode):
         Sets whether the color set's RGBA components should be clamped to the
         range 0 to 1.
         """
-    def setName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets the node's name."""
     def setNormals(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setNormals(normals, space=MSpace.kObject) -> self
 
         Sets the mesh's normals (user normals).
-        """
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """setObject(MObject or MDagPath) -> self
-
-        Attaches the function set to the specified node or DAG path.
         """
     def setPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setPoint(vertexId, MPoint, space=MSpace.kObject) -> self
@@ -14360,8 +8647,6 @@ class MFnMesh(MFnDagNode):
         setUVs(...), assignUVs(). These steps will let you to create an
         array of uvs which is smaller than the original one.
         """
-    def setUuid(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets the node's UUID."""
     def setVertexColor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setVertexColor(color, vertexId, modifier=None, rep=kRGBA) -> self
 
@@ -14455,25 +8740,6 @@ class MFnMesh(MFnDagNode):
         functionset is attached to a mesh node. If it's attached to mesh
         data the it is not necessary to call this method.
         """
-    def transformationMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """transformationMatrix() -> MMatrix
-
-        Returns the object space transformation matrix for this DAG node.
-        """
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
-    @property
-    def typeId(*args: Any, **kwargs: Any) -> Any:
-        """MTypeId for the node's type."""
-    @typeId.setter
-    def typeId(*args: Any, **kwargs: Any) -> Any:
-        """MTypeId for the node's type."""
-    @property
-    def typeName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the node's type."""
-    @typeName.setter
-    def typeName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the node's type."""
     def uniformGridParams(self: Self, *args: Any, **kwargs: Any) -> Any:
         """uniformGridParams(xDiv, yDiv, zDiv) -> MMeshIsectAccelParams
 
@@ -14485,8 +8751,6 @@ class MFnMesh(MFnDagNode):
         configuration is used on the next intersect call, the acceleration
         structure will not need to be rebuilt.
         """
-    def uniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """For a DAG node, the unique name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself. For a non-DAG node, the uniqueName is just its name."""
     def unlockFaceVertexNormals(self: Self, *args: Any, **kwargs: Any) -> Any:
         """unlockFaceVertexNormals(seq of faceIds, seq of vertIds) -> self
 
@@ -14502,602 +8766,37 @@ class MFnMesh(MFnDagNode):
 
         Signal that this polygonal mesh has changed and needs to be redrawn.
         """
-    @property
-    def useObjectColor(*args: Any, **kwargs: Any) -> Any:
-        """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-    @useObjectColor.setter
-    def useObjectColor(*args: Any, **kwargs: Any) -> Any:
-        """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-    def userNode(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the MPxNode object for a plugin node."""
-    def uuid(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the node's UUID."""
 
 class MFnMeshData(MFnGeometryData):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-    def addComponentTag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """addComponentTag(key) -> self
-
-        Adds a componentTag with the given key to the object.
-        """
-    def addObjectGroup(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """addObjectGroup(id) -> self
-
-        Adds an object group with the given id to the object.
-        """
-    def addObjectGroupComponent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """addObjectGroupComponent(id, MObject component) -> self
-
-        Adds the members of the given component to the object group
-        with the given id.
-        """
-    def changeObjectGroupId(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """changeObjectGroupId(sourceId, destId) -> self
-
-        Changes the id of the object group with the given id to the new id.
-        """
-    def componentTagContents(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """componentTagContents(key) -> MObject
-
-        Returns a component which contains the members of the componentTag
-        with the given key.
-        """
-    def componentTagExpressionSubsetState(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """componentTagExpressionSubsetState(expr,ctg) -> MFnGeometryData::SubsetState type constant
-
-        Returns the state of the contents of the resolved componentTag expression.
-        """
-    def componentTagType(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """componentTagType(key) -> MFn Type constant
-
-        Returns the type of the component that the componentTag with the
-        given key contains.
-        """
-    def componentTags(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """componentTags() -> MObject
-
-        Returns the componentTag keys contained in the object.
-        """
-    def copyObjectGroups(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """copyObjectGroups(MObject inGeom) -> self
-
-        Copies the object groups from the given geometry data object.
-        """
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """create() -> MObject
 
         Creates a new mesh data object, attaches it to this function set
         and returns an MObject which references it.
         """
-    def hasComponentTag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """hasComponentTag(key) -> bool
-
-        Returns True if a componentTag with the given key exists.
-        """
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
-    def hasObjectGroup(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """hasObjectGroup(id) -> self
-
-        Returns True if an object group with the given id is
-        contained in the data.
-        """
-    @property
-    def isIdentity(*args: Any, **kwargs: Any) -> Any:
-        """True if the matrix for the geometry is the identity."""
-    @isIdentity.setter
-    def isIdentity(*args: Any, **kwargs: Any) -> Any:
-        """True if the matrix for the geometry is the identity."""
-    @property
-    def isNotIdentity(*args: Any, **kwargs: Any) -> Any:
-        """True if the matrix for the geometry is not the identity."""
-    @isNotIdentity.setter
-    def isNotIdentity(*args: Any, **kwargs: Any) -> Any:
-        """True if the matrix for the geometry is not the identity."""
-    kAny: int = ...
-    kAuto: int = ...
-    kCompleteGroup: int = ...
-    kComponentList: int = ...
-    kDoubleArray: int = ...
-    kDynArrayAttrs: int = ...
-    kDynSweptGeometry: int = ...
-    kEdges: int = ...
-    kEmptyGroup: int = ...
-    kFaces: int = ...
-    kFalloffFunction: int = ...
-    kFloatArray: int = ...
-    kIntArray: int = ...
-    kInvalid: int = ...
-    kInvalidGroup: int = ...
-    kLast: int = ...
-    kLattice: int = ...
-    kMatrix: int = ...
-    kMatrixArray: int = ...
-    kMesh: int = ...
-    kNId: int = ...
-    kNObject: int = ...
-    kNull: int = ...
-    kNumeric: int = ...
-    kNurbsCurve: int = ...
-    kNurbsSurface: int = ...
-    kPartialGroup: int = ...
-    kPlugin: int = ...
-    kPluginGeometry: int = ...
-    kPointArray: int = ...
-    kSphere: int = ...
-    kString: int = ...
-    kStringArray: int = ...
-    kSubdSurface: int = ...
-    kUnsupported: int = ...
-    kVectorArray: int = ...
-    kVerts: int = ...
-    @property
-    def matrix(*args: Any, **kwargs: Any) -> Any:
-        """MMatrix used to convert the object into local space."""
-    @matrix.setter
-    def matrix(*args: Any, **kwargs: Any) -> Any:
-        """MMatrix used to convert the object into local space."""
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-    def objectGroup(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """objectGroup(index) -> int
-
-        Returns the id of the index'th object group contained by the object.
-        """
-    def objectGroupComponent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """objectGroupComponent(id) -> MObject
-
-        Returns a component which contains the members of the object group
-        with the given id.
-        """
-    @property
-    def objectGroupCount(*args: Any, **kwargs: Any) -> Any:
-        """The number of object groups contained by the object."""
-    @objectGroupCount.setter
-    def objectGroupCount(*args: Any, **kwargs: Any) -> Any:
-        """The number of object groups contained by the object."""
-    def objectGroupSubsetState(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """objectGroupSubsetState(id) -> MFnGeometryData::SubsetState type constant
-
-        Returns the state of the group contents of the object group with the
-        given id.
-        """
-    def objectGroupType(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """objectGroupType(id) -> MFn Type constant
-
-        Returns the type of the component that the object group with the
-        given id contains.
-        """
-    def removeComponentTag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeComponentTag(key) -> self
-
-        Removes a componentTag with the given key from the object.
-        """
-    def removeObjectGroup(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeObjectGroup(id) -> self
-
-        Removes an object group with the given id from the object.
-        """
-    def removeObjectGroupComponent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeObjectGroupComponent(id, MObject component) -> self
-
-        Removes the members of the given component from the object group
-        with the given id.
-        """
-    def renameComponentTag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """renameComponentTag(key, newKey) -> self
-
-        Renames a componentag with the given key the object.
-        """
-    def resolveComponentTagExpression(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """resolveComponentTagExpression(key, ctg) -> MObject
-
-        Returns a component which is the result of the resolved componentTag expression
-        with the given key.
-        """
-    def setComponentTagContents(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """setComponentTagContents(key, MObject component) -> self
-
-        Sets the members of the componentTag with the given key
-        to be those in the given component.
-        """
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
-    def setObjectGroupComponent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """setObjectGroupComponent(id, MObject component) -> self
-
-        Sets the members of the object group with the given id
-        to be only those in the given component.
-        """
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
 
 class MFnMessageAttribute(MFnAttribute):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-    def accepts(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if this attribute can accept a connection of the given type."""
-    def acceptsAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if this attribute can accept a connection with the given attribute."""
-    def addToCategory(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds the attribute to a category"""
-    @property
-    def affectsAppearance(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect how the node is drawn in Maya's viewport?"""
-    @affectsAppearance.setter
-    def affectsAppearance(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect how the node is drawn in Maya's viewport?"""
-    @property
-    def affectsWorldSpace(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect the node's worldSpace matrix?"""
-    @affectsWorldSpace.setter
-    def affectsWorldSpace(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect the node's worldSpace matrix?"""
-    @property
-    def array(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an array?"""
-    @array.setter
-    def array(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an array?"""
-    @property
-    def cached(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be cached in the datablock?"""
-    @cached.setter
-    def cached(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be cached in the datablock?"""
-    @property
-    def channelBox(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be displayed in the Channel Box?"""
-    @channelBox.setter
-    def channelBox(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be displayed in the Channel Box?"""
-    @property
-    def connectable(*args: Any, **kwargs: Any) -> Any:
-        """Can connections be made to the attribute?"""
-    @connectable.setter
-    def connectable(*args: Any, **kwargs: Any) -> Any:
-        """Can connections be made to the attribute?"""
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new message attribute, attaches it to the function set and returns it as an MObject."""
-    @property
-    def disconnectBehavior(*args: Any, **kwargs: Any) -> Any:
-        """What should happen when the attribute loses an incoming connection?"""
-    @disconnectBehavior.setter
-    def disconnectBehavior(*args: Any, **kwargs: Any) -> Any:
-        """What should happen when the attribute loses an incoming connection?"""
-    @property
-    def dynamic(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a dynamic attribute?"""
-    @dynamic.setter
-    def dynamic(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a dynamic attribute?"""
-    @property
-    def extension(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an extension attribute?"""
-    @extension.setter
-    def extension(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an extension attribute?"""
-    def getAddAttrCmd(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a string containing a MEL 'addAttr' command capable of recreating the attribute."""
-    def hasCategory(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Checks to see if the attribute has a given category"""
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
-    @property
-    def hidden(*args: Any, **kwargs: Any) -> Any:
-        """If True the attribute will not be displayed in the Attribute Editor."""
-    @hidden.setter
-    def hidden(*args: Any, **kwargs: Any) -> Any:
-        """If True the attribute will not be displayed in the Attribute Editor."""
-    @property
-    def indeterminant(*args: Any, **kwargs: Any) -> Any:
-        """Hint to DG that this attribute may not always be used when computing the attributes which are dependent upon it."""
-    @indeterminant.setter
-    def indeterminant(*args: Any, **kwargs: Any) -> Any:
-        """Hint to DG that this attribute may not always be used when computing the attributes which are dependent upon it."""
-    @property
-    def indexMatters(*args: Any, **kwargs: Any) -> Any:
-        """If False, connectAttr -nextAvailable can be used with this attribute. If True then an explicit index must be provided."""
-    @indexMatters.setter
-    def indexMatters(*args: Any, **kwargs: Any) -> Any:
-        """If False, connectAttr -nextAvailable can be used with this attribute. If True then an explicit index must be provided."""
-    @property
-    def internal(*args: Any, **kwargs: Any) -> Any:
-        """Will the node handle the attribute's data storage itself, outside of the node's data block?"""
-    @internal.setter
-    def internal(*args: Any, **kwargs: Any) -> Any:
-        """Will the node handle the attribute's data storage itself, outside of the node's data block?"""
-    @property
-    def isProxyAttribute(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute is a proxy attribute?"""
-    @isProxyAttribute.setter
-    def isProxyAttribute(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute is a proxy attribute?"""
-    kDelete: int = ...
-    kNothing: int = ...
-    kReset: int = ...
-    @property
-    def keyable(*args: Any, **kwargs: Any) -> Any:
-        """Can keys be set on the attribute?"""
-    @keyable.setter
-    def keyable(*args: Any, **kwargs: Any) -> Any:
-        """Can keys be set on the attribute?"""
-    @property
-    def name(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's long name."""
-    @name.setter
-    def name(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's long name."""
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-    @property
-    def parent(*args: Any, **kwargs: Any) -> Any:
-        """Parent attribute. MObject::kNullObj if attr has no parent."""
-    @parent.setter
-    def parent(*args: Any, **kwargs: Any) -> Any:
-        """Parent attribute. MObject::kNullObj if attr has no parent."""
-    @property
-    def readable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute readable?"""
-    @readable.setter
-    def readable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute readable?"""
-    @property
-    def renderSource(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a render source?"""
-    @renderSource.setter
-    def renderSource(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a render source?"""
-    def setNiceNameOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets a nice UI name for this attribute rather than using the default derived from it's long name."""
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
-    @property
-    def shortName(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's short name."""
-    @shortName.setter
-    def shortName(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's short name."""
-    @property
-    def storable(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be preserved when the node is written to file?"""
-    @storable.setter
-    def storable(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be preserved when the node is written to file?"""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
-    @property
-    def usedAsColor(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a color in the UI?"""
-    @usedAsColor.setter
-    def usedAsColor(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a color in the UI?"""
-    @property
-    def usedAsFilename(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a file name in the UI?"""
-    @usedAsFilename.setter
-    def usedAsFilename(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a file name in the UI?"""
-    @property
-    def usesArrayDataBuilder(*args: Any, **kwargs: Any) -> Any:
-        """Array attributes only: does the attribute create elements using MArrayDataBuilder?"""
-    @usesArrayDataBuilder.setter
-    def usesArrayDataBuilder(*args: Any, **kwargs: Any) -> Any:
-        """Array attributes only: does the attribute create elements using MArrayDataBuilder?"""
-    @property
-    def worldSpace(*args: Any, **kwargs: Any) -> Any:
-        """DAG nodes only: if the node is instanced, will the attribute have separate values for each instance?"""
-    @worldSpace.setter
-    def worldSpace(*args: Any, **kwargs: Any) -> Any:
-        """DAG nodes only: if the node is instanced, will the attribute have separate values for each instance?"""
-    @property
-    def writable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute writable?"""
-    @writable.setter
-    def writable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute writable?"""
 
 class MFnNumericAttribute(MFnAttribute):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-    def accepts(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if this attribute can accept a connection of the given type."""
-    def acceptsAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if this attribute can accept a connection with the given attribute."""
-    def addToCategory(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds the attribute to a category"""
-    @property
-    def affectsAppearance(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect how the node is drawn in Maya's viewport?"""
-    @affectsAppearance.setter
-    def affectsAppearance(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect how the node is drawn in Maya's viewport?"""
-    @property
-    def affectsWorldSpace(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect the node's worldSpace matrix?"""
-    @affectsWorldSpace.setter
-    def affectsWorldSpace(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect the node's worldSpace matrix?"""
-    @property
-    def array(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an array?"""
-    @array.setter
-    def array(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an array?"""
-    @property
-    def cached(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be cached in the datablock?"""
-    @cached.setter
-    def cached(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be cached in the datablock?"""
-    @property
-    def channelBox(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be displayed in the Channel Box?"""
-    @channelBox.setter
-    def channelBox(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be displayed in the Channel Box?"""
     def child(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the specified child attribute of the parent attribute currently attached to the function set."""
-    @property
-    def connectable(*args: Any, **kwargs: Any) -> Any:
-        """Can connections be made to the attribute?"""
-    @connectable.setter
-    def connectable(*args: Any, **kwargs: Any) -> Any:
-        """Can connections be made to the attribute?"""
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new simple or compound numeric attribute, attaches it to the function set and returns it in an MObject."""
     def createAddr(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -15112,26 +8811,6 @@ class MFnNumericAttribute(MFnAttribute):
     @default.setter
     def default(*args: Any, **kwargs: Any) -> Any:
         """Default value"""
-    @property
-    def disconnectBehavior(*args: Any, **kwargs: Any) -> Any:
-        """What should happen when the attribute loses an incoming connection?"""
-    @disconnectBehavior.setter
-    def disconnectBehavior(*args: Any, **kwargs: Any) -> Any:
-        """What should happen when the attribute loses an incoming connection?"""
-    @property
-    def dynamic(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a dynamic attribute?"""
-    @dynamic.setter
-    def dynamic(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a dynamic attribute?"""
-    @property
-    def extension(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an extension attribute?"""
-    @extension.setter
-    def extension(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an extension attribute?"""
-    def getAddAttrCmd(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a string containing a MEL 'addAttr' command capable of recreating the attribute."""
     def getMax(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the attribute's hard maximum value(s)."""
     def getMin(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -15140,330 +8819,46 @@ class MFnNumericAttribute(MFnAttribute):
         """Returns the attribute's soft maximum value."""
     def getSoftMin(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the attribute's soft minimum value."""
-    def hasCategory(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Checks to see if the attribute has a given category"""
     def hasMax(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if a hard maximum value has been specified for the attribute."""
     def hasMin(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if a hard minimum value has been specified for the attribute."""
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
     def hasSoftMax(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if a soft maximum value has been specified for the attribute."""
     def hasSoftMin(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if a soft minimum value has been specified for the attribute."""
-    @property
-    def hidden(*args: Any, **kwargs: Any) -> Any:
-        """If True the attribute will not be displayed in the Attribute Editor."""
-    @hidden.setter
-    def hidden(*args: Any, **kwargs: Any) -> Any:
-        """If True the attribute will not be displayed in the Attribute Editor."""
-    @property
-    def indeterminant(*args: Any, **kwargs: Any) -> Any:
-        """Hint to DG that this attribute may not always be used when computing the attributes which are dependent upon it."""
-    @indeterminant.setter
-    def indeterminant(*args: Any, **kwargs: Any) -> Any:
-        """Hint to DG that this attribute may not always be used when computing the attributes which are dependent upon it."""
-    @property
-    def indexMatters(*args: Any, **kwargs: Any) -> Any:
-        """If False, connectAttr -nextAvailable can be used with this attribute. If True then an explicit index must be provided."""
-    @indexMatters.setter
-    def indexMatters(*args: Any, **kwargs: Any) -> Any:
-        """If False, connectAttr -nextAvailable can be used with this attribute. If True then an explicit index must be provided."""
-    @property
-    def internal(*args: Any, **kwargs: Any) -> Any:
-        """Will the node handle the attribute's data storage itself, outside of the node's data block?"""
-    @internal.setter
-    def internal(*args: Any, **kwargs: Any) -> Any:
-        """Will the node handle the attribute's data storage itself, outside of the node's data block?"""
-    @property
-    def isProxyAttribute(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute is a proxy attribute?"""
-    @isProxyAttribute.setter
-    def isProxyAttribute(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute is a proxy attribute?"""
-    kDelete: int = ...
-    kNothing: int = ...
-    kReset: int = ...
-    @property
-    def keyable(*args: Any, **kwargs: Any) -> Any:
-        """Can keys be set on the attribute?"""
-    @keyable.setter
-    def keyable(*args: Any, **kwargs: Any) -> Any:
-        """Can keys be set on the attribute?"""
-    @property
-    def name(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's long name."""
-    @name.setter
-    def name(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's long name."""
     def numericType(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the numeric type of the attribute currently attached to the function set."""
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-    @property
-    def parent(*args: Any, **kwargs: Any) -> Any:
-        """Parent attribute. MObject::kNullObj if attr has no parent."""
-    @parent.setter
-    def parent(*args: Any, **kwargs: Any) -> Any:
-        """Parent attribute. MObject::kNullObj if attr has no parent."""
-    @property
-    def readable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute readable?"""
-    @readable.setter
-    def readable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute readable?"""
-    @property
-    def renderSource(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a render source?"""
-    @renderSource.setter
-    def renderSource(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a render source?"""
     def setMax(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the attribute's hard maximum value(s)."""
     def setMin(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the attribute's hard minimum value(s)."""
-    def setNiceNameOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets a nice UI name for this attribute rather than using the default derived from it's long name."""
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
     def setSoftMax(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the attribute's soft maximum value."""
     def setSoftMin(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the attribute's soft minimum value."""
-    @property
-    def shortName(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's short name."""
-    @shortName.setter
-    def shortName(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's short name."""
-    @property
-    def storable(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be preserved when the node is written to file?"""
-    @storable.setter
-    def storable(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be preserved when the node is written to file?"""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
-    @property
-    def usedAsColor(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a color in the UI?"""
-    @usedAsColor.setter
-    def usedAsColor(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a color in the UI?"""
-    @property
-    def usedAsFilename(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a file name in the UI?"""
-    @usedAsFilename.setter
-    def usedAsFilename(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a file name in the UI?"""
-    @property
-    def usesArrayDataBuilder(*args: Any, **kwargs: Any) -> Any:
-        """Array attributes only: does the attribute create elements using MArrayDataBuilder?"""
-    @usesArrayDataBuilder.setter
-    def usesArrayDataBuilder(*args: Any, **kwargs: Any) -> Any:
-        """Array attributes only: does the attribute create elements using MArrayDataBuilder?"""
-    @property
-    def worldSpace(*args: Any, **kwargs: Any) -> Any:
-        """DAG nodes only: if the node is instanced, will the attribute have separate values for each instance?"""
-    @worldSpace.setter
-    def worldSpace(*args: Any, **kwargs: Any) -> Any:
-        """DAG nodes only: if the node is instanced, will the attribute have separate values for each instance?"""
-    @property
-    def writable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute writable?"""
-    @writable.setter
-    def writable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute writable?"""
 
 class MFnNumericData(MFnData):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new numeric data object."""
     def getData(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the attached data object's data."""
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
-    k2Double: int = ...
-    k2Float: int = ...
-    k2Int: int = ...
-    k2Long: int = ...
-    k2Short: int = ...
-    k3Double: int = ...
-    k3Float: int = ...
-    k3Int: int = ...
-    k3Long: int = ...
-    k3Short: int = ...
-    k4Double: int = ...
-    kAddr: int = ...
-    kAny: int = ...
-    kBoolean: int = ...
-    kByte: int = ...
-    kChar: int = ...
-    kComponentList: int = ...
-    kDouble: int = ...
-    kDoubleArray: int = ...
-    kDynArrayAttrs: int = ...
-    kDynSweptGeometry: int = ...
-    kFalloffFunction: int = ...
-    kFloat: int = ...
-    kFloatArray: int = ...
-    kInt: int = ...
-    kInt64: int = ...
-    kIntArray: int = ...
-    kInvalid: int = ...
-    kLast: int = ...
-    kLattice: int = ...
-    kLong: int = ...
-    kMatrix: int = ...
-    kMatrixArray: int = ...
-    kMesh: int = ...
-    kNId: int = ...
-    kNObject: int = ...
-    kNumeric: int = ...
-    kNurbsCurve: int = ...
-    kNurbsSurface: int = ...
-    kPlugin: int = ...
-    kPluginGeometry: int = ...
-    kPointArray: int = ...
-    kShort: int = ...
-    kSphere: int = ...
-    kString: int = ...
-    kStringArray: int = ...
-    kSubdSurface: int = ...
-    kVectorArray: int = ...
     def numericType(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the type of data in the attached data object."""
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
     def setData(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the value of the data in the attached data object."""
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
 
 class MFnNurbsCurve(MFnDagNode):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-    def absoluteName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the absolute name of this node.  The absolute name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself.  Regardless of relative name mode, absoluteName() will always return a full namespace path prefixed with a leading colon (the root namespace).  If the underlying node is a DAG node, then absoluteName() does not guarantee uniqueness, that is, two dependency nodes could have the same absoluteName().  In cases like this the uniqueName() method will guarantee that the name uniquely identifies the node."""
-    def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds a new dynamic attribute to the node."""
-    def addChild(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """addChild(node, index=kNextPos, keepExistingParents=False) -> self
-
-        Makes a node a child of this one.
-        """
-    def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds content info to the specified table from a file path attribute."""
-    def affectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns true if the changes to the node may affect animation."""
-    def allocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Allocates a flag on all nodes for use by the named plugin and returns the flag's index."""
     def area(self: Self, *args: Any, **kwargs: Any) -> Any:
         """area(tolerance=kPointTolerance) -> float
 
@@ -15472,32 +8867,6 @@ class MFnNurbsCurve(MFnDagNode):
 
         * tolerance (float) - Amount of error allowed in the calculation
         """
-    def attribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns an attribute of the node, given either its index or name."""
-    def attributeClass(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the class of the specified attribute."""
-    def attributeCount(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the number of attributes on the node."""
-    @property
-    def boundingBox(*args: Any, **kwargs: Any) -> Any:
-        """Node's bounding box, in object space."""
-    @boundingBox.setter
-    def boundingBox(*args: Any, **kwargs: Any) -> Any:
-        """Node's bounding box, in object space."""
-    def canBeWritten(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns true if the node will be written to file."""
-    def child(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """child(index) -> MObject
-
-        Returns the specified child of this node.
-        """
-    def childCount(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """childCount() -> int
-
-        Returns the number of nodes which are children of this one.
-        """
-    def classification(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the classification string for the named node type."""
     def closestPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
         """closestPoint(testPoint, guess=None, tolerance=kPointTolerance,
             space=kObject) -> (MPoint, float)
@@ -15638,40 +9007,12 @@ class MFnNurbsCurve(MFnDagNode):
                              provided then only the CV specified by
                              startIndex will be returned.
         """
-    def dagPath(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """dagPath() -> MDagPath
-
-        Returns the DAG path to which this function set is attached. Raises a TypeError if the function set is attached to an MObject rather than a path.
-        """
-    def dagRoot(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """dagRoot() -> MObject
-
-        Returns the root node of the first path leading to this node.
-        """
-    def deallocateAllFlags(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Deallocates all node flags which are currently allocated to the named plugin."""
-    def deallocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Deallocates the specified node flag, which was previously allocated by the named plugin using allocateFlag()."""
     @property
     def degree(*args: Any, **kwargs: Any) -> Any:
         """The degree of the curve or 0 if the degree cannot be determined."""
     @degree.setter
     def degree(*args: Any, **kwargs: Any) -> Any:
         """The degree of the curve or 0 if the degree cannot be determined."""
-    def dgCallbackIds(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns DG timing information for a specific callback type, broken down by callbackId."""
-    def dgCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns DG timing information broken down by callback type."""
-    def dgTimer(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a specific DG timer metric for a given timer type."""
-    def dgTimerOff(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Turns DG timing off for this node."""
-    def dgTimerOn(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Turns DG timing on for this node."""
-    def dgTimerQueryState(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the current DG timer state for this node."""
-    def dgTimerReset(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Resets all DG timers for this node."""
     def distanceToPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
         """distanceToPoint(point, space=kObject) -> float
 
@@ -15682,13 +9023,6 @@ class MFnNurbsCurve(MFnDagNode):
         * space (int)    - an MSpace constant giving the coordinate space in
                            which the point is given
         """
-    def duplicate(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """duplicate(instance=False, instanceLeaf=False) -> MObject
-
-        Duplicates the DAG hierarchy rooted at the current node.
-        """
-    def findAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the attribute which has the given alias."""
     def findLengthFromParam(self: Self, *args: Any, **kwargs: Any) -> Any:
         """findLengthFromParam(param) -> float
 
@@ -15708,40 +9042,12 @@ class MFnNurbsCurve(MFnDagNode):
         * length (float) - distance along the curve
         * tolerance (float) - search tolerance
         """
-    def findPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a plug for the given attribute."""
     @property
     def form(*args: Any, **kwargs: Any) -> Any:
         """The form of the curve: kOpen, kClosed, kPeriodic or kInvalid"""
     @form.setter
     def form(*args: Any, **kwargs: Any) -> Any:
         """The form of the curve: kOpen, kClosed, kPeriodic or kInvalid"""
-    def fullPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """fullPathName() -> string
-
-        Returns the full path of the attached object, from the root of the DAG on down.
-        """
-    def getAffectedAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all of the attributes which are affected by the specified attribute."""
-    def getAffectingAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all of the attributes which affect the specified attribute."""
-    def getAliasAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the node's alias attribute, which is a special attribute used to store information about the node's attribute aliases."""
-    def getAliasList(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all of the node's attribute aliases."""
-    def getAllPaths(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getAllPaths() -> MDagPathArray
-
-        Returns all of the DAG paths which lead to the object to which this function set is attached.
-        """
-    def getConnectedSetsAndMembers(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getConnectedSetsAndMembers(instance, renderableSetsOnly) -> (MObjectArray, MObjectArray)
-
-        Returns a tuple containing an array of sets and an array of the
-        components of the DAG object which are in those sets. If the entire object is in a set, then the corresponding entry in the comps array will have no elements in it.
-        """
-    def getConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all the plugs which are connected to attributes of this node."""
     def getDerivativesAtParam(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getDerivativesAtParam(param, space=kObject) -> (MPoint, MVector[, MVector])
 
@@ -15755,8 +9061,6 @@ class MFnNurbsCurve(MFnDagNode):
                           which the point is given
         * dUU    (bool) - if True include the second derivative in the result.
         """
-    def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Gets the external content (files) that this node depends on."""
     def getParamAtPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getParamAtPoint(point, tolerance=kPointTolerance, space=kObject) -> float
 
@@ -15769,11 +9073,6 @@ class MFnNurbsCurve(MFnDagNode):
         * space       (int) - an MSpace constant giving the coordinate space
                               in which the point is given
         """
-    def getPath(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getPath() -> MDagPath
-
-        Returns the DAG path to which this function set is attached, or the first path to the node if the function set is attached to an MObject.
-        """
     def getPointAtParam(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getPointAtParam(param, space=kObject) -> MPoint
 
@@ -15783,94 +9082,12 @@ class MFnNurbsCurve(MFnDagNode):
         * space   (int) - an MSpace constant giving the coordinate space in
                           which the point should be returned
         """
-    def hasAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the node has an attribute with the given name."""
-    def hasChild(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """hasChild(node) -> bool
-
-        Returns True if the specified node is a child of this one.
-        """
     @property
     def hasHistoryOnCreate(*args: Any, **kwargs: Any) -> Any:
         """True if the curve was created with history."""
     @hasHistoryOnCreate.setter
     def hasHistoryOnCreate(*args: Any, **kwargs: Any) -> Any:
         """True if the curve was created with history."""
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
-    def hasParent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """hasParent(node) -> bool
-
-        Returns True if the specified node is a parent of this one.
-        """
-    def hasUniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the node's name is unique."""
-    @property
-    def inModel(*args: Any, **kwargs: Any) -> Any:
-        """True if the node has been added to the model."""
-    @inModel.setter
-    def inModel(*args: Any, **kwargs: Any) -> Any:
-        """True if the node has been added to the model."""
-    @property
-    def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
-        """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-    @inUnderWorld.setter
-    def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
-        """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-    def instanceCount(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """instanceCount(indirect) -> int
-
-        Returns the number of instances for this node.
-        """
-    def isChildOf(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """isChildOf(node) -> bool
-
-        Returns True if the specified node is a parent of this one.
-        """
-    @property
-    def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
-        """True if this is a default node, created automatically by Maya."""
-    @isDefaultNode.setter
-    def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
-        """True if this is a default node, created automatically by Maya."""
-    def isFlagSet(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the state of the specified node flag."""
-    @property
-    def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is from a referenced file, False if the node is part of the main scene."""
-    @isFromReferencedFile.setter
-    def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is from a referenced file, False if the node is part of the main scene."""
-    @property
-    def isInstanceable(*args: Any, **kwargs: Any) -> Any:
-        """True if instancing is allowed for this node."""
-    @isInstanceable.setter
-    def isInstanceable(*args: Any, **kwargs: Any) -> Any:
-        """True if instancing is allowed for this node."""
-    def isInstanced(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """isInstanced(indirect=True) -> bool
-
-        Returns True if this node is instanced.
-        """
-    def isInstancedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """isInstancedAttribute(attr) -> bool
-
-        Returns True if the specified attribute is an instanced attribute of this node.
-        """
-    @property
-    def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
-        """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-    @isIntermediateObject.setter
-    def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
-        """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-    @property
-    def isLocked(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is locked against changes."""
-    @isLocked.setter
-    def isLocked(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is locked against changes."""
-    def isNewAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the specified attribute was added in the current scene, and not by by one of its referenced files."""
     def isParamOnCurve(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isParamOnCurve(param) -> bool
 
@@ -15878,11 +9095,6 @@ class MFnNurbsCurve(MFnDagNode):
         within the curve's knot domain), False otherwise.
 
         * param (float) - parameter value to test
-        """
-    def isParentOf(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """isParentOf(node) -> bool
-
-        Returns True if the specified node is a child of this one.
         """
     @property
     def isPlanar(*args: Any, **kwargs: Any) -> Any:
@@ -15901,44 +9113,8 @@ class MFnNurbsCurve(MFnDagNode):
         * space       (int) - an MSpace constant giving the coordinate space
                               in which the point is given
         """
-    @property
-    def isShared(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is shared."""
-    @isShared.setter
-    def isShared(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is shared."""
-    def isTrackingEdits(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the node is referenced or in an assembly that is tracking edits."""
-    kClosed: int = ...
-    kExtensionAttr: int = ...
     kFindParamTolerance: float = ...
-    kInvalid: int = ...
-    kInvalidAttr: int = ...
-    kLast: int = ...
-    kLocalDynamicAttr: int = ...
-    kNextPos: int = ...
-    kNormalAttr: int = ...
-    kOpen: int = ...
-    kPeriodic: int = ...
     kPointTolerance: float = ...
-    kTimerInvalidState: int = ...
-    kTimerMetric_callback: int = ...
-    kTimerMetric_callbackNotViaAPI: int = ...
-    kTimerMetric_callbackViaAPI: int = ...
-    kTimerMetric_compute: int = ...
-    kTimerMetric_computeDuringCallback: int = ...
-    kTimerMetric_computeNotDuringCallback: int = ...
-    kTimerMetric_dirty: int = ...
-    kTimerMetric_draw: int = ...
-    kTimerMetric_fetch: int = ...
-    kTimerMetrics: int = ...
-    kTimerOff: int = ...
-    kTimerOn: int = ...
-    kTimerType_count: int = ...
-    kTimerType_inclusive: int = ...
-    kTimerType_self: int = ...
-    kTimerTypes: int = ...
-    kTimerUninitialized: int = ...
     def knot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """knot(index) -> float
 
@@ -15977,14 +9153,6 @@ class MFnNurbsCurve(MFnDagNode):
         directly on them). It can also be used to convert a periodic curve
         to a closed curve.
         """
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the node's name."""
-    @property
-    def namespace(*args: Any, **kwargs: Any) -> Any:
-        """Name of the namespace which contains the node."""
-    @namespace.setter
-    def namespace(*args: Any, **kwargs: Any) -> Any:
-        """Name of the namespace which contains the node."""
     def normal(self: Self, *args: Any, **kwargs: Any) -> Any:
         """normal(param, space=kObject) -> MVector
 
@@ -16027,41 +9195,6 @@ class MFnNurbsCurve(MFnDagNode):
         """Number of spans in the curve or 0 if the number of spans cannot be
         determined.
         """
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-    @property
-    def objectColor(*args: Any, **kwargs: Any) -> Any:
-        """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-    @objectColor.setter
-    def objectColor(*args: Any, **kwargs: Any) -> Any:
-        """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-    @property
-    def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
-        """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-    @objectColorRGB.setter
-    def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
-        """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-    @property
-    def objectColorType(*args: Any, **kwargs: Any) -> Any:
-        """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-    @objectColorType.setter
-    def objectColorType(*args: Any, **kwargs: Any) -> Any:
-        """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-    def parent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """parent(index) -> MObject
-
-        Returns the specified parent of this node.
-        """
-    def parentCount(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """parentCount() -> int
-
-        Returns the number of parents this node has.
-        """
-    def partialPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """partialPathName() -> string
-
-        Returns the minimum path string necessary to uniquely identify the attached object.
-        """
     @property
     def planeNormal(*args: Any, **kwargs: Any) -> Any:
         """MVector of the normal to the plane of the curve, if the curve is
@@ -16071,26 +9204,6 @@ class MFnNurbsCurve(MFnDagNode):
     def planeNormal(*args: Any, **kwargs: Any) -> Any:
         """MVector of the normal to the plane of the curve, if the curve is
         planar, or None if the curve is not planar.
-        """
-    @property
-    def pluginName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the plugin which registered the node type, if any."""
-    @pluginName.setter
-    def pluginName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the plugin which registered the node type, if any."""
-    def plugsAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the alias for a plug's attribute."""
-    def removeAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Removes a dynamic attribute from the node."""
-    def removeChild(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeChild(node) -> self
-
-        Removes the child, specified by MObject, reparenting it under the world.
-        """
-    def removeChildAt(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeChildAt(index) -> self
-
-        Removes the child, specified by index, reparenting it under the world.
         """
     def removeKnot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeKnot(param, removeAll=False) -> self
@@ -16104,17 +9217,11 @@ class MFnNurbsCurve(MFnDagNode):
         * param     (float) - parameter of the knot
         * removeAll  (bool) - how to handle multiple knots at the same param
         """
-    def reorderedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns one of the node's attribute, based on the order in which they are written to file."""
     def reverse(self: Self, *args: Any, **kwargs: Any) -> Any:
         """reverse() -> self
 
         Reverses the direction of the curve.
         """
-    def setAffectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Specifies that modifications to a node could potentially affect the animation."""
-    def setAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds or removes an attribute alias."""
     def setCVPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setCVPosition(index, point, space=kObject) -> self
 
@@ -16137,14 +9244,6 @@ class MFnNurbsCurve(MFnDagNode):
         * space  (int) - an MSpace constant giving the coordinate space
                          in which the points are given
         """
-    def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Used to prevent the node from being written to file."""
-    def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Changes the location of external content."""
-    def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets content info in the specified attribute from the table."""
-    def setFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets the state of the specified node flag."""
     def setKnot(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setKnot(index, param) -> self
 
@@ -16163,15 +9262,6 @@ class MFnNurbsCurve(MFnDagNode):
         * startIndex (int) - first knot in the range to be set
         * endIndex   (int) - last knot in the range to be set
         """
-    def setName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets the node's name."""
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """setObject(MObject or MDagPath) -> self
-
-        Attaches the function set to the specified node or DAG path.
-        """
-    def setUuid(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets the node's UUID."""
     def tangent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """tangent(param, space=kObject) -> MVector
 
@@ -16182,364 +9272,32 @@ class MFnNurbsCurve(MFnDagNode):
         * space   (int) - an MSpace constant giving the coordinate space in
                           which the tangent should be returned
         """
-    def transformationMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """transformationMatrix() -> MMatrix
-
-        Returns the object space transformation matrix for this DAG node.
-        """
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
-    @property
-    def typeId(*args: Any, **kwargs: Any) -> Any:
-        """MTypeId for the node's type."""
-    @typeId.setter
-    def typeId(*args: Any, **kwargs: Any) -> Any:
-        """MTypeId for the node's type."""
-    @property
-    def typeName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the node's type."""
-    @typeName.setter
-    def typeName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the node's type."""
-    def uniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """For a DAG node, the unique name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself. For a non-DAG node, the uniqueName is just its name."""
     def updateCurve(self: Self, *args: Any, **kwargs: Any) -> Any:
         """updateCurve() -> self
 
         Tells the shape node which represents the curve in the scene, if
         any, that the curve has changed and needs to be redrawn.
         """
-    @property
-    def useObjectColor(*args: Any, **kwargs: Any) -> Any:
-        """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-    @useObjectColor.setter
-    def useObjectColor(*args: Any, **kwargs: Any) -> Any:
-        """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-    def userNode(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the MPxNode object for a plugin node."""
-    def uuid(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the node's UUID."""
 
 class MFnNurbsCurveData(MFnGeometryData):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-    def addComponentTag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """addComponentTag(key) -> self
-
-        Adds a componentTag with the given key to the object.
-        """
-    def addObjectGroup(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """addObjectGroup(id) -> self
-
-        Adds an object group with the given id to the object.
-        """
-    def addObjectGroupComponent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """addObjectGroupComponent(id, MObject component) -> self
-
-        Adds the members of the given component to the object group
-        with the given id.
-        """
-    def changeObjectGroupId(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """changeObjectGroupId(sourceId, destId) -> self
-
-        Changes the id of the object group with the given id to the new id.
-        """
-    def componentTagContents(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """componentTagContents(key) -> MObject
-
-        Returns a component which contains the members of the componentTag
-        with the given key.
-        """
-    def componentTagExpressionSubsetState(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """componentTagExpressionSubsetState(expr,ctg) -> MFnGeometryData::SubsetState type constant
-
-        Returns the state of the contents of the resolved componentTag expression.
-        """
-    def componentTagType(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """componentTagType(key) -> MFn Type constant
-
-        Returns the type of the component that the componentTag with the
-        given key contains.
-        """
-    def componentTags(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """componentTags() -> MObject
-
-        Returns the componentTag keys contained in the object.
-        """
-    def copyObjectGroups(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """copyObjectGroups(MObject inGeom) -> self
-
-        Copies the object groups from the given geometry data object.
-        """
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """create() -> MObject
 
         Creates a new nurbs curve data object, attaches it to this function set
         and returns an MObject which references it.
         """
-    def hasComponentTag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """hasComponentTag(key) -> bool
-
-        Returns True if a componentTag with the given key exists.
-        """
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
-    def hasObjectGroup(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """hasObjectGroup(id) -> self
-
-        Returns True if an object group with the given id is
-        contained in the data.
-        """
-    @property
-    def isIdentity(*args: Any, **kwargs: Any) -> Any:
-        """True if the matrix for the geometry is the identity."""
-    @isIdentity.setter
-    def isIdentity(*args: Any, **kwargs: Any) -> Any:
-        """True if the matrix for the geometry is the identity."""
-    @property
-    def isNotIdentity(*args: Any, **kwargs: Any) -> Any:
-        """True if the matrix for the geometry is not the identity."""
-    @isNotIdentity.setter
-    def isNotIdentity(*args: Any, **kwargs: Any) -> Any:
-        """True if the matrix for the geometry is not the identity."""
-    kAny: int = ...
-    kAuto: int = ...
-    kCompleteGroup: int = ...
-    kComponentList: int = ...
-    kDoubleArray: int = ...
-    kDynArrayAttrs: int = ...
-    kDynSweptGeometry: int = ...
-    kEdges: int = ...
-    kEmptyGroup: int = ...
-    kFaces: int = ...
-    kFalloffFunction: int = ...
-    kFloatArray: int = ...
-    kIntArray: int = ...
-    kInvalid: int = ...
-    kInvalidGroup: int = ...
-    kLast: int = ...
-    kLattice: int = ...
-    kMatrix: int = ...
-    kMatrixArray: int = ...
-    kMesh: int = ...
-    kNId: int = ...
-    kNObject: int = ...
-    kNull: int = ...
-    kNumeric: int = ...
-    kNurbsCurve: int = ...
-    kNurbsSurface: int = ...
-    kPartialGroup: int = ...
-    kPlugin: int = ...
-    kPluginGeometry: int = ...
-    kPointArray: int = ...
-    kSphere: int = ...
-    kString: int = ...
-    kStringArray: int = ...
-    kSubdSurface: int = ...
-    kUnsupported: int = ...
-    kVectorArray: int = ...
-    kVerts: int = ...
-    @property
-    def matrix(*args: Any, **kwargs: Any) -> Any:
-        """MMatrix used to convert the object into local space."""
-    @matrix.setter
-    def matrix(*args: Any, **kwargs: Any) -> Any:
-        """MMatrix used to convert the object into local space."""
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-    def objectGroup(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """objectGroup(index) -> int
-
-        Returns the id of the index'th object group contained by the object.
-        """
-    def objectGroupComponent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """objectGroupComponent(id) -> MObject
-
-        Returns a component which contains the members of the object group
-        with the given id.
-        """
-    @property
-    def objectGroupCount(*args: Any, **kwargs: Any) -> Any:
-        """The number of object groups contained by the object."""
-    @objectGroupCount.setter
-    def objectGroupCount(*args: Any, **kwargs: Any) -> Any:
-        """The number of object groups contained by the object."""
-    def objectGroupSubsetState(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """objectGroupSubsetState(id) -> MFnGeometryData::SubsetState type constant
-
-        Returns the state of the group contents of the object group with the
-        given id.
-        """
-    def objectGroupType(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """objectGroupType(id) -> MFn Type constant
-
-        Returns the type of the component that the object group with the
-        given id contains.
-        """
-    def removeComponentTag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeComponentTag(key) -> self
-
-        Removes a componentTag with the given key from the object.
-        """
-    def removeObjectGroup(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeObjectGroup(id) -> self
-
-        Removes an object group with the given id from the object.
-        """
-    def removeObjectGroupComponent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeObjectGroupComponent(id, MObject component) -> self
-
-        Removes the members of the given component from the object group
-        with the given id.
-        """
-    def renameComponentTag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """renameComponentTag(key, newKey) -> self
-
-        Renames a componentag with the given key the object.
-        """
-    def resolveComponentTagExpression(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """resolveComponentTagExpression(key, ctg) -> MObject
-
-        Returns a component which is the result of the resolved componentTag expression
-        with the given key.
-        """
-    def setComponentTagContents(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """setComponentTagContents(key, MObject component) -> self
-
-        Sets the members of the componentTag with the given key
-        to be those in the given component.
-        """
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
-    def setObjectGroupComponent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """setObjectGroupComponent(id, MObject component) -> self
-
-        Sets the members of the object group with the given id
-        to be only those in the given component.
-        """
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
 
 class MFnNurbsSurface(MFnDagNode):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-    def absoluteName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the absolute name of this node.  The absolute name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself.  Regardless of relative name mode, absoluteName() will always return a full namespace path prefixed with a leading colon (the root namespace).  If the underlying node is a DAG node, then absoluteName() does not guarantee uniqueness, that is, two dependency nodes could have the same absoluteName().  In cases like this the uniqueName() method will guarantee that the name uniquely identifies the node."""
-    def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds a new dynamic attribute to the node."""
-    def addChild(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """addChild(node, index=kNextPos, keepExistingParents=False) -> self
-
-        Makes a node a child of this one.
-        """
-    def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds content info to the specified table from a file path attribute."""
-    def affectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns true if the changes to the node may affect animation."""
-    def allocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Allocates a flag on all nodes for use by the named plugin and returns the flag's index."""
     def area(self: Self, *args: Any, **kwargs: Any) -> Any:
         """area(space=kObject, tolerance=kPointTolerance) -> float
 
@@ -16598,12 +9356,6 @@ class MFnNurbsSurface(MFnDagNode):
         * uvIds    (MIntArray or seq of int)
                      - UV indices to be mapped to each patch-corner.
         """
-    def attribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns an attribute of the node, given either its index or name."""
-    def attributeClass(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the class of the specified attribute."""
-    def attributeCount(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the number of attributes on the node."""
     def boundaryType(self: Self, *args: Any, **kwargs: Any) -> Any:
         """boundaryType(region, boundary) -> int
 
@@ -16619,26 +9371,6 @@ class MFnNurbsSurface(MFnDagNode):
         * region (int)   - Region containing the boundary
         * boundary (int) - Index of the boundary within the region.
         """
-    @property
-    def boundingBox(*args: Any, **kwargs: Any) -> Any:
-        """Node's bounding box, in object space."""
-    @boundingBox.setter
-    def boundingBox(*args: Any, **kwargs: Any) -> Any:
-        """Node's bounding box, in object space."""
-    def canBeWritten(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns true if the node will be written to file."""
-    def child(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """child(index) -> MObject
-
-        Returns the specified child of this node.
-        """
-    def childCount(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """childCount() -> int
-
-        Returns the number of nodes which are children of this one.
-        """
-    def classification(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the classification string for the named node type."""
     def clearUVs(self: Self, *args: Any, **kwargs: Any) -> Any:
         """clearUVs() -> self
 
@@ -16791,16 +9523,6 @@ class MFnNurbsSurface(MFnDagNode):
         * endVIndex   (int) - V index of the last CV to return.
         * uIndex      (int) - U index for all of the returned CVs.
         """
-    def dagPath(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """dagPath() -> MDagPath
-
-        Returns the DAG path to which this function set is attached. Raises a TypeError if the function set is attached to an MObject rather than a path.
-        """
-    def dagRoot(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """dagRoot() -> MObject
-
-        Returns the root node of the first path leading to this node.
-        """
     @property
     def dataObject(*args: Any, **kwargs: Any) -> Any:
         """If the functionset was created using an MFn.kNurbsSurfaceData object
@@ -16813,10 +9535,6 @@ class MFnNurbsSurface(MFnDagNode):
         then this attribute will contain an MObject which references that
         data object. Otherwise it will contain MObject.kNullObj.
         """
-    def deallocateAllFlags(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Deallocates all node flags which are currently allocated to the named plugin."""
-    def deallocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Deallocates the specified node flag, which was previously allocated by the named plugin using allocateFlag()."""
     @property
     def degreeInU(*args: Any, **kwargs: Any) -> Any:
         """The degree of the surface in the U direction or 0 if the degree
@@ -16837,20 +9555,6 @@ class MFnNurbsSurface(MFnDagNode):
         """The degree of the surface in the V direction or 0 if the degree
         cannot be determined.
         """
-    def dgCallbackIds(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns DG timing information for a specific callback type, broken down by callbackId."""
-    def dgCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns DG timing information broken down by callback type."""
-    def dgTimer(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a specific DG timer metric for a given timer type."""
-    def dgTimerOff(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Turns DG timing off for this node."""
-    def dgTimerOn(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Turns DG timing on for this node."""
-    def dgTimerQueryState(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the current DG timer state for this node."""
-    def dgTimerReset(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Resets all DG timers for this node."""
     def distanceToPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
         """distanceToPoint(point, space=kObject) -> float
 
@@ -16860,11 +9564,6 @@ class MFnNurbsSurface(MFnDagNode):
         * point (MPoint) - Point to calculate distance to.
         * space  (int)   - An MSpace constant giving the coordinate space in
                            which the point has been specified.
-        """
-    def duplicate(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """duplicate(instance=False, instanceLeaf=False) -> MObject
-
-        Duplicates the DAG hierarchy rooted at the current node.
         """
     def edge(self: Self, *args: Any, **kwargs: Any) -> Any:
         """edge(region, boundary, edge, paramEdge=False) -> MObjectArray
@@ -16888,10 +9587,6 @@ class MFnNurbsSurface(MFnDagNode):
         * paramEdge (bool) - If True a 2D parameter edge is returned,
                              otherwise a 3D edge is returned.
         """
-    def findAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the attribute which has the given alias."""
-    def findPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a plug for the given attribute."""
     @property
     def formInU(*args: Any, **kwargs: Any) -> Any:
         """Form of the surface in the U direction. Can be one of kOpen,
@@ -16912,24 +9607,6 @@ class MFnNurbsSurface(MFnDagNode):
         """Form of the surface in the V direction. Can be one of kOpen,
         kClosed, kPeriodic or kInvalid.
         """
-    def fullPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """fullPathName() -> string
-
-        Returns the full path of the attached object, from the root of the DAG on down.
-        """
-    def getAffectedAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all of the attributes which are affected by the specified attribute."""
-    def getAffectingAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all of the attributes which affect the specified attribute."""
-    def getAliasAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the node's alias attribute, which is a special attribute used to store information about the node's attribute aliases."""
-    def getAliasList(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all of the node's attribute aliases."""
-    def getAllPaths(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getAllPaths() -> MDagPathArray
-
-        Returns all of the DAG paths which lead to the object to which this function set is attached.
-        """
     def getAssignedUVs(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getAssignedUVs() -> (MIntArray, MIntArray)
 
@@ -16938,12 +9615,6 @@ class MFnNurbsSurface(MFnDagNode):
         of UVs for each patch in the surface, and a second array containing
         the indices of the UVs mapped to each corner of those patches. This
         is the same format as the arrays taken by the assignUVs() method.
-        """
-    def getConnectedSetsAndMembers(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getConnectedSetsAndMembers(instance, renderableSetsOnly) -> (MObjectArray, MObjectArray)
-
-        Returns a tuple containing an array of sets and an array of the
-        components of the DAG object which are in those sets. If the entire object is in a set, then the corresponding entry in the comps array will have no elements in it.
         """
     def getConnectedShaders(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getConnectedShaders(instanceNumber) -> (MObjectArray, MIntArray)
@@ -16964,8 +9635,6 @@ class MFnNurbsSurface(MFnDagNode):
                                  query. This will be zero if there is only
                                  one instance.
         """
-    def getConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all the plugs which are connected to attributes of this node."""
     def getDerivativesAtParam(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getDerivativesAtParam(uParam, vParam, space=kObject, secondOrder=False)
             -> (MPoint, MVector, MVector)
@@ -16989,8 +9658,6 @@ class MFnNurbsSurface(MFnDagNode):
                            in the result. Note that this will increase
                            computation time.
         """
-    def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Gets the external content (files) that this node depends on."""
     def getParamAtPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getParamAtPoint(point, ignoreTrimBoundaries, tolerance=kPointTolerance,
             space=kObject) -> (float, float)
@@ -17034,11 +9701,6 @@ class MFnNurbsSurface(MFnDagNode):
 
         * patchId (int)     - Patch of interest.
         """
-    def getPath(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getPath() -> MDagPath
-
-        Returns the DAG path to which this function set is attached, or the first path to the node if the function set is attached to an MObject.
-        """
     def getPointAtParam(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getPointAtParam(uParam, vParam, space=kObject) -> MPoint"""
     def getUV(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -17054,45 +9716,12 @@ class MFnNurbsSurface(MFnDagNode):
         Returns all of the surface's texture coordinates as a tuple containing
         an array of U values and an array of V values.
         """
-    def hasAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the node has an attribute with the given name."""
-    def hasChild(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """hasChild(node) -> bool
-
-        Returns True if the specified node is a child of this one.
-        """
     @property
     def hasHistoryOnCreate(*args: Any, **kwargs: Any) -> Any:
         """True if the surface was created with history."""
     @hasHistoryOnCreate.setter
     def hasHistoryOnCreate(*args: Any, **kwargs: Any) -> Any:
         """True if the surface was created with history."""
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
-    def hasParent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """hasParent(node) -> bool
-
-        Returns True if the specified node is a parent of this one.
-        """
-    def hasUniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the node's name is unique."""
-    @property
-    def inModel(*args: Any, **kwargs: Any) -> Any:
-        """True if the node has been added to the model."""
-    @inModel.setter
-    def inModel(*args: Any, **kwargs: Any) -> Any:
-        """True if the node has been added to the model."""
-    @property
-    def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
-        """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-    @inUnderWorld.setter
-    def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
-        """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-    def instanceCount(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """instanceCount(indirect) -> int
-
-        Returns the number of instances for this node.
-        """
     def intersect(self: Self, *args: Any, **kwargs: Any) -> Any:
         """intersect(rayStart, rayDir, tolerance=kPointTolerance, space=kObject,
             distance=False, exactHit=False, all=False)
@@ -17124,19 +9753,6 @@ class MFnNurbsSurface(MFnDagNode):
     @isBezier.setter
     def isBezier(*args: Any, **kwargs: Any) -> Any:
         """True if the knot spacing gives a Bezier surface."""
-    def isChildOf(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """isChildOf(node) -> bool
-
-        Returns True if the specified node is a parent of this one.
-        """
-    @property
-    def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
-        """True if this is a default node, created automatically by Maya."""
-    @isDefaultNode.setter
-    def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
-        """True if this is a default node, created automatically by Maya."""
-    def isFlagSet(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the state of the specified node flag."""
     def isFlipNorm(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isFlipNorm(region) -> bool
 
@@ -17155,34 +9771,6 @@ class MFnNurbsSurface(MFnDagNode):
         """True if surface contains are any folds or creases on bispan
         boundaries, including trimmed regions.
         """
-    @property
-    def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is from a referenced file, False if the node is part of the main scene."""
-    @isFromReferencedFile.setter
-    def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is from a referenced file, False if the node is part of the main scene."""
-    @property
-    def isInstanceable(*args: Any, **kwargs: Any) -> Any:
-        """True if instancing is allowed for this node."""
-    @isInstanceable.setter
-    def isInstanceable(*args: Any, **kwargs: Any) -> Any:
-        """True if instancing is allowed for this node."""
-    def isInstanced(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """isInstanced(indirect=True) -> bool
-
-        Returns True if this node is instanced.
-        """
-    def isInstancedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """isInstancedAttribute(attr) -> bool
-
-        Returns True if the specified attribute is an instanced attribute of this node.
-        """
-    @property
-    def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
-        """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-    @isIntermediateObject.setter
-    def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
-        """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
     def isKnotU(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isKnotU(param) -> bool
 
@@ -17199,14 +9787,6 @@ class MFnNurbsSurface(MFnDagNode):
 
         * param (float) - Parameter value to check.
         """
-    @property
-    def isLocked(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is locked against changes."""
-    @isLocked.setter
-    def isLocked(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is locked against changes."""
-    def isNewAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the specified attribute was added in the current scene, and not by by one of its referenced files."""
     def isParamOnSurface(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isParamOnSurface(uParam, vParam) -> bool
 
@@ -17214,11 +9794,6 @@ class MFnNurbsSurface(MFnDagNode):
 
         * uParam (float) - U parameter value.
         * vParam (float) - V parameter value.
-        """
-    def isParentOf(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """isParentOf(node) -> bool
-
-        Returns True if the specified node is a child of this one.
         """
     def isPointInTrimmedRegion(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isPointInTrimmedRegion(uParam, vParam) -> bool
@@ -17241,14 +9816,6 @@ class MFnNurbsSurface(MFnDagNode):
                               in which to perform the operation
         """
     @property
-    def isShared(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is shared."""
-    @isShared.setter
-    def isShared(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is shared."""
-    def isTrackingEdits(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the node is referenced or in an assembly that is tracking edits."""
-    @property
     def isTrimmedSurface(*args: Any, **kwargs: Any) -> Any:
         """True if the surface is a trimmed surface."""
     @isTrimmedSurface.setter
@@ -17260,40 +9827,7 @@ class MFnNurbsSurface(MFnDagNode):
     @isUniform.setter
     def isUniform(*args: Any, **kwargs: Any) -> Any:
         """True if the knot spacing is uniform."""
-    kClosed: int = ...
-    kClosedSegment: int = ...
-    kExtensionAttr: int = ...
-    kInner: int = ...
-    kInvalid: int = ...
-    kInvalidAttr: int = ...
-    kInvalidBoundary: int = ...
-    kLast: int = ...
-    kLocalDynamicAttr: int = ...
-    kNextPos: int = ...
-    kNormalAttr: int = ...
-    kOpen: int = ...
-    kOuter: int = ...
-    kPeriodic: int = ...
     kPointTolerance: float = ...
-    kSegment: int = ...
-    kTimerInvalidState: int = ...
-    kTimerMetric_callback: int = ...
-    kTimerMetric_callbackNotViaAPI: int = ...
-    kTimerMetric_callbackViaAPI: int = ...
-    kTimerMetric_compute: int = ...
-    kTimerMetric_computeDuringCallback: int = ...
-    kTimerMetric_computeNotDuringCallback: int = ...
-    kTimerMetric_dirty: int = ...
-    kTimerMetric_draw: int = ...
-    kTimerMetric_fetch: int = ...
-    kTimerMetrics: int = ...
-    kTimerOff: int = ...
-    kTimerOn: int = ...
-    kTimerType_count: int = ...
-    kTimerType_inclusive: int = ...
-    kTimerType_self: int = ...
-    kTimerTypes: int = ...
-    kTimerUninitialized: int = ...
     @property
     def knotDomainInU(*args: Any, **kwargs: Any) -> Any:
         """A tuple containing a pair of floats corresponding to the maximum and
@@ -17338,14 +9872,6 @@ class MFnNurbsSurface(MFnDagNode):
 
         Returns all of the surface's knots in the V direction.
         """
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the node's name."""
-    @property
-    def namespace(*args: Any, **kwargs: Any) -> Any:
-        """Name of the namespace which contains the node."""
-    @namespace.setter
-    def namespace(*args: Any, **kwargs: Any) -> Any:
-        """Name of the namespace which contains the node."""
     def normal(self: Self, *args: Any, **kwargs: Any) -> Any:
         """normal(uParam, vParam, space=kObject) -> MVector
 
@@ -17493,49 +10019,6 @@ class MFnNurbsSurface(MFnDagNode):
         on a per-patch per-patchCorner basis. This attribute contains the
         number of elements in this list.
         """
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-    @property
-    def objectColor(*args: Any, **kwargs: Any) -> Any:
-        """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-    @objectColor.setter
-    def objectColor(*args: Any, **kwargs: Any) -> Any:
-        """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-    @property
-    def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
-        """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-    @objectColorRGB.setter
-    def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
-        """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-    @property
-    def objectColorType(*args: Any, **kwargs: Any) -> Any:
-        """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-    @objectColorType.setter
-    def objectColorType(*args: Any, **kwargs: Any) -> Any:
-        """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-    def parent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """parent(index) -> MObject
-
-        Returns the specified parent of this node.
-        """
-    def parentCount(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """parentCount() -> int
-
-        Returns the number of parents this node has.
-        """
-    def partialPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """partialPathName() -> string
-
-        Returns the minimum path string necessary to uniquely identify the attached object.
-        """
-    @property
-    def pluginName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the plugin which registered the node type, if any."""
-    @pluginName.setter
-    def pluginName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the plugin which registered the node type, if any."""
-    def plugsAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the alias for a plug's attribute."""
     def projectCurve(self: Self, *args: Any, **kwargs: Any) -> Any:
         """projectCurve(curve[, direction], keepHistory=False) -> self
 
@@ -17545,18 +10028,6 @@ class MFnNurbsSurface(MFnDagNode):
                                 then surface normals will be used.
         * keepHistory  (bool) - Determines whether the construction history
                                 of the projection should be retained.
-        """
-    def removeAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Removes a dynamic attribute from the node."""
-    def removeChild(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeChild(node) -> self
-
-        Removes the child, specified by MObject, reparenting it under the world.
-        """
-    def removeChildAt(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeChildAt(index) -> self
-
-        Removes the child, specified by index, reparenting it under the world.
         """
     def removeKnotInU(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeKnotInU(param, removeAll=False) -> self
@@ -17596,12 +10067,6 @@ class MFnNurbsSurface(MFnDagNode):
 
         * param (float) - V parameter value of the knot to remove.
         """
-    def reorderedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns one of the node's attribute, based on the order in which they are written to file."""
-    def setAffectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Specifies that modifications to a node could potentially affect the animation."""
-    def setAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds or removes an attribute alias."""
     def setCVPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setCVPosition(uIndex, vIndex, point, space=kObject) -> self"""
     def setCVPositions(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -17624,14 +10089,6 @@ class MFnNurbsSurface(MFnDagNode):
         * space  (int) - An MSpace constant giving the coordinate space
                          in which to perform the operation
         """
-    def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Used to prevent the node from being written to file."""
-    def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Changes the location of external content."""
-    def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets content info in the specified attribute from the table."""
-    def setFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets the state of the specified node flag."""
     def setKnotInU(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setKnotInU(index, param) -> self
 
@@ -17682,13 +10139,6 @@ class MFnNurbsSurface(MFnDagNode):
         * startIndex (int) - Index of the first V knot to set.
         * endIndex   (int) - Index of the last V knot to set.
         """
-    def setName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets the node's name."""
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """setObject(MObject or MDagPath) -> self
-
-        Attaches the function set to the specified node or DAG path.
-        """
     def setUV(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setUV(uvId, u, v) -> self
 
@@ -17727,8 +10177,6 @@ class MFnNurbsSurface(MFnDagNode):
         * uList (MFloatArray or seq of float) - U values to set
         * vList (MFloatArray or seq of float) - V values to set
         """
-    def setUuid(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets the node's UUID."""
     def tangents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """tangents(uParam, vParam, space=kObject) -> (MVector, MVector)
 
@@ -17743,11 +10191,6 @@ class MFnNurbsSurface(MFnDagNode):
         * vParam (float) - V parameter value at which to obtain the tangents.
         * space    (int) - An MSpace constant giving the coordinate space
                            in which to perform the operation
-        """
-    def transformationMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """transformationMatrix() -> MMatrix
-
-        Returns the object space transformation matrix for this DAG node.
         """
     def trim(self: Self, *args: Any, **kwargs: Any) -> Any:
         """trim(regionsToKeepU, regionsToKeepV, keepHistory=False) -> self
@@ -17767,22 +10210,6 @@ class MFnNurbsSurface(MFnDagNode):
         * keepHistory    (bool) - Determines whether the construction history
                                   of the operation should be retained.
         """
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
-    @property
-    def typeId(*args: Any, **kwargs: Any) -> Any:
-        """MTypeId for the node's type."""
-    @typeId.setter
-    def typeId(*args: Any, **kwargs: Any) -> Any:
-        """MTypeId for the node's type."""
-    @property
-    def typeName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the node's type."""
-    @typeName.setter
-    def typeName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the node's type."""
-    def uniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """For a DAG node, the unique name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself. For a non-DAG node, the uniqueName is just its name."""
     def updateSurface(self: Self, *args: Any, **kwargs: Any) -> Any:
         """updateSurface() -> self
 
@@ -17793,286 +10220,22 @@ class MFnNurbsSurface(MFnDagNode):
         changed it is more efficient to call this method once after all the
         updates are complete.
         """
-    @property
-    def useObjectColor(*args: Any, **kwargs: Any) -> Any:
-        """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-    @useObjectColor.setter
-    def useObjectColor(*args: Any, **kwargs: Any) -> Any:
-        """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-    def userNode(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the MPxNode object for a plugin node."""
-    def uuid(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the node's UUID."""
 
 class MFnNurbsSurfaceData(MFnGeometryData):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-    def addComponentTag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """addComponentTag(key) -> self
-
-        Adds a componentTag with the given key to the object.
-        """
-    def addObjectGroup(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """addObjectGroup(id) -> self
-
-        Adds an object group with the given id to the object.
-        """
-    def addObjectGroupComponent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """addObjectGroupComponent(id, MObject component) -> self
-
-        Adds the members of the given component to the object group
-        with the given id.
-        """
-    def changeObjectGroupId(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """changeObjectGroupId(sourceId, destId) -> self
-
-        Changes the id of the object group with the given id to the new id.
-        """
-    def componentTagContents(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """componentTagContents(key) -> MObject
-
-        Returns a component which contains the members of the componentTag
-        with the given key.
-        """
-    def componentTagExpressionSubsetState(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """componentTagExpressionSubsetState(expr,ctg) -> MFnGeometryData::SubsetState type constant
-
-        Returns the state of the contents of the resolved componentTag expression.
-        """
-    def componentTagType(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """componentTagType(key) -> MFn Type constant
-
-        Returns the type of the component that the componentTag with the
-        given key contains.
-        """
-    def componentTags(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """componentTags() -> MObject
-
-        Returns the componentTag keys contained in the object.
-        """
-    def copyObjectGroups(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """copyObjectGroups(MObject inGeom) -> self
-
-        Copies the object groups from the given geometry data object.
-        """
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """create() -> MObject
 
         Creates a new nurbs surface data object, attaches it to this function set
         and returns an MObject which references it.
         """
-    def hasComponentTag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """hasComponentTag(key) -> bool
-
-        Returns True if a componentTag with the given key exists.
-        """
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
-    def hasObjectGroup(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """hasObjectGroup(id) -> self
-
-        Returns True if an object group with the given id is
-        contained in the data.
-        """
-    @property
-    def isIdentity(*args: Any, **kwargs: Any) -> Any:
-        """True if the matrix for the geometry is the identity."""
-    @isIdentity.setter
-    def isIdentity(*args: Any, **kwargs: Any) -> Any:
-        """True if the matrix for the geometry is the identity."""
-    @property
-    def isNotIdentity(*args: Any, **kwargs: Any) -> Any:
-        """True if the matrix for the geometry is not the identity."""
-    @isNotIdentity.setter
-    def isNotIdentity(*args: Any, **kwargs: Any) -> Any:
-        """True if the matrix for the geometry is not the identity."""
-    kAny: int = ...
-    kAuto: int = ...
-    kCompleteGroup: int = ...
-    kComponentList: int = ...
-    kDoubleArray: int = ...
-    kDynArrayAttrs: int = ...
-    kDynSweptGeometry: int = ...
-    kEdges: int = ...
-    kEmptyGroup: int = ...
-    kFaces: int = ...
-    kFalloffFunction: int = ...
-    kFloatArray: int = ...
-    kIntArray: int = ...
-    kInvalid: int = ...
-    kInvalidGroup: int = ...
-    kLast: int = ...
-    kLattice: int = ...
-    kMatrix: int = ...
-    kMatrixArray: int = ...
-    kMesh: int = ...
-    kNId: int = ...
-    kNObject: int = ...
-    kNull: int = ...
-    kNumeric: int = ...
-    kNurbsCurve: int = ...
-    kNurbsSurface: int = ...
-    kPartialGroup: int = ...
-    kPlugin: int = ...
-    kPluginGeometry: int = ...
-    kPointArray: int = ...
-    kSphere: int = ...
-    kString: int = ...
-    kStringArray: int = ...
-    kSubdSurface: int = ...
-    kUnsupported: int = ...
-    kVectorArray: int = ...
-    kVerts: int = ...
-    @property
-    def matrix(*args: Any, **kwargs: Any) -> Any:
-        """MMatrix used to convert the object into local space."""
-    @matrix.setter
-    def matrix(*args: Any, **kwargs: Any) -> Any:
-        """MMatrix used to convert the object into local space."""
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-    def objectGroup(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """objectGroup(index) -> int
-
-        Returns the id of the index'th object group contained by the object.
-        """
-    def objectGroupComponent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """objectGroupComponent(id) -> MObject
-
-        Returns a component which contains the members of the object group
-        with the given id.
-        """
-    @property
-    def objectGroupCount(*args: Any, **kwargs: Any) -> Any:
-        """The number of object groups contained by the object."""
-    @objectGroupCount.setter
-    def objectGroupCount(*args: Any, **kwargs: Any) -> Any:
-        """The number of object groups contained by the object."""
-    def objectGroupSubsetState(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """objectGroupSubsetState(id) -> MFnGeometryData::SubsetState type constant
-
-        Returns the state of the group contents of the object group with the
-        given id.
-        """
-    def objectGroupType(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """objectGroupType(id) -> MFn Type constant
-
-        Returns the type of the component that the object group with the
-        given id contains.
-        """
-    def removeComponentTag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeComponentTag(key) -> self
-
-        Removes a componentTag with the given key from the object.
-        """
-    def removeObjectGroup(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeObjectGroup(id) -> self
-
-        Removes an object group with the given id from the object.
-        """
-    def removeObjectGroupComponent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeObjectGroupComponent(id, MObject component) -> self
-
-        Removes the members of the given component from the object group
-        with the given id.
-        """
-    def renameComponentTag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """renameComponentTag(key, newKey) -> self
-
-        Renames a componentag with the given key the object.
-        """
-    def resolveComponentTagExpression(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """resolveComponentTagExpression(key, ctg) -> MObject
-
-        Returns a component which is the result of the resolved componentTag expression
-        with the given key.
-        """
-    def setComponentTagContents(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """setComponentTagContents(key, MObject component) -> self
-
-        Sets the members of the componentTag with the given key
-        to be those in the given component.
-        """
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
-    def setObjectGroupComponent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """setObjectGroupComponent(id, MObject component) -> self
-
-        Sets the members of the object group with the given id
-        to be only those in the given component.
-        """
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
 
 class MFnPlugin(MFnBase):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -18081,34 +10244,8 @@ class MFnPlugin(MFnBase):
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def apiVersion(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Return the API version required by the plug-in."""
     def deregisterAttributePatternFactory(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -18125,14 +10262,10 @@ class MFnPlugin(MFnBase):
         """Deregister a user defined dependency node from Maya."""
     def findPlugin(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns an MObject corresponding to the named plugin."""
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
     def loadPath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Return the full path name of the file from which the plug-in was loaded."""
     def name(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Return the plug-in's name."""
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
     def registerAttributePatternFactory(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Register a new attribute pattern factory type with Maya."""
     def registerCommand(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -18156,10 +10289,6 @@ class MFnPlugin(MFnBase):
         """
     def setName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Set the plug-in's name."""
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
     def vendor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Return the plug-in's vendor string."""
     @property
@@ -18170,59 +10299,11 @@ class MFnPlugin(MFnBase):
         """Plug-in version string."""
 
 class MFnPluginData(MFnData):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """create(id) -> MObject
 
@@ -18235,41 +10316,6 @@ class MFnPluginData(MFnData):
 
         Return the user defined data held in this instance
         """
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
-    kAny: int = ...
-    kComponentList: int = ...
-    kDoubleArray: int = ...
-    kDynArrayAttrs: int = ...
-    kDynSweptGeometry: int = ...
-    kFalloffFunction: int = ...
-    kFloatArray: int = ...
-    kIntArray: int = ...
-    kInvalid: int = ...
-    kLast: int = ...
-    kLattice: int = ...
-    kMatrix: int = ...
-    kMatrixArray: int = ...
-    kMesh: int = ...
-    kNId: int = ...
-    kNObject: int = ...
-    kNumeric: int = ...
-    kNurbsCurve: int = ...
-    kNurbsSurface: int = ...
-    kPlugin: int = ...
-    kPluginGeometry: int = ...
-    kPointArray: int = ...
-    kSphere: int = ...
-    kString: int = ...
-    kStringArray: int = ...
-    kSubdSurface: int = ...
-    kVectorArray: int = ...
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
     def typeId(self: Self, *args: Any, **kwargs: Any) -> Any:
         """typeId() -> MTypeId
 
@@ -18277,190 +10323,37 @@ class MFnPluginData(MFnData):
         """
 
 class MFnPointArrayData(MFnData):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
-    __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def array(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the encapsulated array as an MPointArray."""
     def copyTo(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Replaces the elements of an array with those in the encapsulated array."""
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new MPoint array data object."""
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
-    kAny: int = ...
-    kComponentList: int = ...
-    kDoubleArray: int = ...
-    kDynArrayAttrs: int = ...
-    kDynSweptGeometry: int = ...
-    kFalloffFunction: int = ...
-    kFloatArray: int = ...
-    kIntArray: int = ...
-    kInvalid: int = ...
-    kLast: int = ...
-    kLattice: int = ...
-    kMatrix: int = ...
-    kMatrixArray: int = ...
-    kMesh: int = ...
-    kNId: int = ...
-    kNObject: int = ...
-    kNumeric: int = ...
-    kNurbsCurve: int = ...
-    kNurbsSurface: int = ...
-    kPlugin: int = ...
-    kPluginGeometry: int = ...
-    kPointArray: int = ...
-    kSphere: int = ...
-    kString: int = ...
-    kStringArray: int = ...
-    kSubdSurface: int = ...
-    kVectorArray: int = ...
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
     def set(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets values in the encapsulated array."""
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
 
 class MFnReference(MFnDependencyNode):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
-    __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-    def absoluteName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the absolute name of this node.  The absolute name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself.  Regardless of relative name mode, absoluteName() will always return a full namespace path prefixed with a leading colon (the root namespace).  If the underlying node is a DAG node, then absoluteName() does not guarantee uniqueness, that is, two dependency nodes could have the same absoluteName().  In cases like this the uniqueName() method will guarantee that the name uniquely identifies the node."""
-    def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds a new dynamic attribute to the node."""
-    def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds content info to the specified table from a file path attribute."""
-    def affectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns true if the changes to the node may affect animation."""
-    def allocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Allocates a flag on all nodes for use by the named plugin and returns the flag's index."""
     def associatedNamespace(self: Self, *args: Any, **kwargs: Any) -> Any:
         """associatedNamespace(bool shortName) -> MString
 
         Returns the namespace associated with this reference.
         """
-    def attribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns an attribute of the node, given either its index or name."""
-    def attributeClass(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the class of the specified attribute."""
-    def attributeCount(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the number of attributes on the node."""
-    def canBeWritten(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns true if the node will be written to file."""
-    def classification(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the classification string for the named node type."""
     def containsNode(self: Self, *args: Any, **kwargs: Any) -> Any:
         """containsNode(MObject) -> bool
 
@@ -18471,77 +10364,21 @@ class MFnReference(MFnDependencyNode):
 
         Returns true if the specified node is from this reference. Membership in child references is not checked. The containsNode method may be used to test membership in a reference and its child references.
         """
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Creates a new node of the given type."""
-    def deallocateAllFlags(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Deallocates all node flags which are currently allocated to the named plugin."""
-    def deallocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Deallocates the specified node flag, which was previously allocated by the named plugin using allocateFlag()."""
-    def dgCallbackIds(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns DG timing information for a specific callback type, broken down by callbackId."""
-    def dgCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns DG timing information broken down by callback type."""
-    def dgTimer(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a specific DG timer metric for a given timer type."""
-    def dgTimerOff(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Turns DG timing off for this node."""
-    def dgTimerOn(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Turns DG timing on for this node."""
-    def dgTimerQueryState(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the current DG timer state for this node."""
-    def dgTimerReset(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Resets all DG timers for this node."""
     def fileName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """fileName(bool resolvedName, bool includePath, bool includeCopyNumber) -> MString
 
         Returns the name of file associated with this reference.
         """
-    def findAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the attribute which has the given alias."""
-    def findPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a plug for the given attribute."""
-    def getAffectedAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all of the attributes which are affected by the specified attribute."""
-    def getAffectingAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all of the attributes which affect the specified attribute."""
-    def getAliasAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the node's alias attribute, which is a special attribute used to store information about the node's attribute aliases."""
-    def getAliasList(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all of the node's attribute aliases."""
-    def getConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all the plugs which are connected to attributes of this node."""
-    def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Gets the external content (files) that this node depends on."""
-    def hasAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the node has an attribute with the given name."""
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
-    def hasUniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the node's name is unique."""
     def ignoreReferenceEdits(self: Self, *args: Any, **kwargs: Any) -> Any:
         """ignoreReferenceEdits() -> bool
 
         Indicates whether reference edits will be tracked and logged or not.
         """
-    @property
-    def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
-        """True if this is a default node, created automatically by Maya."""
-    @isDefaultNode.setter
-    def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
-        """True if this is a default node, created automatically by Maya."""
     def isExportEditsFile(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isExportEditsFile() -> bool
 
         Returns true if the reference is an export edits file. An export edits file is a file of type '.editMA' or '.editMB' which was created using Maya's offline file functionality.
         """
-    def isFlagSet(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the state of the specified node flag."""
-    @property
-    def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is from a referenced file, False if the node is part of the main scene."""
-    @isFromReferencedFile.setter
-    def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is from a referenced file, False if the node is part of the main scene."""
     def isLoaded(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isLoaded() -> bool
 
@@ -18552,58 +10389,16 @@ class MFnReference(MFnDependencyNode):
 
         Returns true if the reference is locked or if the referenced file was saved as locked.
         """
-    def isNewAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the specified attribute was added in the current scene, and not by by one of its referenced files."""
-    @property
-    def isShared(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is shared."""
-    @isShared.setter
-    def isShared(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is shared."""
-    def isTrackingEdits(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the node is referenced or in an assembly that is tracking edits."""
     def isValidReference(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isValidReference() -> bool
 
         Returns true if the reference is an valid file reference.
         """
-    kExtensionAttr: int = ...
-    kInvalidAttr: int = ...
-    kLocalDynamicAttr: int = ...
-    kNormalAttr: int = ...
-    kTimerInvalidState: int = ...
-    kTimerMetric_callback: int = ...
-    kTimerMetric_callbackNotViaAPI: int = ...
-    kTimerMetric_callbackViaAPI: int = ...
-    kTimerMetric_compute: int = ...
-    kTimerMetric_computeDuringCallback: int = ...
-    kTimerMetric_computeNotDuringCallback: int = ...
-    kTimerMetric_dirty: int = ...
-    kTimerMetric_draw: int = ...
-    kTimerMetric_fetch: int = ...
-    kTimerMetrics: int = ...
-    kTimerOff: int = ...
-    kTimerOn: int = ...
-    kTimerType_count: int = ...
-    kTimerType_inclusive: int = ...
-    kTimerType_self: int = ...
-    kTimerTypes: int = ...
-    kTimerUninitialized: int = ...
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the node's name."""
-    @property
-    def namespace(*args: Any, **kwargs: Any) -> Any:
-        """Name of the namespace which contains the node."""
-    @namespace.setter
-    def namespace(*args: Any, **kwargs: Any) -> Any:
-        """Name of the namespace which contains the node."""
     def nodes(self: Self, *args: Any, **kwargs: Any) -> Any:
         """nodes() -> MObjectArray
 
         Returns an array of the nodes associated with this reference.
         """
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
     def parentAssembly(self: Self, *args: Any, **kwargs: Any) -> Any:
         """parentAssembly() -> MObject
 
@@ -18619,30 +10414,6 @@ class MFnReference(MFnDependencyNode):
 
         Returns the reference node associated with the parent reference.
         """
-    @property
-    def pluginName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the plugin which registered the node type, if any."""
-    @pluginName.setter
-    def pluginName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the plugin which registered the node type, if any."""
-    def plugsAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the alias for a plug's attribute."""
-    def removeAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Removes a dynamic attribute from the node."""
-    def reorderedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns one of the node's attribute, based on the order in which they are written to file."""
-    def setAffectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Specifies that modifications to a node could potentially affect the animation."""
-    def setAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds or removes an attribute alias."""
-    def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Used to prevent the node from being written to file."""
-    def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Changes the location of external content."""
-    def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets content info in the specified attribute from the table."""
-    def setFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets the state of the specified node flag."""
     def setIgnoreReferenceEdits(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setIgnoreReferenceEdits(bool) -> None
 
@@ -18651,79 +10422,13 @@ class MFnReference(MFnDependencyNode):
         around a batch of operations where reference edits should be ignored.
         Restore the previous value when the batch of operations is complete.
         """
-    def setName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets the node's name."""
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
-    def setUuid(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets the node's UUID."""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
-    @property
-    def typeId(*args: Any, **kwargs: Any) -> Any:
-        """MTypeId for the node's type."""
-    @typeId.setter
-    def typeId(*args: Any, **kwargs: Any) -> Any:
-        """MTypeId for the node's type."""
-    @property
-    def typeName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the node's type."""
-    @typeName.setter
-    def typeName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the node's type."""
-    def uniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """For a DAG node, the unique name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself. For a non-DAG node, the uniqueName is just its name."""
-    def userNode(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the MPxNode object for a plugin node."""
-    def uuid(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the node's UUID."""
 
 class MFnSet(MFnDependencyNode):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -18732,12 +10437,6 @@ class MFnSet(MFnDependencyNode):
         NotImplemented, the normal algorithm is used.  Otherwise, it
         overrides the normal algorithm (and the outcome is cached).
         """
-    def absoluteName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the absolute name of this node.  The absolute name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself.  Regardless of relative name mode, absoluteName() will always return a full namespace path prefixed with a leading colon (the root namespace).  If the underlying node is a DAG node, then absoluteName() does not guarantee uniqueness, that is, two dependency nodes could have the same absoluteName().  In cases like this the uniqueName() method will guarantee that the name uniquely identifies the node."""
-    def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds a new dynamic attribute to the node."""
-    def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds content info to the specified table from a file path attribute."""
     def addMember(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addMember( object ) -> self
 
@@ -18750,25 +10449,11 @@ class MFnSet(MFnDependencyNode):
 
         Add a list of new objects to the set.
         """
-    def affectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns true if the changes to the node may affect animation."""
-    def allocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Allocates a flag on all nodes for use by the named plugin and returns the flag's index."""
     def annotation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """annotation() -> string
 
         Returns the annotation string for this set.  This allows a description of the set to be stored with it.
         """
-    def attribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns an attribute of the node, given either its index or name."""
-    def attributeClass(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the class of the specified attribute."""
-    def attributeCount(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the number of attributes on the node."""
-    def canBeWritten(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns true if the node will be written to file."""
-    def classification(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the classification string for the named node type."""
     def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """clear() -> self
 
@@ -18782,40 +10467,6 @@ class MFnSet(MFnDependencyNode):
         * members (MSelectionList) - list of members for new set
         * restriction (MFnSet.Restriction) - restriction applied to members
         """
-    def deallocateAllFlags(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Deallocates all node flags which are currently allocated to the named plugin."""
-    def deallocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Deallocates the specified node flag, which was previously allocated by the named plugin using allocateFlag()."""
-    def dgCallbackIds(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns DG timing information for a specific callback type, broken down by callbackId."""
-    def dgCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns DG timing information broken down by callback type."""
-    def dgTimer(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a specific DG timer metric for a given timer type."""
-    def dgTimerOff(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Turns DG timing off for this node."""
-    def dgTimerOn(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Turns DG timing on for this node."""
-    def dgTimerQueryState(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the current DG timer state for this node."""
-    def dgTimerReset(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Resets all DG timers for this node."""
-    def findAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the attribute which has the given alias."""
-    def findPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a plug for the given attribute."""
-    def getAffectedAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all of the attributes which are affected by the specified attribute."""
-    def getAffectingAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all of the attributes which affect the specified attribute."""
-    def getAliasAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the node's alias attribute, which is a special attribute used to store information about the node's attribute aliases."""
-    def getAliasList(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all of the node's attribute aliases."""
-    def getConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all the plugs which are connected to attributes of this node."""
-    def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Gets the external content (files) that this node depends on."""
     def getIntersection(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getIntersection( otherSet ) -> MSelectionList
 
@@ -18848,42 +10499,16 @@ class MFnSet(MFnDependencyNode):
 
         * otherSet (MObject or MObjectArray or list of sets) - set(s) to find union of with this set
         """
-    def hasAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the node has an attribute with the given name."""
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
     def hasRestrictions(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasRestrictions() -> bool
 
         Returns true if this function set has restrictions on the type of objects that it may contain.
         """
-    def hasUniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the node's name is unique."""
     def intersectsWith(self: Self, *args: Any, **kwargs: Any) -> Any:
         """intersectsWith( otherSet ) -> self
 
         Returns true if this set intersects with the given set.  An intersection occurs if there are any common members between the two sets.
         """
-    @property
-    def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
-        """True if this is a default node, created automatically by Maya."""
-    @isDefaultNode.setter
-    def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
-        """True if this is a default node, created automatically by Maya."""
-    def isFlagSet(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the state of the specified node flag."""
-    @property
-    def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is from a referenced file, False if the node is part of the main scene."""
-    @isFromReferencedFile.setter
-    def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is from a referenced file, False if the node is part of the main scene."""
-    @property
-    def isLocked(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is locked against changes."""
-    @isLocked.setter
-    def isLocked(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is locked against changes."""
     def isMember(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isMember( object ) -> bool
 
@@ -18891,64 +10516,6 @@ class MFnSet(MFnDependencyNode):
 
         The object may be an MObject, an (MDagPath, MObject) tuple, or an MPlug.
         """
-    def isNewAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the specified attribute was added in the current scene, and not by by one of its referenced files."""
-    @property
-    def isShared(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is shared."""
-    @isShared.setter
-    def isShared(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is shared."""
-    def isTrackingEdits(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the node is referenced or in an assembly that is tracking edits."""
-    kEdgesOnly: int = ...
-    kEditPointsOnly: int = ...
-    kExtensionAttr: int = ...
-    kFacetsOnly: int = ...
-    kInvalidAttr: int = ...
-    kLocalDynamicAttr: int = ...
-    kNone: int = ...
-    kNormalAttr: int = ...
-    kRenderableOnly: int = ...
-    kTimerInvalidState: int = ...
-    kTimerMetric_callback: int = ...
-    kTimerMetric_callbackNotViaAPI: int = ...
-    kTimerMetric_callbackViaAPI: int = ...
-    kTimerMetric_compute: int = ...
-    kTimerMetric_computeDuringCallback: int = ...
-    kTimerMetric_computeNotDuringCallback: int = ...
-    kTimerMetric_dirty: int = ...
-    kTimerMetric_draw: int = ...
-    kTimerMetric_fetch: int = ...
-    kTimerMetrics: int = ...
-    kTimerOff: int = ...
-    kTimerOn: int = ...
-    kTimerType_count: int = ...
-    kTimerType_inclusive: int = ...
-    kTimerType_self: int = ...
-    kTimerTypes: int = ...
-    kTimerUninitialized: int = ...
-    kVerticesOnly: int = ...
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the node's name."""
-    @property
-    def namespace(*args: Any, **kwargs: Any) -> Any:
-        """Name of the namespace which contains the node."""
-    @namespace.setter
-    def namespace(*args: Any, **kwargs: Any) -> Any:
-        """Name of the namespace which contains the node."""
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-    @property
-    def pluginName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the plugin which registered the node type, if any."""
-    @pluginName.setter
-    def pluginName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the plugin which registered the node type, if any."""
-    def plugsAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the alias for a plug's attribute."""
-    def removeAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Removes a dynamic attribute from the node."""
     def removeMember(self: Self, *args: Any, **kwargs: Any) -> Any:
         """removeMember( object ) -> self
 
@@ -18961,111 +10528,23 @@ class MFnSet(MFnDependencyNode):
 
         Remove items of the selection list from the set.
         """
-    def reorderedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns one of the node's attribute, based on the order in which they are written to file."""
     def restriction(self: Self, *args: Any, **kwargs: Any) -> Any:
         """restriction() -> MFnSet.Restriction
 
         Returns the type of membership restriction that this set has.
         """
-    def setAffectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Specifies that modifications to a node could potentially affect the animation."""
-    def setAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds or removes an attribute alias."""
     def setAnnotation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setAnnotation( annotation ) -> self
 
         Sets the annotation string for this set.  This allows a description of the set to be stored with it.
         """
-    def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Used to prevent the node from being written to file."""
-    def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Changes the location of external content."""
-    def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets content info in the specified attribute from the table."""
-    def setFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets the state of the specified node flag."""
-    def setName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets the node's name."""
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
-    def setUuid(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets the node's UUID."""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
-    @property
-    def typeId(*args: Any, **kwargs: Any) -> Any:
-        """MTypeId for the node's type."""
-    @typeId.setter
-    def typeId(*args: Any, **kwargs: Any) -> Any:
-        """MTypeId for the node's type."""
-    @property
-    def typeName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the node's type."""
-    @typeName.setter
-    def typeName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the node's type."""
-    def uniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """For a DAG node, the unique name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself. For a non-DAG node, the uniqueName is just its name."""
-    def userNode(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the MPxNode object for a plugin node."""
-    def uuid(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the node's UUID."""
 
 class MFnSingleIndexedComponent(MFnComponent):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addElement(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addElement(int element) -> self
 
@@ -19077,12 +10556,6 @@ class MFnSingleIndexedComponent(MFnComponent):
 
         Adds the specified elements to the component.
         """
-    @property
-    def componentType(*args: Any, **kwargs: Any) -> Any:
-        """Type of the component. (MFn Type constant)"""
-    @componentType.setter
-    def componentType(*args: Any, **kwargs: Any) -> Any:
-        """Type of the component. (MFn Type constant)"""
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """create(MFn Type constant) -> MObject
 
@@ -19094,12 +10567,6 @@ class MFnSingleIndexedComponent(MFnComponent):
 
         Returns the index'th element of the component.
         """
-    @property
-    def elementCount(*args: Any, **kwargs: Any) -> Any:
-        """Number of elements in the component."""
-    @elementCount.setter
-    def elementCount(*args: Any, **kwargs: Any) -> Any:
-        """Number of elements in the component."""
     @property
     def elementMax(*args: Any, **kwargs: Any) -> Any:
         """Biggest element plus 1 in the component."""
@@ -19116,564 +10583,68 @@ class MFnSingleIndexedComponent(MFnComponent):
 
         Returns all of the component's elements.
         """
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
-    @property
-    def hasWeights(*args: Any, **kwargs: Any) -> Any:
-        """True if the component has weights associated with its elements."""
-    @hasWeights.setter
-    def hasWeights(*args: Any, **kwargs: Any) -> Any:
-        """True if the component has weights associated with its elements."""
-    @property
-    def isComplete(*args: Any, **kwargs: Any) -> Any:
-        """Marking a component as complete means that it represents a full set
-        of indices from 0 to elementCount-1
-        """
-    @isComplete.setter
-    def isComplete(*args: Any, **kwargs: Any) -> Any:
-        """Marking a component as complete means that it represents a full set
-        of indices from 0 to elementCount-1
-        """
-    @property
-    def isEmpty(*args: Any, **kwargs: Any) -> Any:
-        """True if the component contains no elements."""
-    @isEmpty.setter
-    def isEmpty(*args: Any, **kwargs: Any) -> Any:
-        """True if the component contains no elements."""
-    def isEqual(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """isEqual(MObject other) -> bool
-
-        Returns True if other refers to the same component as the
-        one to which the function set is currently attached.
-        """
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
     def setCompleteData(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setCompleteData(numElements) -> self
 
         Marks the component as complete (i.e. contains all possible elements).
         numElements indicates the number of elements in the complete component.
         """
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
-    def weight(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """weight(index) -> MWeight
-
-        Returns the weight associated with the specified element,
-        where index can range from 0 to elementCount-1.
-        """
 
 class MFnStringArrayData(MFnData):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
-    __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def array(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the encapsulated array as a list of unicode objects."""
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new string array data object."""
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
-    kAny: int = ...
-    kComponentList: int = ...
-    kDoubleArray: int = ...
-    kDynArrayAttrs: int = ...
-    kDynSweptGeometry: int = ...
-    kFalloffFunction: int = ...
-    kFloatArray: int = ...
-    kIntArray: int = ...
-    kInvalid: int = ...
-    kLast: int = ...
-    kLattice: int = ...
-    kMatrix: int = ...
-    kMatrixArray: int = ...
-    kMesh: int = ...
-    kNId: int = ...
-    kNObject: int = ...
-    kNumeric: int = ...
-    kNurbsCurve: int = ...
-    kNurbsSurface: int = ...
-    kPlugin: int = ...
-    kPluginGeometry: int = ...
-    kPointArray: int = ...
-    kSphere: int = ...
-    kString: int = ...
-    kStringArray: int = ...
-    kSubdSurface: int = ...
-    kVectorArray: int = ...
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
     def set(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets values in the encapsulated array."""
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
 
 class MFnStringData(MFnData):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new string data object."""
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
-    kAny: int = ...
-    kComponentList: int = ...
-    kDoubleArray: int = ...
-    kDynArrayAttrs: int = ...
-    kDynSweptGeometry: int = ...
-    kFalloffFunction: int = ...
-    kFloatArray: int = ...
-    kIntArray: int = ...
-    kInvalid: int = ...
-    kLast: int = ...
-    kLattice: int = ...
-    kMatrix: int = ...
-    kMatrixArray: int = ...
-    kMesh: int = ...
-    kNId: int = ...
-    kNObject: int = ...
-    kNumeric: int = ...
-    kNurbsCurve: int = ...
-    kNurbsSurface: int = ...
-    kPlugin: int = ...
-    kPluginGeometry: int = ...
-    kPointArray: int = ...
-    kSphere: int = ...
-    kString: int = ...
-    kStringArray: int = ...
-    kSubdSurface: int = ...
-    kVectorArray: int = ...
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
     def set(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the value of the encapsulated string."""
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
     def string(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the encapsulated string as a unicode object."""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
 
 class MFnTransform(MFnDagNode):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-    def absoluteName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the absolute name of this node.  The absolute name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself.  Regardless of relative name mode, absoluteName() will always return a full namespace path prefixed with a leading colon (the root namespace).  If the underlying node is a DAG node, then absoluteName() does not guarantee uniqueness, that is, two dependency nodes could have the same absoluteName().  In cases like this the uniqueName() method will guarantee that the name uniquely identifies the node."""
-    def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds a new dynamic attribute to the node."""
-    def addChild(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """addChild(node, index=kNextPos, keepExistingParents=False) -> self
-
-        Makes a node a child of this one.
-        """
-    def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds content info to the specified table from a file path attribute."""
-    def affectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns true if the changes to the node may affect animation."""
-    def allocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Allocates a flag on all nodes for use by the named plugin and returns the flag's index."""
-    def attribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns an attribute of the node, given either its index or name."""
-    def attributeClass(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the class of the specified attribute."""
-    def attributeCount(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the number of attributes on the node."""
-    @property
-    def boundingBox(*args: Any, **kwargs: Any) -> Any:
-        """Node's bounding box, in object space."""
-    @boundingBox.setter
-    def boundingBox(*args: Any, **kwargs: Any) -> Any:
-        """Node's bounding box, in object space."""
-    def canBeWritten(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns true if the node will be written to file."""
-    def child(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """child(index) -> MObject
-
-        Returns the specified child of this node.
-        """
-    def childCount(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """childCount() -> int
-
-        Returns the number of nodes which are children of this one.
-        """
-    def classification(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the classification string for the named node type."""
     def clearRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Clears the transform's rest position matrix."""
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new transform node and attaches it to the function set."""
-    def dagPath(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """dagPath() -> MDagPath
-
-        Returns the DAG path to which this function set is attached. Raises a TypeError if the function set is attached to an MObject rather than a path.
-        """
-    def dagRoot(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """dagRoot() -> MObject
-
-        Returns the root node of the first path leading to this node.
-        """
-    def deallocateAllFlags(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Deallocates all node flags which are currently allocated to the named plugin."""
-    def deallocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Deallocates the specified node flag, which was previously allocated by the named plugin using allocateFlag()."""
-    def dgCallbackIds(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns DG timing information for a specific callback type, broken down by callbackId."""
-    def dgCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns DG timing information broken down by callback type."""
-    def dgTimer(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a specific DG timer metric for a given timer type."""
-    def dgTimerOff(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Turns DG timing off for this node."""
-    def dgTimerOn(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Turns DG timing on for this node."""
-    def dgTimerQueryState(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the current DG timer state for this node."""
-    def dgTimerReset(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Resets all DG timers for this node."""
-    def duplicate(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """duplicate(instance=False, instanceLeaf=False) -> MObject
-
-        Duplicates the DAG hierarchy rooted at the current node.
-        """
     def enableLimit(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Enables or disables a specified limit type."""
-    def findAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the attribute which has the given alias."""
-    def findPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a plug for the given attribute."""
-    def fullPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """fullPathName() -> string
-
-        Returns the full path of the attached object, from the root of the DAG on down.
-        """
-    def getAffectedAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all of the attributes which are affected by the specified attribute."""
-    def getAffectingAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all of the attributes which affect the specified attribute."""
-    def getAliasAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the node's alias attribute, which is a special attribute used to store information about the node's attribute aliases."""
-    def getAliasList(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all of the node's attribute aliases."""
-    def getAllPaths(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getAllPaths() -> MDagPathArray
-
-        Returns all of the DAG paths which lead to the object to which this function set is attached.
-        """
-    def getConnectedSetsAndMembers(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getConnectedSetsAndMembers(instance, renderableSetsOnly) -> (MObjectArray, MObjectArray)
-
-        Returns a tuple containing an array of sets and an array of the
-        components of the DAG object which are in those sets. If the entire object is in a set, then the corresponding entry in the comps array will have no elements in it.
-        """
-    def getConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns all the plugs which are connected to attributes of this node."""
-    def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Gets the external content (files) that this node depends on."""
-    def getPath(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getPath() -> MDagPath
-
-        Returns the DAG path to which this function set is attached, or the first path to the node if the function set is attached to an MObject.
-        """
-    def hasAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the node has an attribute with the given name."""
-    def hasChild(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """hasChild(node) -> bool
-
-        Returns True if the specified node is a child of this one.
-        """
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
-    def hasParent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """hasParent(node) -> bool
-
-        Returns True if the specified node is a parent of this one.
-        """
-    def hasUniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the node's name is unique."""
-    @property
-    def inModel(*args: Any, **kwargs: Any) -> Any:
-        """True if the node has been added to the model."""
-    @inModel.setter
-    def inModel(*args: Any, **kwargs: Any) -> Any:
-        """True if the node has been added to the model."""
-    @property
-    def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
-        """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-    @inUnderWorld.setter
-    def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
-        """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-    def instanceCount(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """instanceCount(indirect) -> int
-
-        Returns the number of instances for this node.
-        """
-    def isChildOf(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """isChildOf(node) -> bool
-
-        Returns True if the specified node is a parent of this one.
-        """
-    @property
-    def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
-        """True if this is a default node, created automatically by Maya."""
-    @isDefaultNode.setter
-    def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
-        """True if this is a default node, created automatically by Maya."""
-    def isFlagSet(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the state of the specified node flag."""
-    @property
-    def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is from a referenced file, False if the node is part of the main scene."""
-    @isFromReferencedFile.setter
-    def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is from a referenced file, False if the node is part of the main scene."""
-    @property
-    def isInstanceable(*args: Any, **kwargs: Any) -> Any:
-        """True if instancing is allowed for this node."""
-    @isInstanceable.setter
-    def isInstanceable(*args: Any, **kwargs: Any) -> Any:
-        """True if instancing is allowed for this node."""
-    def isInstanced(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """isInstanced(indirect=True) -> bool
-
-        Returns True if this node is instanced.
-        """
-    def isInstancedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """isInstancedAttribute(attr) -> bool
-
-        Returns True if the specified attribute is an instanced attribute of this node.
-        """
-    @property
-    def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
-        """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-    @isIntermediateObject.setter
-    def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
-        """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
     def isLimited(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the specified limit type is enabled."""
-    @property
-    def isLocked(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is locked against changes."""
-    @isLocked.setter
-    def isLocked(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is locked against changes."""
-    def isNewAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the specified attribute was added in the current scene, and not by by one of its referenced files."""
-    def isParentOf(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """isParentOf(node) -> bool
-
-        Returns True if the specified node is a child of this one.
-        """
-    @property
-    def isShared(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is shared."""
-    @isShared.setter
-    def isShared(*args: Any, **kwargs: Any) -> Any:
-        """True if the node is shared."""
-    def isTrackingEdits(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the node is referenced or in an assembly that is tracking edits."""
-    kExtensionAttr: int = ...
-    kInvalidAttr: int = ...
-    kLocalDynamicAttr: int = ...
-    kNextPos: int = ...
-    kNormalAttr: int = ...
     kRotateMaxX: int = ...
     kRotateMaxY: int = ...
     kRotateMaxZ: int = ...
     kRotateMinX: int = ...
     kRotateMinY: int = ...
     kRotateMinZ: int = ...
-    kScaleMaxX: int = ...
-    kScaleMaxY: int = ...
-    kScaleMaxZ: int = ...
-    kScaleMinX: int = ...
-    kScaleMinY: int = ...
-    kScaleMinZ: int = ...
-    kShearMaxXY: int = ...
-    kShearMaxXZ: int = ...
     kShearMaxYZ: int = ...
-    kShearMinXY: int = ...
-    kShearMinXZ: int = ...
     kShearMinYZ: int = ...
-    kTimerInvalidState: int = ...
-    kTimerMetric_callback: int = ...
-    kTimerMetric_callbackNotViaAPI: int = ...
-    kTimerMetric_callbackViaAPI: int = ...
-    kTimerMetric_compute: int = ...
-    kTimerMetric_computeDuringCallback: int = ...
-    kTimerMetric_computeNotDuringCallback: int = ...
-    kTimerMetric_dirty: int = ...
-    kTimerMetric_draw: int = ...
-    kTimerMetric_fetch: int = ...
-    kTimerMetrics: int = ...
-    kTimerOff: int = ...
-    kTimerOn: int = ...
-    kTimerType_count: int = ...
-    kTimerType_inclusive: int = ...
-    kTimerType_self: int = ...
-    kTimerTypes: int = ...
-    kTimerUninitialized: int = ...
     kTranslateMaxX: int = ...
     kTranslateMaxY: int = ...
     kTranslateMaxZ: int = ...
@@ -19682,71 +10653,6 @@ class MFnTransform(MFnDagNode):
     kTranslateMinZ: int = ...
     def limitValue(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the value of the specified limit."""
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the node's name."""
-    @property
-    def namespace(*args: Any, **kwargs: Any) -> Any:
-        """Name of the namespace which contains the node."""
-    @namespace.setter
-    def namespace(*args: Any, **kwargs: Any) -> Any:
-        """Name of the namespace which contains the node."""
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-    @property
-    def objectColor(*args: Any, **kwargs: Any) -> Any:
-        """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-    @objectColor.setter
-    def objectColor(*args: Any, **kwargs: Any) -> Any:
-        """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-    @property
-    def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
-        """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-    @objectColorRGB.setter
-    def objectColorRGB(*args: Any, **kwargs: Any) -> Any:
-        """RGB value indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
-    @property
-    def objectColorType(*args: Any, **kwargs: Any) -> Any:
-        """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-    @objectColorType.setter
-    def objectColorType(*args: Any, **kwargs: Any) -> Any:
-        """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-    def parent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """parent(index) -> MObject
-
-        Returns the specified parent of this node.
-        """
-    def parentCount(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """parentCount() -> int
-
-        Returns the number of parents this node has.
-        """
-    def partialPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """partialPathName() -> string
-
-        Returns the minimum path string necessary to uniquely identify the attached object.
-        """
-    @property
-    def pluginName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the plugin which registered the node type, if any."""
-    @pluginName.setter
-    def pluginName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the plugin which registered the node type, if any."""
-    def plugsAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the alias for a plug's attribute."""
-    def removeAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Removes a dynamic attribute from the node."""
-    def removeChild(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeChild(node) -> self
-
-        Removes the child, specified by MObject, reparenting it under the world.
-        """
-    def removeChildAt(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeChildAt(index) -> self
-
-        Removes the child, specified by index, reparenting it under the world.
-        """
-    def reorderedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns one of the node's attribute, based on the order in which they are written to file."""
     def resetFromRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Resets the transform from its rest position matrix."""
     def restPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -19775,27 +10681,8 @@ class MFnTransform(MFnDagNode):
         """Returns the transform's scale pivot."""
     def scalePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's scale pivot translation."""
-    def setAffectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Specifies that modifications to a node could potentially affect the animation."""
-    def setAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds or removes an attribute alias."""
-    def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Used to prevent the node from being written to file."""
-    def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Changes the location of external content."""
-    def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets content info in the specified attribute from the table."""
-    def setFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets the state of the specified node flag."""
     def setLimit(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the value of the specified limit."""
-    def setName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets the node's name."""
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """setObject(MObject or MDagPath) -> self
-
-        Attaches the function set to the specified node or DAG path.
-        """
     def setRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rest position matrix."""
     def setRotateOrientation(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -19822,104 +10709,23 @@ class MFnTransform(MFnDagNode):
         """Sets the transform's attribute values to represent the given transformation matrix."""
     def setTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's translation."""
-    def setUuid(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets the node's UUID."""
     def shear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transform's shear components."""
     def shearBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Multiplies the transform's shear components by a sequence of three floats."""
     def transformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transformation matrix represented by this transform."""
-    def transformationMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """transformationMatrix() -> MMatrix
-
-        Returns the object space transformation matrix for this DAG node.
-        """
     def translateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds an MVector to the transform's translation."""
     def translation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's translation as an MVector."""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
-    @property
-    def typeId(*args: Any, **kwargs: Any) -> Any:
-        """MTypeId for the node's type."""
-    @typeId.setter
-    def typeId(*args: Any, **kwargs: Any) -> Any:
-        """MTypeId for the node's type."""
-    @property
-    def typeName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the node's type."""
-    @typeName.setter
-    def typeName(*args: Any, **kwargs: Any) -> Any:
-        """Name of the node's type."""
-    def uniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """For a DAG node, the unique name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself. For a non-DAG node, the uniqueName is just its name."""
-    @property
-    def useObjectColor(*args: Any, **kwargs: Any) -> Any:
-        """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-    @useObjectColor.setter
-    def useObjectColor(*args: Any, **kwargs: Any) -> Any:
-        """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
-    def userNode(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the MPxNode object for a plugin node."""
-    def uuid(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the node's UUID."""
 
 class MFnTripleIndexedComponent(MFnComponent):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addElement(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addElement(sIndex, tIndex, uIndex) -> self
         addElement([sIndex, tIndex, uIndex]) -> self
@@ -19933,24 +10739,12 @@ class MFnTripleIndexedComponent(MFnComponent):
         elements sequence is itself a sequence of three ints which are the
         S, T and U indices of an element to be added.
         """
-    @property
-    def componentType(*args: Any, **kwargs: Any) -> Any:
-        """Type of the component. (MFn Type constant)"""
-    @componentType.setter
-    def componentType(*args: Any, **kwargs: Any) -> Any:
-        """Type of the component. (MFn Type constant)"""
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """create(MFn Type constant) -> MObject
 
         Creates a new, empty component, attaches it to the function set and
         returns an MObject which references it.
         """
-    @property
-    def elementCount(*args: Any, **kwargs: Any) -> Any:
-        """Number of elements in the component."""
-    @elementCount.setter
-    def elementCount(*args: Any, **kwargs: Any) -> Any:
-        """Number of elements in the component."""
     def getCompleteData(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getCompleteData() -> (numS, numT, numU)
 
@@ -19969,38 +10763,6 @@ class MFnTripleIndexedComponent(MFnComponent):
         Returns all of the component's elements as a list of tuples with each
         tuple containing the S, T and U indices of a single element.
         """
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
-    @property
-    def hasWeights(*args: Any, **kwargs: Any) -> Any:
-        """True if the component has weights associated with its elements."""
-    @hasWeights.setter
-    def hasWeights(*args: Any, **kwargs: Any) -> Any:
-        """True if the component has weights associated with its elements."""
-    @property
-    def isComplete(*args: Any, **kwargs: Any) -> Any:
-        """Marking a component as complete means that it represents a full set
-        of indices from 0 to elementCount-1
-        """
-    @isComplete.setter
-    def isComplete(*args: Any, **kwargs: Any) -> Any:
-        """Marking a component as complete means that it represents a full set
-        of indices from 0 to elementCount-1
-        """
-    @property
-    def isEmpty(*args: Any, **kwargs: Any) -> Any:
-        """True if the component contains no elements."""
-    @isEmpty.setter
-    def isEmpty(*args: Any, **kwargs: Any) -> Any:
-        """True if the component contains no elements."""
-    def isEqual(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """isEqual(MObject other) -> bool
-
-        Returns True if other refers to the same component as the
-        one to which the function set is currently attached.
-        """
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
     def setCompleteData(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setCompleteData(numS, numT, numU) -> self
 
@@ -20009,115 +10771,15 @@ class MFnTripleIndexedComponent(MFnComponent):
         in the complete component (i.e. the max S index is numS-1, the max T
         index is numT-1 and the max U index is numU-1).
         """
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
-    def weight(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """weight(index) -> MWeight
-
-        Returns the weight associated with the specified element,
-        where index can range from 0 to elementCount-1.
-        """
 
 class MFnTypedAttribute(MFnAttribute):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-    def accepts(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if this attribute can accept a connection of the given type."""
-    def acceptsAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if this attribute can accept a connection with the given attribute."""
-    def addToCategory(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds the attribute to a category"""
-    @property
-    def affectsAppearance(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect how the node is drawn in Maya's viewport?"""
-    @affectsAppearance.setter
-    def affectsAppearance(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect how the node is drawn in Maya's viewport?"""
-    @property
-    def affectsWorldSpace(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect the node's worldSpace matrix?"""
-    @affectsWorldSpace.setter
-    def affectsWorldSpace(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect the node's worldSpace matrix?"""
-    @property
-    def array(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an array?"""
-    @array.setter
-    def array(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an array?"""
     def attrType(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the type of data handled by the attribute."""
-    @property
-    def cached(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be cached in the datablock?"""
-    @cached.setter
-    def cached(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be cached in the datablock?"""
-    @property
-    def channelBox(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be displayed in the Channel Box?"""
-    @channelBox.setter
-    def channelBox(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be displayed in the Channel Box?"""
-    @property
-    def connectable(*args: Any, **kwargs: Any) -> Any:
-        """Can connections be made to the attribute?"""
-    @connectable.setter
-    def connectable(*args: Any, **kwargs: Any) -> Any:
-        """Can connections be made to the attribute?"""
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new type attribute, attaches it to the function set and returns it as an MObject."""
     @property
@@ -20126,346 +10788,35 @@ class MFnTypedAttribute(MFnAttribute):
     @default.setter
     def default(*args: Any, **kwargs: Any) -> Any:
         """Default value"""
-    @property
-    def disconnectBehavior(*args: Any, **kwargs: Any) -> Any:
-        """What should happen when the attribute loses an incoming connection?"""
-    @disconnectBehavior.setter
-    def disconnectBehavior(*args: Any, **kwargs: Any) -> Any:
-        """What should happen when the attribute loses an incoming connection?"""
-    @property
-    def dynamic(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a dynamic attribute?"""
-    @dynamic.setter
-    def dynamic(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a dynamic attribute?"""
-    @property
-    def extension(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an extension attribute?"""
-    @extension.setter
-    def extension(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an extension attribute?"""
-    def getAddAttrCmd(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a string containing a MEL 'addAttr' command capable of recreating the attribute."""
-    def hasCategory(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Checks to see if the attribute has a given category"""
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
-    @property
-    def hidden(*args: Any, **kwargs: Any) -> Any:
-        """If True the attribute will not be displayed in the Attribute Editor."""
-    @hidden.setter
-    def hidden(*args: Any, **kwargs: Any) -> Any:
-        """If True the attribute will not be displayed in the Attribute Editor."""
-    @property
-    def indeterminant(*args: Any, **kwargs: Any) -> Any:
-        """Hint to DG that this attribute may not always be used when computing the attributes which are dependent upon it."""
-    @indeterminant.setter
-    def indeterminant(*args: Any, **kwargs: Any) -> Any:
-        """Hint to DG that this attribute may not always be used when computing the attributes which are dependent upon it."""
-    @property
-    def indexMatters(*args: Any, **kwargs: Any) -> Any:
-        """If False, connectAttr -nextAvailable can be used with this attribute. If True then an explicit index must be provided."""
-    @indexMatters.setter
-    def indexMatters(*args: Any, **kwargs: Any) -> Any:
-        """If False, connectAttr -nextAvailable can be used with this attribute. If True then an explicit index must be provided."""
-    @property
-    def internal(*args: Any, **kwargs: Any) -> Any:
-        """Will the node handle the attribute's data storage itself, outside of the node's data block?"""
-    @internal.setter
-    def internal(*args: Any, **kwargs: Any) -> Any:
-        """Will the node handle the attribute's data storage itself, outside of the node's data block?"""
-    @property
-    def isProxyAttribute(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute is a proxy attribute?"""
-    @isProxyAttribute.setter
-    def isProxyAttribute(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute is a proxy attribute?"""
-    kDelete: int = ...
-    kNothing: int = ...
-    kReset: int = ...
-    @property
-    def keyable(*args: Any, **kwargs: Any) -> Any:
-        """Can keys be set on the attribute?"""
-    @keyable.setter
-    def keyable(*args: Any, **kwargs: Any) -> Any:
-        """Can keys be set on the attribute?"""
-    @property
-    def name(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's long name."""
-    @name.setter
-    def name(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's long name."""
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-    @property
-    def parent(*args: Any, **kwargs: Any) -> Any:
-        """Parent attribute. MObject::kNullObj if attr has no parent."""
-    @parent.setter
-    def parent(*args: Any, **kwargs: Any) -> Any:
-        """Parent attribute. MObject::kNullObj if attr has no parent."""
-    @property
-    def readable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute readable?"""
-    @readable.setter
-    def readable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute readable?"""
-    @property
-    def renderSource(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a render source?"""
-    @renderSource.setter
-    def renderSource(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a render source?"""
-    def setNiceNameOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets a nice UI name for this attribute rather than using the default derived from it's long name."""
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
-    @property
-    def shortName(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's short name."""
-    @shortName.setter
-    def shortName(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's short name."""
-    @property
-    def storable(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be preserved when the node is written to file?"""
-    @storable.setter
-    def storable(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be preserved when the node is written to file?"""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
-    @property
-    def usedAsColor(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a color in the UI?"""
-    @usedAsColor.setter
-    def usedAsColor(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a color in the UI?"""
-    @property
-    def usedAsFilename(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a file name in the UI?"""
-    @usedAsFilename.setter
-    def usedAsFilename(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a file name in the UI?"""
-    @property
-    def usesArrayDataBuilder(*args: Any, **kwargs: Any) -> Any:
-        """Array attributes only: does the attribute create elements using MArrayDataBuilder?"""
-    @usesArrayDataBuilder.setter
-    def usesArrayDataBuilder(*args: Any, **kwargs: Any) -> Any:
-        """Array attributes only: does the attribute create elements using MArrayDataBuilder?"""
-    @property
-    def worldSpace(*args: Any, **kwargs: Any) -> Any:
-        """DAG nodes only: if the node is instanced, will the attribute have separate values for each instance?"""
-    @worldSpace.setter
-    def worldSpace(*args: Any, **kwargs: Any) -> Any:
-        """DAG nodes only: if the node is instanced, will the attribute have separate values for each instance?"""
-    @property
-    def writable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute writable?"""
-    @writable.setter
-    def writable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute writable?"""
 
 class MFnUInt64ArrayData(MFnData):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
-    __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def array(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the encapsulated array as an MUint64Array."""
     def copyTo(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Replaces the elements of an array with those in the encapsulated array."""
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new MUint64 array data object."""
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
-    kAny: int = ...
-    kComponentList: int = ...
-    kDoubleArray: int = ...
-    kDynArrayAttrs: int = ...
-    kDynSweptGeometry: int = ...
-    kFalloffFunction: int = ...
-    kFloatArray: int = ...
-    kIntArray: int = ...
-    kInvalid: int = ...
-    kLast: int = ...
-    kLattice: int = ...
-    kMatrix: int = ...
-    kMatrixArray: int = ...
-    kMesh: int = ...
-    kNId: int = ...
-    kNObject: int = ...
-    kNumeric: int = ...
-    kNurbsCurve: int = ...
-    kNurbsSurface: int = ...
-    kPlugin: int = ...
-    kPluginGeometry: int = ...
-    kPointArray: int = ...
-    kSphere: int = ...
-    kString: int = ...
-    kStringArray: int = ...
-    kSubdSurface: int = ...
-    kVectorArray: int = ...
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
     def set(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets values in the encapsulated array."""
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
 
 class MFnUnitAttribute(MFnAttribute):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-    def accepts(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if this attribute can accept a connection of the given type."""
-    def acceptsAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if this attribute can accept a connection with the given attribute."""
-    def addToCategory(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Adds the attribute to a category"""
-    @property
-    def affectsAppearance(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect how the node is drawn in Maya's viewport?"""
-    @affectsAppearance.setter
-    def affectsAppearance(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect how the node is drawn in Maya's viewport?"""
-    @property
-    def affectsWorldSpace(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect the node's worldSpace matrix?"""
-    @affectsWorldSpace.setter
-    def affectsWorldSpace(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute affect the node's worldSpace matrix?"""
-    @property
-    def array(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an array?"""
-    @array.setter
-    def array(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an array?"""
-    @property
-    def cached(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be cached in the datablock?"""
-    @cached.setter
-    def cached(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be cached in the datablock?"""
-    @property
-    def channelBox(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be displayed in the Channel Box?"""
-    @channelBox.setter
-    def channelBox(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be displayed in the Channel Box?"""
-    @property
-    def connectable(*args: Any, **kwargs: Any) -> Any:
-        """Can connections be made to the attribute?"""
-    @connectable.setter
-    def connectable(*args: Any, **kwargs: Any) -> Any:
-        """Can connections be made to the attribute?"""
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new unit attribute, attaches it to the function set and returns it as an MObject."""
     @property
@@ -20474,26 +10825,6 @@ class MFnUnitAttribute(MFnAttribute):
     @default.setter
     def default(*args: Any, **kwargs: Any) -> Any:
         """Default value"""
-    @property
-    def disconnectBehavior(*args: Any, **kwargs: Any) -> Any:
-        """What should happen when the attribute loses an incoming connection?"""
-    @disconnectBehavior.setter
-    def disconnectBehavior(*args: Any, **kwargs: Any) -> Any:
-        """What should happen when the attribute loses an incoming connection?"""
-    @property
-    def dynamic(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a dynamic attribute?"""
-    @dynamic.setter
-    def dynamic(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a dynamic attribute?"""
-    @property
-    def extension(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an extension attribute?"""
-    @extension.setter
-    def extension(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute an extension attribute?"""
-    def getAddAttrCmd(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a string containing a MEL 'addAttr' command capable of recreating the attribute."""
     def getMax(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the attribute's hard maximum value. Returned MAngle and MDistance are always in radians and centimeters, respectively"""
     def getMin(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -20502,307 +10833,51 @@ class MFnUnitAttribute(MFnAttribute):
         """Returns the attribute's soft maximum value. Returned MAngle and MDistance are always in radians and centimeters, respectively"""
     def getSoftMin(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the attribute's soft minimum value. Returned MAngle and MDistance are always in radians and centimeters, respectively"""
-    def hasCategory(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Checks to see if the attribute has a given category"""
     def hasMax(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the attribute has a hard maximum value."""
     def hasMin(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the attribute has a hard minimum value."""
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
     def hasSoftMax(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the attribute has a soft maximum value."""
     def hasSoftMin(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the attribute has a soft minimum value."""
-    @property
-    def hidden(*args: Any, **kwargs: Any) -> Any:
-        """If True the attribute will not be displayed in the Attribute Editor."""
-    @hidden.setter
-    def hidden(*args: Any, **kwargs: Any) -> Any:
-        """If True the attribute will not be displayed in the Attribute Editor."""
-    @property
-    def indeterminant(*args: Any, **kwargs: Any) -> Any:
-        """Hint to DG that this attribute may not always be used when computing the attributes which are dependent upon it."""
-    @indeterminant.setter
-    def indeterminant(*args: Any, **kwargs: Any) -> Any:
-        """Hint to DG that this attribute may not always be used when computing the attributes which are dependent upon it."""
-    @property
-    def indexMatters(*args: Any, **kwargs: Any) -> Any:
-        """If False, connectAttr -nextAvailable can be used with this attribute. If True then an explicit index must be provided."""
-    @indexMatters.setter
-    def indexMatters(*args: Any, **kwargs: Any) -> Any:
-        """If False, connectAttr -nextAvailable can be used with this attribute. If True then an explicit index must be provided."""
-    @property
-    def internal(*args: Any, **kwargs: Any) -> Any:
-        """Will the node handle the attribute's data storage itself, outside of the node's data block?"""
-    @internal.setter
-    def internal(*args: Any, **kwargs: Any) -> Any:
-        """Will the node handle the attribute's data storage itself, outside of the node's data block?"""
-    @property
-    def isProxyAttribute(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute is a proxy attribute?"""
-    @isProxyAttribute.setter
-    def isProxyAttribute(*args: Any, **kwargs: Any) -> Any:
-        """Does the attribute is a proxy attribute?"""
-    kAngle: int = ...
-    kDelete: int = ...
-    kDistance: int = ...
-    kInvalid: int = ...
     kLast: int = ...
-    kNothing: int = ...
-    kReset: int = ...
     kTime: int = ...
-    @property
-    def keyable(*args: Any, **kwargs: Any) -> Any:
-        """Can keys be set on the attribute?"""
-    @keyable.setter
-    def keyable(*args: Any, **kwargs: Any) -> Any:
-        """Can keys be set on the attribute?"""
-    @property
-    def name(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's long name."""
-    @name.setter
-    def name(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's long name."""
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-    @property
-    def parent(*args: Any, **kwargs: Any) -> Any:
-        """Parent attribute. MObject::kNullObj if attr has no parent."""
-    @parent.setter
-    def parent(*args: Any, **kwargs: Any) -> Any:
-        """Parent attribute. MObject::kNullObj if attr has no parent."""
-    @property
-    def readable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute readable?"""
-    @readable.setter
-    def readable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute readable?"""
-    @property
-    def renderSource(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a render source?"""
-    @renderSource.setter
-    def renderSource(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute a render source?"""
     def setMax(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the attribute's hard maximum value."""
     def setMin(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the attribute's hard minimum value."""
-    def setNiceNameOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Sets a nice UI name for this attribute rather than using the default derived from it's long name."""
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
     def setSoftMax(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the attribute's soft maximum value."""
     def setSoftMin(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets the attribute's soft minimum value."""
-    @property
-    def shortName(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's short name."""
-    @shortName.setter
-    def shortName(*args: Any, **kwargs: Any) -> Any:
-        """Attribute's short name."""
-    @property
-    def storable(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be preserved when the node is written to file?"""
-    @storable.setter
-    def storable(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute's value be preserved when the node is written to file?"""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
     def unitType(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the type of data handled by the attribute."""
-    @property
-    def usedAsColor(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a color in the UI?"""
-    @usedAsColor.setter
-    def usedAsColor(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a color in the UI?"""
-    @property
-    def usedAsFilename(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a file name in the UI?"""
-    @usedAsFilename.setter
-    def usedAsFilename(*args: Any, **kwargs: Any) -> Any:
-        """Should the attribute be treated as a file name in the UI?"""
-    @property
-    def usesArrayDataBuilder(*args: Any, **kwargs: Any) -> Any:
-        """Array attributes only: does the attribute create elements using MArrayDataBuilder?"""
-    @usesArrayDataBuilder.setter
-    def usesArrayDataBuilder(*args: Any, **kwargs: Any) -> Any:
-        """Array attributes only: does the attribute create elements using MArrayDataBuilder?"""
-    @property
-    def worldSpace(*args: Any, **kwargs: Any) -> Any:
-        """DAG nodes only: if the node is instanced, will the attribute have separate values for each instance?"""
-    @worldSpace.setter
-    def worldSpace(*args: Any, **kwargs: Any) -> Any:
-        """DAG nodes only: if the node is instanced, will the attribute have separate values for each instance?"""
-    @property
-    def writable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute writable?"""
-    @writable.setter
-    def writable(*args: Any, **kwargs: Any) -> Any:
-        """Is the attribute writable?"""
 
 class MFnVectorArrayData(MFnData):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
-    __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def array(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the encapsulated array as an MVectorArray."""
     def copyTo(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Replaces the elements of an array with those in the encapsulated array."""
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new MVector array data object."""
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns True if the function set is compatible with the specified Maya object."""
-    kAny: int = ...
-    kComponentList: int = ...
-    kDoubleArray: int = ...
-    kDynArrayAttrs: int = ...
-    kDynSweptGeometry: int = ...
-    kFalloffFunction: int = ...
-    kFloatArray: int = ...
-    kIntArray: int = ...
-    kInvalid: int = ...
-    kLast: int = ...
-    kLattice: int = ...
-    kMatrix: int = ...
-    kMatrixArray: int = ...
-    kMesh: int = ...
-    kNId: int = ...
-    kNObject: int = ...
-    kNumeric: int = ...
-    kNurbsCurve: int = ...
-    kNurbsSurface: int = ...
-    kPlugin: int = ...
-    kPluginGeometry: int = ...
-    kPointArray: int = ...
-    kSphere: int = ...
-    kString: int = ...
-    kStringArray: int = ...
-    kSubdSurface: int = ...
-    kVectorArray: int = ...
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
     def set(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sets values in the encapsulated array."""
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Attaches the function set to the specified Maya object."""
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the type of the function set."""
 
-class MGlobal(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MGlobal:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
-    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addToModel(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addToModel(MObject, MObject) -> None
 
@@ -21365,52 +11440,12 @@ class MGlobal(object):
         performance hit will be incurred.
         """
 
-class MImage(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MImage:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -21611,70 +11646,34 @@ class MImage(object):
         If the writeDepth parameter is True then any depth information stored in MImage will be written to file.
         """
 
-class MInt64Array(object):
+class MInt64Array:
     def __add__(self: Self, value: Any) -> Any:
         """Return self+value."""
     def __contains__(self: Self, key: Any) -> Any:
         """Return key in self."""
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __iadd__(self: Self, value: Any) -> Any:
         """Implement self+=value."""
     def __imul__(self: Self, value: Any) -> Any:
         """Implement self*=value."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     def __mul__(self: Self, value: Any) -> Any:
         """Return self*value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
     def __rmul__(self: Self, value: Any) -> Any:
         """Return value*self."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -21704,70 +11703,34 @@ class MInt64Array(object):
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
         """Number of elements by which to grow the array when necessary."""
 
-class MIntArray(object):
+class MIntArray:
     def __add__(self: Self, value: Any) -> Any:
         """Return self+value."""
     def __contains__(self: Self, key: Any) -> Any:
         """Return key in self."""
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __iadd__(self: Self, value: Any) -> Any:
         """Implement self+=value."""
     def __imul__(self: Self, value: Any) -> Any:
         """Implement self*=value."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     def __mul__(self: Self, value: Any) -> Any:
         """Return self*value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
     def __rmul__(self: Self, value: Any) -> Any:
         """Return value*self."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -21797,64 +11760,16 @@ class MIntArray(object):
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
         """Number of elements by which to grow the array when necessary."""
 
-class MItCurveCV(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MItCurveCV:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __iter__(self: Self) -> Any:
         """Implement iter(self)."""
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
     def __next__(self: Self) -> Any:
         """Implement next(self)."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def currentItem(self: Self, *args: Any, **kwargs: Any) -> Any:
         """currentItem() -> MObject
 
@@ -21931,64 +11846,16 @@ class MItCurveCV(object):
         When modifying a large number of CVs, it is most efficient to call this method after all of the CVs have been modified.
         """
 
-class MItDag(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MItDag:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __iter__(self: Self) -> Any:
         """Implement iter(self)."""
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
     def __next__(self: Self) -> Any:
         """Implement next(self)."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def currentItem(self: Self, *args: Any, **kwargs: Any) -> Any:
         """currentItem() -> MObject
 
@@ -22118,64 +11985,16 @@ class MItDag(object):
     def traverseUnderWorld(*args: Any, **kwargs: Any) -> Any:
         """Specifies whether underworld traversal is turned on (Bool)."""
 
-class MItDependencyGraph(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MItDependencyGraph:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __iter__(self: Self) -> Any:
         """Implement iter(self)."""
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
     def __next__(self: Self) -> Any:
         """Implement next(self)."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def currentDirection(*args: Any, **kwargs: Any) -> Any:
         """Direction of the iteration through the graph (MItDependencyGraph.Direction)."""
@@ -22374,64 +12193,16 @@ class MItDependencyGraph(object):
     def traversingOverWorldSpaceDependents(*args: Any, **kwargs: Any) -> Any:
         """Whether the iterator is set to traverse world-space attribute dependencies (Bool)."""
 
-class MItDependencyNodes(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MItDependencyNodes:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __iter__(self: Self) -> Any:
         """Implement iter(self)."""
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
     def __next__(self: Self) -> Any:
         """Implement next(self)."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def isDone(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isDone() -> Bool
 
@@ -22472,64 +12243,16 @@ class MItDependencyNodes(object):
         Retrieves the dependency node to which the iterator points.
         """
 
-class MItGeometry(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MItGeometry:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __iter__(self: Self) -> Any:
         """Implement iter(self)."""
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
     def __next__(self: Self) -> Any:
         """Implement next(self)."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def allPositions(self: Self, *args: Any, **kwargs: Any) -> Any:
         """allPositions() -> MStatus
 
@@ -22634,64 +12357,16 @@ class MItGeometry(object):
         Return the weight of the current point/CV/vertex component.
         """
 
-class MItMeshEdge(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MItMeshEdge:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __iter__(self: Self) -> Any:
         """Implement iter(self)."""
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
     def __next__(self: Self) -> Any:
         """Implement next(self)."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def center(self: Self, *args: Any, **kwargs: Any) -> Any:
         """center(space=kObject) -> MPoint
 
@@ -22863,64 +12538,16 @@ class MItMeshEdge(object):
         * whichVertex (0 or 1) - Which of the edge's 2 vertices to use.
         """
 
-class MItMeshFaceVertex(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MItMeshFaceVertex:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __iter__(self: Self) -> Any:
         """Implement iter(self)."""
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
     def __next__(self: Self) -> Any:
         """Implement next(self)."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def currentItem(self: Self, *args: Any, **kwargs: Any) -> Any:
         """currentItem() -> MObject
 
@@ -23081,64 +12708,16 @@ class MItMeshFaceVertex(object):
         current vertex.
         """
 
-class MItMeshPolygon(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MItMeshPolygon:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __iter__(self: Self) -> Any:
         """Implement iter(self)."""
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
     def __next__(self: Self) -> Any:
         """Implement next(self)."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def center(self: Self, *args: Any, **kwargs: Any) -> Any:
         """center(space=kObject) -> MPoint
 
@@ -23578,64 +13157,16 @@ class MItMeshPolygon(object):
         * uvSet (string) - UV set to work with
         """
 
-class MItMeshVertex(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MItMeshVertex:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __iter__(self: Self) -> Any:
         """Implement iter(self)."""
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
     def __next__(self: Self) -> Any:
         """Implement next(self)."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def connectedToEdge(self: Self, *args: Any, **kwargs: Any) -> Any:
         """connectedToEdge(index) -> bool
 
@@ -23924,64 +13455,16 @@ class MItMeshVertex(object):
         Signal that this polygonal surface has changed and needs to redraw itself.
         """
 
-class MItSelectionList(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MItSelectionList:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __iter__(self: Self) -> Any:
         """Implement iter(self)."""
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
     def __next__(self: Self) -> Any:
         """Implement next(self)."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def getComponent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getComponent() -> (MDagPath, MObject)
 
@@ -24062,56 +13545,16 @@ class MItSelectionList(object):
         Selection items not matching the filter type will be excluded from the iteration.
         """
 
-class MItSurfaceCV(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MItSurfaceCV:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __iter__(self: Self) -> Any:
         """Implement iter(self)."""
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
     def __next__(self: Self) -> Any:
         """Implement next(self)."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -24229,60 +13672,12 @@ class MItSurfaceCV(object):
         Get the u and v index of the current CV.
         """
 
-class MIteratorType(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MIteratorType:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def filterList(*args: Any, **kwargs: Any) -> Any:
         """Filter list (MIntArray containing MFn.Type)."""
@@ -24312,79 +13707,12 @@ class MIteratorType(object):
         """Object type (MIteratorType.objFilterType)."""
 
 class MLockMessage(MMessage):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
-    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-    def currentCallbackId(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """currentCallbackId() -> id
-
-        Returns the callback ID of the currently executing callback. If called
-        outside of a callback, an invalid MCallbackId and failed status will
-        be returned.
-        """
     kAddAttr: int = ...
     kChildReorder: int = ...
     kCreateChildInstance: int = ...
     kCreateNodeInstance: int = ...
     kCreateParentInstance: int = ...
-    kDefaultAction: int = ...
-    kDelete: int = ...
-    kDoAction: int = ...
-    kDoNotDoAction: int = ...
-    kGroup: int = ...
-    kInvalid: int = ...
-    kInvalidDAG: int = ...
-    kInvalidPlug: int = ...
     kLast: int = ...
     kLastDAG: int = ...
     kLastPlug: int = ...
@@ -24393,43 +13721,13 @@ class MLockMessage(MMessage):
     kPlugAttrValChange: int = ...
     kPlugConnect: int = ...
     kPlugDisconnect: int = ...
-    kPlugLockAttr: int = ...
     kPlugRemoveAttr: int = ...
     kPlugRenameAttr: int = ...
-    kPlugUnlockAttr: int = ...
     kRemoveAttr: int = ...
-    kRename: int = ...
     kRenameAttr: int = ...
     kReparent: int = ...
-    kUnGroup: int = ...
     kUnlockAttr: int = ...
     kUnlockNode: int = ...
-    def nodeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """nodeCallbacks(node) -> ids
-
-        Returns a list of callback IDs registered to a given node.
-
-         * node (MObject) - Node to query for callbacks.
-         * ids (MCallbackIdArray) - Array to store the list of callback IDs.
-        """
-    def removeCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeCallback(id) -> None
-
-        Removes the specified callback from Maya.
-        This method must be called for all callbacks registered by a
-        plug-in before that plug-in is unloaded.
-
-         * id (MCallbackId) - identifier of callback to be removed
-        """
-    def removeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeCallbacks(ids) -> None
-
-        Removes all of the specified callbacks from Maya.
-        This method must be called for all callbacks registered by a
-        plug-in before that plug-in is unloaded.
-
-         * idList (MCallbackIdArray) - list of callbacks to be removed.
-        """
     def setNodeLockDAGQueryCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setNodeLockDAGQueryCallback(dagPath, function, clientData=None) -> id
 
@@ -24679,24 +13977,16 @@ class MLockMessage(MMessage):
          * return: Identifier used for removing the callback.
         """
 
-class MMatrix(object):
+class MMatrix:
     def __add__(self: Self, value: Any) -> Any:
         """Return self+value."""
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
     def __gt__(self: Self, value: Any) -> Any:
@@ -24708,12 +13998,6 @@ class MMatrix(object):
         """Return self*=value."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __isub__(self: Self, value: Any) -> Any:
         """Return self-=value."""
     def __le__(self: Self, value: Any) -> Any:
@@ -24730,34 +14014,18 @@ class MMatrix(object):
         """Create and return a new object.  See help(type) for accurate signature."""
     def __radd__(self: Self, value: Any) -> Any:
         """Return value+self."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
     def __rmul__(self: Self, value: Any) -> Any:
         """Return value*self."""
     def __rsub__(self: Self, value: Any) -> Any:
         """Return value-self."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __sub__(self: Self, value: Any) -> Any:
         """Return self-value."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def adjoint(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a new matrix containing this matrix's adjoint."""
     def det3x3(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -24785,70 +14053,34 @@ class MMatrix(object):
     def transpose(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a new matrix containing this matrix's transpose."""
 
-class MMatrixArray(object):
+class MMatrixArray:
     def __add__(self: Self, value: Any) -> Any:
         """Return self+value."""
     def __contains__(self: Self, key: Any) -> Any:
         """Return key in self."""
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __iadd__(self: Self, value: Any) -> Any:
         """Implement self+=value."""
     def __imul__(self: Self, value: Any) -> Any:
         """Implement self*=value."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     def __mul__(self: Self, value: Any) -> Any:
         """Return self*value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
     def __rmul__(self: Self, value: Any) -> Any:
         """Return value*self."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -24878,60 +14110,12 @@ class MMatrixArray(object):
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
         """Number of elements by which to grow the array when necessary."""
 
-class MMeshIntersector(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MMeshIntersector:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def create(self: Self, *args: Any, **kwargs: Any) -> Any:
         """create(mesh, matrix) -> self
 
@@ -24966,115 +14150,19 @@ class MMeshIntersector(object):
     def isCreated(*args: Any, **kwargs: Any) -> Any:
         """True if the intersector has been created, False otherwise."""
 
-class MMeshIsectAccelParams(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MMeshIsectAccelParams:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
 
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-
-class MMeshSmoothOptions(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MMeshSmoothOptions:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def boundaryRule(*args: Any, **kwargs: Any) -> Any:
         """Determines how boundary edges and vertices are creased."""
@@ -25134,60 +14222,8 @@ class MMeshSmoothOptions(object):
     def subdivisionType(*args: Any, **kwargs: Any) -> Any:
         """Determines subdivision algorithm used for mesh smoothing."""
 
-class MMessage(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MMessage:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
-    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def currentCallbackId(self: Self, *args: Any, **kwargs: Any) -> Any:
         """currentCallbackId() -> id
 
@@ -25226,59 +14262,7 @@ class MMessage(object):
         """
 
 class MModelMessage(MMessage):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
-    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addAfterDuplicateCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addAfterDuplicateCallback(function, clientData=None) -> id
 
@@ -25342,98 +14326,9 @@ class MModelMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def currentCallbackId(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """currentCallbackId() -> id
 
-        Returns the callback ID of the currently executing callback. If called
-        outside of a callback, an invalid MCallbackId and failed status will
-        be returned.
-        """
-    kActiveListModified: int = ...
-    kDefaultAction: int = ...
-    kDoAction: int = ...
-    kDoNotDoAction: int = ...
-    def nodeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """nodeCallbacks(node) -> ids
-
-        Returns a list of callback IDs registered to a given node.
-
-         * node (MObject) - Node to query for callbacks.
-         * ids (MCallbackIdArray) - Array to store the list of callback IDs.
-        """
-    def removeCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeCallback(id) -> None
-
-        Removes the specified callback from Maya.
-        This method must be called for all callbacks registered by a
-        plug-in before that plug-in is unloaded.
-
-         * id (MCallbackId) - identifier of callback to be removed
-        """
-    def removeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeCallbacks(ids) -> None
-
-        Removes all of the specified callbacks from Maya.
-        This method must be called for all callbacks registered by a
-        plug-in before that plug-in is unloaded.
-
-         * idList (MCallbackIdArray) - list of callbacks to be removed.
-        """
-
-class MNamespace(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MNamespace:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
-    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addNamespace(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addNamespace(MString name, MString parent=None)
 
@@ -25625,60 +14520,12 @@ class MNamespace(object):
         returned string will be empty.
         """
 
-class MNodeCacheDisablingInfo(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MNodeCacheDisablingInfo:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def getCacheDisabled(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getCacheDisabled() -> bool
 
@@ -25705,60 +14552,12 @@ class MNodeCacheDisablingInfo(object):
         Sets the reason for disabling Cached Playback.
         """
 
-class MNodeCacheSetupInfo(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MNodeCacheSetupInfo:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def getPreference(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getPreference(PreferenceFlag) -> bool
 
@@ -25784,60 +14583,16 @@ class MNodeCacheSetupInfo(object):
         Set a requirement flag for this node.
         """
 
-class MNodeClass(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MNodeClass:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addExtensionAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds an extension attribute to the node class. An extension attribute is a class-level attribute which has been added dynamically to a node class. Because it is added at the class level, all nodes of that class will have the given attribute, and will only store the attribute's value if it differs from the default. Returns the type of the object at the end of the path."""
     def attribute(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -25882,59 +14637,7 @@ class MNodeClass(object):
         """Name of the node class. This is the name that is given to the createNode command to create nodes of this type."""
 
 class MNodeMessage(MMessage):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
-    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addAttributeAddedOrRemovedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addAttributeAddedOrRemovedCallback(node, function, clientData=None) -> id
 
@@ -26136,13 +14839,6 @@ class MNodeMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def currentCallbackId(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """currentCallbackId() -> id
-
-        Returns the callback ID of the currently executing callback. If called
-        outside of a callback, an invalid MCallbackId and failed status will
-        be returned.
-        """
     kAttributeAdded: int = ...
     kAttributeArrayAdded: int = ...
     kAttributeArrayRemoved: int = ...
@@ -26154,70 +14850,22 @@ class MNodeMessage(MMessage):
     kAttributeSet: int = ...
     kAttributeUnkeyable: int = ...
     kAttributeUnlocked: int = ...
-    kConnectionBroken: int = ...
-    kConnectionMade: int = ...
-    kDefaultAction: int = ...
-    kDoAction: int = ...
-    kDoNotDoAction: int = ...
     kIncomingDirection: int = ...
-    kKeyChangeInvalid: int = ...
     kKeyChangeLast: int = ...
     kLast: int = ...
-    kMakeKeyable: int = ...
-    kMakeUnkeyable: int = ...
     kOtherPlugSet: int = ...
-    def nodeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """nodeCallbacks(node) -> ids
 
-        Returns a list of callback IDs registered to a given node.
-
-         * node (MObject) - Node to query for callbacks.
-         * ids (MCallbackIdArray) - Array to store the list of callback IDs.
-        """
-    def removeCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeCallback(id) -> None
-
-        Removes the specified callback from Maya.
-        This method must be called for all callbacks registered by a
-        plug-in before that plug-in is unloaded.
-
-         * id (MCallbackId) - identifier of callback to be removed
-        """
-    def removeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeCallbacks(ids) -> None
-
-        Removes all of the specified callbacks from Maya.
-        This method must be called for all callbacks registered by a
-        plug-in before that plug-in is unloaded.
-
-         * idList (MCallbackIdArray) - list of callbacks to be removed.
-        """
-
-class MObject(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MObject:
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
     __hash__: NoneType = ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
     def __lt__(self: Self, value: Any) -> Any:
@@ -26226,26 +14874,6 @@ class MObject(object):
         """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def apiType(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the function set type for the object."""
     @property
@@ -26260,70 +14888,34 @@ class MObject(object):
         """Tests whether there is an internal Maya object."""
     kNullObj: MObject = ...
 
-class MObjectArray(object):
+class MObjectArray:
     def __add__(self: Self, value: Any) -> Any:
         """Return self+value."""
     def __contains__(self: Self, key: Any) -> Any:
         """Return key in self."""
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __iadd__(self: Self, value: Any) -> Any:
         """Implement self+=value."""
     def __imul__(self: Self, value: Any) -> Any:
         """Implement self*=value."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     def __mul__(self: Self, value: Any) -> Any:
         """Return self*value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
     def __rmul__(self: Self, value: Any) -> Any:
         """Return value*self."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -26353,31 +14945,17 @@ class MObjectArray(object):
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
         """Number of elements by which to grow the array when necessary."""
 
-class MObjectHandle(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MObjectHandle:
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
     __hash__: NoneType = ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
     def __lt__(self: Self, value: Any) -> Any:
@@ -26386,26 +14964,6 @@ class MObjectHandle(object):
         """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def assign(self: Self, *args: Any, **kwargs: Any) -> Any:
         """assign(source) -> self
 
@@ -26435,59 +14993,7 @@ class MObjectHandle(object):
         """
 
 class MObjectSetMessage(MMessage):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
-    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addSetMembersModifiedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addSetMembersModifiedCallback(node, function, clientData=None) -> id
 
@@ -26501,97 +15007,13 @@ class MObjectSetMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def currentCallbackId(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """currentCallbackId() -> id
 
-        Returns the callback ID of the currently executing callback. If called
-        outside of a callback, an invalid MCallbackId and failed status will
-        be returned.
-        """
-    kDefaultAction: int = ...
-    kDoAction: int = ...
-    kDoNotDoAction: int = ...
-    def nodeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """nodeCallbacks(node) -> ids
-
-        Returns a list of callback IDs registered to a given node.
-
-         * node (MObject) - Node to query for callbacks.
-         * ids (MCallbackIdArray) - Array to store the list of callback IDs.
-        """
-    def removeCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeCallback(id) -> None
-
-        Removes the specified callback from Maya.
-        This method must be called for all callbacks registered by a
-        plug-in before that plug-in is unloaded.
-
-         * id (MCallbackId) - identifier of callback to be removed
-        """
-    def removeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeCallbacks(ids) -> None
-
-        Removes all of the specified callbacks from Maya.
-        This method must be called for all callbacks registered by a
-        plug-in before that plug-in is unloaded.
-
-         * idList (MCallbackIdArray) - list of callbacks to be removed.
-        """
-
-class MPlane(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MPlane:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def distance(self: Self, *args: Any, **kwargs: Any) -> Any:
         """distance() -> float
 
@@ -26627,31 +15049,17 @@ class MPlane(object):
         * d (float) - The offset of the plane along the normal
         """
 
-class MPlug(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MPlug:
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
     __hash__: NoneType = ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
     def __lt__(self: Self, value: Any) -> Any:
@@ -26660,26 +15068,8 @@ class MPlug(object):
         """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def array(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns a plug for the array of plugs of which this plug is an element."""
     def asBool(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -26930,70 +15320,34 @@ class MPlug(object):
         Note that the behavior of connectedTo() is identical to sourceWithConversion(), that is, do not skip over unit conversion nodes.
         """
 
-class MPlugArray(object):
+class MPlugArray:
     def __add__(self: Self, value: Any) -> Any:
         """Return self+value."""
     def __contains__(self: Self, key: Any) -> Any:
         """Return key in self."""
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __iadd__(self: Self, value: Any) -> Any:
         """Implement self+=value."""
     def __imul__(self: Self, value: Any) -> Any:
         """Implement self*=value."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     def __mul__(self: Self, value: Any) -> Any:
         """Return self*value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
     def __rmul__(self: Self, value: Any) -> Any:
         """Return value*self."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -27023,24 +15377,16 @@ class MPlugArray(object):
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
         """Number of elements by which to grow the array when necessary."""
 
-class MPoint(object):
+class MPoint:
     def __add__(self: Self, value: Any) -> Any:
         """Return self+value."""
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
     def __gt__(self: Self, value: Any) -> Any:
@@ -27052,12 +15398,6 @@ class MPoint(object):
         """Return self*=value."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __isub__(self: Self, value: Any) -> Any:
         """Return self-=value."""
     def __le__(self: Self, value: Any) -> Any:
@@ -27074,10 +15414,6 @@ class MPoint(object):
         """Create and return a new object.  See help(type) for accurate signature."""
     def __radd__(self: Self, value: Any) -> Any:
         """Return value+self."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
     def __rmul__(self: Self, value: Any) -> Any:
@@ -27086,24 +15422,12 @@ class MPoint(object):
         """Return value-self."""
     def __rtruediv__(self: Self, value: Any) -> Any:
         """Return value/self."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __sub__(self: Self, value: Any) -> Any:
         """Return self-value."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __truediv__(self: Self, value: Any) -> Any:
         """Return self/value."""
     def cartesianize(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -27143,70 +15467,34 @@ class MPoint(object):
     def z(*args: Any, **kwargs: Any) -> Any:
         """Z coordinate"""
 
-class MPointArray(object):
+class MPointArray:
     def __add__(self: Self, value: Any) -> Any:
         """Return self+value."""
     def __contains__(self: Self, key: Any) -> Any:
         """Return key in self."""
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __iadd__(self: Self, value: Any) -> Any:
         """Implement self+=value."""
     def __imul__(self: Self, value: Any) -> Any:
         """Implement self*=value."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     def __mul__(self: Self, value: Any) -> Any:
         """Return self*value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
     def __rmul__(self: Self, value: Any) -> Any:
         """Return value*self."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -27236,60 +15524,12 @@ class MPointArray(object):
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
         """Number of elements by which to grow the array when necessary."""
 
-class MPointOnMesh(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MPointOnMesh:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def barycentricCoords(*args: Any, **kwargs: Any) -> Any:
         """(float, float) Tuple containing the barycentric coordinates of the
@@ -27334,59 +15574,7 @@ class MPointOnMesh(object):
         """(int) Face-local index of the triangle containing the point."""
 
 class MPolyMessage(MMessage):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
-    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addPolyComponentIdChangedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addPolyComponentIdChangedCallback(node, (wantVertIds, wantEdgeIds, wantFaceIds), function, clientData=None) -> id
 
@@ -27450,144 +15638,22 @@ class MPolyMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def currentCallbackId(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """currentCallbackId() -> id
 
-        Returns the callback ID of the currently executing callback. If called
-        outside of a callback, an invalid MCallbackId and failed status will
-        be returned.
-        """
-    kDefaultAction: int = ...
-    kDoAction: int = ...
-    kDoNotDoAction: int = ...
-    def nodeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """nodeCallbacks(node) -> ids
-
-        Returns a list of callback IDs registered to a given node.
-
-         * node (MObject) - Node to query for callbacks.
-         * ids (MCallbackIdArray) - Array to store the list of callback IDs.
-        """
-    def removeCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeCallback(id) -> None
-
-        Removes the specified callback from Maya.
-        This method must be called for all callbacks registered by a
-        plug-in before that plug-in is unloaded.
-
-         * id (MCallbackId) - identifier of callback to be removed
-        """
-    def removeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeCallbacks(ids) -> None
-
-        Removes all of the specified callbacks from Maya.
-        This method must be called for all callbacks registered by a
-        plug-in before that plug-in is unloaded.
-
-         * idList (MCallbackIdArray) - list of callbacks to be removed.
-        """
-
-class MPxAttributePatternFactory(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MPxAttributePatternFactory:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
 
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-
-class MPxCommand(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MPxCommand:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -27643,60 +15709,12 @@ class MPxCommand(object):
     def undoIt(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Called by Maya to undo a previously executed command."""
 
-class MPxData(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MPxData:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """copy(src) -> self
 
@@ -27749,67 +15767,11 @@ class MPxData(object):
         """
 
 class MPxGeometryData(MPxData):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """copy(src) -> self
-
-        This method initializes an instance of an MPxData derived class from another existing instance.  This method can be thought of as the second half of a copy constructor for the class.  The default constructor has already been called for the instance, and this method is used to set the private data by copying the values from an existing instance.
-        This method must be implemented by the derived class.
-
-        * src (MPxData) - The object from which to copy the private data
-        """
     def deleteComponent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """deleteComponent(compList) -> bool
 
@@ -27854,38 +15816,12 @@ class MPxGeometryData(MPxData):
         * useComponents (bool) - if True then componentList is to be iterated over, otherwise the iteration is on component.
         * world (bool) - specifies whether the iteration is for world space data.
         """
-    kData: int = ...
-    kGeometryData: int = ...
-    kLast: int = ...
     @property
     def matrix(*args: Any, **kwargs: Any) -> Any:
         """The matrix associated to MPxGeometryData."""
     @matrix.setter
     def matrix(*args: Any, **kwargs: Any) -> Any:
         """The matrix associated to MPxGeometryData."""
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """name() -> string
-
-        Returns the name of the custom data type.
-        This method must be implemented by the derived class.
-        """
-    def readASCII(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """readASCII(argList, endOfTheLastParsedElement) -> int
-
-        Creates Data in Data Block as specified by input from ASCII file record.
-        Returns the new last argument parsed by this method.
-
-        * argList (MArgList) - List of arguments read from ASCII record* endOfTheLastParsedElement (int) - points to last argument already parsed.
-        """
-    def readBinary(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """readBinary(in, length) -> int
-
-        Creates Data in Data Block as specified by binary data from the given stream.
-        Returns the numbers of data bytes processed or -1 in case of error.
-
-        * in (bytearray) - Input stream
-        * length (int) - Length in bytes of binary data to be read.
-        """
     def smartCopy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """smartCopy(srcGeom) -> self
 
@@ -27896,12 +15832,6 @@ class MPxGeometryData(MPxData):
         This method is not mandatory and only needs to be overridden to improve performance of deformations on shapes.
 
         * srcGeom (MPxGeometryData) - the data to be copied
-        """
-    def typeId(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """typeId() -> MTypeId
-
-        Determines the type id of the Data object.
-        This method must be implemented by the derived class.
         """
     def updateCompleteVertexGroup(self: Self, *args: Any, **kwargs: Any) -> Any:
         """updateCompleteVertexGroup(component) -> bool
@@ -27917,75 +15847,17 @@ class MPxGeometryData(MPxData):
 
         * component (MObject) - the component to test
         """
-    def writeASCII(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """writeASCII() -> string
 
-        Encodes Data in accordance with the ASCII file format and returns as string.
-        """
-    def writeBinary(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """writeBinary() -> bytearray
-
-        Encodes Data in accordance with the binary file format and returns as bytearray.
-        """
-
-class MPxGeometryIterator(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MPxGeometryIterator:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __iter__(self: Self) -> Any:
         """Implement iter(self)."""
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
     def __next__(self: Self) -> Any:
         """Implement next(self)."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def component(self: Self, *args: Any, **kwargs: Any) -> Any:
         """component() -> MObject
 
@@ -28085,60 +15957,12 @@ class MPxGeometryIterator(object):
         * point (MPoint) - the positional value to set.
         """
 
-class MPxNode(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MPxNode:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addAttribute(attr) -> None
 
@@ -28727,59 +16551,10 @@ class MPxNode(object):
         """
 
 class MPxSurfaceShape(MPxNode):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
-    __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def acceptsGeometryIterator(self: Self, *args: Any, **kwargs: Any) -> Any:
         """acceptsGeometryIterator(component, writeable=True, forReadOnly=False) -> bool
         acceptsGeometryIterator(writeable=True) -> boolboundingBox() -> MBoundingBox
@@ -28795,42 +16570,6 @@ class MPxSurfaceShape(MPxNode):
         """activeComponents() -> MObjectArray
 
         Returns a list of active (selected) components for the shape.
-        """
-    def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """addAttribute(attr) -> None
-
-        This method adds a new attribute to a user defined node type during the type's initialization.
-
-        This method will only work during the static initialization method of the user defined node class.  The initialization method is the one that is passed into  MFnPlugin.registerNode(). The attributes must first be created using one of the MFnAttribute classes, and can then be added using this method.
-
-        For compound attributes, the proper way to use this method is by calling it with the parent attribute. If a compound attribute is passed, this method will add all of its children.
-        NOTE: A failure will occur if you attempt to call addAttribute() on the children of a compound attribute.
-
-        * attr (MObject) - new attribute to add.
-        """
-    def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """addExternalContentForFileAttr(table, attr) -> bool
-
-        This method is a helper for derived clases implementing getExternalContent().  It augments the external content info table passed in with an entry describing external content whose location is described by the specified attribute.
-
-        The method will not overwrite existing items, i.e. items with the same key. (attribute name).  In this context, overwriting an item means the caller has called this function twice with the same attribute, or that two separate but identically named attributes were used.  If replacing an entry is the desired effect, it is the caller's responsibility to erase the previous item first.
-
-        * table [OUT] (MExternalContentInfoTable) - table The table in which the new entry will be added.
-        * attr (MObject) - The attribute for which the plug value will be queried for a location.
-
-        Returns True if an item was sucessfully added to the table.  False if the attribute does not describe a non-empty location, or an item with the same key was already present in the table.
-        """
-    def attributeAffects(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """attributeAffects(whenChanges, isAffected) -> None
-
-        This method specifies that a particular input attribute affects a specific output attribute.  This is required to make evaluation efficient.  When an input changes, only the affected outputs will be computed. Output attributes cannot be keyable - if they are keyable, this method will fail.
-
-        This method must be called for every attribute dependency when initializing the node's attributes.  The attributes must first be added using the MPxNode.addAttribute() method.  Failing to call this method will cause the node not to update when its inputs change. If there are no calls to this method in a node's initialization, then the compute method will never be called.
-
-        This method will only work during the static initialization method of the user defined node class.  The initialization method is the one that is passed into MFnPlugin.registerNode().  As a result, it does not work with dynamic attributes. For an alternate solution which handles dynamic as well as non-dynamic attributes refer to MPxNode.setDependentsDirty.()
-
-        * whenChanges (MObject) - input attribute - MObject that points to an input attribute that has already been added.
-        * isAffected (MObject) - affected output attribute - MObject that points to an output attribute that has already been added.
         """
     def boundingBox(self: Self, *args: Any, **kwargs: Any) -> Any:
         """boundingBox() -> MBoundingBox
@@ -28906,52 +16645,6 @@ class MPxSurfaceShape(MPxNode):
         * component (MObject) - the component to be converted
         * list (MSelectionList) - a selection list where the plug should be added
         """
-    def compute(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """compute(plug, dataBlock) -> self
-
-        This method should be overridden in user defined nodes.
-
-        Recompute the given output based on the nodes inputs.  The plug represents the data value that needs to be recomputed, and the data block holds the storage for all of the node's attributes.
-
-        The MDataBlock will provide smart handles for reading and writing this node's attribute values.  Only these values should be used when performing computations.
-
-        When evaluating the dependency graph, Maya will first call the compute method for this node.  If the plug that is provided to the compute indicates that that the attribute was defined by the Maya parent node, the compute method should return None.  When this occurs, Maya will call the internal Maya node from which the user-defined node is derived to compute the plug's value. Returning any othervalue (including self) will tell Maya that this node successfully computed theplug. Raising an exception will tell Maya that this node failed at computingthe plug. Note that in most cases, Maya ignores node compute failures.
-
-        In other words, the compute method should return None to get the Maya parent class to compute the plug. It should return self (or any other value) to indicate that the plug was computed successfully.
-
-        This means that a user defined node does not need to be concerned with computing inherited output attributes.  However, if desired, these can be safely recomputed by this method to change the behaviour of the node.
-
-        * plug (MPlug) - plug representing the attribute that needs to be recomputed.
-        * block (MDataBlock) - data block containing storage for the node's attributes.
-        """
-    def configCache(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """configCache(evalNode, schema) -> None
-
-        Defines the node's behavior when participating in Cached Playback.
-
-        This method will be called at EM partitioning time, after rules evaluation.
-
-        * evalNode (MEvaluationNode)  - This node's evaluation node, contains animated plug information
-        * schema (MCacheSchema)       - Specification about what attributes to cache
-        """
-    def connectionBroken(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """connectionBroken( plug, otherPlug, asSrc) -> self
-
-        This method gets called when connections are broken with attributes of this node.
-
-        * plug (MPlug) - attribute on this node.
-        * otherPlug (MPlug) - attribute on other node.
-        * asSrc (bool) - is this plug a source of the connection.
-        """
-    def connectionMade(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """connectionMade(plug, otherPlug, asSrc) -> self
-
-        This method gets called when connections are made to attributes of this node.
-
-        * plug (MPlug) - attribute on this node.
-        * otherPlug (MPlug) - attribute on other node.
-        * asSrc (bool) - is this plug a source of the connection.
-        """
     def convertToTweakNodePlug(self: Self, *args: Any, **kwargs: Any) -> Any:
         """convertToTweakNodePlug(plug) -> bool
 
@@ -28959,15 +16652,6 @@ class MPxSurfaceShape(MPxNode):
         Returns True if a tweak node was found, False if the plug was unchanged
 
         * plug (MPlug) - plug which will be set to point to the associated tweak node plug if a tweak node is connected
-        """
-    def copyInternalData(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """copyInternalData(node) -> self
-
-        This method is overriden by nodes that store attribute data in some internal format.
-
-        On duplication this method is called on the duplicated node with the node being duplicated passed as the parameter.  Overriding this method gives your node a chance to duplicate any internal data you've been storing and manipulating outside of normal attribute data.
-
-        * node (MPxNode) - the node that is being duplicated.
         """
     def createFullRenderGroup(self: Self, *args: Any, **kwargs: Any) -> Any:
         """createFullRenderGroup() -> MObject
@@ -28994,63 +16678,12 @@ class MPxSurfaceShape(MPxNode):
         * componentList (MObjectArray) - List of components to be deleted
         * undoInfo (MDoubleArray) - Values used for undo purposes
         """
-    def dependsOn(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """dependsOn( plug, otherPlug) -> bool/None
-
-        This method may be overridden by the user defined node. It should only be required to override this on rare occasions.
-
-        This method determines whether a specific attribute depends on another attribute.
-
-        You should return None to specify that Maya should determines the dependency (default).
-
-        This is mainly to define dependency of dynamic attributes, since attributeAffects does not work with dynamic attributes.
-
-        * plug (MPlug) - attribute on this node.
-        * otherPlug (MPlug) - attribute on other node.
-        """
-    def doNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """doNotWrite() -> bool
-
-        use this method to query the "do not write" state of this proxy node. True is returned if this node will not be saved when the maya model is written out.
-        """
     def excludeAsPluginShape(self: Self, *args: Any, **kwargs: Any) -> Any:
         """excludeAsPluginShape() -> bool
 
         A Maya viewport can be set to not display "Plugin Shapes", which means shapes derived from MPxSurfaceShape. By overriding excludeAsPluginShape() to return False, you can change that behaviour so that this shape is still displayed even when the display of "Plugin Shapes" is disabled.
         The default implementation returns True.
         Returns True to have this shape obey the "Plugin Shapes" settings in the viewport's "Show" menu; False to have it ignore that setting.
-        """
-    def existWithoutInConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """existWithoutInConnections() -> bool
-
-        Determines whether or not this node can exist without input connections.
-
-        If a node connected to this node is deleted resulting in no more input
-        connections and if this flag is false, then this node will be deleted.
-
-        Do not override this method.
-
-        Returns true if this node can exist without input connections, false otherwise
-        """
-    def existWithoutOutConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """existWithoutOutConnections() -> bool
-
-        Determines whether or not this node can exist without output connections.
-
-        If a node connected to this node is deleted resulting in no more output
-        connections and if this flag is false, then this node will be deleted.
-
-        Do not override this method.
-
-        Returns true if this node can exist without output connections, false otherwise
-        """
-    def forceCache(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """forceCache(ctx=MDGContext::current()) -> MDataBlock
-
-        Get the datablock for this node. If there is no datablock then one will be created.
-        NOTE: This should be used only in places where fast access to the datablock outside of a compute is critical such as the transformUsing method of MPxSurfaceShape.
-
-        * ctx (MDGContext) - The context in which the datablock will be retrieved.
         """
     def geometryData(self: Self, *args: Any, **kwargs: Any) -> Any:
         """geometryData() -> MObject
@@ -29072,82 +16705,11 @@ class MPxSurfaceShape(MPxNode):
         * components (MObject) - the components to be iterated over
         * forReadOnly (bool) - specifies whether the iterator is for read-only
         """
-    def getCacheSetup(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getCacheSetup(evalNode, disablingInfo, setupInfo, objectArray) -> None
-
-        Provide node-specific setup info for the Cached Playback system.
-
-        This method will be called at EM partitioning time.  It works in one of two ways.
-        - It can state that the node supports Cached Playback and background evaluation.  In this case it can use the cacheSetupInfo to configure preferences and requirements
-        - It can state that this node cannot work with Cached Playback enabled and will  therefore cause Cached Playback to be disabled.  In this case it can use the disablingInfo to provide additional info about why Cached Playback is disabled.
-
-        In case the answer depends on the value of attributes (for example, a node can have multiple modes, some of them working with caching and some of them not), the node can add the attributes to the monitored attribute list so they can be monitored in case the value changes.
-
-        By default, this method states that Cached Playback is supported, but does not request to be cached by default.
-
-        Note that regardless of the preferences expressed by a node, Caching Rules can always override the preferences from this method.  Caching Rules always have the last world.  This method simply indicates the built-in Evaluation Cache rule used by Maya's default Caching Modes that this node is to be cached.  Other rules can ignore or override this behavior.
-
-        * evalNode (MEvaluationNode)              - This node's evaluation node, contains animated plug information
-        * disablingInfo (MNodeCacheDisablingInfo) - Information about why the node disables Cached Playback to be reported to the user
-        * cacheSetupInfo (MNodeCacheSetupInfo)    - Preferences and requirements this node has for Cached Playback
-        * monitoredAttributes (MObjectArray)      - Attributes impacting the behavior of this method that will be monitored for change
-        """
     def getComponentSelectionMask(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getComponentSelectionMask() -> MSelectionMask
 
         Returns the selection mask of the shape.
         This routine must be overridden if the shape is to support interactive component selection in Viewport 2.0 and should provide information about the selection mask of the shape component.
-        """
-    def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getExternalContent(table) -> self
-
-        The table populated by this method must include the location of all the content (files) used by this node, including those that do not exist.  See MExternalContentInfoTable for details.
-
-        Keys used to add items to this table will be the same that get passed to setExternalContent through its MExternalContentLocationTable parameter to perform a batched change of content location.
-
-        When implementing getExternalContent, you are responsible for forwarding the call to the base class when it makes sense to do so, so that base classes  can also add their external content to the table.
-
-        The default implementation does nothing.
-
-        * table [OUT] (MExternalContentInfoTable) - Content information table that this method must populate.
-        """
-    def getFilesToArchive(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getFilesToArchive(shortName=False, unresolvedName=False, markCouldBeImageSequence=False) -> list of strings
-
-        Use this method to return all external files used by this node. This file list will be used by the File > Archive zip feature, maya.exe -archive and the `file -q -list` mel command.
-
-        Only include files that exist.
-
-        If shortName is True, return just the filename portion of the path. Otherwise, return a full path.
-
-        If unresolvedName is True, return the path before any resolution has been done (i.e leave it as a relative path, include unexpanded environment variables,  tildes, ".."s etc). Otherwise, resolve the file	path and return an absolute path (to resolve with standard Maya path resolution, use MFileObject.resolvedFullName()).
-
-        * shortName (bool) - If True, only add the filename of the path.
-        * unresolvedName (bool) - If True, add paths before any resolution, rather than absolute paths.
-        * markCouldBeImageSequence (bool) - If True, append an asterisk after any file path that could be an image sequence (note: only used by maya.exe -archive).
-        """
-    def getInternalValue(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getInternalValue(plug, dataHandle) -> bool
-
-        This method is overridden by nodes that store attribute data in some internal format.
-
-        The internal state of attributes can be set or queried using the setInternal and internal methods of MFnAttribute.
-
-        When internal attribute values are queried via getAttr or MPlug.getValue() this method is called.
-
-        All internal data should respect the current context, which may be obtained from MDGContext::current()
-
-        * plug (MPlug) - the attribute that is being queried.
-        * dataHandle [OUT] (MDataHandle) - the dataHandle to store the attribute value.
-        """
-    def getInternalValueInContext(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getInternalValueInContext(plug, dataHandle, ctx) -> bool [OBSOLETE]
-
-        This method is obsolete. Override MPxNode.getInternalValue instead.
-
-        * plug (MPlug) - the attribute that is being queried.
-        * dataHandle [OUT] (MDataHandle) - the dataHandle to store the attribute value.
-        * ctx (MDGContext) - the context the method is being evaluated in.
         """
     def getShapeSelectionMask(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getShapeSelectionMask() -> MSelectionMask
@@ -29168,61 +16730,14 @@ class MPxSurfaceShape(MPxNode):
 
         This method is used to determine whether or not the shape has active (selected) components.
         """
-    def hasInvalidationRangeTransformation(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """hasInvalidationRangeTransformation() -> bool
-
-        Checks if this MPxNode derived node overrides the MPxNode::transformInvalidationRange method
-        """
-    def inheritAttributesFrom(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """inheritAttributesFrom(parentClassName) -> None
-
-        This method allows a class of plugin node to inherit all of the attributes of a second class of plugin node.
-
-        This method will only work during the static initialization method of the user defined node class and must be called before any other attributes have been added.  The initialization method is the one that is passed into  MFnPlugin.registerNode().
-
-        A plugin node may only inherit attributes from one other class of plugin node. Attempting to call this method multiple times within a node's initialization method will result in an error.
-
-        Both node classes must be registered using the same MPxNode type, listed in MPxNode.type().
-
-        * parentClassName (string) - class of node to inherit attributes from.
-        """
     instObjGroups: MObject = ...
     intermediateObject: MObject = ...
-    def internalArrayCount(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """internalArrayCount(plug) -> int
-        internalArrayCount(plug, ctx) -> int  [OBSOLETE]
-
-        This method is overridden by nodes that have internal array attributes which are not stored in Maya's datablock. This method is used by Maya to determine the non-sparse count of array elements during file IO. If the internal array is stored sparsely, you should return the maximum index of the array plus one. If the internal array is non-sparse then return the length of the array.
-
-        This method does not need to be implemented for attributes that are stored in the datablock since Maya will use the datablock size.
-
-        If this method is overridden, it should return -1 for attributes which it does not handle. Maya will use the datablock size to determine the array length when -1 is returned.
-
-        All internal data should respect the current context, which may be obtained from MDGContext.current()
-
-        * plug (MPlug) - the array plug.
-        * ctx (MDGContext) - the context, default to MDGContext.current().
-        """
     inverseMatrix: MObject = ...
-    def isAbstractClass(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """isAbstractClass() -> bool
-
-        Override this class to return True if this node is an abstract node. An abstract node can only be used as a base class.  It cannot be created using the 'createNode' command.
-
-        It is not necessary to override this method.
-        """
     def isBounded(self: Self, *args: Any, **kwargs: Any) -> Any:
         """isBounded() -> bool
 
         This method should be overridden to return True if the user supplies a bounding box routine.  Supplying a bounding box routine makes refresh and selection more efficient.
         Returns a boolean value indicating whether a bounding box routine has been supplied
-        """
-    def isPassiveOutput(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """isPassiveOutput(plug) -> bool
-
-        This method may be overridden by the user defined node if it wants to provide output attributes which do not prevent value modifications to the destination attribute. For example, output plugs on animation curve nodes are passive. This allows the attributes driven by the animation curves to be set to new values by the user.
-
-        * plug (MPlug) - plug representing output in question.
         """
     @property
     def isRenderable(*args: Any, **kwargs: Any) -> Any:
@@ -29235,78 +16750,6 @@ class MPxSurfaceShape(MPxNode):
         Making a shape renderable allows the shape to have shading group assignments.
         """
     isTemplated: MObject = ...
-    kAssembly: int = ...
-    kBlendShape: int = ...
-    kBoundingBoxChanged: int = ...
-    kCameraSetNode: int = ...
-    kClientDeviceNode: int = ...
-    kConstraintNode: int = ...
-    kDeformerNode: int = ...
-    kDependNode: int = ...
-    kEmitterNode: int = ...
-    kEvaluatedDirectly: int = ...
-    kEvaluatedIndirectly: int = ...
-    kFieldNode: int = ...
-    kFluidEmitterNode: int = ...
-    kGeometryFilter: int = ...
-    kHardwareShader: int = ...
-    kHwShaderNode: int = ...
-    kIkSolverNode: int = ...
-    kImagePlaneNode: int = ...
-    kLast: int = ...
-    kLeaveDirty: int = ...
-    kLocatorNode: int = ...
-    kManipContainer: int = ...
-    kManipulatorNode: int = ...
-    kMatchInvalidAttribute: int = ...
-    kMatchInvalidAttributeDim: int = ...
-    kMatchInvalidAttributeIndex: int = ...
-    kMatchInvalidAttributeRange: int = ...
-    kMatchInvalidName: int = ...
-    kMatchNone: int = ...
-    kMatchOk: int = ...
-    kMatchTooMany: int = ...
-    kMotionPathNode: int = ...
-    kNoPointCaching: int = ...
-    kNormal: int = ...
-    kObjectChanged: int = ...
-    kObjectSet: int = ...
-    kParticleAttributeMapperNode: int = ...
-    kPostEvaluationTypeLast: int = ...
-    kRestorePoints: int = ...
-    kSavePoints: int = ...
-    kSkinCluster: int = ...
-    kSpringNode: int = ...
-    kSurfaceShape: int = ...
-    kThreadedDeviceNode: int = ...
-    kTransformNode: int = ...
-    kTransformOriginalPoints: int = ...
-    kUTangent: int = ...
-    kUVNTriad: int = ...
-    kUpdatePoints: int = ...
-    kVTangent: int = ...
-    def legalConnection(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """legalConnection(plug, otherPlug, asSrc) -> bool/None
-
-        This method allows you to check for legal connections being made to attributes of this node.
-
-        You should return None to specify that maya should handle this connection if you are unable to determine if it is legal.
-
-        * plug (MPlug) - attribute on this node.
-        * otherPlug (MPlug) - attribute on other node.
-        * asSrc (bool) - is this plug a source of the connection.
-        """
-    def legalDisconnection(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """legalDisconnection(plug, otherPlug, arsSrc) -> bool/None
-
-        This method allows you to check for legal disconnections being made to attributes of this node.
-
-        You should return None to specify that maya should handle this disconnection if you are unable to determine if it is legal.
-
-        * plug (MPlug) - attribute on this node.
-        * otherPlug (MPlug) - attribute on other node.
-        * asSrc (boool) - is this plug a source of the connection.
-        """
     def localShapeInAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
         """localShapeInAttr() -> MObject
 
@@ -29358,15 +16801,6 @@ class MPxSurfaceShape(MPxNode):
           kMatchInvalidAttributeDim      The attribute specification provided the wrong number of dimensions for an attribute.
         """
     matrix: MObject = ...
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """name() -> string
-
-        Returns the name of this particular instance of this class.  Each objectin the dependency graph has a name.  This name will be used by the UIand by MEL.
-
-        It is not necessary to override this method.
-
-        Returns the name of the node
-        """
     def newControlPointComponent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """newControlPointComponent() -> MObject
 
@@ -29393,27 +16827,6 @@ class MPxSurfaceShape(MPxNode):
     objectGrpCompList: MObject = ...
     parentInverseMatrix: MObject = ...
     parentMatrix: MObject = ...
-    def passThroughToMany(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """passThroughToMany(plug, plugArray) -> bool
-
-        This method is overriden by nodes that want to control the traversal behavior of some Maya search algorithms which traverse the history/future of shape nodes looking for directly related nodes. In particular, the Artisan paint code uses this method when searching for paintable nodes, and the disk cache code uses this method when searching for upstream cacheFile nodes.
-
-        If this method is not implemented or returns False, the base class Maya implementation of this method calls passThroughToOne and returns the results of that call.
-
-        * plug (MPlug) - the plug.
-        * plugArray (MPlugArray) - the corresponding plugs.
-        """
-    def passThroughToOne(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """passThroughToOne(plug) -> plug
-
-        This method may be overriden by nodes that have a one-to-one relationship between an input attribute and a corresponding output attribute. This method is used by Maya to perform the following capabilities:
-
-        - When this node is deleted, the delete command will rewire the source of the input attribute to the destination of the output attribute if the source and destination are connected to nodes that are not deleted.
-        - History traversal algorithms such as the bakePartialHistory command use this method to direct its traversal through a shape's construction history.
-        - The base class Maya implementation of passThroughToAll will call this method if passThroughToAll returns False.
-
-        * plug (MPlug) - the plug.
-        """
     def pointAtParm(self: Self, *args: Any, **kwargs: Any) -> Any:
         """pointAtParm(atThisParm, evaluatedPoint) -> bool
 
@@ -29423,61 +16836,6 @@ class MPxSurfaceShape(MPxNode):
         * atThisParm (MPoint) - the parameter to check
         * evaluatedPoint [OUT] (MPoint) - the surface point
         """
-    def postConstructor(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """postConstructor() -> self
-
-        Internally maya creates two objects when a user defined node is created, the internal MObject and the user derived object.
-        The association between the these two objects is not made until after the MPxNode constructor is called. This implies that no MPxNode member function can be called from the MPxNode constructor.
-        The postConstructor will get called immediately after the constructor when it is safe to call any MPxNode member function.
-        """
-    def postEvaluation(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """postEvaluation(context, evalNode, evalType) -> None
-
-        Clean up node's internal state after threaded evaluation.
-
-        After the evaluation graph execution, each node gets a chance to restore / update its internal states.For example, resetting draw state.
-
-        This code has to be thread safe, non - blocking and work only on data owned by the node.
-
-        This call will most likely happen from a worker thread.
-
-        * context (MDGContext) - Context in which the evaluation is happening.
-                                 This should be respected and only internal state
-                                 information pertaining to it should be modified.
-        * evaluationNode (MEvaluationNode) - Evaluation node which contains
-                                             information about the dirty plugs the
-                                             dirty plugs that were evaluated for this
-                                             context.
-        * evalType (PostEvaluationType)
-          * kEvaluatedIndirectly : The node's compute function handled evaluation.
-          * kEvaluatedDirectly   : Evaluation was performed externally and the results injected
-                                   back into the node.  This would happen in situations such as
-                                   extracting values from an external cache.The node needs to
-                                   update any additional internal state based on the new values.
-          * kLeaveDirty          : Evaluation was performed without updating this node. Internal
-                                   state should be updated to reflect that the node is dirty.
-        """
-    def preEvaluation(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """preEvaluation(context, evalNode) -> None
-
-        Prepare a node's internal state for threaded evaluation.
-
-        During the evaluation graph execution each node gets a chance to reset its internal states just before being evaluated.
-
-        This code has to be thread safe, non - blocking and work only on data owned by the node.
-
-        The timing of this callback is at the discretion of evaluation graph dependencies and individual evaluators.This means, it should be used purely to prepare this node for evaluation and no particular order should be assumed.
-
-        This call will most likely happen from a worker thread.
-
-        * context (MDGContext) - Context in which the evaluation is happening.
-                                 This should be respected and only internal state
-                                 information pertaining to it should be modified.
-        * evaluationNode (MEvaluationNode) - Evaluation node which contains
-                                             information about the dirty plugs that
-                                             are about to be evaluated for the context.
-                                             Should be only used to query information.
-        """
     def renderGroupComponentType(self: Self, *args: Any, **kwargs: Any) -> Any:
         """renderGroupComponentType() -> int
 
@@ -29485,151 +16843,6 @@ class MPxSurfaceShape(MPxNode):
 
         Returns the type of renderable components for this shape.
         See MFnSet.addMember()
-        """
-    def setDependentsDirty(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """setDependentsDirty(plug, plugArray) -> self
-
-        This method can be overridden in user defined nodes to specify which plugs should be set dirty based upon an input plug which Maya is marking dirty. The list of plugs for Maya to mark dirty is returned by the plug array. This method handles both dynamic as well as non-dynamic plugs and is useful in the following ways:
-
-
-
-        - Allows attributeAffects-style relationships to be handled for dynamically-added attributes. Since MPxNode.attributeAffects() can only be used with non-dynamic attributes, use of this method allows a way for all attributes of a node to affect one another, both dynamic and non-dynamic.
-
-        - Provides more flexible relationships than what is available with MPxNode.attributeAffects(). For example, you may wish to not dirty plugs when the current frame is one. However, as the routine is called during dirty propagation, there are restrictions on what can be done within the routine, most importantly you must not cause any dependency graph computation. For details, see the IMPORTANT NOTE below.
-
-
-
-        This method is designed to work harmoniously with MPxNode.attributeAffects() on the same node. Alternately, you can do all affects relationships within a yourNode.setDependentsDirty() implementation.
-
-        The body of a user-implemented setDependentsDirty() implementation might look like the following example, which causes the plug called "B" to be set dirty whever plug "A" is changed, i.e. A affects B.
-
-        * plug (MPlug) - plug which is being set dirty by Maya.
-        * plugArray the programmer should add any plugs which they want to set dirty to this list.
-        """
-    def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """setDoNotWrite(bool) -> self
-
-        Use this method to mark the "do not write" state of this proxy node.  If set, this node will not be saved when the Maya model is written out. 
-
-        NOTES:
-        1. Plug-in "requires" information will be written out with the model when saved.  But a subsequent reload and resave of the file will cause these to go away.
-        2. If this node is a DAG and has a parent or children, the "do not write" flag of the parent or children will not be set. It is the developer's responsibility to ensure that the resulting scene file is capable of being read in without errors due to unwritten nodes.
-        """
-    def setExistWithoutInConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """setExistWithoutInConnections(bool) -> bool
-
-        This method specifies whether or not the node can exist without input
-        connections.
-
-        If a node connected to this node is deleted resulting in no more input
-        connections and if this flag is false, then this node will be deleted.
-
-        Do not override this method.
-
-        * flag (bool) true if this node can exist without input connections, false otherwise
-        """
-    def setExistWithoutOutConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """setExistWithoutOutConnections(bool) -> bool
-
-        This method specifies whether or not the node can exist without
-        output connections.
-
-        If a node connected to this node is deleted resulting in no more output
-        connections and if this flag is false, then this node will be deleted.
-
-        Do not override this method.
-
-        * flag (bool) true if this node can exist without output connections, false otherwise
-        """
-    def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """setExternalContent(table) -> self
-
-        This is useful in the context of content relocation.  This will be called while the scene is being loaded to apply path changes performed externally. Consequently, interaction with the rest of the scene must be kept to a minimum.  It is however valid to call this method outside of scene loading contexts.
-
-        The keys in the map must be the same as the ones provided by the node in getExternalContent.  The values are the new locations.
-
-        When implementing setExternalContent, you are responsible for forwarding the call to the base class when it makes sense to do so, so that base classes  can also set their external content.
-
-        The default implementation does nothing.
-
-        * table Key->location table with new content locations.
-        """
-    def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """setExternalContentForFileAttr(attr, table) -> bool
-
-        This method is a helper for derived clases implementing setExternalContent().  It assigns a value to a plug with the one from the table whose key is the same as the passed in attribute name.
-
-        The method will not write to the plug if the attribute is not found in the  table.
-
-        * attr (MObject) - The attribute of the plug we want to write to.
-        * table (MExternalContentLocationTable) - A table which may hold or not the value for a given plug.
-
-        Returns True if the plug was successfully written to. False if no entry in the table was named after the attribute or if no plug was found.
-        """
-    def setInternalValue(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """setInternalValue(plug, dataHandle) -> bool
-
-
-        This method is overriden by nodes that store attribute data in some internal format.
-
-        The internal state of attributes can be set or queried using the setInternal and internal methods of MFnAttribute.
-
-        When internal attribute values are set via setAttr or MPlug.setValue() this method is called.
-
-        Another use for this method is to impose attribute limits.
-
-        All internal data should respect the current context, which may be obtained from MDGContext::current()
-
-        * plug (MPlug) - the attribute that is being set.
-        * dataHandle (MDataHandle) - the dataHandle containing the value to set.
-        """
-    def setInternalValueInContext(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """setInternalValueInContext(plug, dataHandle, ctx) -> bool  [OBSOLETE]
-
-        This method is obsolete. Override MPxNode.setInternalValue instead.
-
-        * plug (MPlug) - the attribute that is being set.
-        * dataHandle (MDataHandle) - the dataHandle containing the value to set.
-        * ctx (MDGContext) - the context the method is being evaluated in.
-        """
-    def setMPSafe(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """setMPSafe(bool) -> self
-
-        This method is obsolete. Override MPxNode.setSchedulingType instead.
-
-        Set a flag to specify if a user defined shading node is safe for multi-processor rendering. For a shading node to be MP safe, it cannot access any shared global data and should only use attributes in the datablock to get input data and store output data. 
-
-        NOTE: This should be called from the postConstructor() method for shading node plug-ins only. If a shading node is non-safe, then it will only be useful during single processor rendering.
-        """
-    def shouldSave(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """shouldSave(plug) -> bool/None
-
-        This method may be overridden by the user defined node.  It should only be required to override this on rare occasions.
-
-        This method determines whether a specific attribute of this node should be written out during a file save.  The default behavior is to only write the value if it differs from the default and is not being supplied by a connection.  This behavior should be sufficient in most cases.
-        This method is not called for ramp attributes since they should always be written.
-
-        * plug (MPlug) - plug representing the attribute to be saved.
-        """
-    def thisMObject(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """thisMObject() -> MObject
-
-        Returns the MObject associated with this user defined node.  This makes it possible to use MFnDependencyNode or to construct plugs to this node's attributes.
-        """
-    def transformInvalidationRange(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """transformInvalidationRange(plug, timeRange) -> timeRange
-
-        Override this method to register this node as an Invalidation-Range-Transformation kernel (IRT kernel) An IRT kernel node will change the invalidation time range for its downstream nodes For example, Dynamics-solver will transform invalidation time range [a,b] to [a,+inf) And Clip-Time-Editor will send out the invalidation range for each of the clip [a,b] to ( [t0+a,t0+b] U [t1+a,t1+b] U [t2+a,t2+b] U ... ) 
-
-        * source (MPlug)     - The source plug in this node where the dirty propagation comes from
-        * input (MTimeRange) - The incoming invalidation range
-
-
-        Returns The output invalidation range for all the dependents of plug 'source'
-
-        WARNING: You cannot do any evaluation in this function, because it can be called in dirty-propagation
-        WARNING: Do *not* call MPxNode::transformInvalidationRange from your override method
-        NOTE: If a plugin node have invalidation-range-transformation *conditionally* Only transform the invalidation range when attribute 'enableIRT' is set The plugin should call MPxNode::transformInvalidationRange to signal it does not perform any IRT.
         """
     def transformUsing(self: Self, *args: Any, **kwargs: Any) -> Any:
         """transformUsing(matrix, componentList, cachingMode=None, pointCache=None) -> self
@@ -29662,49 +16875,6 @@ class MPxSurfaceShape(MPxNode):
         * handle (MArrayDataHandle) - array data handle where the tweaks are stored
 
         See transformUsing() for a list of valid caching mode
-        """
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """type() -> int
-
-        Returns the type of node that this is.  This is used to differentiate user defined nodes that are derived off different MPx base classes.
-
-        It is not necessary to override this method.
-
-          kDependNode                    Custom node derived from MPxNode
-          kLocatorNode                   Custom locator derived from MPxLocatorNode
-          kDeformerNode                  Custom deformer derived from MPxDeformerNode
-          kManipContainer                Custom container derived from MPxManipContainer
-          kSurfaceShape                  Custom shape derived from MPxSurfaceShape
-          kFieldNode                     Custom field derived from MPxFieldNode
-          kEmitterNode                   Custom emitter derived from MPxEmitterNode
-          kSpringNode                    Custom spring derived from MPxSpringNode
-          kIkSolverNode                  Custom IK solver derived from MPxIkSolverNode
-          kHardwareShader                Custom shader derived from MPxHardwareShader
-          kHwShaderNode                  Custom shader derived from MPxHwShaderNode
-          kTransformNode                 Custom transform derived from MPxTransform
-          kObjectSet                     Custom set derived from MPxObjectSet
-          kFluidEmitterNode              Custom fluid emitter derived from MpxFluidEmitterNode
-          kImagePlaneNode                Custom image plane derived from MPxImagePlane
-          kParticleAttributeMapperNode   Custom particle attribute mapper derived from MPxParticleAttributeMapperNode
-          kCameraSetNode                 Custom director derived from MPxCameraSet
-          kConstraintNode                Custom constraint derived from MPxConstraint
-          kManipulatorNode               Custom manipulator derived from MPxManipulatorNode
-          kClientDeviceNode              Custom threaded device derived from MPxThreadedDeviceNode
-          kThreadedDeviceNode            Custom threaded device node
-          kAssembly                      Custom assembly derived from MPxAssembly
-          kSkinCluster					Custom deformer derived from MPxSkinCluster
-          kGeometryFilter				Custom deformer derived from MPxGeometryFilter
-        	 kBlendShape					Custom deformer derived from MPxBlendShape
-        """
-    def typeId(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """typeId() -> MTypeId
-
-        Returns the TYPEID of this node.
-        """
-    def typeName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """typeName() -> string
-
-        Returns the type name of this node.  The type name identifies the node type to the ASCII file format
         """
     def undeleteComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
         """undeleteComponents(componentList, undoInfo) -> bool
@@ -29783,24 +16953,16 @@ class MPxSurfaceShape(MPxNode):
         This method must be overridden if the shape is to support deformers.
         """
 
-class MQuaternion(object):
+class MQuaternion:
     def __add__(self: Self, value: Any) -> Any:
         """Return self+value."""
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
     def __gt__(self: Self, value: Any) -> Any:
@@ -29810,12 +16972,6 @@ class MQuaternion(object):
         """Return self*=value."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
     def __len__(self: Self) -> Any:
@@ -29832,22 +16988,14 @@ class MQuaternion(object):
         """Create and return a new object.  See help(type) for accurate signature."""
     def __radd__(self: Self, value: Any) -> Any:
         """Return value+self."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
     def __rmul__(self: Self, value: Any) -> Any:
         """Return value*self."""
     def __rsub__(self: Self, value: Any) -> Any:
         """Return value-self."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __sub__(self: Self, value: Any) -> Any:
@@ -29927,60 +17075,12 @@ class MQuaternion(object):
     def z(*args: Any, **kwargs: Any) -> Any:
         """Imaginary Z component"""
 
-class MRampAttribute(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MRampAttribute:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addEntries(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Adds entries to the ramp."""
     def createColorRamp(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -30028,60 +17128,12 @@ class MRampAttribute(object):
     def sort(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Sort the ramp by position. Indices are also re-ordered during sort."""
 
-class MRichSelection(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MRichSelection:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
         """clear() -> self
 
@@ -30129,59 +17181,7 @@ class MRichSelection(object):
         """
 
 class MSceneMessage(MMessage):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
-    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addCallback(message, function, clientData=None) -> id
 
@@ -30403,13 +17403,6 @@ class MSceneMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def currentCallbackId(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """currentCallbackId() -> id
-
-        Returns the callback ID of the currently executing callback. If called
-        outside of a callback, an invalid MCallbackId and failed status will
-        be returned.
-        """
     kAfterCreateReference: int = ...
     kAfterCreateReferenceAndRecordEdits: int = ...
     kAfterExport: int = ...
@@ -30419,7 +17412,6 @@ class MSceneMessage(MMessage):
     kAfterImportReference: int = ...
     kAfterLoadReference: int = ...
     kAfterLoadReferenceAndRecordEdits: int = ...
-    kAfterNew: int = ...
     kAfterOpen: int = ...
     kAfterPluginLoad: int = ...
     kAfterPluginUnload: int = ...
@@ -30443,7 +17435,6 @@ class MSceneMessage(MMessage):
     kBeforeLoadReference: int = ...
     kBeforeLoadReferenceAndRecordEdits: int = ...
     kBeforeLoadReferenceCheck: int = ...
-    kBeforeNew: int = ...
     kBeforeNewCheck: int = ...
     kBeforeOpen: int = ...
     kBeforeOpenCheck: int = ...
@@ -30457,96 +17448,20 @@ class MSceneMessage(MMessage):
     kBeforeSoftwareFrameRender: int = ...
     kBeforeSoftwareRender: int = ...
     kBeforeUnloadReference: int = ...
-    kDefaultAction: int = ...
-    kDoAction: int = ...
-    kDoNotDoAction: int = ...
     kExportStarted: int = ...
     kLast: int = ...
     kMayaExiting: int = ...
     kMayaInitialized: int = ...
-    kSceneUpdate: int = ...
     kSoftwareRenderInterrupted: int = ...
-    def nodeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """nodeCallbacks(node) -> ids
 
-        Returns a list of callback IDs registered to a given node.
-
-         * node (MObject) - Node to query for callbacks.
-         * ids (MCallbackIdArray) - Array to store the list of callback IDs.
-        """
-    def removeCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeCallback(id) -> None
-
-        Removes the specified callback from Maya.
-        This method must be called for all callbacks registered by a
-        plug-in before that plug-in is unloaded.
-
-         * id (MCallbackId) - identifier of callback to be removed
-        """
-    def removeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeCallbacks(ids) -> None
-
-        Removes all of the specified callbacks from Maya.
-        This method must be called for all callbacks registered by a
-        plug-in before that plug-in is unloaded.
-
-         * idList (MCallbackIdArray) - list of callbacks to be removed.
-        """
-
-class MSelectionList(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MSelectionList:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def add(self: Self, *args: Any, **kwargs: Any) -> Any:
         """add(pattern, searchChildNamespaces=False) -> self
         add(item, mergeWithExisting=True) -> self
@@ -30677,60 +17592,12 @@ class MSelectionList(object):
         are already on it and adds those which are not.
         """
 
-class MSelectionMask(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MSelectionMask:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addMask(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addMask(selType) -> self
 
@@ -30959,60 +17826,8 @@ class MSelectionMask(object):
         * selType (int) - the selection type to be set.  See addMask() for a list of valid selection masks.
         """
 
-class MSpace(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MSpace:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
-    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     kInvalid: int = ...
     kLast: int = ...
     kObject: int = ...
@@ -31021,52 +17836,12 @@ class MSpace(object):
     kTransform: int = ...
     kWorld: int = ...
 
-class MSyntax(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MSyntax:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -31125,22 +17900,14 @@ class MSyntax(object):
     def useSelectionAsDefault(self: Self, *args: Any, **kwargs: Any) -> Any:
         """If set to True then when no objects are provided on the command-line Maya will pass the current selection instead."""
 
-class MTime(object):
+class MTime:
     def __add__(self: Self, value: Any) -> Any:
         """Return self+value."""
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
     __hash__: NoneType = ...
@@ -31150,12 +17917,6 @@ class MTime(object):
         """Return self*=value."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __isub__(self: Self, value: Any) -> Any:
         """Return self-=value."""
     def __itruediv__(self: Self, value: Any) -> Any:
@@ -31172,10 +17933,6 @@ class MTime(object):
         """Create and return a new object.  See help(type) for accurate signature."""
     def __radd__(self: Self, value: Any) -> Any:
         """Return value+self."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
     def __rmul__(self: Self, value: Any) -> Any:
@@ -31184,10 +17941,6 @@ class MTime(object):
         """Return value-self."""
     def __rtruediv__(self: Self, value: Any) -> Any:
         """Return value/self."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __sub__(self: Self, value: Any) -> Any:
@@ -31283,70 +18036,34 @@ class MTime(object):
     def value(*args: Any, **kwargs: Any) -> Any:
         """Value of the time in the current units."""
 
-class MTimeArray(object):
+class MTimeArray:
     def __add__(self: Self, value: Any) -> Any:
         """Return self+value."""
     def __contains__(self: Self, key: Any) -> Any:
         """Return key in self."""
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __iadd__(self: Self, value: Any) -> Any:
         """Implement self+=value."""
     def __imul__(self: Self, value: Any) -> Any:
         """Implement self*=value."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     def __mul__(self: Self, value: Any) -> Any:
         """Return self*value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
     def __rmul__(self: Self, value: Any) -> Any:
         """Return value*self."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -31376,31 +18093,17 @@ class MTimeArray(object):
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
         """Number of elements by which to grow the array when necessary."""
 
-class MTimeRange(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MTimeRange:
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
     __hash__: NoneType = ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
     def __lt__(self: Self, value: Any) -> Any:
@@ -31411,28 +18114,12 @@ class MTimeRange(object):
         """Create and return a new object.  See help(type) for accurate signature."""
     def __or__(self: Self, value: Any) -> Any:
         """Return self|value."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
     def __ror__(self: Self, value: Any) -> Any:
         """Return value|self."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def contains(self: Self, *args: Any, **kwargs: Any) -> Any:
         """contains(MTime) -> boolcontains(MTime, MTime) -> bool
 
@@ -31450,59 +18137,7 @@ class MTimeRange(object):
         """
 
 class MTimerMessage(MMessage):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
-    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addTimerCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addTimerCallback(period, function, clientData=None) -> id
 
@@ -31530,68 +18165,18 @@ class MTimerMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def currentCallbackId(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """currentCallbackId() -> id
 
-        Returns the callback ID of the currently executing callback. If called
-        outside of a callback, an invalid MCallbackId and failed status will
-        be returned.
-        """
-    kDefaultAction: int = ...
-    kDoAction: int = ...
-    kDoNotDoAction: int = ...
-    def nodeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """nodeCallbacks(node) -> ids
-
-        Returns a list of callback IDs registered to a given node.
-
-         * node (MObject) - Node to query for callbacks.
-         * ids (MCallbackIdArray) - Array to store the list of callback IDs.
-        """
-    def removeCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeCallback(id) -> None
-
-        Removes the specified callback from Maya.
-        This method must be called for all callbacks registered by a
-        plug-in before that plug-in is unloaded.
-
-         * id (MCallbackId) - identifier of callback to be removed
-        """
-    def removeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeCallbacks(ids) -> None
-
-        Removes all of the specified callbacks from Maya.
-        This method must be called for all callbacks registered by a
-        plug-in before that plug-in is unloaded.
-
-         * idList (MCallbackIdArray) - list of callbacks to be removed.
-        """
-
-class MTransformationMatrix(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MTransformationMatrix:
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
     __hash__: NoneType = ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
     def __lt__(self: Self, value: Any) -> Any:
@@ -31600,26 +18185,6 @@ class MTransformationMatrix(object):
         """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def asMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Interpolates between the identity transformation and that currently in the object, returning the result as an MMatrix."""
     def asMatrixInverse(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -31697,31 +18262,17 @@ class MTransformationMatrix(object):
     def translation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transformation's translation component as a vector."""
 
-class MTypeId(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MTypeId:
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
     __hash__: NoneType = ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
     def __lt__(self: Self, value: Any) -> Any:
@@ -31730,54 +18281,24 @@ class MTypeId(object):
         """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def id(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Returns the type id as a long."""
 
-class MURI(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MURI:
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
     __hash__: NoneType = ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
     def __lt__(self: Self, value: Any) -> Any:
@@ -31786,16 +18307,8 @@ class MURI(object):
         """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -31999,70 +18512,34 @@ class MURI(object):
         Sets the user name part of the user info component.
         """
 
-class MUint64Array(object):
+class MUint64Array:
     def __add__(self: Self, value: Any) -> Any:
         """Return self+value."""
     def __contains__(self: Self, key: Any) -> Any:
         """Return key in self."""
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __iadd__(self: Self, value: Any) -> Any:
         """Implement self+=value."""
     def __imul__(self: Self, value: Any) -> Any:
         """Implement self*=value."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     def __mul__(self: Self, value: Any) -> Any:
         """Return self*value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
     def __rmul__(self: Self, value: Any) -> Any:
         """Return value*self."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -32092,70 +18569,34 @@ class MUint64Array(object):
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
         """Number of elements by which to grow the array when necessary."""
 
-class MUintArray(object):
+class MUintArray:
     def __add__(self: Self, value: Any) -> Any:
         """Return self+value."""
     def __contains__(self: Self, key: Any) -> Any:
         """Return key in self."""
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __iadd__(self: Self, value: Any) -> Any:
         """Implement self+=value."""
     def __imul__(self: Self, value: Any) -> Any:
         """Implement self*=value."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     def __mul__(self: Self, value: Any) -> Any:
         """Return self*value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
     def __rmul__(self: Self, value: Any) -> Any:
         """Return value*self."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -32185,60 +18626,12 @@ class MUintArray(object):
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
         """Number of elements by which to grow the array when necessary."""
 
-class MUserData(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MUserData:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def deleteAfterUse(self: Self, *args: Any, **kwargs: Any) -> Any:
         """deleteAfterUse() -> bool
 
@@ -32262,59 +18655,7 @@ class MUserData(object):
         """
 
 class MUserEventMessage(MMessage):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
-    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addUserEventCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addUserEventCallback(eventName, function, clientData=None) -> id
 
@@ -32331,13 +18672,6 @@ class MUserEventMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def currentCallbackId(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """currentCallbackId() -> id
-
-        Returns the callback ID of the currently executing callback. If called
-        outside of a callback, an invalid MCallbackId and failed status will
-        be returned.
-        """
     def deregisterUserEvent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """deregisterUserEvent(eventName)
 
@@ -32353,17 +18687,6 @@ class MUserEventMessage(MMessage):
         Checks if an event type exists with the given event name.
 
          * eventName (string) - the name of the new event to check.
-        """
-    kDefaultAction: int = ...
-    kDoAction: int = ...
-    kDoNotDoAction: int = ...
-    def nodeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """nodeCallbacks(node) -> ids
-
-        Returns a list of callback IDs registered to a given node.
-
-         * node (MObject) - Node to query for callbacks.
-         * ids (MCallbackIdArray) - Array to store the list of callback IDs.
         """
     def postUserEvent(self: Self, *args: Any, **kwargs: Any) -> Any:
         """postUserEvent(eventName, clientData=None)
@@ -32389,50 +18712,18 @@ class MUserEventMessage(MMessage):
          * eventName (string) - the name of the new event to register.  Any
            non-empty string may be used as an event name.
         """
-    def removeCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeCallback(id) -> None
 
-        Removes the specified callback from Maya.
-        This method must be called for all callbacks registered by a
-        plug-in before that plug-in is unloaded.
-
-         * id (MCallbackId) - identifier of callback to be removed
-        """
-    def removeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeCallbacks(ids) -> None
-
-        Removes all of the specified callbacks from Maya.
-        This method must be called for all callbacks registered by a
-        plug-in before that plug-in is unloaded.
-
-         * idList (MCallbackIdArray) - list of callbacks to be removed.
-        """
-
-class MUuid(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MUuid:
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __gt__(self: Self, value: Any) -> Any:
         """Return self>value."""
     __hash__: NoneType = ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __le__(self: Self, value: Any) -> Any:
         """Return self<=value."""
     def __lt__(self: Self, value: Any) -> Any:
@@ -32441,16 +18732,8 @@ class MUuid(object):
         """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -32484,24 +18767,16 @@ class MUuid(object):
         Return whether the UUID is valid.
         """
 
-class MVector(object):
+class MVector:
     def __add__(self: Self, value: Any) -> Any:
         """Return self+value."""
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
     def __gt__(self: Self, value: Any) -> Any:
@@ -32513,12 +18788,6 @@ class MVector(object):
         """Return self*=value."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __isub__(self: Self, value: Any) -> Any:
         """Return self-=value."""
     def __itruediv__(self: Self, value: Any) -> Any:
@@ -32539,10 +18808,6 @@ class MVector(object):
         """Create and return a new object.  See help(type) for accurate signature."""
     def __radd__(self: Self, value: Any) -> Any:
         """Return value+self."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
     def __rmul__(self: Self, value: Any) -> Any:
@@ -32553,24 +18818,12 @@ class MVector(object):
         """Return value/self."""
     def __rxor__(self: Self, value: Any) -> Any:
         """Return value^self."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __sub__(self: Self, value: Any) -> Any:
         """Return self-value."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __truediv__(self: Self, value: Any) -> Any:
         """Return self/value."""
     def __xor__(self: Self, value: Any) -> Any:
@@ -32625,70 +18878,34 @@ class MVector(object):
     def z(*args: Any, **kwargs: Any) -> Any:
         """Z coordinate"""
 
-class MVectorArray(object):
+class MVectorArray:
     def __add__(self: Self, value: Any) -> Any:
         """Return self+value."""
     def __contains__(self: Self, key: Any) -> Any:
         """Return key in self."""
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __iadd__(self: Self, value: Any) -> Any:
         """Implement self+=value."""
     def __imul__(self: Self, value: Any) -> Any:
         """Implement self*=value."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     def __mul__(self: Self, value: Any) -> Any:
         """Return self*value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
     def __rmul__(self: Self, value: Any) -> Any:
         """Return value*self."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -32718,60 +18935,12 @@ class MVectorArray(object):
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
         """Number of elements by which to grow the array when necessary."""
 
-class MWeight(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MWeight:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def influence(*args: Any, **kwargs: Any) -> Any:
         """Controls how much of a given operation is applied to the entity

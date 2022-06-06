@@ -4,60 +4,12 @@ from typing_extensions import Self
 from _typeshed import Incomplete
 
 
-class MColorMixingSpaceHelper(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class MColorMixingSpaceHelper:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -80,60 +32,12 @@ class MColorMixingSpaceHelper(object):
     thisown: property = ...
     def view(self: Self, *args: Any, **kwargs: Any) -> Any: ...
 
-class MColorPickerCallback(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class MColorPickerCallback:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -147,60 +51,12 @@ class MColorPickerCallback(object):
     thisown: property = ...
 
 def MColorPickerCallback_className(*args: Any, **kwargs: Any) -> Any: ...
-class MColorPickerUtilities(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class MColorPickerUtilities:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
         """list of weak references to the object (if defined)"""
@@ -223,60 +79,12 @@ def MColorPickerUtilities_doRegisterToColorPicking(*args: Any, **kwargs: Any) ->
 def MColorPickerUtilities_grabColor(*args: Any, **kwargs: Any) -> Any: ...
 def MColorPickerUtilities_isRegisteredToColorPicking(*args: Any, **kwargs: Any) -> Any: ...
 def MColorPickerUtilities_unregisterFromColorPicking(*args: Any, **kwargs: Any) -> Any: ...
-class MCommonRenderSettingsData(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class MCommonRenderSettingsData:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -330,60 +138,12 @@ class MCommonRenderSettingsData(object):
 def MCommonRenderSettingsData_className(*args: Any, **kwargs: Any) -> Any: ...
 def MCommonRenderSettingsData_getPostRenderFrameCmd(*args: Any, **kwargs: Any) -> Any: ...
 def MCommonRenderSettingsData_getPreRenderFrameCmd(*args: Any, **kwargs: Any) -> Any: ...
-class MD3D9Renderer(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class MD3D9Renderer:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -399,60 +159,12 @@ class MD3D9Renderer(object):
     thisown: property = ...
 
 def MD3D9Renderer_theRenderer(*args: Any, **kwargs: Any) -> Any: ...
-class MDrawProcedureBase(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class MDrawProcedureBase:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -468,325 +180,37 @@ class MDrawProcedureBase(object):
     thisown: property = ...
 
 class MFnImageSource(MFnDependencyNode):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
-    __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    @property
-    def __weakref__(*args: Any, **kwargs: Any) -> Any:
-        """list of weak references to the object (if defined)"""
-    @__weakref__.setter
-    def __weakref__(*args: Any, **kwargs: Any) -> Any:
-        """list of weak references to the object (if defined)"""
-    def absoluteName(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def affectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def allocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def attribute(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def attributeClass(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def attributeCount(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def canBeWritten(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     def className(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def classification(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def deallocateAllFlags(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def deallocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def dgCallbackIds(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def dgCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def dgTimer(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def dgTimerOff(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def dgTimerOn(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def dgTimerQueryState(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def dgTimerReset(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def enableDGTiming(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def findAlias(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def findPlug(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def getAffectedAttributes(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def getAffectedByAttributes(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def getAliasAttr(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def getAliasList(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def getConnections(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     def getImageName(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def hasAttribute(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def hasUniqueName(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def icon(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def isDefaultNode(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def isFlagSet(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def isFromReferencedFile(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def isLocked(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def isNewAttribute(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def isShared(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def isTrackingEdits(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def isValid(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    kExtensionAttr: int = ...
-    kInvalidAttr: int = ...
-    kLocalDynamicAttr: int = ...
-    kNormalAttr: int = ...
-    kTimerInvalidState: int = ...
-    kTimerMetric_callback: int = ...
-    kTimerMetric_callbackNotViaAPI: int = ...
-    kTimerMetric_callbackViaAPI: int = ...
-    kTimerMetric_compute: int = ...
-    kTimerMetric_computeDuringCallback: int = ...
-    kTimerMetric_computeNotDuringCallback: int = ...
-    kTimerMetric_dirty: int = ...
-    kTimerMetric_draw: int = ...
-    kTimerMetric_fetch: int = ...
-    kTimerMetrics: int = ...
-    kTimerOff: int = ...
-    kTimerOn: int = ...
-    kTimerType_count: int = ...
-    kTimerType_inclusive: int = ...
-    kTimerType_self: int = ...
-    kTimerTypes: int = ...
-    kTimerUninitialized: int = ...
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def parentNamespace(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def pluginName(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def plugsAlias(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def removeAttribute(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def reorderedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setAffectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setAlias(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setFlag(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setIcon(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setLocked(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setName(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setUuid(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     def sourceCamera(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     def sourceLayer(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     thisown: property = ...
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def typeId(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def typeName(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def typeString(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def uniqueName(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def userNode(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def uuid(self: Self, *args: Any, **kwargs: Any) -> Any: ...
 
 def MFnImageSource_className(*args: Any, **kwargs: Any) -> Any: ...
 class MFnRenderLayer(MFnDependencyNode):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
-    __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    @property
-    def __weakref__(*args: Any, **kwargs: Any) -> Any:
-        """list of weak references to the object (if defined)"""
-    @__weakref__.setter
-    def __weakref__(*args: Any, **kwargs: Any) -> Any:
-        """list of weak references to the object (if defined)"""
-    def absoluteName(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     def adjustmentPlug(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def affectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def allocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def attribute(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def attributeClass(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def attributeCount(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def canBeWritten(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     def className(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def classification(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     def currentLayer(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def deallocateAllFlags(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def deallocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     def defaultRenderLayer(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def dgCallbackIds(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def dgCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def dgTimer(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def dgTimerOff(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def dgTimerOn(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def dgTimerQueryState(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def dgTimerReset(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def enableDGTiming(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     def externalRenderPasses(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def findAlias(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     def findLayerByName(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def findPlug(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def getAffectedAttributes(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def getAffectedByAttributes(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def getAliasAttr(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def getAliasList(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def getConnections(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def hasAttribute(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def hasUniqueName(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def icon(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     def inCurrentRenderLayer(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     def inLayer(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def isDefaultNode(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def isFlagSet(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def isFromReferencedFile(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def isLocked(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def isNewAttribute(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     def isPlugAdjusted(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def isShared(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def isTrackingEdits(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def isValid(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    kExtensionAttr: int = ...
-    kInvalidAttr: int = ...
-    kLocalDynamicAttr: int = ...
-    kNormalAttr: int = ...
-    kTimerInvalidState: int = ...
-    kTimerMetric_callback: int = ...
-    kTimerMetric_callbackNotViaAPI: int = ...
-    kTimerMetric_callbackViaAPI: int = ...
-    kTimerMetric_compute: int = ...
-    kTimerMetric_computeDuringCallback: int = ...
-    kTimerMetric_computeNotDuringCallback: int = ...
-    kTimerMetric_dirty: int = ...
-    kTimerMetric_draw: int = ...
-    kTimerMetric_fetch: int = ...
-    kTimerMetrics: int = ...
-    kTimerOff: int = ...
-    kTimerOn: int = ...
-    kTimerType_count: int = ...
-    kTimerType_inclusive: int = ...
-    kTimerType_self: int = ...
-    kTimerTypes: int = ...
-    kTimerUninitialized: int = ...
     def layerChildren(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     def listAllRenderLayers(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     def listMembers(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def parentNamespace(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     def passHasLight(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     def passHasObject(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def pluginName(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def plugsAlias(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def removeAttribute(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def reorderedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setAffectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setAlias(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setFlag(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setIcon(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setLocked(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setName(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setUuid(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     thisown: property = ...
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def typeId(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def typeName(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def typeString(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def uniqueName(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def userNode(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def uuid(self: Self, *args: Any, **kwargs: Any) -> Any: ...
 
 def MFnRenderLayer_className(*args: Any, **kwargs: Any) -> Any: ...
 def MFnRenderLayer_currentLayer(*args: Any, **kwargs: Any) -> Any: ...
@@ -794,219 +218,27 @@ def MFnRenderLayer_defaultRenderLayer(*args: Any, **kwargs: Any) -> Any: ...
 def MFnRenderLayer_findLayerByName(*args: Any, **kwargs: Any) -> Any: ...
 def MFnRenderLayer_listAllRenderLayers(*args: Any, **kwargs: Any) -> Any: ...
 class MFnRenderPass(MFnDependencyNode):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
-    __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    @property
-    def __weakref__(*args: Any, **kwargs: Any) -> Any:
-        """list of weak references to the object (if defined)"""
-    @__weakref__.setter
-    def __weakref__(*args: Any, **kwargs: Any) -> Any:
-        """list of weak references to the object (if defined)"""
-    def absoluteName(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def affectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def allocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def attribute(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def attributeClass(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def attributeCount(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def canBeWritten(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     def className(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def classification(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     def customTokenString(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def deallocateAllFlags(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def deallocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def dgCallbackIds(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def dgCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def dgTimer(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def dgTimerOff(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def dgTimerOn(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def dgTimerQueryState(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def dgTimerReset(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def enableDGTiming(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def findAlias(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def findPlug(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     def frameBufferChannels(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     def frameBufferType(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def getAffectedAttributes(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def getAffectedByAttributes(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def getAliasAttr(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def getAliasList(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def getConnections(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     def getImplementation(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def hasAttribute(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def hasObj(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def hasUniqueName(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def icon(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def isDefaultNode(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def isFlagSet(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def isFromReferencedFile(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def isLocked(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def isNewAttribute(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def isShared(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def isTrackingEdits(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def isValid(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    kExtensionAttr: int = ...
-    kInvalidAttr: int = ...
-    kLocalDynamicAttr: int = ...
-    kNormalAttr: int = ...
-    kTimerInvalidState: int = ...
-    kTimerMetric_callback: int = ...
-    kTimerMetric_callbackNotViaAPI: int = ...
-    kTimerMetric_callbackViaAPI: int = ...
-    kTimerMetric_compute: int = ...
-    kTimerMetric_computeDuringCallback: int = ...
-    kTimerMetric_computeNotDuringCallback: int = ...
-    kTimerMetric_dirty: int = ...
-    kTimerMetric_draw: int = ...
-    kTimerMetric_fetch: int = ...
-    kTimerMetrics: int = ...
-    kTimerOff: int = ...
-    kTimerOn: int = ...
-    kTimerType_count: int = ...
-    kTimerType_inclusive: int = ...
-    kTimerType_self: int = ...
-    kTimerTypes: int = ...
-    kTimerUninitialized: int = ...
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def parentNamespace(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     def passID(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def pluginName(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def plugsAlias(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def removeAttribute(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def reorderedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setAffectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setAlias(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setFlag(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setIcon(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     def setImplementation(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setLocked(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setName(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setUuid(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     thisown: property = ...
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def typeId(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def typeName(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def typeString(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def uniqueName(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def userNode(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     def usesFiltering(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def uuid(self: Self, *args: Any, **kwargs: Any) -> Any: ...
 
 def MFnRenderPass_className(*args: Any, **kwargs: Any) -> Any: ...
-class MGLFunctionTable(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class MGLFunctionTable:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
         """list of weak references to the object (if defined)"""
@@ -3430,60 +2662,12 @@ MGL_ZERO_EXT: int
 MGL_ZOOM_X: int
 MGL_ZOOM_Y: int
 MGL_Z_EXT: int
-class MGeometryData(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class MGeometryData:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -3533,60 +2717,12 @@ class MGeometryData(object):
     thisown: property = ...
     def uniqueID(self: Self, *args: Any, **kwargs: Any) -> Any: ...
 
-class MGeometryLegacy(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class MGeometryLegacy:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -3607,61 +2743,13 @@ class MGeometryLegacy(object):
     def texCoord(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     thisown: property = ...
 
-class MGeometryList(object):
+class MGeometryList:
     MSetupFlags: property = ...
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -3691,60 +2779,12 @@ class MGeometryList(object):
     thisown: property = ...
     def viewMatrix(self: Self, *args: Any, **kwargs: Any) -> Any: ...
 
-class MGeometryManager(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class MGeometryManager:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
         """list of weak references to the object (if defined)"""
@@ -3764,60 +2804,12 @@ def MGeometryManager_className(*args: Any, **kwargs: Any) -> Any: ...
 def MGeometryManager_dereferenceDefaultGeometry(*args: Any, **kwargs: Any) -> Any: ...
 def MGeometryManager_getGeometry(*args: Any, **kwargs: Any) -> Any: ...
 def MGeometryManager_referenceDefaultGeometry(*args: Any, **kwargs: Any) -> Any: ...
-class MGeometryPrimitive(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class MGeometryPrimitive:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -3844,60 +2836,12 @@ class MGeometryPrimitive(object):
     thisown: property = ...
     def uniqueID(self: Self, *args: Any, **kwargs: Any) -> Any: ...
 
-class MGeometryRequirementsLegacy(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class MGeometryRequirementsLegacy:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -3915,60 +2859,12 @@ class MGeometryRequirementsLegacy(object):
     def addTexCoord(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     thisown: property = ...
 
-class MHardwareRenderer(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class MHardwareRenderer:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
         """list of weak references to the object (if defined)"""
@@ -4018,60 +2914,12 @@ class MHardwareRenderer(object):
     thisown: property = ...
 
 def MHardwareRenderer_theRenderer(*args: Any, **kwargs: Any) -> Any: ...
-class MHwTextureManager(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class MHwTextureManager:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
         """list of weak references to the object (if defined)"""
@@ -4090,60 +2938,12 @@ def MHwTextureManager_deregisterTextureFile(*args: Any, **kwargs: Any) -> Any: .
 def MHwTextureManager_glBind(*args: Any, **kwargs: Any) -> Any: ...
 def MHwTextureManager_registerTextureFile(*args: Any, **kwargs: Any) -> Any: ...
 def MHwTextureManager_textureFile(*args: Any, **kwargs: Any) -> Any: ...
-class MHwrCallback(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class MHwrCallback:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -4161,60 +2961,12 @@ class MHwrCallback(object):
 
 def MHwrCallback_addCallback(*args: Any, **kwargs: Any) -> Any: ...
 def MHwrCallback_removeCallback(*args: Any, **kwargs: Any) -> Any: ...
-class MLightLinks(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class MLightLinks:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -4233,61 +2985,13 @@ class MLightLinks(object):
     def parseLinks(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     thisown: property = ...
 
-class MRenderCallback(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class MRenderCallback:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     def __disown__(self: Self) -> Any: ...
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -4308,60 +3012,12 @@ def MRenderCallback_addCallback(*args: Any, **kwargs: Any) -> Any: ...
 def MRenderCallback_addRenderTileCallback(*args: Any, **kwargs: Any) -> Any: ...
 def MRenderCallback_className(*args: Any, **kwargs: Any) -> Any: ...
 def MRenderCallback_removeCallback(*args: Any, **kwargs: Any) -> Any: ...
-class MRenderData(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class MRenderData:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -4391,60 +3047,12 @@ class MRenderData(object):
     xsize: property = ...
     ysize: property = ...
 
-class MRenderProfile(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class MRenderProfile:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -4460,60 +3068,12 @@ class MRenderProfile(object):
     def numberOfRenderers(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     thisown: property = ...
 
-class MRenderSetup(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class MRenderSetup:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
         """list of weak references to the object (if defined)"""
@@ -4524,60 +3084,12 @@ class MRenderSetup(object):
     def getEnabledSelectedNodeNames(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     thisown: property = ...
 
-class MRenderSetupPrivate(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class MRenderSetupPrivate:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
         """list of weak references to the object (if defined)"""
@@ -4594,60 +3106,12 @@ def MRenderSetupPrivate__triggerSelectionChanged(*args: Any, **kwargs: Any) -> A
 def MRenderSetupPrivate_className(*args: Any, **kwargs: Any) -> Any: ...
 def MRenderSetup_className(*args: Any, **kwargs: Any) -> Any: ...
 def MRenderSetup_getEnabledSelectedNodeNames(*args: Any, **kwargs: Any) -> Any: ...
-class MRenderShadowData(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class MRenderShadowData:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -4674,60 +3138,12 @@ class MRenderShadowData(object):
     def worldToZbuffer(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     def zbufferToWorld(self: Self, *args: Any, **kwargs: Any) -> Any: ...
 
-class MRenderTargetLegacy(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class MRenderTargetLegacy:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
         """list of weak references to the object (if defined)"""
@@ -4740,60 +3156,12 @@ class MRenderTargetLegacy(object):
     def width(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     def writeColorBuffer(self: Self, *args: Any, **kwargs: Any) -> Any: ...
 
-class MRenderUtil(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class MRenderUtil:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
         """list of weak references to the object (if defined)"""
@@ -4871,60 +3239,12 @@ def MRenderUtil_renderPass(*args: Any, **kwargs: Any) -> Any: ...
 def MRenderUtil_sampleShadingNetwork(*args: Any, **kwargs: Any) -> Any: ...
 def MRenderUtil_sendRenderProgressInfo(*args: Any, **kwargs: Any) -> Any: ...
 def MRenderUtil_valueInNoiseTable(*args: Any, **kwargs: Any) -> Any: ...
-class MRenderView(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class MRenderView:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -4954,60 +3274,12 @@ def MRenderView_setDrawTileBoundary(*args: Any, **kwargs: Any) -> Any: ...
 def MRenderView_startRegionRender(*args: Any, **kwargs: Any) -> Any: ...
 def MRenderView_startRender(*args: Any, **kwargs: Any) -> Any: ...
 def MRenderView_updatePixels(*args: Any, **kwargs: Any) -> Any: ...
-class MRenderingInfo(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class MRenderingInfo:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
         """list of weak references to the object (if defined)"""
@@ -5026,60 +3298,12 @@ class MRenderingInfo(object):
     def viewMatrix(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     def width(self: Self, *args: Any, **kwargs: Any) -> Any: ...
 
-class MSwatchRenderBase(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class MSwatchRenderBase:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -5102,60 +3326,12 @@ class MSwatchRenderBase(object):
 
 def MSwatchRenderBase_cancelCurrentSwatchRender(*args: Any, **kwargs: Any) -> Any: ...
 def MSwatchRenderBase_enableSwatchRender(*args: Any, **kwargs: Any) -> Any: ...
-class MSwatchRenderRegister(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class MSwatchRenderRegister:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -5169,61 +3345,13 @@ class MSwatchRenderRegister(object):
 
 def MSwatchRenderRegister_registerSwatchRender(*args: Any, **kwargs: Any) -> Any: ...
 def MSwatchRenderRegister_unregisterSwatchRender(*args: Any, **kwargs: Any) -> Any: ...
-class MUniformParameter(object):
+class MUniformParameter:
     def UIHidden(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -5336,60 +3464,12 @@ class MUniformParameter(object):
     def type(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     def userData(self: Self, *args: Any, **kwargs: Any) -> Any: ...
 
-class MUniformParameterList(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class MUniformParameterList:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -5405,60 +3485,12 @@ class MUniformParameterList(object):
     def setLength(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     thisown: property = ...
 
-class MVaryingParameter(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class MVaryingParameter:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -5504,60 +3536,12 @@ class MVaryingParameter(object):
     thisown: property = ...
     def type(self: Self, *args: Any, **kwargs: Any) -> Any: ...
 
-class MVaryingParameterList(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class MVaryingParameterList:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -5573,61 +3557,13 @@ class MVaryingParameterList(object):
     def setLength(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     thisown: property = ...
 
-class MViewportRenderer(object):
+class MViewportRenderer:
     def UIname(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -5690,60 +3626,12 @@ class MViewportRenderer(object):
     thisown: property = ...
     def uninitialize(self: Self, *args: Any, **kwargs: Any) -> Any: ...
 
-class RV_AOV(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class RV_AOV:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -5756,60 +3644,12 @@ class RV_AOV(object):
     pPixels: property = ...
     thisown: property = ...
 
-class RV_PIXEL(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class RV_PIXEL:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -5823,229 +3663,14 @@ class RV_PIXEL(object):
     r: property = ...
     thisown: property = ...
 
-class _SwigNonDynamicMeta:
-    @property
-    def __abstractmethods__(*args: Any, **kwargs: Any) -> Any: ...
-    @__abstractmethods__.setter
-    def __abstractmethods__(*args: Any, **kwargs: Any) -> Any: ...
-    class type:
-        @property
-        def __abstractmethods__(*args: Any, **kwargs: Any) -> Any: ...
-        @__abstractmethods__.setter
-        def __abstractmethods__(*args: Any, **kwargs: Any) -> Any: ...
-        class object:
-            def __delattr__(self: Self, name: Any) -> Any:
-                """Implement delattr(self, name)."""
-            def __dir__(self: Self) -> Any:
-                """Default dir() implementation."""
-            __doc__: str = ...
-            def __eq__(self: Self, value: Any) -> Any:
-                """Return self==value."""
-            def __format__(self: Self, format_spec: Any) -> Any:
-                """Default object formatter."""
-            def __ge__(self: Self, value: Any) -> Any:
-                """Return self>=value."""
-            def __getattribute__(self: Self, name: Any) -> Any:
-                """Return getattr(self, name)."""
-            def __gt__(self: Self, value: Any) -> Any:
-                """Return self>value."""
-            def __hash__(self: Self) -> Any:
-                """Return hash(self)."""
-            def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-                """Initialize self.  See help(type(self)) for accurate signature."""
-            def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-                """This method is called when a class is subclassed.
-
-                The default implementation does nothing. It may be
-                overridden to extend subclasses.
-                """
-            def __le__(self: Self, value: Any) -> Any:
-                """Return self<=value."""
-            def __lt__(self: Self, value: Any) -> Any:
-                """Return self<value."""
-            def __ne__(self: Self, value: Any) -> Any:
-                """Return self!=value."""
-            def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-                """Create and return a new object.  See help(type) for accurate signature."""
-            def __reduce__(self: Self) -> Any:
-                """Helper for pickle."""
-            def __reduce_ex__(self: Self, protocol: Any) -> Any:
-                """Helper for pickle."""
-            def __repr__(self: Self) -> Any:
-                """Return repr(self)."""
-            def __setattr__(self: Self, name: Any, value: Any) -> Any:
-                """Implement setattr(self, name, value)."""
-            def __sizeof__(self: Self) -> Any:
-                """Size of object in memory, in bytes."""
-            def __str__(self: Self) -> Any:
-                """Return str(self)."""
-            def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-                """Abstract classes can override this to customize issubclass().
-
-                This is invoked early on by abc.ABCMeta.__subclasscheck__().
-                It should return True, False or NotImplemented.  If it returns
-                NotImplemented, the normal algorithm is used.  Otherwise, it
-                overrides the normal algorithm (and the outcome is cached).
-                """
-
-        __bases__: tuple = ...
-        __basicsize__: int = ...
-        def __call__(self: Self, args: Any, kwargs: Any) -> Any:
-            """Call self as a function."""
-        def __delattr__(self: Self, name: Any) -> Any:
-            """Implement delattr(self, name)."""
-        __dict__: mappingproxy = ...
-        __dictoffset__: int = ...
-        def __dir__(self: Self) -> Any:
-            """Specialized __dir__ implementation for types."""
-        __doc__: str = ...
-        def __eq__(self: Self, value: Any) -> Any:
-            """Return self==value."""
-        __flags__: int = ...
-        def __format__(self: Self, format_spec: Any) -> Any:
-            """Default object formatter."""
-        def __ge__(self: Self, value: Any) -> Any:
-            """Return self>=value."""
-        def __getattribute__(self: Self, name: Any) -> Any:
-            """Return getattr(self, name)."""
-        def __gt__(self: Self, value: Any) -> Any:
-            """Return self>value."""
-        def __hash__(self: Self) -> Any:
-            """Return hash(self)."""
-        def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-            """Initialize self.  See help(type(self)) for accurate signature."""
-        def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-            """This method is called when a class is subclassed.
-
-            The default implementation does nothing. It may be
-            overridden to extend subclasses.
-            """
-        def __instancecheck__(self: Self, instance: Any) -> Any:
-            """Check if an object is an instance."""
-        __itemsize__: int = ...
-        def __le__(self: Self, value: Any) -> Any:
-            """Return self<=value."""
-        def __lt__(self: Self, value: Any) -> Any:
-            """Return self<value."""
-        __module__: str = ...
-        __mro__: tuple = ...
-        __name__: str = ...
-        def __ne__(self: Self, value: Any) -> Any:
-            """Return self!=value."""
-        def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-            """Create and return a new object.  See help(type) for accurate signature."""
-        def __prepare__(self: Self, *args: Any, **kwargs: Any) -> Any:
-            """__prepare__() -> dict
-            used to create the namespace for the class statement
-            """
-        __qualname__: str = ...
-        def __reduce__(self: Self) -> Any:
-            """Helper for pickle."""
-        def __reduce_ex__(self: Self, protocol: Any) -> Any:
-            """Helper for pickle."""
-        def __repr__(self: Self) -> Any:
-            """Return repr(self)."""
-        def __setattr__(self: Self, name: Any, value: Any) -> Any:
-            """Implement setattr(self, name, value)."""
-        def __sizeof__(self: Self) -> Any:
-            """Return memory consumption of the type object."""
-        def __str__(self: Self) -> Any:
-            """Return str(self)."""
-        def __subclasscheck__(self: Self, subclass: Any) -> Any:
-            """Check if a class is a subclass."""
-        def __subclasses__(self: Self) -> Any:
-            """Return a list of immediate subclasses."""
-        def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-            """Abstract classes can override this to customize issubclass().
-
-            This is invoked early on by abc.ABCMeta.__subclasscheck__().
-            It should return True, False or NotImplemented.  If it returns
-            NotImplemented, the normal algorithm is used.  Otherwise, it
-            overrides the normal algorithm (and the outcome is cached).
-            """
-        __text_signature__: NoneType = ...
-        __weakrefoffset__: int = ...
-        def mro(self: Self) -> Any:
-            """Return a type's method resolution order."""
-
+class _SwigNonDynamicMeta(type):
     __bases__: tuple = ...
-    __basicsize__: int = ...
-    def __call__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Call self as a function."""
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    __dict__: mappingproxy = ...
-    __dictoffset__: int = ...
-    def __dir__(self: Self) -> Any:
-        """Specialized __dir__ implementation for types."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    __flags__: int = ...
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
-    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __instancecheck__(self: Self, instance: Any) -> Any:
-        """Check if an object is an instance."""
-    __itemsize__: int = ...
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
     __mro__: tuple = ...
     __name__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __prepare__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """__prepare__() -> dict
-        used to create the namespace for the class statement
-        """
     __qualname__: str = ...
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
     def __setattr__(self: Self, cls: Any, name: Any, value: Any) -> Any: ...
-    def __sizeof__(self: Self) -> Any:
-        """Return memory consumption of the type object."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasscheck__(self: Self, subclass: Any) -> Any:
-        """Check if a class is a subclass."""
-    def __subclasses__(self: Self) -> Any:
-        """Return a list of immediate subclasses."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-    __text_signature__: NoneType = ...
-    __weakrefoffset__: int = ...
-    def mro(self: Self) -> Any:
-        """Return a type's method resolution order."""
 
 __builtins__: dict
 __cached__: str
@@ -6063,60 +3688,12 @@ _swig_python_version_info: version_info
 def _swig_repr(self: Self) -> Any: ...
 def _swig_setattr_nondynamic_class_variable(set: Any) -> Any: ...
 def _swig_setattr_nondynamic_instance_variable(set: Any) -> Any: ...
-class boolPtr(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class boolPtr:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -6131,60 +3708,12 @@ class boolPtr(object):
     def value(self: Self, *args: Any, **kwargs: Any) -> Any: ...
 
 def boolPtr_frompointer(*args: Any, **kwargs: Any) -> Any: ...
-class charPtr(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class charPtr:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -6199,60 +3728,12 @@ class charPtr(object):
     def value(self: Self, *args: Any, **kwargs: Any) -> Any: ...
 
 def charPtr_frompointer(*args: Any, **kwargs: Any) -> Any: ...
-class doublePtr(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class doublePtr:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -6267,60 +3748,12 @@ class doublePtr(object):
     def value(self: Self, *args: Any, **kwargs: Any) -> Any: ...
 
 def doublePtr_frompointer(*args: Any, **kwargs: Any) -> Any: ...
-class floatPtr(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class floatPtr:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -6335,60 +3768,12 @@ class floatPtr(object):
     def value(self: Self, *args: Any, **kwargs: Any) -> Any: ...
 
 def floatPtr_frompointer(*args: Any, **kwargs: Any) -> Any: ...
-class intPtr(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class intPtr:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -6503,60 +3888,12 @@ kMGLext_texture_env_dot3: int
 kMGLext_texture_lod: int
 kMGLext_texture_mirrored_repeat: int
 kMGLext_transpose_matrix: int
-class shortPtr(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class shortPtr:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -6571,60 +3908,12 @@ class shortPtr(object):
     def value(self: Self, *args: Any, **kwargs: Any) -> Any: ...
 
 def shortPtr_frompointer(*args: Any, **kwargs: Any) -> Any: ...
-class uCharPtr(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class uCharPtr:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:
@@ -6639,60 +3928,12 @@ class uCharPtr(object):
     def value(self: Self, *args: Any, **kwargs: Any) -> Any: ...
 
 def uCharPtr_frompointer(*args: Any, **kwargs: Any) -> Any: ...
-class uIntPtr(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class uIntPtr:
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: NoneType = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __swig_destroy__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
     @property
     def __weakref__(*args: Any, **kwargs: Any) -> Any:

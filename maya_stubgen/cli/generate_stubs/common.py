@@ -56,20 +56,30 @@ class Class(StubItem):
     members: List[Class | Function | Variable] = field(default_factory=list)
 
     @classmethod
-    def from_object(cls, obj: type, name: str = None) -> Self:
+    def from_object(cls, obj: object, name: str = None) -> Self:
+
         if name is None:
             name = obj.__name__
 
         try:
-            parent = obj.mro()[1].__name__
-        except:
-            parent = None
+            parent = type.mro(obj)[1]
+        except IndexError:
+            parent = object
 
         skip = ["__class__"]
 
         members = []
+        if parent is not None:
+            parent_members = [id(m[1]) for m in inspect.getmembers(parent)]
+        else:
+            parent_members = []
+
         for member_name, member in inspect.getmembers(obj):
             if member_name in skip:
+                continue
+
+            is_inhertited = id(member) in parent_members
+            if is_inhertited:
                 continue
 
             if inspect.isclass(member):
@@ -93,8 +103,8 @@ class Class(StubItem):
     def stub(self):
         stub = f"class {self.name}"
 
-        if self.parent:
-            stub += f"({self.parent})"
+        if self.parent and self.parent is not object:
+            stub += f"({self.parent.__name__})"
 
         stub += ":\n"
 
@@ -124,7 +134,7 @@ class Variable(StubItem):
     def type_str(self) -> str:
         try:
             return self.type.__name__
-        except:
+        except AttributeError:
             return str(self.type).replace("typing.", "")
 
     @property

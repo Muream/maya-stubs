@@ -5,181 +5,18 @@ from _typeshed import Incomplete
 
 
 class MayaGuiLogHandler(Handler):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
     __dict__: mappingproxy = ...
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self) -> Any: ...
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
     __module__: str = ...
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any: ...
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-    @property
-    def __weakref__(*args: Any, **kwargs: Any) -> Any:
-        """list of weak references to the object (if defined)"""
-    @__weakref__.setter
-    def __weakref__(*args: Any, **kwargs: Any) -> Any:
-        """list of weak references to the object (if defined)"""
-    def _at_fork_reinit(self: Self) -> Any: ...
-    def acquire(self: Self) -> Any:
-        """Acquire the I/O thread lock."""
-    def addFilter(self: Self, filter: Any) -> Any:
-        """Add the specified filter to this handler."""
-    def close(self: Self) -> Any:
-        """Tidy up any resources used by the handler.
-
-                This version removes the handler from an internal map of handlers,
-                _handlers, which is used for handler lookup by name. Subclasses
-                should ensure that this gets called from overridden close()
-                methods.
-        """
-    def createLock(self: Self) -> Any:
-        """Acquire a thread lock for serializing access to the underlying I/O."""
     def emit(self: Self, record: Any) -> Any: ...
-    def filter(self: Self, record: Any) -> Any:
-        """Determine if a record is loggable by consulting all the filters.
 
-                The default is to allow the record to be logged; any filter can veto
-                this and the record is then dropped. Returns a zero value if a record
-                is to be dropped, else non-zero.
-
-                .. versionchanged:: 3.2
-
-                   Allow filters to be just callables.
-        """
-    def flush(self: Self) -> Any:
-        """Ensure all logging output has been flushed.
-
-                This version does nothing and is intended to be implemented by
-                subclasses.
-        """
-    def format(self: Self, record: Any) -> Any:
-        """Format the specified record.
-
-                If a formatter is set, use it. Otherwise, use the default formatter
-                for the module.
-        """
-    def get_name(self: Self) -> Any: ...
-    def handle(self: Self, record: Any) -> Any:
-        """Conditionally emit the specified logging record.
-
-                Emission depends on filters which may have been added to the handler.
-                Wrap the actual emission of the record with acquisition/release of
-                the I/O thread lock. Returns whether the filter passed the record for
-                emission.
-        """
-    def handleError(self: Self, record: Any) -> Any:
-        """Handle errors which occur during an emit() call.
-
-                This method should be called from handlers when an exception is
-                encountered during an emit() call. If raiseExceptions is false,
-                exceptions get silently ignored. This is what is mostly wanted
-                for a logging system - most users will not care about errors in
-                the logging system, they are more interested in application errors.
-                You could, however, replace this with a custom handler if you wish.
-                The record which was being processed is passed in to this method.
-        """
-    name: property = ...
-    def release(self: Self) -> Any:
-        """Release the I/O thread lock."""
-    def removeFilter(self: Self, filter: Any) -> Any:
-        """Remove the specified filter from this handler."""
-    def setFormatter(self: Self, fmt: Any) -> Any:
-        """Set the formatter for this handler."""
-    def setLevel(self: Self, level: Any) -> Any:
-        """Set the logging level of this handler.  level must be an int or a str."""
-    def set_name(self: Self, name: Any) -> Any: ...
-
-class Output(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class Output:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -196,68 +33,20 @@ class Output(object):
     def writelines(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Write the given sequence"""
 
-class StringTable(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
+class StringTable:
     def __delitem__(self: Self, key: Any) -> Any:
         """Delete self[key]."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __setitem__(self: Self, key: Any, value: Any) -> Any:
         """Set self[key] to value."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
 
 __cached__: str
 __doc__: str
@@ -432,15 +221,11 @@ def format_over(*args: Any, **kwargs: Any) -> Any:
     """format"""
 def frozenset_over(*args: Any, **kwargs: Any) -> Any:
     """frozenset"""
-class futureStr(object):
+class futureStr:
     def __add__(self: Self, value: Any) -> Any:
         """Return self+value."""
     def __contains__(self: Self, key: Any) -> Any:
         """Return key in self."""
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
@@ -457,14 +242,6 @@ class futureStr(object):
         """Return self>value."""
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __iter__(self: Self) -> Any:
         """Implement iter(self)."""
     def __le__(self: Self, value: Any) -> Any:
@@ -481,30 +258,16 @@ class futureStr(object):
         """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
     def __rmod__(self: Self, value: Any) -> Any:
         """Return value%self."""
     def __rmul__(self: Self, value: Any) -> Any:
         """Return value*self."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
     def __sizeof__(self: Self) -> Any:
         """Return the size of the string in memory, in bytes."""
     def __str__(self: Self) -> Any:
         """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def capitalize(self: Self) -> Any:
         """Return a capitalized version of the string.
 
@@ -944,20 +707,14 @@ def processIdleEvents(*args: Any, **kwargs: Any) -> Any:
     """
 def property_over(*args: Any, **kwargs: Any) -> Any:
     """property"""
-class range(object):
+class range:
     def __bool__(self: Self) -> Any:
         """self != 0"""
     def __contains__(self: Self, key: Any) -> Any:
         """Return key in self."""
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
     def __eq__(self: Self, value: Any) -> Any:
         """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
     def __ge__(self: Self, value: Any) -> Any:
         """Return self>=value."""
     def __getattribute__(self: Self, name: Any) -> Any:
@@ -968,14 +725,6 @@ class range(object):
         """Return self>value."""
     def __hash__(self: Self) -> Any:
         """Return hash(self)."""
-    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __iter__(self: Self) -> Any:
         """Implement iter(self)."""
     def __le__(self: Self, value: Any) -> Any:
@@ -989,26 +738,10 @@ class range(object):
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
     def __reduce__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
     def __repr__(self: Self) -> Any:
         """Return repr(self)."""
     def __reversed__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Return a reverse iterator."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def count(self: Self, *args: Any, **kwargs: Any) -> Any:
         """rangeobject.count(value) -> integer -- return number of occurrences of value"""
     def index(self: Self, *args: Any, **kwargs: Any) -> Any:

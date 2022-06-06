@@ -4,60 +4,12 @@ from typing_extensions import Self
 from _typeshed import Incomplete
 
 
-class MAttributeParameterMapping(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MAttributeParameterMapping:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def allowConnection(self: Self, *args: Any, **kwargs: Any) -> Any:
         """allowConnection() -> bool
 
@@ -90,64 +42,16 @@ class MAttributeParameterMapping(object):
         If the fragment has not yet been joined with other fragments, this will return the same string as parameterName().
         """
 
-class MAttributeParameterMappingList(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MAttributeParameterMappingList:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def append(self: Self, *args: Any, **kwargs: Any) -> Any:
         """append(MAttributeParameterMapping) -> self
 
@@ -171,60 +75,12 @@ class MAttributeParameterMappingList(object):
         This will return the first mapping found with a matching parameter name.
         """
 
-class MBlendState(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MBlendState:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def desc(self: Self, *args: Any, **kwargs: Any) -> Any:
         """desc() -> MBlendStateDesc
 
@@ -266,60 +122,12 @@ class MBlendState(object):
         For DirectX, a pointer to a Direct3D state will be returned.
         """
 
-class MBlendStateDesc(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MBlendStateDesc:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def alphaToCoverageEnable(*args: Any, **kwargs: Any) -> Any:
         """Enable alpha to coverage. Default false"""
@@ -356,60 +164,12 @@ class MBlendStateDesc(object):
     def targetBlends(*args: Any, **kwargs: Any) -> Any:
         """An array of 8 MTargetBlendDesc, one for each target"""
 
-class MCameraOverride(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MCameraOverride:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def mCameraPath(*args: Any, **kwargs: Any) -> Any:
         """Camera path override"""
@@ -478,59 +238,11 @@ class MCameraOverride(object):
         """Camera view matrix override"""
 
 class MClearOperation(MRenderOperation):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def clearColor(self: Self, *args: Any, **kwargs: Any) -> Any:
         """clearColor() -> [float, float, float, float]
 
@@ -556,36 +268,11 @@ class MClearOperation(MRenderOperation):
 
         Query the stencil clear value.
         """
-    def enableSRGBWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """enableSRGBWrite() -> bool
-
-        Return whether to enable GPU based gamma correction during pixel writes.
-        """
-    kClear: int = ...
     kClearAll: int = ...
-    kClearColor: int = ...
-    kClearDepth: int = ...
-    kClearNone: int = ...
-    kClearStencil: int = ...
-    kHUDRender: int = ...
-    kPresentTarget: int = ...
-    kQuadRender: int = ...
-    kSceneRender: int = ...
-    kUserDefined: int = ...
     def mask(self: Self, *args: Any, **kwargs: Any) -> Any:
         """mask() -> int
 
         Query the clear mask.
-        """
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """name() -> string
-
-        Returns the name of the render operator.
-        """
-    def operationType(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """operationType() -> int
-
-        Returns the type of a render operator.
         """
     def overridesColors(self: Self, *args: Any, **kwargs: Any) -> Any:
         """overridesColors() -> bool
@@ -627,71 +314,9 @@ class MClearOperation(MRenderOperation):
 
         Set the enabled state to control whether the clear operation overrides Maya's color preferences.
         """
-    def targetOverrideList(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """targetOverrideList() -> list of MRenderTarget
 
-        Return a list of render target which will be used as the target overrides for the operation.
-        """
-    def viewportRectangleOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """viewportRectangleOverride() -> MFloatPoint
-
-        Query for a viewport rectangle override.
-        """
-
-class MColorManagementUtilities(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MColorManagementUtilities:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
-    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def getColorTransformCacheIdForInputSpace(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getColorTransformCacheIdForInputSpace(inputSpaceName) -> transformId
 
@@ -758,60 +383,12 @@ class MColorManagementUtilities(object):
         True if color management is enabled.
         """
 
-class MComponentDataIndexing(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MComponentDataIndexing:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def componentType(self: Self, *args: Any, **kwargs: Any) -> Any:
         """componentType() -> MComponentType
 
@@ -829,64 +406,16 @@ class MComponentDataIndexing(object):
         Set the component type that the vertex indices represent.
         """
 
-class MComponentDataIndexingList(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MComponentDataIndexingList:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def append(self: Self, *args: Any, **kwargs: Any) -> Any:
         """append(MComponentDataIndexing) -> bool
 
@@ -903,60 +432,12 @@ class MComponentDataIndexingList(object):
         Remove a MComponentDataIndexing from the list.
         """
 
-class MDepthNormalizationDescription(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MDepthNormalizationDescription:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def fDepthBias(*args: Any, **kwargs: Any) -> Any:
         """Bias to apply to depth value"""
@@ -982,60 +463,12 @@ class MDepthNormalizationDescription(object):
     def fNearClipDistance(*args: Any, **kwargs: Any) -> Any:
         """Near clip plane of a camera"""
 
-class MDepthStencilState(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MDepthStencilState:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def desc(self: Self, *args: Any, **kwargs: Any) -> Any:
         """desc() -> MDepthStencilStateDesc
 
@@ -1057,60 +490,12 @@ class MDepthStencilState(object):
         For DirectX, a pointer to a Direct3D state will be returned.
         """
 
-class MDepthStencilStateDesc(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MDepthStencilStateDesc:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def backFace(*args: Any, **kwargs: Any) -> Any:
         """Sets the stencil op for the back facing fragments"""
@@ -1172,64 +557,11 @@ class MDepthStencilStateDesc(object):
         """Sets a bitwise stencil buffer write mask, default 0xff"""
 
 class MDrawContext(MFrameContext):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-    def classificationExclusions(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """classificationExclusions() -> [classification strings]
-
-        Get a list of drawdb strings for object which are excluded from display
-        """
     def copyCurrentColorRenderTarget(self: Self, *args: Any, **kwargs: Any) -> Any:
         """copyCurrentColorRenderTarget(string) -> MRenderTarget
 
@@ -1256,74 +588,11 @@ class MDrawContext(MFrameContext):
         Get a copy of the current depth render target as a texture.
         When the texture is no longer needed, MTextureManager::releaseTexture() should be called.
         """
-    def getBackgroundParameters(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getBackgroundParameters() -> [displayGradient, clearColorFlag, clearDepthFlag, clearStencilFlag, clearColor1, clearColor2, clearDepthValue, clearStencilValue]
-
-        Get parameters related to how the background is cleared
-        """
-    def getCurrentCameraPath(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getCurrentCameraPath() -> MDagPath
-
-        Get the path to the camera being used to render the current frame.
-        """
-    def getCurrentColorRenderTarget(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getCurrentColorRenderTarget() -> MRenderTarget
-
-        Get current color render target.
-        Calling code is responsible for invoking MRenderTargetManager::releaseRenderTarget() to release the reference to the target after use.
-        """
-    def getCurrentDepthRenderTarget(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getCurrentDepthRenderTarget() -> MRenderTarget
-
-        Get current depth render target.
-        Calling code is responsible for invoking MRenderTargetManager::releaseRenderTarget() to release the reference to the target after use.
-        """
-    def getDOFParameters(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getDOFParameters() -> [enabled, focalDistance, alpha]
-
-        Get the parameters generated by Maya for the circle-of-confusion depth shader used
-        for a pass used when computing depth of field.
-
-
-        This pass is indicated by the pass semantic MPassContext::kDOFPassSemantic.
-        The shader fragment used is called cocDepthSurface.
-        The XML wrapper can be queried from MFragmentManager or using the 'ogs -xml maya_CocDepthSurface' command.
-        """
     def getDepthRange(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getDepthRange() -> [float, float]
 
         Get the depth range which specifies the mapping of depth values from normalized device coordinates to window coordinates.
         The depth range values are normally 0.0 and 1.0.
-        """
-    def getDisplayStyle(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getDisplayStyle() -> int
-
-        The DisplayStyle enums can be use to test the bit field for the enabling of any
-        of the listed display modes. For example to test for wireframe on shaded the test
-        would be test against the bit for kGourandShaded or kFlatShaded as well as testing
-        against the bit for kWireframe.
-
-          MFrameContext.kGouraudShaded        Shaded display.
-          MFrameContext.kWireFrame            Wire frame display.
-          MFrameContext.kBoundingBox          Bounding box display.
-          MFrameContext.kTextured             Textured display.
-          MFrameContext.kDefaultMaterial      Default material display.
-          MFrameContext.kXrayJoint            X-ray joint display.
-          MFrameContext.kXray                 X-ray display.
-          MFrameContext.kTwoSidedLighting     Two-sided lighting enabled.
-          MFrameContext.kFlatShaded	         Flat shading display.
-          MFrameContext.kShadeActiveOnly      Shade active object only.
-          MFrameContext.kXrayActiveComponents X-ray active components.
-          MFrameContext.kBackfaceCulling		 Backface culling enabled.
-          MFrameContext.kSmoothWireframe	     Smooth wireframe enabled.
-        """
-    def getEnvironmentParameters(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getEnvironmentParameters() -> [bool, string]
-
-        Get parameters for currently used environment. Note that this information is set
-        per viewport and so might change between draw calls if multiple viewports are
-        displayed at the same time.
-        Return the destination (type and name) that the renderer is drawing to.
         """
     def getFrameStamp(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getFrameStamp() -> long
@@ -1335,84 +604,20 @@ class MDrawContext(MFrameContext):
 
         Get the bounding box of the current view frustum in world space.
         """
-    def getGlobalLineWidth(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getGlobalLineWidth() -> float
-
-        Get global line width.
-        """
-    def getHwFogParameters(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getHwFogParameters() -> [enabled, mode, start, end, density, color]
-
-        Get all the hardware fog parameters.
-
-        Hardware fog parameters include:
-
-        - hardware fog enabled
-        - hardware fog mode: Linear, Exponential, Exponential squared.
-          The possible values are:
-             MFrameContext::kFogLinear : Linear fog
-             MFrameContext::kFogExp : Exponential fog
-             MFrameContext::kFogExp2 : Exponential squared fog
-        - hardware fog start: The near distance used in the linear fog.
-        - hardware fog end: The far distance used in the linear fog.
-        - hardware fog density: The density of the exponential fog.
-        - hardware fog color: (r, g, b, a).
-        """
     def getLightInformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getLightInformation(lightNumber, lightFilter=kFilteredToLightLimit) -> [positions, direction, intensity, color, hasDirection, hasPosition]
 
         Return common lighting information for a given active light.
-        """
-    def getLightLimit(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getLightLimit() -> int
-
-        Get the current light limit.
         """
     def getLightParameterInformation(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getLightParameterInformation(lightNumber, lightFilter=kFilteredToLightLimit) -> MLightParameterInformation
 
         Return parameter information for a given active light.
         """
-    def getLightingMode(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getLightingMode() -> int
-
-        Get the current light mode.
-
-          MFrameContext.kNoLighting	      Use no light
-          MFrameContext.kAmbientLight      Use global ambient light
-          MFrameContext.kLightDefault      Use default light
-          MFrameContext.kSelectedLights    Use lights which are selected
-          MFrameContext.kSceneLights       Use all lights in the scene
-          MFrameContext.kCustomLights      Use a custom set of lights which are not part of the scene. Currently this applies for use in the Hypershade Material Viewer panel
-        """
-    def getMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getMatrix(int) -> MMatrix
-
-        Get a matrix value of a certain type.
-        Note that not all types are available for querying in MFrameContext.
-        Return None if matrix type not available from MFrameContext.
-        For a list of matrix type, see MDrawContext.semanticToMatrixType() description.
-        """
     def getPassContext(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getPassContext() -> MPassContext
 
         Access the current pass context.
-        """
-    def getPostEffectEnabled(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getPostEffectEnabled(int) -> bool
-
-        Returns if a given post effect is currently enabled.
-
-          MFrameContext.kAmbientOcclusion    Screen-space ambient occlusion
-          MFrameContext.kMotionBlur          2D Motion blur
-          MFrameContext.kGammaCorrection     Gamma correction
-          MFrameContext.kDepthOfField        Depth of field
-          MFrameContext.kAntiAliasing        Hardware multi-sampling
-        """
-    def getRenderOverrideInformation(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getRenderOverrideInformation() -> [overrideName]
-
-        Get information about any render override
         """
     def getRenderTargetSize(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getRenderTargetSize() -> [int, int]
@@ -1430,298 +635,20 @@ class MDrawContext(MFrameContext):
 
         Access the GPU state manager for the current draw context.
         """
-    def getTransparencyAlgorithm(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getTransparencyAlgorithm() -> int
-
-        Get the current transparency algoritm.
-
-          MFrameContext.kUnsorted            Unsorted transparent object drawing
-          MFrameContext.kObjectSorting       Object sorting of transparent objects
-          MFrameContext.kWeightedAverage     Weight average transparency
-          MFrameContext.kDepthPeeling        Depth-peel transparency
-        """
-    def getTuple(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getTuple(int) -> MDoubleArray
-
-        Get a tuple (vector, position or single) value of a certain type.
-        Note that not all types are available for querying in MFrameContext.
-        Return None if unknown tuple type.
-        """
-    def getViewportDimensions(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getViewportDimensions() -> [originX, originY, width, height]
-
-        Get the viewport dimensions. The origin is the upper left corner of the viewport.
-        """
-    def inUserInteraction(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """inUserInteraction() -> bool
-
-        Returns True during any interactive refresh, as when user is interacting with the scene
-        in any way including camera changes, object or component TRS changes, etc.
-        """
-    k2dViewport: int = ...
-    k3dViewport: int = ...
-    kAmbientLight: int = ...
-    kAmbientOcclusion: int = ...
-    kAntiAliasing: int = ...
-    kBackfaceCulling: int = ...
-    kBoundingBox: int = ...
-    kCustomLights: int = ...
-    kDefaultMaterial: int = ...
-    kDepthOfField: int = ...
-    kDepthPeeling: int = ...
-    kExcludeAll: int = ...
-    kExcludeCVs: int = ...
-    kExcludeCameras: int = ...
-    kExcludeClipGhosts: int = ...
-    kExcludeControllers: int = ...
-    kExcludeDeformers: int = ...
-    kExcludeDimensions: int = ...
-    kExcludeDynamicConstraints: int = ...
-    kExcludeDynamics: int = ...
-    kExcludeFluids: int = ...
-    kExcludeFollicles: int = ...
-    kExcludeGreasePencils: int = ...
-    kExcludeGrid: int = ...
-    kExcludeHUD: int = ...
-    kExcludeHairSystems: int = ...
-    kExcludeHoldOuts: int = ...
-    kExcludeHulls: int = ...
-    kExcludeIkHandles: int = ...
-    kExcludeImagePlane: int = ...
-    kExcludeJoints: int = ...
-    kExcludeLights: int = ...
-    kExcludeLocators: int = ...
-    kExcludeManipulators: int = ...
-    kExcludeMeshes: int = ...
-    kExcludeMotionTrails: int = ...
-    kExcludeNCloths: int = ...
-    kExcludeNParticles: int = ...
-    kExcludeNRigids: int = ...
-    kExcludeNone: int = ...
-    kExcludeNurbsCurves: int = ...
-    kExcludeNurbsSurfaces: int = ...
-    kExcludeParticleInstancers: int = ...
-    kExcludePivots: int = ...
-    kExcludePlanes: int = ...
-    kExcludePluginShapes: int = ...
-    kExcludeSelectHandles: int = ...
-    kExcludeStrokes: int = ...
-    kExcludeSubdivSurfaces: int = ...
-    kExcludeTextures: int = ...
-    kFilteredIgnoreLightLimit: int = ...
-    kFilteredToLightLimit: int = ...
-    kFlatShaded: int = ...
-    kFogExp: int = ...
-    kFogExp2: int = ...
-    kFogLinear: int = ...
-    kGammaCorrection: int = ...
-    kGouraudShaded: int = ...
-    kImage: int = ...
-    kLightDefault: int = ...
-    kMotionBlur: int = ...
-    kNoLighting: int = ...
-    kObjectSorting: int = ...
-    kProjectionInverseMtx: int = ...
-    kProjectionMtx: int = ...
-    kProjectionTranposeMtx: int = ...
-    kProjectionTranspInverseMtx: int = ...
-    kSceneLights: int = ...
-    kSelectedLights: int = ...
-    kShadeActiveOnly: int = ...
-    kSmoothWireframe: int = ...
-    kTextured: int = ...
-    kTwoSidedLighting: int = ...
-    kUnsorted: int = ...
-    kViewColorTransformEnabled: int = ...
-    kViewDirection: int = ...
-    kViewFarClipValue: int = ...
-    kViewInverseMtx: int = ...
-    kViewMtx: int = ...
-    kViewNearClipValue: int = ...
-    kViewPosition: int = ...
-    kViewProjInverseMtx: int = ...
-    kViewProjMtx: int = ...
-    kViewProjTranposeMtx: int = ...
-    kViewProjTranspInverseMtx: int = ...
-    kViewRight: int = ...
-    kViewTranspInverseMtx: int = ...
-    kViewTransposeMtx: int = ...
-    kViewUnnormalizedFarClipValue: int = ...
-    kViewUnnormlizedNearClipValue: int = ...
-    kViewUp: int = ...
-    kViewportPixelSize: int = ...
-    kWeightedAverage: int = ...
-    kWireFrame: int = ...
-    kWireFrameOnShadedNone: int = ...
-    kWireFrameOnShadedReduced: int = ...
-    kWireframeOnShadedFull: int = ...
-    kWorldInverseMtx: int = ...
-    kWorldMtx: int = ...
-    kWorldTranspInverseMtx: int = ...
-    kWorldTransposeMtx: int = ...
-    kWorldViewInverseMtx: int = ...
-    kWorldViewMtx: int = ...
-    kWorldViewProjInverseMtx: int = ...
-    kWorldViewProjMtx: int = ...
-    kWorldViewProjTranspInverseMtx: int = ...
-    kWorldViewProjTransposeMtx: int = ...
-    kWorldViewTranspInverseMtx: int = ...
-    kWorldViewTransposeMtx: int = ...
-    kXray: int = ...
-    kXrayActiveComponents: int = ...
-    kXrayJoint: int = ...
     def numberOfActiveLights(self: Self, *args: Any, **kwargs: Any) -> Any:
         """numberOfActiveLights(lightFilter=kFilteredToLightLimit) -> int
 
         Return the number of available lights to render the scene,
         only considering lights which pass the filter option.
         """
-    def objectTypeExclusions(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """objectTypeExclusions() -> long
-
-        Get the object type exclusions as a bitfield.
-        	The bitfield can be tested using the bits defined by class statics starting with kExclude.
-        """
-    def renderingDestination(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """renderingDestination() -> [int, destinationName]
-
-        Return the destination (type and name) that the renderer is drawing to.
-
-          MFrameContext.k3dViewport    Rendering to an interactive 3d viewport
-          MFrameContext.k2dViewport    Rendering to an interactive 2d viewport such as the render view
-          MFrameContext.kImage         Rendering to an image
-        """
-    def semanticToMatrixType(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """semanticToMatrixType(string) -> int
-
-        Given a semantic name return the corresponding matrix enumeration that can be used to retrieve a matrix value via the getMatrix() method.
-
-          MFrameContext.kWorldMtx                        Object to world matrix
-          MFrameContext.kWorldTransposeMtx               Object to world matrix transpose
-          MFrameContext.kWorldInverseMtx                 Object to world matrix inverse
-          MFrameContext.kWorldTranspInverseMtx           Object to world matrix transpose inverse (adjoint)
-          MFrameContext.kViewMtx                         World to view matrix
-          MFrameContext.kViewTransposeMtx                World to view matrix tranpose
-          MFrameContext.kViewInverseMtx                  World to view matrix inverse
-          MFrameContext.kViewTranspInverseMtx            World to view matrix transpose inverse (adjoint)
-          MFrameContext.kProjectionMtx                   Projection matrix
-          MFrameContext.kProjectionTranposeMtx           Projection matrix tranpose
-          MFrameContext.kProjectionInverseMtx            Projection matrix inverse
-          MFrameContext.kProjectionTranspInverseMtx      Projection matrix tranpose inverse (adjoint)
-          MFrameContext.kViewProjMtx                     View * projection matrix
-          MFrameContext.kViewProjTranposeMtx             View * projection matrix tranpose
-          MFrameContext.kViewProjInverseMtx              View * projection matrix inverse
-          MFrameContext.kViewProjTranspInverseMtx        View * projection matrix tranpose inverse (adjoint)
-          MFrameContext.kWorldViewMtx                    World * view matrix
-          MFrameContext.kWorldViewTransposeMtx           World * view matrix transpose
-          MFrameContext.kWorldViewInverseMtx             World * view matrix inverse
-          MFrameContext.kWorldViewTranspInverseMtx       World * view matrix transpose inverse (adjoint)
-          MFrameContext.kWorldViewProjMtx                World * view * projection matrix
-          MFrameContext.kWorldViewProjTransposeMtx       World * view * projection matrix transpose
-          MFrameContext.kWorldViewProjInverseMtx         World * view * projection matrix inverse
-          MFrameContext.kWorldViewProjTranspInverseMtx   World * view * projection matrix tranpose inverse (adjoint)
-        """
-    def semanticToTupleType(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """semanticToTupleType(string) -> int
-
-        Given a semantic name return the corresponding tuple enumeration that can be used to retrieve a value via the getTuple() method.
-
-          MFrameContext.kViewPosition         View position
-          MFrameContext.kViewDirection        View direction vector
-          MFrameContext.kViewUp               View up vector
-          MFrameContext.kViewRight            View right vector
-          MFrameContext.kViewportPixelSize    Viewport size in pixels (single value)
-          MFrameContext.kViewNearClipValue    Camera near clip value (single value)
-          MFrameContext.kViewFarClipValue     Camera far clip value (single value)
-          MFrameContext.kViewUnnormlizedNearClipValue Unnormalized camera near clip value (single value)
-        	 MFrameContext.kViewUnnormalizedFarClipValue Unnormalized camera far clip value (single value)
-        """
-    def shadeTemplates(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """shadeTemplates() -> bool
-
-        Returns the display preference indicating whether templated objects should be drawn shaded.
-        """
-    def userChangingViewContext(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """userChangingViewContext() -> bool
-
-        Returns True during any interactive refresh, as when user is	changing the view using view context
-        tools such as tumble, dolly or track.
-        """
     def viewDirectionAlongNegZ(self: Self, *args: Any, **kwargs: Any) -> Any:
         """viewDirectionAlongNegZ() -> bool
 
         Return whether the view direction is pointing down the -Z axis.
         """
-    def wireOnShadedMode(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """wireOnShadedMode() -> int
 
-        Returns the global user display preference which indicates how wireframe should be drawn on top of objects while in shaded mode.
-
-        Please refer to documentation on the 'Wireframe-on-shaded' option under the 'Display->View' tab in the preferences window.
-
-        Note that 'viewport in wireframe on shaded mode' is a different option which is per viewport. This can be tested by testing if
-        a shaded mode is set as well as wireframe mode. Refer to the enumerations DisplayStyle and the method getDisplayStyle().
-
-
-          MFrameContext.kWireframeOnShadedFull      Draw wireframe
-          MFrameContext.kWireFrameOnShadedReduced   Draw wireframe but with reduced quality
-          MFrameContext.kWireFrameOnShadedNone      Do not draw wireframe
-        """
-
-class MDrawRegistry(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MDrawRegistry:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
-    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def deregisterComponentConverter(self: Self, *args: Any, **kwargs: Any) -> Any:
         """deregisterComponentConverter(renderItemName) -> None
 
@@ -1843,60 +770,12 @@ class MDrawRegistry(object):
         Register an implementation of MPxVertexBufferMutator to provide custom vertex streams for shapes.
         """
 
-class MFragmentManager(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MFragmentManager:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addAutomaticShaderStageInput(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addAutomaticShaderStageInput(int, string, string, int, bool) -> bool
 
@@ -2074,60 +953,12 @@ class MFragmentManager(object):
         Set the path to use for dumping intermediate fragment graph XML files.
         """
 
-class MFrameContext(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MFrameContext:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def classificationExclusions(self: Self, *args: Any, **kwargs: Any) -> Any:
         """classificationExclusions() -> [classification strings]
 
@@ -2485,60 +1316,12 @@ class MFrameContext(object):
           MFrameContext.kWireFrameOnShadedNone      Do not draw wireframe
         """
 
-class MGeometry(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MGeometry:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addIndexBuffer(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addIndexBuffer(MIndexBuffer) -> bool
 
@@ -2691,60 +1474,12 @@ class MGeometry(object):
         Get the number of vertex buffers contained in this MGeometry object.
         """
 
-class MGeometryExtractor(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MGeometryExtractor:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     kPolyGeom_BaseMesh: int = ...
     kPolyGeom_Normal: int = ...
     kPolyGeom_NotSharing: int = ...
@@ -2795,52 +1530,12 @@ class MGeometryExtractor(object):
         Call this method before calling populateVertexBuffer to determine the minimum size the buffer passed into populateVertexBuffer needs to be.
         """
 
-class MGeometryIndexMapping(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MGeometryIndexMapping:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -2877,52 +1572,12 @@ class MGeometryIndexMapping(object):
         The index start represents the offset of the geometry index data in the index buffer of the consolidated render item.
         """
 
-class MGeometryRequirements(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MGeometryRequirements:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -2952,52 +1607,8 @@ class MGeometryRequirements(object):
         Get a list of descriptors that specify the vertex geometry requirements of this object.
         """
 
-class MGeometryUtilities(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MGeometryUtilities:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
-    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -3061,59 +1672,11 @@ class MGeometryUtilities(object):
         """
 
 class MHUDRender(MRenderOperation):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addUIDrawables(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addUIDrawables(drawManager2D, frameContext) -> self
 
@@ -3124,98 +1687,24 @@ class MHUDRender(MRenderOperation):
         * drawManager2D (MUIDrawManager) - A UI draw manager which can be used to draw simple 2D geometry, including text. When passing coordinates to the draw manager's methods, only X and Y have meaning. The origin (0, 0) is in the lower-left corner of the view.
         * frameContext (MFrameContext) - Frame level context information.
         """
-    def enableSRGBWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """enableSRGBWrite() -> bool
-
-        Return whether to enable GPU based gamma correction during pixel writes.
-        """
     def hasUIDrawables(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasUIDrawables() -> bool
 
         Query whether addUIDrawables() should be called or not.
         """
-    kClear: int = ...
-    kHUDRender: int = ...
-    kPresentTarget: int = ...
-    kQuadRender: int = ...
-    kSceneRender: int = ...
-    kUserDefined: int = ...
     def name(self: Self, *args: Any, **kwargs: Any) -> Any:
         """name() -> string
 
         Returns the unique name for a hud render operation.
         Note that all HUD operations share the same name since they need not be distinguished from one another.
         """
-    def operationType(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """operationType() -> int
 
-        Returns the type of a render operator.
-        """
-    def targetOverrideList(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """targetOverrideList() -> list of MRenderTarget
-
-        Return a list of render target which will be used as the target overrides for the operation.
-        """
-    def viewportRectangleOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """viewportRectangleOverride() -> MFloatPoint
-
-        Query for a viewport rectangle override.
-        """
-
-class MIndexBuffer(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MIndexBuffer:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def acquire(self: Self, *args: Any, **kwargs: Any) -> Any:
         """acquire(size, writeOnly) -> long
 
@@ -3325,52 +1814,12 @@ class MIndexBuffer(object):
                                      will not cause a reallocation and will not lose data before the destOffset.
         """
 
-class MIndexBufferDescriptor(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MIndexBufferDescriptor:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -3475,64 +1924,16 @@ class MIndexBufferDescriptor(object):
         Only meaningful when 'primitive' is set to kPatch.
         """
 
-class MIndexBufferDescriptorList(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MIndexBufferDescriptorList:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def append(self: Self, *args: Any, **kwargs: Any) -> Any:
         """append(MIndexBufferDescriptor) -> bool
 
@@ -3549,60 +1950,12 @@ class MIndexBufferDescriptorList(object):
         Remove a descriptor from the list and delete it.
         """
 
-class MInitContext(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MInitContext:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def dagPath(*args: Any, **kwargs: Any) -> Any:
         """A path to the instance of the Maya DAG object for which the shader is being initialized"""
@@ -3616,60 +1969,12 @@ class MInitContext(object):
     def shader(*args: Any, **kwargs: Any) -> Any:
         """The Maya shading node this override is used for"""
 
-class MInitFeedback(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MInitFeedback:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def customData(*args: Any, **kwargs: Any) -> Any:
         """Optional user data to be associated with the render item for the shader assignment"""
@@ -3677,60 +1982,12 @@ class MInitFeedback(object):
     def customData(*args: Any, **kwargs: Any) -> Any:
         """Optional user data to be associated with the render item for the shader assignment"""
 
-class MIntersection(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MIntersection:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def barycentricCoordinates(*args: Any, **kwargs: Any) -> Any:
         """Get the barycentric coordinates (a, b). Only valid for triangles.
@@ -3788,24 +2045,8 @@ class MIntersection(object):
         See MSelectionContext::selectionLevel for list of valid level values.
         """
 
-class MLightParameterInformation(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MLightParameterInformation:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -3814,34 +2055,8 @@ class MLightParameterInformation(object):
         The default implementation does nothing. It may be
         overridden to extend subclasses.
         """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def arrayParameterCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """arrayParameterCount(string) -> int
 
@@ -3958,60 +2173,12 @@ class MLightParameterInformation(object):
           MDrawContext.kSampler        Sampler
         """
 
-class MPassContext(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MPassContext:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def hasShaderOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasShaderOverride() -> bool
 
@@ -4064,83 +2231,11 @@ class MPassContext(object):
         """
 
 class MPresentTarget(MRenderOperation):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-    def enableSRGBWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """enableSRGBWrite() -> bool
-
-        Return whether to enable GPU based gamma correction during pixel writes.
-        """
-    kCenterBuffer: int = ...
-    kClear: int = ...
-    kHUDRender: int = ...
-    kLeftBuffer: int = ...
-    kPresentTarget: int = ...
-    kQuadRender: int = ...
-    kRightBuffer: int = ...
-    kSceneRender: int = ...
-    kUserDefined: int = ...
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """name() -> string
-
-        Returns the name of the render operator.
-        """
-    def operationType(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """operationType() -> int
-
-        Returns the type of a render operator.
-        """
     def presentDepth(self: Self, *args: Any, **kwargs: Any) -> Any:
         """presentDepth() -> bool
 
@@ -4166,71 +2261,13 @@ class MPresentTarget(MRenderOperation):
           MPresentTarget.kLeftBuffer     Left back-buffer
           MPresentTarget.kRightBuffer    Right back-buffer
         """
-    def targetOverrideList(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """targetOverrideList() -> list of MRenderTarget
 
-        Return a list of render target which will be used as the target overrides for the operation.
-        """
-    def viewportRectangleOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """viewportRectangleOverride() -> MFloatPoint
-
-        Query for a viewport rectangle override.
-        """
-
-class MPxComponentConverter(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MPxComponentConverter:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addIntersection(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addIntersection(intersection) -> self
 
@@ -4261,60 +2298,12 @@ class MPxComponentConverter(object):
         Returns the selection mask.
         """
 
-class MPxDrawOverride(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MPxDrawOverride:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addUIDrawables(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addUIDrawables(objPath, drawManager, frameContext, data) -> self
 
@@ -4535,60 +2524,12 @@ class MPxDrawOverride(object):
         If a custom hit test implementation is required, this method must be overridden to return true in order for userSelect() to be called.
         """
 
-class MPxGeometryOverride(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MPxGeometryOverride:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addUIDrawables(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addUIDrawables(path, drawManager, frameContext) -> self
 
@@ -4773,120 +2714,24 @@ class MPxGeometryOverride(object):
          selectionContext [OUT] (MSelectionContext) - The selection context
         """
 
-class MPxImagePlaneOverride(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MPxImagePlaneOverride:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def supportedDrawAPIs(self: Self, *args: Any, **kwargs: Any) -> Any:
         """supportedDrawAPIs() -> DrawAPI
 
         Returns the draw API supported by this override.
         """
 
-class MPxIndexBufferMutator(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MPxIndexBufferMutator:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def mutateIndexing(self: Self, *args: Any, **kwargs: Any) -> Any:
         """mutateIndexing(sourceIndexBuffers, vertexBuffers, indexBuffer) -> (int, int)
 
@@ -4900,60 +2745,12 @@ class MPxIndexBufferMutator(object):
         See MGeometry.primitiveString() description for a list of valid primitive types.
         """
 
-class MPxPrimitiveGenerator(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MPxPrimitiveGenerator:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def computeIndexCount(self: Self, *args: Any, **kwargs: Any) -> Any:
         """computeIndexCount(object, component) -> int
 
@@ -4977,60 +2774,12 @@ class MPxPrimitiveGenerator(object):
         See MGeometry.primitiveString() description for a list of valid primitive types.
         """
 
-class MPxShaderOverride(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MPxShaderOverride:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def activateKey(self: Self, *args: Any, **kwargs: Any) -> Any:
         """activateKey(context, key) -> self
 
@@ -5316,60 +3065,12 @@ class MPxShaderOverride(object):
         device. This is the only place that the graphics device may be safely accessed other than at draw time.
         """
 
-class MPxShadingNodeOverride(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MPxShadingNodeOverride:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def allowConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
         """allowConnections() -> bool
 
@@ -5497,60 +3198,12 @@ class MPxShadingNodeOverride(object):
         * plug (MPlug) - The plug that changed, may be None.
         """
 
-class MPxSubSceneOverride(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MPxSubSceneOverride:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addInstanceTransform(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addInstanceTransform(renderItem, transform) -> int
 
@@ -5766,74 +3419,10 @@ class MPxSubSceneOverride(object):
         """
 
 class MPxSurfaceShadingNodeOverride(MPxShadingNodeOverride):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
-    __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-    def allowConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """allowConnections() -> bool
-
-        Returns True if connections should be allowed to parameters of the fragment that do not have custom mappings that
-        specifically prevent connections.
-
-        An override may prevent Maya from connecting fragments to specific parameters of the fragment for this
-        override by providing custom attribute parameter mappings. It is also possible to prevent connections to all
-        parameters on the fragment by overriding this method to return False.
-        In that case, the fragment for this override will become a final fragment, and nothing will be connected to it.
-        This is equivalent to creating an attribute parameter mapping for every parameter on the fragment and setting
-        the allowConnection flag on each mapping to False.
-
-        This method is called once only, just after creation of the override.
-        """
     def bumpAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
         """bumpAttribute() -> string
 
@@ -5847,61 +3436,6 @@ class MPxSurfaceShadingNodeOverride(MPxShadingNodeOverride):
         and bump mapping will not work for the associated shader.
 
         The default implementation returns the empty string (no bump).
-        """
-    def fragmentName(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """fragmentName() -> string
-
-        Override this method to return the name of the fragment or fragment graph to use for rendering the shading node associated with this override. This fragment will be automatically connected to the other fragments for the other nodes in the shading network to produce a complete shading effect.
-
-        A fragment with the returned name must already exist in the fragment manager for rendering to succeed. If the fragment does not exist, the associated node will not contribute to shading.
-
-        The parameter values for the fragment will be automatically populated from the attribute values on the node wherever the name and type of a parameter on the fragment match the name and type of an attribute on the node.
-
-        The fragment will only be connected to the other fragments in the graph if the output parameter of the fragment has the same name as the output attribute of the node that is connected to the rest of the shading network. To support multiple output attributes of a node, the fragment should return a "struct" type parameter. The names of the members of the struct should match the names of the output attributes for which support is desired. The fragment must compute all output attributes on every execution.
-
-        Returns the name of the fragment to use
-        """
-    def getCustomMappings(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getCustomMappings(mappings) -> self
-
-        Maya will automatically match parameters on the shade fragment specified by this override with attributes on the
-        associated Maya node as long as the names and types match. In order to specify custom attribute parameter mappings,
-        override this method.
-
-        This method will be called before Maya performs its automatic matching so it can be used to prevent that process by
-        defining mappings for parameters that would normally be mapped automatically.
-        Such mappings will take precedence over automatic mappings.
-
-        It is an error to provide more than one mapping per fragment parameter.
-        Only the first such mapping will be used.
-
-        The same attribute may be used for multiple parameters.
-
-        By default, this method defines no custom mappings.
-
-        * mappings [OUT] (MAttributeParameterMappingList) - An attribute parameter mapping list; fill with any desired custom mappings.
-        """
-    def outputForConnection(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """outputForConnection(sourcePlug, destinationPlug) -> string
-
-        Returns the name of an output parameter on the fragment for the override.
-
-        When Maya attempts to connect the fragment for this override to the fragment for another node in the shading network,
-        it will call this method to get the name of the output on the fragment to use for the connection.
-        By default, this will simply return the name of the output attribute on the node for the override that is driving the connection.
-        Override this method to specify that a different output of the fragment should be used instead.
-        This method may also be overridden to get information about how and where the fragment is being connected.
-
-        If the output of the fragment is of "struct" type, this method should return the name of one of the members of the struct.
-
-        This method is called after getCustomMappings().
-
-        If the name returned does not match the name of any output parameter (or struct member in the case of struct output) on the
-        fragment for this override then the fragment will not be connected to the overall shading effect.
-
-        * sourcePlug (MPlug) - The plug on the node for this override which is the source of the connection.
-                               By default the name of the attribute for this plug is returned.
-        * destinationPlug (MPlug) - The plug on the node which is the destination of the connection.
         """
     def primaryColorParameter(self: Self, *args: Any, **kwargs: Any) -> Any:
         """primaryColorParameter() -> string
@@ -5918,11 +3452,6 @@ class MPxSurfaceShadingNodeOverride(MPxShadingNodeOverride):
         The name must correspond to a parameter on the fragment that is mapped to an attribute on the node either automatically
         or through custom attribute parameter mappings.
         """
-    def supportedDrawAPIs(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """supportedDrawAPIs() -> DrawAPI
-
-        Returns the draw API supported by this override.
-        """
     def transparencyParameter(self: Self, *args: Any, **kwargs: Any) -> Any:
         """transparencyParameter() -> string
 
@@ -5938,112 +3467,13 @@ class MPxSurfaceShadingNodeOverride(MPxShadingNodeOverride):
         The name must correspond to a parameter on the fragment that is mapped to an attribute on the node either automatically
         or through custom attribute parameter mappings.
         """
-    def updateDG(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """updateDG() -> self
 
-        This method is called every time Maya needs to update the parameter values on the final shading effect of which the fragment
-        produced by this override is a part. In this method implementations should query and cache any values needed for setting
-        parameters on the final shading effect in updateShader().
-        """
-    def updateShader(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """updateShader(shader, mappings) -> self
-
-        This method is called every time Maya needs to update the parameter values on the final shading effect of which the fragment
-        produced by this override is a part. Implementations may use the information from the mappings list to set parameter values on
-        the shader. The list contains all parameter mappings for the override, both automatic and custom. Although it is possible to set
-        the value for any parameter on the shader it is an error to do so for parameters which are not defined by the fragment for this
-        override and doing so may result in unpredictable behaviour.
-
-        The default implementation does nothing. Note that values for parameters with valid attribute parameter mappings will be set
-        automatically. This method need only be overridden if custom behaviour is required.
-
-        For performance, consider caching the resolved parameter names of parameters needing update the first time this method is called.
-        This will avoid searching the mappings list and then retrieving the resolved name from the mapping on each update. Resolved names
-        are guaranteed to remain constant until the next time fragmentName() is called. Const pointers to individual mappings may also be
-        cached in this way and are valid for the same duration.
-        Do not attempt to cache mappings created in the getCustomMappings() method.
-
-        It is an error to attempt to access the Maya dependency graph from within updateShader().
-        Any attempt to do so will result in instability. Required data should be retrieved and cached in updateDG().
-
-        * shader (MShaderInstance) - The shader instance.
-        * mappings (MAttributeParameterMappingList) - The attribute parameter mappings for this override.
-        """
-    def valueChangeRequiresFragmentRebuild(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """valueChangeRequiresFragmentRebuild(plug) -> bool
-
-        Returns True if a change in attribute values should cause a rebuild of the complete shading effect.
-
-        This method will be called by Maya when it detects changes in the attribute values of nodes in the shading network.
-        If this method returns True, Maya will assume that the change means that a new configuration of the total fragment graph
-        is necessary and it will trigger a rebuild of the complete shading effect. This will cause fragmentName() to be invoked
-        again at which point a different fragment name could be returned.
-
-        For example, if a texture node has multiple modes, each implemented with a different fragment, then a change to the active
-        mode would require the shading effect to be rebuilt in order to switch which fragment is used.
-
-        The plug parameter passed in is Maya's best attempt at informing the implementation of what changed. However due to the
-        nature of the change management system a single source plug cannot always be determined in which case the plug may be NULL.
-
-        The default implementation returns False.
-
-        * plug (MPlug) - The plug that changed, may be None.
-        """
-
-class MPxVertexBufferGenerator(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MPxVertexBufferGenerator:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def createVertexStream(self: Self, *args: Any, **kwargs: Any) -> Any:
         """createVertexStream(object, vertexBuffer, targetIndexing, sharedIndexing, sourceStreams) -> self
 
@@ -6072,60 +3502,12 @@ class MPxVertexBufferGenerator(object):
         * sourceStreams [OUT] (list of strings) - Array of strings.
         """
 
-class MPxVertexBufferMutator(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MPxVertexBufferMutator:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def modifyVertexStream(self: Self, *args: Any, **kwargs: Any) -> Any:
         """modifyVertexStream(object, vertexBuffer, targetIndexing) -> self
 
@@ -6139,59 +3521,10 @@ class MPxVertexBufferMutator(object):
         """
 
 class MQuadRender(MRenderOperation):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
-    __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def blendStateOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
         """blendStateOverride() -> MBlendState
 
@@ -6207,33 +3540,12 @@ class MQuadRender(MRenderOperation):
 
         Query if a depth-stencil state override is performed by this quad operation.
         """
-    def enableSRGBWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """enableSRGBWrite() -> bool
-
-        Return whether to enable GPU based gamma correction during pixel writes.
-        """
-    kClear: int = ...
-    kHUDRender: int = ...
-    kPresentTarget: int = ...
-    kQuadRender: int = ...
-    kSceneRender: int = ...
-    kUserDefined: int = ...
     @property
     def mClearOperation(*args: Any, **kwargs: Any) -> Any:
         """Clear operation"""
     @mClearOperation.setter
     def mClearOperation(*args: Any, **kwargs: Any) -> Any:
         """Clear operation"""
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """name() -> string
-
-        Returns the name of the render operator.
-        """
-    def operationType(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """operationType() -> int
-
-        Returns the type of a render operator.
-        """
     def rasterizerStateOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
         """rasterizerStateOverride() -> MRasterizerState
 
@@ -6244,71 +3556,13 @@ class MQuadRender(MRenderOperation):
 
         Get the shader to use when rendering a quad.
         """
-    def targetOverrideList(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """targetOverrideList() -> list of MRenderTarget
 
-        Return a list of render target which will be used as the target overrides for the operation.
-        """
-    def viewportRectangleOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """viewportRectangleOverride() -> MFloatPoint
-
-        Query for a viewport rectangle override.
-        """
-
-class MRasterizerState(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MRasterizerState:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def desc(self: Self, *args: Any, **kwargs: Any) -> Any:
         """desc() -> MRasterizerStateDesc
 
@@ -6327,60 +3581,12 @@ class MRasterizerState(object):
         For DirectX, a pointer to a Direct3D state will be returned.
         """
 
-class MRasterizerStateDesc(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MRasterizerStateDesc:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def antialiasedLineEnable(*args: Any, **kwargs: Any) -> Any:
         """Enables HW anti-aliased lines, auto disabled by multi-sample AA, default false"""
@@ -6453,7 +3659,7 @@ class MRasterizerStateDesc(object):
     def slopeScaledDepthBias(*args: Any, **kwargs: Any) -> Any:
         """Slope scaled depth bias value, default 0"""
 
-class MRenderItem(object):
+class MRenderItem:
     DecorationItem: int = ...
     DrawOnlyWhenDefaultMaterialActive: int = ...
     IgnoreDefaultMaterialMode: int = ...
@@ -6465,51 +3671,11 @@ class MRenderItem(object):
     NonMaterialSceneItem: int = ...
     OverrideNonMaterialItem: int = ...
     SkipWhenDefaultMaterialActive: int = ...
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -6947,56 +4113,16 @@ class MRenderItem(object):
         Returns True if this render item is eligible for consolidation in sub scene overrides.
         """
 
-class MRenderItemList(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MRenderItemList:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -7037,60 +4163,12 @@ class MRenderItemList(object):
         Remove the item at the specified index. Item is deleted.
         """
 
-class MRenderOperation(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MRenderOperation:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def enableSRGBWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
         """enableSRGBWrite() -> bool
 
@@ -7123,60 +4201,12 @@ class MRenderOperation(object):
         Query for a viewport rectangle override.
         """
 
-class MRenderOverride(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MRenderOverride:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def cleanup(self: Self, *args: Any, **kwargs: Any) -> Any:
         """cleanup() -> self
 
@@ -7244,60 +4274,12 @@ class MRenderOverride(object):
         Returns the user interface name for the override.
         """
 
-class MRenderParameters(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MRenderParameters:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def getParameter(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getParameter(parameterName, bool) -> self
         getParameter(parameterName, int) -> self
@@ -7355,60 +4337,12 @@ class MRenderParameters(object):
         Set the value of the named parameter.
         """
 
-class MRenderProfile(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MRenderProfile:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addRenderer(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addRenderer(renderer) -> selfaddRenderer(name, version) -> self
 
@@ -7443,60 +4377,12 @@ class MRenderProfile(object):
         Return the number of renderers in this profile.
         """
 
-class MRenderTarget(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MRenderTarget:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def freeRawData(self: Self, *args: Any, **kwargs: Any) -> Any:
         """freeRawData(long) -> None
         Deallocate system memory - retrieved from rawData().
@@ -7528,60 +4414,12 @@ class MRenderTarget(object):
         Change the description of a render target.
         """
 
-class MRenderTargetAssignment(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MRenderTargetAssignment:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def target(*args: Any, **kwargs: Any) -> Any:
         """The render target"""
@@ -7589,60 +4427,12 @@ class MRenderTargetAssignment(object):
     def target(*args: Any, **kwargs: Any) -> Any:
         """The render target"""
 
-class MRenderTargetDescription(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MRenderTargetDescription:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def allowsUnorderedAccess(self: Self, *args: Any, **kwargs: Any) -> Any:
         """allowsUnorderedAccess() -> bool
 
@@ -7729,60 +4519,12 @@ class MRenderTargetDescription(object):
         Query the width of a 2D render target slice.
         """
 
-class MRenderTargetManager(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MRenderTargetManager:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def acquireRenderTarget(self: Self, *args: Any, **kwargs: Any) -> Any:
         """acquireRenderTarget(MRenderTargetDescription) -> MRenderTarget
         Acquire an instance of a render target.
@@ -7805,60 +4547,8 @@ class MRenderTargetManager(object):
         Deletes the MRenderTarget and releases the reference to the underlying target which is held by the MRenderTarget object.
         """
 
-class MRenderUtilities(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MRenderUtilities:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
-    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def acquireSwatchDrawContext(self: Self, *args: Any, **kwargs: Any) -> Any:
         """acquireSwatchDrawContext() -> MDrawContext
         acquireSwatchDrawContext(colorTarget) -> MDrawContext
@@ -7947,7 +4637,7 @@ class MRenderUtilities(object):
         Returns the default background color for the hardware rendered swatch.
         """
 
-class MRenderer(object):
+class MRenderer:
     def GPUDeviceHandle(self: Self, *args: Any, **kwargs: Any) -> Any:
         """GPUDeviceHandle() -> long
 
@@ -7966,59 +4656,7 @@ class MRenderer(object):
         Returns the maximum number of vertices allowed in a vertex buffer by the GPU device.
         0 if device has not been initialized.
         """
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
-    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def activeRenderOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
         """activeRenderOverride() -> string
 
@@ -8234,60 +4872,12 @@ class MRenderer(object):
         Set the name of a render override (MRenderOverride) for batch rendering.
         """
 
-class MSamplerState(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MSamplerState:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def desc(self: Self, *args: Any, **kwargs: Any) -> Any:
         """desc() -> MSamplerStateDesc
 
@@ -8314,60 +4904,12 @@ class MSamplerState(object):
         For DirectX, a pointer to a Direct3D state will be returned.
         """
 
-class MSamplerStateDesc(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MSamplerStateDesc:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def addressU(*args: Any, **kwargs: Any) -> Any:
         """Select the u coordinate addressing mode, default kTexWrap"""
@@ -8447,59 +4989,10 @@ class MSamplerStateDesc(object):
         """
 
 class MSceneRender(MRenderOperation):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
-    __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addPostUIDrawables(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addPostUIDrawables(drawManager, frameContext) -> self
 
@@ -8557,11 +5050,6 @@ class MSceneRender(MRenderOperation):
           MSceneRender.kBoundingBox            Display bounding boxes
           MSceneRender.kDefaultMaterial        Use default material. Only applicable if kShade or kFlatShaded is enabled.
           MSceneRender.kTextured               Display textured. Only applicable if kShade or kFlatShaded is enabled.
-        """
-    def enableSRGBWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """enableSRGBWrite() -> bool
-
-        Return whether to enable GPU based gamma correction during pixel writes.
         """
     def fragmentName(self: Self, *args: Any, **kwargs: Any) -> Any:
         """fragmentName() -> String
@@ -8623,12 +5111,7 @@ class MSceneRender(MRenderOperation):
 
         Query whether addUIDrawables() should be called or not.
         """
-    kAmbientLight: int = ...
     kBoundingBox: int = ...
-    kClear: int = ...
-    kCullBackFaces: int = ...
-    kCullFrontFaces: int = ...
-    kCullNone: int = ...
     kDefaultMaterial: int = ...
     kExcludeAll: int = ...
     kExcludeCVs: int = ...
@@ -8649,14 +5132,10 @@ class MSceneRender(MRenderOperation):
     kExcludeLights: int = ...
     kExcludeLocators: int = ...
     kExcludeManipulators: int = ...
-    kExcludeMeshes: int = ...
     kExcludeMotionTrails: int = ...
     kExcludeNCloths: int = ...
     kExcludeNParticles: int = ...
     kExcludeNRigids: int = ...
-    kExcludeNone: int = ...
-    kExcludeNurbsCurves: int = ...
-    kExcludeNurbsSurfaces: int = ...
     kExcludeParticleInstancers: int = ...
     kExcludePivots: int = ...
     kExcludePlanes: int = ...
@@ -8664,37 +5143,14 @@ class MSceneRender(MRenderOperation):
     kExcludeStrokes: int = ...
     kExcludeSubdivSurfaces: int = ...
     kExcludeTextures: int = ...
-    kFlatShaded: int = ...
-    kHUDRender: int = ...
-    kLightDefault: int = ...
-    kNoCullingOverride: int = ...
-    kNoDisplayModeOverride: int = ...
-    kNoLight: int = ...
-    kNoLightingModeOverride: int = ...
-    kNoSceneFilterOverride: int = ...
     kPostEffectDisableAll: int = ...
-    kPostEffectDisableDOF: int = ...
-    kPostEffectDisableMotionBlur: int = ...
-    kPostEffectDisableNone: int = ...
-    kPostEffectDisableSSAO: int = ...
-    kPresentTarget: int = ...
-    kQuadRender: int = ...
     kRenderAllItems: int = ...
     kRenderNonShadedItems: int = ...
-    kRenderOpaqueShadedItems: int = ...
     kRenderPostSceneUIItems: int = ...
-    kRenderPreSceneUIItems: int = ...
     kRenderShadedItems: int = ...
-    kRenderTransparentShadedItems: int = ...
     kRenderUIItems: int = ...
-    kSceneLights: int = ...
-    kSceneRender: int = ...
-    kSelectedLights: int = ...
     kShadeActiveOnly: int = ...
-    kShaded: int = ...
     kTextured: int = ...
-    kUserDefined: int = ...
-    kWireFrame: int = ...
     def lightModeOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
         """lightModeOverride() -> int
 
@@ -8713,11 +5169,6 @@ class MSceneRender(MRenderOperation):
     @mClearOperation.setter
     def mClearOperation(*args: Any, **kwargs: Any) -> Any:
         """Default clear operation object."""
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """name() -> string
-
-        Returns the name of the render operator.
-        """
     def objectSetOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
         """objectSetOverride() -> MSelectionList
 
@@ -8736,11 +5187,6 @@ class MSceneRender(MRenderOperation):
         Refer to the MObjectTypeExclusions enumeration on MSceneRender for possible values
 
         This method is deprecated. Use getObjectTypeExclusions instead.
-        """
-    def operationType(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """operationType() -> int
-
-        Returns the type of a render operator.
         """
     def postEffectsOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
         """postEffectsOverride() -> int
@@ -8817,71 +5263,13 @@ class MSceneRender(MRenderOperation):
         Query for shadow display override.
         By default a None value is returned indicating that no override is specified.
         """
-    def targetOverrideList(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """targetOverrideList() -> list of MRenderTarget
 
-        Return a list of render target which will be used as the target overrides for the operation.
-        """
-    def viewportRectangleOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """viewportRectangleOverride() -> MFloatPoint
-
-        Query for a viewport rectangle override.
-        """
-
-class MSelectionContext(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MSelectionContext:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     kComponent: int = ...
     kEdge: int = ...
     kFace: int = ...
@@ -8917,60 +5305,12 @@ class MSelectionContext(object):
           kVertex      Vertex level.
         """
 
-class MSelectionInfo(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MSelectionInfo:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def alignmentMatrix(*args: Any, **kwargs: Any) -> Any:
         """The alignment matrix.
@@ -9060,60 +5400,12 @@ class MSelectionInfo(object):
         * mask (MSelectionMask) - The mask to test.
         """
 
-class MShaderCompileMacro(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MShaderCompileMacro:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def definition(*args: Any, **kwargs: Any) -> Any:
         """Macro definition"""
@@ -9127,60 +5419,12 @@ class MShaderCompileMacro(object):
     def name(*args: Any, **kwargs: Any) -> Any:
         """Name of the macro"""
 
-class MShaderInstance(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MShaderInstance:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def activatePass(self: Self, *args: Any, **kwargs: Any) -> Any:
         """activatePass(MDrawContext, int) -> self
         Activates the given pass of the shader.
@@ -9477,60 +5721,12 @@ class MShaderInstance(object):
         shader fragments or any of the shader fragments is marked as hidden.
         """
 
-class MShaderManager(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MShaderManager:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addShaderIncludePath(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addShaderIncludePath(string) -> self
 
@@ -9724,60 +5920,12 @@ class MShaderManager(object):
         Query the list of shader search paths.
         """
 
-class MStateManager(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MStateManager:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def acquireBlendState(self: Self, *args: Any, **kwargs: Any) -> Any:
         """acquireBlendState(MBlendStateDesc) -> MBlendState
 
@@ -9883,60 +6031,12 @@ class MStateManager(object):
         * samplerState (MSamplerState) - The sampler state container object that was previously acquired.
         """
 
-class MStencilOpDesc(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MStencilOpDesc:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def setDefaults(self: Self, *args: Any, **kwargs: Any) -> Any:
         """setDefaults() -> self
 
@@ -9967,62 +6067,14 @@ class MStencilOpDesc(object):
     def stencilPassOp(*args: Any, **kwargs: Any) -> Any:
         """Stencil op to use when the fragment passes the stencil test, default kKeepStencil"""
 
-class MSubSceneContainer(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MSubSceneContainer:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def add(self: Self, *args: Any, **kwargs: Any) -> Any:
         """add(item) -> bool
 
@@ -10065,60 +6117,12 @@ class MSubSceneContainer(object):
         * name (string) - The name of the render item to remove.
         """
 
-class MSubSceneContainerIterator(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MSubSceneContainerIterator:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def destroy(self: Self, *args: Any, **kwargs: Any) -> Any:
         """destroy() -> self
 
@@ -10139,52 +6143,12 @@ class MSubSceneContainerIterator(object):
         The next call to the next() method will return the first render item in the container.
         """
 
-class MSwatchRenderBase(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MSwatchRenderBase:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -10254,60 +6218,12 @@ class MSwatchRenderBase(object):
         This method returns the node for which the swatch is required to be generated.
         """
 
-class MTargetBlendDesc(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MTargetBlendDesc:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def alphaBlendOperation(*args: Any, **kwargs: Any) -> Any:
         """The blend operation for alpha, default is add"""
@@ -10362,60 +6278,12 @@ class MTargetBlendDesc(object):
     def targetWriteMask(*args: Any, **kwargs: Any) -> Any:
         """Indicates what color components(red, green, blue, alpha) are writable, the default is RGBA"""
 
-class MTexture(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MTexture:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def bytesPerPixel(self: Self, *args: Any, **kwargs: Any) -> Any:
         """bytesPerPixel() -> int
 
@@ -10497,60 +6365,12 @@ class MTexture(object):
         * textureNode (MObject) - File texture node
         """
 
-class MTextureAssignment(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MTextureAssignment:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def texture(*args: Any, **kwargs: Any) -> Any:
         """The texture"""
@@ -10558,60 +6378,12 @@ class MTextureAssignment(object):
     def texture(*args: Any, **kwargs: Any) -> Any:
         """The texture"""
 
-class MTextureDescription(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MTextureDescription:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def fArraySlices(*args: Any, **kwargs: Any) -> Any:
         """Number of array slices. e.g. 6 would be required for a cube-map"""
@@ -10694,52 +6466,12 @@ class MTextureDescription(object):
         Utility to set texture description to describe a 0 size 2-dimensional texture.
         """
 
-class MTextureManager(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MTextureManager:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -10840,60 +6572,12 @@ class MTextureManager(object):
         Ask the renderer to save a hardware texture to disk.
         """
 
-class MTextureUpdateRegion(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MTextureUpdateRegion:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def fXRangeMax(*args: Any, **kwargs: Any) -> Any:
         """X max value"""
@@ -10931,60 +6615,12 @@ class MTextureUpdateRegion(object):
     def fZRangeMin(*args: Any, **kwargs: Any) -> Any:
         """Z min value"""
 
-class MUIDrawManager(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MUIDrawManager:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def arc(self: Self, *args: Any, **kwargs: Any) -> Any:
         """arc(center, start, end, normal, radius, numSubdivisions, filled) -> selfarc(center, start, end, normal, radius, filled=False) -> self
 
@@ -11541,60 +7177,12 @@ class MUIDrawManager(object):
                  in this case making dynamic true will give better performance.
         """
 
-class MUniformParameter(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MUniformParameter:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def asBool(self: Self, *args: Any, **kwargs: Any) -> Any:
         """asBool(context) -> bool
 
@@ -11881,64 +7469,16 @@ class MUniformParameter(object):
         Get the user data for this parameter. User data can be used to store plugin specific information that you want to associate with this parameter. Typically this will be used to store a handle to the effect parameter.
         """
 
-class MUniformParameterList(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MUniformParameterList:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def append(self: Self, *args: Any, **kwargs: Any) -> Any:
         """append(element) -> bool
 
@@ -11970,59 +7510,11 @@ class MUniformParameterList(object):
         """
 
 class MUserRenderOperation(MRenderOperation):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addUIDrawables(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addUIDrawables(drawManager, frameContext) -> self
 
@@ -12038,102 +7530,23 @@ class MUserRenderOperation(MRenderOperation):
 
         Query for a camera override.
         """
-    def enableSRGBWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """enableSRGBWrite() -> bool
-
-        Return whether to enable GPU based gamma correction during pixel writes.
-        """
     def hasUIDrawables(self: Self, *args: Any, **kwargs: Any) -> Any:
         """hasUIDrawables() -> bool
 
         Query whether addUIDrawables() should be called or not.
-        """
-    kClear: int = ...
-    kHUDRender: int = ...
-    kPresentTarget: int = ...
-    kQuadRender: int = ...
-    kSceneRender: int = ...
-    kUserDefined: int = ...
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """name() -> string
-
-        Returns the name of the render operator.
-        """
-    def operationType(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """operationType() -> int
-
-        Returns the type of a render operator.
         """
     def requiresLightData(self: Self, *args: Any, **kwargs: Any) -> Any:
         """requiresLightData() -> bool
 
         Indicates whether light data from the renderer is required for this user operation.
         """
-    def targetOverrideList(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """targetOverrideList() -> list of MRenderTarget
 
-        Return a list of render target which will be used as the target overrides for the operation.
-        """
-    def viewportRectangleOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """viewportRectangleOverride() -> MFloatPoint
-
-        Query for a viewport rectangle override.
-        """
-
-class MVaryingParameter(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MVaryingParameter:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addElement(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addElement(child) -> self
 
@@ -12278,64 +7691,16 @@ class MVaryingParameter(object):
         The update id is increased every time the parameter sources or sourceSet are changed. A plugin can compare the update id value between subsequent calls to this function to know if the source has changed since the last call.
         """
 
-class MVaryingParameterList(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MVaryingParameterList:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def append(self: Self, *args: Any, **kwargs: Any) -> Any:
         """append(element) -> bool
 
@@ -12366,60 +7731,12 @@ class MVaryingParameterList(object):
         * length (int) - The number of parameters in this list.
         """
 
-class MVertexBuffer(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MVertexBuffer:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def acquire(self: Self, *args: Any, **kwargs: Any) -> Any:
         """acquire(size, writeOnly) -> long
 
@@ -12531,56 +7848,16 @@ class MVertexBuffer(object):
         Get the size of the vertex buffer.
         """
 
-class MVertexBufferArray(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MVertexBufferArray:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
     def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
         """Abstract classes can override this to customize issubclass().
 
@@ -12610,60 +7887,12 @@ class MVertexBufferArray(object):
         Get the name of the buffer at desired index.
         """
 
-class MVertexBufferDescriptor(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MVertexBufferDescriptor:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def dataType(*args: Any, **kwargs: Any) -> Any:
         """The data type of the buffer.
@@ -12737,64 +7966,16 @@ class MVertexBufferDescriptor(object):
     def stride(*args: Any, **kwargs: Any) -> Any:
         """The number of points per primitive."""
 
-class MVertexBufferDescriptorList(object):
-    def __delattr__(self: Self, name: Any) -> Any:
-        """Implement delattr(self, name)."""
-    def __dir__(self: Self) -> Any:
-        """Default dir() implementation."""
+class MVertexBufferDescriptorList:
     __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Default object formatter."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
     def __getitem__(self: Self, key: Any) -> Any:
         """Return self[key]."""
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
     def __len__(self: Self) -> Any:
         """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
     def __new__(self: Self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __reduce__(self: Self) -> Any:
-        """Helper for pickle."""
-    def __reduce_ex__(self: Self, protocol: Any) -> Any:
-        """Helper for pickle."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __setattr__(self: Self, name: Any, value: Any) -> Any:
-        """Implement setattr(self, name, value)."""
-    def __sizeof__(self: Self) -> Any:
-        """Size of object in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def append(self: Self, *args: Any, **kwargs: Any) -> Any:
         """append(MVertexBufferDescriptor) -> bool
 
