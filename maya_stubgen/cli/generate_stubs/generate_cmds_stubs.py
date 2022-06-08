@@ -88,7 +88,9 @@ def _args_from_help(synopsis: str) -> List[Variable]:
                 types = str(match_flag["types"]).split()
                 types = [mel_to_python_type(t) for t in types]
 
-                if len(types) == 1:
+                if len(types) == 0:
+                    arg_type = "bool"
+                elif len(types) == 1:
                     arg_type = types[0]
                 else:
                     arg_type = f"Tuple[{', '.join(types)}]"
@@ -148,4 +150,4 @@ def generate_cmds_stubs() -> str:
         function = Function(func, arguments=args)
         lines.append(function.stub)
 
-    return STUB_HEADER + "\n".join(lines)
+    return STUB_HEADER.format(imports="") + "\n".join(lines)

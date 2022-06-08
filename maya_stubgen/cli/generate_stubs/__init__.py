@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import imp
+import importlib.util
 import inspect
 import logging
 import sys
@@ -7,7 +9,7 @@ import traceback
 from importlib import import_module
 from pathlib import Path
 from pkgutil import ModuleInfo, walk_packages
-from textwrap import dedent
+from types import ModuleType
 from typing import *
 
 import click
@@ -31,14 +33,21 @@ def get_classes(module: ModuleInfo) -> List[Tuple[str, Type]]:
     return sorted_classes
 
 
-def get_stub_path(module: ModuleInfo, generated=False):
-    stub_path = Path(module.name.replace("maya", "maya-stubs", 1).replace(".", "/"))
-    suffix = "_generated" if generated else ""
+def get_stub_path(module: ModuleInfo, override=False, temp=False) -> Path:
+    folder_name = "maya-stubs-override" if override else "maya-stubs"
+    extension = "py" if override or temp else "pyi"
+
+    stub_path = Path(module.name.replace("maya", folder_name, 1).replace(".", "/"))
+
     if module.ispkg:
-        stub_path = stub_path / f"__init__{suffix}.pyi"
+        stub_path = stub_path / f"__init__.{extension}"
     else:
-        stub_path = stub_path.with_name(f"{stub_path.name}{suffix}.pyi")
-    return stub_path
+        stub_path = stub_path.with_name(f"{stub_path.name}.{extension}")
+
+    if temp:
+        stub_path = "temp" / stub_path
+
+    return stub_path.resolve()
 
 
 def generate_generic_stub(module: ModuleInfo) -> str:
@@ -47,6 +56,10 @@ def generate_generic_stub(module: ModuleInfo) -> str:
 
     for name, member in inspect.getmembers(module):
         stub_member = None
+
+        if name.startswith("_"):
+            # ignore private members
+            continue
 
         if inspect.ismodule(member):
             # Ignore modules
@@ -64,10 +77,44 @@ def generate_generic_stub(module: ModuleInfo) -> str:
             content.append(stub_member.stub)
 
     for name, cls in get_classes(module):
+        if name.startswith("_"):
+            # ignore private members
+            continue
+        if name in ["type", "object"]:
+            continue
+
         stub_member = Class.from_object(cls, name)
         content.append(stub_member.stub)
 
-    return STUB_HEADER + "\n".join(content)
+    imports = ""
+
+    # maya.OpenMaya
+    if module.__name__ == "maya.OpenMayaAnim":
+        imports = "from maya.OpenMaya import *\n"
+    if module.__name__ == "maya.OpenMayaFX":
+        imports = "from maya.OpenMaya import *\n"
+    if module.__name__ == "maya.OpenMayaMPx":
+        imports = "from maya.OpenMaya import *\n"
+    if module.__name__ == "maya.OpenMayaRender":
+        imports = "from maya.OpenMaya import *\n"
+    if module.__name__ == "maya.OpenMayaUI":
+        imports = "from maya.OpenMaya import *\n"
+        imports += "from maya.OpenMayaRender import *\n"
+
+    # maya.api.OpenMaya
+    if module.__name__ == "maya.api.OpenMayaAnim":
+        imports = "from maya.api.OpenMaya import *\n"
+    if module.__name__ == "maya.api.OpenMayaUI":
+        imports = (
+            "from maya.api.OpenMaya import *\n"
+            "from maya.api.OpenMayaRender import *\n"
+        )
+
+    # maya.utils
+    if module.__name__ == "maya.utils":
+        imports = "from logging import Handler\n"
+
+    return STUB_HEADER.format(imports=imports) + "\n".join(content)
 
 
 def generate_stubs_for_module(module: ModuleInfo):
@@ -79,18 +126,76 @@ def generate_stubs_for_module(module: ModuleInfo):
         content = generate_generic_stub(module)
 
     stub_path = get_stub_path(module)
-    stub_path_generated = get_stub_path(module, generated=True)
 
-    # stub_path and stub_path_generated have the same parent
     stub_path.parent.mkdir(parents=True, exist_ok=True)
 
-    # Create the manually edited stub file and import the generated one in.
-    if not stub_path.exists():
-        with stub_path.open("w", encoding="utf8") as f:
-            f.write("# fmt: off\n" f"from .{stub_path_generated.stem} import *\n")
+    content = apply_stub_override(module, content)
 
-    with stub_path_generated.open("w", encoding="utf8") as f:
+    with stub_path.open("w", encoding="utf8") as f:
         f.write(content)
+
+
+def import_from_path(name: str, path: Path) -> ModuleType:
+    spec = importlib.util.spec_from_file_location(name, path)
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[name] = module
+    spec.loader.exec_module(module)
+    return module
+
+
+def apply_stub_override(module: ModuleInfo, content: str) -> str:
+    stub_path_override = get_stub_path(module, override=True)
+    stub_path_temp = get_stub_path(module, temp=True)
+
+    stub_path_override.parent.mkdir(parents=True, exist_ok=True)
+    if not stub_path_override.exists():
+        with stub_path_override.open("w", encoding="utf8") as f:
+            f.write("# fmt: off\n")
+
+    stub_path_temp.parent.mkdir(parents=True, exist_ok=True)
+    with stub_path_temp.open("w", encoding="utf8") as f:
+        f.write(content)
+
+    stub_override = import_from_path(module.name + "_override", stub_path_override)
+    stub_generated = import_from_path(module.name + "_generated", stub_path_temp)
+
+    for name, override_member in inspect.getmembers(stub_override):
+        stub_member = getattr(stub_generated, name, None)
+        if not stub_member:
+            continue
+
+        if inspect.ismodule(override_member):
+            continue
+        elif inspect.isclass(override_member):
+            stub_src = inspect.getsource(stub_member)
+            overriden_stub_src = stub_src
+
+            for cls_member_name, cls_override_member in inspect.getmembers(
+                override_member
+            ):
+                if cls_member_name.startswith("_"):
+                    # ignore private members
+                    continue
+                cls_stub_member = getattr(stub_member, cls_member_name, None)
+                if not cls_stub_member:
+                    continue
+                overriden_stub_src = overriden_stub_src.replace(
+                    inspect.getsource(cls_stub_member),
+                    inspect.getsource(cls_override_member),
+                )
+
+            content = content.replace(
+                stub_src,
+                overriden_stub_src,
+            )
+
+        elif callable(override_member):
+            content = content.replace(
+                inspect.getsource(stub_member),
+                inspect.getsource(override_member),
+            )
+
+    return content
 
 
 def ignore_module(module: ModuleInfo):

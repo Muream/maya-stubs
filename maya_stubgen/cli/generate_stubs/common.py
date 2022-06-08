@@ -11,10 +11,14 @@ from typing import *
 from typing_extensions import Self
 
 STUB_HEADER = """\
+from __future__ import annotations
+
 # fmt: off
 from typing import *
 from typing_extensions import Self
-from _typeshed import Incomplete
+{imports}
+if TYPE_CHECKING:
+    from _typeshed import Incomplete
 \n
 """
 
@@ -67,8 +71,6 @@ class Class(StubItem):
         except IndexError:
             parent = object
 
-        skip = ["__class__"]
-
         members = []
         if parent is not None:
             parent_members = [id(m[1]) for m in inspect.getmembers(parent)]
@@ -76,7 +78,7 @@ class Class(StubItem):
             parent_members = []
 
         for member_name, member in inspect.getmembers(obj):
-            if member_name in skip:
+            if member_name.startswith("_"):
                 continue
 
             is_inhertited = id(member) in parent_members
@@ -108,6 +110,9 @@ class Class(StubItem):
             stub += f"({self.parent.__name__})"
 
         stub += ":\n"
+
+        if not self.members:
+            stub += "    pass\n"
 
         for member in self.members:
             stub += indent(member.stub, TAB)
