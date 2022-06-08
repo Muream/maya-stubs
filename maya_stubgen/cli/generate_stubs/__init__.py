@@ -150,7 +150,7 @@ def apply_stub_override(module: ModuleInfo, content: str) -> str:
     stub_path_override.parent.mkdir(parents=True, exist_ok=True)
     if not stub_path_override.exists():
         with stub_path_override.open("w", encoding="utf8") as f:
-            f.write("# fmt: off\n")
+            f.write("# fmt: off\nfrom __future__ import annotations\n")
 
     stub_path_temp.parent.mkdir(parents=True, exist_ok=True)
     with stub_path_temp.open("w", encoding="utf8") as f:

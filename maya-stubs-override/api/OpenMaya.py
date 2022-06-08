@@ -1,7 +1,5 @@
-from __future__ import annotations
-
 # fmt: off
-from typing import overload
+from __future__ import annotations
 
 
 class MDagPath:
