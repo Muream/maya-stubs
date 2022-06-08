@@ -4,50 +4,6 @@ from typing_extensions import Self
 from _typeshed import Incomplete
 
 
-class MayaGuiLogHandler(Handler):
-    __dict__: mappingproxy = ...
-    __doc__: str = ...
-    def __init__(self: Self) -> Any: ...
-    __module__: str = ...
-    def emit(self: Self, record: Any) -> Any: ...
-
-class Output:
-    __doc__: str = ...
-    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
-    def flush(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Flush no-op"""
-    softspace: member_descriptor = ...
-    def write(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Write the given string"""
-    def writelines(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Write the given sequence"""
-
-class StringTable:
-    def __delitem__(self: Self, key: Any) -> Any:
-        """Delete self[key]."""
-    __doc__: str = ...
-    def __getitem__(self: Self, key: Any) -> Any:
-        """Return self[key]."""
-    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-    def __len__(self: Self) -> Any:
-        """Return len(self)."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __setitem__(self: Self, key: Any, value: Any) -> Any:
-        """Set self[key] to value."""
-
 __cached__: str
 __doc__: str
 __file__: str
@@ -221,372 +177,6 @@ def format_over(*args: Any, **kwargs: Any) -> Any:
     """format"""
 def frozenset_over(*args: Any, **kwargs: Any) -> Any:
     """frozenset"""
-class futureStr:
-    def __add__(self: Self, value: Any) -> Any:
-        """Return self+value."""
-    def __contains__(self: Self, key: Any) -> Any:
-        """Return key in self."""
-    __doc__: str = ...
-    def __eq__(self: Self, value: Any) -> Any:
-        """Return self==value."""
-    def __format__(self: Self, format_spec: Any) -> Any:
-        """Return a formatted version of the string as described by format_spec."""
-    def __ge__(self: Self, value: Any) -> Any:
-        """Return self>=value."""
-    def __getattribute__(self: Self, name: Any) -> Any:
-        """Return getattr(self, name)."""
-    def __getitem__(self: Self, key: Any) -> Any:
-        """Return self[key]."""
-    def __getnewargs__(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def __gt__(self: Self, value: Any) -> Any:
-        """Return self>value."""
-    def __hash__(self: Self) -> Any:
-        """Return hash(self)."""
-    def __iter__(self: Self) -> Any:
-        """Implement iter(self)."""
-    def __le__(self: Self, value: Any) -> Any:
-        """Return self<=value."""
-    def __len__(self: Self) -> Any:
-        """Return len(self)."""
-    def __lt__(self: Self, value: Any) -> Any:
-        """Return self<value."""
-    def __mod__(self: Self, value: Any) -> Any:
-        """Return self%value."""
-    def __mul__(self: Self, value: Any) -> Any:
-        """Return self*value."""
-    def __ne__(self: Self, value: Any) -> Any:
-        """Return self!=value."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def __repr__(self: Self) -> Any:
-        """Return repr(self)."""
-    def __rmod__(self: Self, value: Any) -> Any:
-        """Return value%self."""
-    def __rmul__(self: Self, value: Any) -> Any:
-        """Return value*self."""
-    def __sizeof__(self: Self) -> Any:
-        """Return the size of the string in memory, in bytes."""
-    def __str__(self: Self) -> Any:
-        """Return str(self)."""
-    def capitalize(self: Self) -> Any:
-        """Return a capitalized version of the string.
-
-        More specifically, make the first character have upper case and the rest lower
-        case.
-        """
-    def casefold(self: Self) -> Any:
-        """Return a version of the string suitable for caseless comparisons."""
-    def center(self: Self, width: Any, fillchar: Any = ...) -> Any:
-        """Return a centered string of length width.
-
-        Padding is done using the specified fill character (default is a space).
-        """
-    def count(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """S.count(sub[, start[, end]]) -> int
-
-        Return the number of non-overlapping occurrences of substring sub in
-        string S[start:end].  Optional arguments start and end are
-        interpreted as in slice notation.
-        """
-    def encode(self: Self, encoding: Any = ..., errors: Any = ...) -> Any:
-        """Encode the string using the codec registered for encoding.
-
-          encoding
-            The encoding in which to encode the string.
-          errors
-            The error handling scheme to use for encoding errors.
-            The default is 'strict' meaning that encoding errors raise a
-            UnicodeEncodeError.  Other possible values are 'ignore', 'replace' and
-            'xmlcharrefreplace' as well as any other name registered with
-            codecs.register_error that can handle UnicodeEncodeErrors.
-        """
-    def endswith(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """S.endswith(suffix[, start[, end]]) -> bool
-
-        Return True if S ends with the specified suffix, False otherwise.
-        With optional start, test S beginning at that position.
-        With optional end, stop comparing S at that position.
-        suffix can also be a tuple of strings to try.
-        """
-    def expandtabs(self: Self, tabsize: Any = ...) -> Any:
-        """Return a copy where all tab characters are expanded using spaces.
-
-        If tabsize is not given, a tab size of 8 characters is assumed.
-        """
-    def find(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """S.find(sub[, start[, end]]) -> int
-
-        Return the lowest index in S where substring sub is found,
-        such that sub is contained within S[start:end].  Optional
-        arguments start and end are interpreted as in slice notation.
-
-        Return -1 on failure.
-        """
-    def format(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """S.format(*args, **kwargs) -> str
-
-        Return a formatted version of S, using substitutions from args and kwargs.
-        The substitutions are identified by braces ('{' and '}').
-        """
-    def format_map(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """S.format_map(mapping) -> str
-
-        Return a formatted version of S, using substitutions from mapping.
-        The substitutions are identified by braces ('{' and '}').
-        """
-    def index(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """S.index(sub[, start[, end]]) -> int
-
-        Return the lowest index in S where substring sub is found,
-        such that sub is contained within S[start:end].  Optional
-        arguments start and end are interpreted as in slice notation.
-
-        Raises ValueError when the substring is not found.
-        """
-    def isalnum(self: Self) -> Any:
-        """Return True if the string is an alpha-numeric string, False otherwise.
-
-        A string is alpha-numeric if all characters in the string are alpha-numeric and
-        there is at least one character in the string.
-        """
-    def isalpha(self: Self) -> Any:
-        """Return True if the string is an alphabetic string, False otherwise.
-
-        A string is alphabetic if all characters in the string are alphabetic and there
-        is at least one character in the string.
-        """
-    def isascii(self: Self) -> Any:
-        """Return True if all characters in the string are ASCII, False otherwise.
-
-        ASCII characters have code points in the range U+0000-U+007F.
-        Empty string is ASCII too.
-        """
-    def isdecimal(self: Self) -> Any:
-        """Return True if the string is a decimal string, False otherwise.
-
-        A string is a decimal string if all characters in the string are decimal and
-        there is at least one character in the string.
-        """
-    def isdigit(self: Self) -> Any:
-        """Return True if the string is a digit string, False otherwise.
-
-        A string is a digit string if all characters in the string are digits and there
-        is at least one character in the string.
-        """
-    def isidentifier(self: Self) -> Any:
-        """Return True if the string is a valid Python identifier, False otherwise.
-
-        Call keyword.iskeyword(s) to test whether string s is a reserved identifier,
-        such as "def" or "class".
-        """
-    def islower(self: Self) -> Any:
-        """Return True if the string is a lowercase string, False otherwise.
-
-        A string is lowercase if all cased characters in the string are lowercase and
-        there is at least one cased character in the string.
-        """
-    def isnumeric(self: Self) -> Any:
-        """Return True if the string is a numeric string, False otherwise.
-
-        A string is numeric if all characters in the string are numeric and there is at
-        least one character in the string.
-        """
-    def isprintable(self: Self) -> Any:
-        """Return True if the string is printable, False otherwise.
-
-        A string is printable if all of its characters are considered printable in
-        repr() or if it is empty.
-        """
-    def isspace(self: Self) -> Any:
-        """Return True if the string is a whitespace string, False otherwise.
-
-        A string is whitespace if all characters in the string are whitespace and there
-        is at least one character in the string.
-        """
-    def istitle(self: Self) -> Any:
-        """Return True if the string is a title-cased string, False otherwise.
-
-        In a title-cased string, upper- and title-case characters may only
-        follow uncased characters and lowercase characters only cased ones.
-        """
-    def isupper(self: Self) -> Any:
-        """Return True if the string is an uppercase string, False otherwise.
-
-        A string is uppercase if all cased characters in the string are uppercase and
-        there is at least one cased character in the string.
-        """
-    def join(self: Self, iterable: Any) -> Any:
-        """Concatenate any number of strings.
-
-        The string whose method is called is inserted in between each given string.
-        The result is returned as a new string.
-
-        Example: '.'.join(['ab', 'pq', 'rs']) -> 'ab.pq.rs'
-        """
-    def ljust(self: Self, width: Any, fillchar: Any = ...) -> Any:
-        """Return a left-justified string of length width.
-
-        Padding is done using the specified fill character (default is a space).
-        """
-    def lower(self: Self) -> Any:
-        """Return a copy of the string converted to lowercase."""
-    def lstrip(self: Self, chars: Any = ...) -> Any:
-        """Return a copy of the string with leading whitespace removed.
-
-        If chars is given and not None, remove characters in chars instead.
-        """
-    def maketrans(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Return a translation table usable for str.translate().
-
-        If there is only one argument, it must be a dictionary mapping Unicode
-        ordinals (integers) or characters to Unicode ordinals, strings or None.
-        Character keys will be then converted to ordinals.
-        If there are two arguments, they must be strings of equal length, and
-        in the resulting dictionary, each character in x will be mapped to the
-        character at the same position in y. If there is a third argument, it
-        must be a string, whose characters will be mapped to None in the result.
-        """
-    def partition(self: Self, sep: Any) -> Any:
-        """Partition the string into three parts using the given separator.
-
-        This will search for the separator in the string.  If the separator is found,
-        returns a 3-tuple containing the part before the separator, the separator
-        itself, and the part after it.
-
-        If the separator is not found, returns a 3-tuple containing the original string
-        and two empty strings.
-        """
-    def removeprefix(self: Self, prefix: Any) -> Any:
-        """Return a str with the given prefix string removed if present.
-
-        If the string starts with the prefix string, return string[len(prefix):].
-        Otherwise, return a copy of the original string.
-        """
-    def removesuffix(self: Self, suffix: Any) -> Any:
-        """Return a str with the given suffix string removed if present.
-
-        If the string ends with the suffix string and that suffix is not empty,
-        return string[:-len(suffix)]. Otherwise, return a copy of the original
-        string.
-        """
-    def replace(self: Self, old: Any, new: Any, count: Any = ...) -> Any:
-        """Return a copy with all occurrences of substring old replaced by new.
-
-          count
-            Maximum number of occurrences to replace.
-            -1 (the default value) means replace all occurrences.
-
-        If the optional argument count is given, only the first count occurrences are
-        replaced.
-        """
-    def rfind(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """S.rfind(sub[, start[, end]]) -> int
-
-        Return the highest index in S where substring sub is found,
-        such that sub is contained within S[start:end].  Optional
-        arguments start and end are interpreted as in slice notation.
-
-        Return -1 on failure.
-        """
-    def rindex(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """S.rindex(sub[, start[, end]]) -> int
-
-        Return the highest index in S where substring sub is found,
-        such that sub is contained within S[start:end].  Optional
-        arguments start and end are interpreted as in slice notation.
-
-        Raises ValueError when the substring is not found.
-        """
-    def rjust(self: Self, width: Any, fillchar: Any = ...) -> Any:
-        """Return a right-justified string of length width.
-
-        Padding is done using the specified fill character (default is a space).
-        """
-    def rpartition(self: Self, sep: Any) -> Any:
-        """Partition the string into three parts using the given separator.
-
-        This will search for the separator in the string, starting at the end. If
-        the separator is found, returns a 3-tuple containing the part before the
-        separator, the separator itself, and the part after it.
-
-        If the separator is not found, returns a 3-tuple containing two empty strings
-        and the original string.
-        """
-    def rsplit(self: Self, sep: Any = ..., maxsplit: Any = ...) -> Any:
-        """Return a list of the words in the string, using sep as the delimiter string.
-
-          sep
-            The delimiter according which to split the string.
-            None (the default value) means split according to any whitespace,
-            and discard empty strings from the result.
-          maxsplit
-            Maximum number of splits to do.
-            -1 (the default value) means no limit.
-
-        Splits are done starting at the end of the string and working to the front.
-        """
-    def rstrip(self: Self, chars: Any = ...) -> Any:
-        """Return a copy of the string with trailing whitespace removed.
-
-        If chars is given and not None, remove characters in chars instead.
-        """
-    def split(self: Self, sep: Any = ..., maxsplit: Any = ...) -> Any:
-        """Return a list of the words in the string, using sep as the delimiter string.
-
-          sep
-            The delimiter according which to split the string.
-            None (the default value) means split according to any whitespace,
-            and discard empty strings from the result.
-          maxsplit
-            Maximum number of splits to do.
-            -1 (the default value) means no limit.
-        """
-    def splitlines(self: Self, keepends: Any = ...) -> Any:
-        """Return a list of the lines in the string, breaking at line boundaries.
-
-        Line breaks are not included in the resulting list unless keepends is given and
-        true.
-        """
-    def startswith(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """S.startswith(prefix[, start[, end]]) -> bool
-
-        Return True if S starts with the specified prefix, False otherwise.
-        With optional start, test S beginning at that position.
-        With optional end, stop comparing S at that position.
-        prefix can also be a tuple of strings to try.
-        """
-    def strip(self: Self, chars: Any = ...) -> Any:
-        """Return a copy of the string with leading and trailing whitespace removed.
-
-        If chars is given and not None, remove characters in chars instead.
-        """
-    def swapcase(self: Self) -> Any:
-        """Convert uppercase characters to lowercase and lowercase characters to uppercase."""
-    def title(self: Self) -> Any:
-        """Return a version of the string where each word is titlecased.
-
-        More specifically, words start with uppercased characters and all remaining
-        cased characters have lower case.
-        """
-    def translate(self: Self, table: Any) -> Any:
-        """Replace each character in the string using the given translation table.
-
-          table
-            Translation table, which must be a mapping of Unicode ordinals to
-            Unicode ordinals, strings, or None.
-
-        The table must implement lookup/indexing via __getitem__, for instance a
-        dictionary or list.  If this operation raises LookupError, the character is
-        left untouched.  Characters mapped to None are deleted.
-        """
-    def upper(self: Self) -> Any:
-        """Return a copy of the string converted to uppercase."""
-    def zfill(self: Self, width: Any) -> Any:
-        """Pad a numeric string with zeros on the left, to fill a field of the given width.
-
-        The string is never truncated.
-        """
-
 def getPossibleCompletions(input: Any) -> Any:
     """Utility method to handle command completion
         Returns in a list all of the possible completions that apply
@@ -707,6 +297,86 @@ def processIdleEvents(*args: Any, **kwargs: Any) -> Any:
     """
 def property_over(*args: Any, **kwargs: Any) -> Any:
     """property"""
+def range_over(*args: Any, **kwargs: Any) -> Any:
+    """range"""
+def repr_over(*args: Any, **kwargs: Any) -> Any:
+    """repr"""
+def reversed_over(*args: Any, **kwargs: Any) -> Any:
+    """reversed"""
+def round_over(*args: Any, **kwargs: Any) -> Any:
+    """round"""
+def set_over(*args: Any, **kwargs: Any) -> Any:
+    """set"""
+def setattr_over(*args: Any, **kwargs: Any) -> Any:
+    """setattr"""
+def shellLogHandler() -> Any:
+    """Adds an additional handler to the root logger to print to sys.stdout
+        Returns the handler.
+    """
+def slice_over(*args: Any, **kwargs: Any) -> Any:
+    """slice"""
+def sorted_over(*args: Any, **kwargs: Any) -> Any:
+    """sorted"""
+def staticmethod_over(*args: Any, **kwargs: Any) -> Any:
+    """staticmethod"""
+def str_over(*args: Any, **kwargs: Any) -> Any:
+    """str"""
+def sum_over(*args: Any, **kwargs: Any) -> Any:
+    """sum"""
+def super_over(*args: Any, **kwargs: Any) -> Any:
+    """super"""
+def tuple_over(*args: Any, **kwargs: Any) -> Any:
+    """tuple"""
+def type_over(*args: Any, **kwargs: Any) -> Any:
+    """type"""
+def vars_over(*args: Any, **kwargs: Any) -> Any:
+    """vars"""
+def zip_over(*args: Any, **kwargs: Any) -> Any:
+    """zip"""
+class MayaGuiLogHandler(Handler):
+    __dict__: mappingproxy = ...
+    __doc__: str = ...
+    def __init__(self: Self) -> Any: ...
+    __module__: str = ...
+    def emit(self: Self, record: Any) -> Any: ...
+
+class Output:
+    __doc__: str = ...
+    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __subclasshook__(self: Self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def flush(self: Self, *args: Any, **kwargs: Any) -> Any:
+        """Flush no-op"""
+    softspace: member_descriptor = ...
+    def write(self: Self, *args: Any, **kwargs: Any) -> Any:
+        """Write the given string"""
+    def writelines(self: Self, *args: Any, **kwargs: Any) -> Any:
+        """Write the given sequence"""
+
+class StringTable:
+    def __delitem__(self: Self, key: Any) -> Any:
+        """Delete self[key]."""
+    __doc__: str = ...
+    def __getitem__(self: Self, key: Any) -> Any:
+        """Return self[key]."""
+    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self: Self) -> Any:
+        """Return len(self)."""
+    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __setitem__(self: Self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+
 class range:
     def __bool__(self: Self) -> Any:
         """self != 0"""
@@ -751,40 +421,3 @@ class range:
     start: member_descriptor = ...
     step: member_descriptor = ...
     stop: member_descriptor = ...
-
-def range_over(*args: Any, **kwargs: Any) -> Any:
-    """range"""
-def repr_over(*args: Any, **kwargs: Any) -> Any:
-    """repr"""
-def reversed_over(*args: Any, **kwargs: Any) -> Any:
-    """reversed"""
-def round_over(*args: Any, **kwargs: Any) -> Any:
-    """round"""
-def set_over(*args: Any, **kwargs: Any) -> Any:
-    """set"""
-def setattr_over(*args: Any, **kwargs: Any) -> Any:
-    """setattr"""
-def shellLogHandler() -> Any:
-    """Adds an additional handler to the root logger to print to sys.stdout
-        Returns the handler.
-    """
-def slice_over(*args: Any, **kwargs: Any) -> Any:
-    """slice"""
-def sorted_over(*args: Any, **kwargs: Any) -> Any:
-    """sorted"""
-def staticmethod_over(*args: Any, **kwargs: Any) -> Any:
-    """staticmethod"""
-def str_over(*args: Any, **kwargs: Any) -> Any:
-    """str"""
-def sum_over(*args: Any, **kwargs: Any) -> Any:
-    """sum"""
-def super_over(*args: Any, **kwargs: Any) -> Any:
-    """super"""
-def tuple_over(*args: Any, **kwargs: Any) -> Any:
-    """tuple"""
-def type_over(*args: Any, **kwargs: Any) -> Any:
-    """type"""
-def vars_over(*args: Any, **kwargs: Any) -> Any:
-    """vars"""
-def zip_over(*args: Any, **kwargs: Any) -> Any:
-    """zip"""

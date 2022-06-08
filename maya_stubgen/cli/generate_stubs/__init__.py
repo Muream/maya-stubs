@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import inspect
 import logging
+import sys
 import traceback
 from importlib import import_module
 from pathlib import Path
@@ -18,6 +19,18 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
 
+def get_classes(module: ModuleInfo) -> List[Tuple[str, Type]]:
+    """Return the classes in the module sorted by inheritance."""
+    sorted_classes = []
+    classes = inspect.getmembers(module, inspect.isclass)
+    for _, cls in classes:
+        for base in reversed(type.mro(cls)):
+            base_tuple = (base.__name__, base)
+            if base_tuple not in sorted_classes and base_tuple in classes:
+                sorted_classes.append(base_tuple)
+    return sorted_classes
+
+
 def get_stub_path(module: ModuleInfo, generated=False):
     stub_path = Path(module.name.replace("maya", "maya-stubs", 1).replace(".", "/"))
     suffix = "_generated" if generated else ""
@@ -30,15 +43,17 @@ def get_stub_path(module: ModuleInfo, generated=False):
 
 def generate_generic_stub(module: ModuleInfo) -> str:
     module = import_module(module.name)
-    lines = []
+    content = []
 
     for name, member in inspect.getmembers(module):
         stub_member = None
 
         if inspect.ismodule(member):
+            # Ignore modules
             continue
         elif inspect.isclass(member):
-            stub_member = Class.from_object(member, name)
+            # we will add classes in a 2nd pass
+            continue
         elif callable(member):
             stub_member = Function.from_object(member)
         else:
@@ -46,9 +61,13 @@ def generate_generic_stub(module: ModuleInfo) -> str:
             stub_member = Variable(name, type(member), member)
 
         if stub_member is not None:
-            lines.append(stub_member.stub)
+            content.append(stub_member.stub)
 
-    return STUB_HEADER + "\n".join(lines)
+    for name, cls in get_classes(module):
+        stub_member = Class.from_object(cls, name)
+        content.append(stub_member.stub)
+
+    return STUB_HEADER + "\n".join(content)
 
 
 def generate_stubs_for_module(module: ModuleInfo):

@@ -4,6 +4,18 @@ from typing_extensions import Self
 from _typeshed import Incomplete
 
 
+__all__: list
+__builtins__: dict
+__cached__: str
+__doc__: str
+__file__: str
+__loader__: SourceFileLoader
+__name__: str
+__package__: str
+__spec__: ModuleSpec
+class object:
+    __doc__: str = ...
+
 class MDGContextGuard:
     def _MDGContextGuard__save_state(self: Self, new_current_context: Any) -> Any:
         """Save the state of the current evaluation context"""
@@ -28,15 +40,3 @@ class MDGContextGuard:
         """Return the context that was current when this object was entered/constructed"""
     def restore(self: Self) -> Any:
         """Restore the context on entry/construction to be the current evaluation context"""
-
-__all__: list
-__builtins__: dict
-__cached__: str
-__doc__: str
-__file__: str
-__loader__: SourceFileLoader
-__name__: str
-__package__: str
-__spec__: ModuleSpec
-class object:
-    __doc__: str = ...

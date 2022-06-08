@@ -4,6 +4,18 @@ from typing_extensions import Self
 from _typeshed import Incomplete
 
 
+__builtins__: dict
+__cached__: str
+__doc__: NoneType
+__file__: str
+__loader__: SourceFileLoader
+__name__: str
+__package__: str
+__spec__: ModuleSpec
+key: str
+ourdict: dict
+py2dict: dict
+val: str
 class M3dView:
     __doc__: str = ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
@@ -1305,6 +1317,85 @@ class MEvent:
         """The location of the event."""
     shiftKey: int = ...
 
+class MFnManip3D(MFnTransform):
+    __doc__: str = ...
+    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def deleteManipulator(self: Self, *args: Any, **kwargs: Any) -> Any:
+        """deleteManipulator(manip) -> None
+
+        Delete a manipulator.  This method should be used to delete manipulators that have been created using base manipulator create() methods.
+
+        * manip (MObject) - the manipulator to be deleted
+        """
+    def drawPlaneHandles(self: Self, *args: Any, **kwargs: Any) -> Any:
+        """drawPlaneHandles() -> bool
+
+        This method returns the global option that says if the planar manipulator handles should be drawn or not.Setting this will affect the drawing of all manipulators that support the planar handles.
+        """
+    def globalSize(self: Self, *args: Any, **kwargs: Any) -> Any:
+        """globalSize() -> float
+
+        Returns the global manipulator size.
+        """
+    def handleSize(self: Self, *args: Any, **kwargs: Any) -> Any:
+        """handleSize() -> float
+
+        Returns the manipulator handle size.
+        """
+    @property
+    def isOptimizePlaybackOn(*args: Any, **kwargs: Any) -> Any:
+        """Whether or not optimize playback is on."""
+    @isOptimizePlaybackOn.setter
+    def isOptimizePlaybackOn(*args: Any, **kwargs: Any) -> Any:
+        """Whether or not optimize playback is on."""
+    @property
+    def isVisible(*args: Any, **kwargs: Any) -> Any:
+        """Whether or not the manipulator is visible."""
+    @isVisible.setter
+    def isVisible(*args: Any, **kwargs: Any) -> Any:
+        """Whether or not the manipulator is visible."""
+    def lineSize(self: Self, *args: Any, **kwargs: Any) -> Any:
+        """lineSize() -> float
+
+        Returns the manipulator line size.
+        """
+    @property
+    def manipScale(*args: Any, **kwargs: Any) -> Any:
+        """The manipulator scale."""
+    @manipScale.setter
+    def manipScale(*args: Any, **kwargs: Any) -> Any:
+        """The manipulator scale."""
+    def rotateXYZValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+        """rotateXYZValue(valIndex) -> MEulerRotation
+
+        Gets the rotation for the active manipulator.
+
+        * valIndex (int) - rotation index of the manipulator
+        """
+    def setDrawPlaneHandles(self: Self, *args: Any, **kwargs: Any) -> Any:
+        """setDrawPlaneHandles(bool) -> None
+
+        Sets the global option to display planar handles or not on supported manipulators.
+        """
+    def setGlobalSize(self: Self, *args: Any, **kwargs: Any) -> Any:
+        """setGlobalSize(float) -> None
+
+        Sets the global manipulator size.
+        """
+    def setHandleSize(self: Self, *args: Any, **kwargs: Any) -> Any:
+        """setHandleSize(float) -> None
+
+        Sets the manipulator handle size.
+        """
+    def setLineSize(self: Self, *args: Any, **kwargs: Any) -> Any:
+        """setLineSize(float) -> None
+
+        Sets the manipulator line size.
+        """
+
 class MFnCircleSweepManip(MFnManip3D):
     __doc__: str = ...
     def __init__(self: Self, args: Any, kwargs: Any) -> Any:
@@ -1785,85 +1876,6 @@ class MFnFreePointTriadManip(MFnManip3D):
         Set the point manipulator value to the given vector.  This method can be called in the MPxManipContainer.connectToDependNode() method to set the initial position for the manipulator.
 
         * pointValue (MPoint) - The new value of the point manipValue
-        """
-
-class MFnManip3D(MFnTransform):
-    __doc__: str = ...
-    def __init__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-    def __new__(self: Self, args: Any, kwargs: Any) -> Any:
-        """Create and return a new object.  See help(type) for accurate signature."""
-    def deleteManipulator(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """deleteManipulator(manip) -> None
-
-        Delete a manipulator.  This method should be used to delete manipulators that have been created using base manipulator create() methods.
-
-        * manip (MObject) - the manipulator to be deleted
-        """
-    def drawPlaneHandles(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """drawPlaneHandles() -> bool
-
-        This method returns the global option that says if the planar manipulator handles should be drawn or not.Setting this will affect the drawing of all manipulators that support the planar handles.
-        """
-    def globalSize(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """globalSize() -> float
-
-        Returns the global manipulator size.
-        """
-    def handleSize(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """handleSize() -> float
-
-        Returns the manipulator handle size.
-        """
-    @property
-    def isOptimizePlaybackOn(*args: Any, **kwargs: Any) -> Any:
-        """Whether or not optimize playback is on."""
-    @isOptimizePlaybackOn.setter
-    def isOptimizePlaybackOn(*args: Any, **kwargs: Any) -> Any:
-        """Whether or not optimize playback is on."""
-    @property
-    def isVisible(*args: Any, **kwargs: Any) -> Any:
-        """Whether or not the manipulator is visible."""
-    @isVisible.setter
-    def isVisible(*args: Any, **kwargs: Any) -> Any:
-        """Whether or not the manipulator is visible."""
-    def lineSize(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """lineSize() -> float
-
-        Returns the manipulator line size.
-        """
-    @property
-    def manipScale(*args: Any, **kwargs: Any) -> Any:
-        """The manipulator scale."""
-    @manipScale.setter
-    def manipScale(*args: Any, **kwargs: Any) -> Any:
-        """The manipulator scale."""
-    def rotateXYZValue(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """rotateXYZValue(valIndex) -> MEulerRotation
-
-        Gets the rotation for the active manipulator.
-
-        * valIndex (int) - rotation index of the manipulator
-        """
-    def setDrawPlaneHandles(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """setDrawPlaneHandles(bool) -> None
-
-        Sets the global option to display planar handles or not on supported manipulators.
-        """
-    def setGlobalSize(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """setGlobalSize(float) -> None
-
-        Sets the global manipulator size.
-        """
-    def setHandleSize(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """setHandleSize(float) -> None
-
-        Sets the manipulator handle size.
-        """
-    def setLineSize(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """setLineSize(float) -> None
-
-        Sets the manipulator line size.
         """
 
 class MFnPointOnCurveManip(MFnManip3D):
@@ -5871,16 +5883,3 @@ class ShaderContext:
     @shadingEngine.setter
     def shadingEngine(*args: Any, **kwargs: Any) -> Any:
         """Shading engine node for the given invocation of the shader"""
-
-__builtins__: dict
-__cached__: str
-__doc__: NoneType
-__file__: str
-__loader__: SourceFileLoader
-__name__: str
-__package__: str
-__spec__: ModuleSpec
-key: str
-ourdict: dict
-py2dict: dict
-val: str

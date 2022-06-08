@@ -4,6 +4,18 @@ from typing_extensions import Self
 from _typeshed import Incomplete
 
 
+__builtins__: dict
+__cached__: str
+__doc__: NoneType
+__file__: str
+__loader__: SourceFileLoader
+__name__: str
+__package__: str
+__spec__: ModuleSpec
+key: str
+ourdict: dict
+py2dict: dict
+val: str
 class MAnimControl:
     __doc__: str = ...
     def animationEndTime(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -1101,16 +1113,3 @@ class MFnSkinCluster(MFnGeometryFilter):
         * normalize       (bool) - if True, normalize weights on other influence objects
         * returnOldWeights(bool) - if True, return the old weights, otherwise return None
         """
-
-__builtins__: dict
-__cached__: str
-__doc__: NoneType
-__file__: str
-__loader__: SourceFileLoader
-__name__: str
-__package__: str
-__spec__: ModuleSpec
-key: str
-ourdict: dict
-py2dict: dict
-val: str
