@@ -1,99 +1,89 @@
 import importlib
-import inspect
 import logging
-import sys
 import traceback
-from pathlib import Path
 from pkgutil import ModuleInfo, walk_packages
-from types import ModuleType
 
 import click
+from redbaron import RedBaron
 
 from .common import get_stub_path
 from .generate_cmds_stubs import generate_cmds_stubs
 from .generate_generic_stubs import generate_generic_stub
 
 logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
 
 
-def import_from_path(name: str, path: Path) -> ModuleType:
-    spec = importlib.util.spec_from_file_location(name, path)
-    module = importlib.util.module_from_spec(spec)
-    sys.modules[name] = module
-    spec.loader.exec_module(module)
-    return module
+def replace_override(override_red, input_red, output_red):
+    for override_node in override_red:
+        if override_node.type == "def":
+            generated_function = input_red.find("def", name=override_node.name)
+            if generated_function:
+                index = -1
+                for node in output_red:
+                    if node.dumps() == generated_function.dumps():
+                        index = output_red.index(node)
+
+                decorators = override_node.decorators or []
+
+                is_overloaded = False
+                for decorator in decorators:
+                    if decorator.name.value == "overload":
+                        is_overloaded = True
+
+                if is_overloaded:
+                    output_red.insert(index, override_node)
+                else:
+                    output_red[index] = override_node
+
+        if override_node.type == "class":
+            generated_class = input_red.find("class", name=override_node.name)
+            result_class = output_red.find("class", name=override_node.name)
+            if generated_class and result_class:
+                replace_override(override_node, generated_class, result_class)
 
 
-def apply_stub_override(module: ModuleInfo, content: str) -> str:
-    stub_path_override = get_stub_path(module, override=True)
-    stub_path_temp = get_stub_path(module, temp=True)
+def apply_stub_override(module: ModuleInfo, stub_source: str) -> str:
+    """Apply the hand written stub overrides to the stubs of the given module.
 
-    stub_path_override.parent.mkdir(parents=True, exist_ok=True)
-    if not stub_path_override.exists():
-        with stub_path_override.open("w", encoding="utf8") as f:
-            f.write("# fmt: off\nfrom __future__ import annotations\n")
+    Args:
+        module_name: The name of the module to apply the stubs for.
+        stub_source: stubs string to apply the stubs to.
 
-    stub_path_temp.parent.mkdir(parents=True, exist_ok=True)
-    with stub_path_temp.open("w", encoding="utf8") as f:
-        f.write(content)
+    Returns:
+        The stubs string with the overrides applied.
+    """
+    stub_override_path = get_stub_path(module, override=True)
+    stub_override_source = stub_override_path.read_text(encoding="utf8")
 
-    stub_override = import_from_path(module.name + "_override", stub_path_override)
-    stub_generated = import_from_path(module.name + "_generated", stub_path_temp)
+    override_red = RedBaron(stub_override_source)
+    input_red = RedBaron(stub_source)
 
-    for name, override_member in inspect.getmembers(stub_override):
-        stub_member = getattr(stub_generated, name, None)
-        if not stub_member:
-            continue
+    # the output red instantiated in the same was as the input red
+    # but gets updated by `replace_override`
+    output_red = RedBaron(stub_source)
 
-        if inspect.ismodule(override_member):
-            continue
-        elif inspect.isclass(override_member):
-            stub_src = inspect.getsource(stub_member)
-            overridden_stub_src = stub_src
+    replace_override(override_red, input_red, output_red)
 
-            for cls_member_name, cls_override_member in inspect.getmembers(
-                override_member
-            ):
-                if cls_member_name.startswith("_"):
-                    # ignore private members
-                    continue
-                cls_stub_member = getattr(stub_member, cls_member_name, None)
-                if not cls_stub_member:
-                    continue
-                overridden_stub_src = overridden_stub_src.replace(
-                    inspect.getsource(cls_stub_member),
-                    inspect.getsource(cls_override_member),
-                )
-
-            content = content.replace(
-                stub_src,
-                overridden_stub_src,
-            )
-
-        elif callable(override_member):
-            content = content.replace(
-                inspect.getsource(stub_member),
-                inspect.getsource(override_member),
-            )
-
-    return content
+    return output_red.dumps()
 
 
 def generate_stubs_for_module(module: ModuleInfo):
-    logger.info("Generating stubs for: %s", module.name)
+    logger.info("Generating stubs for %s.", module.name)
+    logger.debug("Generating stubs.")
 
     if module.name == "maya.cmds":
         content = generate_cmds_stubs()
     else:
         content = generate_generic_stub(module)
 
-    stub_path = get_stub_path(module)
-
-    stub_path.parent.mkdir(parents=True, exist_ok=True)
-
+    logger.debug("Applying stubs overrides.")
     content = apply_stub_override(module, content)
 
+    stub_path = get_stub_path(module)
+    stub_path.parent.mkdir(parents=True, exist_ok=True)
     with stub_path.open("w", encoding="utf8") as f:
+        logger.debug("Writing content to %s.", stub_path)
         f.write(content)
 
 
@@ -117,6 +107,9 @@ def generate_stubs() -> None:
 
     whitelist = [
         "maya.cmds",
+        "maya.standalone",
+        "maya.utils",
+        "maya.mel",
         # OpenMaya 1.0
         "maya.OpenMaya",
         "maya.OpenMayaAnim",
@@ -131,9 +124,6 @@ def generate_stubs() -> None:
         "maya.api.OpenMayaRender",
         "maya.api.OpenMayaUI",
         # other
-        "maya.standalone",
-        "maya.utils",
-        "maya.mel",
     ]
 
     try:

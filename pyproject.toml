@@ -18,6 +18,8 @@ black = {version = "*", python = "^3.7"}
 pylint = "*"
 mypy = {version = "*", python = "^3.7"}
 click = {version = "*", python = "^3.7"}
+redbaron = "^0.9.2"
+tqdm = "^4.64.0"
 
 [tool.pylint.messages_control]
 max-line-length = 88
