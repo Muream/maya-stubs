@@ -1,19 +1,28 @@
 {
-    "python.languageServer": "Pylance",
-    "python.analysis.diagnosticSeverityOverrides": {
-        "reportMissingModuleSource": "none",
-    },
-    "editor.formatOnSave": true,
-    "python.formatting.provider": "black",
-    "python.sortImports.args": [
-        "--profile",
-        "black"
-    ],
-    "[python]": {
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": true
-        }
-    },
-    "python.linting.enabled": true,
-    "python.linting.pylintEnabled": true,
+  "python.languageServer": "Pylance",
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportMissingModuleSource": "none"
+  },
+  "editor.formatOnSave": true,
+  "python.formatting.provider": "black",
+  "python.sortImports.args": ["--profile", "black"],
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "autoDocstring.docstringFormat": "google-notypes",
+  "cSpell.words": [
+    "cmds",
+    "isgetsetdescriptor",
+    "ispkg",
+    "levelname",
+    "redbaron",
+    "stubgen",
+    "tqdm",
+    "typeshed",
+    "uninitialize"
+  ]
 }

@@ -5,6 +5,8 @@ import sys
 from abc import ABC, abstractclassmethod, abstractmethod
 from dataclasses import dataclass, field
 from enum import Enum
+from pathlib import Path
+from pkgutil import ModuleInfo
 from textwrap import indent
 from typing import *
 
@@ -263,3 +265,32 @@ class Function:
         signature += ":"
 
         return signature
+
+
+def get_stub_path(module: ModuleInfo, override=False, temp=False) -> Path:
+    folder_name = "maya-stubs-override" if override else "maya-stubs"
+    extension = "py" if override or temp else "pyi"
+
+    stub_path = Path(module.name.replace("maya", folder_name, 1).replace(".", "/"))
+
+    if module.ispkg:
+        stub_path = stub_path / f"__init__.{extension}"
+    else:
+        stub_path = stub_path.with_name(f"{stub_path.name}.{extension}")
+
+    if temp:
+        stub_path = "temp" / stub_path
+
+    return stub_path.resolve()
+
+
+def get_classes(module: ModuleInfo) -> List[Tuple[str, Type]]:
+    """Return the classes in the module sorted by inheritance."""
+    sorted_classes = []
+    classes = inspect.getmembers(module, inspect.isclass)
+    for _, cls in classes:
+        for base in reversed(type.mro(cls)):
+            base_tuple = (base.__name__, base)
+            if base_tuple not in sorted_classes and base_tuple in classes:
+                sorted_classes.append(base_tuple)
+    return sorted_classes

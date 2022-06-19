@@ -1,138 +1,19 @@
-from __future__ import annotations
-
-import imp
-import importlib.util
+import importlib
 import inspect
 import logging
 import sys
 import traceback
-from importlib import import_module
 from pathlib import Path
 from pkgutil import ModuleInfo, walk_packages
 from types import ModuleType
-from typing import *
 
 import click
 
-from .common import STUB_HEADER, Class, Function, Variable
+from .common import get_stub_path
 from .generate_cmds_stubs import generate_cmds_stubs
+from .generate_generic_stubs import generate_generic_stub
 
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
-
-
-def get_classes(module: ModuleInfo) -> List[Tuple[str, Type]]:
-    """Return the classes in the module sorted by inheritance."""
-    sorted_classes = []
-    classes = inspect.getmembers(module, inspect.isclass)
-    for _, cls in classes:
-        for base in reversed(type.mro(cls)):
-            base_tuple = (base.__name__, base)
-            if base_tuple not in sorted_classes and base_tuple in classes:
-                sorted_classes.append(base_tuple)
-    return sorted_classes
-
-
-def get_stub_path(module: ModuleInfo, override=False, temp=False) -> Path:
-    folder_name = "maya-stubs-override" if override else "maya-stubs"
-    extension = "py" if override or temp else "pyi"
-
-    stub_path = Path(module.name.replace("maya", folder_name, 1).replace(".", "/"))
-
-    if module.ispkg:
-        stub_path = stub_path / f"__init__.{extension}"
-    else:
-        stub_path = stub_path.with_name(f"{stub_path.name}.{extension}")
-
-    if temp:
-        stub_path = "temp" / stub_path
-
-    return stub_path.resolve()
-
-
-def generate_generic_stub(module: ModuleInfo) -> str:
-    module = import_module(module.name)
-    content = []
-
-    for name, member in inspect.getmembers(module):
-        stub_member = None
-
-        if name.startswith("_"):
-            # ignore private members
-            continue
-
-        if inspect.ismodule(member):
-            # Ignore modules
-            continue
-        elif inspect.isclass(member):
-            # we will add classes in a 2nd pass
-            continue
-        elif callable(member):
-            stub_member = Function.from_object(member)
-        else:
-            # member has to be a variable now?
-            stub_member = Variable(name, type(member), member)
-
-        if stub_member is not None:
-            content.append(stub_member.stub)
-
-    for name, cls in get_classes(module):
-        if name.startswith("_"):
-            # ignore private members
-            continue
-        if name in ["type", "object"]:
-            continue
-
-        stub_member = Class.from_object(cls, name)
-        content.append(stub_member.stub)
-
-    imports = ""
-
-    # maya.OpenMaya
-    if module.__name__ == "maya.OpenMayaAnim":
-        imports = "from maya.OpenMaya import *\n"
-    if module.__name__ == "maya.OpenMayaFX":
-        imports = "from maya.OpenMaya import *\n"
-    if module.__name__ == "maya.OpenMayaMPx":
-        imports = "from maya.OpenMaya import *\n"
-    if module.__name__ == "maya.OpenMayaRender":
-        imports = "from maya.OpenMaya import *\n"
-    if module.__name__ == "maya.OpenMayaUI":
-        imports = "from maya.OpenMaya import *\n"
-        imports += "from maya.OpenMayaRender import *\n"
-
-    # maya.api.OpenMaya
-    if module.__name__ == "maya.api.OpenMayaAnim":
-        imports = "from maya.api.OpenMaya import *\n"
-    if module.__name__ == "maya.api.OpenMayaUI":
-        imports = (
-            "from maya.api.OpenMaya import *\n"
-            "from maya.api.OpenMayaRender import *\n"
-        )
-
-    # maya.utils
-    if module.__name__ == "maya.utils":
-        imports = "from logging import Handler\n"
-
-    return STUB_HEADER.format(imports=imports) + "\n".join(content)
-
-
-def generate_stubs_for_module(module: ModuleInfo):
-    logger.info("Generating stubs for: %s", module.name)
-
-    if module.name == "maya.cmds":
-        content = generate_cmds_stubs()
-    else:
-        content = generate_generic_stub(module)
-
-    stub_path = get_stub_path(module)
-
-    stub_path.parent.mkdir(parents=True, exist_ok=True)
-
-    content = apply_stub_override(module, content)
-
-    with stub_path.open("w", encoding="utf8") as f:
-        f.write(content)
 
 
 def import_from_path(name: str, path: Path) -> ModuleType:
@@ -168,7 +49,7 @@ def apply_stub_override(module: ModuleInfo, content: str) -> str:
             continue
         elif inspect.isclass(override_member):
             stub_src = inspect.getsource(stub_member)
-            overriden_stub_src = stub_src
+            overridden_stub_src = stub_src
 
             for cls_member_name, cls_override_member in inspect.getmembers(
                 override_member
@@ -179,14 +60,14 @@ def apply_stub_override(module: ModuleInfo, content: str) -> str:
                 cls_stub_member = getattr(stub_member, cls_member_name, None)
                 if not cls_stub_member:
                     continue
-                overriden_stub_src = overriden_stub_src.replace(
+                overridden_stub_src = overridden_stub_src.replace(
                     inspect.getsource(cls_stub_member),
                     inspect.getsource(cls_override_member),
                 )
 
             content = content.replace(
                 stub_src,
-                overriden_stub_src,
+                overridden_stub_src,
             )
 
         elif callable(override_member):
@@ -196,6 +77,24 @@ def apply_stub_override(module: ModuleInfo, content: str) -> str:
             )
 
     return content
+
+
+def generate_stubs_for_module(module: ModuleInfo):
+    logger.info("Generating stubs for: %s", module.name)
+
+    if module.name == "maya.cmds":
+        content = generate_cmds_stubs()
+    else:
+        content = generate_generic_stub(module)
+
+    stub_path = get_stub_path(module)
+
+    stub_path.parent.mkdir(parents=True, exist_ok=True)
+
+    content = apply_stub_override(module, content)
+
+    with stub_path.open("w", encoding="utf8") as f:
+        f.write(content)
 
 
 def ignore_module(module: ModuleInfo):
@@ -238,7 +137,7 @@ def generate_stubs() -> None:
     ]
 
     try:
-        package = import_module("maya")
+        package = importlib.import_module("maya")
         for module in walk_packages(package.__path__, package.__name__ + "."):
             if ignore_module(module):
                 continue
