@@ -1,0 +1,28 @@
+{
+  "version": "0.2",
+  "ignorePaths": [],
+  "dictionaryDefinitions": [
+    {
+      "name": "maya",
+      "path": "./.config/dictionaries/maya.txt",
+      "addWords": true,
+      "description": "Dictionary for common maya words and commands"
+    }
+  ],
+  "dictionaries": [
+    "maya"
+  ],
+  "words": [
+    "Docstrings",
+    "isgetsetdescriptor",
+    "ispkg",
+    "levelname",
+    "levelno",
+    "pyenv",
+    "stubgen",
+    "typeshed",
+    "virtualenv"
+  ],
+  "ignoreWords": [],
+  "import": []
+}

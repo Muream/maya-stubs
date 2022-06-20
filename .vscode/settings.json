@@ -1,28 +1,33 @@
 {
-  "python.languageServer": "Pylance",
-  "python.analysis.diagnosticSeverityOverrides": {
-    "reportMissingModuleSource": "none"
-  },
+  // ------------------------------------ General -------------------------------------
+
   "editor.formatOnSave": true,
-  "python.formatting.provider": "black",
-  "python.sortImports.args": ["--profile", "black"],
+
+  // ------------------------------------- Python -------------------------------------
   "[python]": {
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
     }
   },
+  "python.languageServer": "Pylance",
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportMissingModuleSource": "none"
+  },
+  "python.formatting.provider": "black",
+  "python.sortImports.args": ["--profile", "black"],
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
   "autoDocstring.docstringFormat": "google-notypes",
-  "cSpell.words": [
-    "cmds",
-    "isgetsetdescriptor",
-    "ispkg",
-    "levelname",
-    "redbaron",
-    "stubgen",
-    "tqdm",
-    "typeshed",
-    "uninitialize"
-  ]
+
+  // -------------------------------------- JSON --------------------------------------
+
+  "[json][jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // ------------------------------------ Markdown ------------------------------------
+
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  }
 }
