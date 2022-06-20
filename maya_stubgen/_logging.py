@@ -1,4 +1,3 @@
-import datetime
 import logging
 
 
@@ -86,7 +85,7 @@ def init_logger():
     add_logging_level("SUCCESS", logging.INFO + 5)
 
     # Create custom logger logging all five levels
-    root_logger = logging.getLogger()
+    root_logger = logging.getLogger("maya_stubgen")
     root_logger.setLevel(logging.DEBUG)
 
     # Define format for logs

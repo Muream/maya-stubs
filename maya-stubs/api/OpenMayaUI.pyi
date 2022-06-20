@@ -1,19 +1,14 @@
-from __future__ import annotations
-
-# fmt: off
 from typing import *
 from typing_extensions import Self
+from _typeshed import Incomplete
 from maya.api.OpenMaya import *
 from maya.api.OpenMayaRender import *
-
-if TYPE_CHECKING:
-    from _typeshed import Incomplete
-
 
 key: str
 ourdict: dict
 py2dict: dict
 val: str
+
 class M3dView:
     def active3dView(self: Self, *args: Any, **kwargs: Any) -> Any:
         """active3dView() -> M3dView
@@ -3794,7 +3789,7 @@ class MPxLocatorNode(MPxNode):
     def color(self: Self, *args: Any, **kwargs: Any) -> Any:
         """color(status) -> int
 
-        This method returns the index of the color that is the default draw color for the given display status.  The index should be used with the methods of M3dView.  The value is not an index into the OpenGL color table. 
+        This method returns the index of the color that is the default draw color for the given display status.  The index should be used with the methods of M3dView.  The value is not an index into the OpenGL color table.
 
         The index that is returned will be into the active, dormant, or template color tables depending on the display status passed in.
 
@@ -3823,8 +3818,8 @@ class MPxLocatorNode(MPxNode):
 
         * view (M3dView) - 3D view that is being drawn into.
         * path (MDagPath) - to the parent (transform node) of this locator in the DAG.
-        If there is a shape node parented directly beneath the transform node, you can access it 
-        by calling MDagPath.extendToShape(). 
+        If there is a shape node parented directly beneath the transform node, you can access it
+        by calling MDagPath.extendToShape().
         * style (int) - style to draw object in. See M3dView.displayStyle() for a list of valid styles.
         * status (int) - selection status of object. See M3dView.displayStatus() for a list of valid status.
         """
@@ -4336,7 +4331,7 @@ class MPxManipContainer(MPxNode):
         (e.g. the start point of a distance manip) you want this method to
         calculate, then implement this method to calculate those
         manipulator values. Each manipulator value is identified by the
-        unique index returned by the corresponding method of its functionset 
+        unique index returned by the corresponding method of its functionset
         (e.g. MFnDistanceManip::startPointIndex).
 
         * manipIndex (int) - The index of the manipulator value to be
@@ -4358,7 +4353,7 @@ class MPxManipContainer(MPxNode):
         MPxSelectionContext::addManipulator, to add
         user-defined manipulators to a context.
 
-        Returns a tuple consisting of new MPxManipContainer instance, 
+        Returns a tuple consisting of new MPxManipContainer instance,
         and the manipulator node.
 
         * manipName (string) - manipulator name
@@ -4712,7 +4707,7 @@ class MPxManipulatorNode(MPxNode):
         MPxSelectionContext.addManipulator, to add
         user-defined manipulators to a context.
 
-        Returns a tuple consisting of new MPxManipulatorNode instance, 
+        Returns a tuple consisting of new MPxManipulatorNode instance,
         and the manipulator node.
 
         * manipName (string) - manipulator name
@@ -5475,7 +5470,7 @@ class MUiMessage(MMessage):
     def add3dViewDestroyMsgCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
         """add3dViewDestroyMsgCallback(panelName, function, clientData=None) -> id
 
-        	This method registers a callback for when a particular 3d view gets
+                This method registers a callback for when a particular 3d view gets
         destroyed. The callback is called before the destruction of the view.
 
         The callback function will be passed any client data that was

@@ -1,10 +1,12 @@
+import ast
 import importlib
 import logging
 import traceback
+from copy import deepcopy
 from pkgutil import ModuleInfo, walk_packages
 
+import black
 import click
-from redbaron import RedBaron
 
 from .common import get_stub_path
 from .generate_cmds_stubs import generate_cmds_stubs
@@ -14,33 +16,42 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
 
-def replace_override(override_red, input_red, output_red):
-    for override_node in override_red:
-        if override_node.type == "def":
-            generated_function = input_red.find("def", name=override_node.name)
-            if generated_function:
-                index = -1
-                for node in output_red:
-                    if node.dumps() == generated_function.dumps():
-                        index = output_red.index(node)
+def apply_override(input_node: ast.AST, override_node: ast.AST, output_node: ast.AST):
+    """Merge the input node with the override node into the output node.
 
-                decorators = override_node.decorators or []
 
-                is_overloaded = False
-                for decorator in decorators:
-                    if decorator.name.value == "overload":
-                        is_overloaded = True
+    Notes:
+        - For Classes, this will be called recursively and only apply the overridden
+            methods
+        - This function doesn't return anything but modifies the reference to the output
+            node.
 
-                if is_overloaded:
-                    output_red.insert(index, override_node)
-                else:
-                    output_red[index] = override_node
+    Args:
+        input_node: The node to be overridden.
+        override_node: The node containing the overrides.
+        output_node: The node containing the result of the merge.
+    """
+    for input_subnode in input_node.body:
+        result_nodes = []
 
-        if override_node.type == "class":
-            generated_class = input_red.find("class", name=override_node.name)
-            result_class = output_red.find("class", name=override_node.name)
-            if generated_class and result_class:
-                replace_override(override_node, generated_class, result_class)
+        if isinstance(input_subnode, (ast.FunctionDef, ast.ClassDef)):
+            for override_subnode in override_node.body:
+                if not isinstance(override_subnode, type(input_subnode)):
+                    continue
+
+                if input_subnode.name == override_subnode.name:
+                    if isinstance(input_subnode, ast.ClassDef):
+                        result_node = deepcopy(override_subnode)
+                        result_node.body = []
+                        apply_override(input_subnode, override_subnode, result_node)
+                        result_nodes.append(result_node)
+                    else:
+                        result_nodes.append(override_subnode)
+
+        if not result_nodes:
+            result_nodes = [input_subnode]
+
+        output_node.body.extend(result_nodes)
 
 
 def apply_stub_override(module: ModuleInfo, stub_source: str) -> str:
@@ -54,18 +65,19 @@ def apply_stub_override(module: ModuleInfo, stub_source: str) -> str:
         The stubs string with the overrides applied.
     """
     stub_override_path = get_stub_path(module, override=True)
+
+    if not stub_override_path.exists():
+        return stub_source
+
     stub_override_source = stub_override_path.read_text(encoding="utf8")
 
-    override_red = RedBaron(stub_override_source)
-    input_red = RedBaron(stub_source)
+    override_tree = ast.parse(stub_override_source)
+    input_tree = ast.parse(stub_source)
+    output_tree = ast.parse("")
 
-    # the output red instantiated in the same was as the input red
-    # but gets updated by `replace_override`
-    output_red = RedBaron(stub_source)
+    apply_override(input_tree, override_tree, output_tree)
 
-    replace_override(override_red, input_red, output_red)
-
-    return output_red.dumps()
+    return ast.unparse(output_tree)
 
 
 def generate_stubs_for_module(module: ModuleInfo):
@@ -80,10 +92,16 @@ def generate_stubs_for_module(module: ModuleInfo):
     logger.debug("Applying stubs overrides.")
     content = apply_stub_override(module, content)
 
+    logger.debug("Formatting stubs.")
+    content = black.format_str(
+        content,
+        mode=black.Mode(line_length=10_000, is_pyi=True),
+    )
+
     stub_path = get_stub_path(module)
     stub_path.parent.mkdir(parents=True, exist_ok=True)
     with stub_path.open("w", encoding="utf8") as f:
-        logger.debug("Writing content to %s.", stub_path)
+        logger.debug("Writing content to %s", stub_path)
         f.write(content)
 
 
@@ -106,10 +124,6 @@ def generate_stubs() -> None:
     logger.info("Generating Stubs")
 
     whitelist = [
-        "maya.cmds",
-        "maya.standalone",
-        "maya.utils",
-        "maya.mel",
         # OpenMaya 1.0
         "maya.OpenMaya",
         "maya.OpenMayaAnim",
@@ -124,6 +138,10 @@ def generate_stubs() -> None:
         "maya.api.OpenMayaRender",
         "maya.api.OpenMayaUI",
         # other
+        "maya.cmds",
+        "maya.standalone",
+        "maya.utils",
+        "maya.mel",
     ]
 
     try:

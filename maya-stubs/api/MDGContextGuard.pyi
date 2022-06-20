@@ -1,12 +1,6 @@
-from __future__ import annotations
-
-# fmt: off
 from typing import *
 from typing_extensions import Self
-
-if TYPE_CHECKING:
-    from _typeshed import Incomplete
-
+from _typeshed import Incomplete
 
 class MDGContextGuard:
     def context(self: Self) -> Any:

@@ -13,14 +13,10 @@ from typing import *
 from typing_extensions import Self
 
 STUB_HEADER = """\
-from __future__ import annotations
-
-# fmt: off
 from typing import *
 from typing_extensions import Self
+from _typeshed import Incomplete
 {imports}
-if TYPE_CHECKING:
-    from _typeshed import Incomplete
 \n
 """
 
@@ -267,19 +263,15 @@ class Function:
         return signature
 
 
-def get_stub_path(module: ModuleInfo, override=False, temp=False) -> Path:
+def get_stub_path(module: ModuleInfo, override=False) -> Path:
     folder_name = "maya-stubs-override" if override else "maya-stubs"
-    extension = "py" if override or temp else "pyi"
 
     stub_path = Path(module.name.replace("maya", folder_name, 1).replace(".", "/"))
 
     if module.ispkg:
-        stub_path = stub_path / f"__init__.{extension}"
+        stub_path = stub_path / f"__init__.pyi"
     else:
-        stub_path = stub_path.with_name(f"{stub_path.name}.{extension}")
-
-    if temp:
-        stub_path = "temp" / stub_path
+        stub_path = stub_path.with_name(f"{stub_path.name}.pyi")
 
     return stub_path.resolve()
 
