@@ -2,7 +2,6 @@ import inspect
 import keyword
 import logging
 import re
-from pathlib import Path
 from typing import *
 
 from maya import cmds

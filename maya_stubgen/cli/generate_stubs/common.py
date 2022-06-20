@@ -83,8 +83,8 @@ class Class(StubItem):
             if member_name.startswith("_"):
                 continue
 
-            is_inhertited = id(member) in parent_members
-            if is_inhertited:
+            is_inherited = id(member) in parent_members
+            if is_inherited:
                 continue
 
             if inspect.isclass(member):

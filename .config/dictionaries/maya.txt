@@ -1,0 +1,4 @@
+cmds
+mayapy
+uninitialize
+Uninitializing
