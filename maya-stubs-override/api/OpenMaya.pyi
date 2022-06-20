@@ -1,11 +1,18 @@
-# fmt: off
- 
+from typing import *
 
+from maya.api.OpenMaya import (
+    MDAGDrawOverrideInfo,
+    MDagPathArray,
+    MFnDependencyNode,
+    MMatrix,
+    MObject,
+)
+from typing_extensions import Self
 
 class MDagPath:
     def apiType(self: Self) -> int:
         """Returns the type of the object at the end of the path."""
-    def child(self: Self, chlidNum: int) -> MObject:
+    def child(self: Self, childNum: int) -> MObject:
         """Returns the specified child of the object at the end of the path."""
     def childCount(self: Self) -> int:
         """Returns the number of objects parented directly beneath the object at the end of the path."""
@@ -73,7 +80,6 @@ class MFnBase:
         """Attaches the function set to the specified Maya object."""
     def type(self: Self) -> int:
         """Returns the type of the function set."""
-
 
 class MFnDagNode(MFnDependencyNode):
     def fullPathName(self: Self) -> str:
