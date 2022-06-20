@@ -1,5 +1,5 @@
 # fmt: off
-from __future__ import annotations
+ 
 
 
 class MDagPath:
@@ -73,10 +73,6 @@ class MFnBase:
         """Attaches the function set to the specified Maya object."""
     def type(self: Self) -> int:
         """Returns the type of the function set."""
-
-
-class MFnDependencyNode(MFnBase):
-    pass
 
 
 class MFnDagNode(MFnDependencyNode):

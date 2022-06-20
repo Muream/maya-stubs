@@ -1,17 +1,12 @@
-from __future__ import annotations
-
-# fmt: off
 from typing import *
 from typing_extensions import Self
-
-if TYPE_CHECKING:
-    from _typeshed import Incomplete
-
+from _typeshed import Incomplete
 
 key: str
 ourdict: dict
 py2dict: dict
 val: str
+
 class MAttributeParameterMapping:
     def allowConnection(self: Self, *args: Any, **kwargs: Any) -> Any:
         """allowConnection() -> bool
@@ -344,7 +339,7 @@ class MColorManagementUtilities:
 
         * inputSpaceName (string) - Name of the color space of the node.
 
-        Returns identifier of the color transform required to be 
+        Returns identifier of the color transform required to be
         applied to the node.
         """
     def getColorTransformCacheIdForOutputTransform(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -358,7 +353,7 @@ class MColorManagementUtilities:
         This id corresponds to a color transform contained in the color
         transform data retrieved by the MColorTransformData class.
 
-        Returns identifier of the color transform required to be 
+        Returns identifier of the color transform required to be
         applied on the rendered image
         """
     def getColorTransformData(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -808,7 +803,7 @@ class MFrameContext:
         """objectTypeExclusions() -> long
 
         Get the object type exclusions as a bitfield.
-        	The bitfield can be tested using the bits defined by class statics starting with kExclude.
+                The bitfield can be tested using the bits defined by class statics starting with kExclude.
         """
     def renderingDestination(self: Self, *args: Any, **kwargs: Any) -> Any:
         """renderingDestination() -> [int, destinationName]
@@ -862,7 +857,7 @@ class MFrameContext:
           MFrameContext.kViewNearClipValue    Camera near clip value (single value)
           MFrameContext.kViewFarClipValue     Camera far clip value (single value)
           MFrameContext.kViewUnnormlizedNearClipValue Unnormalized camera near clip value (single value)
-        	 MFrameContext.kViewUnnormalizedFarClipValue Unnormalized camera far clip value (single value)
+                 MFrameContext.kViewUnnormalizedFarClipValue Unnormalized camera far clip value (single value)
         """
     def shadeTemplates(self: Self, *args: Any, **kwargs: Any) -> Any:
         """shadeTemplates() -> bool
@@ -1740,40 +1735,40 @@ class MIndexBufferDescriptor:
     @property
     def indexType(*args: Any, **kwargs: Any) -> Any:
         """The indexing type describing what the buffer is used for:
-          kVertexPoint
-          kEdgeLine
-          kTriangleEdge
-          kTriangle
-          kFaceCenter
-          kEditPoint
-          kControlVertex
-          kHullEdgeLine
-          kHullTriangle
-          kHullFaceCenter
-          kHullEdgeCenter
-          kHullUV
-          kSubDivEdge
-          kTangent
-          kCustom
+        kVertexPoint
+        kEdgeLine
+        kTriangleEdge
+        kTriangle
+        kFaceCenter
+        kEditPoint
+        kControlVertex
+        kHullEdgeLine
+        kHullTriangle
+        kHullFaceCenter
+        kHullEdgeCenter
+        kHullUV
+        kSubDivEdge
+        kTangent
+        kCustom
         """
     @indexType.setter
     def indexType(*args: Any, **kwargs: Any) -> Any:
         """The indexing type describing what the buffer is used for:
-          kVertexPoint
-          kEdgeLine
-          kTriangleEdge
-          kTriangle
-          kFaceCenter
-          kEditPoint
-          kControlVertex
-          kHullEdgeLine
-          kHullTriangle
-          kHullFaceCenter
-          kHullEdgeCenter
-          kHullUV
-          kSubDivEdge
-          kTangent
-          kCustom
+        kVertexPoint
+        kEdgeLine
+        kTriangleEdge
+        kTriangle
+        kFaceCenter
+        kEditPoint
+        kControlVertex
+        kHullEdgeLine
+        kHullTriangle
+        kHullFaceCenter
+        kHullEdgeCenter
+        kHullUV
+        kSubDivEdge
+        kTangent
+        kCustom
         """
     kControlVertex: int = ...
     kCustom: int = ...
@@ -1860,14 +1855,14 @@ class MIntersection:
     @property
     def barycentricCoordinates(*args: Any, **kwargs: Any) -> Any:
         """Get the barycentric coordinates (a, b). Only valid for triangles.
-        Follows Tomas Moller & Ben Trumbore, jgt 97 "Fast minimum storage ray/triangle intersection" which means that a point, T(a,b), on a triangle is given by: 
+        Follows Tomas Moller & Ben Trumbore, jgt 97 "Fast minimum storage ray/triangle intersection" which means that a point, T(a,b), on a triangle is given by:
            T(a,b) = (1-a-b)V0 + aV1 + bV2
         where V0, V1, and V2 are the triangle vertices.
         """
     @barycentricCoordinates.setter
     def barycentricCoordinates(*args: Any, **kwargs: Any) -> Any:
         """Get the barycentric coordinates (a, b). Only valid for triangles.
-        Follows Tomas Moller & Ben Trumbore, jgt 97 "Fast minimum storage ray/triangle intersection" which means that a point, T(a,b), on a triangle is given by: 
+        Follows Tomas Moller & Ben Trumbore, jgt 97 "Fast minimum storage ray/triangle intersection" which means that a point, T(a,b), on a triangle is given by:
            T(a,b) = (1-a-b)V0 + aV1 + bV2
         where V0, V1, and V2 are the triangle vertices.
         """
@@ -2329,21 +2324,21 @@ class MPxDrawOverride:
     def userSelect(self: Self, *args: Any, **kwargs: Any) -> Any:
         """userSelect(selectInfo, drawContext, objPath, data, selectionList, worldSpaceHitPts) -> bool
 
-        This method is called during the hit test phase of Viewport 2.0 selection if wantUserSelection() returns true, in order to override the default hit test implementation for the associated DAG object. 
+        This method is called during the hit test phase of Viewport 2.0 selection if wantUserSelection() returns true, in order to override the default hit test implementation for the associated DAG object.
 
-        The selection info encapsulates the selection states such as the selection region. The draw context along with the user data cached by prepareForDraw() provides information the same as that being passed to the draw callback, thus makes it possible for a draw override to match its custom hit test with its custom drawing (a.k.a. WYSIWYG selection). 
+        The selection info encapsulates the selection states such as the selection region. The draw context along with the user data cached by prepareForDraw() provides information the same as that being passed to the draw callback, thus makes it possible for a draw override to match its custom hit test with its custom drawing (a.k.a. WYSIWYG selection).
 
-        If the object is hit, the implementation should add the DAG path and if appropriate its component to selectionList. It is the responsibility of the implementation to add world-space coordinate of the intersection between the selected item and selection ray to worldSpaceHitPts. 
+        If the object is hit, the implementation should add the DAG path and if appropriate its component to selectionList. It is the responsibility of the implementation to add world-space coordinate of the intersection between the selected item and selection ray to worldSpaceHitPts.
 
-        A custom hit test implementation can choose GPU-based approaches such as OpenGL selection mode, occlusion query etc., or CPU-based approaches which perform hit test for custom geometries. Note that a custom hit test implementation is an object-level override, thus the default hit test implementation can still work for other objects in the scene. 
+        A custom hit test implementation can choose GPU-based approaches such as OpenGL selection mode, occlusion query etc., or CPU-based approaches which perform hit test for custom geometries. Note that a custom hit test implementation is an object-level override, thus the default hit test implementation can still work for other objects in the scene.
 
-        After a scene traversal in the hit test phase, Maya records a list of selected items and hit points. During the selection interpretation phase, the hit points will be sorted for certain cases such as single selection; only the winning hit point(s) will have the corresponding selected item(s) to call the refineSelectionPath() method for final selection result that is used to adjust the global active selection list. Thus, for these cases, Maya can only guarantee correct behavior if the implementation returns a valid hit point. 
+        After a scene traversal in the hit test phase, Maya records a list of selected items and hit points. During the selection interpretation phase, the hit points will be sorted for certain cases such as single selection; only the winning hit point(s) will have the corresponding selected item(s) to call the refineSelectionPath() method for final selection result that is used to adjust the global active selection list. Thus, for these cases, Maya can only guarantee correct behavior if the implementation returns a valid hit point.
 
-        For cases such as marquee selection over multiple components, where hit points don't matter, instead of creating one component object for each selected component element, the implementation should create one component object for all selected component elements, to avoid any unnecessary performance overhead due to the frequency of calling refineSelectionPath(). 
+        For cases such as marquee selection over multiple components, where hit points don't matter, instead of creating one component object for each selected component element, the implementation should create one component object for all selected component elements, to avoid any unnecessary performance overhead due to the frequency of calling refineSelectionPath().
 
-        For cases such as point snapping, where multiple hit points are required, each hit point should be stored with the same array index as its selected item (typically a vertex component object), in order for Maya to associate each pair of selected item and hit point. 
+        For cases such as point snapping, where multiple hit points are required, each hit point should be stored with the same array index as its selected item (typically a vertex component object), in order for Maya to associate each pair of selected item and hit point.
 
-        This method should return true if at least one object was hit. The default value is false. 
+        This method should return true if at least one object was hit. The default value is false.
 
         * selectInfo [IN] (MSelectionInfo) - The selection info
         * context [IN] (MDrawContext) - The draw context
@@ -2355,9 +2350,9 @@ class MPxDrawOverride:
     def wantUserSelection(self: Self, *args: Any, **kwargs: Any) -> Any:
         """wantUserSelection() -> bool
 
-        This method is called during the hit test phase of Viewport 2.0 selection and is used to indicate whether or not the userSelect() method should be called to override the default hit test implementation for the associated DAG object. 
+        This method is called during the hit test phase of Viewport 2.0 selection and is used to indicate whether or not the userSelect() method should be called to override the default hit test implementation for the associated DAG object.
 
-        This method returns false by default. In this case the draw callback method is invoked for the selection pass, with a special shader that encodes each entity with a different plain color, then the draw buffer is scanned and each color found inside the selection region is transformed into hit info that will be used by the later selection interpretation phase, including selected item and world-space hit point. 
+        This method returns false by default. In this case the draw callback method is invoked for the selection pass, with a special shader that encodes each entity with a different plain color, then the draw buffer is scanned and each color found inside the selection region is transformed into hit info that will be used by the later selection interpretation phase, including selected item and world-space hit point.
 
         If a custom hit test implementation is required, this method must be overridden to return true in order for userSelect() to be called.
         """
@@ -2583,7 +2578,7 @@ class MPxPrimitiveGenerator:
         This method gets called to allow the generator to fill in the data for a custom index stream.
 
         * object (MObject) - The object being evaluated.
-        * component (MObject) - The components to use when building the index buffer. 
+        * component (MObject) - The components to use when building the index buffer.
         * sourceIndexing (MComponentDataIndexingList) - Vertex index mapping in the declared MComponentDataIndexing::MComponentType space.
         * targetIndexing (MComponentDataIndexingList) - Vertex index mapping from targetIndexing.getComponentType() space to vertex buffer space.
         * indexBuffer [OUT] (MIndexBuffer) - The index buffer to fill.
@@ -3186,11 +3181,11 @@ class MPxSubSceneOverride:
     def update(self: Self, *args: Any, **kwargs: Any) -> Any:
         """update(container, frameContext) -> self
 
-        This method is called by Maya on each frame as long as the implementation of MPxSubSceneOverride.requiresUpdate() returns True. In this method, the MSubSceneContainer should be populated with the render items that are required to draw the associated DAG object. The render items will remain in the container until they are explicitly removed or the associated object is deleted. Render items in the container may also be modified at this time. 
+        This method is called by Maya on each frame as long as the implementation of MPxSubSceneOverride.requiresUpdate() returns True. In this method, the MSubSceneContainer should be populated with the render items that are required to draw the associated DAG object. The render items will remain in the container until they are explicitly removed or the associated object is deleted. Render items in the container may also be modified at this time.
 
-        All render items in the container upon completion of this method will be processed for drawing. Any such items which pass all filtering tests for the active viewport will draw. At a minimum, render items must be enabled, have a valid shader and valid geometry in order to draw in Viewport 2.0. 
+        All render items in the container upon completion of this method will be processed for drawing. Any such items which pass all filtering tests for the active viewport will draw. At a minimum, render items must be enabled, have a valid shader and valid geometry in order to draw in Viewport 2.0.
 
-        It is the responsibility of this method	to call MRenderer.setLightsAndShadowsDirty() to trigger recomputation of any shadow maps in the scene (if required). 
+        It is the responsibility of this method	to call MRenderer.setLightsAndShadowsDirty() to trigger recomputation of any shadow maps in the scene (if required).
 
         * container (MSubSceneContainer) - The container for this override
         * frameContext (MFrameContext) - Context information for the current frame
@@ -3271,7 +3266,7 @@ class MPxVertexBufferGenerator:
     def createVertexStream(self: Self, *args: Any, **kwargs: Any) -> Any:
         """createVertexStream(object, vertexBuffer, targetIndexing, sharedIndexing, sourceStreams) -> self
 
-        This method gets called to allow the generator to fill in the data for a custom vertex stream. Use the requirements in the vertexBuffer to get the description of the stream. Use vertexBuffer.acquire() and vertexBuffer.commit() to fill the buffer. 
+        This method gets called to allow the generator to fill in the data for a custom vertex stream. Use the requirements in the vertexBuffer to get the description of the stream. Use vertexBuffer.acquire() and vertexBuffer.commit() to fill the buffer.
 
         * object (MObject) - The dag object being evaluated.
         * vertexBuffer [IN/OUT] (MVertexBuffer) - The vertex buffer to fill.
@@ -3282,7 +3277,7 @@ class MPxVertexBufferGenerator:
     def getSourceIndexing(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getSourceIndexing(object, sourceIndexing) -> self
 
-        This function is called to allow the vertex buffer generator to provide its vertex indexing information as well as the space the vertices are in.  The indexing and the component type are stored in the  sourceIndexing argument.  This indexing information is to allow the system to identify any potential  vertex sharing that is common across all vertex requirements. 
+        This function is called to allow the vertex buffer generator to provide its vertex indexing information as well as the space the vertices are in.  The indexing and the component type are stored in the  sourceIndexing argument.  This indexing information is to allow the system to identify any potential  vertex sharing that is common across all vertex requirements.
 
         * object (MObject) - The object being evaluated.
         * sourceIndexing [OUT] (MComponentDataIndexing) - Vertex index mapping in the declared MComponentDataIndexing::MComponentType space.
@@ -3290,7 +3285,7 @@ class MPxVertexBufferGenerator:
     def getSourceStreams(self: Self, *args: Any, **kwargs: Any) -> Any:
         """getSourceStreams(object, sourceStreams) -> self
 
-        This function is called to allow the vertex buffer generator to provide the list of stream names that it requires. The names will be used to fill the array of vertex buffers that will be passed to createVertexStream. 
+        This function is called to allow the vertex buffer generator to provide the list of stream names that it requires. The names will be used to fill the array of vertex buffers that will be passed to createVertexStream.
 
         * object (MObject) - The dag object being evaluated.
         * sourceStreams [OUT] (list of strings) - Array of strings.
@@ -3858,7 +3853,7 @@ class MRenderItem:
           MRenderItem.InternalItem
              A render item which was created by Maya for internal purposes (e.g. A render item created as the result of a shader being assigned to a DAG node).
           MRenderItem.InternalMaterialItem
-        		An internally created MaterialSceneItem for non-textured mode display.
+                        An internally created MaterialSceneItem for non-textured mode display.
           MRenderItem.InternalTexturedMaterialItem
              An internally created MaterialSceneItem for textured mode display.
           MRenderItem.InternalUnsupportedMaterialItem
@@ -3946,7 +3941,7 @@ class MRenderOverride:
 
         When an implementation returns true to override the default behavior, the object-level selection override methods won't be triggered any more:
 
-        * MPxGeometryOverride::refineSelectionPath * MPxSubSceneOverride::getInstancedSelectionPath * MPxDrawOverride::userSelect * MPxDrawOverride::refineSelectionPath 
+        * MPxGeometryOverride::refineSelectionPath * MPxSubSceneOverride::getInstancedSelectionPath * MPxDrawOverride::userSelect * MPxDrawOverride::refineSelectionPath
 
         * frameContext [IN] (MFrameContext) - The frame-level context information
         * selectInfo [IN] (MSelectionInfo) - The selection info
@@ -4071,7 +4066,7 @@ class MRenderProfile:
 
 class MRenderTarget:
     def freeRawData(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """freeRawData(long) -> None
+        """freeRawData(long) -> None
         Deallocate system memory - retrieved from rawData().
         """
     def rawData(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -4198,24 +4193,24 @@ class MRenderTargetDescription:
 
 class MRenderTargetManager:
     def acquireRenderTarget(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """acquireRenderTarget(MRenderTargetDescription) -> MRenderTarget
+        """acquireRenderTarget(MRenderTargetDescription) -> MRenderTarget
         Acquire an instance of a render target.
         When the object is no longer needed, releaseRenderTarget() should be called
         to notify the target manager that the caller is done with the render target.
         """
     def acquireRenderTargetFromScreen(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """acquireRenderTargetFromScreen(string) -> MRenderTarget
+        """acquireRenderTargetFromScreen(string) -> MRenderTarget
         Acquire an instance of a render target with the same characteristics as the current on-screen target.
         When the object is no longer needed, releaseRenderTarget() should be called
         to notify the target manager that the caller is done with the render target.
         """
     def formatSupportsSRGBWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """formatSupportsSRGBWrite(int) -> bool
+        """formatSupportsSRGBWrite(int) -> bool
         This method will perform a check to determine whether gamma correction can be performed
         by the GPU when writing pixels to a render target of a given format.
         """
     def releaseRenderTarget(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """releaseRenderTarget(MRenderTarget) -> self
+        """releaseRenderTarget(MRenderTarget) -> self
         Deletes the MRenderTarget and releases the reference to the underlying target which is held by the MRenderTarget object.
         """
 
@@ -4500,7 +4495,7 @@ class MRenderer:
 
         Render images from a panel to render targets.
         return True if render operation was successful.
-        * sourceName (string) - The name of the source view want to render. 
+        * sourceName (string) - The name of the source view want to render.
         * targetList (PyListObject:MRenderTarget) - Render target list want to render into.
         """
     def renderOverrideCount(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -4930,30 +4925,30 @@ class MSelectionContext:
     @property
     def selectionLevel(*args: Any, **kwargs: Any) -> Any:
         """The selection level used to pick items.
-          kNone        No selection available.
-          kObject      Object level.
-                       Objects are selected as a whole. Components are not directly accessible.
-          kComponent   Component level.
-                       Components such as vertices, edges and faces are selectable. Selection
-                       level of each individual MIntersection object is determined by primitive
-                       type of the render item.
-          kFace        Face level.
-          kEdge        Edge level.
-          kVertex      Vertex level.
+        kNone        No selection available.
+        kObject      Object level.
+                     Objects are selected as a whole. Components are not directly accessible.
+        kComponent   Component level.
+                     Components such as vertices, edges and faces are selectable. Selection
+                     level of each individual MIntersection object is determined by primitive
+                     type of the render item.
+        kFace        Face level.
+        kEdge        Edge level.
+        kVertex      Vertex level.
         """
     @selectionLevel.setter
     def selectionLevel(*args: Any, **kwargs: Any) -> Any:
         """The selection level used to pick items.
-          kNone        No selection available.
-          kObject      Object level.
-                       Objects are selected as a whole. Components are not directly accessible.
-          kComponent   Component level.
-                       Components such as vertices, edges and faces are selectable. Selection
-                       level of each individual MIntersection object is determined by primitive
-                       type of the render item.
-          kFace        Face level.
-          kEdge        Edge level.
-          kVertex      Vertex level.
+        kNone        No selection available.
+        kObject      Object level.
+                     Objects are selected as a whole. Components are not directly accessible.
+        kComponent   Component level.
+                     Components such as vertices, edges and faces are selectable. Selection
+                     level of each individual MIntersection object is determined by primitive
+                     type of the render item.
+        kFace        Face level.
+        kEdge        Edge level.
+        kVertex      Vertex level.
         """
 
 class MSelectionInfo:
@@ -5062,7 +5057,7 @@ class MShaderCompileMacro:
 
 class MShaderInstance:
     def activatePass(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """activatePass(MDrawContext, int) -> self
+        """activatePass(MDrawContext, int) -> self
         Activates the given pass of the shader.
         Must be called between calls to bind() and unbind().
         """
@@ -5080,35 +5075,35 @@ class MShaderInstance:
     def addInputFragmentForMultiParams(self: Self, *args: Any, **kwargs: Any) -> Any:
         """addInputFragmentForMultiParams(fragmentName, uniqueName, outputNames, inputNames, invalidParameterIndices=None, fragmentUsage=MShaderInstance.kPixelShader) -> self
 
-        Connect a named fragment that has been registered with the MFragmentManager 
-        to this MShaderInstance. The code defined in the fragment will be included 
-        in the new shader and executed on GPU to compute values for input parameters 
-        specified by inputNames. 
+        Connect a named fragment that has been registered with the MFragmentManager
+        to this MShaderInstance. The code defined in the fragment will be included
+        in the new shader and executed on GPU to compute values for input parameters
+        specified by inputNames.
 
-        To connect with fragments, this MShaderInstance needs to be created from a 
-        shader fragment or fragment graph as well. Thus, a shader instance created 
-        from a file-based effect cannot connect with any fragments. 
+        To connect with fragments, this MShaderInstance needs to be created from a
+        shader fragment or fragment graph as well. Thus, a shader instance created
+        from a file-based effect cannot connect with any fragments.
 
-        After the fragment is connected, all input parameters with the same name in 
-        the new fragment graph are mapped to a single parameter in the shader by 
-        default. If uniqueness is required for input parameters on the fragment, 
-        uniqueName can be used to prefix names of the input parameters. 
+        After the fragment is connected, all input parameters with the same name in
+        the new fragment graph are mapped to a single parameter in the shader by
+        default. If uniqueness is required for input parameters on the fragment,
+        uniqueName can be used to prefix names of the input parameters.
 
-        This method is particularly useful when plugin needs to make multiple 
-        connections from the input fragment to this MShaderInstance. It can be used 
-        to make a single connection, but addInputFragment() is more convenient in 
-        this case. The numbers of the output and input parameters must match. An 
-        output and an input parameter with the same index in the two string arrays 
-        will be connected. To specify fan-out connections, the same output name can 
-        be repeated in outputNames as need. Fan-in connections are not allowed. 
+        This method is particularly useful when plugin needs to make multiple
+        connections from the input fragment to this MShaderInstance. It can be used
+        to make a single connection, but addInputFragment() is more convenient in
+        this case. The numbers of the output and input parameters must match. An
+        output and an input parameter with the same index in the two string arrays
+        will be connected. To specify fan-out connections, the same output name can
+        be repeated in outputNames as need. Fan-in connections are not allowed.
 
-        If the numbers of the output and input parameters don't match, or a 
-        parameter (either output or input) doesn't exist, or their types don't 
-        match, the relevant parameters will not be connected and the method will 
-        return MStatus::kInvalidParameter. In this case, the fragment may still be 
-        connected partially to this MShaderInstance through other connectable 
-        parameter pairs, and plugin can use invalidParameterIndices to query 
-        indices of those invalid parameters in outputNames and inputNames. 
+        If the numbers of the output and input parameters don't match, or a
+        parameter (either output or input) doesn't exist, or their types don't
+        match, the relevant parameters will not be connected and the method will
+        return MStatus::kInvalidParameter. In this case, the fragment may still be
+        connected partially to this MShaderInstance through other connectable
+        parameter pairs, and plugin can use invalidParameterIndices to query
+        indices of those invalid parameters in outputNames and inputNames.
 
         * fragmentName (string) - Name of the input fragment.
         * uniqueName (string) - A unique name to prefix names of input parameters on the input fragment.
@@ -5136,7 +5131,7 @@ class MShaderInstance:
          * annotationName (string) - The name of the annotation.
         """
     def bind(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """bind(MDrawContext) -> self
+        """bind(MDrawContext) -> self
         Binds the shader instance to the draw context, so that it is the active shader.
         """
     def clone(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -5149,12 +5144,12 @@ class MShaderInstance:
 
         Return a new shader instance with Color Management fragment added, which is based on the callee.
         The callee shader instance is the one used for rendering a render item with image(a MPxNode with image, etc.)
-        The new shader is completely independent of the original shader. 
+        The new shader is completely independent of the original shader.
         Setting parameter values on either shader after calling this function will have no effect on the other.
         The function won't keep a copy of input parameter.
 
 
-        When the returned new shader instance is no longer needed, MShaderManager.releaseShader() 
+        When the returned new shader instance is no longer needed, MShaderManager.releaseShader()
         should be called to notify the shader manager that the caller is done with the shader.
 
          * inputColorSpace (string) - The color space the current image is in
@@ -5165,7 +5160,7 @@ class MShaderInstance:
         Return the size of an array if it is an array. Returns 0 if it is not an array
         """
     def getPassCount(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """getPassCount(MDrawContext) -> int
+        """getPassCount(MDrawContext) -> int
         Returns the number of draw passes defined by the shader.
         None if the shader instance or draw context was invalid.
         """
@@ -5260,7 +5255,7 @@ class MShaderInstance:
         Rename a named parameter.
         """
     def requiredVertexBuffers(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """requiredVertexBuffers(MVertexBufferDescriptorList) -> self
+        """requiredVertexBuffers(MVertexBufferDescriptorList) -> self
         Get the vertex buffer descriptors that describe the buffers required
         by a given shader instance.
         """
@@ -5340,15 +5335,15 @@ class MShaderInstance:
         The UI widget type can be specified in shader using the 'UIWidget' annotation.The UI widget can be used to specify which widget should be used to control the parameter in the Attribute Editor.
         """
     def unbind(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """unbind(MDrawContext) -> self
+        """unbind(MDrawContext) -> self
         Unbinds the shader instance from the draw context.
         """
     def updateParameters(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """updateParameters(MDrawContext) -> self
+        """updateParameters(MDrawContext) -> self
         Updates the bound shader instance with the current parameter data.
         """
     def writeEffectSourceToFile(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """writeEffectSourceToFile(filePath) -> self
+        """writeEffectSourceToFile(filePath) -> self
         Write the source of the final OGSFX/HLSL/CgFX effect to a specified file. Use
         this for debugging to see how fragments are turned into the final effect for
         the current drawing API.
@@ -5369,8 +5364,8 @@ class MShaderManager:
         Add a path to the list of shader search paths.
         """
     def clearEffectCache(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """clearEffectCache() -> self
-        Clear the effect cache.
+        """clearEffectCache() -> self
+        Clear the effect cache.
         This will allow all relevant effects to be updated when the implementation of a shader fragment or fragment graph has been modified.
         """
     def getEffectsBufferShader(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -5417,7 +5412,7 @@ class MShaderManager:
 
         * fragmentName (string) - The name of the fragment to generate a shader from.
         * structOutputName (string) - If the output of the fragment is a struct, use this parameter to specify which member of the struct to use.
-        								 This parameter is ignored if the output of the fragment is not a struct.
+                                                                         This parameter is ignored if the output of the fragment is not a struct.
         * decorateFragment (bool) - If True, Maya state fragments will be added.
         * preCb (function) - A function, or other Python callable, to be called before render items are drawn with this shader.
         * postCb (function) - A function, or other Python callable, to be called after render items are drawn with this shader.
@@ -5497,7 +5492,7 @@ class MShaderManager:
           k3dPointVectorShader            An instance of a stock shader that can be used for 3d rendering of lines based on a point and a vector stream
         """
     def isSupportedShaderSemantic(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """isSupportedShaderSemantic(string) -> bool
+        """isSupportedShaderSemantic(string) -> bool
         Return if a given string is a supported shader semantic.
         """
     k3dBlinnShader: int = ...
@@ -5529,13 +5524,13 @@ class MShaderManager:
     k3dThickDashLineShader: int = ...
     k3dThickLineShader: int = ...
     def releaseShader(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """releaseShader(MShaderInstance) -> None
+        """releaseShader(MShaderInstance) -> None
         Deletes the MShaderInstance and releases its reference to the underlying shader which is held by the MShaderInstance object.
         """
     def removeEffectFromCache(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """removeEffectFromCache(effecsFileName, techniqueName, macros=None) -> self
-        Remove an effect from the cache.
-        This is particulary useful when calling the getEffectsTechniques() and/or getEffectsFileShader() with the flag useEffectCache set to True for maximum performance, and will allow reloading the effect from the disk when the shader file has been modified.
+        """removeEffectFromCache(effecsFileName, techniqueName, macros=None) -> self
+        Remove an effect from the cache.
+        This is particulary useful when calling the getEffectsTechniques() and/or getEffectsFileShader() with the flag useEffectCache set to True for maximum performance, and will allow reloading the effect from the disk when the shader file has been modified.
         * effectsFileName (string) - The effects file.
         * techniqueName (string) - The name of a technique in the effects file. If an empty string is specified then the first technique in the effects file will be used.
         * macros (sequence of MShaderCompileMacro) - Sequence of shader macros. The default value is None, meaning that no macros are specified.
@@ -5756,7 +5751,7 @@ class MSwatchRenderBase:
     def cancelCurrentSwatchRender(self: Self, *args: Any, **kwargs: Any) -> Any:
         """cancelCurrentSwatchRender() -> None
 
-        The method cancels the swatch which is being rendered in parallel, and push the swatch render item back to the render queue after. 
+        The method cancels the swatch which is being rendered in parallel, and push the swatch render item back to the render queue after.
 
         The render plugins should make sure that MSwatchRenderBase.cancelParallelRendering() is implemented acoordingly.
         """
@@ -5876,7 +5871,7 @@ class MTexture:
         Get the number of bytes per pixel in the texture.
         """
     def freeRawData(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """freeRawData(long) -> None
+        """freeRawData(long) -> None
         Deallocate system memory - retrieved from rawData().
         """
     def hasAlpha(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -6701,7 +6696,7 @@ class MUIDrawManager:
                  If None is passed, background will be fully transparent.
         * dynamic (bool) - This is mostly used for performance.
                  If the text draw is not changed frequently, we can leave it as default value false.
-        			If the text draw is changing very often like it is showing some dynamic numbers,
+                                If the text draw is changing very often like it is showing some dynamic numbers,
                  in this case making dynamic true will give better performance.
         """
     def text2d(self: Self, *args: Any, **kwargs: Any) -> Any:
@@ -6726,7 +6721,7 @@ class MUIDrawManager:
                  If None is passed, background will be fully transparent.
         * dynamic (bool) - This is mostly used for performance.
                  If the text draw is not changed frequently, we can leave it as default value false.
-        			If the text draw is changing very often like it is showing some dynamic numbers,
+                                If the text draw is changing very often like it is showing some dynamic numbers,
                  in this case making dynamic true will give better performance.
         """
 

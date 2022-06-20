@@ -1,18 +1,13 @@
-from __future__ import annotations
-
-# fmt: off
 from typing import *
 from typing_extensions import Self
+from _typeshed import Incomplete
 from maya.api.OpenMaya import *
-
-if TYPE_CHECKING:
-    from _typeshed import Incomplete
-
 
 key: str
 ourdict: dict
 py2dict: dict
 val: str
+
 class MAnimControl:
     def animationEndTime(self: Self, *args: Any, **kwargs: Any) -> Any:
         """animationEndTime() -> MTime
@@ -373,7 +368,7 @@ class MAnimMessage(MMessage):
         command after baking operation is completed, if disableImplicitControl
         is enabled. One example usage of this callback is to create the anim curve
         that is used to drive Maya rigidbody's bakeSimulationIndex, which defines
-        if the rigid body should take its input from anim curve or rigid body 
+        if the rigid body should take its input from anim curve or rigid body
         simulation.
 
          * function - callable which will be passed a MPlugArray containing the baked plugs
