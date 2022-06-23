@@ -3056,6 +3056,13 @@ class MPxContext:
         * index (ImageIndex) - the index of the image being retrieved; three image
         representations are permitted: kImage1, kImage2, kImage3.
         """
+    def inAlternateContext(self: Self, *args: Any, **kwargs: Any) -> Any:
+        """inAlternateContext() -> bool
+
+        This method is called to determine if an alternate context is active.
+        For example, this method returns true if the user moves the camera
+        while the current context is active.
+        """
     kImage1: int = ...
     kImage2: int = ...
     kImage3: int = ...
