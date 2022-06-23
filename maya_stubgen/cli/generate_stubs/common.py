@@ -76,8 +76,6 @@ class Class(StubItem):
             parent_members = []
 
         for member_name, member in inspect.getmembers(obj):
-            if member_name.startswith("_"):
-                continue
 
             is_inherited = id(member) in parent_members
             if is_inherited:
@@ -126,9 +124,9 @@ class Variable(StubItem):
     value: Any = MISSING
     is_argument: bool = False
 
-    def __post_init__(self):
+    def __post_init__(self) -> None:
         if self.name == "self":
-            self.type = Self
+            self.type = MISSING
 
     @classmethod
     def from_object(cls, obj: type, name: Optional[str] = None) -> Self:
@@ -146,7 +144,7 @@ class Variable(StubItem):
 
         res = self.name
 
-        if self.type:
+        if self.type is not MISSING:
             res += f": {self.type_str}"
 
         if self.value is not MISSING and self.is_argument:

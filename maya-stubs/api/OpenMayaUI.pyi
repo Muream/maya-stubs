@@ -4,53 +4,66 @@ from _typeshed import Incomplete
 from maya.api.OpenMaya import *
 from maya.api.OpenMayaRender import *
 
+__builtins__: dict
+__cached__: str
+__doc__: NoneType
+__file__: str
+__loader__: SourceFileLoader
+__name__: str
+__package__: str
+__spec__: ModuleSpec
 key: str
 ourdict: dict
 py2dict: dict
 val: str
 
 class M3dView:
-    def active3dView(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def active3dView(self, *args: Any, **kwargs: Any) -> Any:
         """active3dView() -> M3dView
 
         Returns the active view in the form of a class (M3dView) that can operate on it.
         """
-    def activeAffectedColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def activeAffectedColor(self, *args: Any, **kwargs: Any) -> Any:
         """activeAffectedColor() -> MColor
 
         Returns the color for active affected objects.
         """
-    def activeTemplateColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def activeTemplateColor(self, *args: Any, **kwargs: Any) -> Any:
         """activeTemplateColor() -> MColor
 
         Returns the color for active template objects.
         """
-    def applicationShell(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def applicationShell(self, *args: Any, **kwargs: Any) -> Any:
         """applicationShell() -> long
 
         Returns a long containing a C++ 'void' pointer which points to the native handle for Maya's main window.
         """
-    def backgroundColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def backgroundColor(self, *args: Any, **kwargs: Any) -> Any:
         """backgroundColor() -> MColor
 
         Returns the value of the background color.
         """
-    def backgroundColorBottom(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def backgroundColorBottom(self, *args: Any, **kwargs: Any) -> Any:
         """backgroundColorBottom() -> MColor
 
         Returns the value of the background gradient bottom color.
         """
-    def backgroundColorTop(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def backgroundColorTop(self, *args: Any, **kwargs: Any) -> Any:
         """backgroundColorTop() -> MColor
 
         Returns the value of the background gradient top color.
         """
-    def beginGL(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def beginGL(self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use Viewport 2.0 APIs instead.) beginGL() -> self
 
         Setup port for native OpenGL drawing calls.
         """
-    def beginProjMatrixOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def beginProjMatrixOverride(self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use MHWRender::MRenderOverride instead.) beginProjMatrixOverride(projectionMatrix) -> self
 
         Begin overriding the projection matrix used in openGL drawing.
@@ -58,7 +71,7 @@ class M3dView:
 
         * projectionMatrix (MMatrix) - Projection matrix used in openGL drawing
         """
-    def beginSelect(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def beginSelect(self, *args: Any, **kwargs: Any) -> Any:
         """beginSelect(buffer=None, size=0) -> self
 
         Start selecting. The buffer passed is used to record selection hits.
@@ -66,7 +79,7 @@ class M3dView:
         * buffer (bytearray) - OpenGl pick buffer
         * size (int) - Buffer size
         """
-    def beginXorDrawing(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def beginXorDrawing(self, *args: Any, **kwargs: Any) -> Any:
         """beginXorDrawing(drawOrthographic=True, disableDepthTesting=True, lineWidth=1.0, stipplePattern=kStippleNone, lineColor=MColor(1, 1, 1)) -> self
 
         Setup the context for exclusive-or (XOR) drawing.
@@ -87,7 +100,7 @@ class M3dView:
           kStippleNone      No stipple. Solid line
           kStippleDashed    Dashed line stipple
         """
-    def colorAtIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def colorAtIndex(self, *args: Any, **kwargs: Any) -> Any:
         """colorAtIndex(index, table=kActiveColors) -> MColor
 
         Returns the value of the color at the given index in the application's color table.
@@ -102,22 +115,22 @@ class M3dView:
           kTemplateColor       Colors for templated objects
           kBackgroundColor     Colors for background color
         """
-    def colorMask(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def colorMask(self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use MHWRender::MUIDrawManager instead.) colorMask() -> [bool, bool, bool, bool]
 
         Get the current color mask
         """
-    def deviceContext(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deviceContext(self, *args: Any, **kwargs: Any) -> Any:
         """deviceContext() -> long
 
         Returns a long containing a C++ 'void' pointer which points to the Windows device context for this view.
         """
-    def disallowPolygonOffset(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def disallowPolygonOffset(self, *args: Any, **kwargs: Any) -> Any:
         """disallowPolygonOffset() -> bool
 
         Returns the current state of the disallow polygon offset bit.  See setDisallowPolygonOffset for more information.
         """
-    def display(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def display(self, *args: Any, **kwargs: Any) -> Any:
         """display() -> long
 
         Returns a long containing a C++ 'void' pointer which points to the OpenGL context for this view.
@@ -125,7 +138,7 @@ class M3dView:
         On 64-bit OS X this is an NSOpenGLContext pointer.
         On Windows this is an HGLRC.
         """
-    def displayStatus(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def displayStatus(self, *args: Any, **kwargs: Any) -> Any:
         """displayStatus(path) -> int
 
         Returns the display status of the given DAG path.
@@ -146,7 +159,7 @@ class M3dView:
           kActiveAffected       Affected by active object(s).
           kNoStatus             Object does not have a valid display status.
         """
-    def displayStyle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def displayStyle(self, *args: Any, **kwargs: Any) -> Any:
         """displayStyle() -> int
 
         Return the display style for this 3d view.  kBoundingBox     Bounding box display.
@@ -155,7 +168,7 @@ class M3dView:
           kWireFrame       Wire frame display.
           kPoints          Points only display.
         """
-    def drawText(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def drawText(self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use MHWRender::MUIDrawManager in a MHWRender::MHUDRender operation instead.) drawText(text, position, textPosition=kLeft) -> self
 
         Draws the given text at the given spot in the default font.  This method is provided as a convienient way to draw OpenGL text.
@@ -169,74 +182,74 @@ class M3dView:
           kCenter    Draw text centered around the point
           kRight     Draw text to the right of the point
         """
-    def endGL(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def endGL(self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use Viewport 2.0 APIs instead.) endGL() -> self
 
         End OpenGL drawing.
         """
-    def endProjMatrixOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def endProjMatrixOverride(self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use MHWRender::MRenderOverride instead.) endProjMatrixOverride() -> self
 
         End projection matrix override enabled by beginProjMatrixOverride().
         """
-    def endSelect(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def endSelect(self, *args: Any, **kwargs: Any) -> Any:
         """endSelect() -> int
 
         Finish a selection sequence. Result is stored in the buffer passed  in the beginSelect call.
         """
-    def endXorDrawing(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def endXorDrawing(self, *args: Any, **kwargs: Any) -> Any:
         """endXorDrawing() -> self
 
         Reset the context to non-exclusive-or (non-XOR) screen drawing.
 
         If endXorDrawing() is called without first calling beginXorDrawing() an error will result.
         """
-    def filteredObjectList(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def filteredObjectList(self, *args: Any, **kwargs: Any) -> Any:
         """filteredObjectList() -> MSelectionList
 
         Returns a selection list containing all of the objects that remain after filtering is applied to the view.
         """
-    def get3dView(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def get3dView(self, *args: Any, **kwargs: Any) -> Any:
         """get3dView(index) -> M3dView
 
         Returns the 3D view at the given index.
 
         * index (int) - index of the view to get
         """
-    def getCamera(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getCamera(self, *args: Any, **kwargs: Any) -> Any:
         """getCamera() -> MDagPath
 
         Get the camera for this view.
         """
-    def getColorIndexAndTable(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getColorIndexAndTable(self, *args: Any, **kwargs: Any) -> Any:
         """getColorIndexAndTable(glindex) -> [int, int]
 
         Returns the index and color table representing the given OpenGL color-index value. This method is useful when converting color indices obtained from glReadPixels(GL_COLOR_INDEX) to Maya color-index values suitable for use with the colorAtIndex and setDrawColor methods.
 
         * glindex (int) - Value of the OpenGL color-index to retrieve
         """
-    def getLightCount(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getLightCount(self, *args: Any, **kwargs: Any) -> Any:
         """getLightCount(visible=True) -> int
 
         Get the number of lights for the view.
 
         * visible (bool) - Specify whether to count visible lights only. By Default this is set True.
         """
-    def getLightIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getLightIndex(self, *args: Any, **kwargs: Any) -> Any:
         """getLightIndex(lightNumber) -> int
 
         Get the internal light index for a given light number
 
         * lightNumber (int) - Number of the light interested in
         """
-    def getLightPath(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getLightPath(self, *args: Any, **kwargs: Any) -> Any:
         """getLightPath(lightNumber) -> MDagPath
 
         Get the path to a certain light.
 
         * lightNumber (int) - Number of the light interested in
         """
-    def getLightingMode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getLightingMode(self, *args: Any, **kwargs: Any) -> Any:
         """getLightingMode() -> int
 
         Get the current lighting mode for the view:
@@ -247,21 +260,21 @@ class M3dView:
           kUnused1          Not currently used in Maya
           kLightNone        No lights / lighting disabled
         """
-    def getM3dViewFromModelEditor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getM3dViewFromModelEditor(self, *args: Any, **kwargs: Any) -> Any:
         """getM3dViewFromModelEditor(name) -> M3dView
 
         Given the name of a model editor, get the M3dView used by that editor. If this fails, then a editor with the given name could not be located.
 
         * name (string) - The name of the model editor.
         """
-    def getM3dViewFromModelPanel(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getM3dViewFromModelPanel(self, *args: Any, **kwargs: Any) -> Any:
         """getM3dViewFromModelPanel(name) -> M3dView
 
         Given the name of a model panel, get the M3dView used by that panel. If this fails, then a panel with the given name could not be located.
 
         * name (string) - The name of the model panel.
         """
-    def getRendererName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getRendererName(self, *args: Any, **kwargs: Any) -> Any:
         """getRendererName() -> int
 
         Get the name of the current renderer being used for drawing to this view:
@@ -270,41 +283,41 @@ class M3dView:
           kViewport2Renderer        Equivalent to the viewport 2.0 renderer
           kExternalRenderer         An externally defined renderer name has been set.
         """
-    def getScreenPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getScreenPosition(self, *args: Any, **kwargs: Any) -> Any:
         """getScreenPosition() -> [int, int]
 
         Returns the current position of this view window in screen coordinates.
 
         This is useful for finding out the exact location of the window as it appears on the screen. These values are in UI coordinate space so the y value increases from bottom to top.
         """
-    def hiliteColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hiliteColor(self, *args: Any, **kwargs: Any) -> Any:
         """hiliteColor() -> MColor
 
         Returns the color for hilited objects.
         """
-    def initNames(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def initNames(self, *args: Any, **kwargs: Any) -> Any:
         """initNames() -> self
 
         Reset the name stack. Valid only when beginSelect() has been called.
         """
-    def isBackgroundGradient(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isBackgroundGradient(self, *args: Any, **kwargs: Any) -> Any:
         """isBackgroundGradient() -> bool
 
         Returns whether a gradient is being used as the background color.
         """
-    def isLightVisible(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isLightVisible(self, *args: Any, **kwargs: Any) -> Any:
         """isLightVisible(lightNumber) -> bool
 
         Find out if a light is visible in the view
 
         * lightNumber (int) - Number of the light interested in
         """
-    def isShadeActiveOnly(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isShadeActiveOnly(self, *args: Any, **kwargs: Any) -> Any:
         """isShadeActiveOnly() -> bool
 
         Returns True if this view's display style is shaded for objects that are active and wireframe otherwise.
         """
-    def isVisible(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isVisible(self, *args: Any, **kwargs: Any) -> Any:
         """isVisible() -> bool
 
         Returns True if this viewport is visible.
@@ -380,61 +393,61 @@ class M3dView:
     kUnused1: int = ...
     kViewport2Renderer: int = ...
     kWireFrame: int = ...
-    def leadColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def leadColor(self, *args: Any, **kwargs: Any) -> Any:
         """leadColor() -> MColor
 
         Returns the color for lead objects.
         """
-    def liveColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def liveColor(self, *args: Any, **kwargs: Any) -> Any:
         """liveColor() -> MColor
 
         Returns the color for live objects.
         """
-    def loadName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def loadName(self, *args: Any, **kwargs: Any) -> Any:
         """loadName(int) -> self
 
         Replace the top of the name stack with the given name. Valid only when beginSelect() has been called.
 
         * name (int) - Name to be loaded onto the top of the stack.
         """
-    def modelViewMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def modelViewMatrix(self, *args: Any, **kwargs: Any) -> Any:
         """modelViewMatrix() -> MMatrix
 
         Returns the modelview matrix currently being used by OpenGL in the current view
         """
-    def multipleDrawEnabled(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def multipleDrawEnabled(self, *args: Any, **kwargs: Any) -> Any:
         """multipleDrawEnabled() -> bool
 
         This method returns the multiple draw enable state for this view.
         """
-    def multipleDrawPassCount(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def multipleDrawPassCount(self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use MHWRender::MRenderOverride instead.) multipleDrawPassCount() -> int
 
         This method returns the number of multiple draw passes that are going to be made. By default a 1 is returned.
         """
-    def numActiveColors(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numActiveColors(self, *args: Any, **kwargs: Any) -> Any:
         """numActiveColors() -> int
 
         Returns the number of active object colors in the internal application color table.
         """
-    def numDormantColors(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numDormantColors(self, *args: Any, **kwargs: Any) -> Any:
         """numDormantColors() -> int
 
         Returns the number of dormant object colors in the internal application color table.
         """
-    def numUserDefinedColors(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numUserDefinedColors(self, *args: Any, **kwargs: Any) -> Any:
         """numUserDefinedColors() -> int
 
         Returns the number of user defined colors in the internal application color table.  These colors may be changed by the user and assigned to specific objects.  See the methods of MFnDagNode for information on assigning user defined colors to individual objects.
 
         The user defined colors are not a color table of their own.  They exist in the active and dormant color tables.
         """
-    def numberOf3dViews(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numberOf3dViews(self, *args: Any, **kwargs: Any) -> Any:
         """numberOf3dViews() -> int
 
         Returns the number of 3D views currently in existance.
         """
-    def objectDisplay(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def objectDisplay(self, *args: Any, **kwargs: Any) -> Any:
         """objectDisplay() -> int
 
         Returns a display object mask that indicates which object types are drawn in the current view:
@@ -471,65 +484,65 @@ class M3dView:
           kExcludeMotionTrails          Show motion trails
           kExcludePluginShapes          Show plugin shapes
         """
-    def objectListFilterName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def objectListFilterName(self, *args: Any, **kwargs: Any) -> Any:
         """objectListFilterName() -> string
 
         Get the current object list filter name. If none then an emptystring will be returned.
         """
-    def playblastPortHeight(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def playblastPortHeight(self, *args: Any, **kwargs: Any) -> Any:
         """playblastPortHeight() -> int
 
         Returns the port height of current playblast.
         Valid only when playblast command has been called.
         Otherwise, an invalid value 0 is returned.
         """
-    def playblastPortWidth(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def playblastPortWidth(self, *args: Any, **kwargs: Any) -> Any:
         """playblastPortWidth() -> int
 
         Returns the port width of current playblast.
         Valid only when playblast command has been called.
         Otherwise, an invalid value 0 is returned.
         """
-    def pluginObjectDisplay(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def pluginObjectDisplay(self, *args: Any, **kwargs: Any) -> Any:
         """pluginObjectDisplay(pluginDisplayFilter) -> bool
 
         Returns True if the plugin display filter specified by the pluginDisplayFilter is enabled in the current view.
 
         * pluginDisplayFilter (string) - The name of the plugin display filter.
         """
-    def popName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def popName(self, *args: Any, **kwargs: Any) -> Any:
         """popName() -> self
 
         Removes the top of the name stack. Valid only when beginSelect() has been called.
         """
-    def popViewport(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def popViewport(self, *args: Any, **kwargs: Any) -> Any:
         """popViewport() -> self
 
         Pops the current viewport off of the viewport stack.
         """
-    def portHeight(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def portHeight(self, *args: Any, **kwargs: Any) -> Any:
         """portHeight() -> int
 
         Returns the height of the current viewport.
         """
-    def portWidth(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def portWidth(self, *args: Any, **kwargs: Any) -> Any:
         """portWidth() -> int
 
         Returns the width of the current viewport.
         """
-    def projectionMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def projectionMatrix(self, *args: Any, **kwargs: Any) -> Any:
         """projectionMatrix() -> MMatrix
 
         Returns the projection matrix currently being used by OpenGL in the current view
         """
-    def pushName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def pushName(self, *args: Any, **kwargs: Any) -> Any:
         """pushName(int) -> self
 
         Pushes a new name on the name stack. Valid only when beginSelect() has been called.
 
         * name (int) - Name to be loaded onto the top of the stack.
         """
-    def pushViewport(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def pushViewport(self, *args: Any, **kwargs: Any) -> Any:
         """pushViewport(x, y, width, height) -> self
 
         Set the current viewport dimensions. Will keep track of the last viewport dimensions on a stack.
@@ -540,7 +553,7 @@ class M3dView:
         * width (int) - Width of the viewport.
         * height (int) - Height of the viewport.
         """
-    def readBufferTo2dTexture(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def readBufferTo2dTexture(self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use MHWRender::MRenderTargetManager instead.) readBufferTo2dTexture(x, y, width, height) -> self
 
         Read the depth values from the frame buffer for a given view into a predefined OpenGL 2d texture. It is assumed that such a texture has been created and bound before making this call.
@@ -550,7 +563,7 @@ class M3dView:
         * width (int) - Number of pixels in x to read.
         * height (int) - Number of pixels in y to read.
         """
-    def readColorBuffer(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def readColorBuffer(self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use MHWRender::MRenderTargetManager::acquireRenderTarget() instead.)readColorBuffer(image, readRGBA=False) -> self
 
         Read the RGB values from the frame buffer for a given view.
@@ -559,7 +572,7 @@ class M3dView:
         * image (MImage) - The image contains the frame buffer pixels.
         * readRGBA (bool) - Read the image back in RGBA format. By default the format is BGRA.
         """
-    def readDepthMap(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def readDepthMap(self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use MHWRender::MRenderTargetManager::acquireRenderTarget() instead.) readDepthMap(x, y, width, heigth, bufferPtr, depthMapPrecision) -> self
 
         Read the depth values from the frame buffer for a given view.
@@ -574,12 +587,12 @@ class M3dView:
             kDepth_8          8 bits.
             kDepth_Float      Floating point.
         """
-    def referenceLayerColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def referenceLayerColor(self, *args: Any, **kwargs: Any) -> Any:
         """referenceLayerColor() -> MColor
 
         Returns the color for objects which belong to a display layer whose display type is Reference. This color is also used for objects whose display override is set to Reference.
         """
-    def refresh(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def refresh(self, *args: Any, **kwargs: Any) -> Any:
         """refresh(all=False, force=False, offscreen=False) -> self
 
 
@@ -589,39 +602,39 @@ class M3dView:
         * force (bool) - If True then force views to refresh even if they do not require it.
         * offscreen (bool) - Should the buffer be redrawn if it's offscreen?
         """
-    def renderOverrideName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def renderOverrideName(self, *args: Any, **kwargs: Any) -> Any:
         """renderOverrideName() -> string
 
         Get the current render override name. If none then an empty string will be returned.
         """
-    def rendererString(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rendererString(self, *args: Any, **kwargs: Any) -> Any:
         """rendererString() -> string
 
         Get the string name of the current renderer being used for drawing to this view
         """
-    def scheduleRefresh(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def scheduleRefresh(self, *args: Any, **kwargs: Any) -> Any:
         """scheduleRefresh() -> self
 
         Schedule a forced refresh for this 3d-view. This method may be called safely at any time from any thread. The refresh will occur on the main thread when Maya next becomes idle. If a refresh has already been scheduled for this view but has not yet occurred then this method will do nothing.
         """
-    def scheduleRefreshAllViews(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def scheduleRefreshAllViews(self, *args: Any, **kwargs: Any) -> Any:
         """scheduleRefreshAllViews() -> None
 
         Schedule a forced refresh for all 3d-views. This method may be called safely at any time from any thread. The refresh will occur on the main thread when Maya next becomes idle. If a refresh has already been scheduled but has not yet occurred then this method will do nothing.
         """
-    def selectMode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def selectMode(self, *args: Any, **kwargs: Any) -> Any:
         """selectMode() -> bool
 
         Tells if this M3dView is in selection mode.
         """
-    def setCamera(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setCamera(self, *args: Any, **kwargs: Any) -> Any:
         """setCamera(camera) -> self
 
         Set the camera for this view.
 
         * camera (MDagPath) - Dag path of the camera for this view
         """
-    def setColorMask(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setColorMask(self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use MHWRender::MUIDrawManager instead.) setColorMask(r, g, b, a) -> self
 
         Set the current color mask.
@@ -631,14 +644,14 @@ class M3dView:
         * b (bool) - Blue color mask flag.
         * a (bool) - Alpha color mask flag.
         """
-    def setDisallowPolygonOffset(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDisallowPolygonOffset(self, *args: Any, **kwargs: Any) -> Any:
         """setDisallowPolygonOffset(v) -> self
 
         Certain Maya actions will use glPolygonOffset to offset polygons drawing into the depth buffer.  This method controls this behavior. When True, it prevents Maya from altering the polygon offset parameters.
 
         * v (bool) - enable/disable the polygon offset
         """
-    def setDisplayStyle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDisplayStyle(self, *args: Any, **kwargs: Any) -> Any:
         """setDisplayStyle(style, activeOnly=False) -> self
 
         Sets the display style for this view.
@@ -646,7 +659,7 @@ class M3dView:
         * style (int) - The display style to be set for this view
         See displayStyle() description for a list a valid display style
         """
-    def setDrawColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDrawColor(self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use MUIDrawManager::setColorIndex instead.) setDrawColor(index, table=kActiveColors) -> self
         setDrawColor(color) -> self
 
@@ -666,7 +679,7 @@ class M3dView:
 
         * color (MColor) - color to draw in
         """
-    def setDrawColorAndAlpha(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDrawColorAndAlpha(self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use MUIDrawManager::setColor instead.) setDrawColorAndAlpha(color) -> self
 
         Set the color to draw in.
@@ -674,21 +687,21 @@ class M3dView:
 
         * color (MColor) - color to draw in
         """
-    def setMultipleDrawEnable(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setMultipleDrawEnable(self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use MHWRender::MRenderOverride instead.)setMultipleDrawEnable(enable) -> self
 
         This method enables/disables multiple camera drawing for this view. If multiple draw is disabled, then this view will behave like a normal Maya view.
 
         * enable (bool) - If True, then multiple draw is enabled.
         """
-    def setMultipleDrawPassCount(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setMultipleDrawPassCount(self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use MHWRender::MRenderOverride instead.) setMultipleDrawPassCount(count) -> self
 
         This method sets the number of multiple draw passes when multiple draw is enabled.
 
         * count (int) - The number of multiple draw passes.
         """
-    def setObjectDisplay(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setObjectDisplay(self, *args: Any, **kwargs: Any) -> Any:
         """setObjectDisplay(displayMask) -> self
 
         Sets a display object mask that indicates which object types are drawn in current view. By default every thing is displayed.
@@ -696,7 +709,7 @@ class M3dView:
         * displayMask (int) - A combination of display object mask
         See objectDisplay() description for a list of valid display mask
         """
-    def setObjectListFilterName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setObjectListFilterName(self, *args: Any, **kwargs: Any) -> Any:
         """setObjectListFilterName(name) -> self
 
         Set the name of the object list filter (MObjectListFilter) to use.
@@ -709,7 +722,7 @@ class M3dView:
 
         * name (string) - Name of the filter.
         """
-    def setPluginObjectDisplay(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setPluginObjectDisplay(self, *args: Any, **kwargs: Any) -> Any:
         """setPluginObjectDisplay(pluginDisplayFilter, on) -> self
 
         Enables or disables a user-defined display filter (i.e. one which was registered using MFnPlugin.registerDisplayFilter() or the 'pluginDisplayFilter' command).
@@ -721,7 +734,7 @@ class M3dView:
         * pluginDisplayFilter (string) - The name of the plugin display filter.
         * on (bool) - Enable or disable the plugin display filter.
         """
-    def setRenderOverrideName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setRenderOverrideName(self, *args: Any, **kwargs: Any) -> Any:
         """setRenderOverrideName(name) -> self
 
         Set the name of a render override (MRenderOverride) to use.
@@ -734,21 +747,21 @@ class M3dView:
 
         * name (string) - name Name of the override.
         """
-    def setShowObjectFilterNameInHUD(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setShowObjectFilterNameInHUD(self, *args: Any, **kwargs: Any) -> Any:
         """setShowObjectFilterNameInHUD(show) -> self
 
         Sets whether or not to display the object filter UI name in the heads up display when an object filter is active. This string is concatenated with the camera name.
 
         * show (bool) - If True, show the filter UI name in the HUD
         """
-    def setShowViewSelectedChildren(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setShowViewSelectedChildren(self, *args: Any, **kwargs: Any) -> Any:
         """setShowViewSelectedChildren(show) -> self
 
         This method changes the way that view selected works. By default, view selected with show all of the children of the objects in the view selected set. If False is passed to this method, then only the obejcts in the view selected set and their shapes will be drawn.
 
         * show (bool) - True if all of the children of view selected objects should be displayed. True is the default behavior for view selected.
         """
-    def setUserDefinedColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setUserDefinedColor(self, *args: Any, **kwargs: Any) -> Any:
         """setUserDefinedColor(index, color) -> self
 
         Sets the user defined color at the given index.  Valid indices range between zero and the number of user defined colors.
@@ -757,7 +770,7 @@ class M3dView:
         * index (int) - index into the user defined color
         * color (MColor) - color to set to
         """
-    def setViewSelectedPrefix(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setViewSelectedPrefix(self, *args: Any, **kwargs: Any) -> Any:
         """setViewSelectedPrefix(prefix) -> self
 
         Sets the prefix for the camera name as displayed in the heads up display when view selected is enabled. The prefix is concatenated with the camera name.
@@ -765,37 +778,37 @@ class M3dView:
 
         * prefix (string) - The prefix to use.
         """
-    def showObjectFilterNameInHUD(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def showObjectFilterNameInHUD(self, *args: Any, **kwargs: Any) -> Any:
         """showObjectFilterNameInHUD() -> bool
 
         Returns whether the object filter UI name is shown in the heads up display when an object filter is active.
         """
-    def showViewSelectedChildren(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def showViewSelectedChildren(self, *args: Any, **kwargs: Any) -> Any:
         """showViewSelectedChildren() -> bool
 
         Returns turn if view selected shows all of the children of the obejcts that are flagged for view selected.
         """
-    def templateColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def templateColor(self, *args: Any, **kwargs: Any) -> Any:
         """templateColor() -> MColor
 
         Returns the value of the template color.
         """
-    def textureMode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def textureMode(self, *args: Any, **kwargs: Any) -> Any:
         """textureMode() -> bool
 
         Tells if this M3dView is in texture mode.
         """
-    def twoSidedLighting(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def twoSidedLighting(self, *args: Any, **kwargs: Any) -> Any:
         """twoSidedLighting() -> bool
 
         Return True if the Two-sided lighting mode is enabled.
         """
-    def updateViewingParameters(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def updateViewingParameters(self, *args: Any, **kwargs: Any) -> Any:
         """updateViewingParameters() -> self
 
         This method tells the camera to set the view's transformation matrix.
         """
-    def userDefinedColorIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def userDefinedColorIndex(self, *args: Any, **kwargs: Any) -> Any:
         """userDefinedColorIndex(index) -> int
 
         Returns the index for the given user-defined color.  Valid values for the index argument range between zero and the number of user-defined colors minus one.
@@ -804,27 +817,27 @@ class M3dView:
 
         * index (int) - Index into user-defined colors
         """
-    def usingDefaultMaterial(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def usingDefaultMaterial(self, *args: Any, **kwargs: Any) -> Any:
         """usingDefaultMaterial() -> bool
 
         Returns True if the view is currently displaying objects using the default material.
         """
-    def usingMipmappedTextures(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def usingMipmappedTextures(self, *args: Any, **kwargs: Any) -> Any:
         """usingMipmappedTextures() -> bool
 
         Returns if the view is using mipmapped texture display.
         """
-    def viewIsFiltered(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def viewIsFiltered(self, *args: Any, **kwargs: Any) -> Any:
         """viewIsFiltered() -> bool
 
         Returns True if the view is filtered.
         """
-    def viewSelectedPrefix(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def viewSelectedPrefix(self, *args: Any, **kwargs: Any) -> Any:
         """viewSelectedPrefix() -> string
 
         Returns the prefix used when displaying the camera name in the heads up display when view selected in on
         """
-    def viewToObjectSpace(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def viewToObjectSpace(self, *args: Any, **kwargs: Any) -> Any:
         """viewToObjectSpace(x_pos, y_pos, localMatrixInverse, oPt, oVector) -> self
 
         Takes a point in port coordinates and returns a corresponding ray in object coordinates.
@@ -835,7 +848,7 @@ class M3dView:
         * oPt [OUT] (MPoint) - the source of the ray in object space
         * oVector [OUT] (MVector) - the direction of the ray in object space
         """
-    def viewToWorld(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def viewToWorld(self, *args: Any, **kwargs: Any) -> Any:
         """viewToWorld(x_pos, y_pos, worldPt, worldVector) -> self
         viewToWorld(x_pos, y_pos, nearClipPt, farClipPt) -> self
 
@@ -854,34 +867,34 @@ class M3dView:
         * nearClipPt [OUT] (MPoint) - point on near clipping plane
         * farClipPt [OUT] (MPoint) - point on far clipping plane
         """
-    def viewport(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def viewport(self, *args: Any, **kwargs: Any) -> Any:
         """viewport() -> [int, int, int, int]
 
         Get the current viewport dimensions.
         """
-    def widget(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def widget(self, *args: Any, **kwargs: Any) -> Any:
         """widget() -> long
 
         Returns a long containing a C++ 'void' pointer which points to the view's Qt widget.
         """
-    def window(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def window(self, *args: Any, **kwargs: Any) -> Any:
         """window() -> long
 
         Returns a long containing a C++ 'void' pointer which points to the native window for this view.
         """
-    def wireframeOnShaded(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def wireframeOnShaded(self, *args: Any, **kwargs: Any) -> Any:
         """wireframeOnShaded() -> bool
 
         Return whether we draw wireframe in shaded mode.
         """
-    def wireframeOnlyInShadedMode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def wireframeOnlyInShadedMode(self, *args: Any, **kwargs: Any) -> Any:
         """wireframeOnlyInShadedMode() -> bool
 
         Return whether we are in shaded mode, but that only non shaded drawing should occur (wireframe).
 
         In general it will return True only when the current renderer is "hwRender_OpenGL_Renderer". See the M3dView.rendererString() method for more details.
         """
-    def worldToView(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def worldToView(self, *args: Any, **kwargs: Any) -> Any:
         """worldToView(worldPt) -> [int, int, bool]
 
         Converts a point in world space to port space.
@@ -889,7 +902,7 @@ class M3dView:
 
         * worldPt (MPoint) - the point to world space
         """
-    def writeColorBuffer(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def writeColorBuffer(self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use MHWRender::MQuadRender operation inside MHWRender::MRenderOverride instead.) writeColorBuffer(image, x=0, y=0) -> self
 
         Overwrite the RGB values for the frame buffer for a given view.
@@ -899,18 +912,44 @@ class M3dView:
         * x (int) - The location in screen space of the lower left corner (X) of the image to write. The default value is 0.
         * y (int) - The location in screen space of the lower left corner (Y) of the image to write. The default value is 0.
         """
-    def xray(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def xray(self, *args: Any, **kwargs: Any) -> Any:
         """xray() -> bool
 
         Return True if the X-Ray mode is enabled.
         """
-    def xrayJoints(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def xrayJoints(self, *args: Any, **kwargs: Any) -> Any:
         """xrayJoints() -> bool
 
         Return True if the X-Ray Joints mode is enabled.
         """
 
 class MCursor:
+    __doc__: str = ...
+    def __eq__(self, value: Any) -> Any:
+        """Return self==value."""
+    def __ge__(self, value: Any) -> Any:
+        """Return self>=value."""
+    def __gt__(self, value: Any) -> Any:
+        """Return self>value."""
+    __hash__: NoneType = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __le__(self, value: Any) -> Any:
+        """Return self<=value."""
+    def __lt__(self, value: Any) -> Any:
+        """Return self<value."""
+    def __ne__(self, value: Any) -> Any:
+        """Return self!=value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
     kCrossHairCursor: MCursor = ...
     kDefaultCursor: MCursor = ...
     kDoubleCrossHairCursor: MCursor = ...
@@ -919,7 +958,12 @@ class MCursor:
     kPencilCursor: MCursor = ...
 
 class MDrawData:
-    def geometry(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def geometry(self, *args: Any, **kwargs: Any) -> Any:
         """geometry() -> long
 
         Returns a long containing a C++ 'void' pointer which points to the geometry associated with this draw data object.
@@ -927,7 +971,12 @@ class MDrawData:
         """
 
 class MDrawInfo:
-    def canDrawComponent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def canDrawComponent(self, *args: Any, **kwargs: Any) -> Any:
         """canDrawComponent(isDisplayOn, compMask) -> bool
 
         Convenience method to test if components specified by the given mask can be drawn.
@@ -935,24 +984,24 @@ class MDrawInfo:
         * isDisplayOn (bool) - component display is on
         * mask (MSelectionMask) - component mask to test
         """
-    def completelyInside(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def completelyInside(self, *args: Any, **kwargs: Any) -> Any:
         """completelyInside() -> bool
 
         Returns True if the object being drawn is inside the viewing frustum.
         """
-    def displayStatus(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def displayStatus(self, *args: Any, **kwargs: Any) -> Any:
         """displayStatus() -> int
 
         Returns the status of the object to draw.
         See M3dView.displayStatus() for a list of status.
         """
-    def displayStyle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def displayStyle(self, *args: Any, **kwargs: Any) -> Any:
         """displayStyle() -> int
 
         Returns the display appearance.
         See M3dView.displayStyle() for a list of styles.
         """
-    def getPrototype(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPrototype(self, *args: Any, **kwargs: Any) -> Any:
         """getPrototype(drawHandler) -> MDrawRequest
 
         This method creates a draw request based on the current draw state.
@@ -961,64 +1010,69 @@ class MDrawInfo:
 
         * drawHandler (MPxSurfaceShapeUI) - the ui object that is doing the drawing
         """
-    def inSelect(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def inSelect(self, *args: Any, **kwargs: Any) -> Any:
         """inSelect() -> bool
 
         Returns True during any interactive refresh, as when user is interacting with the scene in any way including camera changes, object or component TRS changes, etc. Use userChangingViewContext for determining whether user is changing the view using view context tools such as tumble, dolly or track.
         """
-    def inUserInteraction(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def inUserInteraction(self, *args: Any, **kwargs: Any) -> Any:
         """inUserInteraction() -> bool
 
         Returns True during any interactive refresh, as when user is changing the view using view context tools such as tumble, dolly or track.  Useful for changing drawing mode to something simpler to speed up interaction re-draw.  Use inUserInteraction for determining whether user is interacting with the scene in any way.
         """
-    def inclusiveMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def inclusiveMatrix(self, *args: Any, **kwargs: Any) -> Any:
         """inclusiveMatrix() -> MMatrix
 
         Returns the world space inclusive matrix.
         """
-    def multiPath(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def multiPath(self, *args: Any, **kwargs: Any) -> Any:
         """multiPath() -> MDagPath
 
         Returns the path to the object to be drawn.
         """
-    def objectDisplayStatus(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def objectDisplayStatus(self, *args: Any, **kwargs: Any) -> Any:
         """objectDisplayStatus(displayObj) -> bool
 
         Determines whether the specified objects are allowed to be displayed.
 
         * displayObj (int) - display object mask. See M3dView.objectDisplay() for a list of valid masks.
         """
-    def pluginObjectDisplayStatus(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def pluginObjectDisplayStatus(self, *args: Any, **kwargs: Any) -> Any:
         """pluginObjectDisplayStatus(pluginDisplayFilter) -> bool
 
         Determines whether the specified plugin object is allowed to be displayed.
 
         * pluginDisplayFilter (string) - The name of the plugin display filter which is registered by pluginDisplayFilter command.
         """
-    def projectionMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def projectionMatrix(self, *args: Any, **kwargs: Any) -> Any:
         """projectionMatrix() -> MMatrix
 
         Returns the camera*projection matrix.
         """
-    def setMultiPath(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setMultiPath(self, *args: Any, **kwargs: Any) -> Any:
         """setMultiPath(path) -> self
 
         Sets the path of the object to be drawn.
 
         * path (MDagPath) - the path of the object to be drawn
         """
-    def userChangingViewContext(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def userChangingViewContext(self, *args: Any, **kwargs: Any) -> Any:
         """userChangingViewContext() -> bool
 
         Returns True during any interactive refresh, as when user is interacting with the scene in any way including camera changes, object or component TRS changes, etc. Use userChangingViewContext for determining whether user is changing the view using view context tools such as tumble, dolly or track.
         """
-    def view(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def view(self, *args: Any, **kwargs: Any) -> Any:
         """view() -> M3dView
 
         Returns the view that the drawing will take place.
         """
 
 class MDrawProperties:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     @property
     def color(*args: Any, **kwargs: Any) -> Any:
         """color"""
@@ -1045,6 +1099,11 @@ class MDrawProperties:
         """point size"""
 
 class MDrawRequest:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     @property
     def color(*args: Any, **kwargs: Any) -> Any:
         """The RGBA wireframe display color."""
@@ -1125,7 +1184,7 @@ class MDrawRequest:
     @multiPath.setter
     def multiPath(*args: Any, **kwargs: Any) -> Any:
         """The path to the object to be drawn."""
-    def planeColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def planeColor(self, *args: Any, **kwargs: Any) -> Any:
         """planeColor(table) -> int
 
         Get which color is used for the specified color table.
@@ -1134,7 +1193,7 @@ class MDrawRequest:
 
         See M3dView.colorAtIndex() for a list of color tables.
         """
-    def setPlaneColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setPlaneColor(self, *args: Any, **kwargs: Any) -> Any:
         """setPlaneColor(value, table) -> self
 
         Set which color to use for the specified color table.
@@ -1164,8 +1223,13 @@ class MDrawRequest:
         """The view where drawing will be done."""
 
 class MEvent:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     controlKey: int = ...
-    def getWindowPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getWindowPosition(self, *args: Any, **kwargs: Any) -> Any:
         """getWindowPosition() -> (x, y)
 
         This routine is used by responders to query the position of the
@@ -1174,7 +1238,7 @@ class MEvent:
 
         Returns a tuple containing the x and y position of the event.
         """
-    def isModifierControl(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isModifierControl(self, *args: Any, **kwargs: Any) -> Any:
         """isModifierControl() -> bool
 
         Return the state of the control key.
@@ -1182,7 +1246,7 @@ class MEvent:
 
         Returns True if the control key was pressed at the time the event was triggered, False otherwise.
         """
-    def isModifierKeyRelease(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isModifierKeyRelease(self, *args: Any, **kwargs: Any) -> Any:
         """isModifierKeyRelease() -> bool
 
         Was a modifier key released.
@@ -1190,7 +1254,7 @@ class MEvent:
 
         Returns True if a modifier key was released, False otherwise.
         """
-    def isModifierLeftMouseButton(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isModifierLeftMouseButton(self, *args: Any, **kwargs: Any) -> Any:
         """isModifierLeftMouseButton() -> bool
 
         Return the state of the left mouse button.
@@ -1202,7 +1266,7 @@ class MEvent:
 
         Returns True if the left mouse button was pressed at the time the event was triggered, False otherwise.
         """
-    def isModifierMiddleMouseButton(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isModifierMiddleMouseButton(self, *args: Any, **kwargs: Any) -> Any:
         """isModifierMiddleMouseButton() -> bool
 
         Return the state of the middle mouse button.
@@ -1214,7 +1278,7 @@ class MEvent:
 
         Returns True if the left mouse button was pressed at the time the event was triggered, False otherwise.
         """
-    def isModifierNone(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isModifierNone(self, *args: Any, **kwargs: Any) -> Any:
         """isModifierNone() -> bool
 
         Determines if there are any modifiers for this event.
@@ -1222,7 +1286,7 @@ class MEvent:
 
         Returns True if there are modifiers for this event, False otherwise.
         """
-    def isModifierShift(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isModifierShift(self, *args: Any, **kwargs: Any) -> Any:
         """isModifierShift() -> bool
 
         Return the state of the shift key.
@@ -1238,7 +1302,7 @@ class MEvent:
     @modifiers.setter
     def modifiers(*args: Any, **kwargs: Any) -> Any:
         """The state of the modifiers."""
-    def mouseButton(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def mouseButton(self, *args: Any, **kwargs: Any) -> Any:
         """mouseButton() -> mouseButtonType
 
         Get the mouse button of the last event.
@@ -1255,24 +1319,29 @@ class MEvent:
     shiftKey: int = ...
 
 class MFnManip3D(MFnTransform):
-    def deleteManipulator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def deleteManipulator(self, *args: Any, **kwargs: Any) -> Any:
         """deleteManipulator(manip) -> None
 
         Delete a manipulator.  This method should be used to delete manipulators that have been created using base manipulator create() methods.
 
         * manip (MObject) - the manipulator to be deleted
         """
-    def drawPlaneHandles(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def drawPlaneHandles(self, *args: Any, **kwargs: Any) -> Any:
         """drawPlaneHandles() -> bool
 
         This method returns the global option that says if the planar manipulator handles should be drawn or not.Setting this will affect the drawing of all manipulators that support the planar handles.
         """
-    def globalSize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def globalSize(self, *args: Any, **kwargs: Any) -> Any:
         """globalSize() -> float
 
         Returns the global manipulator size.
         """
-    def handleSize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def handleSize(self, *args: Any, **kwargs: Any) -> Any:
         """handleSize() -> float
 
         Returns the manipulator handle size.
@@ -1289,7 +1358,7 @@ class MFnManip3D(MFnTransform):
     @isVisible.setter
     def isVisible(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the manipulator is visible."""
-    def lineSize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def lineSize(self, *args: Any, **kwargs: Any) -> Any:
         """lineSize() -> float
 
         Returns the manipulator line size.
@@ -1300,58 +1369,63 @@ class MFnManip3D(MFnTransform):
     @manipScale.setter
     def manipScale(*args: Any, **kwargs: Any) -> Any:
         """The manipulator scale."""
-    def rotateXYZValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rotateXYZValue(self, *args: Any, **kwargs: Any) -> Any:
         """rotateXYZValue(valIndex) -> MEulerRotation
 
         Gets the rotation for the active manipulator.
 
         * valIndex (int) - rotation index of the manipulator
         """
-    def setDrawPlaneHandles(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDrawPlaneHandles(self, *args: Any, **kwargs: Any) -> Any:
         """setDrawPlaneHandles(bool) -> None
 
         Sets the global option to display planar handles or not on supported manipulators.
         """
-    def setGlobalSize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setGlobalSize(self, *args: Any, **kwargs: Any) -> Any:
         """setGlobalSize(float) -> None
 
         Sets the global manipulator size.
         """
-    def setHandleSize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setHandleSize(self, *args: Any, **kwargs: Any) -> Any:
         """setHandleSize(float) -> None
 
         Sets the manipulator handle size.
         """
-    def setLineSize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setLineSize(self, *args: Any, **kwargs: Any) -> Any:
         """setLineSize(float) -> None
 
         Sets the manipulator line size.
         """
 
 class MFnCircleSweepManip(MFnManip3D):
-    def angleIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def angleIndex(self, *args: Any, **kwargs: Any) -> Any:
         """angleIndex() -> int
 
         Returns the index for the angle of CircleSweepManip. The data type corresponding to this index is a double.
         """
-    def axisIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def axisIndex(self, *args: Any, **kwargs: Any) -> Any:
         """axisIndex() -> int
 
         Returns the index for the axis of CircleSweepManip. The data type corresponding to this index is MFnNumericData.k3Double.
         """
-    def centerIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def centerIndex(self, *args: Any, **kwargs: Any) -> Any:
         """centerIndex() -> int
 
         Returns the index for the center of the CircleSweepManip. The data type corresponding to this index is MFnNumericData.k3Double.
         """
-    def connectToAnglePlug(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def connectToAnglePlug(self, *args: Any, **kwargs: Any) -> Any:
         """connectToAnglePlug(anglePlug) -> self
 
         Connect to the angle plug. The data type corresponding to the anglePlug is a double. (Note that MFnUnitAttribute.kAngle is used to specify an angle attribute.)
 
         * anglePlug (MPlug) - the angle plug
         """
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """create(manipName=None, angleName=None) -> MObject
 
         Creates a new CircleSweepManip.
@@ -1364,7 +1438,7 @@ class MFnCircleSweepManip(MFnManip3D):
         * manipName (string) - Name of the manip for UI purposes.
         * angleName (string) - Label for the angle value which appears in the feedback line.
         """
-    def endCircleIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def endCircleIndex(self, *args: Any, **kwargs: Any) -> Any:
         """endCircleIndex() -> int
 
         Returns the index for the end of the circle of CircleSweepManip. The data type corresponding to this index is a double.
@@ -1375,42 +1449,42 @@ class MFnCircleSweepManip(MFnManip3D):
     @endPoint.setter
     def endPoint(*args: Any, **kwargs: Any) -> Any:
         """The end point of the CircleSweepManip."""
-    def setAngle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setAngle(self, *args: Any, **kwargs: Any) -> Any:
         """setAngle(angle) -> self
 
         Sets the angle of the CircleSweepManip.
 
         * angle (MAngle) - the angle of the CircleSweepManip
         """
-    def setCenterPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setCenterPoint(self, *args: Any, **kwargs: Any) -> Any:
         """setCenterPoint(centerPoint) -> self
 
         Sets the center point of the CircleSweepManip.
 
         * centerPoint (MPoint) - the center point of the CircleSweepManip
         """
-    def setDrawAsArc(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDrawAsArc(self, *args: Any, **kwargs: Any) -> Any:
         """setDrawAsArc(state) -> self
 
         Sets whether or not to draw as arc.
 
         * state (bool) - whether or not to draw as arc
         """
-    def setNormal(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setNormal(self, *args: Any, **kwargs: Any) -> Any:
         """setNormal(normal) -> self
 
         Sets the normal of the CircleSweepManip.
 
         * normal (MVector) - the normal of the CircleSweepManip
         """
-    def setRadius(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setRadius(self, *args: Any, **kwargs: Any) -> Any:
         """setRadius(radius) -> self
 
         Sets the radius of the CircleSweepManip.
 
         * radius (float) - the radius of the CircleSweepManip
         """
-    def startCircleIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def startCircleIndex(self, *args: Any, **kwargs: Any) -> Any:
         """startCircleIndex() -> int
 
         Returns the index for the start of the circle of CircleSweepManip. The data type corresponding to this index is a double.
@@ -1423,28 +1497,33 @@ class MFnCircleSweepManip(MFnManip3D):
         """The start point of the CircleSweepManip."""
 
 class MFnCurveSegmentManip(MFnManip3D):
-    def connectToCurvePlug(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def connectToCurvePlug(self, *args: Any, **kwargs: Any) -> Any:
         """connectToCurvePlug(curvePlug) -> self
 
         Connect to the curve plug. The data type corresponding to the curvePlug is MFnData.kNurbsCurve.
 
         * curvePlug (MPlug) - the curve plug
         """
-    def connectToEndParamPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def connectToEndParamPlug(self, *args: Any, **kwargs: Any) -> Any:
         """connectToEndParamPlug(endParamPlug) -> self
 
         Connect to the endParam plug. The data type corresponding to the endParamPlug is a double.
 
         * endParamPlug (MPlug) - the endParam plug
         """
-    def connectToStartParamPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def connectToStartParamPlug(self, *args: Any, **kwargs: Any) -> Any:
         """connectToStartParamPlug(startParamPlug) -> self
 
         Connect to the startParam plug. The data type corresponding to the startParamPlug is a double.
 
         * startParamPlug (MPlug) - the startParam plug
         """
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """create(manipName=None, startParamName=None, endParamName=None) -> MObject
 
         Creates a new CurveSegmentManip.
@@ -1458,12 +1537,12 @@ class MFnCurveSegmentManip(MFnManip3D):
         * startParamName (string) - Label for the startParam value which appears in the feedback line.
         * endParamName (string) - Label for the endParam value which appears in the feedback line.
         """
-    def curveIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def curveIndex(self, *args: Any, **kwargs: Any) -> Any:
         """curveIndex() -> int
 
         Returns the index of the curve. The data type corresponding to this index is MFnData.kNurbsCurve.
         """
-    def endParamIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def endParamIndex(self, *args: Any, **kwargs: Any) -> Any:
         """endParamIndex() -> int
 
         Returns the index of the end parameter of the CurveSegmentManip. The data type corresponding this index is a double.
@@ -1474,7 +1553,7 @@ class MFnCurveSegmentManip(MFnManip3D):
     @endParameter.setter
     def endParameter(*args: Any, **kwargs: Any) -> Any:
         """The end parameter of the CurveSegmentManip."""
-    def startParamIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def startParamIndex(self, *args: Any, **kwargs: Any) -> Any:
         """startParamIndex() -> int
 
         Returns the index of the start parameter of the CurveSegmentManip. The data type corresponding to this index is a double.
@@ -1487,14 +1566,19 @@ class MFnCurveSegmentManip(MFnManip3D):
         """The start parameter of the CurveSegmentManip."""
 
 class MFnDirectionManip(MFnManip3D):
-    def connectToDirectionPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def connectToDirectionPlug(self, *args: Any, **kwargs: Any) -> Any:
         """connectToDirectionPlug(directionPlug) -> self
 
         Connect to the direction plug. The data type corresponding to the directionPlug is MFnNumericData.k3Double.
 
         * directionPlug (MPlug) - the direction plug
         """
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """create(manipName=None, directionName=None) -> MObject
 
         Creates a new DirectionManip.
@@ -1507,73 +1591,78 @@ class MFnDirectionManip(MFnManip3D):
         * manipName (string) - Name of the manip for UI purposes.
         * directionName (string) - Label for the direction value which appears in the feedback line.
         """
-    def directionIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def directionIndex(self, *args: Any, **kwargs: Any) -> Any:
         """directionIndex() -> int
 
         Returns the index of the direction. The data type corresponding to this index is MFnNumericData.k3Double.
         """
-    def endPointIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def endPointIndex(self, *args: Any, **kwargs: Any) -> Any:
         """endPointIndex() -> int
 
         Returns the index of the end point of the DirectionManip. The data type corresponding to this index is MFnNumericData.k3Double.
         """
-    def setDirection(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDirection(self, *args: Any, **kwargs: Any) -> Any:
         """setDirection(direction) -> self
 
         Sets the direction of the DirectionManip.
 
         * direction (MVector) - the direction of the DirectionManip
         """
-    def setDrawStart(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDrawStart(self, *args: Any, **kwargs: Any) -> Any:
         """setDrawStart(bool) -> self
 
         Sets whether or not to draw the start of the DirectionManip.
         The start of the DirectionManip is indicated by a grey dot.
         By default the start is not drawn.
         """
-    def setNormalizeDirection(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setNormalizeDirection(self, *args: Any, **kwargs: Any) -> Any:
         """setNormalizeDirection(bool) -> self
 
         Sets whether or not to the direction should be normalized.
         By default the direction is normalized.
         """
-    def setStartPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setStartPoint(self, *args: Any, **kwargs: Any) -> Any:
         """setStartPoint(startPoint) -> self
 
         Sets the start point of the DirectionManip.
 
         * startPoint (MPoint) - the start point of the DirectionManip
         """
-    def startPointIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def startPointIndex(self, *args: Any, **kwargs: Any) -> Any:
         """startPointIndex() -> int
 
         Returns the index of the start point of the DirectionManip. The data type corresponding to this index is MFnNumericData.k3Double.
         """
 
 class MFnDiscManip(MFnManip3D):
-    def angleIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def angleIndex(self, *args: Any, **kwargs: Any) -> Any:
         """angleIndex() -> int
 
         Returns the index of the angle. The data type corresponding to this index is a double.
         """
-    def axisIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def axisIndex(self, *args: Any, **kwargs: Any) -> Any:
         """axisIndex() -> int
 
         Returns the index of the axis of the DiscManip. The data type corresponding to this index is MFnNumericData.k3Double.
         """
-    def centerIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def centerIndex(self, *args: Any, **kwargs: Any) -> Any:
         """centerIndex() -> int
 
         Returns the index of the center of the DiscManip. The data type corresponding to this index is MFnNumericData.k3Double.
         """
-    def connectToAnglePlug(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def connectToAnglePlug(self, *args: Any, **kwargs: Any) -> Any:
         """connectToAnglePlug(directionPlug) -> self
 
         Connect to the angle plug. The data type corresponding to the anglePlug is a double. (Note that MFnUnitAttribute.kAngle is used to specify an angle attribute.)
 
         * anglePlug (MPlug) - the angle plug
         """
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """create(manipName=None, angleName=None) -> MObject
 
         Creates a new DiscManip.
@@ -1586,28 +1675,28 @@ class MFnDiscManip(MFnManip3D):
         * manipName (string) - Name of the manip for UI purposes.
         * angleName (string) - Label for the angle value which appears in the feedback line.
         """
-    def setAngle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setAngle(self, *args: Any, **kwargs: Any) -> Any:
         """setAngle(angle) -> self
 
         Sets the angle of the DiscManip.
 
         * angle (MAngle) - the angle of the DiscManip
         """
-    def setCenterPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setCenterPoint(self, *args: Any, **kwargs: Any) -> Any:
         """setCenterPoint(centerPoint) -> self
 
         Sets the center point of the DiscManip.
 
         * centerPoint (MPoint) - the center point of the DiscManip
         """
-    def setNormal(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setNormal(self, *args: Any, **kwargs: Any) -> Any:
         """setNormal(normal) -> self
 
         Sets the normal of the DiscManip.
 
         * normal (MVector) - the normal of the DiscManip
         """
-    def setRadius(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setRadius(self, *args: Any, **kwargs: Any) -> Any:
         """setRadius(radius) -> self
 
         Sets the radius of the DiscManip.
@@ -1616,14 +1705,19 @@ class MFnDiscManip(MFnManip3D):
         """
 
 class MFnDistanceManip(MFnManip3D):
-    def connectToDistancePlug(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def connectToDistancePlug(self, *args: Any, **kwargs: Any) -> Any:
         """connectToDistancePlug(directionPlug) -> self
 
         Connect to the distance plug. The data type corresponding to the distancePlug is a double. (Note that MFnUnitAttribute.kDistance is used to specify a distance attribute.)
 
         * distancePlug (MPlug) - the distance plug
         """
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """create(manipName=None, distanceName=None) -> MObject
 
         Creates a new DistanceManip.
@@ -1636,17 +1730,17 @@ class MFnDistanceManip(MFnManip3D):
         * manipName (string) - Name of the manip for UI purposes.
         * distanceName (string) - Label for the distance value which appears in the feedback line.
         """
-    def currentPointIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def currentPointIndex(self, *args: Any, **kwargs: Any) -> Any:
         """currentPointIndex() -> int
 
         Returns the index of the current point of the DistanceManip. The data type corresponding to this index is MFnNumericData.k3Double.
         """
-    def directionIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def directionIndex(self, *args: Any, **kwargs: Any) -> Any:
         """directionIndex() -> int
 
         Returns the index of the direction. The data type corresponding to this index is MFnNumericData.k3Double.
         """
-    def distanceIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def distanceIndex(self, *args: Any, **kwargs: Any) -> Any:
         """distanceIndex() -> int
 
         Returns the index of the distance. The data type corresponding to this index is a double.
@@ -1681,35 +1775,40 @@ class MFnDistanceManip(MFnManip3D):
         """The scaling factor is used to determine how int the DistanceManip appears when it is drawn.
         The default scaling factor is 1.0.
         """
-    def setDirection(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDirection(self, *args: Any, **kwargs: Any) -> Any:
         """setDirection(direction) -> self
 
         Sets the direction of the DistanceManip.
 
         * direction (MVector) - the direction of the DistanceManip
         """
-    def setStartPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setStartPoint(self, *args: Any, **kwargs: Any) -> Any:
         """setStartPoint(startPoint) -> self
 
         Sets the start point of the DistanceManip.
 
         * startPoint (MPoint) - the start point of the DistanceManip
         """
-    def startPointIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def startPointIndex(self, *args: Any, **kwargs: Any) -> Any:
         """startPointIndex() -> int
 
         Returns the index of the start point of the DistanceManip. The data type corresponding to this index is MFnNumericData.k3Double.
         """
 
 class MFnFreePointTriadManip(MFnManip3D):
-    def connectToPointPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def connectToPointPlug(self, *args: Any, **kwargs: Any) -> Any:
         """connectToPointPlug(pointPlug) -> self
 
         Connect to the point plug. The data type corresponding to the pointPlug is MFnNumericData.k3Double.
 
         * pointPlug (MPlug) - the point plug
         """
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """create(manipName=None, pointName=None) -> MObject
 
         Creates a new FreePointTriadManip.
@@ -1740,26 +1839,26 @@ class MFnFreePointTriadManip(MFnManip3D):
     @isSnapModeOn.setter
     def isSnapModeOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the FreePointTriadManip is in snap mode."""
-    def pointIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def pointIndex(self, *args: Any, **kwargs: Any) -> Any:
         """pointIndex() -> int
 
         Returns the index of the point of the FreePointTriadManip. The data type corresponding to this index is MFnNumericData.k3Double.
         """
-    def setDirection(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDirection(self, *args: Any, **kwargs: Any) -> Any:
         """setDirection(direction) -> self
 
         Sets the orientation of the FreePointTriadManip.
 
         * direction (MVector) - the new direction for freePointTriadManip.
         """
-    def setDrawArrowHead(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDrawArrowHead(self, *args: Any, **kwargs: Any) -> Any:
         """setDrawArrowHead(state) -> self
 
         Sets whether or not drawArrowHead is on.
 
         * state (bool) - whether or not drawArrowHead is on
         """
-    def setGlobalTriadPlane(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setGlobalTriadPlane(self, *args: Any, **kwargs: Any) -> Any:
         """setGlobalTriadPlane(whichPlane) -> self
 
         Sets which plane to use as the global triad plane. The global triad plane does not change until the context switches.
@@ -1772,7 +1871,7 @@ class MFnFreePointTriadManip(MFnManip3D):
           kXYPlane       X-Y Plane
           kViewPlane     View Plane
         """
-    def setPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setPoint(self, *args: Any, **kwargs: Any) -> Any:
         """setPoint(pointValue) -> self
 
         Set the point manipulator value to the given vector.  This method can be called in the MPxManipContainer.connectToDependNode() method to set the initial position for the manipulator.
@@ -1781,21 +1880,26 @@ class MFnFreePointTriadManip(MFnManip3D):
         """
 
 class MFnPointOnCurveManip(MFnManip3D):
-    def connectToCurvePlug(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def connectToCurvePlug(self, *args: Any, **kwargs: Any) -> Any:
         """connectToCurvePlug(curvePlug) -> self
 
         Connect to the curve plug. The data type corresponding to the curvePlug is MFnData::kNurbsCurve.
 
         * curvePlug (MPlug) - the curve plug
         """
-    def connectToParamPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def connectToParamPlug(self, *args: Any, **kwargs: Any) -> Any:
         """connectToParamPlug(paramPlug) -> self
 
         Connect to the param plug. The data type corresponding to the paramPlug is a double.
 
         * paramPlug (MPlug) - the param plug
         """
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """create(manipName=None, paramName=None) -> MObject
 
         Creates a new PointOnCurveManip.
@@ -1808,12 +1912,12 @@ class MFnPointOnCurveManip(MFnManip3D):
         * manipName (string) - Name of the manip for UI purposes.
         * paramName (string) - Label for the parameter value that appears in the feedback line.
         """
-    def curveIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def curveIndex(self, *args: Any, **kwargs: Any) -> Any:
         """curveIndex() -> int
 
         Returns the index of the curve. The data type corresponding to this index is MFnData::kNurbsCurve.
         """
-    def curvePoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def curvePoint(self, *args: Any, **kwargs: Any) -> Any:
         """curvePoint() -> MPoint
 
         Returns the curve point.
@@ -1824,7 +1928,7 @@ class MFnPointOnCurveManip(MFnManip3D):
     @isDrawCurveOn.setter
     def isDrawCurveOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the curve is drawn."""
-    def paramIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def paramIndex(self, *args: Any, **kwargs: Any) -> Any:
         """paramIndex() -> int
 
         Returns the index of the parameter of the PointOnCurveManip. The data type corresponding to this index is a double.
@@ -1837,21 +1941,26 @@ class MFnPointOnCurveManip(MFnManip3D):
         """The parameter of the PointOnCurveManip."""
 
 class MFnPointOnSurfaceManip(MFnManip3D):
-    def connectToParamPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def connectToParamPlug(self, *args: Any, **kwargs: Any) -> Any:
         """connectToParamPlug(paramPlug) -> self
 
         Connect to the param plug. The data type corresponding to the paramPlug is MFnNumericData.k2Double.
 
         * paramPlug (MPlug) - the param plug
         """
-    def connectToSurfacePlug(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def connectToSurfacePlug(self, *args: Any, **kwargs: Any) -> Any:
         """connectToSurfacePlug(surfacePlug) -> self
 
         Connect to the surface plug. The data type corresponding to the surfacePlug is MFnData.kNurbsSurface.
 
         * surfacePlug (MPlug) - the surface plug
         """
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """create(manipName=None, paramName=None) -> MObject
 
         Creates a new PointOnSurfaceManip.
@@ -1870,19 +1979,19 @@ class MFnPointOnSurfaceManip(MFnManip3D):
     @isDrawSurfaceOn.setter
     def isDrawSurfaceOn(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the surface is drawn."""
-    def paramIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def paramIndex(self, *args: Any, **kwargs: Any) -> Any:
         """paramIndex() -> int
 
         Returns the index of the parameter of the PointOnSurfaceManip. The data type corresponding to this index is MFnNumericData.k2Double.
         """
-    def setDrawArrows(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDrawArrows(self, *args: Any, **kwargs: Any) -> Any:
         """setDrawArrows(state) -> self
 
         Sets whether or not the arrows should be drawn.
 
         * state (bool) - whether or not the arrows should be drawn
         """
-    def surfaceIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def surfaceIndex(self, *args: Any, **kwargs: Any) -> Any:
         """surfaceIndex() -> int
 
         Returns the index of the surface. The data type corresponding to this index is MFnData.kNurbsSurface.
@@ -1901,7 +2010,11 @@ class MFnPointOnSurfaceManip(MFnManip3D):
         """The v parameter"""
 
 class MFnRotateManip(MFnManip3D):
-    def connectToRotationCenterPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def connectToRotationCenterPlug(self, *args: Any, **kwargs: Any) -> Any:
         """connectToRotationCenterPlug(rotationCenterPlug) -> self
 
         Create a 1-1 association of the rotation center on the manipulator and the rotationCenterPlug parameter.  When both the rotation center is attached to a plug and the displayWithNode() method has been called, the manipulator will display with the node regardless of the connection made to the rotation center.
@@ -1910,7 +2023,7 @@ class MFnRotateManip(MFnManip3D):
 
         * rotationCenterPlug (MPlug) - The plug to connect the rotation center to
         """
-    def connectToRotationPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def connectToRotationPlug(self, *args: Any, **kwargs: Any) -> Any:
         """connectToRotationPlug(rotationPlug) -> self
 
         Create a 1-1 connection from the rotation manipVal to the rotationPlug parameter.  Any changes to the rotation manipVal will be immediately reflected in the connected plug.  Connecting to the "rotation" plug on a transform node will produce similar behavior to the built-in rotation manipulator.
@@ -1919,7 +2032,7 @@ class MFnRotateManip(MFnManip3D):
 
         * rotationPlug (MPlug) - The plug to connect the rotation value to
         """
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """create(manipName=None, rotationName=None) -> MObject
 
         Creates a new RotateManip, and attaches this function set to the new manipulator.
@@ -1931,7 +2044,7 @@ class MFnRotateManip(MFnManip3D):
         * manipName (string) - Name of the manip for UI purposes.
         * rotationName (string) - Label for the rotation value displayed in the feedback line.
         """
-    def displayWithNode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def displayWithNode(self, *args: Any, **kwargs: Any) -> Any:
         """displayWithNode(node) -> self
 
         Configures the manipulator to display with the node, causing the position of the manipulator to follow the position of the node whenever the node is moved.  The node must be a DAG object.
@@ -1964,26 +2077,26 @@ class MFnRotateManip(MFnManip3D):
         * kWorldSpace This mode forces the manipulator to display in the default orientation regardless of the manipulator value.  The manipulator is displayed the same as in object space mode, except it does not rotate when the manip value is changed.
         * kGimbal In gimbal mode, only the constrained axis rotation discs are allowed to be manipulated.  Gimbal mode treats the X,Y, and Z axis rotations as a sequence of operations on the default manipulator display.  First, the X rotation is applied.  Then, the Y rotation is applied, causing the X rotation disc to become transformed.  Finally, the Z rotation is applied, transforming both the X and Y rotation discs.  The Z rotation disc remains fixed during the operation.  No view disc can be manipulated in gimbal mode.
         """
-    def rotationCenterIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rotationCenterIndex(self, *args: Any, **kwargs: Any) -> Any:
         """rotationCenterIndex() -> int
 
         Returns the index of the rotation center for this manipulator.
 
         Note that the rotation center is only used for positioning the display of the manipulator, and has no effect on the rotation values generated by the manipulator.
         """
-    def rotationIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rotationIndex(self, *args: Any, **kwargs: Any) -> Any:
         """rotationIndex() -> int
 
         Returns the index of the rotation manipVal for the manipulator.  When plugToManip conversion functions are used to produce the rotation manipVal, the manipulator data must be of the type MFnNumericData.k3Double, with X,Y, and Z rotations given in radians.  This is easily accomplished by using the MEulerRotation class to manage the rotations.
         """
-    def setInitialRotation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setInitialRotation(self, *args: Any, **kwargs: Any) -> Any:
         """setInitialRotation(rotation) -> self
 
         Sets the initial rotation for the rotate manipulator.  Setting the initial rotation will prevent the manipulator from jumping back to the default rotation when there is already an existing rotation on the target plug.
 
         * rotation (MEulerRotation) - The initial rotation
         """
-    def setRotationCenter(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setRotationCenter(self, *args: Any, **kwargs: Any) -> Any:
         """setRotationCenter(rotationCenter) -> self
 
         Sets the position of the rotation center for the manipulator.
@@ -2002,7 +2115,11 @@ class MFnRotateManip(MFnManip3D):
         """The snap increment is specified in degrees. Manipulator values will snap to the next rotation at an angle of snapIncrement from the original rotation.  Note that snap rotate does not apply to the trackball rotations (when dragging between the rotate discs)."""
 
 class MFnScaleManip(MFnManip3D):
-    def connectToScaleCenterPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def connectToScaleCenterPlug(self, *args: Any, **kwargs: Any) -> Any:
         """connectToScaleCenterPlug(scaleCenterPlug) -> self
 
         Create a 1-1 association of the scale center on the manipulator and the scaleCenterPlug parameter.  When both the scale center is attached to a plug and the displayWithNode() method has been called, the manipulator will display with the node regardless of the connection made to the scale center.
@@ -2011,7 +2128,7 @@ class MFnScaleManip(MFnManip3D):
 
         * scaleCenterPlug (MPlug) - The plug to connect the scale center to
         """
-    def connectToScalePlug(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def connectToScalePlug(self, *args: Any, **kwargs: Any) -> Any:
         """connectToScalePlug(scalePlug) -> self
 
         Create a 1-1 connection from the scale manipVal to the scalePlug parameter.  Any changes to the scale manipVal will be immediately reflected in the connected plug.  Connecting to the "scale" plug on a transform node will produce similar behavior to the built-in scale manipulator.
@@ -2020,7 +2137,7 @@ class MFnScaleManip(MFnManip3D):
 
         * scalePlug (MPlug) - The plug to connect the scale value to
         """
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """create(manipName=None, scaleName=None) -> MObject
 
         Creates a new ScaleManip, and attaches this function set to the new manipulator.
@@ -2032,7 +2149,7 @@ class MFnScaleManip(MFnManip3D):
         * manipName (string) - Name of the manip for UI purposes.
         * scaleName (string) - Label for the scale value displayed in the feedback line.
         """
-    def displayWithNode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def displayWithNode(self, *args: Any, **kwargs: Any) -> Any:
         """displayWithNode(node) -> self
 
         Configures the manipulator to display with the node, causing the position of the manipulator to follow the position of the node whenever the node is moved.  The node must be a DAG object.
@@ -2057,19 +2174,19 @@ class MFnScaleManip(MFnManip3D):
     @orientationMode.setter
     def orientationMode(*args: Any, **kwargs: Any) -> Any:
         """When the manipulator's orientationMode is set to kArbitraryOrientation the manipulator will be oriented according to oritentation value. When the orientationMode is set to kDefaultOrientation the manipulator will be aligned with the world-space axes."""
-    def scaleCenterIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def scaleCenterIndex(self, *args: Any, **kwargs: Any) -> Any:
         """scaleCenterIndex() -> int
 
         Returns the index of the scale center manipVal for this manipulator.
 
         Note that the scale center is only used for display of the manipulator and has no effect on scale values produced by the manipulator.
         """
-    def scaleIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def scaleIndex(self, *args: Any, **kwargs: Any) -> Any:
         """scaleIndex() -> int
 
         Returns the index of the scale manipVal for this manipulator.
         """
-    def setInitialScale(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setInitialScale(self, *args: Any, **kwargs: Any) -> Any:
         """setInitialScale(scale) -> self
 
         Sets the initial scale for the scale manipulator.  Setting the initial scale will prevent the manipulator from jumping back to the default scale when there is already an existing scale on the target plug.
@@ -2084,14 +2201,19 @@ class MFnScaleManip(MFnManip3D):
         """The snap increment is specified in the working	unit, and is the distance between snap points when dragging the scale handles."""
 
 class MFnStateManip(MFnManip3D):
-    def connectToStatePlug(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def connectToStatePlug(self, *args: Any, **kwargs: Any) -> Any:
         """connectToStatePlug(statePlug) -> self
 
         Connect to the state plug. The data type corresponding to the statePlug is a int integer.
 
         * statePlug (MPlug) - the state plug
         """
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """create(manipName=None, stateName=None) -> MObject
 
         Creates a new StateManip.
@@ -2114,38 +2236,43 @@ class MFnStateManip(MFnManip3D):
         """The maximum number of states that the StateManip will have.
         The default number of maximum states is 4.
         """
-    def positionIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def positionIndex(self, *args: Any, **kwargs: Any) -> Any:
         """positionIndex() -> int
 
         Returns the index of the position of the StateManip. The data type corresponding to this index is MFnNumericData.k3Double.
         """
-    def setInitialState(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setInitialState(self, *args: Any, **kwargs: Any) -> Any:
         """setInitialState(initialState) -> self
 
         Sets the initial state of the StateManip.
 
         * initialState (int) - initial state of the StateManip
         """
-    def state(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def state(self, *args: Any, **kwargs: Any) -> Any:
         """state() -> int
 
         Returns the current state.
         """
-    def stateIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def stateIndex(self, *args: Any, **kwargs: Any) -> Any:
         """stateIndex() -> int
 
         Returns the index of the state. The data type corresponding to this index is a int integer.
         """
 
 class MFnToggleManip(MFnManip3D):
-    def connectToTogglePlug(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def connectToTogglePlug(self, *args: Any, **kwargs: Any) -> Any:
         """connectToTogglePlug(togglePlug) -> self
 
         Connect to the toggle plug. The data type corresponding to the togglePlug is a boolean value.
 
         * togglePlug (MPlug) - the toggle plug
         """
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """create(manipName=None, toggleName=None) -> MObject
 
         Creates a new ToggleManip.
@@ -2164,7 +2291,7 @@ class MFnToggleManip(MFnManip3D):
     @direction.setter
     def direction(*args: Any, **kwargs: Any) -> Any:
         """The direction of the ToggleManip."""
-    def directionIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def directionIndex(self, *args: Any, **kwargs: Any) -> Any:
         """directionIndex() -> int
 
         Returns the index of the direction. The data type corresponding to this index is MFnNumericData.k3Double.
@@ -2175,7 +2302,7 @@ class MFnToggleManip(MFnManip3D):
     @length.setter
     def length(*args: Any, **kwargs: Any) -> Any:
         """The length of the ToggleManip."""
-    def lengthIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def lengthIndex(self, *args: Any, **kwargs: Any) -> Any:
         """lengthIndex() -> int
 
         Returns the index of the length of the ToggleManip. The data type corresponding to this index is a double.
@@ -2186,7 +2313,7 @@ class MFnToggleManip(MFnManip3D):
     @startPoint.setter
     def startPoint(*args: Any, **kwargs: Any) -> Any:
         """The start point of the ToggleManip."""
-    def startPointIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def startPointIndex(self, *args: Any, **kwargs: Any) -> Any:
         """startPointIndex() -> int
 
         Returns the index of the start point of the ToggleManip. The data type corresponding to this index is MFnNumericData.k3Double.
@@ -2197,14 +2324,25 @@ class MFnToggleManip(MFnManip3D):
     @toggle.setter
     def toggle(*args: Any, **kwargs: Any) -> Any:
         """The toggle of the ToggleManip."""
-    def toggleIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def toggleIndex(self, *args: Any, **kwargs: Any) -> Any:
         """toggleIndex() -> int
 
         Returns the index of the toggle of the ToggleManip. The data type corresponding to this index is a boolean.
         """
 
 class MHWShaderSwatchGenerator(MSwatchRenderBase):
-    def createObj(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __init_subclass__(self, *args: Any, **kwargs: Any) -> Any:
+        """This method is called when a class is subclassed.
+
+        The default implementation does nothing. It may be
+        overridden to extend subclasses.
+        """
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def createObj(self, *args: Any, **kwargs: Any) -> Any:
         """createObj(obj, renderObj, res) -> MSwatchRenderBase
 
         Class constructor.
@@ -2213,7 +2351,7 @@ class MHWShaderSwatchGenerator(MSwatchRenderBase):
         * obj (MObject) - The node object for which the swatch needs to be generated.
         * renderObj (MObject) - The node used to actually compute the swatch. In most situations, this can be the same as <b>obj</b>. This parameter can be used to request the computation of the swatch on another node, and display the swatch on the obj node.* resolution (int) - The expected resolution of the swatch image.
         """
-    def doIteration(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doIteration(self, *args: Any, **kwargs: Any) -> Any:
         """doIteration() -> bool
 
         Method called from the MSwatchRenderRegister for generation of swatch image. The doIteration function is called repeatedly (during idle events) until it returns true. Using this swatch image can be generated in stages.
@@ -2222,12 +2360,12 @@ class MHWShaderSwatchGenerator(MSwatchRenderBase):
 
         Returns False as long as the swatch computation is not completed.
         """
-    def getSwatchBackgroundColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getSwatchBackgroundColor(self, *args: Any, **kwargs: Any) -> Any:
         """getSwatchBackgroundColor() -> MColor
 
         Returns the default background color for the hardware rendered swatch.
         """
-    def initialize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def initialize(self, *args: Any, **kwargs: Any) -> Any:
         """initialize() -> string
 
         This method sets a swatch name, and registers a new swatch generator creation function for the swatch name.
@@ -2235,44 +2373,49 @@ class MHWShaderSwatchGenerator(MSwatchRenderBase):
         """
 
 class MManipData:
-    def asBool(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def asBool(self, *args: Any, **kwargs: Any) -> Any:
         """asBool() -> bool
 
         Returns the manipulator data as a bool
         """
-    def asDouble(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asDouble(self, *args: Any, **kwargs: Any) -> Any:
         """asDouble() -> float
 
         Returns the manipulator data as a double
         """
-    def asFloat(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asFloat(self, *args: Any, **kwargs: Any) -> Any:
         """asFloat() -> float
 
         Returns the manipulator data as a float
         """
-    def asLong(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asLong(self, *args: Any, **kwargs: Any) -> Any:
         """asLong() -> int
 
         Returns the manipulator data as a long
         """
-    def asMObject(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asMObject(self, *args: Any, **kwargs: Any) -> Any:
         """asMObject() -> int
 
         Returns the manipulator data as an MObject.
         The MObjects returned from this method are created and used
         by MFnData or classes derived from MFnData.
         """
-    def asShort(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asShort(self, *args: Any, **kwargs: Any) -> Any:
         """asShort() -> int
 
         Returns the manipulator data as a short
         """
-    def asUnsigned(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asUnsigned(self, *args: Any, **kwargs: Any) -> Any:
         """asUnsigned() -> int
 
         Returns the manipulator data as a unsigned
         """
-    def isSimple(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isSimple(self, *args: Any, **kwargs: Any) -> Any:
         """isSimple() -> bool
 
         Returns whether or not the manipulator data is simple or complex.
@@ -2282,7 +2425,12 @@ class MManipData:
         """
 
 class MMaterial:
-    def applyTexture(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def applyTexture(self, *args: Any, **kwargs: Any) -> Any:
         """applyTexture(view, data) -> self
 
         For materials that have texture, this method must be used before the OpenGL drawing to apply the texture to the current view.
@@ -2291,22 +2439,22 @@ class MMaterial:
         * view (M3dView) - the view in which the textured drawing is to take place
         * data (MDrawData) - the draw data from the draw request
         """
-    def defaultMaterial(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def defaultMaterial(self, *args: Any, **kwargs: Any) -> Any:
         """defaultMaterial() -> MMaterial
 
         Get the default material. There will always be a default material in the scene and therefore the result of this function should always succeed.  The default material will correspond to the initialShadingGroup node that is in the scene.
         """
-    def evaluateDiffuse(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def evaluateDiffuse(self, *args: Any, **kwargs: Any) -> Any:
         """evaluateDiffuse() -> self
 
         Perform necessary evaluation to be able to get diffuse back.
         """
-    def evaluateEmission(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def evaluateEmission(self, *args: Any, **kwargs: Any) -> Any:
         """evaluateEmission() -> self
 
         Perform necessary evaluation to be able to get emission back.
         """
-    def evaluateMaterial(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def evaluateMaterial(self, *args: Any, **kwargs: Any) -> Any:
         """evaluateMaterial(view, path) -> self
 
         Evaluate a material. Must be called before evaluating or getting any material properties.
@@ -2314,17 +2462,17 @@ class MMaterial:
         * view (M3dView) - the view
         * path (MDagPath) - path to the object
         """
-    def evaluateShininess(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def evaluateShininess(self, *args: Any, **kwargs: Any) -> Any:
         """evaluateShininess() -> self
 
         Perform necessary evaluation to be able to get shininess back.
         """
-    def evaluateSpecular(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def evaluateSpecular(self, *args: Any, **kwargs: Any) -> Any:
         """evaluateSpecular() -> self
 
         Perform necessary evaluation to be able to get specular back.
         """
-    def evaluateTexture(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def evaluateTexture(self, *args: Any, **kwargs: Any) -> Any:
         """evaluateTexture(data) -> self
 
         Evaluate texturing related information. Must be called before getting any texture properties such as getHasTransparency(), getTextureTransformation() and applyTexture().
@@ -2334,37 +2482,37 @@ class MMaterial:
 
         * data (MDrawData) - draw request data to carry the texture information
         """
-    def getDiffuse(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getDiffuse(self, *args: Any, **kwargs: Any) -> Any:
         """getDiffuse() -> MColor
 
         Get the GL diffuse color.
         """
-    def getEmission(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getEmission(self, *args: Any, **kwargs: Any) -> Any:
         """getEmission() -> MColor
 
         Get the GL emission color.
         """
-    def getHasTransparency(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getHasTransparency(self, *args: Any, **kwargs: Any) -> Any:
         """getHasTransparency() -> bool
 
         Returns True if material or texture has transparency, False otherwise.
         """
-    def getHwShaderNode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getHwShaderNode(self, *args: Any, **kwargs: Any) -> Any:
         """getHwShaderNode() -> MPxHwShaderNode
 
         Get the hardware shader node.
         """
-    def getShininess(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getShininess(self, *args: Any, **kwargs: Any) -> Any:
         """getShininess() -> float
 
         Get the GL shininess.
         """
-    def getSpecular(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getSpecular(self, *args: Any, **kwargs: Any) -> Any:
         """getSpecular() -> MColor
 
         Get the GL specular color.
         """
-    def getTextureTransformation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getTextureTransformation(self, *args: Any, **kwargs: Any) -> Any:
         """getTextureTransformation(data, texXform) -> self
         getTextureTransformation(data) -> [float, float, float, float, float, float]
 
@@ -2399,12 +2547,12 @@ class MMaterial:
     kTransluscence: int = ...
     kTransparency: int = ...
     kWhiteness: int = ...
-    def materialIsTextured(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def materialIsTextured(self, *args: Any, **kwargs: Any) -> Any:
         """materialIsTextured() -> bool
 
         Returns True if the material is textured, False otherwise.
         """
-    def setMaterial(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setMaterial(self, *args: Any, **kwargs: Any) -> Any:
         """setMaterial(path, hasTransparency) -> self
 
         Set the current GL material.
@@ -2412,12 +2560,12 @@ class MMaterial:
         * path (MDagPath) - path to the object
         * hasTransparency (bool) - whether the material has transparency
         """
-    def shadingEngine(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def shadingEngine(self, *args: Any, **kwargs: Any) -> Any:
         """shadingEngine() -> MObject
 
         Get the shading engined associated with this material.
         """
-    def textureImage(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def textureImage(self, *args: Any, **kwargs: Any) -> Any:
         """textureImage(image, color, chan, dagPath, xRes=-1, yRes=-1) -> self
 
         For materials that have texture, this method will attempt to retrieve the pixel map for a given mapped channel of that material.
@@ -2459,26 +2607,43 @@ class MMaterial:
         """
 
 class MMaterialArray:
-    def append(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def append(self, *args: Any, **kwargs: Any) -> Any:
         """append(element) -> self
 
         Adds a new element to the end of the array.
 
         * element (MMaterial) - the value for the new last element.
         """
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """clear() -> self
 
         Clear the contents of the array. After this operation the length will be 0.  This does not change the amount of memory allocated to the array, only the number of valid elements in it.
         """
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """copy(source) -> self
 
         Copy the contents of the source array to this array.
 
         * source (MMaterialArray) - array to copy from.
         """
-    def insert(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def insert(self, *args: Any, **kwargs: Any) -> Any:
         """insert(element, index) -> self
 
         Inserts a new value into the array at the given index. The initial element at that index, and all following elements, are shifted towards the last.
@@ -2486,14 +2651,14 @@ class MMaterialArray:
         * element (MMaterial) - the new value to insert into the array.
         * index (int) - the index of the element to set.
         """
-    def remove(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def remove(self, *args: Any, **kwargs: Any) -> Any:
         """remove(index) -> self
 
         Removes the element in the array at the given index.
 
         * index (int) - the index of the element to remove.
         """
-    def set(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def set(self, *args: Any, **kwargs: Any) -> Any:
         """set(element, index) -> self
 
         Sets the value of the specified element to the given attribute spec.
@@ -2501,7 +2666,7 @@ class MMaterialArray:
         * element (MMaterial) - the new value for the specified element.
         * index (int) - the index of the element to be set.
         """
-    def setLength(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setLength(self, *args: Any, **kwargs: Any) -> Any:
         """setLength(length) -> self
 
         Set the length of the array. This will grow and shrink the array as desired. Elements that are grown have uninitialized values, while those which are shrunk will lose the data contained in the deleted elements
@@ -2516,7 +2681,8 @@ class MMaterialArray:
         """The size by which the array will be expanded whenever expansion is necessary."""
 
 class MPaintMessage(MMessage):
-    def addVertexColorCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def addVertexColorCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addVertexColorCallback(function, clientData=None) -> id
 
         Adds a new callback on vertex color paint.
@@ -2537,14 +2703,19 @@ class MPaintMessage(MMessage):
         """
 
 class MPanelCanvas:
-    def addPrimitive(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addPrimitive(self, *args: Any, **kwargs: Any) -> Any:
         """addPrimitive( int, int )
 
         Add the primitive referred to by the given id to the list of
         primitives to be drawn at the given layer.
         Return: None
         """
-    def createFloatVertexBuffer(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def createFloatVertexBuffer(self, *args: Any, **kwargs: Any) -> Any:
         """createFloatVertexBuffer( tVals, yVals, colors ) -> int
 
         Create a vertex buffer with float values as the x-coordinate.
@@ -2552,7 +2723,7 @@ class MPanelCanvas:
         are passed as arrays of float values
         Return: int
         """
-    def createPrimitive(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def createPrimitive(self, *args: Any, **kwargs: Any) -> Any:
         """createPrimitive( primType, bufferId, startIndex, numVertices, props ) -> int
 
         Create a primitive of the given type using the vertex buffer
@@ -2561,7 +2732,7 @@ class MPanelCanvas:
         created primitive is returned.
         Return: int
         """
-    def createTimeVertexBuffer(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def createTimeVertexBuffer(self, *args: Any, **kwargs: Any) -> Any:
         """createTimeVertexBuffer( tVals, yVals, colors ) -> int
 
         Create a vertex buffer with time values as the x-coordinate.
@@ -2569,20 +2740,20 @@ class MPanelCanvas:
         are passed as arrays of OpenMaya.MTime values
         Return: int
         """
-    def destroyPrimitive(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def destroyPrimitive(self, *args: Any, **kwargs: Any) -> Any:
         """destroyPrimitive( primitiveId )
 
         Destroy the primitive referred to by the given id.
         Return: None
         """
-    def destroyVertexBuffer(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def destroyVertexBuffer(self, *args: Any, **kwargs: Any) -> Any:
         """destroyVertexBuffer( bufferId )
 
         Destroy the vertex buffer referred to by the given id.  If the.
         buffer is being used by a primitive, an error will be generated.
         Return: None
         """
-    def isAutoRefresh(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isAutoRefresh(self, *args: Any, **kwargs: Any) -> Any:
         """isAutoRefresh() -> bool
 
         Returns whether the associated editor will automatically refresh.
@@ -2590,13 +2761,13 @@ class MPanelCanvas:
 
         Return: bool
         """
-    def isLayerVisible(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isLayerVisible(self, *args: Any, **kwargs: Any) -> Any:
         """isLayerVisible( int) -> bool
 
         Return whether the given layer is visible.
         Return: bool
         """
-    def isValid(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isValid(self, *args: Any, **kwargs: Any) -> Any:
         """isValid() -> bool
 
         Returns True if MPanelCanvas has a valid pointer to a Graph
@@ -2614,13 +2785,13 @@ class MPanelCanvas:
     kGraphEditorRetimeToolText: int = ...
     kGraphEditorTimeMarker: int = ...
     kGraphEditorUndefined: int = ...
-    def refresh(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def refresh(self, *args: Any, **kwargs: Any) -> Any:
         """refresh()
 
         Force the associated Graph Editor to refresh
         Return: None
         """
-    def registerDrawUICallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def registerDrawUICallback(self, *args: Any, **kwargs: Any) -> Any:
         """registerDrawUICallback( layer, cb, clientData ) -> callbackId
 
         Register a callback to be called when the given panel is drawing
@@ -2629,7 +2800,7 @@ class MPanelCanvas:
         and whatever client data was passed to this method.
         Return: int
         """
-    def removePrimitive(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removePrimitive(self, *args: Any, **kwargs: Any) -> Any:
         """removePrimitive( int, int )
 
         Remove the primitive referred to by the given id from the list of
@@ -2637,14 +2808,14 @@ class MPanelCanvas:
         be destroyed.
         Return: None
         """
-    def setAutoRefresh(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setAutoRefresh(self, *args: Any, **kwargs: Any) -> Any:
         """setAutoRefresh()
 
         Set whether the associated editor will be automatically refreshed.
         Initially, automatic refresh is enabled.
         Return: None
         """
-    def setLayerVisible(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setLayerVisible(self, *args: Any, **kwargs: Any) -> Any:
         """setLayerVisible( int, bool )
 
         Set whether the given layer will be drawn. All layers are
@@ -2652,7 +2823,7 @@ class MPanelCanvas:
         their visibility set.
         Return: None
         """
-    def supportsUIDrawing(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def supportsUIDrawing(self, *args: Any, **kwargs: Any) -> Any:
         """supportsUIDrawing() -> bool
 
         Returns whether the attached panel control supports drawing
@@ -2664,7 +2835,7 @@ class MPanelCanvas:
         Graph Editor when it has not yet been opened, but exists by default).
         Return: bool
         """
-    def unregisterDrawUICallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def unregisterDrawUICallback(self, *args: Any, **kwargs: Any) -> Any:
         """unregisterDrawUICallback( callbackId )
 
          Unregister the callback specified by the given id.
@@ -2672,27 +2843,32 @@ class MPanelCanvas:
         """
 
 class MPanelCanvasInfo:
-    def getViewportBounds(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def getViewportBounds(self, *args: Any, **kwargs: Any) -> Any:
         """getViewportBounds()
 
         Returns an array of four values representing the corners of the
         viewing region: [left, right, bottom, top].
         Return: float[]
         """
-    def getViewportSize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getViewportSize(self, *args: Any, **kwargs: Any) -> Any:
         """getViewportSize()
 
         Returns an array of two values representing the size of the
         viewing region: [width, height].
         Return: int[]
         """
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def name(self, *args: Any, **kwargs: Any) -> Any:
         """name() -> MString
 
         Return the name of the currently attached panel.
         Return: MString
         """
-    def setViewportBounds(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setViewportBounds(self, *args: Any, **kwargs: Any) -> Any:
         """setViewportBounds( bounds )
 
         Set the bounds of the editor's viewing region. The passed.
@@ -2700,7 +2876,7 @@ class MPanelCanvasInfo:
         bottom, top].
         Return: None
         """
-    def supportsUIDrawing(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def supportsUIDrawing(self, *args: Any, **kwargs: Any) -> Any:
         """supportsUIDrawing() -> bool
 
         Returns whether the attached panel control supports drawing
@@ -2714,7 +2890,12 @@ class MPanelCanvasInfo:
         """
 
 class MPxContext:
-    def abortAction(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def abortAction(self, *args: Any, **kwargs: Any) -> Any:
         """abortAction() -> None
 
         This method is called when the abort key is pressed.
@@ -2722,14 +2903,14 @@ class MPxContext:
         Users can override this method if they wish to perform
         certain operations when the abort key is pressed.
         """
-    def addManipulator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addManipulator(self, *args: Any, **kwargs: Any) -> Any:
         """addManipulator(manipulator) -> None
 
         This method adds a manipulator to the context.
 
         * manipulator (MObject) - the manipulator to be added to the context.
         """
-    def argTypeNumericalInput(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def argTypeNumericalInput(self, *args: Any, **kwargs: Any) -> Any:
         """argTypeNumericalInput(index) -> MSyntax.MArgType
 
         This method is used by the feedback line to determine what units to display.
@@ -2743,7 +2924,7 @@ class MPxContext:
 
         * index (int) - the index of the numerical input whose argument type is requested.
         """
-    def beginMarquee(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def beginMarquee(self, *args: Any, **kwargs: Any) -> Any:
         """beginMarquee(event) -> self
 
         Start drawing a dragged out marquee box.
@@ -2755,7 +2936,7 @@ class MPxContext:
 
         * event (MEvent) - current event information.
         """
-    def completeAction(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def completeAction(self, *args: Any, **kwargs: Any) -> Any:
         """completeAction() -> None
 
         This method is called when the complete key is pressed.
@@ -2764,7 +2945,7 @@ class MPxContext:
         For example, a tool may have several steps where the user must
         select objects and then press the completion key before proceeding.
         """
-    def deleteAction(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deleteAction(self, *args: Any, **kwargs: Any) -> Any:
         """deleteAction() -> None
 
         This method is called when the delete or backspace key is pressed.
@@ -2773,13 +2954,13 @@ class MPxContext:
         Users can override this method if they wish to do anything else
         when this event occurs.
         """
-    def deleteManipulators(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deleteManipulators(self, *args: Any, **kwargs: Any) -> Any:
         """deleteManipulators() -> None
 
         This method deletes all the manipulators that belong
         to the context.
         """
-    def doDrag(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doDrag(self, *args: Any, **kwargs: Any) -> Any:
         """doDrag(event, drawMgr, context) -> None
 
         This method is called when a mouse drag event occurs.
@@ -2803,7 +2984,7 @@ class MPxContext:
         * drawMgr (MHWRender::MUIDrawManager) - The UI draw manager, it can be used to draw some simple geometry including text.
         * context (MHWRender::MFrameContextFrame) - level context information.
         """
-    def doDragLegacy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doDragLegacy(self, *args: Any, **kwargs: Any) -> Any:
         """doDragLegacy(event) -> None
 
         This method is called when a mouse drag event occurs.
@@ -2819,7 +3000,7 @@ class MPxContext:
 
         * event (MEvent) - The button drag event information.
         """
-    def doEnterRegion(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doEnterRegion(self, *args: Any, **kwargs: Any) -> Any:
         """doEnterRegion(event) -> None
 
         This method is called when a mouse drag event occurs.
@@ -2835,7 +3016,7 @@ class MPxContext:
 
         * event (MEvent) - The button press event information.
         """
-    def doHold(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doHold(self, *args: Any, **kwargs: Any) -> Any:
         """doHold(event, drawMgr, context) -> None
 
         This method is called when a mouse button is pressed but
@@ -2860,7 +3041,7 @@ class MPxContext:
         * drawMgr (MHWRender::MUIDrawManager) - The UI draw manager, it can be used to draw some simple geometry including text.
         * context (MHWRender::MFrameContextFrame) - level context information.
         """
-    def doHoldLegacy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doHoldLegacy(self, *args: Any, **kwargs: Any) -> Any:
         """doHoldLegacy(event) -> None
 
         This method is called when a mouse button is pressed but
@@ -2877,7 +3058,7 @@ class MPxContext:
 
         * event (MEvent) - The button hold event information.
         """
-    def doPress(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doPress(self, *args: Any, **kwargs: Any) -> Any:
         """doPress(event, drawMgr, context) -> None
 
         This method is called when any mouse button is pressed.
@@ -2901,7 +3082,7 @@ class MPxContext:
         * drawMgr (MHWRender::MUIDrawManager) - The UI draw manager, it can be used to draw some simple geometry including text.
         * context (MHWRender::MFrameContextFrame) - level context information.
         """
-    def doPressLegacy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doPressLegacy(self, *args: Any, **kwargs: Any) -> Any:
         """doPressLegacy(event) -> None
 
         This method is called when any mouse button is pressed.
@@ -2917,7 +3098,7 @@ class MPxContext:
 
         * event (MEvent) - The button press event information.
         """
-    def doPtrMoved(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doPtrMoved(self, *args: Any, **kwargs: Any) -> Any:
         """doPtrMoved(event, drawMgr, context ) -> None
 
         This method is called when a mouse move event occurs.
@@ -2941,7 +3122,7 @@ class MPxContext:
         * drawMgr (MHWRender::MUIDrawManager) - The UI draw manager, it can be used to draw some simple geometry including text.
         * context (MHWRender::MFrameContextFrame) - level context information.
         """
-    def doPtrMovedLegacy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doPtrMovedLegacy(self, *args: Any, **kwargs: Any) -> Any:
         """doPtrMovedLegacy(event) -> None
 
         This method is called when a mouse drag event occurs.
@@ -2957,7 +3138,7 @@ class MPxContext:
 
         * event (MEvent) - The button press event information.
         """
-    def doRelease(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doRelease(self, *args: Any, **kwargs: Any) -> Any:
         """doRelease(event, drawMgr, context) -> None
 
         This method is called when any mouse button is released.
@@ -2981,7 +3162,7 @@ class MPxContext:
         * drawMgr (MHWRender::MUIDrawManager) - The UI draw manager, it can be used to draw some simple geometry including text.
         * context (MHWRender::MFrameContextFrame) - level context information.
         """
-    def doReleaseLegacy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doReleaseLegacy(self, *args: Any, **kwargs: Any) -> Any:
         """doReleaseLegacy(event) -> None
 
         This method is called when any mouse button is released.
@@ -2997,7 +3178,7 @@ class MPxContext:
 
         * event (MEvent) - The button release event information.
         """
-    def dragMarquee(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def dragMarquee(self, *args: Any, **kwargs: Any) -> Any:
         """dragMarquee(event) -> self
 
         Draws a rectangle representing the dragged out area initiated with
@@ -3005,7 +3186,7 @@ class MPxContext:
 
         * event (MEvent) - current event information.
         """
-    def drawFeedback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def drawFeedback(self, *args: Any, **kwargs: Any) -> Any:
         """drawFeedback(event, drawMgr, context ) -> None
 
         This method is called to draw primitives when your context is activated
@@ -3022,7 +3203,7 @@ class MPxContext:
         * drawMgr (MHWRender::MUIDrawManager) - The UI draw manager, it can be used to draw some simple geometry including text.
         * context (MHWRender::MFrameContextFrame) - level context information.
         """
-    def feedbackNumericalInput(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def feedbackNumericalInput(self, *args: Any, **kwargs: Any) -> Any:
         """feedbackNumericalInput() -> bool
 
         This method is called to update the numerical feedback.
@@ -3031,7 +3212,7 @@ class MPxContext:
         The return value should indicate whether or not the numerical feedback
         has been provided.  The default return value is false.
         """
-    def helpStateHasChanged(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def helpStateHasChanged(self, *args: Any, **kwargs: Any) -> Any:
         """helpStateHasChanged(event) -> None
 
         This method is called whenever the help state may need to be
@@ -3044,7 +3225,7 @@ class MPxContext:
 
         * event (MEvent) - The event information.
         """
-    def image(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def image(self, *args: Any, **kwargs: Any) -> Any:
         """image(index) -> string
 
         This method is used to retrieve an XPM icon image that has
@@ -3056,7 +3237,7 @@ class MPxContext:
         * index (ImageIndex) - the index of the image being retrieved; three image
         representations are permitted: kImage1, kImage2, kImage3.
         """
-    def inAlternateContext(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def inAlternateContext(self, *args: Any, **kwargs: Any) -> Any:
         """inAlternateContext() -> bool
 
         This method is called to determine if an alternate context is active.
@@ -3066,7 +3247,7 @@ class MPxContext:
     kImage1: int = ...
     kImage2: int = ...
     kImage3: int = ...
-    def newToolCommand(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def newToolCommand(self, *args: Any, **kwargs: Any) -> Any:
         """newToolCommand() -> MPxToolCommand
 
         Create a new instance of the tool command associated with this context.
@@ -3075,7 +3256,7 @@ class MPxContext:
 
         Returns a new instance of the MPxToolCommand.
         """
-    def processNumericalInput(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def processNumericalInput(self, *args: Any, **kwargs: Any) -> Any:
         """processNumericalInput(values, flags, isAbsolute) -> bool
 
         This method processes the input from the numerical input field.
@@ -3095,7 +3276,7 @@ class MPxContext:
         determines whether or not a given entry should be ignored.
         * isAbsolute (bool) - whether or not the input should be interpreted as absolute.
         """
-    def releaseMarquee(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def releaseMarquee(self, *args: Any, **kwargs: Any) -> Any:
         """releaseMarquee(event) -> (top, left, bottom, right)
 
         End the marquee drawing cycle and return the coordinates corresponding to
@@ -3105,14 +3286,14 @@ class MPxContext:
         Returns a tuple consisting of the top, left, bottom, and right corners of the marquee area.
         * event (MEvent) - current event information.
         """
-    def setCursor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setCursor(self, *args: Any, **kwargs: Any) -> Any:
         """setCursor(newCursor) -> self
 
         Set the cursor used by the context to the MCursor that is passed in.
 
         * newCursor (MCursor) - The new cursor.
         """
-    def setHelpString(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setHelpString(self, *args: Any, **kwargs: Any) -> Any:
         """setHelpString(str) -> self
 
         Set the help string to the given MString.
@@ -3120,7 +3301,7 @@ class MPxContext:
 
         * str (string) - The new help string.
         """
-    def setImage(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setImage(self, *args: Any, **kwargs: Any) -> Any:
         """setImage(image, index) -> self
 
         This method is used to set an XPM icon image that is to be
@@ -3132,7 +3313,7 @@ class MPxContext:
         * index (ImageIndex) - the index of the image being set; three image
         representations are permitted: kImage1, kImage2, kImage3.
         """
-    def setTitleString(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setTitleString(self, *args: Any, **kwargs: Any) -> Any:
         """setTitleString(str) -> self
 
         Set the title of the context to the MString that is passed in.
@@ -3141,7 +3322,7 @@ class MPxContext:
 
         * str (string) - The new title string.
         """
-    def stringClassName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def stringClassName(self, *args: Any, **kwargs: Any) -> Any:
         """stringClassName() -> string
 
         This method is called to determine the name that uniquely identifies
@@ -3160,7 +3341,7 @@ class MPxContext:
         the string to 'defaultTool'.  The method returns a string
         that uniquely identifies the context.
         """
-    def toolOffCleanup(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def toolOffCleanup(self, *args: Any, **kwargs: Any) -> Any:
         """toolOffCleanup() -> None
 
         This method is called when the context is deactivated, i.e when
@@ -3168,7 +3349,7 @@ class MPxContext:
         Users can override this method and use it to reset any user
         defined data to a specific state.
         """
-    def toolOnSetup(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def toolOnSetup(self, *args: Any, **kwargs: Any) -> Any:
         """toolOnSetup(event) -> None
 
         This method is called when the context is activated, i.e when
@@ -3181,7 +3362,12 @@ class MPxContext:
         """
 
 class MPxContextCommand:
-    def appendSyntax(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def appendSyntax(self, *args: Any, **kwargs: Any) -> Any:
         """appendSyntax() -> None
 
         This method should be overridden to append syntax
@@ -3191,7 +3377,7 @@ class MPxContextCommand:
         flags as they are reserved for edit and query:
         '-e', '-edit', '-q', '-query'.
         """
-    def doEditFlags(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doEditFlags(self, *args: Any, **kwargs: Any) -> Any:
         """doEditFlags() -> None
 
         This method is called when the command is called in edit mode.
@@ -3203,7 +3389,7 @@ class MPxContextCommand:
         If the command is called with both the edit flag and
         the query flag, then the query flag will be ignored.
         """
-    def doQueryFlags(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doQueryFlags(self, *args: Any, **kwargs: Any) -> Any:
         """doQueryFlags() -> None
 
         This method is called when the command is called in query mode.
@@ -3215,7 +3401,7 @@ class MPxContextCommand:
         If the command is called with both the edit flag and
         the query flag, then the query flag will be ignored.
         """
-    def makeObj(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def makeObj(self, *args: Any, **kwargs: Any) -> Any:
         """makeObj() -> MPxContext
 
         This function is used to instantiate a proxy context.
@@ -3226,19 +3412,24 @@ class MPxContextCommand:
 
         where userContextClass is derived from MPxContext.
         """
-    def parser(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def parser(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the context command's MArgParser object, if it has one."""
-    def setResult(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setResult(self, *args: Any, **kwargs: Any) -> Any:
         """setResult() -> None
 
         Set the value of the result to be returned by the command.  The value can be
         either a boolean, integer, floating point value, or string.
         """
-    def syntax(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def syntax(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the context command's MSyntax object, if it has one."""
 
 class MPxDragAndDropBehavior:
-    def connectAttrToAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def connectAttrToAttr(self, *args: Any, **kwargs: Any) -> Any:
         """connectAttrToAttr(sourcePlug, destinationPlug, force) -> None
 
         This method is called by the defaultNavigation command to connect a source attribute to a destination attribute.
@@ -3249,7 +3440,7 @@ class MPxDragAndDropBehavior:
         * destinationPlug (MPlug) - Destination plug in the connection.
         * force (bool) - Tells whether or not to break any existing connections to the destination attribute.
         """
-    def connectAttrToNode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def connectAttrToNode(self, *args: Any, **kwargs: Any) -> Any:
         """connectAttrToNode(sourcePlug, destinationNode, force) -> None
 
         This method is called by the defaultNavigation command to connect a source attribute to a destination node.
@@ -3260,7 +3451,7 @@ class MPxDragAndDropBehavior:
         * destinationNode (MObject) - Destination node for the connection.
         * force (bool) - Tells whether or not to break any existing connections to the destination node.
         """
-    def connectNodeToAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def connectNodeToAttr(self, *args: Any, **kwargs: Any) -> Any:
         """connectNodeToAttr(sourceNode, destinationPlug, force) -> None
 
         This method is called by the defaultNavigation command to connect a source node to a destination attribute.
@@ -3271,7 +3462,7 @@ class MPxDragAndDropBehavior:
         * destinationPlug (MPlug) - Destination plug for the connection.
         * force (bool) - Tells whether or not to break any existing connections to the destination attribute.
         """
-    def connectNodeToNode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def connectNodeToNode(self, *args: Any, **kwargs: Any) -> Any:
         """connectNodeToNode(sourceNode, destinationNode, force) -> None
 
         This method is called by the defaultNavigation command to connect a source node to a destination node.
@@ -3282,7 +3473,7 @@ class MPxDragAndDropBehavior:
         * destinationNode (MObject) - Destination node for the connection.
         * force (bool) - Tells whether or not to break any existing connections to the destination node.
         """
-    def shouldBeUsedFor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def shouldBeUsedFor(self, *args: Any, **kwargs: Any) -> Any:
         """shouldBeUsedFor(sourceNode, destinationNode, sourcePlug, destinationPlug) -> bool
 
         This method must be overridden in order to use a drag and drop behavior.
@@ -3296,7 +3487,11 @@ class MPxDragAndDropBehavior:
         """
 
 class MPxHardwareShader(MPxNode):
-    def findResource(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def findResource(self, *args: Any, **kwargs: Any) -> Any:
         """findResource(name, shaderPath) -> string
 
         This is a static utility to find the full path to a shader resource (typically a texture). This method will search the list of paths in the MAYA_HW_SHADER_RESOURCE_PATH environment variable, resolving relative paths based on the directory containing the shader.
@@ -3307,7 +3502,7 @@ class MPxHardwareShader(MPxNode):
 
         Return the full path of the resource (e.g. 'C:/shaders/textures/normals.dds').
         """
-    def getAvailableImages(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getAvailableImages(self, *args: Any, **kwargs: Any) -> Any:
         """getAvailableImages(context, uvSetName) -> list of string/None
 
         Maya will call this method to get your shader's list of images which are available for use in the UV texture editor for the UV set specified. Typically, this list will include one entry for each texture using the specified UV set, however, your shader is free to return as many images as you wish (for example, blending between two textures, texture alpha masks, artificially shaded views of bump/normal maps, etc). Your shader's renderImage() method will be used to render the images themselves.
@@ -3318,7 +3513,7 @@ class MPxHardwareShader(MPxNode):
         Returns the names of the images this shader defines which are valid for the uvSetName specified.
         Returns None if method is not implemented : Use the default behaviour.
         """
-    def getHardwareShader(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getHardwareShader(self, *args: Any, **kwargs: Any) -> Any:
         """getHardwareShader(object) -> TODO
 
         This is a static convenience method to be able to get an MPxHardwareShader from an MObject provided by a swatch generator class (Class derived from MSwatchRenderRegister).
@@ -3331,7 +3526,7 @@ class MPxHardwareShader(MPxNode):
     outColorB: MObject = ...
     outColorG: MObject = ...
     outColorR: MObject = ...
-    def profile(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def profile(self, *args: Any, **kwargs: Any) -> Any:
         """profile() -> MRenderProfile
 
         Override this method to specify the renderers your shader supports. If this method is not overridden, Maya will assume your shader supports only Maya's iternal OpenGL based renderer.
@@ -3340,7 +3535,7 @@ class MPxHardwareShader(MPxNode):
 
         Return a reference to the render profile for this Shader. Your shader class should create this once (usually for the whole class) and return the same object each time this method is called.
         """
-    def renderImage(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def renderImage(self, *args: Any, **kwargs: Any) -> Any:
         """renderImage(context, imageName, region, parameters) -> [int, int]/None
         renderImage(context, uiDrawManager, imageName, region, parameters) -> [int, int]/None
 
@@ -3363,7 +3558,7 @@ class MPxHardwareShader(MPxNode):
 
         Returns None if method is not implemented : No rendering will occur.
         """
-    def renderSwatchImage(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def renderSwatchImage(self, *args: Any, **kwargs: Any) -> Any:
         """renderSwatchImage(image) -> self
 
         If the shader specifies to override swatch rendering, then this method must be overridden in order to draw anything into a swatch.
@@ -3383,14 +3578,14 @@ class MPxHardwareShader(MPxNode):
 
         Returns None if method is not implemented : No rendering will occur.
         """
-    def setUniformParameters(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setUniformParameters(self, *args: Any, **kwargs: Any) -> Any:
         """setUniformParameters(parameters, remapCurrentValues=True, dagModifier=None) -> self
 
         Call this method to set the list of uniform parameters this shader uses. Once set, you can use these parameters to access the cached values of shader parameters, including testing when the value has been updated (to minimise the shader state changes). When using this method to manage uniform parameters, Maya will handle the underlyintg attributes, serialization and user interface for you.It is important to call this method whenever the shader parameters are modified (including at load time).This is an optional method - shader implementations are still free to manage uniform (i.e. shader-level) parameters independently if they wish.* parameters (MUniformParameterList) - the list of uniform parameters for this shader
         * remapCurrentValues (bool) - if True (the default), Maya will attempt to initialise the value of new parameters based on any equivalently named parameters that currently exist on the node. Otherwise, the parameters will be setup using default values. Unless you wish to forcibly reset parameter values, the default value of True should be used.
         * dagModifier (MDagModifier) - an optional DG modifier to use when managing the attributes used to represent the geometry parameters on this shader.
         """
-    def setVaryingParameters(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setVaryingParameters(self, *args: Any, **kwargs: Any) -> Any:
         """setVaryingParameters(parameters, remapCurrentValues=True, dagModifier=None) -> self
 
         Call this method to set the list of varying parameters this shader uses. Once set, you can use these parameters directly to access geometry data for surfaces being shaded. When using this method to manage shader varying parameters, there is no need to override populateRequirements or handle the node interface as Maya will handle parameter setup, presentation and configuration for you.
@@ -3403,7 +3598,7 @@ class MPxHardwareShader(MPxNode):
         * remapCurrentValues (bool) - if True (the default), Maya will attempt to initialise the value of new parameters based on any equivalently named parameters that currently exist on the node. Otherwise, the parameters will be setup using default values. Unless you wish to forcibly reset parameter values, the default value of True should be used.
         * dagModifier (MDagModifier) - an optional DG modifier to use when managing the attributes used to represent the geometry parameters on this shader.
         """
-    def transparencyOptions(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def transparencyOptions(self, *args: Any, **kwargs: Any) -> Any:
         """transparencyOptions() -> int
 
         This method returns transparency options for usage as hints for Maya's internal draw during a given rendering pass. Parameters are returned via an integer containing masked out bits. By default the mask is set to 0, meaning that the drawing should be treated as regular opaque object drawing. This will generally mean one call per draw pass.
@@ -3415,7 +3610,11 @@ class MPxHardwareShader(MPxNode):
         """
 
 class MPxHwShaderNode(MPxNode):
-    def bind(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def bind(self, *args: Any, **kwargs: Any) -> Any:
         """bind(request, view) -> self
 
         This method is invoked for hardware rendering to Maya's 3D view.
@@ -3427,14 +3626,14 @@ class MPxHwShaderNode(MPxNode):
         * request (MDrawRequest) - the draw request.
         * view (M3dView) - the view in which to draw.
         """
-    def colorsPerVertex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def colorsPerVertex(self, *args: Any, **kwargs: Any) -> Any:
         """colorsPerVertex() -> int
 
         This method returns the number of color values per vertex that the hw shader node would like to receive from Maya.  Maya will attempt to provide all the color data that the shader would like but it will never provide more data that is actually available in the shape.  The color sets returned by getColorSetNames() will override the number of color sets specified by colorsPerVertex(). If you do not override this method or getColorSetNames(), Maya will provide no colors per vertex.
 
         Returns the number of color values desired
         """
-    def currentPath(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def currentPath(self, *args: Any, **kwargs: Any) -> Any:
         """currentPath() -> MDagPath
 
         This method returns a reference to the current path that the shader is invoked for.
@@ -3462,7 +3661,7 @@ class MPxHwShaderNode(MPxNode):
         Returns an MDagPath. Note that this path can be invalid
         Use MDagPath.isValid() to confirm the validity of the path.
         """
-    def currentShadingEngine(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def currentShadingEngine(self, *args: Any, **kwargs: Any) -> Any:
         """currentShadingEngine() -> MObject
 
         This method returns an MObject to the shading engine that is currently being rendered. This method will only return a valid MObject during the following calls:
@@ -3479,7 +3678,7 @@ class MPxHwShaderNode(MPxNode):
           geometry(), glGeometry()
           unbind(), glUnbind()
         """
-    def dirtyMask(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def dirtyMask(self, *args: Any, **kwargs: Any) -> Any:
         """dirtyMask() -> int
 
         This method returns a "dirty" mask that indicates which geometry items have changed from the last invocation of the plugin to draw. The mask is valid at the time that geometry() or glGeometry() is called and at no other time.
@@ -3501,7 +3700,7 @@ class MPxHwShaderNode(MPxNode):
           kDirtyTexCoordArrays
           kDirtyAll
         """
-    def geometry(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def geometry(self, *args: Any, **kwargs: Any) -> Any:
         """geometry(request, view, prim, writable, indexCount, indexArray, vertexCount, vertexIDs, vertexArray, normalCount, normalArrays, colorCount, colorArrays, texCoordCount, texCoordArrays) -> self
 
         This method is invoked for hardware rendering to Maya's 3D view.
@@ -3540,7 +3739,7 @@ class MPxHwShaderNode(MPxNode):
         * texCoordCount (int) - the number of texture coordinate arrays. Each array contains one set of UV texture coordinates.
         * texCoordArrays (array of buffer - float values) - the arrays of texture coordinate data. The first set of texture coordinate data is pointed to by texCoordArrays[0].  Each array contains vertexCount coordinate values, each of which is 2 floating point values long.  Each individual array is suitable for passing to glTexCoordPointer().
         """
-    def getAvailableImages(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getAvailableImages(self, *args: Any, **kwargs: Any) -> Any:
         """getAvailableImages(uvSetName) -> list of strings/None
 
         Maya will call this method to get your shader's list of images which are available for use in the UV texture editor for the UV set specified. Typically, this list will include one entry for each texture using the specified UV set, however, your shader is free to return as many images as you wish (for example, blending between two textures, texture alpha masks, artificially shaded views of bump/normal maps, etc). Your shader's renderImage() method will be used to render the images themselves.
@@ -3550,7 +3749,7 @@ class MPxHwShaderNode(MPxNode):
         Returns the names of the images this shader defines which are valid for the uvSetName specified.
         Returns None if method is not implemented : Use the default behaviour.
         """
-    def getColorSetNames(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getColorSetNames(self, *args: Any, **kwargs: Any) -> Any:
         """getColorSetNames(names) -> int
 
         This method returns an array of color per vertex set names. Maya will attempt to provide color per vertex data from these maps in the corresponding array element in the colorArrays argument to the geometry method.  For example, if the names[2] is "cpv56" then colorArrays[2] will be the array of values from cpv56, or None if the shape being rendered does not have a color set of that name. Ifthis method is not overridden an empty list of names will be returned,and Maya will use colorsPerVertex() to determine how many color setsto provide.
@@ -3559,14 +3758,14 @@ class MPxHwShaderNode(MPxNode):
 
         Returns the number of elements in the names array.
         """
-    def getHwShaderNode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getHwShaderNode(self, *args: Any, **kwargs: Any) -> Any:
         """getHwShaderNode(object) -> MPxHwShaderNode
 
         This is a static convenience method to be able to get an MPxHwShaderNode from an MObject provided by a swatch generator class (Class derived from MSwatchRenderRegister).
 
         * object (MObject) - The object to examine.
         """
-    def getTexCoordSetNames(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getTexCoordSetNames(self, *args: Any, **kwargs: Any) -> Any:
         """getTexCoordSetNames(names) -> int
 
         This method returns an array of texture coordinate set names. Maya will attempt to provide texture coordinates from these maps in the corresponding array element in the texCoordArrays argument to the geometry method.  For example, if the names[2] is "uvSet3" then texCoordArrays[2] will be the array of values from uvSet3. If this method is not overridden an empty list of names will be returned, and Maya will use texCoordsPerVertex() to determine how many uv sets to provide.
@@ -3575,7 +3774,7 @@ class MPxHwShaderNode(MPxNode):
 
         Returns the number of elements in the names array.
         """
-    def glBind(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def glBind(self, *args: Any, **kwargs: Any) -> Any:
         """glBind(shapePath) -> self
 
         This method should only be overridden for hardware rendering.
@@ -3586,7 +3785,7 @@ class MPxHwShaderNode(MPxNode):
 
         * shapePath (MDagPath) - Path to the surface being drawn.
         """
-    def glGeometry(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def glGeometry(self, *args: Any, **kwargs: Any) -> Any:
         """glGeometry(shapePath, prim, writable, indexCount, indexArray, vertexCount, vertexIDs, vertexArray, normalCount, normalArrays, colorCount, colorArrays, texCoordCount, texCoordArrays) -> self
 
         This method should only be overridden for hardware rendering.
@@ -3606,7 +3805,7 @@ class MPxHwShaderNode(MPxNode):
         * shapePath (MDagPath) - Path to the surface being drawn.
         See geometry() description for detail on the other parameters.
         """
-    def glUnbind(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def glUnbind(self, *args: Any, **kwargs: Any) -> Any:
         """glUnbind(shapePath) -> self
 
         This method should only be overridden for hardware rendering.
@@ -3619,7 +3818,7 @@ class MPxHwShaderNode(MPxNode):
 
         * shapePath (MDagPath) - Path to the surface being drawn.
         """
-    def hasTransparency(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasTransparency(self, *args: Any, **kwargs: Any) -> Any:
         """hasTransparency() -> bool
 
         This method returns a boolean value that indicates whether the object will be drawn transparently or not.  Transparent objects must be drawn after all the opaque objects in the scene or they will not display correctly.  Maya uses the return value to determine when it can draw this shape.
@@ -3630,14 +3829,14 @@ class MPxHwShaderNode(MPxNode):
 
         Returns True if the object will be transparent or False if it will not.
         """
-    def invertTexCoords(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def invertTexCoords(self, *args: Any, **kwargs: Any) -> Any:
         """invertTexCoords() -> bool
 
         Specifies whether this shader requires inverted texture coordinates. (i.e. where the top-left hand corner of UV space is (0,0) instead of the bottom-left corner).
 
         By default, this method will return False to ensure compatibility with existing shader code.
         """
-    def normalsPerVertex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def normalsPerVertex(self, *args: Any, **kwargs: Any) -> Any:
         """normalsPerVertex() -> int
 
         Specifies how many normals per vertex the HW shader would like Maya to provide.  This can range from 0 to 3.  The first normal is the surface normal.  The second "normal" is the primary tangent (generally the "u" direction).  The third "normal" is the secondary tangent or the binormal (generally the "v" direction). Together, the normal, tangent and binormal form an orthogonal basis frequently named "tangent space basis".
@@ -3670,14 +3869,14 @@ class MPxHwShaderNode(MPxNode):
     outTransparencyB: MObject = ...
     outTransparencyG: MObject = ...
     outTransparencyR: MObject = ...
-    def provideVertexIDs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def provideVertexIDs(self, *args: Any, **kwargs: Any) -> Any:
         """provideVertexIDs() -> bool
 
         This method returns a boolean value that indicates whether a map of the vertex IDs will be provided to the geometry method.
 
         Returns True if vertex IDs should be provided to the geometry method.
         """
-    def renderImage(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def renderImage(self, *args: Any, **kwargs: Any) -> Any:
         """renderImage(imageName, region, parameters) -> [int, int]/None
         renderImage(uiDrawManager, imageName, region, parameters) -> [int, int]/None
 
@@ -3699,7 +3898,7 @@ class MPxHwShaderNode(MPxNode):
 
         Returns None if method is not implemented : No rendering will occur.
         """
-    def renderSwatchImage(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def renderSwatchImage(self, *args: Any, **kwargs: Any) -> Any:
         """renderSwatchImage(image) -> self/None
 
         If the shader specifies to override swatch rendering, then this method must be overridden in order to draw anything into a swatch.
@@ -3719,7 +3918,7 @@ class MPxHwShaderNode(MPxNode):
 
         Returns None if method is not implemented : No rendering will occur.
         """
-    def supportsBatching(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def supportsBatching(self, *args: Any, **kwargs: Any) -> Any:
         """supportsBatching() -> bool
 
         Specifies whether or not this shader supports batched rendering of shapes.
@@ -3730,7 +3929,7 @@ class MPxHwShaderNode(MPxNode):
 
         By default, this method will return False to ensure compatibility with existing shader code.
         """
-    def texCoordsPerVertex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def texCoordsPerVertex(self, *args: Any, **kwargs: Any) -> Any:
         """texCoordsPerVertex() -> int
 
         This method returns the number of texture coordinate values per vertex that the hw shader node would like to receive from Maya. Maya will attempt to provide all the texture coordinate data that the shader would like but it will never provide more data than is actually available in the shape.  The uv sets returned by getTexCoordSetNames() will override the number of uv sets specified by texCoordsPerVertex(). If you do not override this method or getTexCoordSetNames(), Maya will provide no texture coordinates per vertex.
@@ -3739,7 +3938,7 @@ class MPxHwShaderNode(MPxNode):
 
         Returns the number of texture coordinate values desired
         """
-    def transparencyOptions(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def transparencyOptions(self, *args: Any, **kwargs: Any) -> Any:
         """transparencyOptions() -> int
 
         This method returns transparency options for usage as hints for Maya's internal draw during a given rendering pass. Parameters are returned via an integer containing masked out bits. By default the mask is set to 0, meaning that the drawing should be treated as regular opaque object drawing. This will generally mean one call per draw pass.
@@ -3755,7 +3954,7 @@ class MPxHwShaderNode(MPxNode):
 
         Retuns an integer containing the appropriate options set via masks.
         """
-    def unbind(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def unbind(self, *args: Any, **kwargs: Any) -> Any:
         """unbind(request, view) -> self
 
         This method is invoked for hardware rendering to Maya's 3D view.
@@ -3771,7 +3970,11 @@ class MPxHwShaderNode(MPxNode):
         """
 
 class MPxLocatorNode(MPxNode):
-    def boundingBox(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def boundingBox(self, *args: Any, **kwargs: Any) -> Any:
         """boundingBox() -> MBoundingBox
 
         This method should be overridden to return a bounding box for the locator.
@@ -3781,7 +3984,7 @@ class MPxLocatorNode(MPxNode):
     boundingBoxCenterY: MObject = ...
     boundingBoxCenterZ: MObject = ...
     center: MObject = ...
-    def closestPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def closestPoint(self, *args: Any, **kwargs: Any) -> Any:
         """closestPoint(rayPoint, rayDir) -> MPoint
 
         Returns the point on the locator, in the locator's local space, which is closest along the specified ray.
@@ -3793,7 +3996,7 @@ class MPxLocatorNode(MPxNode):
         * rayPoint (MPoint) - The base point defining the ray in space
         * rayDir (MVector) - The ray direction in space
         """
-    def color(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def color(self, *args: Any, **kwargs: Any) -> Any:
         """color(status) -> int
 
         This method returns the index of the color that is the default draw color for the given display status.  The index should be used with the methods of M3dView.  The value is not an index into the OpenGL color table.
@@ -3802,14 +4005,14 @@ class MPxLocatorNode(MPxNode):
 
         * displayStatus (int) - display status. See M3dView.displayStatus() for a list of valid status.
         """
-    def colorRGB(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def colorRGB(self, *args: Any, **kwargs: Any) -> Any:
         """colorRGB(status) -> MColor
 
         This method returns the RGB values of the default draw color for the given display status.
 
         * displayStatus (int) - display status. See M3dView.displayStatus() for a list of valid status.
         """
-    def draw(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def draw(self, *args: Any, **kwargs: Any) -> Any:
         """draw(view, path, style, status) -> self
 
         Overriding this method allows the drawing of custom geometry using standard OpenGL calls.  The OpenGL state should be left in the same state that it was in previously.  The OpenGL routine glPushAttrib may be used to make this easier.
@@ -3830,21 +4033,21 @@ class MPxLocatorNode(MPxNode):
         * style (int) - style to draw object in. See M3dView.displayStyle() for a list of valid styles.
         * status (int) - selection status of object. See M3dView.displayStatus() for a list of valid status.
         """
-    def drawLast(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def drawLast(self, *args: Any, **kwargs: Any) -> Any:
         """drawLast() -> bool
 
         Indicates that this locator should be the last item draw in a given refresh cycle.  Objects drawn out-of-order will not preserve the proper transparency sorting.  Conflicts among multiple objects with the drawLast indicator set to TRUE will be resolved by their order in the Outliner, where they will be drawn top-to-bottom.
 
         The default return value is True.
         """
-    def excludeAsLocator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def excludeAsLocator(self, *args: Any, **kwargs: Any) -> Any:
         """excludeAsLocator() -> bool
 
         When the modelPanel is set to not draw locators, returing True will also not draw the custom locator. If False is returned, the custom locator will also be drawn.
 
         The default return value is True.
         """
-    def getShapeSelectionMask(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getShapeSelectionMask(self, *args: Any, **kwargs: Any) -> Any:
         """getShapeSelectionMask() -> MSelectionMask
 
         This routine can be overridden to provide information aboutthe selection mask of the locator. By default the selection maskfor locators is returned.
@@ -3852,13 +4055,13 @@ class MPxLocatorNode(MPxNode):
     instObjGroups: MObject = ...
     intermediateObject: MObject = ...
     inverseMatrix: MObject = ...
-    def isBounded(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isBounded(self, *args: Any, **kwargs: Any) -> Any:
         """isBounded() -> bool
 
         This method should be overridden to return True if the user supplies a bounding box routine.  Supplying a bounding box routine makes refresh and selection more efficient.
         """
     isTemplated: MObject = ...
-    def isTransparent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isTransparent(self, *args: Any, **kwargs: Any) -> Any:
         """isTransparent() -> bool
 
         Indicates that this locator uses transparency during ::draw method calls. Objects with transparency must be drawn in a special queue, i.e. after all opaque objects are drawn.
@@ -3895,7 +4098,7 @@ class MPxLocatorNode(MPxNode):
     parentInverseMatrix: MObject = ...
     parentMatrix: MObject = ...
     underWorldObject: MObject = ...
-    def useClosestPointForSelection(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def useClosestPointForSelection(self, *args: Any, **kwargs: Any) -> Any:
         """useClosestPointForSelection() -> bool
 
         Determines whether Maya should call closestPoint() when doing single selection.
@@ -3914,7 +4117,11 @@ class MPxLocatorNode(MPxNode):
     worldPositionZ: MObject = ...
 
 class MPxManipContainer(MPxNode):
-    def addCircleSweepManip(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addCircleSweepManip(self, *args: Any, **kwargs: Any) -> Any:
         """addCircleSweepManip(manipName, angleName) -> MDagPath
 
         This method creates a CircleSweepManip and adds it to
@@ -3925,7 +4132,7 @@ class MPxManipContainer(MPxNode):
 
         Returns the new CircleSweepManip
         """
-    def addCurveSegmentManip(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addCurveSegmentManip(self, *args: Any, **kwargs: Any) -> Any:
         """addCurveSegmentManip(manipName, startParamName, endParamName ) -> MDagPath
 
         This method creates a CurveSegmentManip and adds it to
@@ -3937,7 +4144,7 @@ class MPxManipContainer(MPxNode):
 
         Returns the new CurveSegmentManip
         """
-    def addDirectionManip(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addDirectionManip(self, *args: Any, **kwargs: Any) -> Any:
         """addDirectionManip(manipName, directionName) -> MDagPath
 
         This method creates a DirectionManip and adds it to
@@ -3948,7 +4155,7 @@ class MPxManipContainer(MPxNode):
 
         Returns the new DirectionManip
         """
-    def addDiscManip(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addDiscManip(self, *args: Any, **kwargs: Any) -> Any:
         """addDiscManip(manipName, angleName) -> MDagPath
 
         This method creates a DiscManip and adds it to
@@ -3959,7 +4166,7 @@ class MPxManipContainer(MPxNode):
 
         Returns the new DiscManip
         """
-    def addDistanceManip(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addDistanceManip(self, *args: Any, **kwargs: Any) -> Any:
         """addDistanceManip(manipName, distanceName) -> MDagPath
 
         This method creates a DistanceManip and adds it to
@@ -3970,7 +4177,7 @@ class MPxManipContainer(MPxNode):
 
         Returns the new DistanceManip
         """
-    def addFreePointTriadManip(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addFreePointTriadManip(self, *args: Any, **kwargs: Any) -> Any:
         """addFreePointTriadManip(manipName, pointName) -> MDagPath
 
         This method creates a FreePointTriadManip and adds it to
@@ -3981,7 +4188,7 @@ class MPxManipContainer(MPxNode):
 
         Returns the new FreePointTriadManip
         """
-    def addMPxManipulatorNode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addMPxManipulatorNode(self, *args: Any, **kwargs: Any) -> Any:
         """addMPxManipulatorNode(manipTypeName, manipName, proxyManip) -> None
 
         This method creates a custom MPxManipulatorNode and adds it to the
@@ -3991,7 +4198,7 @@ class MPxManipContainer(MPxNode):
         * manipName (string) name of the manip
         Returns a pointer to the new manipulator
         """
-    def addManipToPlugConversion(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addManipToPlugConversion(self, *args: Any, **kwargs: Any) -> Any:
         """addManipToPlugConversion(plug) -> unsigned int
 
         This method adds a manipulator to plug converter for the specified
@@ -4008,7 +4215,7 @@ class MPxManipContainer(MPxNode):
         Returns the index used to identify the plug inside the
         manipToPlugConversion() method.
         """
-    def addPlugToInViewEditor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addPlugToInViewEditor(self, *args: Any, **kwargs: Any) -> Any:
         """addPlugToInViewEditor(plug)
 
         Adds a plug to the In-View Editor.
@@ -4020,7 +4227,7 @@ class MPxManipContainer(MPxNode):
 
         * plug (MPlug) - The plug that the slider should control
         """
-    def addPlugToManipConversion(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addPlugToManipConversion(self, *args: Any, **kwargs: Any) -> Any:
         """addPlugToManipConversion(manipIndex)
 
         This method adds a plug to manipulator converter for the specified
@@ -4038,7 +4245,7 @@ class MPxManipContainer(MPxNode):
         appropriate method of the manipulator's functionset (e.g.
         MFnDistanceManip::startPointIndex).
         """
-    def addPointOnCurveManip(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addPointOnCurveManip(self, *args: Any, **kwargs: Any) -> Any:
         """addPointOnCurveManip(manipName, paramName) -> MDagPath
 
         This method creates a PointOnCurveManip and adds it to
@@ -4049,7 +4256,7 @@ class MPxManipContainer(MPxNode):
 
         Returns the new PointOnCurveManip
         """
-    def addPointOnSurfaceManip(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addPointOnSurfaceManip(self, *args: Any, **kwargs: Any) -> Any:
         """addPointOnSurfaceManip(manipName, paramName) -> MDagPath
 
         This method creates a PointOnSurfaceManip and adds it to
@@ -4060,7 +4267,7 @@ class MPxManipContainer(MPxNode):
 
         Returns the new PointOnSurfaceManip
         """
-    def addRotateManip(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addRotateManip(self, *args: Any, **kwargs: Any) -> Any:
         """addRotateManip(manipName, rotationName) -> MDagPath
 
         This method creates a RotateManip and adds it to
@@ -4071,7 +4278,7 @@ class MPxManipContainer(MPxNode):
 
         Returns the dag path to the new rotate manipulator
         """
-    def addScaleManip(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addScaleManip(self, *args: Any, **kwargs: Any) -> Any:
         """addScaleManip(manipName, scaleName) -> MDagPath
 
         This method creates a ScaleManip and adds it to
@@ -4082,7 +4289,7 @@ class MPxManipContainer(MPxNode):
 
         Returns the dag path to the new scale manipulator
         """
-    def addStateManip(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addStateManip(self, *args: Any, **kwargs: Any) -> Any:
         """addStateManip(manipName, stateName) -> MDagPath
 
         This method creates a StateManip and adds it to
@@ -4093,7 +4300,7 @@ class MPxManipContainer(MPxNode):
 
         Returns the new StateManip
         """
-    def addToManipConnectTable(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addToManipConnectTable(self, *args: Any, **kwargs: Any) -> Any:
         """addToManipConnectTable( typeId )
 
         This method adds the user defined node as an entry in the
@@ -4104,7 +4311,7 @@ class MPxManipContainer(MPxNode):
 
         * mid (MTypeId) - Id of the user defined node
         """
-    def addToggleManip(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addToggleManip(self, *args: Any, **kwargs: Any) -> Any:
         """addToggleManip(manipName, toggleName) -> MDagPath
 
         This method creates a ToggleManip and adds it to
@@ -4115,7 +4322,7 @@ class MPxManipContainer(MPxNode):
 
         Returns the new ToggleManip
         """
-    def connectToDependNode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def connectToDependNode(self, *args: Any, **kwargs: Any) -> Any:
         """connectToDependNode(node) -> None
 
         This method connects the manipulator to the dependency node. This
@@ -4123,14 +4330,14 @@ class MPxManipContainer(MPxNode):
 
         * node (MObject) - the node to which the manipulator should be connected
         """
-    def createChildren(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def createChildren(self, *args: Any, **kwargs: Any) -> Any:
         """createChildren() -> None
 
         This method should be overridden in user defined manipulators.
         This method is called after the user node derived from
         MPxManipContainer is set up.
         """
-    def doDrag(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doDrag(self, *args: Any, **kwargs: Any) -> Any:
         """doDrag() -> None
 
         This method gets called when the manipulator receives a mouse drag event.
@@ -4138,7 +4345,7 @@ class MPxManipContainer(MPxNode):
         Returns None if successful.  Otherwise, returns MStatus.kUnknownParameter
         to allow Maya to further process the event.
         """
-    def doPress(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doPress(self, *args: Any, **kwargs: Any) -> Any:
         """doPress() -> None
 
         This method gets called when the manipulator receives a mouse down event.
@@ -4146,7 +4353,7 @@ class MPxManipContainer(MPxNode):
         Returns None if successful.  Otherwise, returns MStatus.kUnknownParameter
         to allow Maya to further process the event.
         """
-    def doRelease(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doRelease(self, *args: Any, **kwargs: Any) -> Any:
         """doRelease() -> None
 
         This method gets called when the manipulator receives a mouse release
@@ -4155,7 +4362,7 @@ class MPxManipContainer(MPxNode):
         Returns None if successful.  Otherwise, returns MStatus.kUnknownParameter
         to allow Maya to further process the event.
         """
-    def draw(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def draw(self, *args: Any, **kwargs: Any) -> Any:
         """draw(view, path, style, status) -> None
 
         This method can be overloaded to customize the drawing of the
@@ -4167,7 +4374,7 @@ class MPxManipContainer(MPxNode):
         * style (M3dView.DisplayStyle) - the display appearance
         * status (M3dView.DisplayStatus) - the display status
         """
-    def drawUI(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def drawUI(self, *args: Any, **kwargs: Any) -> Any:
         """drawUI(drawManager, frameContext) -> None
 
         This is the primary method for doing custom drawing for the
@@ -4189,7 +4396,7 @@ class MPxManipContainer(MPxNode):
                                          drawing some simple UI
         * frameContext (MFrameContext) - Frame level context information
         """
-    def finishAddingManips(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def finishAddingManips(self, *args: Any, **kwargs: Any) -> Any:
         """finishAddingManips()
 
         This method should be called from the user-defined manipulator
@@ -4198,7 +4405,7 @@ class MPxManipContainer(MPxNode):
         cannot be initialized until all the connections from the manip
         values to the plug values have been specified.
         """
-    def getConverterManipDoubleValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getConverterManipDoubleValue(self, *args: Any, **kwargs: Any) -> Any:
         """getConverterManipDoubleValue() -> double
 
         This method retrieves the value of a converterManipValue of type
@@ -4206,7 +4413,7 @@ class MPxManipContainer(MPxNode):
 
         * manipIndex (unsigned int) - The index of the value
         """
-    def getConverterManipMEulerRotationValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getConverterManipMEulerRotationValue(self, *args: Any, **kwargs: Any) -> Any:
         """getConverterManipMEulerRotationValue() -> MEulereRotation
 
         This method retrieves the value of a converterManipValue of type
@@ -4214,7 +4421,7 @@ class MPxManipContainer(MPxNode):
 
         * manipIndex (unsigned int) - The index of the value
         """
-    def getConverterManipMMatrixValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getConverterManipMMatrixValue(self, *args: Any, **kwargs: Any) -> Any:
         """getConverterManipMMatrixValue() -> MMatrix
 
         This method retrieves the value of a converterManipValue of type
@@ -4222,7 +4429,7 @@ class MPxManipContainer(MPxNode):
 
         * manipIndex (unsigned int) - The index of the value
         """
-    def getConverterManipMPointValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getConverterManipMPointValue(self, *args: Any, **kwargs: Any) -> Any:
         """getConverterManipMPointValue() -> MPoint
 
         This method retrieves the value of a converterManipValue of type
@@ -4230,7 +4437,7 @@ class MPxManipContainer(MPxNode):
 
         * manipIndex (unsigned int) - The index of the value
         """
-    def getConverterManipMTransformationMatrixValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getConverterManipMTransformationMatrixValue(self, *args: Any, **kwargs: Any) -> Any:
         """getConverterManipMTransformationMatrixValue() -> MTransformationMatrix
 
         This method retrieves the value of a converterManipValue of type
@@ -4238,7 +4445,7 @@ class MPxManipContainer(MPxNode):
 
         * manipIndex (unsigned int) - The index of the value
         """
-    def getConverterManipMVectorValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getConverterManipMVectorValue(self, *args: Any, **kwargs: Any) -> Any:
         """getConverterManipMVectorValue() -> MVector
 
         This method retrieves the value of a converterManipValue of type
@@ -4246,7 +4453,7 @@ class MPxManipContainer(MPxNode):
 
         * manipIndex (unsigned int) - The index of the value
         """
-    def getConverterManipUIntValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getConverterManipUIntValue(self, *args: Any, **kwargs: Any) -> Any:
         """getConverterManipUIntValue() -> unsigned int
 
         This method retrieves the value of a converterManipValue of type
@@ -4254,7 +4461,7 @@ class MPxManipContainer(MPxNode):
 
         * manipIndex (unsigned int) - The index of the value
         """
-    def getConverterManipValues(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getConverterManipValues(self, *args: Any, **kwargs: Any) -> Any:
         """getConverterManipValues() -> [double,double]
 
         This method retrieves the value of a converterManipValue of type
@@ -4262,7 +4469,7 @@ class MPxManipContainer(MPxNode):
 
         * manipIndex (unsigned int) - The index of the value
         """
-    def getConverterPlugDoubleValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getConverterPlugDoubleValue(self, *args: Any, **kwargs: Any) -> Any:
         """getConverterPlugDoubleValue() -> double
 
         This method retrieves the value of a converterPlugValue of type
@@ -4270,7 +4477,7 @@ class MPxManipContainer(MPxNode):
 
         * plugIndex (unsigned int) - The index of the value
         """
-    def getConverterPlugMEulerRotationValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getConverterPlugMEulerRotationValue(self, *args: Any, **kwargs: Any) -> Any:
         """getConverterPlugMEulerRotationValue() -> MEulerRotation
 
         This method retrieves the value of a converterPlugValue of type
@@ -4278,7 +4485,7 @@ class MPxManipContainer(MPxNode):
 
         * plugIndex (unsigned int) - The index of the value
         """
-    def getConverterPlugMMatrixValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getConverterPlugMMatrixValue(self, *args: Any, **kwargs: Any) -> Any:
         """getConverterPlugMMatrixValue() -> MMatrix
 
         This method retrieves the value of a converterPlugValue of type
@@ -4286,7 +4493,7 @@ class MPxManipContainer(MPxNode):
 
         * plugIndex (unsigned int) - The index of the value
         """
-    def getConverterPlugMPointValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getConverterPlugMPointValue(self, *args: Any, **kwargs: Any) -> Any:
         """getConverterPlugMPointValue() -> MPoint
 
         This method retrieves the value of a converterPlugValue of type
@@ -4294,7 +4501,7 @@ class MPxManipContainer(MPxNode):
 
         * plugIndex (unsigned int) - The index of the value
         """
-    def getConverterPlugMVectorValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getConverterPlugMVectorValue(self, *args: Any, **kwargs: Any) -> Any:
         """getConverterPlugMVectorValue() -> MVector
 
         This method retrieves the value of a converterPlugValue of type
@@ -4302,7 +4509,7 @@ class MPxManipContainer(MPxNode):
 
         * plugIndex (unsigned int) - The index of the value
         """
-    def getConverterPlugValues(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getConverterPlugValues(self, *args: Any, **kwargs: Any) -> Any:
         """getConverterPlugValues() -> [double, double]
 
         This method retrieves the value of a converterPlugValue of type
@@ -4310,7 +4517,7 @@ class MPxManipContainer(MPxNode):
 
         * plugIndex (unsigned int) - The index of the value
         """
-    def initialize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def initialize(self, *args: Any, **kwargs: Any) -> Any:
         """initialize() -> None
 
         This method initializes the manipulator,
@@ -4319,7 +4526,7 @@ class MPxManipContainer(MPxNode):
         Return: Status of the operation.
         The base class always returns MS::kSuccess.
         """
-    def isManipActive(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isManipActive(self, *args: Any, **kwargs: Any) -> Any:
         """isManipActive(manipName, stateName) -> MDagPath
 
         This method returns if custom manip is active & gets the
@@ -4328,7 +4535,7 @@ class MPxManipContainer(MPxNode):
         * manipType (MFn Type constant) - The type of the custom manip
         * manipObject (MObject) - Manipulator object
         """
-    def manipToPlugConversion(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def manipToPlugConversion(self, *args: Any, **kwargs: Any) -> Any:
         """manipToPlugConversion(manipIndex) -> MManipData
 
         This virtual method calculates and returns the requested manipulator
@@ -4347,7 +4554,7 @@ class MPxManipContainer(MPxNode):
         return
         New manipulator value.
         """
-    def newManipulator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def newManipulator(self, *args: Any, **kwargs: Any) -> Any:
         """newManipulator(manipName) -> (MPxManipContainer, MObject)
 
         This static function is used to create a user-defined manipulator.
@@ -4365,7 +4572,7 @@ class MPxManipContainer(MPxNode):
 
         * manipName (string) - manipulator name
         """
-    def plugToManipConversion(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def plugToManipConversion(self, *args: Any, **kwargs: Any) -> Any:
         """plugToManipConversion(manipIndex) -> MManipData
 
         This virtual method calculates and returns the requested
@@ -4381,7 +4588,7 @@ class MPxManipContainer(MPxNode):
         return
         New plug value.
         """
-    def preDrawUI(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def preDrawUI(self, *args: Any, **kwargs: Any) -> Any:
         """preDrawUI(view) -> None
 
         This function is used to setup some drawing data for drawing the
@@ -4399,7 +4606,7 @@ class MPxManipContainer(MPxNode):
 
         * view (M3dView) * The view in which to draw
         """
-    def removeFromManipConnectTable(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeFromManipConnectTable(self, *args: Any, **kwargs: Any) -> Any:
         """removeFromManipConnectTable( typeId )
 
         This method adds the user defined node as an entry in the
@@ -4412,7 +4619,11 @@ class MPxManipContainer(MPxNode):
         """
 
 class MPxManipulatorNode(MPxNode):
-    def addDependentPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addDependentPlug(self, *args: Any, **kwargs: Any) -> Any:
         """addDependentPlug(plug) -> None
 
         This method adds the plug to the list of those to be keyframed.
@@ -4425,7 +4636,7 @@ class MPxManipulatorNode(MPxNode):
 
         * plug (MPlug) - the plug to keyframe when using this manipulator
         """
-    def addDoubleValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addDoubleValue(self, *args: Any, **kwargs: Any) -> Any:
         """addDoubleValue(valueName, defaultValue) -> int
 
         Manipulators which call connectPlugToValue() must first create
@@ -4436,7 +4647,7 @@ class MPxManipulatorNode(MPxNode):
         * valueName (string) - Name of the value.
         * defaultValue (float) - Default value.
         """
-    def addPointValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addPointValue(self, *args: Any, **kwargs: Any) -> Any:
         """addPointValue(valueName, defaultValue) -> int
 
         Manipulators which call connectPlugToValue() must first create
@@ -4447,7 +4658,7 @@ class MPxManipulatorNode(MPxNode):
         * valueName (string) - Name of the value.
         * defaultValue (MPoint) - Default value.
         """
-    def addVectorValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addVectorValue(self, *args: Any, **kwargs: Any) -> Any:
         """addVectorValue(valueName, defaultValue) -> int
 
         Manipulators which call connectPlugToValue() must first create
@@ -4458,7 +4669,7 @@ class MPxManipulatorNode(MPxNode):
         * valueName (string) - Name of the value.
         * defaultValue (MVector) - Default value.
         """
-    def colorAndName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def colorAndName(self, *args: Any, **kwargs: Any) -> Any:
         """colorAndName(view, glName, glNameIsPickable, colorIndex) -> None
 
         This method is used to set the color of the GL component that is
@@ -4471,7 +4682,7 @@ class MPxManipulatorNode(MPxNode):
         * colorIndex (half) - Color to use, as provided by one of the *Color()
                               methods in this class.
         """
-    def connectPlugToValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def connectPlugToValue(self, *args: Any, **kwargs: Any) -> Any:
         """connectPlugToValue(plug, valueIndex) -> int
 
         This method is called in the connectToDependNode() virtual if
@@ -4484,7 +4695,7 @@ class MPxManipulatorNode(MPxNode):
         * plug (MPlug) - the plug to connect the value to
         * valueIndex (int) - the index of the value. index is set by add*Value() method
         """
-    def connectToDependNode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def connectToDependNode(self, *args: Any, **kwargs: Any) -> Any:
         """connectToDependNode(node) -> None
 
         This method connects the manipulator to the dependency node. This
@@ -4492,25 +4703,25 @@ class MPxManipulatorNode(MPxNode):
 
         * node (MObject) - the node to which the manipulator should be connected
         """
-    def dependentPlugsReset(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def dependentPlugsReset(self, *args: Any, **kwargs: Any) -> Any:
         """dependentPlugsReset() -> None
 
         This method resets the list of dependent plugs for this manipulator.
         Call this method prior to adding plugs via addDependentPlug() such as
         from your doPress() method.
         """
-    def deregisterForMouseMove(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deregisterForMouseMove(self, *args: Any, **kwargs: Any) -> Any:
         """deregisterForMouseMove() -> None
 
         This method deregisters this manipulator from receiving
         mouse move events.
         """
-    def dimmedColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def dimmedColor(self, *args: Any, **kwargs: Any) -> Any:
         """dimmedColor() -> half
 
         This method returns the color index for a dimmed or unselectable component.
         """
-    def doDrag(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doDrag(self, *args: Any, **kwargs: Any) -> Any:
         """doDrag(view) -> None
 
         This method gets called when the manipulator receives a mouse drag event.
@@ -4520,7 +4731,7 @@ class MPxManipulatorNode(MPxNode):
 
         * view (M3dView) - the view in which to draw
         """
-    def doMove(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doMove(self, *args: Any, **kwargs: Any) -> Any:
         """doMove(view, refresh) -> None
 
         This method gets called when the manipulator receives a mouse move event,
@@ -4534,7 +4745,7 @@ class MPxManipulatorNode(MPxNode):
         * view (M3dView) - the view in which to draw
         * refresh (bool) - if true, refresh the view on this event. Default is false.
         """
-    def doPress(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doPress(self, *args: Any, **kwargs: Any) -> Any:
         """doPress(view) -> None
 
         This method gets called when the manipulator receives a mouse down event.
@@ -4544,7 +4755,7 @@ class MPxManipulatorNode(MPxNode):
 
         * view (M3dView) - the view in which to draw
         """
-    def doRelease(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doRelease(self, *args: Any, **kwargs: Any) -> Any:
         """doRelease(view) -> None
 
         This method gets called when the manipulator receives a mouse release event.
@@ -4554,7 +4765,7 @@ class MPxManipulatorNode(MPxNode):
 
         * view (M3dView) - the view in which to draw
         """
-    def draw(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def draw(self, *args: Any, **kwargs: Any) -> Any:
         """draw(view, path, style, status) -> None
 
         This method is overloaded to draw the manipulators. Selection
@@ -4566,7 +4777,7 @@ class MPxManipulatorNode(MPxNode):
         * style (M3dView.DisplayStyle) - the display appearance
         * status (M3dView.DisplayStatus) - the display status
         """
-    def drawUI(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def drawUI(self, *args: Any, **kwargs: Any) -> Any:
         """drawUI(drawManager, frameContext) -> None
 
         This is the primary method for drawing the manipulator in Viewport 2.0.
@@ -4582,7 +4793,7 @@ class MPxManipulatorNode(MPxNode):
         * drawManager (MUIDrawManager) - The MUIDrawManager used to draw some simple UI
         * frameContext (MFrameContext) - Frame level context information
         """
-    def finishAddingManips(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def finishAddingManips(self, *args: Any, **kwargs: Any) -> Any:
         """finishAddingManips() -> None
 
         This method should be called from the user-defined manipulator
@@ -4591,7 +4802,7 @@ class MPxManipulatorNode(MPxNode):
         cannot be initialized until all the connections from the manip
         values to the plug values have been specified.
         """
-    def getDoubleValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getDoubleValue(self, *args: Any, **kwargs: Any) -> Any:
         """getDoubleValue(valueIndex, previousValue) -> float
 
         This method is used for getting a floating point value associated with the manipulator.
@@ -4601,7 +4812,7 @@ class MPxManipulatorNode(MPxNode):
         * valueIndex (int) - the index of the value to be retrieved
         * previousValue (bool) - if true, get the previous value. if false, get the current value
         """
-    def getPointValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPointValue(self, *args: Any, **kwargs: Any) -> Any:
         """getPointValue(valueIndex, previousValue) -> MPoint
 
         This method is used for getting an MPoint value associated with the manipulator.
@@ -4611,7 +4822,7 @@ class MPxManipulatorNode(MPxNode):
         * valueIndex (int) - the index of the value to be retrieved
         * previousValue (bool) - if true, get the previous value. if false, get the current value
         """
-    def getVectorValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getVectorValue(self, *args: Any, **kwargs: Any) -> Any:
         """getVectorValue(valueIndex, previousValue) -> float
 
         This method is used for getting an MVector value associated with the manipulator.
@@ -4621,7 +4832,7 @@ class MPxManipulatorNode(MPxNode):
         * valueIndex (int) - the index of the value to be retrieved
         * previousValue (bool) - if true, get the previous value. if false, get the current value
         """
-    def glActiveName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def glActiveName(self, *args: Any, **kwargs: Any) -> Any:
         """glActiveName() -> MGLuint
 
         This method returns the unsigned int value which
@@ -4629,7 +4840,7 @@ class MPxManipulatorNode(MPxNode):
 
         Returns the active handle name.
         """
-    def glFirstHandle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def glFirstHandle(self, *args: Any, **kwargs: Any) -> Any:
         """glFirstHandle() -> MGLuint
 
         This method is used to find the unsigned int value that should
@@ -4637,27 +4848,27 @@ class MPxManipulatorNode(MPxNode):
 
         Returns the first handle name.
         """
-    def labelBackgroundColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def labelBackgroundColor(self, *args: Any, **kwargs: Any) -> Any:
         """labelBackgroundColor() -> half
 
         This method returns the color index of a label background.
         """
-    def labelColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def labelColor(self, *args: Any, **kwargs: Any) -> Any:
         """labelColor() -> half
 
         This method returns the color index of a label.
         """
-    def lineColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def lineColor(self, *args: Any, **kwargs: Any) -> Any:
         """lineColor() -> half
 
         This method returns the color index of a line
         """
-    def mainColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def mainColor(self, *args: Any, **kwargs: Any) -> Any:
         """mainColor() -> half
 
         This method returns the main color index.
         """
-    def mouseDown(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def mouseDown(self, *args: Any, **kwargs: Any) -> Any:
         """mouseDown() -> (half, half)
 
         This method returns the mouse down position within
@@ -4665,7 +4876,7 @@ class MPxManipulatorNode(MPxNode):
 
         Returns a tuple consisting of the x and y port coodinates.
         """
-    def mousePosition(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def mousePosition(self, *args: Any, **kwargs: Any) -> Any:
         """mousePosition() -> (half, half)
 
         This method returns the current mouse position within
@@ -4673,7 +4884,7 @@ class MPxManipulatorNode(MPxNode):
 
         Returns a tuple consisting of the x and y port coodinates.
         """
-    def mouseRay(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def mouseRay(self, *args: Any, **kwargs: Any) -> Any:
         """mouseRay() -> (MPoint, MVector)
 
         This method returns the location of the mouse within
@@ -4683,7 +4894,7 @@ class MPxManipulatorNode(MPxNode):
 
         Returns a tuple consisting the local space point and direction.
         """
-    def mouseRayWorld(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def mouseRayWorld(self, *args: Any, **kwargs: Any) -> Any:
         """mouseRayWorld() -> (MPoint, MVector)
 
         This method returns the location of the mouse within
@@ -4693,7 +4904,7 @@ class MPxManipulatorNode(MPxNode):
 
         Returns a tuple consisting the world space point and direction.
         """
-    def mouseUp(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def mouseUp(self, *args: Any, **kwargs: Any) -> Any:
         """mouseUp() -> (half, half)
 
         This method returns the mouse up position within
@@ -4701,7 +4912,7 @@ class MPxManipulatorNode(MPxNode):
 
         Returns a tuple consisting of the x and y port coodinates.
         """
-    def newManipulator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def newManipulator(self, *args: Any, **kwargs: Any) -> Any:
         """newManipulator(manipName) -> (MPxManipulatorNode, MObject)
 
         This static function is used to create a user-defined manipulator node.
@@ -4719,7 +4930,7 @@ class MPxManipulatorNode(MPxNode):
 
         * manipName (string) - manipulator name
         """
-    def preDrawUI(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def preDrawUI(self, *args: Any, **kwargs: Any) -> Any:
         """preDrawUI(view) -> None
 
         This method is used to setup some drawing data for drawing the manipulator
@@ -4735,24 +4946,24 @@ class MPxManipulatorNode(MPxNode):
 
         * view (M3dView) - The view in which to draw
         """
-    def prevColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def prevColor(self, *args: Any, **kwargs: Any) -> Any:
         """prevColor() -> half
 
         This method returns the previously color used by the colorAndName() method.
         """
-    def registerForMouseMove(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def registerForMouseMove(self, *args: Any, **kwargs: Any) -> Any:
         """registerForMouseMove() -> None
 
         This method registers this manipulator to receive mouse
         move events. When registered, the doMove() function will
         be invoked on mouse move events.
         """
-    def selectedColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def selectedColor(self, *args: Any, **kwargs: Any) -> Any:
         """selectedColor() -> half
 
         This method returns the color index of a selected component.
         """
-    def setDoubleValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDoubleValue(self, *args: Any, **kwargs: Any) -> Any:
         """setDoubleValue(valueIndex, value) -> None
 
         This method is used for setting a floating point value associated with the
@@ -4761,7 +4972,7 @@ class MPxManipulatorNode(MPxNode):
         * valueIndex (int) - the index of the value to be set
         * value (float) - the value to set it to
         """
-    def setHandleColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setHandleColor(self, *args: Any, **kwargs: Any) -> Any:
         """setHandleColor(drawManager, handleName, colorIndex) -> None
 
         This method is used to set the color of component that is being drawn next.
@@ -4773,7 +4984,7 @@ class MPxManipulatorNode(MPxNode):
                               methods in this class.  If the component is neither highlighted nor selected,
                               this colorIndex will be used.
         """
-    def setPointValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setPointValue(self, *args: Any, **kwargs: Any) -> Any:
         """setPointValue(valueIndex, value) -> None
 
         This method is used for setting an MPoint value associated with the
@@ -4782,7 +4993,7 @@ class MPxManipulatorNode(MPxNode):
         * valueIndex (int) - the index of the value to be set
         * value (MPoint) - the value to set it to
         """
-    def setVectorValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setVectorValue(self, *args: Any, **kwargs: Any) -> Any:
         """setVectorValue(valueIndex, value) -> None
 
         This method is used for setting an MVector value associated with the
@@ -4791,7 +5002,7 @@ class MPxManipulatorNode(MPxNode):
         * valueIndex (int) - the index of the value to be set
         * value (MVector) - the value to set it to
         """
-    def shouldDrawHandleAsSelected(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def shouldDrawHandleAsSelected(self, *args: Any, **kwargs: Any) -> Any:
         """shouldDrawHandleAsSelected(name) -> bool
         This function is obsolete, please use 'setHandleColor' instead
 
@@ -4802,24 +5013,29 @@ class MPxManipulatorNode(MPxNode):
 
         Returns true if the handle is active or highlighted.
         """
-    def xColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def xColor(self, *args: Any, **kwargs: Any) -> Any:
         """xColor() -> half
 
         This method returns the color index of the x axis.
         """
-    def yColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def yColor(self, *args: Any, **kwargs: Any) -> Any:
         """yColor() -> half
 
         This method returns the color index of the y axis.
         """
-    def zColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def zColor(self, *args: Any, **kwargs: Any) -> Any:
         """zColor() -> half
 
         This method returns the color index of the z axis.
         """
 
 class MPxSelectionContext(MPxContext):
-    def abortAction(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def abortAction(self, *args: Any, **kwargs: Any) -> Any:
         """abortAction() -> None
 
         This method is called when the abort key is pressed.
@@ -4827,14 +5043,14 @@ class MPxSelectionContext(MPxContext):
         Users can override this method if they wish to perform
         certain operations when the abort key is pressed.
         """
-    def addManipulator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addManipulator(self, *args: Any, **kwargs: Any) -> Any:
         """addManipulator(manipulator) -> None
 
         This method adds a manipulator to the context.
 
         * manipulator (MObject) - the manipulator to be added to the context.
         """
-    def argTypeNumericalInput(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def argTypeNumericalInput(self, *args: Any, **kwargs: Any) -> Any:
         """argTypeNumericalInput(index) -> MSyntax.MArgType
 
         This method is used by the feedback line to determine what units to display.
@@ -4848,13 +5064,13 @@ class MPxSelectionContext(MPxContext):
 
         * index (int) - the index of the numerical input whose argument type is requested.
         """
-    def deleteManipulators(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deleteManipulators(self, *args: Any, **kwargs: Any) -> Any:
         """deleteManipulators() -> None
 
         This method deletes all the manipulators that belong
         to the context.
         """
-    def doDrag(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doDrag(self, *args: Any, **kwargs: Any) -> Any:
         """doDrag(event, drawManager, frameContext) -> None
 
         This method is called when a mouse drag event occurs.
@@ -4872,7 +5088,7 @@ class MPxSelectionContext(MPxContext):
         * drawManager (MUIDrawManager) - Draw manager to use to draw custom shape
         * frameContext (MFrameContext) - Context of the frame being rendered.
         """
-    def doDragLegacy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doDragLegacy(self, *args: Any, **kwargs: Any) -> Any:
         """doDragLegacy(event) -> None
 
         This method is called when a mouse drag event occurs.
@@ -4890,7 +5106,7 @@ class MPxSelectionContext(MPxContext):
 
             DEPRECATED in 2023, please use doDrag.
         """
-    def doHold(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doHold(self, *args: Any, **kwargs: Any) -> Any:
         """doHold(event, drawManager, frameContext) -> None
 
         This method is called when a mouse button is pressed but
@@ -4909,7 +5125,7 @@ class MPxSelectionContext(MPxContext):
         * drawManager (MUIDrawManager) - Draw manager to use to draw custom shape
         * frameContext (MFrameContext) - Context of the frame being rendered.
         """
-    def doHoldLegacy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doHoldLegacy(self, *args: Any, **kwargs: Any) -> Any:
         """doHoldLegacy(event) -> None
 
         This method is called when a mouse button is pressed but
@@ -4928,7 +5144,7 @@ class MPxSelectionContext(MPxContext):
 
             DEPRECATED in 2023, please use doHold.
         """
-    def doPress(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doPress(self, *args: Any, **kwargs: Any) -> Any:
         """doPress(event, drawManager, frameContext) -> None
 
         This method is called when any mouse button is pressed.
@@ -4946,7 +5162,7 @@ class MPxSelectionContext(MPxContext):
         * drawManager (MUIDrawManager) - Draw manager to use to draw custom shape
         * frameContext (MFrameContext) - Context of the frame being rendered.
         """
-    def doPressLegacy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doPressLegacy(self, *args: Any, **kwargs: Any) -> Any:
         """doPressLegacy(event) -> None
 
         This method is called when any mouse button is pressed.
@@ -4964,7 +5180,7 @@ class MPxSelectionContext(MPxContext):
 
             DEPRECATED in 2023, please use doPress.
         """
-    def doRelease(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doRelease(self, *args: Any, **kwargs: Any) -> Any:
         """doRelease(event, drawManager, frameContext) -> None
 
         This method is called when any mouse button is released.
@@ -4982,7 +5198,7 @@ class MPxSelectionContext(MPxContext):
         * drawManager (MUIDrawManager) - Draw manager to use to draw custom shape
         * frameContext (MFrameContext) - Context of the frame being rendered.
         """
-    def doReleaseLegacy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doReleaseLegacy(self, *args: Any, **kwargs: Any) -> Any:
         """doReleaseLegacy(event) -> None
 
         This method is called when any mouse button is released.
@@ -5000,7 +5216,7 @@ class MPxSelectionContext(MPxContext):
 
             DEPRECATED in 2023, please use doRelease.
         """
-    def feedbackNumericalInput(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def feedbackNumericalInput(self, *args: Any, **kwargs: Any) -> Any:
         """feedbackNumericalInput() -> bool
 
         This method is called to update the numerical feedback.
@@ -5009,7 +5225,7 @@ class MPxSelectionContext(MPxContext):
         The return value should indicate whether or not the numerical feedback
         has been provided.  The default return value is false.
         """
-    def helpStateHasChanged(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def helpStateHasChanged(self, *args: Any, **kwargs: Any) -> Any:
         """helpStateHasChanged(event) -> None
 
         This method is called whenever the help state may need to be
@@ -5022,7 +5238,7 @@ class MPxSelectionContext(MPxContext):
 
         * event (MEvent) - The event information.
         """
-    def image(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def image(self, *args: Any, **kwargs: Any) -> Any:
         """image(index) -> string
 
         This method is used to retrieve an XPM icon image that has
@@ -5034,18 +5250,18 @@ class MPxSelectionContext(MPxContext):
         * index (ImageIndex) - the index of the image being retrieved; three image
         representations are permitted: kImage1, kImage2, kImage3.
         """
-    def isSelecting(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isSelecting(self, *args: Any, **kwargs: Any) -> Any:
         """isSelecting() -> bool
 
         Determines whether an object is selected.
         returns True if an object(s) is selected, False otherwise.
         """
-    def lastDragPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def lastDragPoint(self, *args: Any, **kwargs: Any) -> Any:
         """lastDragPoint() -> MPoint
 
         Returns the position of the last drag point.
         """
-    def newToolCommand(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def newToolCommand(self, *args: Any, **kwargs: Any) -> Any:
         """newToolCommand() -> MPxToolCommand
 
         Create a new instance of the tool command associated with this context.
@@ -5054,7 +5270,7 @@ class MPxSelectionContext(MPxContext):
 
         Returns a new instance of the MPxToolCommand.
         """
-    def processNumericalInput(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def processNumericalInput(self, *args: Any, **kwargs: Any) -> Any:
         """processNumericalInput(values, flags, isAbsolute) -> bool
 
         This method processes the input from the numerical input field.
@@ -5074,33 +5290,33 @@ class MPxSelectionContext(MPxContext):
         determines whether or not a given entry should be ignored.
         * isAbsolute (bool) - whether or not the input should be interpreted as absolute.
         """
-    def setAllowDoubleClickAction(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setAllowDoubleClickAction(self, *args: Any, **kwargs: Any) -> Any:
         """setAllowDoubleClickAction() -> None
 
         This method enables the support of double click smart selection for this context.
         """
-    def setAllowPaintSelect(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setAllowPaintSelect(self, *args: Any, **kwargs: Any) -> Any:
         """setAllowPaintSelect() -> None
 
         This method enables drag selection mode for this context.
         """
-    def setAllowPreSelectHilight(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setAllowPreSelectHilight(self, *args: Any, **kwargs: Any) -> Any:
         """setAllowPreSelectHilight() -> None
 
         This method enables the support of pre-selection highlight for this context.
         It needs to be called by the user-overriden MPxContext::toolOnSetup method.
         """
-    def setAllowSoftSelect(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setAllowSoftSelect(self, *args: Any, **kwargs: Any) -> Any:
         """setAllowSoftSelect() -> None
 
         This method enables the support of soft selection for this context.
         """
-    def setAllowSymmetry(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setAllowSymmetry(self, *args: Any, **kwargs: Any) -> Any:
         """setAllowSymmetry() -> None
 
         This method enables the support of symmetrical selection for this context.
         """
-    def setImage(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setImage(self, *args: Any, **kwargs: Any) -> Any:
         """setImage(image, index) -> self
 
         This method is used to set an XPM icon image that is to be
@@ -5112,19 +5328,24 @@ class MPxSelectionContext(MPxContext):
         * index (ImageIndex) - the index of the image being set; three image
         representations are permitted: kImage1, kImage2, kImage3.
         """
-    def startPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def startPoint(self, *args: Any, **kwargs: Any) -> Any:
         """startPoint() -> MPoint
 
         Returns the position of the button press.
         """
 
 class MPxSurfaceShapeUI:
-    def canDrawUV(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def canDrawUV(self, *args: Any, **kwargs: Any) -> Any:
         """canDrawUV() -> bool
 
         Called by Maya to determine if this surface shape supports UV drawing.
         """
-    def drawUV(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def drawUV(self, *args: Any, **kwargs: Any) -> Any:
         """drawUV(view, info) -> self
 
         This method is called when the surface shape is selected and the texture view is open.  Users should override this method if their custom shape supports UVs.
@@ -5136,12 +5357,12 @@ class MPxSurfaceShapeUI:
     kSelectMeshFaces: int = ...
     kSelectMeshUVs: int = ...
     kSelectMeshVerts: int = ...
-    def material(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def material(self, *args: Any, **kwargs: Any) -> Any:
         """material(path) -> MMaterial
 
         COMMENT
         """
-    def materials(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def materials(self, *args: Any, **kwargs: Any) -> Any:
         """materials(path, componentFilter, materials, componentSet=None) -> self
 
         Returns the material associated with this shape.
@@ -5149,7 +5370,7 @@ class MPxSurfaceShapeUI:
 
         * path (MDagPath) - the path for which to get the material
         """
-    def select(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def select(self, *args: Any, **kwargs: Any) -> Any:
         """select(selectInfo, selectionList, worldSpaceSelectPts) -> bool
 
         This routine must be overriden if the shape is to support interactive object and/or component selection. The implementation of this method should call selectInfo.addSelection with information about the selected item and its selection mask. For single click selection, detected using the selectInfo.singleSection() method, the hit point should also be passed as an argument to selectInfo.addSelection().
@@ -5160,7 +5381,7 @@ class MPxSurfaceShapeUI:
         * selectionList [OUT] (MSelectionList) - List of items selected by this method. Do not update directly: use MSelectInfo.addSelection instead.
         * worldSpaceSelectPts [OUT] (MPointArray) - List of points used to sort corresponding selections in single-select mode. (Closest to camera wins.) Do not update directly: use MSelectInfo.addSelection instead.
         """
-    def selectUV(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def selectUV(self, *args: Any, **kwargs: Any) -> Any:
         """selectUV(view, selType, xmin, ymin, xmax, ymax, singleSelect, selList) -> bool
 
         This method is called when the user performs a selection within the texture view.  The method is called only when the surface shape is member of the active selection list.
@@ -5188,7 +5409,7 @@ class MPxSurfaceShapeUI:
           kSelectMeshFaces    The UV selection type is faces.
           kSelectMeshEdges    The UV selection type is edges.
         """
-    def snap(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def snap(self, *args: Any, **kwargs: Any) -> Any:
         """snap(snapInfo) -> bool
 
         Maya calls this method when snapping to the shape's vertices.
@@ -5199,12 +5420,12 @@ class MPxSurfaceShapeUI:
 
         * snapInfo (MSelectInfo) - the Selection state information.
         """
-    def surfaceShape(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def surfaceShape(self, *args: Any, **kwargs: Any) -> Any:
         """surfaceShape() -> MPxSurfaceShape
 
         Returns the non-ui shape associated with current instance.
         """
-    def surfaceShapeUI(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def surfaceShapeUI(self, *args: Any, **kwargs: Any) -> Any:
         """surfaceShapeUI(path) -> MPxSurfaceShapeUI
 
         This is a static method that can be used to find the corresponding MPxSurfaceShapeUI for the specified path.  If an MPxSurfaceShapeUI does not exist then one is created.
@@ -5215,14 +5436,25 @@ class MPxSurfaceShapeUI:
         """
 
 class MPxToolCommand(MPxCommand):
-    def cancel(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __init_subclass__(self, *args: Any, **kwargs: Any) -> Any:
+        """This method is called when a class is subclassed.
+
+        The default implementation does nothing. It may be
+        overridden to extend subclasses.
+        """
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def cancel(self, *args: Any, **kwargs: Any) -> Any:
         """cancel() -> None
 
         This method cancels the command.
         The user should override this method when the original program state
         needs to be restored.
         """
-    def doFinalize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doFinalize(self, *args: Any, **kwargs: Any) -> Any:
         """doFinalize() -> None
 
         Call this method with an MArgList representing your command.
@@ -5231,9 +5463,9 @@ class MPxToolCommand(MPxCommand):
 
         * command (MArgList) Reference representing an equivalent
         """
-    def doIt(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doIt(self, *args: Any, **kwargs: Any) -> Any:
         """Called by Maya to execute the command."""
-    def finalize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def finalize(self, *args: Any, **kwargs: Any) -> Any:
         """finalize() -> None
 
         This method is used to create a string representing the command
@@ -5243,7 +5475,12 @@ class MPxToolCommand(MPxCommand):
         """
 
 class MSelectInfo(MDrawInfo):
-    def addSelection(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addSelection(self, *args: Any, **kwargs: Any) -> Any:
         """addSelection(item, point, list, points, mask, isComponent) -> self
 
         Adds components or objects to the active selection list.
@@ -5255,13 +5492,13 @@ class MSelectInfo(MDrawInfo):
         * mask (MSelectionMask) - Mask used to determine selection priority
         * isComponent (bool) - Indicates whether item to be added is an object or a component
         """
-    def getAlignmentMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getAlignmentMatrix(self, *args: Any, **kwargs: Any) -> Any:
         """getAlignmentMatrix() -> MMatrix
 
         Returns the alignment matrix.
         This method is used to find ray object intersection.
         """
-    def getLocalRay(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getLocalRay(self, *args: Any, **kwargs: Any) -> Any:
         """getLocalRay() -> [MPoint, MVector]
 
         Returns the selection ray defined by its starting point (MPoint) and its direction (MVector).
@@ -5273,35 +5510,35 @@ class MSelectInfo(MDrawInfo):
     @highestPriority.setter
     def highestPriority(*args: Any, **kwargs: Any) -> Any:
         """The highest selection priority value."""
-    def isRay(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isRay(self, *args: Any, **kwargs: Any) -> Any:
         """isRay() -> bool
 
         Returns True if there is a selection ray.
         This method isused to find ray object intersection.
         """
-    def selectClosest(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def selectClosest(self, *args: Any, **kwargs: Any) -> Any:
         """selectClosest() -> bool
 
         Returns True if we want to select the closest object.
         """
-    def selectForHilite(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def selectForHilite(self, *args: Any, **kwargs: Any) -> Any:
         """selectForHilite(mask) -> bool
 
         Given the selection mask, can this object be selected for the hilite list.
 
         * mask (MSelectionMask) - the mask to test
         """
-    def selectOnHilitedOnly(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def selectOnHilitedOnly(self, *args: Any, **kwargs: Any) -> Any:
         """selectOnHilitedOnly() -> bool
 
         Returns True if you can only select components if the object is hilited.
         """
-    def selectPath(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def selectPath(self, *args: Any, **kwargs: Any) -> Any:
         """selectPath() -> MDagPath
 
         Returns a path to the item that is being selected.
         """
-    def selectRect(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def selectRect(self, *args: Any, **kwargs: Any) -> Any:
         """selectRect() -> [int, int, int, int]
 
         Get the current selection rectangle dimensions, defined by:
@@ -5310,14 +5547,14 @@ class MSelectInfo(MDrawInfo):
           its width,
           its height.
         """
-    def selectable(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def selectable(self, *args: Any, **kwargs: Any) -> Any:
         """selectable(mask) -> bool
 
         Given the selection mask, this method determines if the object is selectable.
 
         * mask (MSelectionMask) - the mask to test
         """
-    def selectableComponent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def selectableComponent(self, *args: Any, **kwargs: Any) -> Any:
         """selectableComponent(displayed, mask) -> bool
 
         Given the selection mask, this method determines if the component is selectable.
@@ -5325,25 +5562,30 @@ class MSelectInfo(MDrawInfo):
         * displayed (bool) - is the component displayed
         * mask (MSelectionMask) - selection mask
         """
-    def setSnapPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setSnapPoint(self, *args: Any, **kwargs: Any) -> Any:
         """setSnapPoint(point) -> bool
 
         When a snapping operation is being performed the shape's overridden MPxSurfaceShapeUI.snap() method can call this method to set the point to be snapped to. If setSnapPoint() is called multiple times then the point passed in which is nearest to the current cursor location will be used. So the shape can either compute the snap point itself and call setSnapPoint() once or it can make a series of calls and let setSnapPoint() determine the closest of those for itself.
 
         * point (MPoint) - The point to be snapped to, must be given in world space coordinates.
         """
-    def singleSelection(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def singleSelection(self, *args: Any, **kwargs: Any) -> Any:
         """singleSelection() -> bool
 
         This method determines if we want to select a single object.
         """
-    def view(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def view(self, *args: Any, **kwargs: Any) -> Any:
         """view() -> M3dView
 
         Returns the view that the current selection is taking place in.
         """
 
 class MTextureEditorDrawInfo:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     @property
     def drawingFunction(*args: Any, **kwargs: Any) -> Any:
         """The current drawing state for a drawUV method call.
@@ -5376,27 +5618,37 @@ class MTextureEditorDrawInfo:
     kDrawWireframe: int = ...
 
 class MTimeSliderCustomDrawManager:
-    def clearDrawPrimitives(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def deregisterCustomDraw(self: Self, *args: Any, **kwargs: Any) -> Any: ...
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def clearDrawPrimitives(self, *args: Any, **kwargs: Any) -> Any: ...
+    def deregisterCustomDraw(self, *args: Any, **kwargs: Any) -> Any: ...
     kAbove: int = ...
     kBelow: int = ...
     kOn: int = ...
-    def registerCustomDrawOn(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def registerCustomDrawOutside(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def requestTimeSliderRedraw(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setBackgroundColor(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setDrawHeight(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setDrawLayer(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setDrawLocation(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setDrawPrimitives(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setDrawPriority(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setDrawVisible(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setEditPrimitiveFunction(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setStartPrimitiveEditFunction(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setStopPrimitiveEditFunction(self: Self, *args: Any, **kwargs: Any) -> Any: ...
-    def setTooltip(self: Self, *args: Any, **kwargs: Any) -> Any: ...
+    def registerCustomDrawOn(self, *args: Any, **kwargs: Any) -> Any: ...
+    def registerCustomDrawOutside(self, *args: Any, **kwargs: Any) -> Any: ...
+    def requestTimeSliderRedraw(self, *args: Any, **kwargs: Any) -> Any: ...
+    def setBackgroundColor(self, *args: Any, **kwargs: Any) -> Any: ...
+    def setDrawHeight(self, *args: Any, **kwargs: Any) -> Any: ...
+    def setDrawLayer(self, *args: Any, **kwargs: Any) -> Any: ...
+    def setDrawLocation(self, *args: Any, **kwargs: Any) -> Any: ...
+    def setDrawPrimitives(self, *args: Any, **kwargs: Any) -> Any: ...
+    def setDrawPriority(self, *args: Any, **kwargs: Any) -> Any: ...
+    def setDrawVisible(self, *args: Any, **kwargs: Any) -> Any: ...
+    def setEditPrimitiveFunction(self, *args: Any, **kwargs: Any) -> Any: ...
+    def setStartPrimitiveEditFunction(self, *args: Any, **kwargs: Any) -> Any: ...
+    def setStopPrimitiveEditFunction(self, *args: Any, **kwargs: Any) -> Any: ...
+    def setTooltip(self, *args: Any, **kwargs: Any) -> Any: ...
 
 class MTimeSliderDrawPrimitive:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     @property
     def bottom(*args: Any, **kwargs: Any) -> Any:
         """Bottom offset."""
@@ -5474,7 +5726,8 @@ class MTimeSliderDrawPrimitive:
         """Tooltip of the primitive."""
 
 class MUiMessage(MMessage):
-    def add3dViewDestroyMsgCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def add3dViewDestroyMsgCallback(self, *args: Any, **kwargs: Any) -> Any:
         """add3dViewDestroyMsgCallback(panelName, function, clientData=None) -> id
 
                 This method registers a callback for when a particular 3d view gets
@@ -5490,7 +5743,7 @@ class MUiMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def add3dViewPostRenderMsgCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def add3dViewPostRenderMsgCallback(self, *args: Any, **kwargs: Any) -> Any:
         """add3dViewPostRenderMsgCallback(panelName, function, clientData=None) -> id
 
         This method registers a callback for when the 3d view is
@@ -5508,7 +5761,7 @@ class MUiMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def add3dViewPreRenderMsgCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def add3dViewPreRenderMsgCallback(self, *args: Any, **kwargs: Any) -> Any:
         """add3dViewPreRenderMsgCallback(panelName, function, clientData=None) -> id
 
         This method registers a callback for when a particular 3d view is
@@ -5525,7 +5778,7 @@ class MUiMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def add3dViewRenderOverrideChangedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def add3dViewRenderOverrideChangedCallback(self, *args: Any, **kwargs: Any) -> Any:
         """add3dViewRenderOverrideChangedCallback(panelName, function, clientData=None) -> id
 
         This method registers a callback for when the render override for a
@@ -5543,7 +5796,7 @@ class MUiMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def add3dViewRendererChangedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def add3dViewRendererChangedCallback(self, *args: Any, **kwargs: Any) -> Any:
         """add3dViewRendererChangedCallback(panelName, function, clientData=None) -> id
 
         This method registers a callback for when the renderer for a particular 3d
@@ -5561,7 +5814,7 @@ class MUiMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addCameraChangedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addCameraChangedCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addCameraChangedCallback(panelName, function, clientData=None) -> id
 
         This method registers a callback for cameras being changed in
@@ -5580,7 +5833,7 @@ class MUiMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addUiDeletedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addUiDeletedCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addUiDeletedCallback(uiName, function, clientData=None) -> id
 
         This method registers a callback for UI deleted messages.
@@ -5596,6 +5849,11 @@ class MUiMessage(MMessage):
         """
 
 class RenderParameters:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     @property
     def baseColor(*args: Any, **kwargs: Any) -> Any:
         """Base color"""
@@ -5616,6 +5874,11 @@ class RenderParameters:
         """Unfiltered state"""
 
 class ShaderContext:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     @property
     def path(*args: Any, **kwargs: Any) -> Any:
         """DAG path for the given invocation of the shader"""

@@ -2,6 +2,16 @@ from typing import *
 from typing_extensions import Self
 from _typeshed import Incomplete
 
+__builtins__: dict
+__cached__: str
+__doc__: NoneType
+__file__: str
+__loader__: SourceFileLoader
+__name__: str
+__package__: str
+__path__: list
+__spec__: ModuleSpec
+
 def createMelWrapper(fn: Any, types: Any = ..., retType: Any = ..., ignoreDefaultArgs: Any = ..., returnCmd: Any = ..., outDir: Any = ...) -> Any:
     """@brief Create a wrapper mel proc for a python function
 
@@ -47,4 +57,14 @@ def eval(*args: Any, **kwargs: Any) -> Any:
     """
 
 class zip:
-    pass
+    __doc__: str = ...
+    def __getattribute__(self, name: Any) -> Any:
+        """Return getattr(self, name)."""
+    def __iter__(self) -> Any:
+        """Implement iter(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __next__(self) -> Any:
+        """Implement next(self)."""
+    def __reduce__(self, *args: Any, **kwargs: Any) -> Any:
+        """Return state information for pickling."""

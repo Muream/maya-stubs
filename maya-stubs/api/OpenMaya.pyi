@@ -2,6 +2,15 @@ from typing import *
 from typing_extensions import Self
 from _typeshed import Incomplete
 
+__builtins__: dict
+__cached__: str
+__doc__: NoneType
+__file__: str
+__loader__: SourceFileLoader
+__name__: str
+__package__: str
+__spec__: ModuleSpec
+
 def getStringResource(*args: Any, **kwargs: Any) -> Any: ...
 
 key: str
@@ -14,19 +23,37 @@ def registerStringResources(*args: Any, **kwargs: Any) -> Any: ...
 val: str
 
 class MAngle:
-    def asAngMinutes(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def asAngMinutes(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the angular value, converted to minutes of arc."""
-    def asAngSeconds(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asAngSeconds(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the angular value, converted to seconds of arc."""
-    def asDegrees(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asDegrees(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the angular value, converted to degrees."""
-    def asRadians(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asRadians(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the angular value, converted to radians."""
-    def asUnits(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asUnits(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the angular value, converted to the specified units."""
-    def internalToUI(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def internalToUI(self, *args: Any, **kwargs: Any) -> Any:
         """Converts a value from Maya's internal units to the units used in the UI."""
-    def internalUnit(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def internalUnit(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the angular unit used internally by Maya."""
     kAngMinutes: int = ...
     kAngSeconds: int = ...
@@ -35,11 +62,11 @@ class MAngle:
     kLast: int = ...
     kRadians: int = ...
 
-    def setUIUnit(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setUIUnit(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the angular unit used in Maya's UI."""
-    def uiToInternal(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def uiToInternal(self, *args: Any, **kwargs: Any) -> Any:
         """Converts a value from the units used in the UI to Maya's internal units."""
-    def uiUnit(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def uiUnit(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the units used to display angles in Maya's UI."""
     @property
     def unit(*args: Any, **kwargs: Any) -> Any:
@@ -55,91 +82,105 @@ class MAngle:
         """Value of the angle."""
 
 class MArgParser:
-    def commandArgumentBool(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def commandArgumentBool(self, *args: Any, **kwargs: Any) -> Any:
         """commandArgumentBool(argIndex) -> bool
 
         Returns the specified command argument as a bool.
         """
-    def commandArgumentDouble(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def commandArgumentDouble(self, *args: Any, **kwargs: Any) -> Any:
         """Alias for commandArgumentFloat()."""
-    def commandArgumentFloat(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def commandArgumentFloat(self, *args: Any, **kwargs: Any) -> Any:
         """commandArgumentFloat(argIndex) -> float
 
         Returns the specified command argument as a float.
         """
-    def commandArgumentInt(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def commandArgumentInt(self, *args: Any, **kwargs: Any) -> Any:
         """commandArgumentInt(argIndex) -> int
 
         Returns the specified command argument as an int.
         """
-    def commandArgumentMAngle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def commandArgumentMAngle(self, *args: Any, **kwargs: Any) -> Any:
         """commandArgumentMAngle(argIndex) -> MAngle
 
         Returns the specified command argument as an MAngle.
         """
-    def commandArgumentMDistance(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def commandArgumentMDistance(self, *args: Any, **kwargs: Any) -> Any:
         """commandArgumentMDistance(argIndex) -> MDistance
 
         Returns the specified command argument as an MDistance.
         """
-    def commandArgumentMTime(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def commandArgumentMTime(self, *args: Any, **kwargs: Any) -> Any:
         """commandArgumentMTime(argIndex) -> MTime
 
         Returns the specified command argument as an MTime.
         """
-    def commandArgumentString(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def commandArgumentString(self, *args: Any, **kwargs: Any) -> Any:
         """commandArgumentString(argIndex) -> unicode string
 
         Returns the specified command argument as a string.
         """
-    def flagArgumentBool(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def flagArgumentBool(self, *args: Any, **kwargs: Any) -> Any:
         """flagArgumentBool(flagName, argIndex) -> bool
 
         Returns the specified argument of the specified single-use flag as
         a bool.
         """
-    def flagArgumentDouble(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def flagArgumentDouble(self, *args: Any, **kwargs: Any) -> Any:
         """flagArgumentDouble(flagName, argIndex) -> float
 
         Alias for flagArgumentFloat().
         """
-    def flagArgumentFloat(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def flagArgumentFloat(self, *args: Any, **kwargs: Any) -> Any:
         """flagArgumentFloat(flagName, argIndex) -> float
 
         Returns the specified argument of the specified single-use flag as
         a float.
         """
-    def flagArgumentInt(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def flagArgumentInt(self, *args: Any, **kwargs: Any) -> Any:
         """flagArgumentInt(flagName, argIndex) -> int
 
         Returns the specified argument of the specified single-use flag as
         an int.
         """
-    def flagArgumentMAngle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def flagArgumentMAngle(self, *args: Any, **kwargs: Any) -> Any:
         """flagArgumentMAngle(flagName, argIndex) -> MAngle
 
         Returns the specified argument of the specified single-use flag as
         an MAngle.
         """
-    def flagArgumentMDistance(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def flagArgumentMDistance(self, *args: Any, **kwargs: Any) -> Any:
         """flagArgumentMDistance(flagName, argIndex) -> MDistance
 
         Returns the specified argument of the specified single-use flag as
         an MDistance.
         """
-    def flagArgumentMTime(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def flagArgumentMTime(self, *args: Any, **kwargs: Any) -> Any:
         """flagArgumentMTime(flagName, argIndex) -> MTime
 
         Returns the specified argument of the specified single-use flag as
         an MTime.
         """
-    def flagArgumentString(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def flagArgumentString(self, *args: Any, **kwargs: Any) -> Any:
         """flagArgumentString(flagName, argIndex) -> string
 
         Returns the specified argument of the specified single-use flag as
         a string.
         """
-    def getFlagArgumentList(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getFlagArgumentList(self, *args: Any, **kwargs: Any) -> Any:
         """getFlagArgumentList(flagName, occurrence) -> MArgList
 
         Returns the arguments for the specified occurrence of the given
@@ -147,13 +188,13 @@ class MArgParser:
         not been enabled for multi-use. Raises IndexError if occurrence is
         out of range.
         """
-    def getFlagArgumentPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getFlagArgumentPosition(self, *args: Any, **kwargs: Any) -> Any:
         """getFlagArgumentPosition(flagName, occurrence) -> int
 
         Returns the position in the argument list of the specified occurrence
         of the given flag. Raises IndexError if occurrence is out of range.
         """
-    def getObjectStrings(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getObjectStrings(self, *args: Any, **kwargs: Any) -> Any:
         """getObjectStrings() -> tuple of unicode strings
 
         If the command's MSyntax has set the object format to kStringObjects
@@ -167,7 +208,7 @@ class MArgParser:
     @isEdit.setter
     def isEdit(*args: Any, **kwargs: Any) -> Any:
         """True if the edit flag is present."""
-    def isFlagSet(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isFlagSet(self, *args: Any, **kwargs: Any) -> Any:
         """isFlagSet(flagName) -> bool
 
         Returns True if the given flag appears on the command line.
@@ -178,7 +219,7 @@ class MArgParser:
     @isQuery.setter
     def isQuery(*args: Any, **kwargs: Any) -> Any:
         """True if the query flag is present."""
-    def numberOfFlagUses(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numberOfFlagUses(self, *args: Any, **kwargs: Any) -> Any:
         """numberOfFlagUses(flagName) -> int
 
         Returns the number of times that the flag appears on the command
@@ -192,18 +233,30 @@ class MArgParser:
         """Number of different flags used on the command line. If the same flag appears multiple times it is only counted once."""
 
 class MArgDatabase(MArgParser):
-    def commandArgumentMSelectionList(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __init_subclass__(self, *args: Any, **kwargs: Any) -> Any:
+        """This method is called when a class is subclassed.
+
+        The default implementation does nothing. It may be
+        overridden to extend subclasses.
+        """
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def commandArgumentMSelectionList(self, *args: Any, **kwargs: Any) -> Any:
         """commandArgumentMSelectionList(argIndex) -> MSelectionList
 
         Returns the specified command argument as an MSelectionList.
         """
-    def flagArgumentMSelectionList(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def flagArgumentMSelectionList(self, *args: Any, **kwargs: Any) -> Any:
         """flagArgumentMSelectionList(flagName, argIndex) -> MSelectionList
 
         Returns the specified argument of the specified single-use flag as
         an MSelectionList.
         """
-    def getObjectList(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getObjectList(self, *args: Any, **kwargs: Any) -> Any:
         """getObjectList() -> MSelectionList
 
         If the command's MSyntax has set the object format to kSelectionList
@@ -213,97 +266,113 @@ class MArgDatabase(MArgParser):
         """
 
 class MArgList:
-    def addArg(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addArg(self, *args: Any, **kwargs: Any) -> Any:
         """addArg(arg) -> self , 'arg' is a numeric value, MAngle, MDistance,
         MTime, MPoint or	MVector.
 
         Add an argument to the end of the arg list.
         """
-    def asAngle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asAngle(self, *args: Any, **kwargs: Any) -> Any:
         """asAngle(index) -> MAngle
 
         Return an argument as an MAngle.
         """
-    def asBool(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asBool(self, *args: Any, **kwargs: Any) -> Any:
         """asBool(index) -> bool
 
         Return an argument as a boolean.
         """
-    def asDistance(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asDistance(self, *args: Any, **kwargs: Any) -> Any:
         """asDistance(index) -> MDistance
 
         Return an argument as an MDistance.
         """
-    def asDouble(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asDouble(self, *args: Any, **kwargs: Any) -> Any:
         """asDouble(index) -> float
 
         Alias for asFloat().
         """
-    def asDoubleArray(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asDoubleArray(self, *args: Any, **kwargs: Any) -> Any:
         """asDoubleArray(index) -> MDoubleArray
 
         Return a sequence of arguments as an MDoubleArray.
         """
-    def asFloat(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asFloat(self, *args: Any, **kwargs: Any) -> Any:
         """asFloat(index) -> float
 
         Return an argument as a float.
         """
-    def asInt(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asInt(self, *args: Any, **kwargs: Any) -> Any:
         """asInt(index) -> int
 
         Return an argument as an integer.
         """
-    def asIntArray(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asIntArray(self, *args: Any, **kwargs: Any) -> Any:
         """asIntArray(index) -> MIntArray
 
         Return a sequence of arguments as an MIntArray.
         """
-    def asMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asMatrix(self, *args: Any, **kwargs: Any) -> Any:
         """asMatrix(index) -> MMatrix
 
         Return a sequence of arguments as an MMatrix.
         """
-    def asPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asPoint(self, *args: Any, **kwargs: Any) -> Any:
         """asPoint(index) -> MPoint
 
         Return a sequence of arguments as an MPoint.
         """
-    def asString(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asString(self, *args: Any, **kwargs: Any) -> Any:
         """asString(index) -> string
 
         Return an argument as a string.
         """
-    def asStringArray(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asStringArray(self, *args: Any, **kwargs: Any) -> Any:
         """asStringArray(index) -> list of strings
 
         Return a sequence of arguments as a list of strings.
         """
-    def asTime(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asTime(self, *args: Any, **kwargs: Any) -> Any:
         """asTime(index) -> MTime
 
         Return an argument as an MTime.
         """
-    def asVector(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asVector(self, *args: Any, **kwargs: Any) -> Any:
         """asVector(index) -> MVector
 
         Return a sequence of arguments as an MVector.
         """
-    def flagIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def flagIndex(self, *args: Any, **kwargs: Any) -> Any:
         """flagIndex(shortFlag, longFlag=None) -> int
 
         Return index of first occurrence of specified flag.
         """
     kInvalidArgIndex: int = ...
 
-    def lastArgUsed(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def lastArgUsed(self, *args: Any, **kwargs: Any) -> Any:
         """lastArgUsed() -> int
 
         Return index of last argument used by the most recent as*() method.
         """
 
 class MArrayDataBuilder:
-    def addElement(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addElement(self, *args: Any, **kwargs: Any) -> Any:
         """addElement(index) -> MDataHandle
 
         Adds a new element to the array at the given index.
@@ -312,7 +381,7 @@ class MArrayDataBuilder:
 
         Returns The handle for the new element
         """
-    def addElementArray(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addElementArray(self, *args: Any, **kwargs: Any) -> Any:
         """addElementArray(index) -> MArrayDataHandle
 
         Adds a new element to the array at the given index.  The added element is also an array.
@@ -321,42 +390,42 @@ class MArrayDataBuilder:
 
         Returns The handle for the new array element
         """
-    def addLast(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addLast(self, *args: Any, **kwargs: Any) -> Any:
         """addLast() -> MDataHandle
 
         Adds a new element to the end of the array.  The index of the element will be the current highest index + 1.
 
         Returns The handle for the new element
         """
-    def addLastArray(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addLastArray(self, *args: Any, **kwargs: Any) -> Any:
         """addLastArray() -> MArrayDataHandle
 
         Adds a new element to the end of the array.  The added element is also an array.  The index of the element will the current highest index + 1.
 
         Returns The handle for the new array element
         """
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """copy(source) -> self
 
         Copy data from source builder.
 
         * source (MArrayDataBuilder) - The source object to copy from
         """
-    def growArray(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def growArray(self, *args: Any, **kwargs: Any) -> Any:
         """growArray(amount) -> self
 
         Grows the array storage by the given amount.
 
         * amount (int) - the amount to grow the array by
         """
-    def removeElement(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeElement(self, *args: Any, **kwargs: Any) -> Any:
         """removeElement(index) -> self
 
         Removes the specified element from the array
 
         * index (int) - the element of the array to remove
         """
-    def setGrowSize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setGrowSize(self, *args: Any, **kwargs: Any) -> Any:
         """setGrowSize(size) -> self
 
         Sets the grow size of the array.  As elements are added to the array, the builder will allocate memory in chunks.  This method tells the builder how many elements to allocate each time it grows the array.
@@ -365,7 +434,15 @@ class MArrayDataBuilder:
         """
 
 class MArrayDataHandle:
-    def builder(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def builder(self, *args: Any, **kwargs: Any) -> Any:
         """builder() -> MArrayDataBuilder
 
         Returns a builder for this handle's array so that it can be expanded.
@@ -374,40 +451,40 @@ class MArrayDataHandle:
 
         Do not use with an MArrayDataHandle which was returned by MPlug.asMDataHandle().
         """
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """copy(source) -> self
 
         Copy data from source array.
 
         * source (MArrayDataHandle) - The source object to copy from
         """
-    def elementLogicalIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def elementLogicalIndex(self, *args: Any, **kwargs: Any) -> Any:
         """elementLogicalIndex() -> int
 
         Returns the index that we are currently at in the array.  It is possible for the index to be invalid, in which case the return status will report an error.  These may be sparse arrays so the element index returned will be a logical index.
 
         Raises an exception if there is no current element (e.g. if there are no elements).
         """
-    def inputArrayValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def inputArrayValue(self, *args: Any, **kwargs: Any) -> Any:
         """inputArrayValue() -> MArrayDataHandle
 
         Gets a handle into this data block for the current array element.  This method should be used when the array elements are also arrays.  The data represented by the handle will be valid.  If the data is from an dirty connection, then the connection will be evaluated.
 
         Do not use with an MArrayDataHandle which was returned by MPlug.asMDataHandle().
         """
-    def inputValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def inputValue(self, *args: Any, **kwargs: Any) -> Any:
         """inputValue() -> MDataHandle
 
         Gets a handle into this data block for the current array element.  The data represented by the handle will be valid.  If the data is from an dirty connection, then the connection will be evaluated.
 
         Do not use with an MArrayDataHandle which was returned by MPlug.asMDataHandle().
         """
-    def isDone(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isDone(self, *args: Any, **kwargs: Any) -> Any:
         """isDone() -> bool
 
         Specifies whether or not there are more elements to iterate over.
         """
-    def jumpToLogicalElement(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def jumpToLogicalElement(self, *args: Any, **kwargs: Any) -> Any:
         """jumpToLogicalElement(index) -> self
 
         Jump to a specific logical element in the array.
@@ -416,7 +493,7 @@ class MArrayDataHandle:
 
         * index (int) - the logical index to jump to
         """
-    def jumpToPhysicalElement(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def jumpToPhysicalElement(self, *args: Any, **kwargs: Any) -> Any:
         """jumpToPhysicalElement(position) -> self
 
         Jump to a specific physical element in the array.
@@ -424,27 +501,27 @@ class MArrayDataHandle:
 
         * position (int) - the array position to jump to
         """
-    def next(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def next(self, *args: Any, **kwargs: Any) -> Any:
         """next() -> bool
 
         Advance to the next element in the array.
         Return True if there was a next element and False if there wasn't.
         """
-    def outputArrayValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def outputArrayValue(self, *args: Any, **kwargs: Any) -> Any:
         """outputArrayValue() -> MArrayDataHandle
 
         Gets a handle into this data block for the current array element.  This method should be used when the array elements are also arrays. The array's elements are not evaluated and may no longer be valid. Therefore, this handle should only be used for writing over the data.
 
         Do not use with an MArrayDataHandle which was returned by MPlug.asMDataHandle().
         """
-    def outputValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def outputValue(self, *args: Any, **kwargs: Any) -> Any:
         """outputValue() -> MDataHandle
 
         Gets a handle into this data block for the current array element. The element is not evaluated so its data may not be valid. Therefore, this handle should only be used for writing over the data.
 
         This method can also be used to retrieve handles to individual elements of  non-datablock array handles, such as those returned by MPlug.getValue() and MPlug.asMDataHandle().
         """
-    def set(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def set(self, *args: Any, **kwargs: Any) -> Any:
         """set(builder) -> self
 
         Sets the data for this array from the data in the builder object
@@ -453,14 +530,14 @@ class MArrayDataHandle:
 
         * builder (MArrayDataBuilder) - the builder object
         """
-    def setAllClean(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setAllClean(self, *args: Any, **kwargs: Any) -> Any:
         """setAllClean() -> self
 
         Marks every element of the array attribute represented by the handle as clean.  This method should be used if a compute function is asked to compute a single element of a multi, but instead calculates all the elements.  Calling <i>setAllClean</i> in this situation will prevent further calls to the node's compute method for the other elements of the multi.
 
         Do not use with an MArrayDataHandle which was returned by MPlug.asMDataHandle()
         """
-    def setClean(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setClean(self, *args: Any, **kwargs: Any) -> Any:
         """setClean() -> self
 
         Marks the data that is represented by this handle as being clean.  This should be done after recalculating the data from the inputs.
@@ -469,50 +546,70 @@ class MArrayDataHandle:
         """
 
 class MAttributeIndex:
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __eq__(self, value: Any) -> Any:
+        """Return self==value."""
+    def __ge__(self, value: Any) -> Any:
+        """Return self>=value."""
+    def __gt__(self, value: Any) -> Any:
+        """Return self>value."""
+    __hash__: NoneType = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __le__(self, value: Any) -> Any:
+        """Return self<=value."""
+    def __lt__(self, value: Any) -> Any:
+        """Return self<value."""
+    def __ne__(self, value: Any) -> Any:
+        """Return self!=value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """copy(source) -> self
 
         Copy data from source index.
 
         * source (MAttributeIndex) - The source index to copy from
         """
-    def getLower(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getLower(self, *args: Any, **kwargs: Any) -> Any:
         """getLower() -> int/float
 
         Returns the lower bound of the index.
         """
-    def getUpper(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getUpper(self, *args: Any, **kwargs: Any) -> Any:
         """getUpper() -> int/float
 
         Returns the upper bound of the index.
         """
-    def getValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getValue(self, *args: Any, **kwargs: Any) -> Any:
         """getValue() -> int/float
 
         Returns the current value of the index.
         Raises an exception if the index is a range.
         """
-    def hasLowerBound(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasLowerBound(self, *args: Any, **kwargs: Any) -> Any:
         """hasLowerBound() -> bool
 
         Returns True if a lower bound is specified.
         """
-    def hasRange(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasRange(self, *args: Any, **kwargs: Any) -> Any:
         """hasRange() -> bool
 
         Returns True if a range was specified.
         """
-    def hasUpperBound(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasUpperBound(self, *args: Any, **kwargs: Any) -> Any:
         """hasUpperBound() -> bool
 
         Returns True if an upper bound is specified.
         """
-    def hasValidRange(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasValidRange(self, *args: Any, **kwargs: Any) -> Any:
         """hasValidRange() -> bool
 
         Returns True if upper bound is greater than lower bound.
         """
-    def isBounded(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isBounded(self, *args: Any, **kwargs: Any) -> Any:
         """isBounded() -> bool
 
         Returns True if the index is bounded.
@@ -520,12 +617,12 @@ class MAttributeIndex:
     kFloat: int = ...
     kInteger: int = ...
 
-    def setLower(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setLower(self, *args: Any, **kwargs: Any) -> Any:
         """setLower(value) -> self
 
         Sets the lower bound of the index.
         """
-    def setType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setType(self, *args: Any, **kwargs: Any) -> Any:
         """setType(type) -> self
 
         Sets the type of attribute index.
@@ -533,19 +630,19 @@ class MAttributeIndex:
 
         * type (int) - the index type to set
         """
-    def setUpper(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setUpper(self, *args: Any, **kwargs: Any) -> Any:
         """setUpper(value) -> self
 
         Sets the upper bound of the index.
         """
-    def setValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setValue(self, *args: Any, **kwargs: Any) -> Any:
         """setValue(value) -> self
 
         Sets the value of the index.
 
         Remark: calling this method with an integer value will change its type to kInteger, and subsequently calling with a float value will change it to kFloat.
         """
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def type(self, *args: Any, **kwargs: Any) -> Any:
         """type() -> int
 
         Returns the type of attribute index.
@@ -556,25 +653,57 @@ class MAttributeIndex:
         """
 
 class MAttributePattern:
-    def addRootAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def addRootAttr(self, *args: Any, **kwargs: Any) -> Any:
         """Add the given root attribute to this pattern."""
-    def attrPattern(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def attrPattern(self, *args: Any, **kwargs: Any) -> Any:
         """Return the specified pattern indexed from the global list."""
-    def attrPatternCount(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def attrPatternCount(self, *args: Any, **kwargs: Any) -> Any:
         """Return the global number of patterns created."""
-    def findPattern(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def findPattern(self, *args: Any, **kwargs: Any) -> Any:
         """Return a pattern with the given name, None if not found."""
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def name(self, *args: Any, **kwargs: Any) -> Any:
         """Return the name of the attribute pattern."""
-    def removeRootAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeRootAttr(self, *args: Any, **kwargs: Any) -> Any:
         """Return the nth or passed-in root attribute from this pattern."""
-    def rootAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rootAttr(self, *args: Any, **kwargs: Any) -> Any:
         """Return the nth root attribute in this pattern."""
-    def rootAttrCount(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rootAttrCount(self, *args: Any, **kwargs: Any) -> Any:
         """Return the number of root attributes in this pattern."""
 
 class MAttributeSpec:
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __eq__(self, value: Any) -> Any:
+        """Return self==value."""
+    def __ge__(self, value: Any) -> Any:
+        """Return self>=value."""
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __gt__(self, value: Any) -> Any:
+        """Return self>value."""
+    __hash__: NoneType = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __le__(self, value: Any) -> Any:
+        """Return self<=value."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __lt__(self, value: Any) -> Any:
+        """Return self<value."""
+    def __ne__(self, value: Any) -> Any:
+        """Return self!=value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """copy(source) -> self
 
         Copy data from source specification.
@@ -595,17 +724,55 @@ class MAttributeSpec:
         """The name of the attribute specification."""
 
 class MAttributeSpecArray:
-    def append(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __add__(self, value: Any) -> Any:
+        """Return self+value."""
+    def __contains__(self, key: Any) -> Any:
+        """Return key in self."""
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    __doc__: str = ...
+
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __iadd__(self, value: Any) -> Any:
+        """Implement self+=value."""
+    def __imul__(self, value: Any) -> Any:
+        """Implement self*=value."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __mul__(self, value: Any) -> Any:
+        """Return self*value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __rmul__(self, value: Any) -> Any:
+        """Return value*self."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """Remove all elements from the array."""
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """Replace the array contents with that of another or of a compatible Python sequence."""
-    def insert(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def insert(self, *args: Any, **kwargs: Any) -> Any:
         """Insert a new value into the array at the given index."""
-    def remove(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def remove(self, *args: Any, **kwargs: Any) -> Any:
         """Remove an element from the array."""
-    def setLength(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setLength(self, *args: Any, **kwargs: Any) -> Any:
         """Grow or shrink the array to contain a specific number of elements."""
     @property
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
@@ -615,15 +782,33 @@ class MAttributeSpecArray:
         """Number of elements by which to grow the array when necessary."""
 
 class MBoundingBox:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
     @property
     def center(*args: Any, **kwargs: Any) -> Any:
         """Center point"""
     @center.setter
     def center(*args: Any, **kwargs: Any) -> Any:
         """Center point"""
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """Empties the bounding box, setting its corners to (0, 0, 0)."""
-    def contains(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def contains(self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if a point lies within the bounding box."""
     @property
     def depth(*args: Any, **kwargs: Any) -> Any:
@@ -631,7 +816,7 @@ class MBoundingBox:
     @depth.setter
     def depth(*args: Any, **kwargs: Any) -> Any:
         """Size in Z"""
-    def expand(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def expand(self, *args: Any, **kwargs: Any) -> Any:
         """Expands the bounding box to include a point or other bounding box."""
     @property
     def height(*args: Any, **kwargs: Any) -> Any:
@@ -639,7 +824,7 @@ class MBoundingBox:
     @height.setter
     def height(*args: Any, **kwargs: Any) -> Any:
         """Size in Y"""
-    def intersects(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def intersects(self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if any part of a given bounding box lies within this one."""
     @property
     def max(*args: Any, **kwargs: Any) -> Any:
@@ -653,7 +838,7 @@ class MBoundingBox:
     @min.setter
     def min(*args: Any, **kwargs: Any) -> Any:
         """Minimum corner point"""
-    def transformUsing(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def transformUsing(self, *args: Any, **kwargs: Any) -> Any:
         """Multiplies the bounding box's corners by a matrix."""
     @property
     def width(*args: Any, **kwargs: Any) -> Any:
@@ -663,7 +848,13 @@ class MBoundingBox:
         """Size in X"""
 
 class MCacheSchema:
-    def add(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def add(self, *args: Any, **kwargs: Any) -> Any:
         """add(attribute) -> self
 
         Force the attribute to be cached
@@ -672,24 +863,62 @@ class MCacheSchema:
 
         * attribute (MObject) - Attribute to cache
         """
-    def reset(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def reset(self, *args: Any, **kwargs: Any) -> Any:
         """reset()
 
         Reset this schema to the minimal.
         """
 
 class MCallbackIdArray:
-    def append(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __add__(self, value: Any) -> Any:
+        """Return self+value."""
+    def __contains__(self, key: Any) -> Any:
+        """Return key in self."""
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    __doc__: str = ...
+
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __iadd__(self, value: Any) -> Any:
+        """Implement self+=value."""
+    def __imul__(self, value: Any) -> Any:
+        """Implement self*=value."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __mul__(self, value: Any) -> Any:
+        """Return self*value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __rmul__(self, value: Any) -> Any:
+        """Return value*self."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """Remove all elements from the array."""
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """Replace the array contents with that of another or of a compatible Python sequence."""
-    def insert(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def insert(self, *args: Any, **kwargs: Any) -> Any:
         """Insert a new value into the array at the given index."""
-    def remove(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def remove(self, *args: Any, **kwargs: Any) -> Any:
         """Remove an element from the array."""
-    def setLength(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setLength(self, *args: Any, **kwargs: Any) -> Any:
         """Grow or shrink the array to contain a specific number of elements."""
     @property
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
@@ -699,7 +928,9 @@ class MCallbackIdArray:
         """Number of elements by which to grow the array when necessary."""
 
 class MMessage:
-    def currentCallbackId(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def currentCallbackId(self, *args: Any, **kwargs: Any) -> Any:
         """currentCallbackId() -> id
 
         Returns the callback ID of the currently executing callback. If called
@@ -710,7 +941,7 @@ class MMessage:
     kDoAction: int = ...
     kDoNotDoAction: int = ...
 
-    def nodeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def nodeCallbacks(self, *args: Any, **kwargs: Any) -> Any:
         """nodeCallbacks(node) -> ids
 
         Returns a list of callback IDs registered to a given node.
@@ -718,7 +949,7 @@ class MMessage:
          * node (MObject) - Node to query for callbacks.
          * ids (MCallbackIdArray) - Array to store the list of callback IDs.
         """
-    def removeCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeCallback(self, *args: Any, **kwargs: Any) -> Any:
         """removeCallback(id) -> None
 
         Removes the specified callback from Maya.
@@ -727,7 +958,7 @@ class MMessage:
 
          * id (MCallbackId) - identifier of callback to be removed
         """
-    def removeCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeCallbacks(self, *args: Any, **kwargs: Any) -> Any:
         """removeCallbacks(ids) -> None
 
         Removes all of the specified callbacks from Maya.
@@ -738,7 +969,9 @@ class MMessage:
         """
 
 class MCameraMessage(MMessage):
-    def addBeginManipulationCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def addBeginManipulationCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addBeginManipulationCallback(node, function, clientData=None) -> id
 
         Registers callbacks for camera manipulation beginning messages.
@@ -749,7 +982,7 @@ class MCameraMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addEndManipulationCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addEndManipulationCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addEndManipulationCallback(node, function, clientData=None) -> id
 
         Registers callbacks for camera manipulation ending messages.
@@ -762,6 +995,64 @@ class MCameraMessage(MMessage):
         """
 
 class MColor:
+    def __add__(self, value: Any) -> Any:
+        """Return self+value."""
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    __doc__: str = ...
+
+    def __eq__(self, value: Any) -> Any:
+        """Return self==value."""
+    def __ge__(self, value: Any) -> Any:
+        """Return self>=value."""
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __gt__(self, value: Any) -> Any:
+        """Return self>value."""
+    __hash__: NoneType = ...
+
+    def __iadd__(self, value: Any) -> Any:
+        """Return self+=value."""
+    def __imul__(self, value: Any) -> Any:
+        """Return self*=value."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __itruediv__(self, value: Any) -> Any:
+        """Return self/=value."""
+    def __le__(self, value: Any) -> Any:
+        """Return self<=value."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __lt__(self, value: Any) -> Any:
+        """Return self<value."""
+    def __mul__(self, value: Any) -> Any:
+        """Return self*value."""
+    def __ne__(self, value: Any) -> Any:
+        """Return self!=value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __radd__(self, value: Any) -> Any:
+        """Return value+self."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __rmul__(self, value: Any) -> Any:
+        """Return value*self."""
+    def __rtruediv__(self, value: Any) -> Any:
+        """Return value/self."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def __truediv__(self, value: Any) -> Any:
+        """Return self/value."""
     @property
     def a(*args: Any, **kwargs: Any) -> Any:
         """alpha component"""
@@ -780,7 +1071,7 @@ class MColor:
     @g.setter
     def g(*args: Any, **kwargs: Any) -> Any:
         """green component"""
-    def getColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getColor(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the color's components, in the specified color model."""
     kByte: int = ...
     kCMY: int = ...
@@ -797,21 +1088,59 @@ class MColor:
     @r.setter
     def r(*args: Any, **kwargs: Any) -> Any:
         """red component"""
-    def setColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setColor(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the color's components and color model."""
 
 class MColorArray:
-    def append(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __add__(self, value: Any) -> Any:
+        """Return self+value."""
+    def __contains__(self, key: Any) -> Any:
+        """Return key in self."""
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    __doc__: str = ...
+
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __iadd__(self, value: Any) -> Any:
+        """Implement self+=value."""
+    def __imul__(self, value: Any) -> Any:
+        """Implement self*=value."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __mul__(self, value: Any) -> Any:
+        """Return self*value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __rmul__(self, value: Any) -> Any:
+        """Return value*self."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """Remove all elements from the array."""
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """Replace the array contents with that of another or of a compatible Python sequence."""
-    def insert(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def insert(self, *args: Any, **kwargs: Any) -> Any:
         """Insert a new value into the array at the given index."""
-    def remove(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def remove(self, *args: Any, **kwargs: Any) -> Any:
         """Remove an element from the array."""
-    def setLength(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setLength(self, *args: Any, **kwargs: Any) -> Any:
         """Grow or shrink the array to contain a specific number of elements."""
     @property
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
@@ -821,7 +1150,9 @@ class MColorArray:
         """Number of elements by which to grow the array when necessary."""
 
 class MCommandMessage(MMessage):
-    def addCommandCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def addCommandCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addCommandCallback(function, clientData=None) -> id
 
         This method registers a callback for command messages that are
@@ -839,7 +1170,7 @@ class MCommandMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addCommandOutputCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addCommandOutputCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addCommandOutputCallback(function, clientData=None) -> id
 
         This method registers a callback for whenever commands generate
@@ -852,7 +1183,7 @@ class MCommandMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addCommandOutputFilterCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addCommandOutputFilterCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addCommandOutputFilterCallback(function, clientData=None) -> id
 
         This method registers a callback for whenever commands generate
@@ -868,7 +1199,7 @@ class MCommandMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addProcCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addProcCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addProcCallback(function, clientData=None) -> id
 
         This method registers a callback that is executed every time a MEL
@@ -902,7 +1233,9 @@ class MCommandMessage(MMessage):
     kWarning: int = ...
 
 class MConditionMessage(MMessage):
-    def addConditionCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def addConditionCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addConditionCallback(conditionName, function, clientData=None) -> id
 
         This method registers a callback for condition changed messages.
@@ -917,14 +1250,14 @@ class MConditionMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def getConditionNames(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getConditionNames(self, *args: Any, **kwargs: Any) -> Any:
         """getConditionNames() -> (string, string, ...)
 
         This method returns the list of available condition names.
 
          * return: tuple of available condition names.
         """
-    def getConditionState(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getConditionState(self, *args: Any, **kwargs: Any) -> Any:
         """getConditionState(name) -> bool
 
         This method returns the current state of a condition.
@@ -936,7 +1269,9 @@ class MConditionMessage(MMessage):
         """
 
 class MContainerMessage(MMessage):
-    def addBoundAttrCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def addBoundAttrCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addBoundAttrCallback(function, clientData=None) -> id
 
         This method registers a callback that is called whenever an attribute
@@ -949,7 +1284,7 @@ class MContainerMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addPublishAttrCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addPublishAttrCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addPublishAttrCallback(function, clientData=None) -> id
 
         This method registers a callback that is called whenever an attribute
@@ -964,6 +1299,12 @@ class MContainerMessage(MMessage):
         """
 
 class MDAGDrawOverrideInfo:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     @property
     def displayType(*args: Any, **kwargs: Any) -> Any:
         """Display type (kDisplayTypeNormal, kDisplayTypeReference or kDisplayTypeTemplate)"""
@@ -1014,28 +1355,44 @@ class MDAGDrawOverrideInfo:
         """Whether the object is visible during playback"""
 
 class MDGContext:
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """copy(source) -> self
 
         Copy data from source context.
 
         * source (MDGContext) - The source object to copy from
         """
-    def current(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def current(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the current context being used for evaluation."""
-    def getTime(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getTime(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the time at which this context is set to evaluate."""
-    def isCurrent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isCurrent(self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the context is currently being used for evaluation. Returns False if some other context is being used for evaluation."""
-    def isNormal(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isNormal(self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the context is set to evaluate normally. Returns False if the context is set to evaluate at a specific time."""
     kNormal: MDGContext = ...
 
-    def makeCurrent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def makeCurrent(self, *args: Any, **kwargs: Any) -> Any:
         """Makes this context the new current one being used for evaluation. Returns the previous evaluation context."""
 
 class MDGMessage(MMessage):
-    def addConnectionCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def addConnectionCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addConnectionCallback(function, clientData=None) -> id
 
         This method registers a callback that is called whenever a connection
@@ -1051,7 +1408,7 @@ class MDGMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addDelayedTimeChangeCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addDelayedTimeChangeCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addDelayedTimeChangeCallback(function, clientData=None) -> id
 
         This method registers a callback that is called whenever the time
@@ -1063,7 +1420,7 @@ class MDGMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addDelayedTimeChangeRunupCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addDelayedTimeChangeRunupCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addDelayedTimeChangeRunupCallback(function, clientData=None) -> id
 
         This method registers a callback that is called whenever the time
@@ -1076,7 +1433,7 @@ class MDGMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addForceUpdateCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addForceUpdateCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addForceUpdateCallback(function, clientData=None) -> id
 
         This method registers a callback that is called after the time
@@ -1089,7 +1446,7 @@ class MDGMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addNodeAddedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addNodeAddedCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addNodeAddedCallback(function, nodeType, clientData=None) -> id
 
         This method registers a callback that is called whenever a new node
@@ -1105,7 +1462,7 @@ class MDGMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addNodeChangeUuidCheckCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addNodeChangeUuidCheckCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addNodeChangeUuidCheckCallback(function, clientData=None) -> id
 
         This method registers a callback that is called whenever a node
@@ -1139,7 +1496,7 @@ class MDGMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addNodeRemovedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addNodeRemovedCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addNodeRemovedCallback(function, nodeType, clientData=None) -> id
 
         This method registers a callback that is called whenever a new node
@@ -1155,7 +1512,7 @@ class MDGMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addPreConnectionCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addPreConnectionCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addPreConnectionCallback(function, clientData=None) -> id
 
         This method registers a callback that is called whenever any connection
@@ -1171,7 +1528,7 @@ class MDGMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addTimeChangeCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addTimeChangeCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addTimeChangeCallback(function, clientData=None) -> id
 
         This method registers a callback that is called whenever the time
@@ -1185,21 +1542,27 @@ class MDGMessage(MMessage):
         """
 
 class MDGModifier:
-    def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addAttribute(self, *args: Any, **kwargs: Any) -> Any:
         """addAttribute(MObject node, MObject attribute) -> self
 
         Adds an operation to the modifier to add a new dynamic attribute to the
         given dependency node. If the attribute is a compound its children will
         be added as well, so only the parent needs to be added using this method.
         """
-    def addExtensionAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addExtensionAttribute(self, *args: Any, **kwargs: Any) -> Any:
         """addExtensionAttribute(MNodeClass nodeClass, MObject attribute) -> self
 
         Adds an operation to the modifier to add a new extension attribute to
         the given node class. If the attribute is a compound its children will be
         added as well, so only the parent needs to be added using this method.
         """
-    def commandToExecute(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def commandToExecute(self, *args: Any, **kwargs: Any) -> Any:
         """commandToExecute(command) -> self
 
         Adds an operation to the modifier to execute a MEL command. The command
@@ -1211,7 +1574,7 @@ class MDGModifier:
         undone together, as a single undo action by the user, but Maya will
         better be able to recover if one of the commands fails.
         """
-    def connect(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def connect(self, *args: Any, **kwargs: Any) -> Any:
         """connect(MPlug source, MPlug dest) -> self
         connect(MObject sourceNode, MObject sourceAttr,
                 MObject destNode,   MObject destAttr) -> self
@@ -1224,7 +1587,7 @@ class MDGModifier:
         Plugs can either be specified with node and attribute MObjects or with
         MPlugs.
         """
-    def createNode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def createNode(self, *args: Any, **kwargs: Any) -> Any:
         """createNode(typeName) -> MObject
         createNode(MTypeId typeId) -> MObject
 
@@ -1234,7 +1597,7 @@ class MDGModifier:
         TypeError if the named node type does not exist or if it is a DAG node
         type.
         """
-    def deleteNode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deleteNode(self, *args: Any, **kwargs: Any) -> Any:
         """deleteNode(MObject node) -> selfdeleteNode(MObject node, bool includeParents) -> self
 
         Adds an operation to the modifier which deletes the specified node from
@@ -1252,7 +1615,7 @@ class MDGModifier:
         parents of the DAG node in the delete operation. If you do not want this
         behaviour set the includeParents argument to False.
         """
-    def disconnect(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def disconnect(self, *args: Any, **kwargs: Any) -> Any:
         """disconnect(MPlug source, MPlug dest) -> self
         disconnect(MObject sourceNode, MObject sourceAttr,
                    MObject destNode,   MObject destAttr) -> self
@@ -1262,7 +1625,7 @@ class MDGModifier:
         Plugs can either be specified with node and attribute MObjects or with
         MPlugs.
         """
-    def doIt(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doIt(self, *args: Any, **kwargs: Any) -> Any:
         """doIt() -> self
 
         Executes the modifier's operations. If doIt() is called multiple times
@@ -1271,7 +1634,7 @@ class MDGModifier:
         executed. If undoIt() has been called then the next call to doIt() will
         do all operations.
         """
-    def linkExtensionAttributeToPlugin(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def linkExtensionAttributeToPlugin(self, *args: Any, **kwargs: Any) -> Any:
         """linkExtensionAttributeToPlugin(MObject plugin, MObject attribute) -> self
 
         The plugin can call this method to indicate that the extension attribute
@@ -1284,68 +1647,68 @@ class MDGModifier:
         plugin by itself. Note that the link is established immediately and is
         not affected by the modifier's doIt() or undoIt() methods.
         """
-    def newPlugValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def newPlugValue(self, *args: Any, **kwargs: Any) -> Any:
         """newPlugValue(MPlug plug, MObject value) -> self
 
         Adds an operation to the modifier to set the value of a plug, where
         value is an MObject data wrapper, such as created by the various
         MFn*Data classes.
         """
-    def newPlugValueBool(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def newPlugValueBool(self, *args: Any, **kwargs: Any) -> Any:
         """newPlugValueBool(MPlug plug, bool value) -> self
 
         Adds an operation to the modifier to set a value onto a bool plug.
         """
-    def newPlugValueChar(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def newPlugValueChar(self, *args: Any, **kwargs: Any) -> Any:
         """newPlugValueChar(MPlug plug, int value) -> self
 
         Adds an operation to the modifier to set a value onto a char (single
         byte signed integer) plug.
         """
-    def newPlugValueDouble(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def newPlugValueDouble(self, *args: Any, **kwargs: Any) -> Any:
         """newPlugValueDouble(MPlug plug, float value) -> self
 
         Adds an operation to the modifier to set a value onto a double-precision
         float plug.
         """
-    def newPlugValueFloat(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def newPlugValueFloat(self, *args: Any, **kwargs: Any) -> Any:
         """newPlugValueFloat(MPlug plug, float value) -> self
 
         Adds an operation to the modifier to set a value onto a single-precision
         float plug.
         """
-    def newPlugValueInt(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def newPlugValueInt(self, *args: Any, **kwargs: Any) -> Any:
         """newPlugValueInt(MPlug plug, int value) -> self
 
         Adds an operation to the modifier to set a value onto an int plug.
         """
-    def newPlugValueMAngle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def newPlugValueMAngle(self, *args: Any, **kwargs: Any) -> Any:
         """newPlugValueMAngle(MPlug plug, MAngle value) -> self
 
         Adds an operation to the modifier to set a value onto an angle plug.
         """
-    def newPlugValueMDistance(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def newPlugValueMDistance(self, *args: Any, **kwargs: Any) -> Any:
         """newPlugValueMDistance(MPlug plug, MDistance value) -> self
 
         Adds an operation to the modifier to set a value onto a distance plug.
         """
-    def newPlugValueMTime(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def newPlugValueMTime(self, *args: Any, **kwargs: Any) -> Any:
         """newPlugValueMTime(MPlug plug, MTime value) -> self
 
         Adds an operation to the modifier to set a value onto a time plug.
         """
-    def newPlugValueShort(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def newPlugValueShort(self, *args: Any, **kwargs: Any) -> Any:
         """newPlugValueShort(MPlug plug, int value) -> self
 
         Adds an operation to the modifier to set a value onto a short
         integer plug.
         """
-    def newPlugValueString(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def newPlugValueString(self, *args: Any, **kwargs: Any) -> Any:
         """newPlugValueString(MPlug plug, string value) -> self
 
         Adds an operation to the modifier to set a value onto a string plug.
         """
-    def pythonCommandToExecute(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def pythonCommandToExecute(self, *args: Any, **kwargs: Any) -> Any:
         """pythonCommandToExecute(callable) -> selfpythonCommandToExecute(commandString) -> self
 
         Adds an operation to the modifier to execute a Python command, which
@@ -1359,7 +1722,7 @@ class MDGModifier:
         single undo action by the user, but Maya will better be able to
         recover if one of the commands fails.
         """
-    def removeAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeAttribute(self, *args: Any, **kwargs: Any) -> Any:
         """removeAttribute(MObject node, MObject attribute) -> self
 
         Adds an operation to the modifier to remove a dynamic attribute from the
@@ -1369,7 +1732,7 @@ class MDGModifier:
         should be no function sets attached to the attribute at the time of the
         call as their behaviour may become unpredictable.
         """
-    def removeExtensionAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeExtensionAttribute(self, *args: Any, **kwargs: Any) -> Any:
         """removeExtensionAttribute(MNodeClass nodeClass, MObject attribute) -> self
 
         Adds an operation to the modifier to remove an extension attribute from
@@ -1379,7 +1742,7 @@ class MDGModifier:
         should be no function sets attached to the attribute at the time of the
         call as their behaviour may become unpredictable.
         """
-    def removeExtensionAttributeIfUnset(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeExtensionAttributeIfUnset(self, *args: Any, **kwargs: Any) -> Any:
         """removeExtensionAttributeIfUnset(MNodeClass nodeClass,
                                         MObject attribute) -> self
 
@@ -1391,35 +1754,35 @@ class MDGModifier:
         to kNullObj. There should be no function sets attached to the attribute
         at the time of the call as their behaviour may become unpredictable.
         """
-    def removeMultiInstance(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeMultiInstance(self, *args: Any, **kwargs: Any) -> Any:
         """removeMultiInstance(MPlug plug, bool breakConnections) -> self
 
         Adds an operation to the modifier to remove an element of a multi (array) plug.
         """
-    def renameAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def renameAttribute(self, *args: Any, **kwargs: Any) -> Any:
         """renameAttribute(MObject node, MObject attribute,
         string newShortName, string newShortName) -> self
 
         Adds an operation to the modifer that renames a dynamic attribute on the given dependency node.
         """
-    def renameNode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def renameNode(self, *args: Any, **kwargs: Any) -> Any:
         """renameNode(MObject node, string newName) -> self
 
         Adds an operation to the modifer to rename a node.
         """
-    def setNodeLockState(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setNodeLockState(self, *args: Any, **kwargs: Any) -> Any:
         """setNodeLockState(MObject node, bool newState) -> self
 
         Adds an operation to the modifier to set the lockState of a node.
         """
-    def undoIt(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def undoIt(self, *args: Any, **kwargs: Any) -> Any:
         """undoIt() -> self
 
         Undoes all of the operations that have been given to this modifier. It
         is only valid to call this method after the doIt() method has been
         called.
         """
-    def unlinkExtensionAttributeFromPlugin(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def unlinkExtensionAttributeFromPlugin(self, *args: Any, **kwargs: Any) -> Any:
         """unlinkExtensionAttributeFromPlugin(MObject plugin,
                                            MObject attribute) -> self
 
@@ -1435,7 +1798,9 @@ class MDGModifier:
         """
 
 class MDagMessage(MMessage):
-    def addAllDagChangesCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def addAllDagChangesCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addAllDagChangesCallback(function, clientData=None) -> id
 
         This method registers a callback that is called whenever any
@@ -1449,7 +1814,7 @@ class MDagMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addAllDagChangesDagPathCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addAllDagChangesDagPathCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addAllDagChangesDagPathCallback(node, function, clientData=None) -> id
 
         This method registers a callback that is called whenever a DAG
@@ -1464,7 +1829,7 @@ class MDagMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addChildAddedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addChildAddedCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addChildAddedCallback(function, clientData=None) -> id
 
         This method registers a callback that is called whenever a child is
@@ -1476,7 +1841,7 @@ class MDagMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addChildAddedDagPathCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addChildAddedDagPathCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addChildAddedDagPathCallback(node, function, clientData=None) -> id
 
         This method registers a callback that is called whenever a child is
@@ -1489,7 +1854,7 @@ class MDagMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addChildRemovedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addChildRemovedCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addChildRemovedCallback(function, clientData=None) -> id
 
         This method registers a callback that is called whenever a child is
@@ -1501,7 +1866,7 @@ class MDagMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addChildRemovedDagPathCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addChildRemovedDagPathCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addChildRemovedDagPathCallback(node, function, clientData=None) -> id
 
         This method registers a callback that is called whenever a child is
@@ -1514,7 +1879,7 @@ class MDagMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addChildReorderedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addChildReorderedCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addChildReorderedCallback(function, clientData=None) -> id
 
         This method registers a callback that is called whenever a child is
@@ -1526,7 +1891,7 @@ class MDagMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addChildReorderedDagPathCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addChildReorderedDagPathCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addChildReorderedDagPathCallback(node, function, clientData=None) -> id
 
         This method registers a callback that is called whenever a child of
@@ -1539,7 +1904,7 @@ class MDagMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addDagCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addDagCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addDagCallback(msgType, function, clientData=None) -> id
 
         This method registers a callback that is called for specified
@@ -1555,7 +1920,7 @@ class MDagMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addDagDagPathCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addDagDagPathCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addDagDagPathCallback(node, msgType, function, clientData=None) -> id
 
         This method registers a callback that is called for specified a DAG
@@ -1573,7 +1938,7 @@ class MDagMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addInstanceAddedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addInstanceAddedCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addInstanceAddedCallback(function, clientData=None) -> id
 
         This method registers a callback that is called whenever any node in the DAG
@@ -1585,7 +1950,7 @@ class MDagMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addInstanceAddedDagPathCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addInstanceAddedDagPathCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addInstanceAddedDagPathCallback(node, function, clientData=None) -> id
 
         This method registers a callback that is called whenever the specified node
@@ -1598,7 +1963,7 @@ class MDagMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addInstanceRemovedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addInstanceRemovedCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addInstanceRemovedCallback(function, clientData=None) -> id
 
         This method registers a callback that is called whenever an instance of any DAG
@@ -1610,7 +1975,7 @@ class MDagMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addInstanceRemovedDagPathCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addInstanceRemovedDagPathCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addInstanceRemovedDagPathCallback(node, function, clientData=None) -> id
 
         This method registers a callback that is called whenever an instance of the specified
@@ -1623,7 +1988,7 @@ class MDagMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addMatrixModifiedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addMatrixModifiedCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addMatrixModifiedCallback(node, function, clientData=None) -> id
 
         This method registers a callback that is called when the local matrix
@@ -1666,7 +2031,7 @@ class MDagMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addParentAddedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addParentAddedCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addParentAddedCallback(function, clientData=None) -> id
 
         This method registers a callback that is called whenever a parent is
@@ -1678,7 +2043,7 @@ class MDagMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addParentAddedDagPathCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addParentAddedDagPathCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addParentAddedDagPathCallback(node, function, clientData=None) -> id
 
         This method registers a callback that is called whenever a parent is
@@ -1691,7 +2056,7 @@ class MDagMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addParentRemovedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addParentRemovedCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addParentRemovedCallback(function, clientData=None) -> id
 
         This method registers a callback that is called whenever a parent is
@@ -1703,7 +2068,7 @@ class MDagMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addParentRemovedDagPathCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addParentRemovedDagPathCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addParentRemovedDagPathCallback(node, function, clientData=None) -> id
 
         This method registers a callback that is called whenever a parent is
@@ -1716,7 +2081,7 @@ class MDagMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addWorldMatrixModifiedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addWorldMatrixModifiedCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addWorldMatrixModifiedCallback(node, function, clientData=None) -> id
 
         This method registers a callback that is called when a parent matrix of the
@@ -1811,7 +2176,13 @@ class MDagMessage(MMessage):
     kTranslation: int = ...
 
 class MDagModifier(MDGModifier):
-    def createNode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def createNode(self, *args: Any, **kwargs: Any) -> Any:
         """createNode(typeName, parent=MObject.kNullObj) -> new DAG node MObject
         createNode(typeId,   parent=MObject.kNullObj) -> new DAG node MObject
 
@@ -1828,7 +2199,7 @@ class MDagModifier(MDGModifier):
         None of the newly created nodes will be added to the DAG until the
         modifier's doIt() method is called.
         """
-    def reparentNode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def reparentNode(self, *args: Any, **kwargs: Any) -> Any:
         """reparentNode(MObject node, newParent=MObject.kNullObj) -> self
 
         Adds an operation to the modifier to reparent a DAG node under a
@@ -1840,79 +2211,139 @@ class MDagModifier(MDGModifier):
         """
 
 class MDagPath:
-    def apiType(self: Self) -> int:
+    __doc__: str = ...
+
+    def __eq__(self, value: Any) -> Any:
+        """Return self==value."""
+    def __ge__(self, value: Any) -> Any:
+        """Return self>=value."""
+    def __gt__(self, value: Any) -> Any:
+        """Return self>value."""
+    __hash__: NoneType = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __le__(self, value: Any) -> Any:
+        """Return self<=value."""
+    def __lt__(self, value: Any) -> Any:
+        """Return self<value."""
+    def __ne__(self, value: Any) -> Any:
+        """Return self!=value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def apiType(self) -> int:
         """Returns the type of the object at the end of the path."""
-    def child(self: Self, childNum: int) -> MObject:
+    def child(self, childNum: int) -> MObject:
         """Returns the specified child of the object at the end of the path."""
-    def childCount(self: Self) -> int:
+    def childCount(self) -> int:
         """Returns the number of objects parented directly beneath the object at the end of the path."""
-    def exclusiveMatrix(self: Self) -> MMatrix:
+    def exclusiveMatrix(self) -> MMatrix:
         """Returns the matrix for all transforms in the path, excluding the end object."""
-    def exclusiveMatrixInverse(self: Self) -> MMatrix:
+    def exclusiveMatrixInverse(self) -> MMatrix:
         """Returns the inverse of exclusiveMatrix()."""
-    def extendToShape(self: Self, shapeNum: int = ...) -> str:
+    def extendToShape(self, shapeNum: int = ...) -> str:
         """Extends the path to the specified shape node parented directly beneath the transform at the current end of the path."""
-    def fullPathName(self: Self) -> str:
+    def fullPathName(self) -> str:
         """Returns a string representation of the path from the DAG root to the path's last node."""
-    def getAPathTo(self: Self, node: MObject) -> MDagPath:
+    def getAPathTo(self, node: MObject) -> MDagPath:
         """Returns the first path found to the given node."""
-    def getAllPathsTo(self: Self, node: MObject) -> MDagPathArray:
+    def getAllPathsTo(self, node: MObject) -> MDagPathArray:
         """Returns all paths to the given node."""
-    def getDisplayStatus(self: Self) -> int:
+    def getDisplayStatus(self) -> int:
         """Returns the display status for this path."""
-    def getDrawOverrideInfo(self: Self) -> MDAGDrawOverrideInfo:
+    def getDrawOverrideInfo(self) -> MDAGDrawOverrideInfo:
         """Returns the draw override information for this path."""
-    def getPath(self: Self, pathNum: int = ...) -> MDagPath:
+    def getPath(self, pathNum: int = ...) -> MDagPath:
         """Returns the specified sub-path of this path."""
-    def hasFn(self: Self, type: int) -> bool:
+    def hasFn(self, type: int) -> bool:
         """Returns True if the object at the end of the path supports the given function set."""
-    def inclusiveMatrix(self: Self) -> MMatrix:
+    def inclusiveMatrix(self) -> MMatrix:
         """Returns the matrix for all transforms in the path, including the end object, if it is a transform."""
-    def inclusiveMatrixInverse(self: Self) -> MMatrix:
+    def inclusiveMatrixInverse(self) -> MMatrix:
         """Returns the inverse of inclusiveMatrix()."""
-    def instanceNumber(self: Self) -> int:
+    def instanceNumber(self) -> int:
         """Returns the instance number of this path to the object at the end."""
-    def isInstanced(self: Self) -> bool:
+    def isInstanced(self) -> bool:
         """Returns True if the object at the end of the path can be reached by more than one path."""
-    def isTemplated(self: Self) -> bool:
+    def isTemplated(self) -> bool:
         """Returns true if the DAG Node at the end of the path is templated."""
-    def isValid(self: Self) -> bool:
+    def isValid(self) -> bool:
         """Returns True if this is a valid path."""
-    def isVisible(self: Self) -> bool:
+    def isVisible(self) -> bool:
         """Returns true if the DAG Node at the end of the path is visible."""
-    def length(self: Self) -> int:
+    def length(self) -> int:
         """Returns the number of nodes on the path, not including the DAG's root node."""
-    def matchTransform(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def matchTransform(self, *args: Any, **kwargs: Any) -> Any:
         """Do some new stuff."""
-    def node(self: Self) -> MObject:
+    def node(self) -> MObject:
         """Returns the DAG node at the end of the path."""
-    def numberOfShapesDirectlyBelow(self: Self) -> int:
+    def numberOfShapesDirectlyBelow(self) -> int:
         """Returns the number of shape nodes parented directly beneath the transform at the end of the path."""
-    def partialPathName(self: Self) -> str:
+    def partialPathName(self) -> str:
         """Returns the minimum string representation which will uniquely identify the path."""
-    def pathCount(self: Self) -> int:
+    def pathCount(self) -> int:
         """Returns the number of sub-paths which make up this path."""
-    def pop(self: Self, nom: int = ...) -> Self:
+    def pop(self, nom: int = ...) -> Self:
         """Removes objects from the end of the path."""
-    def push(self: Self, child: MObject) -> Self:
+    def push(self, child: MObject) -> Self:
         """Extends the path to the specified child object, which must be parented directly beneath the object currently at the end of the path."""
-    def set(self: Self, path: MDagPath) -> Self:
+    def set(self, path: MDagPath) -> Self:
         """Replaces the current path held by this object with another."""
-    def transform(self: Self) -> MObject:
+    def transform(self) -> MObject:
         """Returns the last transform node on the path."""
 
 class MDagPathArray:
-    def append(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __add__(self, value: Any) -> Any:
+        """Return self+value."""
+    def __contains__(self, key: Any) -> Any:
+        """Return key in self."""
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    __doc__: str = ...
+
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __iadd__(self, value: Any) -> Any:
+        """Implement self+=value."""
+    def __imul__(self, value: Any) -> Any:
+        """Implement self*=value."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __mul__(self, value: Any) -> Any:
+        """Return self*value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __rmul__(self, value: Any) -> Any:
+        """Return value*self."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """Remove all elements from the array."""
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """Replace the array contents with that of another or of a compatible Python sequence."""
-    def insert(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def insert(self, *args: Any, **kwargs: Any) -> Any:
         """Insert a new value into the array at the given index."""
-    def remove(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def remove(self, *args: Any, **kwargs: Any) -> Any:
         """Remove an element from the array."""
-    def setLength(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setLength(self, *args: Any, **kwargs: Any) -> Any:
         """Grow or shrink the array to contain a specific number of elements."""
     @property
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
@@ -1922,12 +2353,26 @@ class MDagPathArray:
         """Number of elements by which to grow the array when necessary."""
 
 class MDataBlock:
-    def context(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def context(self, *args: Any, **kwargs: Any) -> Any:
         """context() -> MDGContext
 
         Returns a copy of the dependecy graph context for which this data block was created. The context is used to specify how a dependency node is going to be evaluated.
         """
-    def inputArrayValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def inputArrayValue(self, *args: Any, **kwargs: Any) -> Any:
         """inputArrayValue(plug) -> MArrayDataHandle
         inputArrayValue(attribute) -> MArrayDataHandle
 
@@ -1937,7 +2382,7 @@ class MDataBlock:
          OR
         * attribute (MObject) - the attribute whose data you wish to access
         """
-    def inputValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def inputValue(self, *args: Any, **kwargs: Any) -> Any:
         """inputValue(plug) -> MDataHandle
         inputValue(attribute) -> MDataHandle
 
@@ -1947,7 +2392,7 @@ class MDataBlock:
          OR
         * attribute (MObject) - the attribute of the node that you want to access
         """
-    def isClean(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isClean(self, *args: Any, **kwargs: Any) -> Any:
         """isClean(plug) -> bool
         isClean(attribute) -> bool
 
@@ -1957,7 +2402,7 @@ class MDataBlock:
          OR
         * attribute (MObject) - the attribute that is to be query.
         """
-    def outputArrayValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def outputArrayValue(self, *args: Any, **kwargs: Any) -> Any:
         """outputArrayValue(plug) -> MArrayDataHandle
         outputArrayValue(attribute) -> MArrayDataHandle
 
@@ -1969,7 +2414,7 @@ class MDataBlock:
          OR
         * attribute (MObject) - the attribute whose data you wish to access
         """
-    def outputValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def outputValue(self, *args: Any, **kwargs: Any) -> Any:
         """outputValue(plug) -> MDataHandle
         outputValue(attribute) -> MDataHandle
 
@@ -1979,7 +2424,7 @@ class MDataBlock:
          OR
         * attribute (MObject) - the attribute of the node that you want to access
         """
-    def setClean(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setClean(self, *args: Any, **kwargs: Any) -> Any:
         """setClean(plug) -> self
         setClean(attribute) -> self
 
@@ -1989,7 +2434,7 @@ class MDataBlock:
          OR
         * attribute (MObject) - the attribute that is to be marked clean
         """
-    def setContext(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setContext(self, *args: Any, **kwargs: Any) -> Any:
         """setContext(ctx) -> self
 
         Set the dependency graph context for this data block. The context is used to specify how a dependency node is going to be evaluated, thus replacing the context for the given datablock. This does not modify the dirty state of the datablock so that they apply to the new context.
@@ -2000,132 +2445,138 @@ class MDataBlock:
         """
 
 class MDataHandle:
-    def acceptedTypeIds(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def acceptedTypeIds(self, *args: Any, **kwargs: Any) -> Any:
         """acceptedTypeIds() -> array of MTypeIds
 
         This method returns an array of MTypeIds.
         """
-    def asAddr(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asAddr(self, *args: Any, **kwargs: Any) -> Any:
         """asAddr() -> long
 
         Returns the data represented by this handle in the data block.
         """
-    def asAngle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asAngle(self, *args: Any, **kwargs: Any) -> Any:
         """asAngle() -> MAngle
 
         Returns the data represented by this handle in the data block.
         """
-    def asBool(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asBool(self, *args: Any, **kwargs: Any) -> Any:
         """asBool() -> bool
 
         Returns the data represented by this handle in the data block.
         """
-    def asChar(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asChar(self, *args: Any, **kwargs: Any) -> Any:
         """asChar() -> int
 
         Returns the data represented by this handle in the data block.
         """
-    def asDistance(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asDistance(self, *args: Any, **kwargs: Any) -> Any:
         """asDistance() -> MDistance
 
         Returns the data represented by this handle in the data block.
         """
-    def asDouble(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asDouble(self, *args: Any, **kwargs: Any) -> Any:
         """asDouble() -> float
 
         Returns the data represented by this handle in the data block.
         """
-    def asDouble2(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asDouble2(self, *args: Any, **kwargs: Any) -> Any:
         """asDouble2() -> [float, float]
 
         Returns the data represented by this handle in the data block.
         """
-    def asDouble3(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asDouble3(self, *args: Any, **kwargs: Any) -> Any:
         """asDouble3() -> [float, float, float]
 
         Returns the data represented by this handle in the data block.
         """
-    def asDouble4(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asDouble4(self, *args: Any, **kwargs: Any) -> Any:
         """asDouble4() -> [float, float, float, float]
 
         Returns the data represented by this handle in the data block.
         """
-    def asFloat(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asFloat(self, *args: Any, **kwargs: Any) -> Any:
         """asFloat() -> float
 
         Returns the data represented by this handle in the data block.
         """
-    def asFloat2(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asFloat2(self, *args: Any, **kwargs: Any) -> Any:
         """asFloat2() -> [float, float]
 
         Returns the data represented by this handle in the data block.
         """
-    def asFloat3(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asFloat3(self, *args: Any, **kwargs: Any) -> Any:
         """asFloat3() -> [float, float, float]
 
         Returns the data represented by this handle in the data block.
         """
-    def asFloatMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asFloatMatrix(self, *args: Any, **kwargs: Any) -> Any:
         """asFloatMatrix() -> MFloatMatrix
 
         Returns the data represented by this handle in the data block.
         """
-    def asFloatVector(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asFloatVector(self, *args: Any, **kwargs: Any) -> Any:
         """asFloatVector() -> MFloatVector
 
         Returns the data represented by this handle in the data block.
         """
-    def asGenericBool(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asGenericBool(self, *args: Any, **kwargs: Any) -> Any:
         """asGenericBool() -> bool
 
         Returns the generic data represented by this handle in the data block.
         """
-    def asGenericChar(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asGenericChar(self, *args: Any, **kwargs: Any) -> Any:
         """asGenericChar() -> int
 
         Returns the generic data represented by this handle in the data block.
         """
-    def asGenericDouble(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asGenericDouble(self, *args: Any, **kwargs: Any) -> Any:
         """asGenericDouble() -> float
 
         Returns the generic data represented by this handle in the data block.
         """
-    def asGenericFloat(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asGenericFloat(self, *args: Any, **kwargs: Any) -> Any:
         """asGenericFloat() -> float
 
         Returns the generic data represented by this handle in the data block.
         """
-    def asGenericInt(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asGenericInt(self, *args: Any, **kwargs: Any) -> Any:
         """asGenericInt() -> int
 
         Returns the generic data represented by this handle in the data block.
         """
-    def asGenericShort(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asGenericShort(self, *args: Any, **kwargs: Any) -> Any:
         """asGenericShort() -> int
 
         Returns the generic data represented by this handle in the data block.
         """
-    def asInt(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asInt(self, *args: Any, **kwargs: Any) -> Any:
         """asInt() -> int
 
         Returns the data represented by this handle in the data block.
         """
-    def asInt2(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asInt2(self, *args: Any, **kwargs: Any) -> Any:
         """asInt2() -> [int, int]
 
         Returns the data represented by this handle in the data block.
         """
-    def asInt3(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asInt3(self, *args: Any, **kwargs: Any) -> Any:
         """asInt3() -> [int, int, int]
 
         Returns the data represented by this handle in the data block.
         """
-    def asMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asMatrix(self, *args: Any, **kwargs: Any) -> Any:
         """asMatrix() -> MMatrix
 
         Returns the data represented by this handle in the data block.This method is only valid for attributes created using the MFnMatrixAttribute function set.
         """
-    def asMesh(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asMesh(self, *args: Any, **kwargs: Any) -> Any:
         """asMesh() -> MObject
 
         Returns the data represented by this handle in the data block.  The object returned by this call may be used directly with the mesh function set and iterators.  Even though this method does not return a reference to an MObject, modifications to the MObject instance will update the contents of the handle in the data block.  The method MDataHandle.setClean() should be called after the data block has been modified.
@@ -2134,7 +2585,7 @@ class MDataHandle:
 
         It is possible to get the matrix that defines the local to world transformation for this geometry using the MDataHandle.geometryTransformMatrix() method.
         """
-    def asMeshTransformed(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asMeshTransformed(self, *args: Any, **kwargs: Any) -> Any:
         """asMeshTransformed() -> MObject
 
         Returns the data represented by this handle in the data block.  The object returned by this call may be used directly with the mesh function set (MFnMesh) or any of the mesh iterators.
@@ -2143,7 +2594,7 @@ class MDataHandle:
 
         The mesh that is returned from this method should not be modified.  This method is only provided to make it easier to take world space geometry as input.
         """
-    def asNurbsCurve(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asNurbsCurve(self, *args: Any, **kwargs: Any) -> Any:
         """asNurbsCurve() -> MObject
 
         Returns the data represented by this handle in the data block.  The object returned by this call may be used directly with the nurbs curve function set and iterator.  Even though this method does not return a reference to an MObject, modifications to the MObject instance will update the contents of the handle in the data block.  The method MDataHandle.setClean() should be called after the data block has been modified.
@@ -2152,7 +2603,7 @@ class MDataHandle:
 
         It is possible to get the matrix that defines the local to world transformation for this geometry using the MDataHandle.geometryTransformMatrix() method.
         """
-    def asNurbsCurveTransformed(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asNurbsCurveTransformed(self, *args: Any, **kwargs: Any) -> Any:
         """asNurbsCurveTransformed() -> MObject
 
         Returns the data represented by this handle in the data block.  The object returned by this call may be used directly with the nurbs curve function set (MFnNurbsCurve) or the nurbs curve CV iterator (MItCurveCV).
@@ -2161,7 +2612,7 @@ class MDataHandle:
 
         The curve that is returned from this method should not be modified.  This method is only provided to make it easier to take world space geometry as input.
         """
-    def asNurbsSurface(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asNurbsSurface(self, *args: Any, **kwargs: Any) -> Any:
         """asNurbsSurface() -> MObject
 
         Returns the data represented by this handle in the data block.  The object returned by this call may be used directly with the nurbs surface function set and iterator.  Even though this method does not return a reference to an MObject, modifications to the MObject instance will update the contents of the handle in the data block.  The method MDataHandle.setClean() should be called after the data block has been modified.
@@ -2170,7 +2621,7 @@ class MDataHandle:
 
         It is possible to get the matrix that defines the local to world transformation for this geometry using the MDataHandle.geometryTransformMatrix() method.
         """
-    def asNurbsSurfaceTransformed(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asNurbsSurfaceTransformed(self, *args: Any, **kwargs: Any) -> Any:
         """asNurbsSurfaceTransformed() -> MObject
 
         Returns the data represented by this handle in the data block.  The object returned by this call may be used directly with the nurbs surface function set (MFnNurbsSurface) or the nurbs surface CV iterator (MItSurfaceCV).
@@ -2179,32 +2630,32 @@ class MDataHandle:
 
         The surface that is returned from this method should not be modified.  This method is only provided to make it easier to take world space geometry as input.
         """
-    def asPluginData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asPluginData(self, *args: Any, **kwargs: Any) -> Any:
         """asPluginData() -> MPxData
 
         Returns the data represented by this handle in the data block.  The object is returned as plugin data.  This should be used to access data types defined by plugins.
         """
-    def asShort(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asShort(self, *args: Any, **kwargs: Any) -> Any:
         """asShort() -> int
 
         Returns the data represented by this handle in the data block.
         """
-    def asShort2(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asShort2(self, *args: Any, **kwargs: Any) -> Any:
         """asShort2() -> [int, int]
 
         Returns the data represented by this handle in the data block.
         """
-    def asShort3(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asShort3(self, *args: Any, **kwargs: Any) -> Any:
         """asShort3() -> [int, int, int]
 
         Returns the data represented by this handle in the data block.
         """
-    def asString(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asString(self, *args: Any, **kwargs: Any) -> Any:
         """asString() -> MString
 
         Returns the data represented by this handle in the data block.
         """
-    def asSubdSurface(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asSubdSurface(self, *args: Any, **kwargs: Any) -> Any:
         """asSubdSurface() -> MObject
 
         Returns the data represented by this handle in the data block.  The object returned by this call may be used directly with the subdivision surface function set and iterator.  Even though this method does not return a reference to an MObject, modifications to the MObject instance will update the contents of the handle in the data block.  The method MDataHandle.setClean() should be called after the data block has been modified.
@@ -2213,7 +2664,7 @@ class MDataHandle:
 
         It is possible to get the matrix that defines the local to world transformation for this geometry using the MDataHandle.geometryTransformMatrix() method.
         """
-    def asSubdSurfaceTransformed(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asSubdSurfaceTransformed(self, *args: Any, **kwargs: Any) -> Any:
         """asSubdSurfaceTransformed() -> MObject
 
         Returns the data represented by this handle in the data block.  The object returned by this call may be used directly with the subdivision surface function set (MFnSubdSurface) or the subdivision surface iterators (MItSubdVertex, MItSubdFace, MItSubdEdge).
@@ -2222,243 +2673,243 @@ class MDataHandle:
 
         The surface that is returned from this method should not be modified.  This method is only provided to make it easier to take world space geometry as input.
         """
-    def asTime(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asTime(self, *args: Any, **kwargs: Any) -> Any:
         """asTime() -> MTime
 
         Returns the data represented by this handle in the data block.
         """
-    def asUChar(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asUChar(self, *args: Any, **kwargs: Any) -> Any:
         """asUChar() -> int
 
         Returns the data represented by this handle in the data block.
         """
-    def asVector(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asVector(self, *args: Any, **kwargs: Any) -> Any:
         """asVector() -> MVector
 
         Returns the data represented by this handle in the data block.
         """
-    def child(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def child(self, *args: Any, **kwargs: Any) -> Any:
         """child(MPlug) -> MDataHandle
         child(MObject) -> MDataHandle
 
         Get a handle to a child of this handle.  This is used if you have a handle to a compound attribute.
         """
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """copy(src) -> self
 
         Copies the attribute from the src attribute to the attribute referenced by this handle.  This is the only method which can completely copy a compound attribute from one handle to another.  The construct outputHandle.set (inputHandle.data()) will not work for compound or multi attributes.
 
         * src (MDataHandle) - the handle to the attribute to copy.
         """
-    def copyWritable(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copyWritable(self, *args: Any, **kwargs: Any) -> Any:
         """copyWritable(src) -> self
 
         Copies the attribute from the <i>src</i> attribute to the attribute referenced by this handle.  When the copy is made it ensures that the data in this handle is writable. That is, if the src handle has a writable copy of the data then it will be duplicated, otherwise this handle will claim the writer status for the data.
 
         * src (MDataHandle) - the handle to the attribute to copy.
         """
-    def data(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def data(self, *args: Any, **kwargs: Any) -> Any:
         """data() -> MObject
 
         Returns the data object from this handle.  The object returned should be used with the appropriate data function set.  This method is not valid for simple numeric types.
         """
-    def datablock(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def datablock(self, *args: Any, **kwargs: Any) -> Any:
         """datablock() -> MDataBlock
 
         Returns a reference to the datablock assigned to this data handle.
         """
-    def geometryTransformMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def geometryTransformMatrix(self, *args: Any, **kwargs: Any) -> Any:
         """geometryTransformMatrix() -> MMatrix
 
         This method returns a reference to the local-to-world transformation matrix that can accompany a geometry data object.  Only use this method on handles to geometry data (curves, surfaces, and meshes).
 
         If no local-to-world transformation information has been provided then this will be an identity matrix.
         """
-    def isGeneric(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isGeneric(self, *args: Any, **kwargs: Any) -> Any:
         """isGeneric() -> [bool, isNumeric, isNull]
 
         Returns True if this handle is for generic data.  There are 2 forms of generic data.  The first is for simple data and is used if the isNumeric parameter returns True.  In this case, the asGeneric*() and setGeneric*() methods of this class are used to query and set values.
         The second form of generic data is for more complex attribute types.  As a result the type of the object must be checked and an appropriate attribute function set initialized with the object.Returns isNumeric True if this handle is for simple generic numeric data.
         Returns isNull True if this handle is not set.
         """
-    def isNumeric(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isNumeric(self, *args: Any, **kwargs: Any) -> Any:
         """isNumeric() -> bool
 
         Returns True if this handle is for simple numeric data. That means that the numeric data is directly accessible through the non-generic as*() and set*() methods of this handle. For example, depending on handle initialization, the asBool() may be called but the asGenericBool() should not be called.
         """
-    def numericType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numericType(self, *args: Any, **kwargs: Any) -> Any:
         """numericType() -> int
 
         Returns the type of data represented by this handle.  This method is only valid for data handles of simple numeric types.
         """
-    def set2Double(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def set2Double(self, *args: Any, **kwargs: Any) -> Any:
         """set2Double(float, float) -> self
 
         Set the data that this handle represents in the data block.
         """
-    def set2Float(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def set2Float(self, *args: Any, **kwargs: Any) -> Any:
         """set2Float(float, float) -> self
 
         Set the data that this handle represents in the data block.
         """
-    def set2Int(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def set2Int(self, *args: Any, **kwargs: Any) -> Any:
         """set2Int(int, int) -> self
 
         Set the data that this handle represents in the data block.
         """
-    def set2Short(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def set2Short(self, *args: Any, **kwargs: Any) -> Any:
         """set2Short(int, int) -> self
 
         Set the data that this handle represents in the data block.
         """
-    def set3Double(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def set3Double(self, *args: Any, **kwargs: Any) -> Any:
         """set3Double(float, float, float) -> self
 
         Set the data that this handle represents in the data block.
         """
-    def set3Float(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def set3Float(self, *args: Any, **kwargs: Any) -> Any:
         """set3Float(float, float, float) -> self
 
         Set the data that this handle represents in the data block.
         """
-    def set3Int(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def set3Int(self, *args: Any, **kwargs: Any) -> Any:
         """set3Int(int, int, int) -> self
 
         Set the data that this handle represents in the data block.
         """
-    def set3Short(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def set3Short(self, *args: Any, **kwargs: Any) -> Any:
         """set3Short(int, int, int) -> self
 
         Set the data that this handle represents in the data block.
         """
-    def set4Double(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def set4Double(self, *args: Any, **kwargs: Any) -> Any:
         """set4Double(float, float, float, float) -> self
 
         Set the data that this handle represents in the data block.
         """
-    def setBool(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setBool(self, *args: Any, **kwargs: Any) -> Any:
         """setBool(bool) -> self
 
         Set the data that this handle represents in the data block.
         """
-    def setChar(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setChar(self, *args: Any, **kwargs: Any) -> Any:
         """setChar(int) -> self
 
         Set the data that this handle represents in the data block.
         """
-    def setClean(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setClean(self, *args: Any, **kwargs: Any) -> Any:
         """setClean() -> self
 
         Marks the data that is represented by this handle as being clean.  This should be done after recalculating the data from the inputs.
         """
-    def setDouble(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDouble(self, *args: Any, **kwargs: Any) -> Any:
         """setDouble(float) -> self
 
         Set the data that this handle represents in the data block.
         """
-    def setFloat(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setFloat(self, *args: Any, **kwargs: Any) -> Any:
         """setFloat(float) -> self
 
         Set the data that this handle represents in the data block.
         """
-    def setGenericBool(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setGenericBool(self, *args: Any, **kwargs: Any) -> Any:
         """setGenericBool(bool, force) -> self
 
         Set the data that this handle represents in the data block.
         """
-    def setGenericChar(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setGenericChar(self, *args: Any, **kwargs: Any) -> Any:
         """setGenericChar(int, force) -> self
 
         Set the data that this handle represents in the data block.
         """
-    def setGenericDouble(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setGenericDouble(self, *args: Any, **kwargs: Any) -> Any:
         """setGenericDouble(float, force) -> self
 
         Set the data that this handle represents in the data block.
         """
-    def setGenericFloat(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setGenericFloat(self, *args: Any, **kwargs: Any) -> Any:
         """setGenericFloat(float, force) -> self
 
         Set the data that this handle represents in the data block.
         """
-    def setGenericInt(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setGenericInt(self, *args: Any, **kwargs: Any) -> Any:
         """setGenericInt(int, force) -> self
 
         Set the data that this handle represents in the data block.
         """
-    def setGenericShort(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setGenericShort(self, *args: Any, **kwargs: Any) -> Any:
         """setGenericShort(int, force) -> self
 
         Set the data that this handle represents in the data block.
         """
-    def setInt(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setInt(self, *args: Any, **kwargs: Any) -> Any:
         """setInt(int) -> self
 
         Set the data that this handle represents in the data block.
         """
-    def setMAngle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setMAngle(self, *args: Any, **kwargs: Any) -> Any:
         """setMAngle(MAngle) -> self
 
         Set the data that this handle represents in the data block.
         """
-    def setMDistance(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setMDistance(self, *args: Any, **kwargs: Any) -> Any:
         """setMDistance(MDistance) -> self
 
         Set the data that this handle represents in the data block.
         """
-    def setMFloatMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setMFloatMatrix(self, *args: Any, **kwargs: Any) -> Any:
         """setMFloatMatrix(MFloatMatrix) -> self
 
         Set the data that this handle represents in the data block.
         """
-    def setMFloatVector(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setMFloatVector(self, *args: Any, **kwargs: Any) -> Any:
         """setMFloatVector(MFloatVector) -> self
 
         Set the data that this handle represents in the data block.
         """
-    def setMMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setMMatrix(self, *args: Any, **kwargs: Any) -> Any:
         """setMMatrix(MMatrix) -> self
 
         Set the data that this handle represents in the data block.
         """
-    def setMObject(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setMObject(self, *args: Any, **kwargs: Any) -> Any:
         """setMObject(MObject) -> self
 
         Set the data that this handle represents in the data block.  This method assumes that the MObject is a dependency graph data object.  These objects can be created using the appropriate MFn..Data function set.
         Note that this method cannot be used to copy compound or multi attributes from one handle to another via the construct outputHandle.set (inputHandle.data()).
         To copy these user defined attributes, the method MDataHandle.copy() must be used.
         """
-    def setMPxData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setMPxData(self, *args: Any, **kwargs: Any) -> Any:
         """setMPxData(MPxData) -> self
 
         Set the data that this handle represents in the data block.  This method takes a pointer to a user defined data object.  The data block will become the new owner of the data object that you pass in.  Do not delete it.
         """
-    def setMTime(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setMTime(self, *args: Any, **kwargs: Any) -> Any:
         """setMTime(MTime) -> self
 
         Set the data that this handle represents in the data block.
         """
-    def setMVector(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setMVector(self, *args: Any, **kwargs: Any) -> Any:
         """setMVector(MVector) -> self
 
         Set the data that this handle represents in the data block.
         """
-    def setShort(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setShort(self, *args: Any, **kwargs: Any) -> Any:
         """setShort(int) -> self
 
         Set the data that this handle represents in the data block.
         """
-    def setString(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setString(self, *args: Any, **kwargs: Any) -> Any:
         """setString(string) -> self
 
         Set the data that this handle represents in the data block.
         """
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def type(self, *args: Any, **kwargs: Any) -> Any:
         """type() -> int
 
         Returns the type of data represented by this handle.
         """
-    def typeId(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def typeId(self, *args: Any, **kwargs: Any) -> Any:
         """typeId() -> MTypeId
 
         Returns the type of data represented by this handle as a type id.  A type id is a four character code that is used to identify the data type.
@@ -2466,27 +2917,45 @@ class MDataHandle:
         """
 
 class MDistance:
-    def asCentimeters(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def asCentimeters(self, *args: Any, **kwargs: Any) -> Any:
         """Return the distance value, converted to centimeters."""
-    def asFeet(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asFeet(self, *args: Any, **kwargs: Any) -> Any:
         """Return the distance value, converted to feet."""
-    def asInches(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asInches(self, *args: Any, **kwargs: Any) -> Any:
         """Return the distance value, converted to inches."""
-    def asKilometers(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asKilometers(self, *args: Any, **kwargs: Any) -> Any:
         """Return the distance value, converted to kilometers."""
-    def asMeters(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asMeters(self, *args: Any, **kwargs: Any) -> Any:
         """Return the distance value, converted to meters."""
-    def asMiles(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asMiles(self, *args: Any, **kwargs: Any) -> Any:
         """Return the distance value, converted to miles."""
-    def asMillimeters(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asMillimeters(self, *args: Any, **kwargs: Any) -> Any:
         """Return the distance value, converted to millimeters."""
-    def asUnits(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asUnits(self, *args: Any, **kwargs: Any) -> Any:
         """Return the distance value, converted to the specified units."""
-    def asYards(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asYards(self, *args: Any, **kwargs: Any) -> Any:
         """Return the distance value, converted to yards."""
-    def internalToUI(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def internalToUI(self, *args: Any, **kwargs: Any) -> Any:
         """Convert a value from Maya's internal units to the units used in the UI."""
-    def internalUnit(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def internalUnit(self, *args: Any, **kwargs: Any) -> Any:
         """Return the distance unit used internally by Maya."""
     kCentimeters: int = ...
     kFeet: int = ...
@@ -2499,11 +2968,11 @@ class MDistance:
     kMillimeters: int = ...
     kYards: int = ...
 
-    def setUIUnit(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setUIUnit(self, *args: Any, **kwargs: Any) -> Any:
         """Change the units used to display distances in Maya's UI."""
-    def uiToInternal(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def uiToInternal(self, *args: Any, **kwargs: Any) -> Any:
         """Convert a value from the units used in the UI to Maya's internal units."""
-    def uiUnit(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def uiUnit(self, *args: Any, **kwargs: Any) -> Any:
         """Return the units used to display distances in Maya's UI."""
     @property
     def unit(*args: Any, **kwargs: Any) -> Any:
@@ -2519,17 +2988,55 @@ class MDistance:
         """Value of the distance in the current units."""
 
 class MDoubleArray:
-    def append(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __add__(self, value: Any) -> Any:
+        """Return self+value."""
+    def __contains__(self, key: Any) -> Any:
+        """Return key in self."""
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    __doc__: str = ...
+
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __iadd__(self, value: Any) -> Any:
+        """Implement self+=value."""
+    def __imul__(self, value: Any) -> Any:
+        """Implement self*=value."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __mul__(self, value: Any) -> Any:
+        """Return self*value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __rmul__(self, value: Any) -> Any:
+        """Return value*self."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """Remove all elements from the array."""
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """Replace the array contents with that of another or of a compatible Python sequence."""
-    def insert(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def insert(self, *args: Any, **kwargs: Any) -> Any:
         """Insert a new value into the array at the given index."""
-    def remove(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def remove(self, *args: Any, **kwargs: Any) -> Any:
         """Remove an element from the array."""
-    def setLength(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setLength(self, *args: Any, **kwargs: Any) -> Any:
         """Grow or shrink the array to contain a specific number of elements."""
     @property
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
@@ -2539,41 +3046,93 @@ class MDoubleArray:
         """Number of elements by which to grow the array when necessary."""
 
 class MEulerRotation:
-    def alternateSolution(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __add__(self, value: Any) -> Any:
+        """Return self+value."""
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    __doc__: str = ...
+
+    def __eq__(self, value: Any) -> Any:
+        """Return self==value."""
+    def __ge__(self, value: Any) -> Any:
+        """Return self>=value."""
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __gt__(self, value: Any) -> Any:
+        """Return self>value."""
+    __hash__: NoneType = ...
+
+    def __iadd__(self, value: Any) -> Any:
+        """Return self+=value."""
+    def __imul__(self, value: Any) -> Any:
+        """Return self*=value."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __isub__(self, value: Any) -> Any:
+        """Return self-=value."""
+    def __le__(self, value: Any) -> Any:
+        """Return self<=value."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __lt__(self, value: Any) -> Any:
+        """Return self<value."""
+    def __mul__(self, value: Any) -> Any:
+        """Return self*value."""
+    def __ne__(self, value: Any) -> Any:
+        """Return self!=value."""
+    def __neg__(self) -> Any:
+        """-self"""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __radd__(self, value: Any) -> Any:
+        """Return value+self."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __rmul__(self, value: Any) -> Any:
+        """Return value*self."""
+    def __rsub__(self, value: Any) -> Any:
+        """Return value-self."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def __sub__(self, value: Any) -> Any:
+        """Return self-value."""
+    def alternateSolution(self, *args: Any, **kwargs: Any) -> Any:
         """Returns an equivalent rotation which is not simply a multiple."""
-    def asMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asMatrix(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the rotation as an equivalent matrix."""
-    def asQuaternion(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asQuaternion(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the rotation as an equivalent quaternion."""
-    def asVector(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asVector(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the X, Y and Z rotations as a vector."""
-    def bound(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def bound(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a new MEulerRotation having this rotation, but with each rotation component bound within +/- PI."""
-    def boundIt(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def boundIt(self, *args: Any, **kwargs: Any) -> Any:
         """In-place bounding of each rotation component to lie wthin +/- PI."""
-    def closestCut(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def closestCut(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the rotation which is full spin multiples of this one and comes closest to target."""
-    def closestSolution(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def closestSolution(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the equivalent rotation which comes closest to a target."""
-    def computeAlternateSolution(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def computeAlternateSolution(self, *args: Any, **kwargs: Any) -> Any:
         """Returns an equivalent rotation which is not simply a multiple."""
-    def computeBound(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def computeBound(self, *args: Any, **kwargs: Any) -> Any:
         """Returns an equivalent rotation with each rotation component bound within +/- PI."""
-    def computeClosestCut(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def computeClosestCut(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the rotation which is full spin multiples of the src and comes closest to target."""
-    def computeClosestSolution(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def computeClosestSolution(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the equivalent rotation which comes closest to a target."""
-    def decompose(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def decompose(self, *args: Any, **kwargs: Any) -> Any:
         """Extracts a rotation from a matrix."""
-    def incrementalRotateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def incrementalRotateBy(self, *args: Any, **kwargs: Any) -> Any:
         """Increase this rotation by a given angle around the specified axis. The update is done in series of small increments to avoid flipping."""
-    def inverse(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def inverse(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a new MEulerRotation containing the inverse rotation of this one and reversed rotation order."""
-    def invertIt(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def invertIt(self, *args: Any, **kwargs: Any) -> Any:
         """In-place inversion of the rotation. Rotation order is also reversed."""
-    def isEquivalent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isEquivalent(self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if this rotation has the same order as another and their X, Y and Z components are within a tolerance of each other."""
-    def isZero(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isZero(self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the X, Y and Z components are each within a tolerance of 0.0."""
     kIdentity: MEulerRotation = ...
     kTolerance: float = ...
@@ -2590,17 +3149,17 @@ class MEulerRotation:
     @order.setter
     def order(*args: Any, **kwargs: Any) -> Any:
         """Rotation order"""
-    def reorder(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def reorder(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a new MEulerRotation having this rotation, reordered to use the given rotation order."""
-    def reorderIt(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def reorderIt(self, *args: Any, **kwargs: Any) -> Any:
         """In-place reordering to use the given rotation order."""
-    def setToAlternateSolution(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setToAlternateSolution(self, *args: Any, **kwargs: Any) -> Any:
         """Replace this rotation with an alternate solution."""
-    def setToClosestCut(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setToClosestCut(self, *args: Any, **kwargs: Any) -> Any:
         """Replace this rotation with the closest cut to a target."""
-    def setToClosestSolution(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setToClosestSolution(self, *args: Any, **kwargs: Any) -> Any:
         """Replace this rotation with the closest solution to a target."""
-    def setValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setValue(self, *args: Any, **kwargs: Any) -> Any:
         """Set the rotation."""
     @property
     def x(*args: Any, **kwargs: Any) -> Any:
@@ -2622,29 +3181,43 @@ class MEulerRotation:
         """Z rotation in radians"""
 
 class MEvaluationNode:
-    def datablock(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def datablock(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the datablock for this node."""
-    def dependencyNode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def dependencyNode(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the dependency node this evaluation node represents."""
-    def dirtyPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def dirtyPlug(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the top-most plug for the specified attribute if the attribute has dirty plugs. This call should be made from MPxNode::preEvaluation() and MPxNode::postEvaluation() to access a networked plug which is going to be dirty and computed."""
-    def dirtyPlugExists(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def dirtyPlugExists(self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the specified attribute has a dirty plug. This call should be made from MPxNode::preEvaluation() and MPxNode::postEvaluation() to verify which plugs are going to be dirty and computed."""
-    def iterator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def iterator(self, *args: Any, **kwargs: Any) -> Any:
         """Returns an iterator at the beginning of the dirty plug list."""
 
 class MEvaluationNodeIterator:
-    def isDone(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def isDone(self, *args: Any, **kwargs: Any) -> Any:
         """Checks to see if the iterator has reached the end of the iteration."""
-    def next(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def next(self, *args: Any, **kwargs: Any) -> Any:
         """Advances the iterator to the next position in the dirty plug list."""
-    def plug(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def plug(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the dirty plug at the current iterator position. Returns an empty plug if the iterator is illegal."""
-    def reset(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def reset(self, *args: Any, **kwargs: Any) -> Any:
         """Resets the iterator to the first position in the dirty plug list."""
 
 class MEventMessage(MMessage):
-    def addEventCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def addEventCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addEventCallback(eventName, function, clientData=None) -> id
 
         This method registers a callback for event occurred messages.
@@ -2658,7 +3231,7 @@ class MEventMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def getEventNames(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getEventNames(self, *args: Any, **kwargs: Any) -> Any:
         """getEventNames() -> (string, string, ...)
 
         This method returns the list of available event names.
@@ -2667,7 +3240,17 @@ class MEventMessage(MMessage):
         """
 
 class MExternalContentInfoTable:
-    def addResolvedEntry(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addResolvedEntry(self, *args: Any, **kwargs: Any) -> Any:
         """addResolvedEntry(key, unresolvedLocation, resolvedLocation, contextNodeFullName, roles) -> self
 
         Add an entry in the table.
@@ -2678,7 +3261,7 @@ class MExternalContentInfoTable:
         * contextNodeFullName (string) - The fullname of the URI owner (node) if it applies, an empty string otherwise.
         * roles (list of strings) - An enumeration of all roles this content plays in the context of the node. The actual strings are not rigidly defined as of this writing. This is mostly for offline browsing of the content info: to assist in sorting content by role.  A better content type system may be introduced later on to	formalize this.
         """
-    def addUnresolvedEntry(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addUnresolvedEntry(self, *args: Any, **kwargs: Any) -> Any:
         """addUnresolvedEntry(key, unresolvedLocation, contextNodeFullName, roles=None) -> self
 
         Add an entry in the table. The resolved location will be inferred from the application's built-in file resolving for the specified file type. This will automatically add entries into the roles vector that correspond to the search rules for this file type.
@@ -2688,14 +3271,14 @@ class MExternalContentInfoTable:
         * contextNodeFullName (string) - See documentation of MExternalContentInfoTable.addResolvedEntry().
         * roles (list of strings) - See documentation of MExternalContentInfoTable.addResolvedEntry().
         """
-    def getEntry(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getEntry(self, *args: Any, **kwargs: Any) -> Any:
         """getEntry(index) -> [key, unresolvedLocation, resolvedLocation, contextNodeFullName, roles]
 
         Retrieves external content entry based on its position in the table.
 
         * index (unsigned int) - Position of the entry to retrieve information from.
         """
-    def getInfo(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getInfo(self, *args: Any, **kwargs: Any) -> Any:
         """getInfo(key) -> [unresolvedLocation, resolvedLocation, contextNodeFullName, roles]
 
         Retrieves external content information based on its key.
@@ -2704,21 +3287,31 @@ class MExternalContentInfoTable:
         """
 
 class MExternalContentLocationTable:
-    def addEntry(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addEntry(self, *args: Any, **kwargs: Any) -> Any:
         """addEntry(key, location) -> self
 
         Adds an external content location and its key to the table.
 
         * key (string) - An arbitrary string defined by the node. This will typically be an attribute name for situations where the content location is stored verbatim in a plug's value.* location (string) - Full path to the content referenced by the key.
         """
-    def getEntry(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getEntry(self, *args: Any, **kwargs: Any) -> Any:
         """getEntry(index) -> [key, location]
 
         Retrieves external content entry based on its position in the table.
 
         * index (unsigned int) - Position of the entry to retrieve information from.
         """
-    def getLocation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getLocation(self, *args: Any, **kwargs: Any) -> Any:
         """getLocation(key) -> string
 
         Retrieves an entry's location based on the associated key.
@@ -2727,14 +3320,20 @@ class MExternalContentLocationTable:
         """
 
 class MFileObject:
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """copy(source) -> self
 
         Copy data from source file object.
 
         * source (MFileObject) - The source file object to copy from
         """
-    def exists(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def exists(self, *args: Any, **kwargs: Any) -> Any:
         """exists(index=None) -> bool
 
         Checks to see if the file exists and is readable.
@@ -2742,7 +3341,7 @@ class MFileObject:
 
         * index (int) - Index of the path element to be used in searching for the file.
         """
-    def expandedFullName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def expandedFullName(self, *args: Any, **kwargs: Any) -> Any:
         """expandedFullName() -> string
 
         Returns the pathname of a file constructed from the unresolved file object values. The file name will consist of the the expanded raw path and raw name elements.
@@ -2750,14 +3349,14 @@ class MFileObject:
 
         After expanding environment variables Maya may perform additional modifications to the full file name in order to resolve it to a valid location on disk. This resolved full file name can be accessed through resolvedFullName().
         """
-    def expandedPath(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def expandedPath(self, *args: Any, **kwargs: Any) -> Any:
         """expandedPath() -> string
 
         Returns the raw path element of the unresolved file object with all environment variables expanded. In the case that the path expands to multiple paths, the first expanded path will be returned.
 
         After expanding environment variables Maya may perform additional modifications to the path in order to resolve it to a valid location on disk. This resolved path can be accessed through resolvedPath().
         """
-    def fullName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def fullName(self, *args: Any, **kwargs: Any) -> Any:
         """fullName(index) -> string
 
         Returns the pathname of a file constructed from the indicated portion of the path element and filename element.
@@ -2765,14 +3364,14 @@ class MFileObject:
 
         * index (int) - the index of the desired path portion.
         """
-    def getResolvedFullName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getResolvedFullName(self, *args: Any, **kwargs: Any) -> Any:
         """getResolvedFullName(rawFullName) -> string
 
         Returns the full path to the resolved file, or an empty string if the resolution was unsuccessful.
 
         * rawFullName (string) - The fully specified unresolved path.
         """
-    def getResolvedFullNameAndExistsStatus(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getResolvedFullNameAndExistsStatus(self, *args: Any, **kwargs: Any) -> Any:
         """getResolvedFullNameAndExistsStatus(rawFullName, method=kNone) -> (string, bool)
 
         Returns the full path to the resolved file, or an empty string if the resolution was unsuccessful, and a boolean that indicate if the resolved path exists or not.
@@ -2811,14 +3410,14 @@ class MFileObject:
                                    Combination of kInputFile and kReferenceMappings.
           kStrict                  Combination of kExact and kDirMap.
         """
-    def isAbsolutePath(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isAbsolutePath(self, *args: Any, **kwargs: Any) -> Any:
         """isAbsolutePath(fileName) -> bool
 
         Checks a file path string and determines if it represents an absolute file path. An absolute path can uniquely identify a directory or file.
 
         * fileName (string) - the string used to check if it is absolute
         """
-    def isSet(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isSet(self, *args: Any, **kwargs: Any) -> Any:
         """isSet() -> bool
 
         Checks to see if both file and path elements of the file object have been set.
@@ -2833,7 +3432,7 @@ class MFileObject:
     kRelative: int = ...
     kStrict: int = ...
 
-    def overrideResolvedFullName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def overrideResolvedFullName(self, *args: Any, **kwargs: Any) -> Any:
         """overrideResolvedFullName(fullFileName, reresolveType=False) -> self
 
         Normally when a raw file name is set, Maya will perform a series of operations on it in an attempt to resolve it to a valid file name. This final resolved file name can be accessed through the resolvedName(), resolvedPath(), and resolvedFullFileName() methods and can be quite different from the originally specified raw file name.
@@ -2844,37 +3443,37 @@ class MFileObject:
 
         - fullFileName (string) - the string used to override the path and filename.- reresolveType (bool) - if Maya should re-resolve the file type/translator.
         """
-    def path(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def path(self, *args: Any, **kwargs: Any) -> Any:
         """path(index) -> string
 
         Returns the indicated portion of the path element of the file object.  All variables in the path element are expanded, and the portion indicated by the argument is extracted and returned.
 
         * index (int) - the index of the desired path portion.
         """
-    def pathCount(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def pathCount(self, *args: Any, **kwargs: Any) -> Any:
         """pathCount() -> int
 
         Returns the number of paths in the path element of the file object.
         This will be equal to one more than the number of ':' characters specified of the rawPath attribute.
         """
-    def rawFullName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rawFullName(self, *args: Any, **kwargs: Any) -> Any:
         """rawFullName() -> string
 
         Returns the unresolved full file name (path plus filename) of the MFileObject with all environment variables unexpanded.
 
         This method differs from expandedFullName() in that it returns the unexpanded instead of expanded values.
         """
-    def rawName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rawName(self, *args: Any, **kwargs: Any) -> Any:
         """rawName() -> string
 
         Returns the unresolved filename element of the MFileObject.
         """
-    def rawPath(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rawPath(self, *args: Any, **kwargs: Any) -> Any:
         """rawPath() -> string
 
         Returns the path element of the MFileObject with all environment variables unexpanded.
         """
-    def rawURI(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rawURI(self, *args: Any, **kwargs: Any) -> Any:
         """rawURI() -> MURI
 
         Returns the unresolved URI of the MFileObject, if any.
@@ -2887,7 +3486,7 @@ class MFileObject:
     @resolveMethod.setter
     def resolveMethod(*args: Any, **kwargs: Any) -> Any:
         """The file-path resolution steps this file object will use."""
-    def resolvedFullName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def resolvedFullName(self, *args: Any, **kwargs: Any) -> Any:
         """resolvedFullName() -> string
 
         Returns the first pathname of a file constructed from the path and filename elements.  All variables in the path element are expanded, and the first path (the part before the first ':' in the path) is prepended to the filename element. After expanding all environment	variables Maya may then perform additional modifications, such	as prepending directories to a relative path name, in order to resolve the path to a valid location on disk.
@@ -2898,17 +3497,17 @@ class MFileObject:
 
         Failure to resolve the path according to the specifications of the file object will result in an empty return value.
         """
-    def resolvedName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def resolvedName(self, *args: Any, **kwargs: Any) -> Any:
         """resolvedName() -> string
 
         Returns the resolved filename element of the file object.
         """
-    def resolvedPath(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def resolvedPath(self, *args: Any, **kwargs: Any) -> Any:
         """resolvedPath() -> string
 
         Returns the resolved path element of the file object. In order to build the resolved path, Maya first expands all environment variables and then may perform additional modifications, such as prepending directories to a relative path name, in order to resolve the path to a valid location on disk.
         """
-    def setRawFullName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setRawFullName(self, *args: Any, **kwargs: Any) -> Any:
         """setRawFullName(fullFileName) -> self
 
         This method combines the functions of the setRawName and setRawPath methods in that it sets both the path and filename from the given name.
@@ -2923,14 +3522,14 @@ class MFileObject:
 
         * fullFileName (string) - The string used to initialize the path and filename.
         """
-    def setRawName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setRawName(self, *args: Any, **kwargs: Any) -> Any:
         """setRawName(fileName) -> self
 
         Set the unresolved filename element of the MFileObject instance.  This name should not contain any '/' characters, it should indicate simply the name of a file.  The directories in which this name will be searched for are specified by setRawPath.
 
         * fileName (string) - The filename to set.
         """
-    def setRawPath(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setRawPath(self, *args: Any, **kwargs: Any) -> Any:
         """setRawPath(pathName) -> self
 
         Set the unresolved path element of the MFileObject instance.  This should contain a list of directories, each separated by a single ':' character.  The pathnames can contain Unix environment variables in the form $VARNAME.  These will be expanded when paths to actual filenames are constructed.
@@ -2939,7 +3538,7 @@ class MFileObject:
 
         * pathName (string) - The path string.
         """
-    def setRawURI(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setRawURI(self, *args: Any, **kwargs: Any) -> Any:
         """setRawURI(uri) -> self
 
         Set the unresolved URI of the MFileObject instance.
@@ -2948,17 +3547,55 @@ class MFileObject:
         """
 
 class MFloatArray:
-    def append(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __add__(self, value: Any) -> Any:
+        """Return self+value."""
+    def __contains__(self, key: Any) -> Any:
+        """Return key in self."""
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    __doc__: str = ...
+
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __iadd__(self, value: Any) -> Any:
+        """Implement self+=value."""
+    def __imul__(self, value: Any) -> Any:
+        """Implement self*=value."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __mul__(self, value: Any) -> Any:
+        """Return self*value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __rmul__(self, value: Any) -> Any:
+        """Return value*self."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """Remove all elements from the array."""
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """Replace the array contents with that of another or of a compatible Python sequence."""
-    def insert(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def insert(self, *args: Any, **kwargs: Any) -> Any:
         """Insert a new value into the array at the given index."""
-    def remove(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def remove(self, *args: Any, **kwargs: Any) -> Any:
         """Remove an element from the array."""
-    def setLength(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setLength(self, *args: Any, **kwargs: Any) -> Any:
         """Grow or shrink the array to contain a specific number of elements."""
     @property
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
@@ -2968,44 +3605,148 @@ class MFloatArray:
         """Number of elements by which to grow the array when necessary."""
 
 class MFloatMatrix:
-    def adjoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __add__(self, value: Any) -> Any:
+        """Return self+value."""
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    __doc__: str = ...
+
+    def __eq__(self, value: Any) -> Any:
+        """Return self==value."""
+    def __ge__(self, value: Any) -> Any:
+        """Return self>=value."""
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __gt__(self, value: Any) -> Any:
+        """Return self>value."""
+    __hash__: NoneType = ...
+
+    def __iadd__(self, value: Any) -> Any:
+        """Return self+=value."""
+    def __imul__(self, value: Any) -> Any:
+        """Return self*=value."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __isub__(self, value: Any) -> Any:
+        """Return self-=value."""
+    def __le__(self, value: Any) -> Any:
+        """Return self<=value."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __lt__(self, value: Any) -> Any:
+        """Return self<value."""
+    def __mul__(self, value: Any) -> Any:
+        """Return self*value."""
+    def __ne__(self, value: Any) -> Any:
+        """Return self!=value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __radd__(self, value: Any) -> Any:
+        """Return value+self."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __rmul__(self, value: Any) -> Any:
+        """Return value*self."""
+    def __rsub__(self, value: Any) -> Any:
+        """Return value-self."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def __sub__(self, value: Any) -> Any:
+        """Return self-value."""
+    def adjoint(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a new matrix containing this matrix's adjoint."""
-    def det3x3(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def det3x3(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the determinant of the 3x3 matrix formed by the first 3 elements of the first 3 rows of this matrix."""
-    def det4x4(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def det4x4(self, *args: Any, **kwargs: Any) -> Any:
         """Returns this matrix's determinant."""
-    def getElement(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getElement(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the matrix element for the specified row and column."""
-    def homogenize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def homogenize(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a new matrix containing the homogenized version of this matrix."""
-    def inverse(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def inverse(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a new matrix containing this matrix's inverse."""
-    def isEquivalent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isEquivalent(self, *args: Any, **kwargs: Any) -> Any:
         """Test for equivalence of two matrices, within a tolerance."""
     kTolerance: float = ...
 
-    def setElement(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setElement(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the matrix element for the specified row and column."""
-    def setToIdentity(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setToIdentity(self, *args: Any, **kwargs: Any) -> Any:
         """Sets this matrix to the identity."""
-    def setToProduct(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setToProduct(self, *args: Any, **kwargs: Any) -> Any:
         """Sets this matrix to the product of the two matrices passed in."""
-    def transpose(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def transpose(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a new matrix containing this matrix's transpose."""
 
 class MFloatPoint:
-    def cartesianize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __add__(self, value: Any) -> Any:
+        """Return self+value."""
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    __doc__: str = ...
+
+    def __eq__(self, value: Any) -> Any:
+        """Return self==value."""
+    def __ge__(self, value: Any) -> Any:
+        """Return self>=value."""
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __gt__(self, value: Any) -> Any:
+        """Return self>value."""
+    __hash__: NoneType = ...
+
+    def __iadd__(self, value: Any) -> Any:
+        """Return self+=value."""
+    def __imul__(self, value: Any) -> Any:
+        """Return self*=value."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __isub__(self, value: Any) -> Any:
+        """Return self-=value."""
+    def __le__(self, value: Any) -> Any:
+        """Return self<=value."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __lt__(self, value: Any) -> Any:
+        """Return self<value."""
+    def __mul__(self, value: Any) -> Any:
+        """Return self*value."""
+    def __ne__(self, value: Any) -> Any:
+        """Return self!=value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __radd__(self, value: Any) -> Any:
+        """Return value+self."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __rmul__(self, value: Any) -> Any:
+        """Return value*self."""
+    def __rsub__(self, value: Any) -> Any:
+        """Return value-self."""
+    def __rtruediv__(self, value: Any) -> Any:
+        """Return value/self."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def __sub__(self, value: Any) -> Any:
+        """Return self-value."""
+    def __truediv__(self, value: Any) -> Any:
+        """Return self/value."""
+    def cartesianize(self, *args: Any, **kwargs: Any) -> Any:
         """Convert point to cartesian form."""
-    def distanceTo(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def distanceTo(self, *args: Any, **kwargs: Any) -> Any:
         """Return distance between this point and another."""
-    def homogenize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def homogenize(self, *args: Any, **kwargs: Any) -> Any:
         """Convert point to homogenous form."""
-    def isEquivalent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isEquivalent(self, *args: Any, **kwargs: Any) -> Any:
         """Test for equivalence of two points, within a tolerance."""
     kOrigin: MFloatPoint = ...
     kTolerance: float = ...
 
-    def rationalize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rationalize(self, *args: Any, **kwargs: Any) -> Any:
         """Convert point to rational form."""
     @property
     def w(*args: Any, **kwargs: Any) -> Any:
@@ -3033,17 +3774,55 @@ class MFloatPoint:
         """Z coordinate"""
 
 class MFloatPointArray:
-    def append(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __add__(self, value: Any) -> Any:
+        """Return self+value."""
+    def __contains__(self, key: Any) -> Any:
+        """Return key in self."""
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    __doc__: str = ...
+
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __iadd__(self, value: Any) -> Any:
+        """Implement self+=value."""
+    def __imul__(self, value: Any) -> Any:
+        """Implement self*=value."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __mul__(self, value: Any) -> Any:
+        """Return self*value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __rmul__(self, value: Any) -> Any:
+        """Return value*self."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """Remove all elements from the array."""
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """Replace the array contents with that of another or of a compatible Python sequence."""
-    def insert(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def insert(self, *args: Any, **kwargs: Any) -> Any:
         """Insert a new value into the array at the given index."""
-    def remove(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def remove(self, *args: Any, **kwargs: Any) -> Any:
         """Remove an element from the array."""
-    def setLength(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setLength(self, *args: Any, **kwargs: Any) -> Any:
         """Grow or shrink the array to contain a specific number of elements."""
     @property
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
@@ -3053,11 +3832,73 @@ class MFloatPointArray:
         """Number of elements by which to grow the array when necessary."""
 
 class MFloatVector:
-    def angle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __add__(self, value: Any) -> Any:
+        """Return self+value."""
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    __doc__: str = ...
+
+    def __eq__(self, value: Any) -> Any:
+        """Return self==value."""
+    def __ge__(self, value: Any) -> Any:
+        """Return self>=value."""
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __gt__(self, value: Any) -> Any:
+        """Return self>value."""
+    __hash__: NoneType = ...
+
+    def __iadd__(self, value: Any) -> Any:
+        """Return self+=value."""
+    def __imul__(self, value: Any) -> Any:
+        """Return self*=value."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __isub__(self, value: Any) -> Any:
+        """Return self-=value."""
+    def __itruediv__(self, value: Any) -> Any:
+        """Return self/=value."""
+    def __le__(self, value: Any) -> Any:
+        """Return self<=value."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __lt__(self, value: Any) -> Any:
+        """Return self<value."""
+    def __mul__(self, value: Any) -> Any:
+        """Return self*value."""
+    def __ne__(self, value: Any) -> Any:
+        """Return self!=value."""
+    def __neg__(self) -> Any:
+        """-self"""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __radd__(self, value: Any) -> Any:
+        """Return value+self."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __rmul__(self, value: Any) -> Any:
+        """Return value*self."""
+    def __rsub__(self, value: Any) -> Any:
+        """Return value-self."""
+    def __rtruediv__(self, value: Any) -> Any:
+        """Return value/self."""
+    def __rxor__(self, value: Any) -> Any:
+        """Return value^self."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def __sub__(self, value: Any) -> Any:
+        """Return self-value."""
+    def __truediv__(self, value: Any) -> Any:
+        """Return self/value."""
+    def __xor__(self, value: Any) -> Any:
+        """Return self^value."""
+    def angle(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the angle, in radians, between this vector and another."""
-    def isEquivalent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isEquivalent(self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if this vector and another are within a given tolerance of being equal."""
-    def isParallel(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isParallel(self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if this vector and another are within the given tolerance of being parallel."""
     kOneVector: MFloatVector = ...
     kTolerance: float = ...
@@ -3069,13 +3910,13 @@ class MFloatVector:
     kZeroVector: MFloatVector = ...
     kZnegAxisVector: MFloatVector = ...
 
-    def length(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def length(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the magnitude of this vector."""
-    def normal(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def normal(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a new vector containing the normalized version of this one."""
-    def normalize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def normalize(self, *args: Any, **kwargs: Any) -> Any:
         """Normalizes this vector in-place and returns a new reference to it."""
-    def transformAsNormal(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def transformAsNormal(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a new vector which is calculated by postmultiplying this vector by the transpose of the given matrix and then normalizing the result."""
     @property
     def x(*args: Any, **kwargs: Any) -> Any:
@@ -3097,17 +3938,55 @@ class MFloatVector:
         """Z coordinate"""
 
 class MFloatVectorArray:
-    def append(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __add__(self, value: Any) -> Any:
+        """Return self+value."""
+    def __contains__(self, key: Any) -> Any:
+        """Return key in self."""
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    __doc__: str = ...
+
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __iadd__(self, value: Any) -> Any:
+        """Implement self+=value."""
+    def __imul__(self, value: Any) -> Any:
+        """Implement self*=value."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __mul__(self, value: Any) -> Any:
+        """Return self*value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __rmul__(self, value: Any) -> Any:
+        """Return value*self."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """Remove all elements from the array."""
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """Replace the array contents with that of another or of a compatible Python sequence."""
-    def insert(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def insert(self, *args: Any, **kwargs: Any) -> Any:
         """Insert a new value into the array at the given index."""
-    def remove(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def remove(self, *args: Any, **kwargs: Any) -> Any:
         """Remove an element from the array."""
-    def setLength(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setLength(self, *args: Any, **kwargs: Any) -> Any:
         """Grow or shrink the array to contain a specific number of elements."""
     @property
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
@@ -3117,6 +3996,7 @@ class MFloatVectorArray:
         """Number of elements by which to grow the array when necessary."""
 
 class MFn:
+    __doc__: str = ...
     kAISEnvFacade: int = ...
     kAddDoubleLinear: int = ...
     kAdskMaterial: int = ...
@@ -4270,21 +5150,47 @@ class MFn:
     kXsectionSubdivEdit: int = ...
 
 class MFnBase:
-    def hasObj(self: Self, type: int | MObject) -> bool:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def hasObj(self, type: int | MObject) -> bool:
         """Returns True if the function set is compatible with the specified Maya object."""
-    def object(self: Self) -> MObject:
+    def object(self) -> MObject:
         """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-    def setObject(self: Self, object: MObject) -> Self:
+    def setObject(self, object: MObject) -> Self:
         """Attaches the function set to the specified Maya object."""
-    def type(self: Self) -> int:
+    def type(self) -> int:
         """Returns the type of the function set."""
 
 class MFnAttribute(MFnBase):
-    def accepts(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __init_subclass__(self, *args: Any, **kwargs: Any) -> Any:
+        """This method is called when a class is subclassed.
+
+        The default implementation does nothing. It may be
+        overridden to extend subclasses.
+        """
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def accepts(self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if this attribute can accept a connection of the given type."""
-    def acceptsAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def acceptsAttribute(self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if this attribute can accept a connection with the given attribute."""
-    def addToCategory(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addToCategory(self, *args: Any, **kwargs: Any) -> Any:
         """Adds the attribute to a category"""
     @property
     def affectsAppearance(*args: Any, **kwargs: Any) -> Any:
@@ -4340,9 +5246,9 @@ class MFnAttribute(MFnBase):
     @extension.setter
     def extension(*args: Any, **kwargs: Any) -> Any:
         """Is the attribute an extension attribute?"""
-    def getAddAttrCmd(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getAddAttrCmd(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a string containing a MEL 'addAttr' command capable of recreating the attribute."""
-    def hasCategory(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasCategory(self, *args: Any, **kwargs: Any) -> Any:
         """Checks to see if the attribute has a given category"""
     @property
     def hidden(*args: Any, **kwargs: Any) -> Any:
@@ -4408,7 +5314,7 @@ class MFnAttribute(MFnBase):
     @renderSource.setter
     def renderSource(*args: Any, **kwargs: Any) -> Any:
         """Is the attribute a render source?"""
-    def setNiceNameOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setNiceNameOverride(self, *args: Any, **kwargs: Any) -> Any:
         """Sets a nice UI name for this attribute rather than using the default derived from it's long name."""
     @property
     def shortName(*args: Any, **kwargs: Any) -> Any:
@@ -4454,65 +5360,77 @@ class MFnAttribute(MFnBase):
         """Is the attribute writable?"""
 
 class MFnDependencyNode(MFnBase):
-    def absoluteName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __init_subclass__(self, *args: Any, **kwargs: Any) -> Any:
+        """This method is called when a class is subclassed.
+
+        The default implementation does nothing. It may be
+        overridden to extend subclasses.
+        """
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def absoluteName(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the absolute name of this node.  The absolute name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself.  Regardless of relative name mode, absoluteName() will always return a full namespace path prefixed with a leading colon (the root namespace).  If the underlying node is a DAG node, then absoluteName() does not guarantee uniqueness, that is, two dependency nodes could have the same absoluteName().  In cases like this the uniqueName() method will guarantee that the name uniquely identifies the node."""
-    def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addAttribute(self, *args: Any, **kwargs: Any) -> Any:
         """Adds a new dynamic attribute to the node."""
-    def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addExternalContentForFileAttr(self, *args: Any, **kwargs: Any) -> Any:
         """Adds content info to the specified table from a file path attribute."""
-    def affectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def affectsAnimation(self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the changes to the node may affect animation."""
-    def allocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def allocateFlag(self, *args: Any, **kwargs: Any) -> Any:
         """Allocates a flag on all nodes for use by the named plugin and returns the flag's index."""
-    def attribute(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def attribute(self, *args: Any, **kwargs: Any) -> Any:
         """Returns an attribute of the node, given either its index or name."""
-    def attributeClass(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def attributeClass(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the class of the specified attribute."""
-    def attributeCount(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def attributeCount(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the number of attributes on the node."""
-    def canBeWritten(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def canBeWritten(self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the node will be written to file."""
-    def classification(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def classification(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the classification string for the named node type."""
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new node of the given type."""
-    def deallocateAllFlags(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deallocateAllFlags(self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates all node flags which are currently allocated to the named plugin."""
-    def deallocateFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deallocateFlag(self, *args: Any, **kwargs: Any) -> Any:
         """Deallocates the specified node flag, which was previously allocated by the named plugin using allocateFlag()."""
-    def dgCallbackIds(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def dgCallbackIds(self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information for a specific callback type, broken down by callbackId."""
-    def dgCallbacks(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def dgCallbacks(self, *args: Any, **kwargs: Any) -> Any:
         """Returns DG timing information broken down by callback type."""
-    def dgTimer(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def dgTimer(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a specific DG timer metric for a given timer type."""
-    def dgTimerOff(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def dgTimerOff(self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing off for this node."""
-    def dgTimerOn(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def dgTimerOn(self, *args: Any, **kwargs: Any) -> Any:
         """Turns DG timing on for this node."""
-    def dgTimerQueryState(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def dgTimerQueryState(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the current DG timer state for this node."""
-    def dgTimerReset(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def dgTimerReset(self, *args: Any, **kwargs: Any) -> Any:
         """Resets all DG timers for this node."""
-    def findAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def findAlias(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the attribute which has the given alias."""
-    def findPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def findPlug(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a plug for the given attribute."""
-    def getAffectedAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getAffectedAttributes(self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which are affected by the specified attribute."""
-    def getAffectingAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getAffectingAttributes(self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the attributes which affect the specified attribute."""
-    def getAliasAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getAliasAttr(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's alias attribute, which is a special attribute used to store information about the node's attribute aliases."""
-    def getAliasList(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getAliasList(self, *args: Any, **kwargs: Any) -> Any:
         """Returns all of the node's attribute aliases."""
-    def getConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getConnections(self, *args: Any, **kwargs: Any) -> Any:
         """Returns all the plugs which are connected to attributes of this node."""
-    def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getExternalContent(self, *args: Any, **kwargs: Any) -> Any:
         """Gets the external content (files) that this node depends on."""
-    def hasAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasAttribute(self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node has an attribute with the given name."""
-    def hasUniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasUniqueName(self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node's name is unique."""
     @property
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
@@ -4520,7 +5438,7 @@ class MFnDependencyNode(MFnBase):
     @isDefaultNode.setter
     def isDefaultNode(*args: Any, **kwargs: Any) -> Any:
         """True if this is a default node, created automatically by Maya."""
-    def isFlagSet(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isFlagSet(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the state of the specified node flag."""
     @property
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
@@ -4534,7 +5452,7 @@ class MFnDependencyNode(MFnBase):
     @isLocked.setter
     def isLocked(*args: Any, **kwargs: Any) -> Any:
         """True if the node is locked against changes."""
-    def isNewAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isNewAttribute(self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the specified attribute was added in the current scene, and not by by one of its referenced files."""
     @property
     def isShared(*args: Any, **kwargs: Any) -> Any:
@@ -4542,7 +5460,7 @@ class MFnDependencyNode(MFnBase):
     @isShared.setter
     def isShared(*args: Any, **kwargs: Any) -> Any:
         """True if the node is shared."""
-    def isTrackingEdits(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isTrackingEdits(self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node is referenced or in an assembly that is tracking edits."""
     kExtensionAttr: int = ...
     kInvalidAttr: int = ...
@@ -4567,7 +5485,7 @@ class MFnDependencyNode(MFnBase):
     kTimerTypes: int = ...
     kTimerUninitialized: int = ...
 
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def name(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's name."""
     @property
     def namespace(*args: Any, **kwargs: Any) -> Any:
@@ -4581,27 +5499,27 @@ class MFnDependencyNode(MFnBase):
     @pluginName.setter
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """Name of the plugin which registered the node type, if any."""
-    def plugsAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def plugsAlias(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the alias for a plug's attribute."""
-    def removeAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeAttribute(self, *args: Any, **kwargs: Any) -> Any:
         """Removes a dynamic attribute from the node."""
-    def reorderedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def reorderedAttribute(self, *args: Any, **kwargs: Any) -> Any:
         """Returns one of the node's attribute, based on the order in which they are written to file."""
-    def setAffectsAnimation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setAffectsAnimation(self, *args: Any, **kwargs: Any) -> Any:
         """Specifies that modifications to a node could potentially affect the animation."""
-    def setAlias(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setAlias(self, *args: Any, **kwargs: Any) -> Any:
         """Adds or removes an attribute alias."""
-    def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDoNotWrite(self, *args: Any, **kwargs: Any) -> Any:
         """Used to prevent the node from being written to file."""
-    def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setExternalContent(self, *args: Any, **kwargs: Any) -> Any:
         """Changes the location of external content."""
-    def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setExternalContentForFileAttr(self, *args: Any, **kwargs: Any) -> Any:
         """Sets content info in the specified attribute from the table."""
-    def setFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setFlag(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the state of the specified node flag."""
-    def setName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setName(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's name."""
-    def setUuid(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setUuid(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the node's UUID."""
     @property
     def typeId(*args: Any, **kwargs: Any) -> Any:
@@ -4615,15 +5533,21 @@ class MFnDependencyNode(MFnBase):
     @typeName.setter
     def typeName(*args: Any, **kwargs: Any) -> Any:
         """Name of the node's type."""
-    def uniqueName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def uniqueName(self, *args: Any, **kwargs: Any) -> Any:
         """For a DAG node, the unique name of a node is the full namespace path starting at (and including) the root namespace, down to (and including) the node itself. For a non-DAG node, the uniqueName is just its name."""
-    def userNode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def userNode(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the MPxNode object for a plugin node."""
-    def uuid(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def uuid(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's UUID."""
 
 class MFnDagNode(MFnDependencyNode):
-    def addChild(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addChild(self, *args: Any, **kwargs: Any) -> Any:
         """addChild(node, index=kNextPos, keepExistingParents=False) -> self
 
         Makes a node a child of this one.
@@ -4634,17 +5558,17 @@ class MFnDagNode(MFnDependencyNode):
     @boundingBox.setter
     def boundingBox(*args: Any, **kwargs: Any) -> Any:
         """Node's bounding box, in object space."""
-    def child(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def child(self, *args: Any, **kwargs: Any) -> Any:
         """child(index) -> MObject
 
         Returns the specified child of this node.
         """
-    def childCount(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def childCount(self, *args: Any, **kwargs: Any) -> Any:
         """childCount() -> int
 
         Returns the number of nodes which are children of this one.
         """
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """create(type, name=None, parent=MObject.kNullObj) -> MObject
 
         Creates a new DAG node of the specified type, with the given name.
@@ -4665,45 +5589,45 @@ class MFnDagNode(MFnDependencyNode):
         parented under it, and the functionset will be attached to the
         transform. The transform will be returned.
         """
-    def dagPath(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def dagPath(self, *args: Any, **kwargs: Any) -> Any:
         """dagPath() -> MDagPath
 
         Returns the DAG path to which this function set is attached. Raises a TypeError if the function set is attached to an MObject rather than a path.
         """
-    def dagRoot(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def dagRoot(self, *args: Any, **kwargs: Any) -> Any:
         """dagRoot() -> MObject
 
         Returns the root node of the first path leading to this node.
         """
-    def duplicate(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def duplicate(self, *args: Any, **kwargs: Any) -> Any:
         """duplicate(instance=False, instanceLeaf=False) -> MObject
 
         Duplicates the DAG hierarchy rooted at the current node.
         """
-    def fullPathName(self: Self) -> str:
+    def fullPathName(self) -> str:
         """Returns the full path of the attached object, from the root of the DAG on down."""
-    def getAllPaths(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getAllPaths(self, *args: Any, **kwargs: Any) -> Any:
         """getAllPaths() -> MDagPathArray
 
         Returns all of the DAG paths which lead to the object to which this function set is attached.
         """
-    def getConnectedSetsAndMembers(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getConnectedSetsAndMembers(self, *args: Any, **kwargs: Any) -> Any:
         """getConnectedSetsAndMembers(instance, renderableSetsOnly) -> (MObjectArray, MObjectArray)
 
         Returns a tuple containing an array of sets and an array of the
         components of the DAG object which are in those sets. If the entire object is in a set, then the corresponding entry in the comps array will have no elements in it.
         """
-    def getPath(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPath(self, *args: Any, **kwargs: Any) -> Any:
         """getPath() -> MDagPath
 
         Returns the DAG path to which this function set is attached, or the first path to the node if the function set is attached to an MObject.
         """
-    def hasChild(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasChild(self, *args: Any, **kwargs: Any) -> Any:
         """hasChild(node) -> bool
 
         Returns True if the specified node is a child of this one.
         """
-    def hasParent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasParent(self, *args: Any, **kwargs: Any) -> Any:
         """hasParent(node) -> bool
 
         Returns True if the specified node is a parent of this one.
@@ -4720,12 +5644,12 @@ class MFnDagNode(MFnDependencyNode):
     @inUnderWorld.setter
     def inUnderWorld(*args: Any, **kwargs: Any) -> Any:
         """True if this node is in the underworld of another node (e.g. a curve on surface is in the underworld of the surface)."""
-    def instanceCount(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def instanceCount(self, *args: Any, **kwargs: Any) -> Any:
         """instanceCount(indirect) -> int
 
         Returns the number of instances for this node.
         """
-    def isChildOf(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isChildOf(self, *args: Any, **kwargs: Any) -> Any:
         """isChildOf(node) -> bool
 
         Returns True if the specified node is a parent of this one.
@@ -4736,12 +5660,12 @@ class MFnDagNode(MFnDependencyNode):
     @isInstanceable.setter
     def isInstanceable(*args: Any, **kwargs: Any) -> Any:
         """True if instancing is allowed for this node."""
-    def isInstanced(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isInstanced(self, *args: Any, **kwargs: Any) -> Any:
         """isInstanced(indirect=True) -> bool
 
         Returns True if this node is instanced.
         """
-    def isInstancedAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isInstancedAttribute(self, *args: Any, **kwargs: Any) -> Any:
         """isInstancedAttribute(attr) -> bool
 
         Returns True if the specified attribute is an instanced attribute of this node.
@@ -4752,7 +5676,7 @@ class MFnDagNode(MFnDependencyNode):
     @isIntermediateObject.setter
     def isIntermediateObject(*args: Any, **kwargs: Any) -> Any:
         """True if this node is just an intermediate in part of a larger calculation (e.g. input to a deformer)."""
-    def isParentOf(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isParentOf(self, *args: Any, **kwargs: Any) -> Any:
         """isParentOf(node) -> bool
 
         Returns True if the specified node is a child of this one.
@@ -4777,37 +5701,37 @@ class MFnDagNode(MFnDependencyNode):
     @objectColorType.setter
     def objectColorType(*args: Any, **kwargs: Any) -> Any:
         """Determines whether the default color, indexed object color, orRGB object color is used for this object."""
-    def parent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def parent(self, *args: Any, **kwargs: Any) -> Any:
         """parent(index) -> MObject
 
         Returns the specified parent of this node.
         """
-    def parentCount(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def parentCount(self, *args: Any, **kwargs: Any) -> Any:
         """parentCount() -> int
 
         Returns the number of parents this node has.
         """
-    def partialPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def partialPathName(self, *args: Any, **kwargs: Any) -> Any:
         """partialPathName() -> string
 
         Returns the minimum path string necessary to uniquely identify the attached object.
         """
-    def removeChild(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeChild(self, *args: Any, **kwargs: Any) -> Any:
         """removeChild(node) -> self
 
         Removes the child, specified by MObject, reparenting it under the world.
         """
-    def removeChildAt(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeChildAt(self, *args: Any, **kwargs: Any) -> Any:
         """removeChildAt(index) -> self
 
         Removes the child, specified by index, reparenting it under the world.
         """
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setObject(self, *args: Any, **kwargs: Any) -> Any:
         """setObject(MObject or MDagPath) -> self
 
         Attaches the function set to the specified node or DAG path.
         """
-    def transformationMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def transformationMatrix(self, *args: Any, **kwargs: Any) -> Any:
         """transformationMatrix() -> MMatrix
 
         Returns the object space transformation matrix for this DAG node.
@@ -4820,7 +5744,21 @@ class MFnDagNode(MFnDependencyNode):
         """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
 
 class MFnCamera(MFnDagNode):
-    def aspectRatio(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def aspectRatio(self, *args: Any, **kwargs: Any) -> Any:
         """aspectRatio() -> float
 
         Returns the aspect ratio for the camera.
@@ -4837,21 +5775,21 @@ class MFnCamera(MFnDagNode):
     @centerOfInterest.setter
     def centerOfInterest(*args: Any, **kwargs: Any) -> Any:
         """The linear distance from the camera's eye point to the center of interest."""
-    def centerOfInterestPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def centerOfInterestPoint(self, *args: Any, **kwargs: Any) -> Any:
         """centerOfInterestPoint(space=kObject) -> MPoint
 
         Returns the center of interest point for the camera.
 
         * space (int) - Specifies the coordinate system for this operation
         """
-    def computeDepthOfField(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def computeDepthOfField(self, *args: Any, **kwargs: Any) -> Any:
         """computeDepthOfField(nearLimit=None) -> self
 
         Compute the depth of field
 
         * nearLimit (float) - the near limit
         """
-    def copyViewFrom(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copyViewFrom(self, *args: Any, **kwargs: Any) -> Any:
         """copyViewFrom(otherCamera) -> self
 
         Copy the camera settings related to the perspective from the given camera view.
@@ -4860,7 +5798,7 @@ class MFnCamera(MFnDagNode):
 
         * otherCamera (MDagPath) - Camera to copy view from
         """
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """create(parent=None) -> MObject
 
         Creates a perspective camera. A parent can be specified for the new camera, otherwise a transform is created.
@@ -4869,7 +5807,7 @@ class MFnCamera(MFnDagNode):
 
         * parent (MObject) - The parent of the new camera
         """
-    def eyePoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def eyePoint(self, *args: Any, **kwargs: Any) -> Any:
         """eyePoint(space=kObject) -> MPoint
 
         Returns the eye point for the camera.
@@ -4966,17 +5904,17 @@ class MFnCamera(MFnDagNode):
     @focusDistance.setter
     def focusDistance(*args: Any, **kwargs: Any) -> Any:
         """The focus distance for the camera. This value sets the focus at a certain distance in front of the camera."""
-    def getAspectRatioLimits(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getAspectRatioLimits(self, *args: Any, **kwargs: Any) -> Any:
         """getAspectRatioLimits() -> (float, float)
 
         Returns the minimum and maximum aspect ratio limits for the camera.
         """
-    def getFilmApertureLimits(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getFilmApertureLimits(self, *args: Any, **kwargs: Any) -> Any:
         """getFilmApertureLimits() -> (float, float)
 
         Returns the maximum and minimum film aperture limits for the camera.
         """
-    def getFilmFrustum(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getFilmFrustum(self, *args: Any, **kwargs: Any) -> Any:
         """getFilmFrustum(distance, applyPanZoom=False) -> (float, float, float, float)
 
         Returns the film frustum for the camera (horizontal size, vertical size, horizontal offset and vertical offset). The frustum defines the projective transformation.
@@ -4984,7 +5922,7 @@ class MFnCamera(MFnDagNode):
         * distance (float) - Specifies the focal length
         * applyPanZoom (bool) - specifies whether to apply 2D pan/zoom
         """
-    def getFilmFrustumCorners(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getFilmFrustumCorners(self, *args: Any, **kwargs: Any) -> Any:
         """getFilmFrustumCorners(distance, applyPanZoom=False) -> MPointArray
 
         Returns the film frustum for the camera. The frustum defines the projective transformation.
@@ -4997,12 +5935,12 @@ class MFnCamera(MFnDagNode):
         * distance (float) - Specifies the focal length
         * applyPanZoom (bool) - specifies whether to apply 2D pan/zoom
         """
-    def getFocalLengthLimits(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getFocalLengthLimits(self, *args: Any, **kwargs: Any) -> Any:
         """getFocalLengthLimits() -> (float, float)
 
         Returns the maximum and minimum focal length limits for the camera.
         """
-    def getPortFieldOfView(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPortFieldOfView(self, *args: Any, **kwargs: Any) -> Any:
         """getPortFieldOfView(int, int) -> (float, float)
 
         Returns the horizontal and vertical field of view in radians from the given viewport width and height.
@@ -5010,7 +5948,7 @@ class MFnCamera(MFnDagNode):
         * width (int) - width of viewport
         * height (int) - height of viewport
         """
-    def getRenderingFrustum(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getRenderingFrustum(self, *args: Any, **kwargs: Any) -> Any:
         """getRenderingFrustum(windowAspect) -> (float, float, float, float)
 
         Returns the rendering frustum (left, right, bottom and top) for the camera.
@@ -5018,7 +5956,7 @@ class MFnCamera(MFnDagNode):
 
         * windowAspect (float) - windowAspect
         """
-    def getViewParameters(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getViewParameters(self, *args: Any, **kwargs: Any) -> Any:
         """getViewParameters(windowAspect, applyOverscan=False, applySqueeze=False, applyPanZoom=False) -> (float, float, float, float)
 
         Returns the intermediate viewing frustum (apertureX, apertureY, offsetX and offsetY) parameters for the camera. The aperture and offset are used by getViewingFrustum() and getRenderingFrustum() to compute the extent (left, right, top, bottom) of the frustum in the following manner:
@@ -5035,7 +5973,7 @@ class MFnCamera(MFnDagNode):
         * applySqueeze (bool) - specifies whether to apply the lens squeeze ratio of the camera
         * applyPanZoom (bool) - specifies whether to apply 2D pan/zoom
         """
-    def getViewingFrustum(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getViewingFrustum(self, *args: Any, **kwargs: Any) -> Any:
         """getViewingFrustum(windowAspect, applyOverscan=False, applySqueeze=False, applyPanZoom=False) -> (float, float, float, float)
 
         Returns the viewing frustum (left, right, bottom and top) for the camera.
@@ -5045,7 +5983,7 @@ class MFnCamera(MFnDagNode):
         * applySqueeze (bool) - specifies whether to apply the lens squeeze ratio of the camera
         * applyPanZoom (bool) - specifies whether to apply 2D pan/zoom
         """
-    def hasSamePerspective(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasSamePerspective(self, *args: Any, **kwargs: Any) -> Any:
         """hasSamePerspective(otherCamera) -> bool
 
         Returns True if the camera has same perspective settings as the given camera.
@@ -5054,7 +5992,7 @@ class MFnCamera(MFnDagNode):
 
         * otherCamera (MDagPath) - Camera to compare perspective with
         """
-    def horizontalFieldOfView(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def horizontalFieldOfView(self, *args: Any, **kwargs: Any) -> Any:
         """horizontalFieldOfView() -> float
 
         Returns the horizontal field of view for the camera.
@@ -5119,7 +6057,7 @@ class MFnCamera(MFnDagNode):
     @isMotionBlur.setter
     def isMotionBlur(*args: Any, **kwargs: Any) -> Any:
         """Wheter or not motion blur is on/off for the camera."""
-    def isOrtho(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isOrtho(self, *args: Any, **kwargs: Any) -> Any:
         """isOrtho() -> bool
 
         Returns True if the camera is in orthographic mode.
@@ -5170,7 +6108,7 @@ class MFnCamera(MFnDagNode):
         """The toggle value for the camera 2D pan/zoom enabled attribute.
         If this attribute is False, the 2D pan/zoom values are ignored by the camera.
         """
-    def postProjectionMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def postProjectionMatrix(self, *args: Any, **kwargs: Any) -> Any:
         """postProjectionMatrix(context=None) -> MFloatMatrix
 
         Returns the post projection matrix used to compute film roll on the film back plane.
@@ -5189,7 +6127,7 @@ class MFnCamera(MFnDagNode):
     @preScale.setter
     def preScale(*args: Any, **kwargs: Any) -> Any:
         """The post projection matrix's pre-scale value."""
-    def projectionMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def projectionMatrix(self, *args: Any, **kwargs: Any) -> Any:
         """projectionMatrix(context=None) -> MFloatMatrix
 
         Returns the orthographic or perspective projection matrix for the camera.
@@ -5207,14 +6145,14 @@ class MFnCamera(MFnDagNode):
         """The toggle value for the camera render 2D pan/zoom attribute.
         If this attribute is False, the 2D pan/zoom values will not affect the output render.
         """
-    def rightDirection(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rightDirection(self, *args: Any, **kwargs: Any) -> Any:
         """rightDirection(space=kObject) -> MVector
 
         Returns the right direction vector for the camera.
 
         * space (int) - Specifies the coordinate system for this operation
         """
-    def set(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def set(self, *args: Any, **kwargs: Any) -> Any:
         """set(wsEyeLocation, wsViewDirection, wsUpDirection, horizFieldOfView, aspectRatio) -> self
 
         Convenience routine to set the camera viewing parameters. The specified values should be in world space where applicable.
@@ -5227,14 +6165,14 @@ class MFnCamera(MFnDagNode):
         * horizFieldOfView (float) - The horizontal field of view to set
         * aspectRatio (float) - The aspect ratio to set
         """
-    def setAspectRatio(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setAspectRatio(self, *args: Any, **kwargs: Any) -> Any:
         """setAspectRatio(aspectRatio) -> self
 
         Set the aspect ratio of the View.  The aspect ratio is expressed as width/height.  This also modifies the entity's scale transformation to reflect the new aspect ratio.
 
         * aspectRatio (float) - The aspect ratio to be set
         """
-    def setCenterOfInterestPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setCenterOfInterestPoint(self, *args: Any, **kwargs: Any) -> Any:
         """setCenterOfInterestPoint(centerOfInterest, space=kObject) -> self
 
         Positions the center-of-interest of the camera keeping the eye-point fixed in space. This method changed the orientation and translation of the camera's transform attributes as well as the center-of-interest distance.
@@ -5244,7 +6182,7 @@ class MFnCamera(MFnDagNode):
         * centerOfInterest (MPoint) - Center of interest point to be set
         * space (int) - Specifies the coordinate system for this operation
         """
-    def setEyePoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setEyePoint(self, *args: Any, **kwargs: Any) -> Any:
         """setEyePoint(eyeLocation, space=kObject) -> self
 
         Positions the eye-point of the camera keeping the center of interest fixed in space. This method changed the orientation and translation of the camera's transform attributes as well as the center-of-interest distance.
@@ -5254,14 +6192,14 @@ class MFnCamera(MFnDagNode):
         * eyeLocation (MPoint) - The eye location to set
         * space (int) - Specifies the coordinate system for this operation
         """
-    def setHorizontalFieldOfView(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setHorizontalFieldOfView(self, *args: Any, **kwargs: Any) -> Any:
         """setHorizontalFieldOfView(fov) -> self
 
         Sets the horizontal field of view for the camera.
 
         * fov (float) - The horizontal field of view value to be set
         """
-    def setIsOrtho(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setIsOrtho(self, *args: Any, **kwargs: Any) -> Any:
         """setIsOrtho(orthoState, useDist=None) -> self
 
         Switch the camera in and out of orthographic mode.  When the switch happens, the camera has to calculate a new fov or ortho width, each of which is based on the other and a set distance.  The caller can specify the distance; otherwise the center of interest is used.
@@ -5269,7 +6207,7 @@ class MFnCamera(MFnDagNode):
         * orthoState (bool) - If True then the camera will be orthographic
         * useDist (float) - distance to use.
         """
-    def setNearFarClippingPlanes(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setNearFarClippingPlanes(self, *args: Any, **kwargs: Any) -> Any:
         """setNearFarClippingPlanes(near, far) -> self
 
         Set the distances to the Near and Far Clipping Planes.
@@ -5277,7 +6215,7 @@ class MFnCamera(MFnDagNode):
         * near (float) - The near clipping plane value to be set
         * far (float) - The far clipping plane value to be set
         """
-    def setVerticalFieldOfView(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setVerticalFieldOfView(self, *args: Any, **kwargs: Any) -> Any:
         """setVerticalFieldOfView(fov) -> self
 
         Sets the vertical field of view for the camera.
@@ -5338,7 +6276,7 @@ class MFnCamera(MFnDagNode):
     @tumblePivot.setter
     def tumblePivot(*args: Any, **kwargs: Any) -> Any:
         """The tumble pivot value for the camera. The pivot value will be in world space coordinates unless usePivotAsLocalSpace is True in which case the pivot is a relative offset."""
-    def upDirection(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def upDirection(self, *args: Any, **kwargs: Any) -> Any:
         """upDirection(space=kObject) -> MVector
 
         Returns the up direction vector for the camera.
@@ -5351,7 +6289,7 @@ class MFnCamera(MFnDagNode):
     @usePivotAsLocalSpace.setter
     def usePivotAsLocalSpace(*args: Any, **kwargs: Any) -> Any:
         """The local axis tumble setting for this camera.True if using local space tumbling for this camera, or False if using the current global tumble setting in Maya."""
-    def verticalFieldOfView(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def verticalFieldOfView(self, *args: Any, **kwargs: Any) -> Any:
         """verticalFieldOfView() -> float
 
         Returns the vertical field of view for the camera.
@@ -5386,7 +6324,7 @@ class MFnCamera(MFnDagNode):
     @verticalShake.setter
     def verticalShake(*args: Any, **kwargs: Any) -> Any:
         """The vertical film-based camera shake value. Unit used is inches."""
-    def viewDirection(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def viewDirection(self, *args: Any, **kwargs: Any) -> Any:
         """viewDirection(space=kObject) -> MVector
 
         Returns the view direction for the camera
@@ -5401,6 +6339,18 @@ class MFnCamera(MFnDagNode):
         """The camera 2D zoom value, which is the percent over the film viewable frustum to display"""
 
 class MFnComponent(MFnBase):
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __init_subclass__(self, *args: Any, **kwargs: Any) -> Any:
+        """This method is called when a class is subclassed.
+
+        The default implementation does nothing. It may be
+        overridden to extend subclasses.
+        """
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     @property
     def componentType(*args: Any, **kwargs: Any) -> Any:
         """Type of the component. (MFn Type constant)"""
@@ -5435,13 +6385,13 @@ class MFnComponent(MFnBase):
     @isEmpty.setter
     def isEmpty(*args: Any, **kwargs: Any) -> Any:
         """True if the component contains no elements."""
-    def isEqual(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isEqual(self, *args: Any, **kwargs: Any) -> Any:
         """isEqual(MObject other) -> bool
 
         Returns True if other refers to the same component as the
         one to which the function set is currently attached.
         """
-    def weight(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def weight(self, *args: Any, **kwargs: Any) -> Any:
         """weight(index) -> MWeight
 
         Returns the weight associated with the specified element,
@@ -5449,6 +6399,18 @@ class MFnComponent(MFnBase):
         """
 
 class MFnData(MFnBase):
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __init_subclass__(self, *args: Any, **kwargs: Any) -> Any:
+        """This method is called when a class is subclassed.
+
+        The default implementation does nothing. It may be
+        overridden to extend subclasses.
+        """
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     kAny: int = ...
     kComponentList: int = ...
     kDoubleArray: int = ...
@@ -5478,40 +6440,46 @@ class MFnData(MFnBase):
     kVectorArray: int = ...
 
 class MFnComponentListData(MFnData):
-    def add(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def add(self, *args: Any, **kwargs: Any) -> Any:
         """add(MObject) -> self
 
         Adds the specified component to the end of the list.
         """
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """clear() -> self
 
         Removes all of the components from the list.
         """
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """create() -> MObject
 
         Creates a new, empty component list, attaches it to the
         function set and returns an MObject which references it.
         """
-    def get(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def get(self, *args: Any, **kwargs: Any) -> Any:
         """get(index) -> MObject
 
         Returns a copy of the component at the specified index.
         Raises IndexError if the index is out of range.
         """
-    def has(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def has(self, *args: Any, **kwargs: Any) -> Any:
         """has(MObject) -> bool
 
         Returns True if the list contains the specified
         component, False otherwise.
         """
-    def length(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def length(self, *args: Any, **kwargs: Any) -> Any:
         """length() -> int
 
         Returns the number of components in the list.
         """
-    def remove(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def remove(self, *args: Any, **kwargs: Any) -> Any:
         """remove(MObject) -> self
         remove(index) -> self
 
@@ -5521,71 +6489,91 @@ class MFnComponentListData(MFnData):
         """
 
 class MFnCompoundAttribute(MFnAttribute):
-    def addChild(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addChild(self, *args: Any, **kwargs: Any) -> Any:
         """Add a child attribute."""
-    def child(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def child(self, *args: Any, **kwargs: Any) -> Any:
         """Returns one of the attribute's children, specified by index."""
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new compound attribute, attaches it to the function set and returns it as an MObject."""
-    def getAddAttrCmds(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getAddAttrCmds(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list of MEL 'addAttr' commands capable of recreating the attribute and all of its children."""
-    def numChildren(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numChildren(self, *args: Any, **kwargs: Any) -> Any:
         """Returns number of child attributes currently parented under the compound attribute."""
-    def removeChild(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeChild(self, *args: Any, **kwargs: Any) -> Any:
         """Remove a child attribute."""
 
 class MFnContainerNode(MFnDependencyNode):
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """clear()
 
         Delete all members of the container.
         """
-    def getCurrentAsMObject(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getCurrentAsMObject(self, *args: Any, **kwargs: Any) -> Any:
         """getCurrentAsMObject() -> MObject
 
         Retrieve the current container node.
         """
-    def getMembers(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getMembers(self, *args: Any, **kwargs: Any) -> Any:
         """getMembers() -> MObjectArray
 
         Return an array of the nodes included in this container.
         """
-    def getParentContainer(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getParentContainer(self, *args: Any, **kwargs: Any) -> Any:
         """getParentContainer() -> MObject
 
         Return the parent container, if there is one. Otherwise return an empty MObject.
         """
-    def getPublishedNames(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPublishedNames(self, *args: Any, **kwargs: Any) -> Any:
         """getPublishedNames(unboundOnly=bool) -> [MString]
 
         Return a list of published names on the container. Depending on the arguments, either all published names or only unbound published names will be returned.
         """
-    def getPublishedNodes(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPublishedNodes(self, *args: Any, **kwargs: Any) -> Any:
         """getPublishedNodes(publishNodeType=MPublishNodeType) -> ([MString] publishedNames, MObjectArray publishedNodes)
 
         Return a list of the published nodes of a given type. For any names that have assigned nodes, return the node at the corresponding array index. For any names that do not have assigned nodes, a NULL MObject will be at the corresponding array index.
         """
-    def getPublishedPlugs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPublishedPlugs(self, *args: Any, **kwargs: Any) -> Any:
         """getPublishedPlugs() -> (MPlugArray publishedPlugs, [MString] publishedNames)
 
         Return a tuple of plugs that have been published on this container and the names of those plugs.
         """
-    def getRootTransform(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getRootTransform(self, *args: Any, **kwargs: Any) -> Any:
         """getRootTransform() -> MObject
 
         Return the root transform, if there is one. Otherwise return an empty MObject.
         """
-    def getSubcontainers(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getSubcontainers(self, *args: Any, **kwargs: Any) -> Any:
         """getSubcontainers() -> MObjectArray
 
         Return an array of the container nodes included in this container.
         """
-    def isCurrent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isCurrent(self, *args: Any, **kwargs: Any) -> Any:
         """isCurrent() -> bool
 
         Return whether the container node managed by this function set is the current container.
         """
-    def makeCurrent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def makeCurrent(self, *args: Any, **kwargs: Any) -> Any:
         """makeCurrent(isCurrent) -> self
 
         Set or clear whether the container managed by this function set is denoted as the
@@ -5598,54 +6586,72 @@ class MFnContainerNode(MFnDependencyNode):
         """
 
 class MFnDoubleArrayData(MFnData):
-    def array(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def array(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the encapsulated array as an MDoubleArray."""
-    def copyTo(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copyTo(self, *args: Any, **kwargs: Any) -> Any:
         """Replaces the elements of an array with those in the encapsulated array."""
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new double array data object."""
-    def set(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def set(self, *args: Any, **kwargs: Any) -> Any:
         """Sets values in the encapsulated array."""
 
 class MFnDoubleIndexedComponent(MFnComponent):
-    def addElement(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addElement(self, *args: Any, **kwargs: Any) -> Any:
         """addElement(uIndex, vIndex) -> self
         addElement([uIndex, vIndex]) -> self
 
         Adds the element identified by (uIndex, vIndex) to the component.
         """
-    def addElements(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addElements(self, *args: Any, **kwargs: Any) -> Any:
         """addElements(sequence of [uIndex, vIndex]) -> self
 
         Adds the specified elements to the component. Each item in the
         elements sequence is itself a sequence of two ints which are the U and
         V indices of an element to be added.
         """
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """create(MFn Type constant) -> MObject
 
         Creates a new, empty component, attaches it to the function set and
         returns an MObject which references it.
         """
-    def getCompleteData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getCompleteData(self, *args: Any, **kwargs: Any) -> Any:
         """getCompleteData() -> (numU, numV)
 
         Returns a tuple containing the number of U and V indices in the complete
         component, or (0,0) if the component is not complete.
         """
-    def getElement(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getElement(self, *args: Any, **kwargs: Any) -> Any:
         """getElement(index) -> (uIndex, vIndex)
 
         Returns the index'th element of the component as a tuple containing the
         element's U and V indices.
         """
-    def getElements(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getElements(self, *args: Any, **kwargs: Any) -> Any:
         """getElements() -> list of (uIndex, vIndex)
 
         Returns all of the component's elements as a list of tuples with each
         tuple containing the U and V indices of a single element.
         """
-    def setCompleteData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setCompleteData(self, *args: Any, **kwargs: Any) -> Any:
         """setCompleteData(numU, numV) -> self
 
         Marks the component as complete (i.e. contains all possible elements).
@@ -5654,9 +6660,15 @@ class MFnDoubleIndexedComponent(MFnComponent):
         """
 
 class MFnEnumAttribute(MFnAttribute):
-    def addField(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addField(self, *args: Any, **kwargs: Any) -> Any:
         """Add an item to the enumeration with a specified UI name and corresponding attribute value."""
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new enumeration attribute, attaches it to the function set and returns it as an MObject."""
     @property
     def default(*args: Any, **kwargs: Any) -> Any:
@@ -5664,88 +6676,100 @@ class MFnEnumAttribute(MFnAttribute):
     @default.setter
     def default(*args: Any, **kwargs: Any) -> Any:
         """Default value"""
-    def fieldName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def fieldName(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the name of the enumeration item which has a given value."""
-    def fieldValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def fieldValue(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the value of the enumeration item which has a given name."""
-    def getMax(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getMax(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the maximum value of all the enumeration items."""
-    def getMin(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getMin(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the minimum value of all the enumeration items."""
-    def setDefaultByName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDefaultByName(self, *args: Any, **kwargs: Any) -> Any:
         """Set the default value using the name of an enumeration item. Equivalent to: attr.default = attr.fieldValue(name)"""
 
 class MFnGenericAttribute(MFnAttribute):
-    def addDataType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addDataType(self, *args: Any, **kwargs: Any) -> Any:
         """Adds the specified Maya data type to the list of those accepted by the attribute."""
-    def addNumericType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addNumericType(self, *args: Any, **kwargs: Any) -> Any:
         """Adds the specified numeric type to the list of those accepted by the attribute."""
-    def addTypeId(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addTypeId(self, *args: Any, **kwargs: Any) -> Any:
         """Adds the specified data typeId to the list of those accepted by the attribute."""
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new generic attribute, attaches it to the function set and returns it as an MObject."""
-    def removeDataType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeDataType(self, *args: Any, **kwargs: Any) -> Any:
         """Removes the specified Maya data type from the list of those accepted by the attribute."""
-    def removeNumericType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeNumericType(self, *args: Any, **kwargs: Any) -> Any:
         """Removes the specified numeric type from the list of those accepted by the attribute."""
-    def removeTypeId(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeTypeId(self, *args: Any, **kwargs: Any) -> Any:
         """Removes the specified data typeId from the list of those accepted by the attribute."""
 
 class MFnGeometryData(MFnData):
-    def addComponentTag(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addComponentTag(self, *args: Any, **kwargs: Any) -> Any:
         """addComponentTag(key) -> self
 
         Adds a componentTag with the given key to the object.
         """
-    def addObjectGroup(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addObjectGroup(self, *args: Any, **kwargs: Any) -> Any:
         """addObjectGroup(id) -> self
 
         Adds an object group with the given id to the object.
         """
-    def addObjectGroupComponent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addObjectGroupComponent(self, *args: Any, **kwargs: Any) -> Any:
         """addObjectGroupComponent(id, MObject component) -> self
 
         Adds the members of the given component to the object group
         with the given id.
         """
-    def changeObjectGroupId(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def changeObjectGroupId(self, *args: Any, **kwargs: Any) -> Any:
         """changeObjectGroupId(sourceId, destId) -> self
 
         Changes the id of the object group with the given id to the new id.
         """
-    def componentTagContents(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def componentTagContents(self, *args: Any, **kwargs: Any) -> Any:
         """componentTagContents(key) -> MObject
 
         Returns a component which contains the members of the componentTag
         with the given key.
         """
-    def componentTagExpressionSubsetState(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def componentTagExpressionSubsetState(self, *args: Any, **kwargs: Any) -> Any:
         """componentTagExpressionSubsetState(expr,ctg) -> MFnGeometryData::SubsetState type constant
 
         Returns the state of the contents of the resolved componentTag expression.
         """
-    def componentTagType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def componentTagType(self, *args: Any, **kwargs: Any) -> Any:
         """componentTagType(key) -> MFn Type constant
 
         Returns the type of the component that the componentTag with the
         given key contains.
         """
-    def componentTags(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def componentTags(self, *args: Any, **kwargs: Any) -> Any:
         """componentTags() -> MObject
 
         Returns the componentTag keys contained in the object.
         """
-    def copyObjectGroups(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copyObjectGroups(self, *args: Any, **kwargs: Any) -> Any:
         """copyObjectGroups(MObject inGeom) -> self
 
         Copies the object groups from the given geometry data object.
         """
-    def hasComponentTag(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasComponentTag(self, *args: Any, **kwargs: Any) -> Any:
         """hasComponentTag(key) -> bool
 
         Returns True if a componentTag with the given key exists.
         """
-    def hasObjectGroup(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasObjectGroup(self, *args: Any, **kwargs: Any) -> Any:
         """hasObjectGroup(id) -> self
 
         Returns True if an object group with the given id is
@@ -5769,12 +6793,12 @@ class MFnGeometryData(MFnData):
     @matrix.setter
     def matrix(*args: Any, **kwargs: Any) -> Any:
         """MMatrix used to convert the object into local space."""
-    def objectGroup(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def objectGroup(self, *args: Any, **kwargs: Any) -> Any:
         """objectGroup(index) -> int
 
         Returns the id of the index'th object group contained by the object.
         """
-    def objectGroupComponent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def objectGroupComponent(self, *args: Any, **kwargs: Any) -> Any:
         """objectGroupComponent(id) -> MObject
 
         Returns a component which contains the members of the object group
@@ -5786,52 +6810,52 @@ class MFnGeometryData(MFnData):
     @objectGroupCount.setter
     def objectGroupCount(*args: Any, **kwargs: Any) -> Any:
         """The number of object groups contained by the object."""
-    def objectGroupSubsetState(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def objectGroupSubsetState(self, *args: Any, **kwargs: Any) -> Any:
         """objectGroupSubsetState(id) -> MFnGeometryData::SubsetState type constant
 
         Returns the state of the group contents of the object group with the
         given id.
         """
-    def objectGroupType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def objectGroupType(self, *args: Any, **kwargs: Any) -> Any:
         """objectGroupType(id) -> MFn Type constant
 
         Returns the type of the component that the object group with the
         given id contains.
         """
-    def removeComponentTag(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeComponentTag(self, *args: Any, **kwargs: Any) -> Any:
         """removeComponentTag(key) -> self
 
         Removes a componentTag with the given key from the object.
         """
-    def removeObjectGroup(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeObjectGroup(self, *args: Any, **kwargs: Any) -> Any:
         """removeObjectGroup(id) -> self
 
         Removes an object group with the given id from the object.
         """
-    def removeObjectGroupComponent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeObjectGroupComponent(self, *args: Any, **kwargs: Any) -> Any:
         """removeObjectGroupComponent(id, MObject component) -> self
 
         Removes the members of the given component from the object group
         with the given id.
         """
-    def renameComponentTag(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def renameComponentTag(self, *args: Any, **kwargs: Any) -> Any:
         """renameComponentTag(key, newKey) -> self
 
         Renames a componentag with the given key the object.
         """
-    def resolveComponentTagExpression(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def resolveComponentTagExpression(self, *args: Any, **kwargs: Any) -> Any:
         """resolveComponentTagExpression(key, ctg) -> MObject
 
         Returns a component which is the result of the resolved componentTag expression
         with the given key.
         """
-    def setComponentTagContents(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setComponentTagContents(self, *args: Any, **kwargs: Any) -> Any:
         """setComponentTagContents(key, MObject component) -> self
 
         Sets the members of the componentTag with the given key
         to be those in the given component.
         """
-    def setObjectGroupComponent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setObjectGroupComponent(self, *args: Any, **kwargs: Any) -> Any:
         """setObjectGroupComponent(id, MObject component) -> self
 
         Sets the members of the object group with the given id
@@ -5839,19 +6863,37 @@ class MFnGeometryData(MFnData):
         """
 
 class MFnIntArrayData(MFnData):
-    def array(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def array(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the encapsulated array as an MIntArray."""
-    def copyTo(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copyTo(self, *args: Any, **kwargs: Any) -> Any:
         """Replaces the elements of an array with those in the encapsulated array."""
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new int array data object."""
-    def set(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def set(self, *args: Any, **kwargs: Any) -> Any:
         """Sets values in the encapsulated array."""
 
 class MFnLightDataAttribute(MFnAttribute):
-    def child(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def child(self, *args: Any, **kwargs: Any) -> Any:
         """Returns one of the attribute's children, specified by index."""
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new light data attribute, attaches it to the function set and returns it as an MObject."""
     @property
     def default(*args: Any, **kwargs: Any) -> Any:
@@ -5861,17 +6903,35 @@ class MFnLightDataAttribute(MFnAttribute):
         """Default values for the light data attribute's child attributes."""
 
 class MFnMatrixArrayData(MFnData):
-    def array(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def array(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the encapsulated array as an MMatrixArray."""
-    def copyTo(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copyTo(self, *args: Any, **kwargs: Any) -> Any:
         """Replaces the elements of an array with those in the encapsulated array."""
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new MMatrix array data object."""
-    def set(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def set(self, *args: Any, **kwargs: Any) -> Any:
         """Sets values in the encapsulated array."""
 
 class MFnMatrixAttribute(MFnAttribute):
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new matrix attribute, attaches it to the function set and returns it as an MObject."""
     @property
     def default(*args: Any, **kwargs: Any) -> Any:
@@ -5881,19 +6941,31 @@ class MFnMatrixAttribute(MFnAttribute):
         """Default value"""
 
 class MFnMatrixData(MFnData):
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new matrix data object."""
-    def isTransformation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isTransformation(self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the attached object is an MTransformationMatrix, False if it is an MMatrix."""
-    def matrix(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def matrix(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the encapsulated matrix as an MMatrix."""
-    def set(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def set(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the value of the encapsulated matrix."""
-    def transformation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def transformation(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the encapsulated matrix as an MTransformationMatrix."""
 
 class MFnMesh(MFnDagNode):
-    def addHoles(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addHoles(self, *args: Any, **kwargs: Any) -> Any:
         """addHoles(faceIndex, vertices, loopCounts, mergeVertices=True, pointTolerance=kPointTolerance) -> self
 
         Adds holes to a mesh polygon.
@@ -5907,7 +6979,7 @@ class MFnMesh(MFnDagNode):
         Note that holes should normally be specified with the opposite winding order
         to the exterior polygon.
         """
-    def addPolygon(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addPolygon(self, *args: Any, **kwargs: Any) -> Any:
         """addPolygon(vertices, mergeVertices=True, pointTolerance=kPointTolerance, loopCounts=None) -> faceId
 
         Adds a new polygon to the mesh, returning the index of the new
@@ -5925,7 +6997,7 @@ class MFnMesh(MFnDagNode):
         Note that holes should normally be specified with the opposite winding order
         to the exterior polygon.
         """
-    def allIntersections(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def allIntersections(self, *args: Any, **kwargs: Any) -> Any:
         """allIntersections(raySource, rayDirection, space, maxParam,
             testBothDirections, faceIds=None, triIds=None, idsSorted=False,
             accelParams=None, tolerance=kIntersectTolerance, sortHits=False)
@@ -5976,7 +7048,7 @@ class MFnMesh(MFnDagNode):
           points hit.
         If no point was hit then the arrays will all be empty.
         """
-    def anyIntersection(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def anyIntersection(self, *args: Any, **kwargs: Any) -> Any:
         """anyIntersection(raySource, rayDirection, space, maxParam,
             testBothDirections, faceIds=None, triIds=None, idsSorted=False,
             accelParams=None, tolerance=kIntersectTolerance)
@@ -6026,12 +7098,12 @@ class MFnMesh(MFnDagNode):
           (*hitBary1)*v1 + (*hitBary2)*v2 + (1-*hitBary1-*hitBary2)*v3.* hitBary2 (float) - second barycentric coordinate of the point hit.
         If no point was hit then the arrays will all be empty.
         """
-    def assignColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def assignColor(self, *args: Any, **kwargs: Any) -> Any:
         """assignColor(faceId, vertexIndex, colorId, colorSet='') -> self
 
         Assigns a color from a colorSet to a specified vertex of a face.
         """
-    def assignColors(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def assignColors(self, *args: Any, **kwargs: Any) -> Any:
         """assignColors(colorIds, colorSet=') -> self
 
         Assigns colors to all of the mesh's face-vertices. The colorIds
@@ -6039,12 +7111,12 @@ class MFnMesh(MFnDagNode):
         face order, meaning that the entries for all the vertices of face 0
         come first, followed by the entries for the vertices of face 1, etc.
         """
-    def assignUV(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def assignUV(self, *args: Any, **kwargs: Any) -> Any:
         """assignUV(faceId, vertexIndex, uvId, uvSet='') -> self
 
         Assigns a UV coordinate from a uvSet to a specified vertex of a face.
         """
-    def assignUVs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def assignUVs(self, *args: Any, **kwargs: Any) -> Any:
         """assignUVs(uvCounts, uvIds, uvSet='') -> self
 
         Assigns UV coordinates to the mesh's face-vertices.
@@ -6054,7 +7126,7 @@ class MFnMesh(MFnDagNode):
         corresponding face or be 0 to indicate that no UVs will be assigned
         to that face.
         """
-    def autoUniformGridParams(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def autoUniformGridParams(self, *args: Any, **kwargs: Any) -> Any:
         """autoUniformGridParams() -> MMeshIsectAccelParams
 
         Creates an object which specifies a uniform voxel grid structure
@@ -6065,19 +7137,19 @@ class MFnMesh(MFnDagNode):
         if the same MMeshIsectAccelParams configuration is used on the next
         intersect call, the acceleration structure will not need to be rebuilt.
         """
-    def booleanOp(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def booleanOp(self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated: Please use booleanOps instead) booleanOp(Boolean Operation constant, MFnMesh, MFnMesh) -> self
 
         Replaces this mesh's geometry with the result of a boolean operation
         on the two specified meshes.
         """
-    def booleanOps(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def booleanOps(self, *args: Any, **kwargs: Any) -> Any:
         """booleanOps(Boolean Operation constant, MObjectArray, bool) -> self
 
         Replaces this mesh's geometry with the result of a boolean operation
         on the specified meshes.
         """
-    def cachedIntersectionAcceleratorInfo(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def cachedIntersectionAcceleratorInfo(self, *args: Any, **kwargs: Any) -> Any:
         """cachedIntersectionAcceleratorInfo() -> string
 
         Retrieves a string that describes the intersection acceleration
@@ -6101,7 +7173,7 @@ class MFnMesh(MFnDagNode):
         """Controls whether polygons created or added through the functionset
         are checked for duplicate points.
         """
-    def cleanupEdgeSmoothing(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def cleanupEdgeSmoothing(self, *args: Any, **kwargs: Any) -> Any:
         """cleanupEdgeSmoothing() -> self
 
         Updates the mesh after setEdgeSmoothing has been done. This should
@@ -6109,7 +7181,7 @@ class MFnMesh(MFnDagNode):
         smoothing set. If you don't call this method, the normals may not be
         correct, and the object will look odd in shaded mode.
         """
-    def clearBlindData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clearBlindData(self, *args: Any, **kwargs: Any) -> Any:
         """clearBlindData(compType) -> self
         clearBlindData(compType, blindDataId, compId=None, attr='') -> self
 
@@ -6125,7 +7197,7 @@ class MFnMesh(MFnDagNode):
         data for that attribute is deleted, otherwise data for all of the
         blind data type's attributes is deleted.
         """
-    def clearColors(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clearColors(self, *args: Any, **kwargs: Any) -> Any:
         """clearColors(colorSet='') -> self
 
         Clears out all colors from a colorSet, and leaves behind an empty
@@ -6141,7 +7213,7 @@ class MFnMesh(MFnDagNode):
 
         If no colorSet is specified the mesh's current color set will be used.
         """
-    def clearGlobalIntersectionAcceleratorInfo(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clearGlobalIntersectionAcceleratorInfo(self, *args: Any, **kwargs: Any) -> Any:
         """clearGlobalIntersectionAcceleratorInfo()
 
         Clears the 'total count', 'total build time', and 'peak memory'
@@ -6149,7 +7221,7 @@ class MFnMesh(MFnDagNode):
         globalIntersectionAcceleratorsInfo(). It will not cause information
         about currently existing accelerators to be lost.
         """
-    def clearUVs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clearUVs(self, *args: Any, **kwargs: Any) -> Any:
         """clearUVs(uvSet='') -> self
 
         Clears out all uvs from a uvSet, and leaves behind an empty
@@ -6165,7 +7237,7 @@ class MFnMesh(MFnDagNode):
 
         If no uvSet is specified the mesh's current uv set will be used.
         """
-    def closestIntersection(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def closestIntersection(self, *args: Any, **kwargs: Any) -> Any:
         """closestIntersection(raySource, rayDirection, space, maxParam,
             testBothDirections, faceIds=None, triIds=None, idsSorted=False,
             accelParams=None, tolerance=kIntersectTolerance)
@@ -6215,21 +7287,21 @@ class MFnMesh(MFnDagNode):
           (*hitBary1)*v1 + (*hitBary2)*v2 + (1-*hitBary1-*hitBary2)*v3.* hitBary2 (float) - second barycentric coordinate of the point hit.
         If no point was hit then the arrays will all be empty.
         """
-    def collapseEdges(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def collapseEdges(self, *args: Any, **kwargs: Any) -> Any:
         """collapseEdges(seq of int) -> self
 
         Collapses edges into vertices. The two vertices that create each
         given edge are replaced in turn by one vertex placed at the average
         of the two initial vertex.
         """
-    def collapseFaces(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def collapseFaces(self, *args: Any, **kwargs: Any) -> Any:
         """collapseFaces(seq of int) -> self
 
         Collapses faces into vertices. Adjacent faces will be collapsed
         together into a single vertex. Non-adjacent faces will be collapsed
         into their own, separate vertices.
         """
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """copy(MObject, parent=kNullObj) -> MObject
 
         Creates a new mesh with the same geometry as the source. Raises
@@ -6250,14 +7322,14 @@ class MFnMesh(MFnDagNode):
         returned and a mesh node will be created and parented under the
         transform.
         """
-    def copyInPlace(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copyInPlace(self, *args: Any, **kwargs: Any) -> Any:
         """copyInPlace(MObject) -> self
 
         Replaces the current mesh's geometry with that from the source.
         Raises TypeError if the source is not a mesh node or mesh data
         object or it contains an empty mesh.
         """
-    def copyUVSet(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copyUVSet(self, *args: Any, **kwargs: Any) -> Any:
         """copyUVSet(fromName, toName, modifier=None) -> string
 
         Copies the contents of one UV set into another.
@@ -6277,7 +7349,7 @@ class MFnMesh(MFnDagNode):
         This method is only valid for functionsets which are attached to
         mesh nodes, not mesh data.
         """
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """create(vertices, polygonCounts, polygonConnects, uValues=None, vValues=None, parent=kNullObj) -> MObjectcreate(vertices, edges, edgeConnectsCount, edgeFaceConnects, edgeFaceDesc, storeDoubles=False, parent=kNullObj) -> MObjectcreate(vertices, edges, polygonCounts, polygonConnects, uValues=None, vValues=None, parent=kNullObj) -> MObject
 
         Creates a new polygonal mesh and sets this function set to operate
@@ -6300,7 +7372,7 @@ class MFnMesh(MFnDagNode):
         returned and a mesh node will be created and parented under the
         transform.
         """
-    def createBlindDataType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def createBlindDataType(self, *args: Any, **kwargs: Any) -> Any:
         """createBlindDataType(blindDataId, ((longName, shortName, typeName), ...)) -> self
 
         Create a new blind data type with the specified attributes.
@@ -6312,7 +7384,7 @@ class MFnMesh(MFnDagNode):
         Raises RuntimeError if the blind data id is already in use or an
         invalid format was specified.
         """
-    def createColorSet(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def createColorSet(self, *args: Any, **kwargs: Any) -> Any:
         """createColorSet(name, clamped, rep=kRGBA, modifier=None, instances=None) -> string
 
         Creates a new, empty color set for this mesh.
@@ -6326,7 +7398,7 @@ class MFnMesh(MFnDagNode):
         This method will only work when the functionset is attached to a
         mesh node, not mesh data.
         """
-    def createInPlace(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def createInPlace(self, *args: Any, **kwargs: Any) -> Any:
         """createInPlace(vertices, polygonCounts, polygonConnects) -> selfcreateInPlace(vertices, edges, polygonCounts, polygonConnects) -> self
 
         Replaces the existing polygonal mesh with a new one. This method is
@@ -6337,7 +7409,7 @@ class MFnMesh(MFnDagNode):
         The vertices may be given as a sequence of MFloatPoint's or a
         sequence of MPoint's, but not a mix of the two.
         """
-    def createUVSet(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def createUVSet(self, *args: Any, **kwargs: Any) -> Any:
         """createUVSet(name, modifier=None, instances=None) -> string
 
         Creates a new, empty UV set for this mesh.
@@ -6353,7 +7425,7 @@ class MFnMesh(MFnDagNode):
         This method is only valid for functionsets which are attached to
         mesh nodes, not mesh data.
         """
-    def currentColorSetName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def currentColorSetName(self, *args: Any, **kwargs: Any) -> Any:
         """currentColorSetName(instance=kInstanceUnspecified) -> string
 
         Get the name of the 'current' color set. The current color set is
@@ -6372,7 +7444,7 @@ class MFnMesh(MFnDagNode):
         If there is no current color set, then an empty string will be
         returned.
         """
-    def currentUVSetName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def currentUVSetName(self, *args: Any, **kwargs: Any) -> Any:
         """currentUVSetName(instance=kInstanceUnspecified) -> string
 
         Get the name of the 'current' uv set. The current uv set is
@@ -6391,7 +7463,7 @@ class MFnMesh(MFnDagNode):
         If there is no current uv set, then an empty string will be
         returned.
         """
-    def deleteColorSet(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deleteColorSet(self, *args: Any, **kwargs: Any) -> Any:
         """deleteColorSet(colorSet, modifier=None, currentSelection=None) -> self
 
         Deletes a color set from the mesh.
@@ -6399,17 +7471,17 @@ class MFnMesh(MFnDagNode):
         This method is only valid for functionsets which are attached to
         mesh nodes, not mesh data.
         """
-    def deleteEdge(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deleteEdge(self, *args: Any, **kwargs: Any) -> Any:
         """deleteEdge(edgeId, modifier=None) -> self
 
         Deletes the specified edge.
         """
-    def deleteFace(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deleteFace(self, *args: Any, **kwargs: Any) -> Any:
         """deleteFace(faceId, modifier=None) -> self
 
         Deletes the specified face.
         """
-    def deleteUVSet(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deleteUVSet(self, *args: Any, **kwargs: Any) -> Any:
         """deleteUVSet(uvSet, modifier=None, currentSelection=None) -> self
 
         Deletes a uv set from the mesh.
@@ -6417,7 +7489,7 @@ class MFnMesh(MFnDagNode):
         This method is only valid for functionsets which are attached to
         mesh nodes, not mesh data.
         """
-    def deleteVertex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deleteVertex(self, *args: Any, **kwargs: Any) -> Any:
         """deleteVertex(vertexId, modifier=None) -> self
 
         Deletes the specified vertex.
@@ -6434,25 +7506,25 @@ class MFnMesh(MFnDagNode):
         color display on when the functionset is attached to mesh data (as
         opposed to a mesh node) will raise TypeError.
         """
-    def duplicateFaces(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def duplicateFaces(self, *args: Any, **kwargs: Any) -> Any:
         """duplicateFaces(faces, translation=None) -> self
 
         Duplicates a set of faces and detaches them from the rest of the
         mesh. The resulting mesh will contain one more independant piece of
         geometry.
         """
-    def edgeBorderInfo(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def edgeBorderInfo(self, *args: Any, **kwargs: Any) -> Any:
         """edgeBorderInfo(edgeId, setId=0) -> MFnMesh::BorderInfo
 
         Returns if the specified edge is on geom/UV shell border or has shared/unshared UVs.
         """
-    def extractFaces(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def extractFaces(self, *args: Any, **kwargs: Any) -> Any:
         """extractFaces(faces, translation=None) -> self
 
         Detaches a set of faces from the rest of the mesh. The resulting
         mesh will contain one more independant piece of geometry.
         """
-    def extrudeEdges(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def extrudeEdges(self, *args: Any, **kwargs: Any) -> Any:
         """extrudeEdges(edges, extrusionCount=1, translation=None, extrudeTogether=True, thickness=0.0, offset=0.0) -> self
 
         Extrude the given edges along a vector. The resulting mesh will have
@@ -6472,7 +7544,7 @@ class MFnMesh(MFnDagNode):
         a distance that will maintain angles between edges at the border of the
         extrusion.
         """
-    def extrudeFaces(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def extrudeFaces(self, *args: Any, **kwargs: Any) -> Any:
         """extrudeFaces(faces, extrusionCount=1, translation=None, extrudeTogether=True, thickness=0.0, offset=0.0) -> self
 
         Extrude the given faces along a vector. The resulting mesh will have
@@ -6492,7 +7564,7 @@ class MFnMesh(MFnDagNode):
         a distance that will maintain angles between edges at the border of the
         extrusion.
         """
-    def freeCachedIntersectionAccelerator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def freeCachedIntersectionAccelerator(self, *args: Any, **kwargs: Any) -> Any:
         """freeCachedIntersectionAccelerator() -> self
 
         If the mesh has a cached intersection accelerator structure, then
@@ -6503,7 +7575,7 @@ class MFnMesh(MFnDagNode):
         operations, however, they are responsible for freeing the acceleration
         structure, which is what this method does.
         """
-    def generateSmoothMesh(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def generateSmoothMesh(self, *args: Any, **kwargs: Any) -> Any:
         """generateSmoothMesh(parent=kNullObj, options=None) -> MObject
 
         Creates a new polygonal mesh which is a smoothed version of the one
@@ -6526,7 +7598,7 @@ class MFnMesh(MFnDagNode):
         the functionset to operate on the new mesh, but leaves it attached
         to the original mesh.
         """
-    def getAssignedUVs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getAssignedUVs(self, *args: Any, **kwargs: Any) -> Any:
         """getAssignedUVs(uvSet='') -> (counts, uvIds)
 
         Returns a tuple containing all of the UV assignments for the specified
@@ -6537,7 +7609,7 @@ class MFnMesh(MFnDagNode):
         The second element of the tuple is an array of UV IDs for all of the
         face-vertices which have UVs assigned.
         """
-    def getAssociatedColorSetInstances(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getAssociatedColorSetInstances(self, *args: Any, **kwargs: Any) -> Any:
         """getAssociatedColorSetInstances(colorSet) -> MIntArray
 
         Returns the instance numbers associated with the specified Color set.
@@ -6548,7 +7620,7 @@ class MFnMesh(MFnDagNode):
         node. It will raise RuntimeError if the functionset is attached to
         mesh data.
         """
-    def getAssociatedUVSetInstances(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getAssociatedUVSetInstances(self, *args: Any, **kwargs: Any) -> Any:
         """getAssociatedUVSetInstances(uvSet) -> MIntArray
 
         Returns the instance numbers associated with the specified UV set.
@@ -6559,7 +7631,7 @@ class MFnMesh(MFnDagNode):
         node. It will raise RuntimeError if the functionset is attached to
         mesh data.
         """
-    def getAssociatedUVSetTextures(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getAssociatedUVSetTextures(self, *args: Any, **kwargs: Any) -> Any:
         """getAssociatedUVSetTextures(uvSet) -> MObjectArray
 
         Returns the texture nodes which are using the specified UV set. If
@@ -6570,7 +7642,7 @@ class MFnMesh(MFnDagNode):
         node. It will raise RuntimeError if the functionset is attached to
         mesh data.
         """
-    def getBinaryBlindData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getBinaryBlindData(self, *args: Any, **kwargs: Any) -> Any:
         """getBinaryBlindData(compId, compType, blindDataId, attr) -> string
         getBinaryBlindData(compType, blindDataId, attr)
           -> (MIntArray, [string, string, ...])
@@ -6585,14 +7657,14 @@ class MFnMesh(MFnDagNode):
         Both versions raise RuntimeError if the attribute is not of 'binary'
         type.
         """
-    def getBinormals(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getBinormals(self, *args: Any, **kwargs: Any) -> Any:
         """getBinormals(space=MSpace.kObject, uvSet='') -> MFloatVectorArray
 
         Returns the binormal vectors for all face-vertices.
 
         This method is not threadsafe.
         """
-    def getBlindDataAttrNames(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getBlindDataAttrNames(self, *args: Any, **kwargs: Any) -> Any:
         """getBlindDataAttrNames(blindDataId) -> ((longName, shortName, typeName), ...)
 
         Returns a tuple listing the attributes of the given blind data type.
@@ -6600,13 +7672,13 @@ class MFnMesh(MFnDagNode):
         name, short name and type name of the attribute. Type names can be
         'int', 'float', 'double', 'boolean', 'string' or 'binary'.
         """
-    def getBlindDataTypes(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getBlindDataTypes(self, *args: Any, **kwargs: Any) -> Any:
         """getBlindDataTypes(MFn Type constant) -> MIntArray
 
         Returns all the blind data ID's associated with the given component
         type on this mesh.
         """
-    def getBoolBlindData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getBoolBlindData(self, *args: Any, **kwargs: Any) -> Any:
         """getBoolBlindData(compId, compType, blindDataId, attr) -> bool
         getBoolBlindData(compType, blindDataId, attr) -> (MIntArray, MIntArray)
 
@@ -6620,14 +7692,14 @@ class MFnMesh(MFnDagNode):
         Both versions raise RuntimeError if the attribute is not of
         'boolean' type.
         """
-    def getClosestNormal(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getClosestNormal(self, *args: Any, **kwargs: Any) -> Any:
         """getClosestNormal(MPoint, space=MSpace.kObject) -> (MVector, int)
 
         Returns a tuple containing the normal at the closest point on the
         mesh to the given point and the ID of the face in which that closest
         point lies.
         """
-    def getClosestPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getClosestPoint(self, *args: Any, **kwargs: Any) -> Any:
         """getClosestPoint(MPoint, space=MSpace.kObject) -> (MPoint, int)
 
         Returns a tuple containing the closest point on the mesh to the
@@ -6635,7 +7707,7 @@ class MFnMesh(MFnDagNode):
 
         This method is not threadsafe.
         """
-    def getClosestPointAndNormal(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getClosestPointAndNormal(self, *args: Any, **kwargs: Any) -> Any:
         """getClosestPointAndNormal(MPoint, space=MSpace.kObject)
           -> (MPoint, MVector, int)
 
@@ -6645,32 +7717,32 @@ class MFnMesh(MFnDagNode):
 
         This method is not threadsafe.
         """
-    def getClosestUVs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getClosestUVs(self, *args: Any, **kwargs: Any) -> Any:
         """getClosestUVs(u, v, uvSet='') -> MIntArray
 
         Returns the IDs of the UVs which are nearest in uv space to the
         given texture coordinate in the specified UV set. All these UVs
         locate at the same distance to the given coordinate.
         """
-    def getColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getColor(self, *args: Any, **kwargs: Any) -> Any:
         """getColor(colorId, colorSet='') -> MColor
 
         Returns a color from a colorSet. Raises IndexError if the colorId is
         out of range.
         """
-    def getColorIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getColorIndex(self, *args: Any, **kwargs: Any) -> Any:
         """getColorIndex(faceId, localVertexId, colorSet='') -> int
 
         Returns the index into the specified colorSet of the color used by a
         specific face-vertex. This can be used to index into the sequence
         returned by getColors().
         """
-    def getColorRepresentation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getColorRepresentation(self, *args: Any, **kwargs: Any) -> Any:
         """getColorRepresentation(colorSet) -> Color Representation constant
 
         Returns the Color Representation used by the specified color set.
         """
-    def getColorSetFamilyNames(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getColorSetFamilyNames(self, *args: Any, **kwargs: Any) -> Any:
         """getColorSetFamilyNames() -> (string, ...)
 
         Returns the names of all of the color set families on this object. A
@@ -6682,12 +7754,12 @@ class MFnMesh(MFnDagNode):
         Given a color set family name, getColorSetsInFamily() may be used to
         determine the names of the associated individual sets.
         """
-    def getColorSetNames(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getColorSetNames(self, *args: Any, **kwargs: Any) -> Any:
         """getColorSetNames() -> (string, ...)
 
         Returns the names of all the color sets on this object.
         """
-    def getColorSetsInFamily(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getColorSetsInFamily(self, *args: Any, **kwargs: Any) -> Any:
         """getColorSetsInFamily(familyName) -> (string, ...)
 
         Returns the names of all of the color sets that belong to the
@@ -6696,7 +7768,7 @@ class MFnMesh(MFnDagNode):
         A set which is shared across all instances will be the sole member
         of its family and will share the same name as its family.
         """
-    def getColors(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getColors(self, *args: Any, **kwargs: Any) -> Any:
         """getColors(colorSet='') -> MColorArray
 
         Returns all of the colors in a colorSet. If no colorSet is specified
@@ -6705,7 +7777,7 @@ class MFnMesh(MFnDagNode):
         Use the index returned by getColorIndex() to access the returned
         array.
         """
-    def getConnectedShaders(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getConnectedShaders(self, *args: Any, **kwargs: Any) -> Any:
         """getConnectedShaders(instance) -> (MObjectArray, MIntArray)
 
         Returns a tuple containing an array of shaders (sets) and an array
@@ -6719,7 +7791,7 @@ class MFnMesh(MFnDagNode):
         node. It will raise RuntimeError if the functionset is attached to
         mesh data.
         """
-    def getCreaseEdges(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getCreaseEdges(self, *args: Any, **kwargs: Any) -> Any:
         """getCreaseEdges() -> (MUintArray, MDoubleArray)
 
         Returns a tuple containing two arrays. The first contains the mesh-
@@ -6730,7 +7802,7 @@ class MFnMesh(MFnDagNode):
         software outside of Maya may require a license under patents owned
         by Pixar(R).
         """
-    def getCreaseVertices(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getCreaseVertices(self, *args: Any, **kwargs: Any) -> Any:
         """getCreaseVertices() -> (MUintArray, MDoubleArray)
 
         Returns a tuple containing two arrays. The first contains the mesh-
@@ -6741,7 +7813,7 @@ class MFnMesh(MFnDagNode):
         software outside of Maya may require a license under patents owned
         by Pixar(R).
         """
-    def getDoubleBlindData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getDoubleBlindData(self, *args: Any, **kwargs: Any) -> Any:
         """getDoubleBlindData(compId, compType, blindDataId, attr) -> float
         getDoubleBlindData(compType, blindDataId, attr) -> (MIntArray, MDoubleArray)
 
@@ -6755,14 +7827,14 @@ class MFnMesh(MFnDagNode):
         Both versions raise RuntimeError if the attribute is not of
         'double' type.
         """
-    def getEdgeVertices(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getEdgeVertices(self, *args: Any, **kwargs: Any) -> Any:
         """getEdgeVertices(edgeId) -> (int, int)
 
         Returns a tuple containing the mesh-relative/global IDs of the
         edge's two vertices. The indices can be used to refer to the
         elements in the array returned by the getPoints() method.
         """
-    def getFaceAndVertexIndices(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getFaceAndVertexIndices(self, *args: Any, **kwargs: Any) -> Any:
         """getFaceAndVertexIndices(faceVertexIndex, localVertex=True) -> (int, int)
 
         Returns a tuple containg the faceId and vertexIndex represented by
@@ -6772,34 +7844,34 @@ class MFnMesh(MFnDagNode):
         If localVertex is True then the returned vertexIndex is the face-
         relative/local index, otherwise it is the mesh-relative/global index.
         """
-    def getFaceNormalIds(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getFaceNormalIds(self, *args: Any, **kwargs: Any) -> Any:
         """getFaceNormalIds(faceId) -> MIntArray
 
         Returns the IDs of the normals for all the vertices of a given face.
         These IDs can be used to index into the arrays returned by getNormals().
         """
-    def getFaceUVSetNames(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getFaceUVSetNames(self, *args: Any, **kwargs: Any) -> Any:
         """getFaceUVSetNames(faceId) -> (string, ...)
 
         Returns the names of all of the uv sets mapped to the specified face.
 
         This method is not threadsafe.
         """
-    def getFaceVertexBinormal(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getFaceVertexBinormal(self, *args: Any, **kwargs: Any) -> Any:
         """getFaceVertexBinormal(faceId, vertexId, space=MSpace.kObject, uvSet='') -> MVector
 
         Returns the binormal vector at a given face vertex.
 
         This method is not threadsafe.
         """
-    def getFaceVertexBinormals(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getFaceVertexBinormals(self, *args: Any, **kwargs: Any) -> Any:
         """getFaceVertexBinormals(faceId, space=MSpace.kObject, uvSet='') -> MFloatVectorArray
 
         Returns all the per-vertex-per-face binormals for a given face.
 
         This method is not threadsafe.
         """
-    def getFaceVertexColors(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getFaceVertexColors(self, *args: Any, **kwargs: Any) -> Any:
         """getFaceVertexColors(colorSet='', defaultUnsetColor=None) -> MColorArray
 
         Returns colors for all the mesh's face-vertices.
@@ -6818,7 +7890,7 @@ class MFnMesh(MFnDagNode):
         If the defaultUnsetColor is not given, then (-1, -1, -1, -1) will be
         used.
         """
-    def getFaceVertexIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getFaceVertexIndex(self, *args: Any, **kwargs: Any) -> Any:
         """getFaceVertexIndex(faceId, vertexIndex, localVertex=True) -> int
 
         Returns the index for a specific face-vertex into an array of face-
@@ -6834,21 +7906,21 @@ class MFnMesh(MFnDagNode):
         The opposite operation is performed by the getFaceAndVertexIndices()
         method.
         """
-    def getFaceVertexNormal(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getFaceVertexNormal(self, *args: Any, **kwargs: Any) -> Any:
         """getFaceVertexNormal(faceId, vertexId, space=MSpace.kObject) -> MVector
 
         Returns the per-vertex-per-face normal for a given face and vertex.
 
         This method is not threadsafe.
         """
-    def getFaceVertexNormals(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getFaceVertexNormals(self, *args: Any, **kwargs: Any) -> Any:
         """getFaceVertexNormals(faceId, space=MSpace.kObject) -> MFloatVectorArray
 
         Returns the normals for a given face.
 
         This method is not threadsafe.
         """
-    def getFaceVertexTangent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getFaceVertexTangent(self, *args: Any, **kwargs: Any) -> Any:
         """getFaceVertexTangent(faceId, vertexId, space=MSpace.kObject, uvSet='') -> MVector
 
         Return the normalized tangent vector at a given face vertex.
@@ -6857,7 +7929,7 @@ class MFnMesh(MFnDagNode):
         in the U direction defined by the uv map.
         This method is not threadsafe.
         """
-    def getFaceVertexTangents(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getFaceVertexTangents(self, *args: Any, **kwargs: Any) -> Any:
         """getFaceVertexTangents(faceId, space=MSpace.kObject, uvSet='') -> MFloatVectorArray
 
         Returns all the per-vertex-per-face tangents for a given face.
@@ -6867,7 +7939,7 @@ class MFnMesh(MFnDagNode):
 
         This method is not threadsafe.
         """
-    def getFloatBlindData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getFloatBlindData(self, *args: Any, **kwargs: Any) -> Any:
         """getFloatBlindData(compId, compType, blindDataId, attr) -> float
         getFloatBlindData(compType, blindDataId, attr) -> (MIntArray, MFloatArray)
 
@@ -6881,12 +7953,12 @@ class MFnMesh(MFnDagNode):
         Both versions raise RuntimeError if the attribute is not of
         'float' type.
         """
-    def getFloatPoints(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getFloatPoints(self, *args: Any, **kwargs: Any) -> Any:
         """getFloatPoints(space=MSpace.kObject) -> MFloatPointArray
 
         Returns an MFloatPointArray containing the mesh's vertices.
         """
-    def getHoles(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getHoles(self, *args: Any, **kwargs: Any) -> Any:
         """getHoles() -> ((face, (v1, v2, ...)), (face, (v1, v2, ...)), ...)
 
         Returns a tuple describing the holes in the mesh. Each element of the
@@ -6903,7 +7975,7 @@ class MFnMesh(MFnDagNode):
         and consists of vertices 7, 2 and 6. The second hole is in face 5 and
         consists of vertices 11, 10, 3 and 4.
         """
-    def getIntBlindData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getIntBlindData(self, *args: Any, **kwargs: Any) -> Any:
         """getIntBlindData(compId, compType, blindDataId, attr) -> int
         getIntBlindData(compType, blindDataId, attr) -> (MIntArray, MIntArray)
 
@@ -6917,7 +7989,7 @@ class MFnMesh(MFnDagNode):
         Both versions raise RuntimeError if the attribute is not of
         'int' type.
         """
-    def getInvisibleFaces(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getInvisibleFaces(self, *args: Any, **kwargs: Any) -> Any:
         """getInvisibleFaces() -> MUintArray
 
         Returns the invisible faces of the mesh. Invisible faces are like
@@ -6929,7 +8001,7 @@ class MFnMesh(MFnDagNode):
         Invisible faces can be set using the setInvisibleFaces() method or
         the polyHole command.
         """
-    def getMeshShellsIds(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getMeshShellsIds(self, *args: Any, **kwargs: Any) -> Any:
         """getMeshShellsIds(compType) -> (int, MIntArray)
 
         Returns a tuple containing describing how the specified component type items
@@ -6937,7 +8009,7 @@ class MFnMesh(MFnDagNode):
         of distinct shells. The second element of the tuple is an array of
         shell indices, one per component, indicating which shell that component is part of.
         """
-    def getNormalIds(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getNormalIds(self, *args: Any, **kwargs: Any) -> Any:
         """getNormalIds() -> (MIntArray, MIntArray)
 
         Returns the normal IDs for all of the mesh's polygons as a tuple of
@@ -6946,7 +8018,7 @@ class MFnMesh(MFnDagNode):
         vertex. These IDs can be used to index into the array returned by
         getNormals().
         """
-    def getNormals(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getNormals(self, *args: Any, **kwargs: Any) -> Any:
         """getNormals(space=MSpace.kObject) -> MFloatVectorArray
 
         Returns a copy of the mesh's normals. The normals are the per-polygon
@@ -6955,12 +8027,12 @@ class MFnMesh(MFnDagNode):
 
         This method is not threadsafe.
         """
-    def getPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPoint(self, *args: Any, **kwargs: Any) -> Any:
         """getPoint(vertexId, space=MSpace.kObject) -> MPoint
 
         Returns the position of specified vertex.
         """
-    def getPointAtUV(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPointAtUV(self, *args: Any, **kwargs: Any) -> Any:
         """getPointAtUV(faceId, u, v, space=MSpace.kObject, uvSet='', tolerance=0.0) -> MPoint
 
         Returns the position of the point at the give UV value in the
@@ -6968,31 +8040,31 @@ class MFnMesh(MFnDagNode):
 
         This method is not threadsafe.
         """
-    def getPoints(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPoints(self, *args: Any, **kwargs: Any) -> Any:
         """getPoints(space=MSpace.kObject) -> MPointArray
 
         Returns a copy of the mesh's vertex positions as an MPointArray.
         """
-    def getPointsAtUV(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPointsAtUV(self, *args: Any, **kwargs: Any) -> Any:
         """getPointsAtUV(u, v, space=MSpace.kObject, uvSet='', tolerance=0.001) -> (MIntArray, MPointArray)
 
         Returns the polygon ids and positions of points at the given UV position on the mesh.
         """
-    def getPolygonNormal(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPolygonNormal(self, *args: Any, **kwargs: Any) -> Any:
         """getPolygonNormal(polygonId, space=MSpace.kObject) -> MVector
 
         Returns the per-polygon normal for the given polygon.
 
         This method is not threadsafe.
         """
-    def getPolygonTriangleVertices(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPolygonTriangleVertices(self, *args: Any, **kwargs: Any) -> Any:
         """getPolygonTriangleVertices(polygonId, triangleId) -> (int, int, int)
 
         Returns the mesh-relative/global IDs of the 3 vertices of the
         specified triangle of the specified polygon. These IDs can be used
         to index into the arrays returned by getPoints() and getFloatPoints().
         """
-    def getPolygonUV(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPolygonUV(self, *args: Any, **kwargs: Any) -> Any:
         """getPolygonUV(polygonId, vertexId, uvSet='') -> (float, float)
 
         Returns a tuple containing the U and V values at a specified vertex
@@ -7000,26 +8072,26 @@ class MFnMesh(MFnDagNode):
 
         This method is not threadsafe.
         """
-    def getPolygonUVid(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPolygonUVid(self, *args: Any, **kwargs: Any) -> Any:
         """getPolygonUVid(polygonId, vertexId, uvSet='') -> int
 
         Returns the ID of the UV at a specified vertex of a specified polygon.
 
         This method is not threadsafe.
         """
-    def getPolygonVertices(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPolygonVertices(self, *args: Any, **kwargs: Any) -> Any:
         """getPolygonVertices(polygonId) -> MIntArray
 
         Returns the mesh-relative/global vertex IDs the specified polygon.
         These IDs can be used to index into the arrays returned by getPoints()
         and getFloatPoints().
         """
-    def getSmoothMeshDisplayOptions(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getSmoothMeshDisplayOptions(self, *args: Any, **kwargs: Any) -> Any:
         """getSmoothMeshDisplayOptions() -> MMeshSmoothOptions
 
         Returns the options currently in use when smoothing the mesh for display.
         """
-    def getStringBlindData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getStringBlindData(self, *args: Any, **kwargs: Any) -> Any:
         """getStringBlindData(compId, compType, blindDataId, attr) -> string
         getStringBlindData(compType, blindDataId, attr)
           -> (MIntArray, [string, string, ...])
@@ -7034,12 +8106,12 @@ class MFnMesh(MFnDagNode):
         Both versions raise RuntimeError if the attribute is not of 'string'
         type.
         """
-    def getTangentId(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getTangentId(self, *args: Any, **kwargs: Any) -> Any:
         """getTangentId(faceId, vertexId) -> int
 
         Returns the ID of the tangent for a given face and vertex.
         """
-    def getTangents(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getTangents(self, *args: Any, **kwargs: Any) -> Any:
         """getTangents(space=MSpace.kObject, uvSet='') -> MFloatVectorArray
 
         Return the tangent vectors for all face vertices. The tangent is
@@ -7048,7 +8120,7 @@ class MFnMesh(MFnDagNode):
 
         This method is not threadsafe.
         """
-    def getTriangleOffsets(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getTriangleOffsets(self, *args: Any, **kwargs: Any) -> Any:
         """getTriangleOffsets() -> (MIntArray, MIntArray)
 
         Returns the number of triangles for every polygon face and the
@@ -7057,7 +8129,7 @@ class MFnMesh(MFnDagNode):
         so it has three times as many elements as there are triangles.
         (i.e. three times the sum of the elements of the triangleCounts array)
         """
-    def getTriangles(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getTriangles(self, *args: Any, **kwargs: Any) -> Any:
         """getTriangles() -> (MIntArray, MIntArray)
 
         Returns a tuple describing the mesh's triangulation. The first
@@ -7065,12 +8137,12 @@ class MFnMesh(MFnDagNode):
         each of the mesh's polygons. The second tuple gives the ids of the
         vertices of all the triangles.
         """
-    def getUV(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getUV(self, *args: Any, **kwargs: Any) -> Any:
         """getUV(uvId, uvSet='') -> (float, float)
 
         Returns a tuple containing the u and v values of the specified UV.
         """
-    def getUVAtPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getUVAtPoint(self, *args: Any, **kwargs: Any) -> Any:
         """getUVAtPoint(point, space=MSpace.kObject, uvSet='') -> (float, float, int)
 
         Returns a tuple containing the u and v coordinates of the point on
@@ -7079,12 +8151,12 @@ class MFnMesh(MFnDagNode):
 
         This method is not threadsafe.
         """
-    def getUVBorderEdges(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getUVBorderEdges(self, *args: Any, **kwargs: Any) -> Any:
         """getUVBorderEdges(setId) -> MIntArray
 
         Retrieves the edge indices for edges lying on a UV border.
         """
-    def getUVSetFamilyNames(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getUVSetFamilyNames(self, *args: Any, **kwargs: Any) -> Any:
         """getUVSetFamilyNames() -> (string, ...)
 
         Returns the names of all of the uv set families on this object. A
@@ -7096,12 +8168,12 @@ class MFnMesh(MFnDagNode):
         Given a uv set family name, getUVSetsInFamily() may be used to
         determine the names of the associated individual sets.
         """
-    def getUVSetNames(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getUVSetNames(self, *args: Any, **kwargs: Any) -> Any:
         """getUVSetNames() -> (string, ...)
 
         Returns the names of all the uv sets on this object.
         """
-    def getUVSetsInFamily(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getUVSetsInFamily(self, *args: Any, **kwargs: Any) -> Any:
         """getUVSetsInFamily(familyName) -> (string, ...)
 
         Returns the names of all of the uv sets that belong to the
@@ -7110,13 +8182,13 @@ class MFnMesh(MFnDagNode):
         A set which is shared across all instances will be the sole member
         of its family and will share the same name as its family.
         """
-    def getUVs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getUVs(self, *args: Any, **kwargs: Any) -> Any:
         """getUVs(uvSet='') -> (MFloatArray, MFloatArray)
 
         Returns a tuple containing an array of U values and an array of V
         values, representing all of the UVs for the given UV set.
         """
-    def getUvShellsIds(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getUvShellsIds(self, *args: Any, **kwargs: Any) -> Any:
         """getUvShellsIds(uvSet='') -> (int, MIntArray)
 
         Returns a tuple containing describing how the specified UV set's UVs
@@ -7124,7 +8196,7 @@ class MFnMesh(MFnDagNode):
         of distinct shells. The second element of the tuple is an array of
         shell indices, one per uv, indicating which shell that uv is part of.
         """
-    def getVertexColors(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getVertexColors(self, *args: Any, **kwargs: Any) -> Any:
         """getVertexColors(colorSet='', defaultUnsetColor=None) -> MColorArray
 
         Gets colors for all vertices of the given colorSet. If no face has
@@ -7137,7 +8209,7 @@ class MFnMesh(MFnDagNode):
         If the defaultUnsetColor is not given, then (-1, -1, -1, -1) will be
         used.
         """
-    def getVertexNormal(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getVertexNormal(self, *args: Any, **kwargs: Any) -> Any:
         """getVertexNormal(vertexId, angleWeighted, space=MSpace.kObject) -> MVector
 
         Returns the normal at the given vertex. The returned normal is a
@@ -7154,7 +8226,7 @@ class MFnMesh(MFnDagNode):
 
         This method is not threadsafe.
         """
-    def getVertexNormals(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getVertexNormals(self, *args: Any, **kwargs: Any) -> Any:
         """getVertexNormals(angleWeighted, space=MSpace.kObject) -> MFloatVectorArray
 
         Returns all the vertex normals. The returned normals are per-vertex
@@ -7170,7 +8242,7 @@ class MFnMesh(MFnDagNode):
 
         This method is not threadsafe.
         """
-    def getVertices(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getVertices(self, *args: Any, **kwargs: Any) -> Any:
         """getVertices() -> (MIntArray, MIntArray)
 
         Returns the mesh-relative/global vertex IDs for all of the mesh's
@@ -7179,7 +8251,7 @@ class MFnMesh(MFnDagNode):
         relative IDs for each polygon-vertex. These IDs can be used to index
         into the arrays returned by getPoints() and getFloatPoints().
         """
-    def globalIntersectionAcceleratorsInfo(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def globalIntersectionAcceleratorsInfo(self, *args: Any, **kwargs: Any) -> Any:
         """globalIntersectionAcceleratorsInfo() -> string
 
         Returns a string that describes the system-wide resource usage for
@@ -7210,12 +8282,12 @@ class MFnMesh(MFnDagNode):
         this information. It will not cause information about currently
         existing accelerators to be lost.
         """
-    def hasAlphaChannels(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasAlphaChannels(self, *args: Any, **kwargs: Any) -> Any:
         """hasAlphaChannels(colorSet) -> bool
 
         Returns True if the color set has an alpha channel.
         """
-    def hasBlindData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasBlindData(self, *args: Any, **kwargs: Any) -> Any:
         """hasBlindData(compType, compId=None, blindDataId=None) -> bool
 
         Returns true if any component of the given type on this mesh has
@@ -7223,12 +8295,12 @@ class MFnMesh(MFnDagNode):
         component is checked. If a blind data ID is provided then only blind
         data of that type is checked.
         """
-    def hasColorChannels(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasColorChannels(self, *args: Any, **kwargs: Any) -> Any:
         """hasColorChannels(colorSet) -> bool
 
         Returns True if the color set has RGB channels.
         """
-    def intersectFaceAtUV(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def intersectFaceAtUV(self, *args: Any, **kwargs: Any) -> Any:
         """intersectFaceAtUV(u, v, uvSet='') -> int
 
         Returns the IDs of the UVs on this surface which are nearest
@@ -7237,51 +8309,51 @@ class MFnMesh(MFnDagNode):
 
         This method is not threadsafe.
         """
-    def isBlindDataTypeUsed(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isBlindDataTypeUsed(self, *args: Any, **kwargs: Any) -> Any:
         """isBlindDataTypeUsed(blindDataId) -> bool
 
         Returns True if the blind data type is already in use anywhere in the scene.
         """
-    def isColorClamped(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isColorClamped(self, *args: Any, **kwargs: Any) -> Any:
         """isColorClamped(colorSet) -> bool
 
         Returns True if the color sets RGBA components are clamped to the
         range 0 to 1.
         """
-    def isColorSetPerInstance(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isColorSetPerInstance(self, *args: Any, **kwargs: Any) -> Any:
         """isColorSetPerInstance(colorSet) -> bool
 
         Returns True if the color set is per-instance, and False if it is
         shared across all instances.
         """
-    def isEdgeSmooth(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isEdgeSmooth(self, *args: Any, **kwargs: Any) -> Any:
         """isEdgeSmooth(edgeId) -> bool
 
         Returns True if the edge is smooth, False if it is hard.
         """
-    def isNormalLocked(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isNormalLocked(self, *args: Any, **kwargs: Any) -> Any:
         """isNormalLocked(normalId) -> bool
 
         Returns True if the normal is locked, False otherwise.
         """
-    def isPolygonConvex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isPolygonConvex(self, *args: Any, **kwargs: Any) -> Any:
         """isPolygonConvex(faceId) -> bool
 
         Returns True if the polygon is convex, False if it is concave.
         """
-    def isPolygonUVReversed(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isPolygonUVReversed(self, *args: Any, **kwargs: Any) -> Any:
         """isPolygonUVReversed(faceId) -> bool
 
         Returns True if the texture coordinates (uv's) for specified polygon are
         reversed (clockwise), False if they are not reversed (counter clockwise).
         """
-    def isRightHandedTangent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isRightHandedTangent(self, *args: Any, **kwargs: Any) -> Any:
         """isRightHandedTangent(tangentId, uvSet='') -> bool
 
         Returns True if the normal, tangent, and binormal form a right handed
         coordinate system, False otherwise.
         """
-    def isUVSetPerInstance(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isUVSetPerInstance(self, *args: Any, **kwargs: Any) -> Any:
         """isUVSetPerInstance(uvSet) -> bool
 
         Returns True if the UV set is per-instance, and False if it is shared
@@ -7293,12 +8365,12 @@ class MFnMesh(MFnDagNode):
     kPointTolerance: float = ...
     kUVBorder: int = ...
 
-    def lockFaceVertexNormals(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def lockFaceVertexNormals(self, *args: Any, **kwargs: Any) -> Any:
         """lockFaceVertexNormals(seq of faceIds, seq of vertIds) -> self
 
         Locks the normals for the given face/vertex pairs.
         """
-    def lockVertexNormals(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def lockVertexNormals(self, *args: Any, **kwargs: Any) -> Any:
         """lockVertexNormals(sequence of vertIds) -> self
 
         Locks the shared normals for the specified vertices.
@@ -7309,7 +8381,7 @@ class MFnMesh(MFnDagNode):
     @numColorSets.setter
     def numColorSets(*args: Any, **kwargs: Any) -> Any:
         """Number of color sets."""
-    def numColors(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numColors(self, *args: Any, **kwargs: Any) -> Any:
         """numColors(colorSet='') -> int
 
         Returns the number of colors in the given color set. If no color set
@@ -7349,7 +8421,7 @@ class MFnMesh(MFnDagNode):
     @numUVSets.setter
     def numUVSets(*args: Any, **kwargs: Any) -> Any:
         """Number of UV (texture coordinate) sets."""
-    def numUVs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numUVs(self, *args: Any, **kwargs: Any) -> Any:
         """numUVs(uvSet='') -> int
 
         Returns the number of UVs (texture coordinates) in the given UV set.
@@ -7361,35 +8433,35 @@ class MFnMesh(MFnDagNode):
     @numVertices.setter
     def numVertices(*args: Any, **kwargs: Any) -> Any:
         """Number of distinct vertices. Shared vertices are only counted once."""
-    def onBoundary(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def onBoundary(self, *args: Any, **kwargs: Any) -> Any:
         """onBoundary(faceId) -> bool
 
         Returns true if the face is on the border of the mesh, meaning that
         one or more of its edges is a border edge.
         """
-    def polygonVertexCount(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def polygonVertexCount(self, *args: Any, **kwargs: Any) -> Any:
         """polygonVertexCount(faceId) -> int
 
         Returns the number of vertices in the given polygon. Raises
         ValueError if the polygon ID is invalid.
         """
-    def removeFaceColors(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeFaceColors(self, *args: Any, **kwargs: Any) -> Any:
         """removeFaceColors(seq of faceIds) -> self
 
         Removes colors from all vertices of the specified faces.
         """
-    def removeFaceVertexColors(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeFaceVertexColors(self, *args: Any, **kwargs: Any) -> Any:
         """removeFaceVertexColors(seq of faceIds, seq of vertexIds) -> self
 
         Removes colors from the specified face/vertex pairs.
         """
-    def removeVertexColors(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeVertexColors(self, *args: Any, **kwargs: Any) -> Any:
         """removeVertexColors(seq of vertexIds) -> self
 
         Removes colors from the specified vertices in all of the faces which
         share those vertices.
         """
-    def renameUVSet(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def renameUVSet(self, *args: Any, **kwargs: Any) -> Any:
         """renameUVSet(origName, newName, modifier=None) -> self
 
         Renames a UV set. The set must exist and the new name cannot be the
@@ -7398,7 +8470,7 @@ class MFnMesh(MFnDagNode):
         This method is only valid for functionsets which are attached to mesh
         nodes, not mesh data.
         """
-    def setBinaryBlindData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setBinaryBlindData(self, *args: Any, **kwargs: Any) -> Any:
         """setBinaryBlindData(compId, compType, blindDataId, attr, data) -> self
         setBinaryBlindData(seq of compId, compType, blindDataId, attr, data) -> self
 
@@ -7411,7 +8483,7 @@ class MFnMesh(MFnDagNode):
         If it is a single string then all of the specified components will
         have their blind data set to that value.
         """
-    def setBoolBlindData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setBoolBlindData(self, *args: Any, **kwargs: Any) -> Any:
         """setBoolBlindData(compId, compType, blindDataId, attr, data) -> self
         setBoolBlindData(seq of compId, compType, blindDataId, attr, data) -> self
 
@@ -7424,7 +8496,7 @@ class MFnMesh(MFnDagNode):
         If it is a single boolean then all of the specified components will
         have their blind data set to that value.
         """
-    def setColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setColor(self, *args: Any, **kwargs: Any) -> Any:
         """setColor(colorId, MColor, colorSet='', rep=kRGBA) -> self
 
         Sets a color in the specified colorSet. If no colorSet is given the
@@ -7432,7 +8504,7 @@ class MFnMesh(MFnDagNode):
         equal to numColors() then the colorSet will be grown to accommodate
         the specified color.
         """
-    def setColors(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setColors(self, *args: Any, **kwargs: Any) -> Any:
         """setColors(seq of MColor, colorSet='', rep=kRGBA) -> self
 
         Sets all the colors of the specified colorSet. If no colorSet is
@@ -7449,7 +8521,7 @@ class MFnMesh(MFnDagNode):
         In order to shrink the colorSet you have to clear its existing
         colors. E.g: clearColors(), setColors( ... ), assignColors()
         """
-    def setCreaseEdges(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setCreaseEdges(self, *args: Any, **kwargs: Any) -> Any:
         """setCreaseEdges(edgeIds, seq of float) -> self
 
 
@@ -7459,7 +8531,7 @@ class MFnMesh(MFnDagNode):
         software outside of Maya may require a license under patents owned by
         Pixar(R).
         """
-    def setCreaseVertices(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setCreaseVertices(self, *args: Any, **kwargs: Any) -> Any:
         """setCreaseVertices(edgeIds, seq of float) -> self
 
 
@@ -7469,7 +8541,7 @@ class MFnMesh(MFnDagNode):
         software outside of Maya may require a license under patents owned by
         Pixar(R).
         """
-    def setCurrentColorSetName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setCurrentColorSetName(self, *args: Any, **kwargs: Any) -> Any:
         """setCurrentColorSetName(colorSet, modifier=None, currentSelection=None) -> self
 
         Sets the 'current' color set for this object. The current color set
@@ -7489,7 +8561,7 @@ class MFnMesh(MFnDagNode):
         This method is only valid for functionsets which are attached to mesh
         nodes, not mesh data.
         """
-    def setCurrentUVSetName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setCurrentUVSetName(self, *args: Any, **kwargs: Any) -> Any:
         """setCurrentUVSetName(uvSet, modifier=None, currentSelection=None) -> self
 
         Sets the 'current' uv set for this object. The current uv set is the
@@ -7509,7 +8581,7 @@ class MFnMesh(MFnDagNode):
         This method is only valid for functionsets which are attached to mesh
         nodes, not mesh data.
         """
-    def setDoubleBlindData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDoubleBlindData(self, *args: Any, **kwargs: Any) -> Any:
         """setDoubleBlindData(compId, compType, blindDataId, attr, data) -> self
         setDoubleBlindData(seq of compId, compType, blindDataId, attr, data) -> self
 
@@ -7522,7 +8594,7 @@ class MFnMesh(MFnDagNode):
         If it is a single float then all of the specified components will
         have their blind data set to that value.
         """
-    def setEdgeSmoothing(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setEdgeSmoothing(self, *args: Any, **kwargs: Any) -> Any:
         """setEdgeSmoothing(edgeId, smooth=True) -> self
 
         Sets the specified edge to be hard or smooth. You must use the
@@ -7530,7 +8602,7 @@ class MFnMesh(MFnDagNode):
         mesh have had setEdgeSmoothing() done. Use the updateSurface() method
         to indicate the mesh needs to be redrawn.
         """
-    def setEdgeSmoothings(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setEdgeSmoothings(self, *args: Any, **kwargs: Any) -> Any:
         """setEdgeSmoothings(edgeIds, smooths) -> self
 
         Sets the specified edges to be hard or smooth. You must use the
@@ -7538,19 +8610,19 @@ class MFnMesh(MFnDagNode):
         mesh have had setEdgeSmoothings() done. Use the updateSurface() method
         to indicate the mesh needs to be redrawn.
         """
-    def setFaceColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setFaceColor(self, *args: Any, **kwargs: Any) -> Any:
         """setFaceColor(color, faceId, rep=kRGBA) -> self
 
         Sets the face-vertex color for all vertices on this face.
         """
-    def setFaceColors(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setFaceColors(self, *args: Any, **kwargs: Any) -> Any:
         """setFaceColors(colors, faceIds, rep=kRGBA) -> self
 
         Sets the colors of the specified faces. For each face in the faceIds
         sequence the corresponding color from the colors sequence will be
         applied to all of its vertices.
         """
-    def setFaceVertexColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setFaceVertexColor(self, *args: Any, **kwargs: Any) -> Any:
         """setFaceVertexColor(color, faceId, vertexId, modifier=None, rep=kRGBA) -> self
 
         Sets a face-specific normal at a vertex.
@@ -7559,7 +8631,7 @@ class MFnMesh(MFnDagNode):
         added to the modifier and will not take effect until the modifier's
         doIt() is called. Otherwise it will take effect immediately.
         """
-    def setFaceVertexColors(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setFaceVertexColors(self, *args: Any, **kwargs: Any) -> Any:
         """setFaceVertexColors(colors, faceIds, vertexIds, modifier=None, rep=kRGBA) -> self
 
         Sets the colors of the specified face/vertex pairs.
@@ -7568,7 +8640,7 @@ class MFnMesh(MFnDagNode):
         added to the modifier and will not take effect until the modifier's
         doIt() is called. Otherwise it will take effect immediately.
         """
-    def setFaceVertexNormal(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setFaceVertexNormal(self, *args: Any, **kwargs: Any) -> Any:
         """setFaceVertexNormal(normal, faceId, vertexId, space=MSpace.kObject, modifier=None) -> self
 
         Sets a face-specific normal at a vertex.
@@ -7577,12 +8649,12 @@ class MFnMesh(MFnDagNode):
         added to the modifier and will not take effect until the modifier's
         doIt() is called. Otherwise it will take effect immediately.
         """
-    def setFaceVertexNormals(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setFaceVertexNormals(self, *args: Any, **kwargs: Any) -> Any:
         """setFaceVertexNormal(normals, faceIds, vertexIds, space=MSpace.kObject) -> self
 
         Sets normals for the given face/vertex pairs.
         """
-    def setFloatBlindData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setFloatBlindData(self, *args: Any, **kwargs: Any) -> Any:
         """setFloatBlindData(compId, compType, blindDataId, attr, data) -> self
         setFloatBlindData(seq of compId, compType, blindDataId, attr, data) -> self
 
@@ -7595,7 +8667,7 @@ class MFnMesh(MFnDagNode):
         If it is a single float then all of the specified components will
         have their blind data set to that value.
         """
-    def setIntBlindData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setIntBlindData(self, *args: Any, **kwargs: Any) -> Any:
         """setIntBlindData(compId, compType, blindDataId, attr, data) -> self
         setIntBlindData(seq of compId, compType, blindDataId, attr, data) -> self
 
@@ -7608,24 +8680,24 @@ class MFnMesh(MFnDagNode):
         If it is a single int then all of the specified components will
         have their blind data set to that value.
         """
-    def setInvisibleFaces(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setInvisibleFaces(self, *args: Any, **kwargs: Any) -> Any:
         """setInvisibleFaces(faceIds, makeVisible=False) -> self
 
         Sets the specified faces of the mesh to be visible or invisible. See
         the getInvisibleFaces() method for a description of invisible faces.
         """
-    def setIsColorClamped(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setIsColorClamped(self, *args: Any, **kwargs: Any) -> Any:
         """setIsColorClamped(colorSet, clamped) -> self
 
         Sets whether the color set's RGBA components should be clamped to the
         range 0 to 1.
         """
-    def setNormals(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setNormals(self, *args: Any, **kwargs: Any) -> Any:
         """setNormals(normals, space=MSpace.kObject) -> self
 
         Sets the mesh's normals (user normals).
         """
-    def setPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setPoint(self, *args: Any, **kwargs: Any) -> Any:
         """setPoint(vertexId, MPoint, space=MSpace.kObject) -> self
 
         Sets the position of specified vertex.
@@ -7638,19 +8710,19 @@ class MFnMesh(MFnDagNode):
         Subsequent calls to setPoint() on the same object do not require a
         syncObject() call.
         """
-    def setPoints(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setPoints(self, *args: Any, **kwargs: Any) -> Any:
         """setPoints(points, space=MSpace.kObject) -> self
 
         Sets the positions of the mesh's vertices. The positions may be
         given as a sequence of MFloatPoint's or a sequence of MPoint's, but
         not a mix of the two.
         """
-    def setSmoothMeshDisplayOptions(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setSmoothMeshDisplayOptions(self, *args: Any, **kwargs: Any) -> Any:
         """setSmoothMeshDisplayOptions(MMeshSmoothOptions) -> self
 
         Sets the options to use when smoothing the mesh for display.
         """
-    def setSomeColors(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setSomeColors(self, *args: Any, **kwargs: Any) -> Any:
         """setSomeColors(colorIds, colors, colorSet='', rep=kRGBA) -> self
 
         Sets specific colors in a colorSet.
@@ -7661,7 +8733,7 @@ class MFnMesh(MFnDagNode):
         the colorIds to the geometry. If you are modifying existing colors,
         they will already be referenced by the existing mesh data.
         """
-    def setSomeUVs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setSomeUVs(self, *args: Any, **kwargs: Any) -> Any:
         """setSomeUVs(uvIds, uValues, vValues, uvSet='') -> self
 
         Sets the specified texture coordinates (uv's) for this mesh. The uv
@@ -7675,7 +8747,7 @@ class MFnMesh(MFnDagNode):
         methods to assign the uvIds to the geometry. If you are modifying
         existing UVs, you do not need to call one of the assignUV methods.
         """
-    def setStringBlindData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setStringBlindData(self, *args: Any, **kwargs: Any) -> Any:
         """setStringBlindData(compId, compType, blindDataId, attr, data) -> self
         setStringBlindData(seq of compId, compType, blindDataId, attr, data) -> self
 
@@ -7688,7 +8760,7 @@ class MFnMesh(MFnDagNode):
         If it is a single string then all of the specified components will
         have their blind data set to that value.
         """
-    def setUV(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setUV(self, *args: Any, **kwargs: Any) -> Any:
         """setUV(uvId, u, v, uvSet='') -> self
 
         Sets the specified texture coordinate.
@@ -7698,7 +8770,7 @@ class MFnMesh(MFnDagNode):
         to accommodate the specified uv. If the UV being added is new, thenyou must call one of the assignUV methods in order to update the
         geometry.
         """
-    def setUVs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setUVs(self, *args: Any, **kwargs: Any) -> Any:
         """setUVs(uValues, vValues, uvSet='') -> self
 
         Sets all of the texture coordinates (uv's) for this mesh. The uv
@@ -7718,7 +8790,7 @@ class MFnMesh(MFnDagNode):
         setUVs(...), assignUVs(). These steps will let you to create an
         array of uvs which is smaller than the original one.
         """
-    def setVertexColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setVertexColor(self, *args: Any, **kwargs: Any) -> Any:
         """setVertexColor(color, vertexId, modifier=None, rep=kRGBA) -> self
 
         Sets the color for a vertex in all the faces which share it.
@@ -7727,7 +8799,7 @@ class MFnMesh(MFnDagNode):
         added to the modifier and will not take effect until the modifier's
         doIt() is called. Otherwise it will take effect immediately.
         """
-    def setVertexColors(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setVertexColors(self, *args: Any, **kwargs: Any) -> Any:
         """setVertexColors(colors, vertexIds, modifier=None, rep=kRGBA) -> self
 
         Sets the colors of the specified vertices. For each vertex in the
@@ -7738,7 +8810,7 @@ class MFnMesh(MFnDagNode):
         added to the modifier and will not take effect until the modifier's
         doIt() is called. Otherwise it will take effect immediately.
         """
-    def setVertexNormal(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setVertexNormal(self, *args: Any, **kwargs: Any) -> Any:
         """setVertexNormal(normal, vertexId, space=MSpace.kObject, modifier=None) -> self
 
         Sets the shared normal at a vertex.
@@ -7747,12 +8819,12 @@ class MFnMesh(MFnDagNode):
         added to the modifier and will not take effect until the modifier's
         doIt() is called. Otherwise it will take effect immediately.
         """
-    def setVertexNormals(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setVertexNormals(self, *args: Any, **kwargs: Any) -> Any:
         """setVertexNormal(normals, vertexIds, space=MSpace.kObject) -> self
 
         Sets the shared normals for the given vertices.
         """
-    def sortIntersectionFaceTriIds(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def sortIntersectionFaceTriIds(self, *args: Any, **kwargs: Any) -> Any:
         """sortIntersectionFaceTriIds(faceIds, triIds=none) -> self
 
         Convenience routine for sorting faceIds or face/triangle ids before
@@ -7763,7 +8835,7 @@ class MFnMesh(MFnDagNode):
 
         Both arguments must be MIntArray's.
         """
-    def split(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def split(self, *args: Any, **kwargs: Any) -> Any:
         """split(((kOnEdge, int, float), (kInternalPoint, MFloatPoint), ...)) -> self
 
         Each tuple in the placements sequence consists of a Split Placement
@@ -7780,7 +8852,7 @@ class MFnMesh(MFnDagNode):
         All splits must begin and end on an edge meaning that the first and
         last tuples in the placements sequence must be kOnEdge placements.
         """
-    def subdivideEdges(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def subdivideEdges(self, *args: Any, **kwargs: Any) -> Any:
         """subdivideEdges(edges, numDivisions) -> self
 
         Subdivides edges at regular intervals. For example, if numDivisions
@@ -7788,7 +8860,7 @@ class MFnMesh(MFnDagNode):
         specified edges: one 1/3 of the way along the edge and a second 2/3
         of the way along the edge.
         """
-    def subdivideFaces(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def subdivideFaces(self, *args: Any, **kwargs: Any) -> Any:
         """subdivideFaces(faces, numDivisions) -> self
 
         Subdivides each specified face into a grid of smaller faces.
@@ -7800,7 +8872,7 @@ class MFnMesh(MFnDagNode):
         edge of the face. Internal points and edges are introduced as needed
         to create a grid of smaller faces.
         """
-    def syncObject(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def syncObject(self, *args: Any, **kwargs: Any) -> Any:
         """syncObject() -> self
 
         If a non-api operation happens that many have changed the
@@ -7811,7 +8883,7 @@ class MFnMesh(MFnDagNode):
         functionset is attached to a mesh node. If it's attached to mesh
         data the it is not necessary to call this method.
         """
-    def uniformGridParams(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def uniformGridParams(self, *args: Any, **kwargs: Any) -> Any:
         """uniformGridParams(xDiv, yDiv, zDiv) -> MMeshIsectAccelParams
 
         Creates an object which specifies a uniform voxel grid structure
@@ -7822,24 +8894,30 @@ class MFnMesh(MFnDagNode):
         configuration is used on the next intersect call, the acceleration
         structure will not need to be rebuilt.
         """
-    def unlockFaceVertexNormals(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def unlockFaceVertexNormals(self, *args: Any, **kwargs: Any) -> Any:
         """unlockFaceVertexNormals(seq of faceIds, seq of vertIds) -> self
 
         Unlocks the normals for the given face/vertex pairs.
         """
-    def unlockVertexNormals(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def unlockVertexNormals(self, *args: Any, **kwargs: Any) -> Any:
         """unlockVertexNormals(sequence of vertIds) -> self
 
         Unlocks the shared normals for the specified vertices.
         """
-    def updateSurface(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def updateSurface(self, *args: Any, **kwargs: Any) -> Any:
         """updateSurface() -> self
 
         Signal that this polygonal mesh has changed and needs to be redrawn.
         """
 
 class MFnMeshData(MFnGeometryData):
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """create() -> MObject
 
         Creates a new mesh data object, attaches it to this function set
@@ -7847,19 +8925,31 @@ class MFnMeshData(MFnGeometryData):
         """
 
 class MFnMessageAttribute(MFnAttribute):
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new message attribute, attaches it to the function set and returns it as an MObject."""
 
 class MFnNumericAttribute(MFnAttribute):
-    def child(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def child(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the specified child attribute of the parent attribute currently attached to the function set."""
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new simple or compound numeric attribute, attaches it to the function set and returns it in an MObject."""
-    def createAddr(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def createAddr(self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new address attribute, attaches it to the function set and returns it in an MObject."""
-    def createColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def createColor(self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new color attribute, attaches it to the function set and returns it in an MObject."""
-    def createPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def createPoint(self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new 3D point attribute, attaches it to the function set and returns it in an MObject."""
     @property
     def default(*args: Any, **kwargs: Any) -> Any:
@@ -7867,45 +8957,57 @@ class MFnNumericAttribute(MFnAttribute):
     @default.setter
     def default(*args: Any, **kwargs: Any) -> Any:
         """Default value"""
-    def getMax(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getMax(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the attribute's hard maximum value(s)."""
-    def getMin(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getMin(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the attribute's hard minimum value(s)."""
-    def getSoftMax(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getSoftMax(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the attribute's soft maximum value."""
-    def getSoftMin(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getSoftMin(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the attribute's soft minimum value."""
-    def hasMax(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasMax(self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if a hard maximum value has been specified for the attribute."""
-    def hasMin(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasMin(self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if a hard minimum value has been specified for the attribute."""
-    def hasSoftMax(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasSoftMax(self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if a soft maximum value has been specified for the attribute."""
-    def hasSoftMin(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasSoftMin(self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if a soft minimum value has been specified for the attribute."""
-    def numericType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numericType(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the numeric type of the attribute currently attached to the function set."""
-    def setMax(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setMax(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the attribute's hard maximum value(s)."""
-    def setMin(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setMin(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the attribute's hard minimum value(s)."""
-    def setSoftMax(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setSoftMax(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the attribute's soft maximum value."""
-    def setSoftMin(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setSoftMin(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the attribute's soft minimum value."""
 
 class MFnNumericData(MFnData):
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new numeric data object."""
-    def getData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getData(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the attached data object's data."""
-    def numericType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numericType(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the type of data in the attached data object."""
-    def setData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setData(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the value of the data in the attached data object."""
 
 class MFnNurbsCurve(MFnDagNode):
-    def area(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def area(self, *args: Any, **kwargs: Any) -> Any:
         """area(tolerance=kPointTolerance) -> float
 
         Returns the area bounded by the curve. The curve must be closed and
@@ -7913,7 +9015,7 @@ class MFnNurbsCurve(MFnDagNode):
 
         * tolerance (float) - Amount of error allowed in the calculation
         """
-    def closestPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def closestPoint(self, *args: Any, **kwargs: Any) -> Any:
         """closestPoint(testPoint, guess=None, tolerance=kPointTolerance,
             space=kObject) -> (MPoint, float)
 
@@ -7932,7 +9034,7 @@ class MFnNurbsCurve(MFnDagNode):
                                and the returned point.
         * space (MSpace constant) - coordinate space to use for the points
         """
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """copy(source, parent=MObject.kNullObj) -> MObject
 
         Returns a new NURBS curve which is a copy of 'source' and resets
@@ -7950,7 +9052,7 @@ class MFnNurbsCurve(MFnDagNode):
                        beneath it as a nurbsCurve node. In this last case it
                        will be the transform node which is returned.
         """
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """create(cvs, knots, degree, form, is2D, rational, parent=kNullObj)
             -> self
         create(subCurves, parent=kNullObj) -> self
@@ -7991,7 +9093,7 @@ class MFnNurbsCurve(MFnDagNode):
                        the previous curve in the array, and the curves must be
                        be at least C0 continuous (i.e. tangent breaks are okay).
         """
-    def createWithEditPoints(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def createWithEditPoints(self, *args: Any, **kwargs: Any) -> Any:
         """createWithEditPoints(eps, degree, form, is2D, rational, uniform,
             parent=kNullObj) -> MObject
 
@@ -8022,7 +9124,7 @@ class MFnNurbsCurve(MFnDagNode):
                        beneath it as a nurbsCurve node. In this last case it
                        will be the transform node which is returned.
         """
-    def cvPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def cvPosition(self, *args: Any, **kwargs: Any) -> Any:
         """cvPosition(index, space=kObject) -> MPoint
 
         Returns the position of a single control vertex.
@@ -8031,7 +9133,7 @@ class MFnNurbsCurve(MFnDagNode):
         * space (int) - an MSpace constant giving the coordinate space in
                         which the point is given
         """
-    def cvPositions(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def cvPositions(self, *args: Any, **kwargs: Any) -> Any:
         """cvPositions(space=kObject) -> MPointArray
 
         Returns the positions of all of the curve's control vertices.
@@ -8039,7 +9141,7 @@ class MFnNurbsCurve(MFnDagNode):
         * space (int) - an MSpace constant giving the coordinate space in
                         which the point is given
         """
-    def cvs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def cvs(self, *args: Any, **kwargs: Any) -> Any:
         """cvs(startIndex[, endIndex]) -> MObject
 
         Returns a CV or a range of CVs as a component. MItCurveCV can be
@@ -8059,7 +9161,7 @@ class MFnNurbsCurve(MFnDagNode):
     @degree.setter
     def degree(*args: Any, **kwargs: Any) -> Any:
         """The degree of the curve or 0 if the degree cannot be determined."""
-    def distanceToPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def distanceToPoint(self, *args: Any, **kwargs: Any) -> Any:
         """distanceToPoint(point, space=kObject) -> float
 
         Returns the distance from the given point to the point on the curve
@@ -8069,7 +9171,7 @@ class MFnNurbsCurve(MFnDagNode):
         * space (int)    - an MSpace constant giving the coordinate space in
                            which the point is given
         """
-    def findLengthFromParam(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def findLengthFromParam(self, *args: Any, **kwargs: Any) -> Any:
         """findLengthFromParam(param) -> float
 
         Returns the length along the curve corresponding to a given
@@ -8078,7 +9180,7 @@ class MFnNurbsCurve(MFnDagNode):
 
         * param (float) - parameter value on the curve
         """
-    def findParamFromLength(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def findParamFromLength(self, *args: Any, **kwargs: Any) -> Any:
         """findParamFromLength(length, tolerance=kFindParamTolerance) -> float
 
         Returns the parameter value corresponding to a given length along
@@ -8094,7 +9196,7 @@ class MFnNurbsCurve(MFnDagNode):
     @form.setter
     def form(*args: Any, **kwargs: Any) -> Any:
         """The form of the curve: kOpen, kClosed, kPeriodic or kInvalid"""
-    def getDerivativesAtParam(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getDerivativesAtParam(self, *args: Any, **kwargs: Any) -> Any:
         """getDerivativesAtParam(param, space=kObject) -> (MPoint, MVector[, MVector])
 
         Evaluates the curve at the given parameter value, returning a tuple
@@ -8107,7 +9209,7 @@ class MFnNurbsCurve(MFnDagNode):
                           which the point is given
         * dUU    (bool) - if True include the second derivative in the result.
         """
-    def getParamAtPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getParamAtPoint(self, *args: Any, **kwargs: Any) -> Any:
         """getParamAtPoint(point, tolerance=kPointTolerance, space=kObject) -> float
 
         Returns the parameter value corresponding to the given point on the
@@ -8119,7 +9221,7 @@ class MFnNurbsCurve(MFnDagNode):
         * space       (int) - an MSpace constant giving the coordinate space
                               in which the point is given
         """
-    def getPointAtParam(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPointAtParam(self, *args: Any, **kwargs: Any) -> Any:
         """getPointAtParam(param, space=kObject) -> MPoint
 
         Returns the point on the curve at the given parameter value.
@@ -8134,7 +9236,7 @@ class MFnNurbsCurve(MFnDagNode):
     @hasHistoryOnCreate.setter
     def hasHistoryOnCreate(*args: Any, **kwargs: Any) -> Any:
         """True if the curve was created with history."""
-    def isParamOnCurve(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isParamOnCurve(self, *args: Any, **kwargs: Any) -> Any:
         """isParamOnCurve(param) -> bool
 
         Returns True if the given parameter value lies on the curve (i.e. is
@@ -8148,7 +9250,7 @@ class MFnNurbsCurve(MFnDagNode):
     @isPlanar.setter
     def isPlanar(*args: Any, **kwargs: Any) -> Any:
         """True if the curve is planar."""
-    def isPointOnCurve(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isPointOnCurve(self, *args: Any, **kwargs: Any) -> Any:
         """isPointOnCurve(point, tolerance=kPointTolerance, space=kObject) -> bool
 
         Returns True if the given point lies on the curve, False otherwise.
@@ -8162,7 +9264,7 @@ class MFnNurbsCurve(MFnDagNode):
     kFindParamTolerance: float = ...
     kPointTolerance: float = ...
 
-    def knot(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def knot(self, *args: Any, **kwargs: Any) -> Any:
         """knot(index) -> float
 
         Returns the parameter value of a single knot.
@@ -8180,19 +9282,19 @@ class MFnNurbsCurve(MFnDagNode):
         """A tuple containing a pair of floats corresponding to the maximum and
         minimum parameter values for this curve.
         """
-    def knots(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def knots(self, *args: Any, **kwargs: Any) -> Any:
         """knots() -> MDoubleArray
 
         Returns the parameter values for all of the curve's knots.
         """
-    def length(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def length(self, *args: Any, **kwargs: Any) -> Any:
         """length(tolerance=kPointTolerance) -> float
 
         Returns the arc length of this curve or 0.0 if it cannot be computed.
 
         * tolerance (float) - max error allowed in the calculation.
         """
-    def makeMultipleEndKnots(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def makeMultipleEndKnots(self, *args: Any, **kwargs: Any) -> Any:
         """makeMultipleEndKnots() -> self
 
         Sets the curve's end knots to have full multiplicity. This ensures
@@ -8200,7 +9302,7 @@ class MFnNurbsCurve(MFnDagNode):
         directly on them). It can also be used to convert a periodic curve
         to a closed curve.
         """
-    def normal(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def normal(self, *args: Any, **kwargs: Any) -> Any:
         """normal(param, space=kObject) -> MVector
 
         Returns the normal at the given parameter value on the curve. For
@@ -8252,7 +9354,7 @@ class MFnNurbsCurve(MFnDagNode):
         """MVector of the normal to the plane of the curve, if the curve is
         planar, or None if the curve is not planar.
         """
-    def removeKnot(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeKnot(self, *args: Any, **kwargs: Any) -> Any:
         """removeKnot(param, removeAll=False) -> self
 
         Removes one or more knots at the given parameter value.
@@ -8264,12 +9366,12 @@ class MFnNurbsCurve(MFnDagNode):
         * param     (float) - parameter of the knot
         * removeAll  (bool) - how to handle multiple knots at the same param
         """
-    def reverse(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def reverse(self, *args: Any, **kwargs: Any) -> Any:
         """reverse() -> self
 
         Reverses the direction of the curve.
         """
-    def setCVPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setCVPosition(self, *args: Any, **kwargs: Any) -> Any:
         """setCVPosition(index, point, space=kObject) -> self
 
         Sets the position of a single control vertex of the curve.
@@ -8279,7 +9381,7 @@ class MFnNurbsCurve(MFnDagNode):
         * space    (int) - an MSpace constant giving the coordinate space
                            in which the point is given
         """
-    def setCVPositions(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setCVPositions(self, *args: Any, **kwargs: Any) -> Any:
         """setCVPositions(points, space=kObject) -> self
 
         Sets the positions of all of the curve's control vertices.
@@ -8291,14 +9393,14 @@ class MFnNurbsCurve(MFnDagNode):
         * space  (int) - an MSpace constant giving the coordinate space
                          in which the points are given
         """
-    def setKnot(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setKnot(self, *args: Any, **kwargs: Any) -> Any:
         """setKnot(index, param) -> self
 
         Sets the parameter value of a single knot.
         * index   (int) - index of the knot
         * param (float) - new parameter value for the knot
         """
-    def setKnots(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setKnots(self, *args: Any, **kwargs: Any) -> Any:
         """setKnots(params, startIndex, endIndex) -> self
 
         Sets the parameter values of a contiguous group of knots.
@@ -8309,7 +9411,7 @@ class MFnNurbsCurve(MFnDagNode):
         * startIndex (int) - first knot in the range to be set
         * endIndex   (int) - last knot in the range to be set
         """
-    def tangent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def tangent(self, *args: Any, **kwargs: Any) -> Any:
         """tangent(param, space=kObject) -> MVector
 
         Returns the normalized tangent vector at the given parameter value
@@ -8319,7 +9421,7 @@ class MFnNurbsCurve(MFnDagNode):
         * space   (int) - an MSpace constant giving the coordinate space in
                           which the tangent should be returned
         """
-    def updateCurve(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def updateCurve(self, *args: Any, **kwargs: Any) -> Any:
         """updateCurve() -> self
 
         Tells the shape node which represents the curve in the scene, if
@@ -8327,7 +9429,13 @@ class MFnNurbsCurve(MFnDagNode):
         """
 
 class MFnNurbsCurveData(MFnGeometryData):
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """create() -> MObject
 
         Creates a new nurbs curve data object, attaches it to this function set
@@ -8335,12 +9443,18 @@ class MFnNurbsCurveData(MFnGeometryData):
         """
 
 class MFnNurbsSurface(MFnDagNode):
-    def area(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def area(self, *args: Any, **kwargs: Any) -> Any:
         """area(space=kObject, tolerance=kPointTolerance) -> float
 
         Returns the surface's area, or 0.0 if the area cannot be determined.
         """
-    def assignUV(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def assignUV(self, *args: Any, **kwargs: Any) -> Any:
         """assignUV(patchId, cornerIndex, uvId) -> self
 
         Maps a texture coordinate (uv) to a the specified corner of a patch.
@@ -8356,7 +9470,7 @@ class MFnNurbsSurface(MFnDagNode):
         * cornerIndex (int) - Corner of the patch to map to.
         * uvId        (int) - Index into the uv list of the UV to map.
         """
-    def assignUVs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def assignUVs(self, *args: Any, **kwargs: Any) -> Any:
         """assignUVs(uvCounts, uvIds) -> self
 
         Maps all texture coordinates for the surface. setUV() and setUVs()
@@ -8393,7 +9507,7 @@ class MFnNurbsSurface(MFnDagNode):
         * uvIds    (MIntArray or seq of int)
                      - UV indices to be mapped to each patch-corner.
         """
-    def boundaryType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def boundaryType(self, *args: Any, **kwargs: Any) -> Any:
         """boundaryType(region, boundary) -> int
 
         Returns the type of the specified boundary. The surface must be a
@@ -8408,7 +9522,7 @@ class MFnNurbsSurface(MFnDagNode):
         * region (int)   - Region containing the boundary
         * boundary (int) - Index of the boundary within the region.
         """
-    def clearUVs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clearUVs(self, *args: Any, **kwargs: Any) -> Any:
         """clearUVs() -> self
 
         Clears out all texture coordinates for the nurbsSurface, and leaves
@@ -8423,7 +9537,7 @@ class MFnNurbsSurface(MFnDagNode):
         are set on the shape. When called on a shape with history, the
         polyDelMap command is invoked and a polyMapDel node is created.
         """
-    def closestPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def closestPoint(self, *args: Any, **kwargs: Any) -> Any:
         """closestPoint(testPoint, uStart=None, vStart=None,
             ignoreTrimBoundaries=False, tolerance=kPointTolerance,
             space=kObject) -> (MPoint, float, float)
@@ -8464,7 +9578,7 @@ class MFnNurbsSurface(MFnDagNode):
                                space which 'testPoint' is in. The returned
                                point will be in the same space.
         """
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """copy(source, parent=kNullObj) -> MObject
 
         Returns a new NURBS surface, which is a copy of the source surface,
@@ -8483,7 +9597,7 @@ class MFnNurbsSurface(MFnDagNode):
                             nurbsSurface node. In this last case it will be
                             the transform node which is returned.
         """
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """create(cvs, uKnots, vKnots, uDegree, vDegree, uForm, vForm,
             rational, parent=kNullObj) -> MObject
 
@@ -8516,7 +9630,7 @@ class MFnNurbsSurface(MFnDagNode):
                             nurbsSurface node. In this last case it will be
                             the transform node which is returned.
         """
-    def cv(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def cv(self, *args: Any, **kwargs: Any) -> Any:
         """cv(uIndex, vIndex) -> MObject
 
         Returns a component for the specified control vertex.
@@ -8524,7 +9638,7 @@ class MFnNurbsSurface(MFnDagNode):
         * uIndex (int) - U index of the CV.
         * vIndex (int) - V index of the CV.
         """
-    def cvPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def cvPosition(self, *args: Any, **kwargs: Any) -> Any:
         """cvPosition(uIndex, vIndex, space=kObject) -> MPoint
 
         Returns the position of the specified control vertex.
@@ -8534,7 +9648,7 @@ class MFnNurbsSurface(MFnDagNode):
         * space  (int) - an MSpace constant giving the coordinate
                          space which the point should be returned.
         """
-    def cvPositions(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def cvPositions(self, *args: Any, **kwargs: Any) -> Any:
         """cvPositions(space=kObject) -> MPointArray
 
         Returns the positions of all the surface's control vertices.
@@ -8542,7 +9656,7 @@ class MFnNurbsSurface(MFnDagNode):
         * space  (int) - an MSpace constant giving the coordinate
                          space which the points should be returned.
         """
-    def cvsInU(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def cvsInU(self, *args: Any, **kwargs: Any) -> Any:
         """cvsInU(startUIndex, endUIndex, vIndex) -> MObject
 
         Returns a component for a set of control vertices in the U direction.
@@ -8551,7 +9665,7 @@ class MFnNurbsSurface(MFnDagNode):
         * endUIndex   (int) - U index of the last CV to return.
         * vIndex      (int) - V index for all of the returned CVs.
         """
-    def cvsInV(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def cvsInV(self, *args: Any, **kwargs: Any) -> Any:
         """cvsInV(startVIndex, endVIndex, uIndex) -> MObject
 
         Returns a component for a set of control vertices in the V direction.
@@ -8592,7 +9706,7 @@ class MFnNurbsSurface(MFnDagNode):
         """The degree of the surface in the V direction or 0 if the degree
         cannot be determined.
         """
-    def distanceToPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def distanceToPoint(self, *args: Any, **kwargs: Any) -> Any:
         """distanceToPoint(point, space=kObject) -> float
 
         Returns the distance from the given point to the closest point on
@@ -8602,7 +9716,7 @@ class MFnNurbsSurface(MFnDagNode):
         * space  (int)   - An MSpace constant giving the coordinate space in
                            which the point has been specified.
         """
-    def edge(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def edge(self, *args: Any, **kwargs: Any) -> Any:
         """edge(region, boundary, edge, paramEdge=False) -> MObjectArray
 
         Return the specified edge of a trim boundary.
@@ -8644,7 +9758,7 @@ class MFnNurbsSurface(MFnDagNode):
         """Form of the surface in the V direction. Can be one of kOpen,
         kClosed, kPeriodic or kInvalid.
         """
-    def getAssignedUVs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getAssignedUVs(self, *args: Any, **kwargs: Any) -> Any:
         """getAssignedUVs() -> (MIntArray, MIntArray)
 
         Returns the indices of all UVs which have been mapped to the surface.
@@ -8653,7 +9767,7 @@ class MFnNurbsSurface(MFnDagNode):
         the indices of the UVs mapped to each corner of those patches. This
         is the same format as the arrays taken by the assignUVs() method.
         """
-    def getConnectedShaders(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getConnectedShaders(self, *args: Any, **kwargs: Any) -> Any:
         """getConnectedShaders(instanceNumber) -> (MObjectArray, MIntArray)
 
         Returns a tuple containing an array of all the shaders (sets)
@@ -8672,7 +9786,7 @@ class MFnNurbsSurface(MFnDagNode):
                                  query. This will be zero if there is only
                                  one instance.
         """
-    def getDerivativesAtParam(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getDerivativesAtParam(self, *args: Any, **kwargs: Any) -> Any:
         """getDerivativesAtParam(uParam, vParam, space=kObject, secondOrder=False)
             -> (MPoint, MVector, MVector)
             -> (MPoint, MVector, MVector, MVector, MVector, MVector)
@@ -8695,7 +9809,7 @@ class MFnNurbsSurface(MFnDagNode):
                            in the result. Note that this will increase
                            computation time.
         """
-    def getParamAtPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getParamAtPoint(self, *args: Any, **kwargs: Any) -> Any:
         """getParamAtPoint(point, ignoreTrimBoundaries, tolerance=kPointTolerance,
             space=kObject) -> (float, float)
 
@@ -8711,7 +9825,7 @@ class MFnNurbsSurface(MFnDagNode):
         * space       (int) - An MSpace constant giving the coordinate space
                               in which to perform the operation.
         """
-    def getPatchUV(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPatchUV(self, *args: Any, **kwargs: Any) -> Any:
         """getPatchUV(patchId, cornerIndex) -> (float, float)
 
         Returns a tuple containing the texture texture coordinate for a
@@ -8721,7 +9835,7 @@ class MFnNurbsSurface(MFnDagNode):
         * patchId (int)     - Patch of interest.
         * cornerIndex (int) - Corner of interest.
         """
-    def getPatchUVid(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPatchUVid(self, *args: Any, **kwargs: Any) -> Any:
         """getPatchUVid(patchId, cornerIndex) -> int
 
         Returns the id of the texture coordinate for a single corner of a patch.
@@ -8729,7 +9843,7 @@ class MFnNurbsSurface(MFnDagNode):
         * patchId (int)     - Patch of interest.
         * cornerIndex (int) - Corner of interest.
         """
-    def getPatchUVs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPatchUVs(self, *args: Any, **kwargs: Any) -> Any:
         """getPatchUVs(patchId) -> (MFloatArray, MFloatArray)
 
         Returns a tuple containing the values of the texture coordinates on
@@ -8738,16 +9852,16 @@ class MFnNurbsSurface(MFnDagNode):
 
         * patchId (int)     - Patch of interest.
         """
-    def getPointAtParam(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPointAtParam(self, *args: Any, **kwargs: Any) -> Any:
         """getPointAtParam(uParam, vParam, space=kObject) -> MPoint"""
-    def getUV(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getUV(self, *args: Any, **kwargs: Any) -> Any:
         """getUV(uvId) -> (float, float)
 
         Returns a tuple containing the U and V values for the a texture coordinate
 
         * uvId (int) - Id of the texture coordinate of intest.
         """
-    def getUVs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getUVs(self, *args: Any, **kwargs: Any) -> Any:
         """getUVs() -> (MFloatArray, MFloatArray)
 
         Returns all of the surface's texture coordinates as a tuple containing
@@ -8759,7 +9873,7 @@ class MFnNurbsSurface(MFnDagNode):
     @hasHistoryOnCreate.setter
     def hasHistoryOnCreate(*args: Any, **kwargs: Any) -> Any:
         """True if the surface was created with history."""
-    def intersect(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def intersect(self, *args: Any, **kwargs: Any) -> Any:
         """intersect(rayStart, rayDir, tolerance=kPointTolerance, space=kObject,
             distance=False, exactHit=False, all=False)
             -> (MPoint, float, float[, float][, bool])
@@ -8790,7 +9904,7 @@ class MFnNurbsSurface(MFnDagNode):
     @isBezier.setter
     def isBezier(*args: Any, **kwargs: Any) -> Any:
         """True if the knot spacing gives a Bezier surface."""
-    def isFlipNorm(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isFlipNorm(self, *args: Any, **kwargs: Any) -> Any:
         """isFlipNorm(region) -> bool
 
         Checks whether the normal for the specified region is flipped
@@ -8808,7 +9922,7 @@ class MFnNurbsSurface(MFnDagNode):
         """True if surface contains are any folds or creases on bispan
         boundaries, including trimmed regions.
         """
-    def isKnotU(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isKnotU(self, *args: Any, **kwargs: Any) -> Any:
         """isKnotU(param) -> bool
 
         Checks if the specified parameter value is a knot value in the U
@@ -8816,7 +9930,7 @@ class MFnNurbsSurface(MFnDagNode):
 
         * param (float) - Parameter value to check.
         """
-    def isKnotV(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isKnotV(self, *args: Any, **kwargs: Any) -> Any:
         """isKnotV(param) -> bool
 
         Checks if the specified parameter value is a knot value in the V
@@ -8824,7 +9938,7 @@ class MFnNurbsSurface(MFnDagNode):
 
         * param (float) - Parameter value to check.
         """
-    def isParamOnSurface(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isParamOnSurface(self, *args: Any, **kwargs: Any) -> Any:
         """isParamOnSurface(uParam, vParam) -> bool
 
         Checks if the specified parameter point is on this surface.
@@ -8832,7 +9946,7 @@ class MFnNurbsSurface(MFnDagNode):
         * uParam (float) - U parameter value.
         * vParam (float) - V parameter value.
         """
-    def isPointInTrimmedRegion(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isPointInTrimmedRegion(self, *args: Any, **kwargs: Any) -> Any:
         """isPointInTrimmedRegion(uParam, vParam) -> bool
 
         Checks if the given point is in a trimmed away region of a trimmed
@@ -8842,7 +9956,7 @@ class MFnNurbsSurface(MFnDagNode):
         * uParam (float) - U parameter of the point to check.
         * vParam (float) - V parameter of the point to check.
         """
-    def isPointOnSurface(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isPointOnSurface(self, *args: Any, **kwargs: Any) -> Any:
         """isPointOnSurface(point, tolerance=kPointTolerance, space=kObject) -> bool
 
         Checks if the given point is on this surface.
@@ -8886,31 +10000,31 @@ class MFnNurbsSurface(MFnDagNode):
         """A tuple containing a pair of floats corresponding to the maximum and
         minimum V parameter values for this surface.
         """
-    def knotInU(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def knotInU(self, *args: Any, **kwargs: Any) -> Any:
         """knotInU(index) -> float
 
         Returns the knot value at the specified U index. U knots are indexed
         from 0 to numKnotsInU-1.
         * index (int) - Index of the U knot to return.
         """
-    def knotInV(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def knotInV(self, *args: Any, **kwargs: Any) -> Any:
         """knotInV(index) -> float
 
         Returns the knot value at the specified V index. V knots are indexed
         from 0 to numKnotsInV-1.
         * index (int) - Index of the V knot to return.
         """
-    def knotsInU(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def knotsInU(self, *args: Any, **kwargs: Any) -> Any:
         """knotsInU() -> MDoubleArray
 
         Returns all of the surface's knots in the U direction.
         """
-    def knotsInV(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def knotsInV(self, *args: Any, **kwargs: Any) -> Any:
         """knotsInV() -> MDoubleArray
 
         Returns all of the surface's knots in the V direction.
         """
-    def normal(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def normal(self, *args: Any, **kwargs: Any) -> Any:
         """normal(uParam, vParam, space=kObject) -> MVector
 
         Returns the normal at the given parameter value on the surface.
@@ -8920,7 +10034,7 @@ class MFnNurbsSurface(MFnDagNode):
         * space    (int) - An MSpace constant giving the coordinate space
                            in which to perform the operation
         """
-    def numBoundaries(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numBoundaries(self, *args: Any, **kwargs: Any) -> Any:
         """numBoundaries(region) -> unsigned int
 
         Returns the number of boundaries for the specified region. The
@@ -8952,7 +10066,7 @@ class MFnNurbsSurface(MFnDagNode):
         """Number of CVs in the surface in the V direction or 0 if the number
         of CVs cannot be determined.
         """
-    def numEdges(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numEdges(self, *args: Any, **kwargs: Any) -> Any:
         """numEdges(region, boundary) -> unsigned int
 
         Returns the number of edges for the specified trim boundary.
@@ -9057,7 +10171,7 @@ class MFnNurbsSurface(MFnDagNode):
         on a per-patch per-patchCorner basis. This attribute contains the
         number of elements in this list.
         """
-    def projectCurve(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def projectCurve(self, *args: Any, **kwargs: Any) -> Any:
         """projectCurve(curve[, direction], keepHistory=False) -> self
 
         Projects the given curve onto the surface, creating a curve on surface.
@@ -9067,7 +10181,7 @@ class MFnNurbsSurface(MFnDagNode):
         * keepHistory  (bool) - Determines whether the construction history
                                 of the projection should be retained.
         """
-    def removeKnotInU(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeKnotInU(self, *args: Any, **kwargs: Any) -> Any:
         """removeKnotInU(param, removeAll=False) -> self
 
         Removes one or more U knots at the specified parameter value from
@@ -9078,7 +10192,7 @@ class MFnNurbsSurface(MFnDagNode):
                              parameter value then they will all be removed.
                              Otherwise, all but one will be removed.
         """
-    def removeKnotInV(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeKnotInV(self, *args: Any, **kwargs: Any) -> Any:
         """removeKnotInV(param, removeAll=False) -> self
 
         Removes one or more V knots at the specified parameter value from
@@ -9089,7 +10203,7 @@ class MFnNurbsSurface(MFnDagNode):
                              parameter value then they will all be removed.
                              Otherwise, all but one will be removed.
         """
-    def removeOneKnotInU(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeOneKnotInU(self, *args: Any, **kwargs: Any) -> Any:
         """removeOneKnotInU(param) -> self
 
         Removes one U knot at the specified parameter value. If there are
@@ -9097,7 +10211,7 @@ class MFnNurbsSurface(MFnDagNode):
 
         * param (float) - U parameter value of the knot to remove.
         """
-    def removeOneKnotInV(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeOneKnotInV(self, *args: Any, **kwargs: Any) -> Any:
         """removeOneKnotInV(param) -> self
 
         Removes one V knot at the specified parameter value. If there are
@@ -9105,9 +10219,9 @@ class MFnNurbsSurface(MFnDagNode):
 
         * param (float) - V parameter value of the knot to remove.
         """
-    def setCVPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setCVPosition(self, *args: Any, **kwargs: Any) -> Any:
         """setCVPosition(uIndex, vIndex, point, space=kObject) -> self"""
-    def setCVPositions(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setCVPositions(self, *args: Any, **kwargs: Any) -> Any:
         """setCVPositions(points, space=kObject) -> self
 
         Set the positions of all of the surface's CVs.
@@ -9127,7 +10241,7 @@ class MFnNurbsSurface(MFnDagNode):
         * space  (int) - An MSpace constant giving the coordinate space
                          in which to perform the operation
         """
-    def setKnotInU(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setKnotInU(self, *args: Any, **kwargs: Any) -> Any:
         """setKnotInU(index, param) -> self
 
         Sets the value of an existing U knot. U knots are indexed from 0 to
@@ -9141,7 +10255,7 @@ class MFnNurbsSurface(MFnDagNode):
         * index   (int) - U index of the knot to set.
         * param (float) - New parameter value for the knot.
         """
-    def setKnotInV(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setKnotInV(self, *args: Any, **kwargs: Any) -> Any:
         """setKnotInV(index, param) -> self
 
         Sets the value of an existing V knot. V knots are indexed from 0 to
@@ -9155,7 +10269,7 @@ class MFnNurbsSurface(MFnDagNode):
         * index   (int) - V index of the knot to set.
         * param (float) - New parameter value for the knot.
         """
-    def setKnotsInU(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setKnotsInU(self, *args: Any, **kwargs: Any) -> Any:
         """setKnotsInU(params, startIndex, endIndex) -> self
 
         Sets the values of a range of U knots.
@@ -9166,7 +10280,7 @@ class MFnNurbsSurface(MFnDagNode):
         * startIndex (int) - Index of the first U knot to set.
         * endIndex   (int) - Index of the last U knot to set.
         """
-    def setKnotsInV(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setKnotsInV(self, *args: Any, **kwargs: Any) -> Any:
         """setKnotsInV(params, startIndex, endIndex) -> self
 
         Sets the values of a range of V knots.
@@ -9177,7 +10291,7 @@ class MFnNurbsSurface(MFnDagNode):
         * startIndex (int) - Index of the first V knot to set.
         * endIndex   (int) - Index of the last V knot to set.
         """
-    def setUV(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setUV(self, *args: Any, **kwargs: Any) -> Any:
         """setUV(uvId, u, v) -> self
 
         Sets a single texture coordinate. If 'uvId' is greater than or equal
@@ -9194,7 +10308,7 @@ class MFnNurbsSurface(MFnDagNode):
         * u  (float) - U value to set the uv to.
         * v  (float) - V value to set the uv to.
         """
-    def setUVs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setUVs(self, *args: Any, **kwargs: Any) -> Any:
         """setUVs(uList, vList) -> self
 
         Sets all of the texture coordinates (uvs) for this surface. The
@@ -9215,7 +10329,7 @@ class MFnNurbsSurface(MFnDagNode):
         * uList (MFloatArray or seq of float) - U values to set
         * vList (MFloatArray or seq of float) - V values to set
         """
-    def tangents(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def tangents(self, *args: Any, **kwargs: Any) -> Any:
         """tangents(uParam, vParam, space=kObject) -> (MVector, MVector)
 
         Returns the tangents in the U and V directions at a given parameter
@@ -9230,7 +10344,7 @@ class MFnNurbsSurface(MFnDagNode):
         * space    (int) - An MSpace constant giving the coordinate space
                            in which to perform the operation
         """
-    def trim(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def trim(self, *args: Any, **kwargs: Any) -> Any:
         """trim(regionsToKeepU, regionsToKeepV, keepHistory=False) -> self
 
         Trims the surface to its curves on surface. Regions which are kept
@@ -9248,7 +10362,7 @@ class MFnNurbsSurface(MFnDagNode):
         * keepHistory    (bool) - Determines whether the construction history
                                   of the operation should be retained.
         """
-    def updateSurface(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def updateSurface(self, *args: Any, **kwargs: Any) -> Any:
         """updateSurface() -> self
 
         Signals that this surface has changed and needs to be recalculated.
@@ -9260,7 +10374,13 @@ class MFnNurbsSurface(MFnDagNode):
         """
 
 class MFnNurbsSurfaceData(MFnGeometryData):
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """create() -> MObject
 
         Creates a new nurbs surface data object, attaches it to this function set
@@ -9268,50 +10388,62 @@ class MFnNurbsSurfaceData(MFnGeometryData):
         """
 
 class MFnPlugin(MFnBase):
-    def apiVersion(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __init_subclass__(self, *args: Any, **kwargs: Any) -> Any:
+        """This method is called when a class is subclassed.
+
+        The default implementation does nothing. It may be
+        overridden to extend subclasses.
+        """
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def apiVersion(self, *args: Any, **kwargs: Any) -> Any:
         """Return the API version required by the plug-in."""
-    def deregisterAttributePatternFactory(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deregisterAttributePatternFactory(self, *args: Any, **kwargs: Any) -> Any:
         """Deregister a user defined attribute pattern factory type from Maya."""
-    def deregisterCommand(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deregisterCommand(self, *args: Any, **kwargs: Any) -> Any:
         """Deregister a user defined command from Maya."""
-    def deregisterContextCommand(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deregisterContextCommand(self, *args: Any, **kwargs: Any) -> Any:
         """Deregister a user defined context command from Maya."""
-    def deregisterData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deregisterData(self, *args: Any, **kwargs: Any) -> Any:
         """Deregister a user defined data type from Maya."""
-    def deregisterDragAndDropBehavior(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deregisterDragAndDropBehavior(self, *args: Any, **kwargs: Any) -> Any:
         """Deregister a user defined drag and drop behavior from Maya."""
-    def deregisterNode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deregisterNode(self, *args: Any, **kwargs: Any) -> Any:
         """Deregister a user defined dependency node from Maya."""
-    def findPlugin(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def findPlugin(self, *args: Any, **kwargs: Any) -> Any:
         """Returns an MObject corresponding to the named plugin."""
-    def loadPath(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def loadPath(self, *args: Any, **kwargs: Any) -> Any:
         """Return the full path name of the file from which the plug-in was loaded."""
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def name(self, *args: Any, **kwargs: Any) -> Any:
         """Return the plug-in's name."""
-    def registerAttributePatternFactory(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def registerAttributePatternFactory(self, *args: Any, **kwargs: Any) -> Any:
         """Register a new attribute pattern factory type with Maya."""
-    def registerCommand(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def registerCommand(self, *args: Any, **kwargs: Any) -> Any:
         """Register a new command with Maya."""
-    def registerContextCommand(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def registerContextCommand(self, *args: Any, **kwargs: Any) -> Any:
         """Register a new context command with Maya.  Once registered, the context
         can be used to create a new tool that can be used in a manner
         identical to built-in Maya tools.
         """
-    def registerData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def registerData(self, *args: Any, **kwargs: Any) -> Any:
         """Register a new data type with Maya."""
-    def registerDragAndDropBehavior(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def registerDragAndDropBehavior(self, *args: Any, **kwargs: Any) -> Any:
         """Register a new drag and drop behavior with Maya.
         Once registered, the new behavior can be used to finish connections between node drag and drops from the hyperGraph/hyperShade to other nodes or Maya UI.
         """
-    def registerNode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def registerNode(self, *args: Any, **kwargs: Any) -> Any:
         """Register a new dependency node with Maya."""
-    def registerShape(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def registerShape(self, *args: Any, **kwargs: Any) -> Any:
         """Register a new user defined shape node with Maya.
         To deregister the shape node use the MFnPlugin.deregisterNode().
         """
-    def setName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setName(self, *args: Any, **kwargs: Any) -> Any:
         """Set the plug-in's name."""
-    def vendor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def vendor(self, *args: Any, **kwargs: Any) -> Any:
         """Return the plug-in's vendor string."""
     @property
     def version(*args: Any, **kwargs: Any) -> Any:
@@ -9321,101 +10453,123 @@ class MFnPlugin(MFnBase):
         """Plug-in version string."""
 
 class MFnPluginData(MFnData):
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """create(id) -> MObject
 
         Create an instance of the specified user defined data type and attach it to this functionset.
 
         * id (MTypeId) - the unique MTypeId of the user defined data class derived from MPxData.
         """
-    def data(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def data(self, *args: Any, **kwargs: Any) -> Any:
         """data() -> MPxData
 
         Return the user defined data held in this instance
         """
-    def typeId(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def typeId(self, *args: Any, **kwargs: Any) -> Any:
         """typeId() -> MTypeId
 
         Return the unique MTypeId of the user defined data that is held by this instance
         """
 
 class MFnPointArrayData(MFnData):
-    def array(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def array(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the encapsulated array as an MPointArray."""
-    def copyTo(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copyTo(self, *args: Any, **kwargs: Any) -> Any:
         """Replaces the elements of an array with those in the encapsulated array."""
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new MPoint array data object."""
-    def set(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def set(self, *args: Any, **kwargs: Any) -> Any:
         """Sets values in the encapsulated array."""
 
 class MFnReference(MFnDependencyNode):
-    def associatedNamespace(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def associatedNamespace(self, *args: Any, **kwargs: Any) -> Any:
         """associatedNamespace(bool shortName) -> MString
 
         Returns the namespace associated with this reference.
         """
-    def containsNode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def containsNode(self, *args: Any, **kwargs: Any) -> Any:
         """containsNode(MObject) -> bool
 
         Returns true if the specified node is from this reference or one of its child references. The containsNodeExactly method can be used to test membership without including the child references.
         """
-    def containsNodeExactly(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def containsNodeExactly(self, *args: Any, **kwargs: Any) -> Any:
         """containsNodeExactly(MObject) -> bool
 
         Returns true if the specified node is from this reference. Membership in child references is not checked. The containsNode method may be used to test membership in a reference and its child references.
         """
-    def fileName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def fileName(self, *args: Any, **kwargs: Any) -> Any:
         """fileName(bool resolvedName, bool includePath, bool includeCopyNumber) -> MString
 
         Returns the name of file associated with this reference.
         """
-    def ignoreReferenceEdits(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def ignoreReferenceEdits(self, *args: Any, **kwargs: Any) -> Any:
         """ignoreReferenceEdits() -> bool
 
         Indicates whether reference edits will be tracked and logged or not.
         """
-    def isExportEditsFile(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isExportEditsFile(self, *args: Any, **kwargs: Any) -> Any:
         """isExportEditsFile() -> bool
 
         Returns true if the reference is an export edits file. An export edits file is a file of type '.editMA' or '.editMB' which was created using Maya's offline file functionality.
         """
-    def isLoaded(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isLoaded(self, *args: Any, **kwargs: Any) -> Any:
         """isLoaded() -> bool
 
         Returns true if the reference is loaded.
         """
-    def isLocked(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isLocked(self, *args: Any, **kwargs: Any) -> Any:
         """isLocked() -> bool
 
         Returns true if the reference is locked or if the referenced file was saved as locked.
         """
-    def isValidReference(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isValidReference(self, *args: Any, **kwargs: Any) -> Any:
         """isValidReference() -> bool
 
         Returns true if the reference is an valid file reference.
         """
-    def nodes(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def nodes(self, *args: Any, **kwargs: Any) -> Any:
         """nodes() -> MObjectArray
 
         Returns an array of the nodes associated with this reference.
         """
-    def parentAssembly(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def parentAssembly(self, *args: Any, **kwargs: Any) -> Any:
         """parentAssembly() -> MObject
 
         Returns the parent assembly node that contains this reference. See MFnAssembly documentation for more details.
         """
-    def parentFileName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def parentFileName(self, *args: Any, **kwargs: Any) -> Any:
         """parentFileName(bool resolvedName, bool includePath, bool includeCopyNumber) -> MString
 
         Returns the name of parent file associated with this reference.
         """
-    def parentReference(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def parentReference(self, *args: Any, **kwargs: Any) -> Any:
         """parentReference() -> MObject
 
         Returns the reference node associated with the parent reference.
         """
-    def setIgnoreReferenceEdits(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setIgnoreReferenceEdits(self, *args: Any, **kwargs: Any) -> Any:
         """setIgnoreReferenceEdits(bool) -> None
 
         Specify whether reference edits should be tracked and logged or not.
@@ -9425,29 +10579,43 @@ class MFnReference(MFnDependencyNode):
         """
 
 class MFnSet(MFnDependencyNode):
-    def addMember(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def addMember(self, *args: Any, **kwargs: Any) -> Any:
         """addMember( object ) -> self
 
         Add a new object to the set.
 
         The added object may be an MObject, an (MDagPath, MObject) tuple, or an MPlug.
         """
-    def addMembers(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addMembers(self, *args: Any, **kwargs: Any) -> Any:
         """addMembers( MSelectionList ) -> self
 
         Add a list of new objects to the set.
         """
-    def annotation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def annotation(self, *args: Any, **kwargs: Any) -> Any:
         """annotation() -> string
 
         Returns the annotation string for this set.  This allows a description of the set to be stored with it.
         """
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """clear() -> self
 
         Removes all elements from this set.
         """
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """create(members, restriction=kNone) -> MObject
 
         Creates a new set dependency node and puts it in the dependency graph.
@@ -9455,14 +10623,14 @@ class MFnSet(MFnDependencyNode):
         * members (MSelectionList) - list of members for new set
         * restriction (MFnSet.Restriction) - restriction applied to members
         """
-    def getIntersection(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getIntersection(self, *args: Any, **kwargs: Any) -> Any:
         """getIntersection( otherSet ) -> MSelectionList
 
         This method calculates the intersection of two sets.  The result will be the intersection of this set and the set passed into the method.
 
         * otherSet (MObject or MObjectArray or list of sets) - set(s) to find union of with this set
         """
-    def getMemberPaths(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getMemberPaths(self, *args: Any, **kwargs: Any) -> Any:
         """getMemberPaths( shading ) -> MDagPathArray
 
         Get the members of this set as an array of dagPaths.
@@ -9471,7 +10639,7 @@ class MFnSet(MFnDependencyNode):
 
         * shading (bool) -  whether the list should only contain members of this set used for shading purposes.
         """
-    def getMembers(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getMembers(self, *args: Any, **kwargs: Any) -> Any:
         """getMembers( flatten ) -> MSelectionList
 
         Get the members of this set as a selection list.  This information is providedas a selection list so that all of the path information is retained forDAG nodes.
@@ -9480,72 +10648,78 @@ class MFnSet(MFnDependencyNode):
 
         * flatten (bool) - whether to flatten the returned list
         """
-    def getUnion(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getUnion(self, *args: Any, **kwargs: Any) -> Any:
         """getUnion( otherSet ) -> MSelectionList
 
         This method calculates the union of two sets.  The result will be the union of this set and the set passed into the method.
 
         * otherSet (MObject or MObjectArray or list of sets) - set(s) to find union of with this set
         """
-    def hasRestrictions(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasRestrictions(self, *args: Any, **kwargs: Any) -> Any:
         """hasRestrictions() -> bool
 
         Returns true if this function set has restrictions on the type of objects that it may contain.
         """
-    def intersectsWith(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def intersectsWith(self, *args: Any, **kwargs: Any) -> Any:
         """intersectsWith( otherSet ) -> self
 
         Returns true if this set intersects with the given set.  An intersection occurs if there are any common members between the two sets.
         """
-    def isMember(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isMember(self, *args: Any, **kwargs: Any) -> Any:
         """isMember( object ) -> bool
 
         Returns true if the given object is a member of this set.
 
         The object may be an MObject, an (MDagPath, MObject) tuple, or an MPlug.
         """
-    def removeMember(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeMember(self, *args: Any, **kwargs: Any) -> Any:
         """removeMember( object ) -> self
 
         Remove an object from the set.
 
         The removed object may be an MObject, an (MDagPath, MObject) tuple, or an MPlug.
         """
-    def removeMembers(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeMembers(self, *args: Any, **kwargs: Any) -> Any:
         """removeMembers( MSelectionList ) -> self
 
         Remove items of the selection list from the set.
         """
-    def restriction(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def restriction(self, *args: Any, **kwargs: Any) -> Any:
         """restriction() -> MFnSet.Restriction
 
         Returns the type of membership restriction that this set has.
         """
-    def setAnnotation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setAnnotation(self, *args: Any, **kwargs: Any) -> Any:
         """setAnnotation( annotation ) -> self
 
         Sets the annotation string for this set.  This allows a description of the set to be stored with it.
         """
 
 class MFnSingleIndexedComponent(MFnComponent):
-    def addElement(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addElement(self, *args: Any, **kwargs: Any) -> Any:
         """addElement(int element) -> self
 
         Adds the specified element to the component.
         """
-    def addElements(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addElements(self, *args: Any, **kwargs: Any) -> Any:
         """addElements([int]) -> self
         addElements(MIntArray) -> self
 
         Adds the specified elements to the component.
         """
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """create(MFn Type constant) -> MObject
 
         Creates a new, empty component, attaches it to the function set and
         returns an MObject which references it.
         """
-    def element(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def element(self, *args: Any, **kwargs: Any) -> Any:
         """element(index) -> int
 
         Returns the index'th element of the component.
@@ -9556,17 +10730,17 @@ class MFnSingleIndexedComponent(MFnComponent):
     @elementMax.setter
     def elementMax(*args: Any, **kwargs: Any) -> Any:
         """Biggest element plus 1 in the component."""
-    def getCompleteData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getCompleteData(self, *args: Any, **kwargs: Any) -> Any:
         """getCompleteData() -> int
 
         Returns the number of elements in the complete component, or 0 if the component is not complete.
         """
-    def getElements(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getElements(self, *args: Any, **kwargs: Any) -> Any:
         """getElements() -> MIntArray
 
         Returns all of the component's elements.
         """
-    def setCompleteData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setCompleteData(self, *args: Any, **kwargs: Any) -> Any:
         """setCompleteData(numElements) -> self
 
         Marks the component as complete (i.e. contains all possible elements).
@@ -9574,29 +10748,53 @@ class MFnSingleIndexedComponent(MFnComponent):
         """
 
 class MFnStringArrayData(MFnData):
-    def array(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def array(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the encapsulated array as a list of unicode objects."""
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new string array data object."""
-    def set(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def set(self, *args: Any, **kwargs: Any) -> Any:
         """Sets values in the encapsulated array."""
 
 class MFnStringData(MFnData):
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new string data object."""
-    def set(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def set(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the value of the encapsulated string."""
-    def string(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def string(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the encapsulated string as a unicode object."""
 
 class MFnTransform(MFnDagNode):
-    def clearRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def clearRestPosition(self, *args: Any, **kwargs: Any) -> Any:
         """Clears the transform's rest position matrix."""
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new transform node and attaches it to the function set."""
-    def enableLimit(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def enableLimit(self, *args: Any, **kwargs: Any) -> Any:
         """Enables or disables a specified limit type."""
-    def isLimited(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isLimited(self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the specified limit type is enabled."""
     kRotateMaxX: int = ...
     kRotateMaxY: int = ...
@@ -9613,114 +10811,120 @@ class MFnTransform(MFnDagNode):
     kTranslateMinY: int = ...
     kTranslateMinZ: int = ...
 
-    def limitValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def limitValue(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the value of the specified limit."""
-    def resetFromRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def resetFromRestPosition(self, *args: Any, **kwargs: Any) -> Any:
         """Resets the transform from its rest position matrix."""
-    def restPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def restPosition(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rest position matrix."""
-    def rotateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rotateBy(self, *args: Any, **kwargs: Any) -> Any:
         """Adds an MEulerRotation or MQuaternion to the transform's rotation."""
-    def rotateByComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rotateByComponents(self, *args: Any, **kwargs: Any) -> Any:
         """Adds to the transform's rotation using the individual components of an MEulerRotation or MQuaternion."""
-    def rotateOrientation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rotateOrientation(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the MQuaternion which orients the local rotation space."""
-    def rotatePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rotatePivot(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotate pivot."""
-    def rotatePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rotatePivotTranslation(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotate pivot translation."""
-    def rotation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rotation(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotation as an MEulerRotation or MQuaternion."""
-    def rotationComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rotationComponents(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotation as the individual components of an MEulerRotation or MQuaternion."""
-    def rotationOrder(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rotationOrder(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the order of rotations when the transform's rotation is expressed as an MEulerRotation."""
-    def scale(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def scale(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transform's XYZ scale components."""
-    def scaleBy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def scaleBy(self, *args: Any, **kwargs: Any) -> Any:
         """Multiplies the transform's XYZ scale components by a sequence of three floats."""
-    def scalePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def scalePivot(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's scale pivot."""
-    def scalePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def scalePivotTranslation(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's scale pivot translation."""
-    def setLimit(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setLimit(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the value of the specified limit."""
-    def setRestPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setRestPosition(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rest position matrix."""
-    def setRotateOrientation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setRotateOrientation(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the MQuaternion which orients the local rotation space."""
-    def setRotatePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setRotatePivot(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotate pivot."""
-    def setRotatePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setRotatePivotTranslation(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotate pivot translation."""
-    def setRotation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setRotation(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation using an MEulerRotation or MQuaternion."""
-    def setRotationComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setRotationComponents(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation using the individual components of an MEulerRotation or MQuaternion."""
-    def setRotationOrder(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setRotationOrder(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation order."""
-    def setScale(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setScale(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale components."""
-    def setScalePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setScalePivot(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale pivot."""
-    def setScalePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setScalePivotTranslation(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's scale pivot translation."""
-    def setShear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setShear(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's shear."""
-    def setTransformation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setTransformation(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's attribute values to represent the given transformation matrix."""
-    def setTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setTranslation(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's translation."""
-    def shear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def shear(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transform's shear components."""
-    def shearBy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def shearBy(self, *args: Any, **kwargs: Any) -> Any:
         """Multiplies the transform's shear components by a sequence of three floats."""
-    def transformation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def transformation(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transformation matrix represented by this transform."""
-    def translateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def translateBy(self, *args: Any, **kwargs: Any) -> Any:
         """Adds an MVector to the transform's translation."""
-    def translation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def translation(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's translation as an MVector."""
 
 class MFnTripleIndexedComponent(MFnComponent):
-    def addElement(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addElement(self, *args: Any, **kwargs: Any) -> Any:
         """addElement(sIndex, tIndex, uIndex) -> self
         addElement([sIndex, tIndex, uIndex]) -> self
 
         Adds the element identified by (sIndex, tIndex, uIndex) to the component.
         """
-    def addElements(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addElements(self, *args: Any, **kwargs: Any) -> Any:
         """addElements(sequence of [sIndex, tIndex, uIndex]) -> self
 
         Adds the specified elements to the component. Each item in the
         elements sequence is itself a sequence of three ints which are the
         S, T and U indices of an element to be added.
         """
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """create(MFn Type constant) -> MObject
 
         Creates a new, empty component, attaches it to the function set and
         returns an MObject which references it.
         """
-    def getCompleteData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getCompleteData(self, *args: Any, **kwargs: Any) -> Any:
         """getCompleteData() -> (numS, numT, numU)
 
         Returns a tuple containing the number of S, T and U indices in
         the complete component, or (0,0,0) if the component is not complete.
         """
-    def getElement(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getElement(self, *args: Any, **kwargs: Any) -> Any:
         """getElement(index) -> (sIndex, tIndex, uIndex)
 
         Returns the index'th element of the component as a tuple containing the
         element's S, T and U indices.
         """
-    def getElements(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getElements(self, *args: Any, **kwargs: Any) -> Any:
         """getElements() -> list of (sIndex, tIndex, uIndex)
 
         Returns all of the component's elements as a list of tuples with each
         tuple containing the S, T and U indices of a single element.
         """
-    def setCompleteData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setCompleteData(self, *args: Any, **kwargs: Any) -> Any:
         """setCompleteData(numS, numT, numU) -> self
 
         Marks the component as complete (i.e. contains all possible elements).
@@ -9730,9 +10934,15 @@ class MFnTripleIndexedComponent(MFnComponent):
         """
 
 class MFnTypedAttribute(MFnAttribute):
-    def attrType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def attrType(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the type of data handled by the attribute."""
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new type attribute, attaches it to the function set and returns it as an MObject."""
     @property
     def default(*args: Any, **kwargs: Any) -> Any:
@@ -9742,17 +10952,35 @@ class MFnTypedAttribute(MFnAttribute):
         """Default value"""
 
 class MFnUInt64ArrayData(MFnData):
-    def array(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def array(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the encapsulated array as an MUint64Array."""
-    def copyTo(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copyTo(self, *args: Any, **kwargs: Any) -> Any:
         """Replaces the elements of an array with those in the encapsulated array."""
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new MUint64 array data object."""
-    def set(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def set(self, *args: Any, **kwargs: Any) -> Any:
         """Sets values in the encapsulated array."""
 
 class MFnUnitAttribute(MFnAttribute):
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new unit attribute, attaches it to the function set and returns it as an MObject."""
     @property
     def default(*args: Any, **kwargs: Any) -> Any:
@@ -9760,48 +10988,62 @@ class MFnUnitAttribute(MFnAttribute):
     @default.setter
     def default(*args: Any, **kwargs: Any) -> Any:
         """Default value"""
-    def getMax(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getMax(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the attribute's hard maximum value. Returned MAngle and MDistance are always in radians and centimeters, respectively"""
-    def getMin(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getMin(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the attribute's hard minimum value. Returned MAngle and MDistance are always in radians and centimeters, respectively"""
-    def getSoftMax(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getSoftMax(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the attribute's soft maximum value. Returned MAngle and MDistance are always in radians and centimeters, respectively"""
-    def getSoftMin(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getSoftMin(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the attribute's soft minimum value. Returned MAngle and MDistance are always in radians and centimeters, respectively"""
-    def hasMax(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasMax(self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the attribute has a hard maximum value."""
-    def hasMin(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasMin(self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the attribute has a hard minimum value."""
-    def hasSoftMax(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasSoftMax(self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the attribute has a soft maximum value."""
-    def hasSoftMin(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasSoftMin(self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the attribute has a soft minimum value."""
     kLast: int = ...
     kTime: int = ...
 
-    def setMax(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setMax(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the attribute's hard maximum value."""
-    def setMin(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setMin(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the attribute's hard minimum value."""
-    def setSoftMax(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setSoftMax(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the attribute's soft maximum value."""
-    def setSoftMin(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setSoftMin(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the attribute's soft minimum value."""
-    def unitType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def unitType(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the type of data handled by the attribute."""
 
 class MFnVectorArrayData(MFnData):
-    def array(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def array(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the encapsulated array as an MVectorArray."""
-    def copyTo(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copyTo(self, *args: Any, **kwargs: Any) -> Any:
         """Replaces the elements of an array with those in the encapsulated array."""
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """Creates a new MVector array data object."""
-    def set(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def set(self, *args: Any, **kwargs: Any) -> Any:
         """Sets values in the encapsulated array."""
 
 class MGlobal:
-    def addToModel(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def addToModel(self, *args: Any, **kwargs: Any) -> Any:
         """addToModel(MObject, MObject) -> None
 
         This method is used to add new dag objects to the model.  If no parent node
@@ -9812,7 +11054,7 @@ class MGlobal:
         This method is only valid for dag nodes. If the specified
         object is not of type MFn::kDagNode then MS::kInvalidParameter will be returned.
         """
-    def addToModelAt(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addToModelAt(self, *args: Any, **kwargs: Any) -> Any:
         """addToModelAt(MObject, MVector, double[3], double[3], rotateOrder=MTransformationMatrix.kXYZ) -> None
 
         Adds the specified dag object to the DAG and transform the object
@@ -9821,27 +11063,27 @@ class MGlobal:
         object is not of type MFn::kDagNode then MS::kInvalidParameter
         will be returned.
         """
-    def animSelectionMask(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def animSelectionMask(self, *args: Any, **kwargs: Any) -> Any:
         """animSelectionMask() -> MSelectionMask
 
         Returns the animation selection mask.
         """
-    def apiVersion(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def apiVersion(self, *args: Any, **kwargs: Any) -> Any:
         """apiVersion() -> int
 
         Returns a number describing the version of the Maya API at runtime.
         """
-    def className(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def className(self, *args: Any, **kwargs: Any) -> Any:
         """className() -> string
 
         Returns the name of this class.
         """
-    def clearSelectionList(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clearSelectionList(self, *args: Any, **kwargs: Any) -> Any:
         """clearSelectionList() -> None
 
         Removes all items from the active selection list.
         """
-    def closeErrorLog(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def closeErrorLog(self, *args: Any, **kwargs: Any) -> Any:
         """closeErrorLog() -> None
 
         This method closes the API error log file.  If error logging is currently
@@ -9854,67 +11096,67 @@ class MGlobal:
         Note that if a log is reopened after it is closed, all information previously
         logged to it is lost.
         """
-    def componentSelectionMask(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def componentSelectionMask(self, *args: Any, **kwargs: Any) -> Any:
         """componentSelectionMask() -> MSelectionMask
 
         Returns the component selection mask.
         """
-    def currentToolContext(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def currentToolContext(self, *args: Any, **kwargs: Any) -> Any:
         """currentToolContext() -> MObject
 
         Returns the current tool context as an MObject.
         """
-    def defaultErrorLogPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def defaultErrorLogPathName(self, *args: Any, **kwargs: Any) -> Any:
         """defaultErrorLogPathName() -> string
 
         Determines the default path name of the error log file.
         Returns an empty string on failure.
         """
-    def deleteNode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deleteNode(self, *args: Any, **kwargs: Any) -> Any:
         """deleteNode(MObject) -> None
 
         Delete the given dag node or dependency graph node.
         """
-    def disableStow(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def disableStow(self, *args: Any, **kwargs: Any) -> Any:
         """disableStow() -> bool
 
         This method is used to query if the disabling of Stowing (hiding)
         and Unstowing (showing) windows is active.
         """
-    def displayError(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def displayError(self, *args: Any, **kwargs: Any) -> Any:
         """displayError(msg) -> None
 
         Display an error in the script editor.
         """
-    def displayInfo(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def displayInfo(self, *args: Any, **kwargs: Any) -> Any:
         """displayInfo(msg) -> None
 
         Display an informational message in the script editor.
         """
-    def displayWarning(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def displayWarning(self, *args: Any, **kwargs: Any) -> Any:
         """displayWarning(msg) -> None
 
         Display a warning in the script editor.
         """
-    def doErrorLogEntry(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doErrorLogEntry(self, *args: Any, **kwargs: Any) -> Any:
         """doErrorLogEntry(string) -> bool
 
         Logs an entry in the currently open log file.  It is not necessary for error
         logging to be enabled, but a log file must be open.
         A newline is appended to each log entry.
         """
-    def errorLogPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def errorLogPathName(self, *args: Any, **kwargs: Any) -> Any:
         """errorLogPathName() -> string
 
         Determines the path name of the current error log file.
         Returns the null stringon failure.
         """
-    def errorLoggingIsOn(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def errorLoggingIsOn(self, *args: Any, **kwargs: Any) -> Any:
         """errorLoggingIsOn() -> bool
 
         This method determines whether or not API errors are being logged.
         """
-    def executeCommandOnIdle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def executeCommandOnIdle(self, *args: Any, **kwargs: Any) -> Any:
         """executeCommandOnIdle(string, bool displayEnabled=False) -> None
 
         Sets a MEL command to execute on the next idle event. Since the command
@@ -9926,7 +11168,7 @@ class MGlobal:
         process. Calling this method from a completely separate process will
         not work and may lead to unpredictable behaviour.
         """
-    def executeCommandStringResult(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def executeCommandStringResult(self, *args: Any, **kwargs: Any) -> Any:
         """executeCommandStringResult(string, bool displayEnabled=False, bool undoEnabled=False) -> string or [string, string, ...]
 
         Executes a MEL command that returns a string or an array of strings
@@ -9937,13 +11179,13 @@ class MGlobal:
 
         Note: This is not thread safe; you may use executeCommandOnIdle instead
         """
-    def getAbsolutePathToResources(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getAbsolutePathToResources(self, *args: Any, **kwargs: Any) -> Any:
         """getAbsolutePathToResources() -> string
 
         Return the absolute path of Maya's "Resources" fold on the system,
         including the "Resources" folder itself.
         """
-    def getActiveSelectionList(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getActiveSelectionList(self, *args: Any, **kwargs: Any) -> Any:
         """getActiveSelectionList(orderedSelectionIfAvailable=False) -> MSelectionList
 
         Return an MSelectionList containing the nodes, components and
@@ -9951,19 +11193,19 @@ class MGlobal:
         is True, and tracking is enabled, will return the selected items
         in the order that they were selected.
         """
-    def getAssociatedSets(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getAssociatedSets(self, *args: Any, **kwargs: Any) -> Any:
         """getAssociatedSets(MSelectionList) -> list
 
         This utility method finds all the sets that the items in
         the given selection list are members of.
         """
-    def getFunctionSetList(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getFunctionSetList(self, *args: Any, **kwargs: Any) -> Any:
         """getFunctionSetList(MObject) -> (string, string, ...)
 
         Returns a tuple of strings that represent the type of each function
         set that will accept this object.
         """
-    def getHiliteList(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getHiliteList(self, *args: Any, **kwargs: Any) -> Any:
         """getHiliteList() -> MSelectionList
 
         Returns a copy of the hilite list.  The hilite list contains all DAG objects
@@ -9971,20 +11213,20 @@ class MGlobal:
         over a Mesh object and chooses the "vertex" option the Mesh line drawing changes
         color and the mesh is added to the hiliteList.)
         """
-    def getLiveList(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getLiveList(self, *args: Any, **kwargs: Any) -> Any:
         """getLiveList() -> MSelectionList
 
         Returns a copy of the live list. When a user performs a
         "Modify->Make Live" in the user interface the currently selected
         objects are added to the live list.
         """
-    def getPreselectionHiliteList(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPreselectionHiliteList(self, *args: Any, **kwargs: Any) -> Any:
         """getPreselectionHiliteList() -> MSelectionList
 
         Gets the objects for which Maya is displaying a preselection
         highlight in the viewports.
         """
-    def getRichSelection(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getRichSelection(self, *args: Any, **kwargs: Any) -> Any:
         """getRichSelection(defaultToActiveSelection=True) -> MRichSelection
 
         Returns the current rich selection (usually the active selection with
@@ -9992,7 +11234,7 @@ class MGlobal:
         and 'defaultToActiveSelection' is True, the current active selection
         will be returned instead.
         """
-    def getSelectionListByName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getSelectionListByName(self, *args: Any, **kwargs: Any) -> Any:
         """getSelectionListByName(name) -> MSelectionList
 
         Returns an MSelectionList with all of the objects that match the
@@ -10000,7 +11242,7 @@ class MGlobal:
         as can be used in MEL commands. For example, the pattern 'pCube*' will
         match all occurrences of objects whose names begin with 'pCube'.
         """
-    def initOptionVar(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def initOptionVar(self, *args: Any, **kwargs: Any) -> Any:
         """initOptionVar(string name, int, string category) -> bool
         initOptionVar(string name, double, string category) -> bool
         initOptionVar(string name, string, string category) -> bool
@@ -10010,27 +11252,27 @@ class MGlobal:
         This method will create the option var if it doesn't exist and set the default value
         and category.
         """
-    def isRedoing(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isRedoing(self, *args: Any, **kwargs: Any) -> Any:
         """isRedoing() -> bool
 
         true if Maya is currently in the middle of a redo.
         """
-    def isSelected(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isSelected(self, *args: Any, **kwargs: Any) -> Any:
         """isSelected(MObject) -> bool
 
         Determines whether the given object is on the active selection list.
         """
-    def isUndoing(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isUndoing(self, *args: Any, **kwargs: Any) -> Any:
         """isUndoing() -> bool
 
         true if Maya is currently in the middle of an undo.
         """
-    def isYAxisUp(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isYAxisUp(self, *args: Any, **kwargs: Any) -> Any:
         """isYAxisUp() -> bool
 
         This method returns true if, currently, the Y-axis is UP.
         """
-    def isZAxisUp(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isZAxisUp(self, *args: Any, **kwargs: Any) -> Any:
         """isZAxisUp() -> bool
 
         This method returns true if, currently, the Z-axis is UP.
@@ -10052,19 +11294,19 @@ class MGlobal:
     kWireframeSelectMethod: int = ...
     kXORWithList: int = ...
 
-    def mayaFeatureSet(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def mayaFeatureSet(self, *args: Any, **kwargs: Any) -> Any:
         """mayaFeatureSet() -> int
 
         Returns an enumerated type specifying if Maya API has unlimited set of features.
           kComplete  Running Maya version with all features available.
           kRestricted  Running Maya version with some features limited in availability.
         """
-    def mayaName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def mayaName(self, *args: Any, **kwargs: Any) -> Any:
         """mayaName() -> string
 
         Returns a string containing name of running application.
         """
-    def mayaState(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def mayaState(self, *args: Any, **kwargs: Any) -> Any:
         """mayaState() -> int
 
         Returns an enumerated type specifying the way in which Maya was invoked.
@@ -10073,42 +11315,42 @@ class MGlobal:
           kLibraryApp  Running as a standalone (MLibrary) application.
           kBaseUIMode  Running with UI enabled but Maya's std UI scripts not run.
         """
-    def mayaVersion(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def mayaVersion(self, *args: Any, **kwargs: Any) -> Any:
         """mayaVersion() -> string
 
         Returns a string describing this version of Maya.
         """
-    def miscSelectionMask(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def miscSelectionMask(self, *args: Any, **kwargs: Any) -> Any:
         """miscSelectionMask() -> MSelectionMask
 
         Returns the miscellaneous selection mask.
         """
-    def objectSelectionMask(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def objectSelectionMask(self, *args: Any, **kwargs: Any) -> Any:
         """objectSelectionMask() -> MSelectionMask
 
         Returns the object selection mask.
         """
-    def optionVarDoubleValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def optionVarDoubleValue(self, *args: Any, **kwargs: Any) -> Any:
         """optionVarDoubleValue(string) -> double
 
         This method is used to get the option variable value of type double
         """
-    def optionVarExists(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def optionVarExists(self, *args: Any, **kwargs: Any) -> Any:
         """optionVarExists(string) -> bool
 
         This method is used to check if the option variable exists
         """
-    def optionVarIntValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def optionVarIntValue(self, *args: Any, **kwargs: Any) -> Any:
         """optionVarIntValue(string) -> int
 
         This method is used to get the option variable value of int type
         """
-    def optionVarStringValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def optionVarStringValue(self, *args: Any, **kwargs: Any) -> Any:
         """optionVarStringValue(string) -> MString
 
         This method is used to get the option variable value of type string
         """
-    def removeFromModel(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeFromModel(self, *args: Any, **kwargs: Any) -> Any:
         """removeFromModel(MObject) -> None
 
         Removes the specified dag node from the scene.
@@ -10122,12 +11364,12 @@ class MGlobal:
         calls, otherwise the dag node is leaked. To delete the dag node,
         call MGlobal::deleteNode() instead.
         """
-    def removeOptionVar(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeOptionVar(self, *args: Any, **kwargs: Any) -> Any:
         """removeOptionVar(string) -> None
 
         This method is used to remove the option variable
         """
-    def resetToDefaultErrorLogPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def resetToDefaultErrorLogPathName(self, *args: Any, **kwargs: Any) -> Any:
         """resetToDefaultErrorLogPathName() -> None
 
         Closes the current log file if it is open, and then resets the log path to
@@ -10141,12 +11383,12 @@ class MGlobal:
         Note that if the default log is reopened after it is closed, all information
         previously logged to it is lost.
         """
-    def selectByName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def selectByName(self, *args: Any, **kwargs: Any) -> Any:
         """selectByName(string, listAdjustment=kReplaceList) -> None
 
         Puts objects that match the give name on the active selection list.
         """
-    def selectCommand(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def selectCommand(self, *args: Any, **kwargs: Any) -> Any:
         """selectCommand(MSelectionList, listAdjustment=kReplaceList) -> None
 
         Set the active selection list, by calling the built in Maya select
@@ -10155,20 +11397,20 @@ class MGlobal:
         responsible for maintaing the necessary information required for
         undo, redo, and journaling.
         """
-    def selectFromScreen(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def selectFromScreen(self, *args: Any, **kwargs: Any) -> Any:
         """selectFromScreen(short, short, listAdjustment=kAddToList, selectMethod=kWireframeSelectMethod) -> None
         selectFromScreen(short, short, short, short, listAdjustment=kAddToList, selectMethod=kWireframeSelectMethod) -> None
 
         Perform click-pick type selection on the dag. If an object intersects
         the click point then it is selected according to listAdjustment.
         """
-    def selectionMethod(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def selectionMethod(self, *args: Any, **kwargs: Any) -> Any:
         """selectionMethod() -> int
 
         Determines the selection method that should be used in the currently active
         viewport.  This is useful as input to the "selectFromScreen" functions.
         """
-    def selectionMode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def selectionMode(self, *args: Any, **kwargs: Any) -> Any:
         """selectionMode() -> int
 
         Get current selection mode:
@@ -10178,7 +11420,7 @@ class MGlobal:
           kSelectLeafMode       Selecting the child in a hierarchy will result only in that child being selected.
           kSelectTemplateMode   Templated objects are selectable in this mode.
         """
-    def setActiveSelectionList(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setActiveSelectionList(self, *args: Any, **kwargs: Any) -> Any:
         """setActiveSelectionList(MSelectionList, listAdjustment=kReplaceList) -> None
 
         Set the active selection list.
@@ -10191,7 +11433,7 @@ class MGlobal:
           kRemoveFromList   #Remove the items from the list.
           kAddToHeadOfList  #Add the items to the beginning of the list.
         """
-    def setAnimSelectionMask(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setAnimSelectionMask(self, *args: Any, **kwargs: Any) -> Any:
         """setAnimSelectionMask(mask) -> selfsetAnimSelectionMask(type) -> self
 
         Set the animation selection mask to the supplied value.
@@ -10199,7 +11441,7 @@ class MGlobal:
         * mask (MSelectionMask) - The selection mask.
         * type (int) - The selection type (see MSelectionMask.addMask() for a list of values).
         """
-    def setComponentSelectionMask(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setComponentSelectionMask(self, *args: Any, **kwargs: Any) -> Any:
         """setComponentSelectionMask(mask) -> selfsetComponentSelectionMask(type) -> self
 
         Set the component selection mask to the supplied value.
@@ -10207,14 +11449,14 @@ class MGlobal:
         * mask (MSelectionMask) - The selection mask.
         * type (int) - The selection type (see MSelectionMask.addMask() for a list of values).
         """
-    def setDisableStow(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDisableStow(self, *args: Any, **kwargs: Any) -> Any:
         """setDisableStow(bool) -> None
 
         This method is used to make the visiblity of all Maya windows unchangable.
         If set to true, it disables any attempts to change the visiblity of any window.
         In addition, all popup windows will be supressed.
         """
-    def setDisplayCVs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDisplayCVs(self, *args: Any, **kwargs: Any) -> Any:
         """setDisplayCVs(MSelectionList, bool) -> None
 
         Controls drawing of control points in the specified selection list.
@@ -10223,18 +11465,18 @@ class MGlobal:
         overrides Maya's current draw list and allow, for example, the drawing
         of control points without being in vertex selection mode.
         """
-    def setErrorLogPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setErrorLogPathName(self, *args: Any, **kwargs: Any) -> Any:
         """setErrorLogPathName(string) -> None
 
         Determines the default path name of the error log file.
         Returns an empty string on failure.
         """
-    def setHiliteList(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setHiliteList(self, *args: Any, **kwargs: Any) -> Any:
         """setHiliteList(MSelectionList) -> None
 
         Sets the current hilite list. The current selection list is unchanged.
         """
-    def setMiscSelectionMask(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setMiscSelectionMask(self, *args: Any, **kwargs: Any) -> Any:
         """setMiscSelectionMask(mask) -> selfsetMiscSelectionMask(type) -> self
 
         Set the miscellaneous selection mask to the supplied value.
@@ -10242,7 +11484,7 @@ class MGlobal:
         * mask (MSelectionMask) - The selection mask.
         * type (int) - The selection type (see MSelectionMask.addMask() for a list of values).
         """
-    def setObjectSelectionMask(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setObjectSelectionMask(self, *args: Any, **kwargs: Any) -> Any:
         """setObjectSelectionMask(mask) -> selfsetObjectSelectionMask(type) -> self
 
         Set the object selection mask to the supplied value.
@@ -10250,7 +11492,7 @@ class MGlobal:
         * mask (MSelectionMask) - The selection mask.
         * type (int) - The selection type (see MSelectionMask.addMask() for a list of values).
         """
-    def setOptionVarValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setOptionVarValue(self, *args: Any, **kwargs: Any) -> Any:
         """setOptionVarValue(string, int) -> bool
         setOptionVarValue(string name, double) -> bool
         setOptionVarValue(string name, string) -> bool
@@ -10258,7 +11500,7 @@ class MGlobal:
 
         This method is used to set the option variable value of int, bool, string type
         """
-    def setPreselectionHiliteList(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setPreselectionHiliteList(self, *args: Any, **kwargs: Any) -> Any:
         """setPreselectionHiliteList(MSelectionList) -> None
 
         Sets the objects for which Maya will display a preselection
@@ -10271,38 +11513,38 @@ class MGlobal:
         If preselection highlighting is not enabled, Maya will still
         store the list.
         """
-    def setRichSelection(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setRichSelection(self, *args: Any, **kwargs: Any) -> Any:
         """setRichSelection(MRichSelection) -> None
 
         Set the current rich selection.
         """
-    def setSelectionMode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setSelectionMode(self, *args: Any, **kwargs: Any) -> Any:
         """setSelectionMode(int) -> None
 
         Set the current selection mode.
         See selectionMode() for a list of valid modes.
         """
-    def setTrackSelectionOrderEnabled(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setTrackSelectionOrderEnabled(self, *args: Any, **kwargs: Any) -> Any:
         """setTrackSelectionOrderEnabled() -> None
 
         Set whether Maya should maintain an active selection list which
         maintains object and component selection order.
         """
-    def setYAxisUp(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setYAxisUp(self, *args: Any, **kwargs: Any) -> Any:
         """setYAxisUp() -> None
 
         This method sets the flag to identify which axis is Up, and
         rotates the ground plane around around the X-axis 90 degrees to get
         the Y-Up from Z-Up.
         """
-    def setZAxisUp(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setZAxisUp(self, *args: Any, **kwargs: Any) -> Any:
         """setZAxisUp() -> None
 
         This method sets the flag to identify which axis is Up, and
         rotates the ground plane around around the X-axis 90 degrees to get
         the Y-Up from Y-Up.
         """
-    def sourceFile(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def sourceFile(self, *args: Any, **kwargs: Any) -> Any:
         """sourceFile(string) -> None
 
         Causes the MEL command engine to open the named file and execute
@@ -10311,7 +11553,7 @@ class MGlobal:
         pathname is provided, the directories indicated by the environment
         variable, MAYA_SCRIPT_PATH, will be searched for a matching filename.
         """
-    def startErrorLogging(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def startErrorLogging(self, *args: Any, **kwargs: Any) -> Any:
         """startErrorLogging() -> None
         startErrorLogging(string)
 
@@ -10323,17 +11565,17 @@ class MGlobal:
         If the new path name is the same as the current path name, this method ensures
         that logging is enabled, but no other action is taken.
         """
-    def stopErrorLogging(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def stopErrorLogging(self, *args: Any, **kwargs: Any) -> Any:
         """stopErrorLogging() -> None
 
         This method disables output to the API error log but does not close the log file.
         """
-    def trackSelectionOrderEnabled(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def trackSelectionOrderEnabled(self, *args: Any, **kwargs: Any) -> Any:
         """trackSelectionOrderEnabled() -> bool
 
         Returns whether the selection order is currerntly being tracked.
         """
-    def unselect(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def unselect(self, *args: Any, **kwargs: Any) -> Any:
         """unselect(MObject) -> None
         unselect(MDagPath, MObject) -> None
 
@@ -10344,17 +11586,17 @@ class MGlobal:
         Perform marquee type selection on the dag.  If an object intersects the
         selection rectangle, it is selected according to listAdjustment.
         """
-    def unselectByName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def unselectByName(self, *args: Any, **kwargs: Any) -> Any:
         """unselectByName(string) -> None
 
         Removes objects matching the pattern from the active selection list.
         """
-    def upAxis(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def upAxis(self, *args: Any, **kwargs: Any) -> Any:
         """upAxis() -> MVector
 
         This method returns the model's current up axis.
         """
-    def viewFrame(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def viewFrame(self, *args: Any, **kwargs: Any) -> Any:
         """viewFrame(double) -> None
         viewFrame(MTime) -> None
 
@@ -10365,7 +11607,21 @@ class MGlobal:
         """
 
 class MImage:
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """create(width, height, channels=4, type=kByte) -> self
 
         Create a new MImage object. Allocates memory for an RGBA array of pixels
@@ -10376,17 +11632,17 @@ class MImage:
         * channels (unsigned int) - the desired number of channels per pixel.
         * type (int) - the desired pixel format (kByte or kFloat, see MImage.pixelType() description for details.)
         """
-    def depth(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def depth(self, *args: Any, **kwargs: Any) -> Any:
         """depth() -> int
 
         Get the color depth (in bytes) of the currently opened image.
         """
-    def depthMap(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def depthMap(self, *args: Any, **kwargs: Any) -> Any:
         """depthMap() -> long
 
         Returns a long containing a C++ 'float' pointer which points to the depth data.
         """
-    def filter(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def filter(self, *args: Any, **kwargs: Any) -> Any:
         """filter(sourceFormat, targetFormat, scale=1.0, offset=1.0) -> self
 
         Modify the content of the image by applying a filter.
@@ -10399,7 +11655,7 @@ class MImage:
         The scale argument for this filter can vary from -256.0 to 256.0, although typical values range from 1.0 to 10.0.
         The offset argument is currently ignored and should be left to the default value of 0.0.
         """
-    def filterExists(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def filterExists(self, *args: Any, **kwargs: Any) -> Any:
         """filterExists(sourceFormat, targetFormat) -> bool
 
         Return whether or not a given source format can be directly converted to a given target format.
@@ -10407,33 +11663,33 @@ class MImage:
         * sourceFormat (MImageFilterFormat) - the format of the source image.
         * targetFormat (MImageFilterFormat) - the format of the resulting image.
         """
-    def floatPixels(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def floatPixels(self, *args: Any, **kwargs: Any) -> Any:
         """floatPixels() -> long
 
         Returns a long containing a C++ 'float' pointer which points to the pixel data.
         This data is uncompressed and tightly packed, of size (width * height * depth * sizeof( float)) bytes.
         """
-    def getDepthMapRange(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getDepthMapRange(self, *args: Any, **kwargs: Any) -> Any:
         """getDepthMapRange() -> [minValue, maxValue]
 
         Compute the minimum and maximum depth values (range) for any stored depth buffer.
         """
-    def getDepthMapSize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getDepthMapSize(self, *args: Any, **kwargs: Any) -> Any:
         """getDepthMapSize() -> [width, height]
 
         Returns the size of the depth map buffer.
         """
-    def getSize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getSize(self, *args: Any, **kwargs: Any) -> Any:
         """getSize() -> [width, height]
 
         Get the width and height of the currently opened image.
         """
-    def haveDepth(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def haveDepth(self, *args: Any, **kwargs: Any) -> Any:
         """haveDepth() -> bool
 
         Returns True if this instance of MImage contains a depth map.
         """
-    def isRGBA(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isRGBA(self, *args: Any, **kwargs: Any) -> Any:
         """isRGBA() -> bool
 
         Query flag which indicates whether the pixel information is in RGBA sequence or BGRA sequence.
@@ -10447,26 +11703,26 @@ class MImage:
     kUnknown: int = ...
     kUnknownFormat: int = ...
 
-    def pixelType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def pixelType(self, *args: Any, **kwargs: Any) -> Any:
         """pixelType() -> int
 
         Get the current pixel format of the image:  kUnknown    Format not known or invalid.
           kByte       One byte per channel, ranging from 0 to 255.
           kFloat      One float per channel, ranging from 0.0 to 1.0.
         """
-    def pixels(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def pixels(self, *args: Any, **kwargs: Any) -> Any:
         """pixels() -> long
 
         Returns a long containing a C++ 'unsigned char' pointer which points to the pixel data.
         This data is uncompressed and tightly packed, of size (width * height * depth) bytes.
         For the moment, pixels are always stored in a RGBA (depth=4 bytes) pixel format.
         """
-    def readDepthMap(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def readDepthMap(self, *args: Any, **kwargs: Any) -> Any:
         """readDepthMap(pathname) -> self
 
         Reads the depth map from the specified file and place the result into the depth map array of this MImage instance.
         """
-    def readFromFile(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def readFromFile(self, *args: Any, **kwargs: Any) -> Any:
         """readFromFile(pathname, type=kByte) -> self
 
         Attempt to identify and open the specified image file.
@@ -10474,7 +11730,7 @@ class MImage:
         * pathname (string) - the full path of the image file that should be opened.
         * type (MPixelType) - the desired pixel format. kUnknown attempts to load the native pixel type.
         """
-    def readFromTextureNode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def readFromTextureNode(self, *args: Any, **kwargs: Any) -> Any:
         """readFromTextureNode(fileTextureObject, type=kByte) -> self
 
         Attempt to read the content of the given file texture node.
@@ -10483,12 +11739,12 @@ class MImage:
         * fileTextureObject (MObject) - an object that refers to the file texture node that should be read.
         * type (MPixelType) - the desired pixel format. kUnknown attempts to load the native pixel type.
         """
-    def release(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def release(self, *args: Any, **kwargs: Any) -> Any:
         """release() -> self
 
         Release the current image. If there is no current image, the call is ignored.
         """
-    def resize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def resize(self, *args: Any, **kwargs: Any) -> Any:
         """resize(width, height, preserveAspectRatio=True) -> self
 
         Resize the currently opened image to the specified dimension, or to the closest
@@ -10497,7 +11753,7 @@ class MImage:
         * preserveAspectRatio (bool) - specifies whether the aspect ratio should be preserved or not.
                  If this flag is set, the given width and height are interpreted as the maximum dimensions allowable.
         """
-    def setDepthMap(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDepthMap(self, *args: Any, **kwargs: Any) -> Any:
         """setDepthMap(depth, width, heigth) -> self
 
         Specifies the depth map resolution and data.
@@ -10510,7 +11766,7 @@ class MImage:
         * width (unsigned int) - the width of the depth buffer.
         * height (unsigned int) - the height of the depth buffer.
         """
-    def setFloatPixels(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setFloatPixels(self, *args: Any, **kwargs: Any) -> Any:
         """setFloatPixels(pixels, width, height, channels=4) -> self
 
         Copy the uncompressed pixels array passed in into the MImage.
@@ -10522,7 +11778,7 @@ class MImage:
         * height (unsigned int) - the variable that will be set to the image's height in pixels.
         * channels (unsigned int) - the number of channels per pixel.
         """
-    def setPixels(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setPixels(self, *args: Any, **kwargs: Any) -> Any:
         """setPixels(pixels, width, height) -> self
 
         Copy the uncompressed pixels array passed in into the MImage.
@@ -10533,24 +11789,24 @@ class MImage:
         * width (unsigned int) - the variable that will be set to the image's width in pixels.
         * height (unsigned int) - the variable that will be set to the image's height in pixels.
         """
-    def setRGBA(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setRGBA(self, *args: Any, **kwargs: Any) -> Any:
         """setRGBA(bool) -> self
 
         Sets a flag to indicate that pixel information is in RGBA sequence or BGRA sequence.
         Pixel data must have been allocated before this call is made.
         """
-    def verticalFlip(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def verticalFlip(self, *args: Any, **kwargs: Any) -> Any:
         """verticalFlip() -> bool
 
         Flips the image vertically.
         """
-    def writeToFile(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def writeToFile(self, *args: Any, **kwargs: Any) -> Any:
         """writeToFile(pathname, outputFormat=iff) -> self
 
         Save the content of this image in a file. By default, the file is saved in IFF format.
         Optionally, the file can also be converted in a variety of image formats.
         """
-    def writeToFileWithDepth(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def writeToFileWithDepth(self, *args: Any, **kwargs: Any) -> Any:
         """writeToFileWithDepth(pathname, outputFormat=iff, writeDepth=False) -> self
 
         Save the content of this image in a file. By default, the file is saved in IFF format.
@@ -10559,17 +11815,55 @@ class MImage:
         """
 
 class MInt64Array:
-    def append(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __add__(self, value: Any) -> Any:
+        """Return self+value."""
+    def __contains__(self, key: Any) -> Any:
+        """Return key in self."""
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    __doc__: str = ...
+
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __iadd__(self, value: Any) -> Any:
+        """Implement self+=value."""
+    def __imul__(self, value: Any) -> Any:
+        """Implement self*=value."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __mul__(self, value: Any) -> Any:
+        """Return self*value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __rmul__(self, value: Any) -> Any:
+        """Return value*self."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """Remove all elements from the array."""
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """Replace the array contents with that of another or of a compatible Python sequence."""
-    def insert(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def insert(self, *args: Any, **kwargs: Any) -> Any:
         """Insert a new value into the array at the given index."""
-    def remove(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def remove(self, *args: Any, **kwargs: Any) -> Any:
         """Remove an element from the array."""
-    def setLength(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setLength(self, *args: Any, **kwargs: Any) -> Any:
         """Grow or shrink the array to contain a specific number of elements."""
     @property
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
@@ -10579,17 +11873,53 @@ class MInt64Array:
         """Number of elements by which to grow the array when necessary."""
 
 class MIntArray:
-    def append(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __add__(self, value: Any) -> Any:
+        """Return self+value."""
+    def __contains__(self, key: Any) -> Any:
+        """Return key in self."""
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    __doc__: str = ...
+
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __iadd__(self, value: Any) -> Any:
+        """Implement self+=value."""
+    def __imul__(self, value: Any) -> Any:
+        """Implement self*=value."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __init_subclass__(self, *args: Any, **kwargs: Any) -> Any:
+        """This method is called when a class is subclassed.
+
+        The default implementation does nothing. It may be
+        overridden to extend subclasses.
+        """
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __mul__(self, value: Any) -> Any:
+        """Return self*value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __rmul__(self, value: Any) -> Any:
+        """Return value*self."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """Remove all elements from the array."""
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """Replace the array contents with that of another or of a compatible Python sequence."""
-    def insert(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def insert(self, *args: Any, **kwargs: Any) -> Any:
         """Insert a new value into the array at the given index."""
-    def remove(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def remove(self, *args: Any, **kwargs: Any) -> Any:
         """Remove an element from the array."""
-    def setLength(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setLength(self, *args: Any, **kwargs: Any) -> Any:
         """Grow or shrink the array to contain a specific number of elements."""
     @property
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
@@ -10599,39 +11929,49 @@ class MIntArray:
         """Number of elements by which to grow the array when necessary."""
 
 class MItCurveCV:
-    def currentItem(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __iter__(self) -> Any:
+        """Implement iter(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __next__(self) -> Any:
+        """Implement next(self)."""
+    def currentItem(self, *args: Any, **kwargs: Any) -> Any:
         """currentItem() -> MObject
 
         Returns the current CV in the iteration as an MObject.
         """
-    def hasHistoryOnCreate(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasHistoryOnCreate(self, *args: Any, **kwargs: Any) -> Any:
         """hasHistoryOnCreate() -> bool
 
         This method determines if the shape was created with history.
 
         If the object that this iterator is attached to is not a shape then this method will fail.
         """
-    def index(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def index(self, *args: Any, **kwargs: Any) -> Any:
         """index() -> int
 
         Returns the index of the current edge in the iteration.
         """
-    def isDone(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isDone(self, *args: Any, **kwargs: Any) -> Any:
         """isDone() -> bool
 
         Indicates if all of the edges have been traversed yet.
         """
-    def next(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def next(self, *args: Any, **kwargs: Any) -> Any:
         """next() -> self
 
         Advances to the next edge in the iteration.
         """
-    def position(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def position(self, *args: Any, **kwargs: Any) -> Any:
         """position() -> MPoint
 
         Returns the position of the current CV.
         """
-    def reset(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def reset(self, *args: Any, **kwargs: Any) -> Any:
         """reset() -> self
         reset(curve) -> self
         reset(curve, component=None) -> self
@@ -10648,7 +11988,7 @@ class MItCurveCV:
         * curve (MDagPath) - The curve to iterate over
         * component (MObject) - The CVs of the curve to iterate over
         """
-    def setPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setPosition(self, *args: Any, **kwargs: Any) -> Any:
         """setPosition(point, space=kObject) -> self
 
         Sets the position of the current CV, in the given transformation
@@ -10658,7 +11998,7 @@ class MItCurveCV:
         * point       (MPoint) - The new position for the specified vertex
         * space (MSpace constant) - The transformation space
         """
-    def translateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def translateBy(self, *args: Any, **kwargs: Any) -> Any:
         """translateBy(vector, space=kObject) -> self
 
         Translate the current CV by the amount specified
@@ -10667,7 +12007,7 @@ class MItCurveCV:
         * vector (MVector) - The amount of translation
         * space (int) - The Transformation space
         """
-    def updateCurve(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def updateCurve(self, *args: Any, **kwargs: Any) -> Any:
         """updateCurve() -> self
 
         This method is used to signal the curve that it has been changed and needs to redraw itself.
@@ -10676,33 +12016,43 @@ class MItCurveCV:
         """
 
 class MItDag:
-    def currentItem(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __iter__(self) -> Any:
+        """Implement iter(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __next__(self) -> Any:
+        """Implement next(self)."""
+    def currentItem(self, *args: Any, **kwargs: Any) -> Any:
         """currentItem() -> MObject
 
         Retrieves DAG node to which the iterator points.
         """
-    def depth(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def depth(self, *args: Any, **kwargs: Any) -> Any:
         """depth() -> integer
 
         Returns the height or depth of the current node in the DAG relative to the
         root node.  The root node has a depth of zero.
         """
-    def fullPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def fullPathName(self, *args: Any, **kwargs: Any) -> Any:
         """fullPathName() -> MString
 
         Return a string representing the full path from the root of the dag to this object.
         """
-    def getAllPaths(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getAllPaths(self, *args: Any, **kwargs: Any) -> Any:
         """getAllPaths() -> MDagPathArray
 
         Determines all DAG Paths to current item in the iteration.
         """
-    def getPath(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPath(self, *args: Any, **kwargs: Any) -> Any:
         """getPath() -> MDagPath
 
         Determines a DAG Path to the current item in the iteration.
         """
-    def instanceCount(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def instanceCount(self, *args: Any, **kwargs: Any) -> Any:
         """instanceCount(total) -> Integer
 
         Determines the number of times the current item (DAG node) in the iteration
@@ -10715,12 +12065,12 @@ class MItDag:
         indirect instances resulting from instancing higher up the DAG hierarchy
         (i.e. one or more of the node's ancestors also has multiple instances).
         """
-    def isDone(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isDone(self, *args: Any, **kwargs: Any) -> Any:
         """isDone() -> Bool
 
         Indicates end of iteration path.
         """
-    def isInstanced(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isInstanced(self, *args: Any, **kwargs: Any) -> Any:
         """isInstanced(indirect = True) -> Bool
 
         Determines whether the current item (DAG node) in the iteration is directly
@@ -10736,12 +12086,12 @@ class MItDag:
 
         * indirect (Bool) -Indirect instance flag, defaults to True.
         """
-    def iter(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def iter(self, *args: Any, **kwargs: Any) -> Any:
         """iter() -> self
 
         Initializes the iterator object for pythonic iteration.
         """
-    def iternext(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def iternext(self, *args: Any, **kwargs: Any) -> Any:
         """iternext() -> self
 
         Used in pythonic iteration to move the iterator
@@ -10750,12 +12100,12 @@ class MItDag:
     kDepthFirst: int = ...
     kInvalidType: int = ...
 
-    def next(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def next(self, *args: Any, **kwargs: Any) -> Any:
         """next() -> self
 
         Moves to the next node matching the filter in the graph.
         """
-    def partialPathName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def partialPathName(self, *args: Any, **kwargs: Any) -> Any:
         """partialPathName() -> MString
 
         Return a string representing the partial path from the root of the
@@ -10764,12 +12114,12 @@ class MItDag:
         The partial path is the minimum path that is still unique. This string
         may contain wildcards.
         """
-    def prune(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def prune(self, *args: Any, **kwargs: Any) -> Any:
         """prune() -> self
 
         Prunes iteration tree at current node.
         """
-    def reset(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def reset(self, *args: Any, **kwargs: Any) -> Any:
         """reset() -> self
         reset(rootObject, traversalType = MItDag.kDepthFirst, filterType = MFn.kInvalid) -> self
         reset(rootPath, traversalType = MItDag.kDepthFirst, filterType = MFn.kInvalid) -> self
@@ -10787,14 +12137,14 @@ class MItDag:
            traversalType (MItDag.TraversalType) - Enumerated type that determines the direction of the traversal, defaults to kDepthFirst.
            filterType (MFn.Type) - Function set type, defaults to MFn.kInvalid
         """
-    def root(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def root(self, *args: Any, **kwargs: Any) -> Any:
         """root() -> MObject
 
         Returns the root (start node) of the current traversal.
         The constructor sets the root of traversal to the world node.
         The root can be changed by the reset() method.
         """
-    def traversalType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def traversalType(self, *args: Any, **kwargs: Any) -> Any:
         """traversalType() -> MItDag.TraversalType
 
         Returns the direction of the traversal.
@@ -10807,6 +12157,16 @@ class MItDag:
         """Specifies whether underworld traversal is turned on (Bool)."""
 
 class MItDependencyGraph:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __iter__(self) -> Any:
+        """Implement iter(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __next__(self) -> Any:
+        """Implement next(self)."""
     @property
     def currentDirection(*args: Any, **kwargs: Any) -> Any:
         """Direction of the iteration through the graph (MItDependencyGraph.Direction)."""
@@ -10825,20 +12185,20 @@ class MItDependencyGraph:
     @currentLevel.setter
     def currentLevel(*args: Any, **kwargs: Any) -> Any:
         """Level of the iteration through the graph (MItDependencyGraph.Level)."""
-    def currentNode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def currentNode(self, *args: Any, **kwargs: Any) -> Any:
         """currentNode() -> MObject
 
         Retrieves the current node of the iteration.  Results in a null object on
         failure or if the node is of a unrecognized type.
         """
-    def currentNodeHasUnknownType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def currentNodeHasUnknownType(self, *args: Any, **kwargs: Any) -> Any:
         """currentNodeHasUnknownType() -> Bool
 
         Indicates whether or not the current node has an unrecognised
         type.  This is useful if an unexpected failure is encountered
         in the next() or currentNode() methods.
         """
-    def currentPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def currentPlug(self, *args: Any, **kwargs: Any) -> Any:
         """currentPlug() -> MPlug
 
         Retrieves the current plug of the iteration.  Results in a null
@@ -10856,20 +12216,20 @@ class MItDependencyGraph:
     @currentTraversal.setter
     def currentTraversal(*args: Any, **kwargs: Any) -> Any:
         """Traversal mode of the iteration through the graph (MItDependencyGraph.Traversal)."""
-    def getNodePath(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getNodePath(self, *args: Any, **kwargs: Any) -> Any:
         """getNodePath() -> MObjectArray
 
         Retrieves the direct path from the current node to the root
         node.  Path does not include the current node.
         State of the provided array is undefined if this method fails.
         """
-    def getNodesVisited(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getNodesVisited(self, *args: Any, **kwargs: Any) -> Any:
         """getNodesVisited() -> MObjectArray
 
         Retrieves all nodes visited during the iteration.
         State of the provided array is undefined if this method fails.
         """
-    def getPlugPath(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPlugPath(self, *args: Any, **kwargs: Any) -> Any:
         """getPlugPath() -> MPlugArray
 
         Retrieves the direct path from the current plug to the root
@@ -10881,13 +12241,13 @@ class MItDependencyGraph:
 
         If this method fails the state of the returned array is undefined.
         """
-    def getPlugsVisited(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPlugsVisited(self, *args: Any, **kwargs: Any) -> Any:
         """getPlugsVisited() -> MPlugArray
 
         Retrieves all plugs visited during the iteration.
         State of the provided array is undefined if this method fails.
         """
-    def isDone(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isDone(self, *args: Any, **kwargs: Any) -> Any:
         """isDone() -> Bool
 
         Indicates whether or not all nodes or plugs have been iterated over
@@ -10895,12 +12255,12 @@ class MItDependencyGraph:
         If a valid filter is set, the iterator only visits those nodes that match
         the filter.
         """
-    def iter(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def iter(self, *args: Any, **kwargs: Any) -> Any:
         """iter() -> self
 
         Initializes the iterator object for pythonic iteration.
         """
-    def iternext(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def iternext(self, *args: Any, **kwargs: Any) -> Any:
         """iternext() -> self
 
         Used in pythonic iteration to move the iterator
@@ -10915,7 +12275,7 @@ class MItDependencyGraph:
     kPlugLevel: int = ...
     kUpstream: int = ...
 
-    def next(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def next(self, *args: Any, **kwargs: Any) -> Any:
         """next() -> self
 
         Iterates to the next node or plug in accordance with the
@@ -10933,14 +12293,14 @@ class MItDependencyGraph:
     @nodeDepth.setter
     def nodeDepth(*args: Any, **kwargs: Any) -> Any:
         """Depth of the iteration through the graph (int)."""
-    def previousPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def previousPlug(self, *args: Any, **kwargs: Any) -> Any:
         """previousPlug() -> MPlug
 
         Retrieves the previous plug of the iteration.  Results in a
         null plug on failure.  Null plug may also indicate that the
         current plug is the root plug.
         """
-    def prune(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def prune(self, *args: Any, **kwargs: Any) -> Any:
         """prune() -> self
 
         Prunes the search path at the current plug.  Iterator will not
@@ -10952,7 +12312,7 @@ class MItDependencyGraph:
     @pruningOnFilter.setter
     def pruningOnFilter(*args: Any, **kwargs: Any) -> Any:
         """Whether or not the iteration path is pruned automatically at nodes or plugs which do not match the filter (Bool)."""
-    def reset(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def reset(self, *args: Any, **kwargs: Any) -> Any:
         """reset() -> self
 
         Clears iterator data and resets the iterator to the root node
@@ -10961,14 +12321,14 @@ class MItDependencyGraph:
         that matches the filter.  If no matching node is found an
         exception is thrown.
         """
-    def resetFilter(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def resetFilter(self, *args: Any, **kwargs: Any) -> Any:
         """resetFilter() -> self
 
         Resets the node or plug filter to default, MFn.kInvalid
         (filter disabled).  Disables pruning on the filter (default).
         Resets the iterator.
         """
-    def resetTo(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def resetTo(self, *args: Any, **kwargs: Any) -> Any:
         """resetTo(rootObject, filter = MFn.kInvalid, direction = MItDependencyGraph.kDownstream, traversal = MItDependencyGraph.kDepthFirst, level = MItDependencyGraph.kNodeLevel, relationship = MItDependencyGraph.kDependsOn) -> self
         resetTo(rootPlug, filter = MFn.kInvalid, direction = MItDependencyGraph.kDownstream, traversal = MItDependencyGraph.kDepthFirst, level = MItDependencyGraph.kNodeLevel, relationship = MItDependencyGraph.kDependsOn) -> self
         resetTo(infoObject, rootObject OR rootPlug, direction = MItDependencyGraph.kDownstream, traversal = MItDependencyGraph.kDepthFirst, level = MItDependencyGraph.kNodeLevel, relationship = MItDependencyGraph.kDependsOn) -> self
@@ -10989,12 +12349,12 @@ class MItDependencyGraph:
            level (MItDependencyGraph.Level) - Level of detail of the iteration, defaults to MItDependencyGraph.kNodeLevel
            relationship (MItDependencyGraph.Relationship) - Relationship mode of the iteration, defaults to MItDependencyGraph.kDependsOn
         """
-    def rootNode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rootNode(self, *args: Any, **kwargs: Any) -> Any:
         """rootNode() -> MObject
 
         Retrieves the root node of the iteration.
         """
-    def rootPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rootPlug(self, *args: Any, **kwargs: Any) -> Any:
         """rootPlug() -> MPlug
 
         Retrieves the root plug of the iteration.
@@ -11007,29 +12367,39 @@ class MItDependencyGraph:
         """Whether the iterator is set to traverse world-space attribute dependencies (Bool)."""
 
 class MItDependencyNodes:
-    def isDone(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __iter__(self) -> Any:
+        """Implement iter(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __next__(self) -> Any:
+        """Implement next(self)."""
+    def isDone(self, *args: Any, **kwargs: Any) -> Any:
         """isDone() -> Bool
 
         Indicates end of the iteration.
         """
-    def iter(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def iter(self, *args: Any, **kwargs: Any) -> Any:
         """iter() -> self
 
         Initializes the iterator object for pythonic iteration.
         """
-    def iternext(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def iternext(self, *args: Any, **kwargs: Any) -> Any:
         """iternext() -> self
 
         Used in pythonic iteration to move the iterator
         """
-    def next(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def next(self, *args: Any, **kwargs: Any) -> Any:
         """next() -> self
 
         Moves to the next node matching the filter.  If the filter
         is set to kInvalid, this method advances to the next
         DG node without doing any filtering.
         """
-    def reset(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def reset(self, *args: Any, **kwargs: Any) -> Any:
         """reset() -> self
         reset(filterType = MFn.kInvalid) -> self
         reset(dagInfoObject) -> self
@@ -11041,14 +12411,24 @@ class MItDependencyNodes:
            dagInfoObject (MIteratorType) - Iterator object having info on filter or filterlist.
            filterType (MFn.Type) - Function set type, defaults to MFn.kInvalid.
         """
-    def thisNode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def thisNode(self, *args: Any, **kwargs: Any) -> Any:
         """thisNode() -> MObject
 
         Retrieves the dependency node to which the iterator points.
         """
 
 class MItGeometry:
-    def allPositions(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __iter__(self) -> Any:
+        """Implement iter(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __next__(self) -> Any:
+        """Implement next(self)."""
+    def allPositions(self, *args: Any, **kwargs: Any) -> Any:
         """allPositions() -> MStatus
 
         Return the position of all the points/CVs/vertices.  This
@@ -11056,13 +12436,13 @@ class MItGeometry:
         one, but uses more memory as it requires an array to hold all the
         values to be returned.
         """
-    def component(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def component(self, *args: Any, **kwargs: Any) -> Any:
         """component() -> MObject
 
             DEPRECATED in 2019, use currentItem instead.
         This method returns the current component in the iteration.
         """
-    def count(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def count(self, *args: Any, **kwargs: Any) -> Any:
         """count() -> int
 
 
@@ -11074,12 +12454,12 @@ class MItGeometry:
         exactCount method instead. The exactCount method is however
         significantly slower than this method.
         """
-    def currentItem(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def currentItem(self, *args: Any, **kwargs: Any) -> Any:
         """currentItem() -> MObject
 
         This method returns the current component in the iteration.
         """
-    def exactCount(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def exactCount(self, *args: Any, **kwargs: Any) -> Any:
         """exactCount() -> int
 
 
@@ -11087,29 +12467,29 @@ class MItGeometry:
         significantly slower than the count() method, so use if only if
         the precise number is required.
         """
-    def index(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def index(self, *args: Any, **kwargs: Any) -> Any:
         """index() -> int
 
 
         This method returns the index of the current point/CV/vertex
         component in the iteration.
         """
-    def isDone(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isDone(self, *args: Any, **kwargs: Any) -> Any:
         """isDone() -> Bool
 
         Indicates end of the iteration.
         """
-    def iter(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def iter(self, *args: Any, **kwargs: Any) -> Any:
         """iter() -> self
 
         Initializes the iterator object for pythonic iteration.
         """
-    def iternext(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def iternext(self, *args: Any, **kwargs: Any) -> Any:
         """iternext() -> self
 
         Used in pythonic iteration to move the iterator
         """
-    def next(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def next(self, *args: Any, **kwargs: Any) -> Any:
         """next() -> self
 
         Advance to the next component in the iteration.
@@ -11117,23 +12497,23 @@ class MItGeometry:
         method has no effect. Use isDone to determine if the iterator
         is at the last component.
         """
-    def normal(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def normal(self, *args: Any, **kwargs: Any) -> Any:
         """normal() -> MVector
 
         Return the normal of the current point/CV/vertex component.
         """
-    def position(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def position(self, *args: Any, **kwargs: Any) -> Any:
         """position() -> MPoint
 
         Return the position of the current point/CV/vertex component.
         """
-    def reset(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def reset(self, *args: Any, **kwargs: Any) -> Any:
         """reset() -> self
 
 
         Resets the iterator.
         """
-    def setAllPositions(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setAllPositions(self, *args: Any, **kwargs: Any) -> Any:
         """setAllPositions() -> MStatus
 
         Set the position of all the points/CVs/vertices at once. This
@@ -11141,45 +12521,55 @@ class MItGeometry:
         one, but uses more memory as it requires an array to hold all the
         values to be set.
         """
-    def setPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setPosition(self, *args: Any, **kwargs: Any) -> Any:
         """setPosition() -> MStatus
 
         Set the position of the current point/CV/vertex.
         """
-    def weight(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def weight(self, *args: Any, **kwargs: Any) -> Any:
         """weight() -> MWeight
 
         Return the weight of the current point/CV/vertex component.
         """
 
 class MItMeshEdge:
-    def center(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __iter__(self) -> Any:
+        """Implement iter(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __next__(self) -> Any:
+        """Implement next(self)."""
+    def center(self, *args: Any, **kwargs: Any) -> Any:
         """center(space=kObject) -> MPoint
 
         Returns the center point of the edge, in the given transformation space.
 
         * space (MSpace constant) - The  transformation space
         """
-    def connectedToEdge(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def connectedToEdge(self, *args: Any, **kwargs: Any) -> Any:
         """connectedToEdge(index) -> bool
 
         Determines whether the given edge is connected to the current edge.
 
         * index (int) - Index of edge to check.
         """
-    def connectedToFace(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def connectedToFace(self, *args: Any, **kwargs: Any) -> Any:
         """connectedToFace(index) -> bool
 
         Determines whether the given face contains the current edge.
 
         * index (int) - Index of face to check.
         """
-    def count(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def count(self, *args: Any, **kwargs: Any) -> Any:
         """count() -> int
 
         Return the number of edges in the iteration
         """
-    def currentItem(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def currentItem(self, *args: Any, **kwargs: Any) -> Any:
         """currentItem() -> MObject
 
         Returns the current edge in the iteration as a component.
@@ -11187,7 +12577,7 @@ class MItMeshEdge:
         Components are used to specify one or more edges and are useful in operating on groups of non-contiguous edges for a surface.
         Components do not contain any information about the surface that they refer to so an MDagPath must be specified when dealing with components.
         """
-    def geomChanged(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def geomChanged(self, *args: Any, **kwargs: Any) -> Any:
         """geomChanged() -> self
 
         Resets the geom pointer in the MItMeshEdge. If you're using MFnMesh to
@@ -11197,12 +12587,12 @@ class MItMeshEdge:
         A similar approach must be taken for updating upstream vertex tweaks
         with an MPlug. After the update, call this method.
         """
-    def getConnectedEdges(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getConnectedEdges(self, *args: Any, **kwargs: Any) -> Any:
         """getConnectedEdges() -> MIntArray
 
         Returns the indices of edges connected to the current edge.
         """
-    def getConnectedFaces(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getConnectedFaces(self, *args: Any, **kwargs: Any) -> Any:
         """getConnectedFaces() -> MIntArray
 
         Returns the indices of the faces connected to the current edge.
@@ -11210,12 +12600,12 @@ class MItMeshEdge:
         an internal edge will have two, but if the mesh has manifold geometry
         then the edge may have three or more faces connected to it.
         """
-    def index(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def index(self, *args: Any, **kwargs: Any) -> Any:
         """index() -> int
 
         Returns the index of the current edge in the iteration.
         """
-    def isDone(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isDone(self, *args: Any, **kwargs: Any) -> Any:
         """isDone() -> bool
 
         Indicates if all of the edges have been traversed yet.
@@ -11226,44 +12616,44 @@ class MItMeshEdge:
     @isSmooth.setter
     def isSmooth(*args: Any, **kwargs: Any) -> Any:
         """True if the edge is smooth, False if it is hard."""
-    def iter(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def iter(self, *args: Any, **kwargs: Any) -> Any:
         """iter() -> self
 
         Initializes the iterator object for pythonic iteration.
         """
-    def iternext(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def iternext(self, *args: Any, **kwargs: Any) -> Any:
         """iternext() -> self
 
         Used in pythonic iteration to move the iterator
         """
-    def length(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def length(self, *args: Any, **kwargs: Any) -> Any:
         """length(space=kObject) -> float
 
         Returns the length of the edge, in the given transformation space.
 
         * space (MSpace constant) - The  transformation space
         """
-    def next(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def next(self, *args: Any, **kwargs: Any) -> Any:
         """next() -> self
 
         Advances to the next edge in the iteration.
         """
-    def numConnectedEdges(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numConnectedEdges(self, *args: Any, **kwargs: Any) -> Any:
         """numConnectedEdges() -> int
 
         Returns the number of edges connected to the current edge.
         """
-    def numConnectedFaces(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numConnectedFaces(self, *args: Any, **kwargs: Any) -> Any:
         """numConnectedFaces() -> int
 
         Returns the number of faces connected to the current edge.
         """
-    def onBoundary(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def onBoundary(self, *args: Any, **kwargs: Any) -> Any:
         """onBoundary() -> bool
 
         Determines if the current edge is a border edge.
         """
-    def point(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def point(self, *args: Any, **kwargs: Any) -> Any:
         """point(whichVertex, space=kObject) -> MPoint
 
         Returns the position of one of the current edge's vertices, int the
@@ -11272,7 +12662,7 @@ class MItMeshEdge:
         * whichVertex    (0 or 1) - Which of the edge's two vertices to return
         * space (MSpace constant) - The transformation space
         """
-    def reset(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def reset(self, *args: Any, **kwargs: Any) -> Any:
         """reset() -> self
         reset(mesh) -> self
         reset(mesh, component=None) -> self
@@ -11289,7 +12679,7 @@ class MItMeshEdge:
         * mesh (MDagPath) - The mesh to iterate over
         * component (MObject) - The edges of the mesh to iterate over
         """
-    def setIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setIndex(self, *args: Any, **kwargs: Any) -> Any:
         """setIndex(index) -> int
 
         Sets the index of the current edge to be accessed. The current edge
@@ -11300,7 +12690,7 @@ class MItMeshEdge:
 
         * index (int) - The index of desired edge to access.
         """
-    def setPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setPoint(self, *args: Any, **kwargs: Any) -> Any:
         """setPoint(point, whichVertex, space=kObject) -> self
 
         Sets the position of one of the current edge's vertices, in the given
@@ -11310,12 +12700,12 @@ class MItMeshEdge:
         * whichVertex (0 or 1) - Which of the edge's 2 vertices to set.
         * space (MSpace constant) - The transformation space
         """
-    def updateSurface(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def updateSurface(self, *args: Any, **kwargs: Any) -> Any:
         """updateSurface() -> self
 
         Tells Maya that mesh has been changed and needs to redraw itself.
         """
-    def vertexId(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def vertexId(self, *args: Any, **kwargs: Any) -> Any:
         """vertexId(whichVertex) -> int
 
         Returns the global index (as opposed to face-relative index) of one of
@@ -11325,24 +12715,34 @@ class MItMeshEdge:
         """
 
 class MItMeshFaceVertex:
-    def currentItem(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __iter__(self) -> Any:
+        """Implement iter(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __next__(self) -> Any:
+        """Implement next(self)."""
+    def currentItem(self, *args: Any, **kwargs: Any) -> Any:
         """currentItem() -> MObject
 
         Returns the current faceVertex as a double-indexed component.
         """
-    def faceId(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def faceId(self, *args: Any, **kwargs: Any) -> Any:
         """faceId() -> int
 
         Returns the current face index.
         """
-    def faceVertexId(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def faceVertexId(self, *args: Any, **kwargs: Any) -> Any:
         """faceVertexId() -> int
 
         Returns the relative index of the vertex within the current face. This
         index together with the faceId can be used for a fast access to get
         various info stored per vertex (normals, uvs, colors).
         """
-    def geomChanged(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def geomChanged(self, *args: Any, **kwargs: Any) -> Any:
         """geomChanged() -> self
 
         Resets the geom pointer in the MItMeshFaceVertex. If you're using
@@ -11353,89 +12753,89 @@ class MItMeshFaceVertex:
         updating upstream vertex tweaks with an MPlug. After the update, call
         this method.
         """
-    def getBinormal(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getBinormal(self, *args: Any, **kwargs: Any) -> Any:
         """getBinormal(space=MSpace.kObject, uvSet='') -> MVector
 
         Returns the face vertex binormal associated with the UV set.
         """
-    def getColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getColor(self, *args: Any, **kwargs: Any) -> Any:
         """getColor(colorSetName='') -> MColor
 
         Returns a color of the current face vertex.
         """
-    def getColorIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getColorIndex(self, *args: Any, **kwargs: Any) -> Any:
         """getColorIndex(colorSetName='') -> int
 
         Return a color index of the current face vertex.
         """
-    def getNormal(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getNormal(self, *args: Any, **kwargs: Any) -> Any:
         """getNormal(space=MSpace.kObject) -> MVector
 
         Returns the face vertex normal.
         """
-    def getTangent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getTangent(self, *args: Any, **kwargs: Any) -> Any:
         """getTangent(space=MSpace.kObject, uvSet='') -> MVector
 
         Returns the face vertex tangent associated with the given UV set. The
         tangent is defined as the surface tangent of the polygon running in
         the U direction.
         """
-    def getUV(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getUV(self, *args: Any, **kwargs: Any) -> Any:
         """getUV(uvSet='') -> (float, float)
 
         Returns the texture coordinate for the current face vertex.
         """
-    def getUVIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getUVIndex(self, *args: Any, **kwargs: Any) -> Any:
         """getUVIndex(uvSet='') -> int
 
         Returns the index of the texture coordinate for the current face
         vertex. This index refers to an element of the mesh's texture
         coordinate array as returned by MFnMesh::getUVs().
         """
-    def hasColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasColor(self, *args: Any, **kwargs: Any) -> Any:
         """hasColor() -> bool
 
         Returns whether the current face vertex has a color-per-vertex set.
         """
-    def hasUVs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasUVs(self, *args: Any, **kwargs: Any) -> Any:
         """hasUVs(uvSet='') -> bool
 
         Returns whether the current face vertex has UVs mapped in the given
         set.
         """
-    def isDone(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isDone(self, *args: Any, **kwargs: Any) -> Any:
         """isDone() -> bool
 
         Indicates if all of the face vertices have been traversed.
         """
-    def iter(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def iter(self, *args: Any, **kwargs: Any) -> Any:
         """iter() -> self
 
         Initializes the iterator object for pythonic iteration.
         """
-    def iternext(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def iternext(self, *args: Any, **kwargs: Any) -> Any:
         """iternext() -> self
 
         Used in pythonic iteration to move the iterator
         """
-    def next(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def next(self, *args: Any, **kwargs: Any) -> Any:
         """next() -> self
 
         Advances to the next face vertex in the iteration.
         """
-    def normalId(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def normalId(self, *args: Any, **kwargs: Any) -> Any:
         """normalId() -> int
 
         Returns the normal index for the specified vertex. This index refers
         to an element in the normal array returned by MFnMesh::getNormals().
         These normals are per-face per-vertex normals.
         """
-    def position(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def position(self, *args: Any, **kwargs: Any) -> Any:
         """position(space=MSpace.kObject) -> MPoint
 
         Returns the position of the current face vertex.
         """
-    def reset(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def reset(self, *args: Any, **kwargs: Any) -> Any:
         """reset() -> self
         reset(mesh) -> self
         reset(mesh, component=None) -> self
@@ -11452,7 +12852,7 @@ class MItMeshFaceVertex:
         * mesh (MDagPath) - The mesh to iterate over
         * component (MObject) - The faces of the mesh to iterate over
         """
-    def setIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setIndex(self, *args: Any, **kwargs: Any) -> Any:
         """setIndex(faceId, faceVertexId) -> (oldFaceId, oldFaceVertexId)
 
         Sets the index of the current face vertex to be accessed. The current
@@ -11466,19 +12866,19 @@ class MItMeshFaceVertex:
         * oldFaceId (int) - Index of the face which was current before the change.
         * oldFaceVertexId (int) - Face-relative index of the vertex which was current before the change.
         """
-    def tangentId(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def tangentId(self, *args: Any, **kwargs: Any) -> Any:
         """tangentId() -> int
 
         Returns the tangent index for the current face vertex. This index
         refers to an element in the array returned by MFnMesh::getTangents.
         These tangents are per-face per-vertex.
         """
-    def updateSurface(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def updateSurface(self, *args: Any, **kwargs: Any) -> Any:
         """updateSurface() -> self
 
         Tells Maya that mesh has been changed and needs to redraw itself.
         """
-    def vertexId(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def vertexId(self, *args: Any, **kwargs: Any) -> Any:
         """vertexId() -> int
 
         Returns the global (as opposed to face-relative) index of the
@@ -11486,19 +12886,29 @@ class MItMeshFaceVertex:
         """
 
 class MItMeshPolygon:
-    def center(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __iter__(self) -> Any:
+        """Implement iter(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __next__(self) -> Any:
+        """Implement next(self)."""
+    def center(self, *args: Any, **kwargs: Any) -> Any:
         """center(space=kObject) -> MPoint
 
         Return the position of the center of the current polygon
 
         * space (int) - The coordinate system for this operation
         """
-    def count(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def count(self, *args: Any, **kwargs: Any) -> Any:
         """count() -> int
 
         Return the number of polygons in the iteration
         """
-    def currentItem(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def currentItem(self, *args: Any, **kwargs: Any) -> Any:
         """currentItem() -> MObject
 
         Get the current polygon in the iteration as a component.
@@ -11506,19 +12916,19 @@ class MItMeshPolygon:
         Components are used to specify one or more polygons and are usefull in operating on groups of non-contiguous polygons for a surface.
         Components do not contain any information about the surface that they refer to so an MDagPath must be specified when dealing with components.
         """
-    def geomChanged(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def geomChanged(self, *args: Any, **kwargs: Any) -> Any:
         """geomChanged() -> self
 
         Reset the geom pointer in the MItMeshPolygon. This is now being handled automatically inside the iterator, and users should no longer need to call this method directly to sync up the iterator to changes made by MFnMesh
         """
-    def getArea(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getArea(self, *args: Any, **kwargs: Any) -> Any:
         """getArea(space=kObject) -> float
 
         This method gets the area of the face
 
         * space (int) - World Space or Object Space
         """
-    def getColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getColor(self, *args: Any, **kwargs: Any) -> Any:
         """getColor(colorSetName=None) -> MColor
         getColor(vertexIndex) -> MColor
 
@@ -11530,7 +12940,7 @@ class MItMeshPolygon:
 
         * colorSetName (string) - Name of the color set.
         """
-    def getColorIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getColorIndex(self, *args: Any, **kwargs: Any) -> Any:
         """getColorIndex(vertexIndex, colorSetName=None) -> int
 
         This method returns the colorIndex for a vertex of the current face.
@@ -11538,41 +12948,41 @@ class MItMeshPolygon:
         * vertexIndex (int) - Face-relative index of vertex.
         * colorSetName (string) - Name of the color set.
         """
-    def getColorIndices(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getColorIndices(self, *args: Any, **kwargs: Any) -> Any:
         """getColorIndices(colorSetName=None) -> MIntArray
 
         This method returns the colorIndices for each vertex on the face.
 
         * colorSetName (string) - Name of the color set.
         """
-    def getColors(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getColors(self, *args: Any, **kwargs: Any) -> Any:
         """getColors(colorSetName=None) -> MColorArray
 
         This method gets the color of the each vertex in the current face.
 
         * colorSetName (string) - Name of the color set.
         """
-    def getConnectedEdges(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getConnectedEdges(self, *args: Any, **kwargs: Any) -> Any:
         """getConnectedEdges() -> MIntArray
 
         This method gets the indices of the edges connected to the vertices of the current face, but DOES not include the edges contained in the current face
         """
-    def getConnectedFaces(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getConnectedFaces(self, *args: Any, **kwargs: Any) -> Any:
         """getConnectedFaces() -> MIntArray
 
         This method gets the indices of the faces connected to the current face.
         """
-    def getConnectedVertices(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getConnectedVertices(self, *args: Any, **kwargs: Any) -> Any:
         """getConnectedVertices() -> MIntArray
 
         This method gets the object-relative indices of the vertices surrounding the vertices of the current face, but does not include the vertices of the current face
         """
-    def getEdges(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getEdges(self, *args: Any, **kwargs: Any) -> Any:
         """getEdges() -> MIntArray
 
         This method gets the indices of the edges contained in the current face.
         """
-    def getNormal(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getNormal(self, *args: Any, **kwargs: Any) -> Any:
         """getNormal(space=kObject) -> MVector
         getNormal(vertexIndex, [space=]kObject) -> MVector
 
@@ -11585,14 +12995,14 @@ class MItMeshPolygon:
         * index (int) - face-relative vertex index of the vertex whose normal to retrieve
         * space (int) - The transformation space. Defaults to kObject, the keyword 'space' is optional as well.
         """
-    def getNormals(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getNormals(self, *args: Any, **kwargs: Any) -> Any:
         """getNormals(space=kObject) -> MVectorArray
 
         Returns the normals for all vertices in the current face
 
         * space (int) - The transformation space
         """
-    def getPointAtUV(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPointAtUV(self, *args: Any, **kwargs: Any) -> Any:
         """getPointAtUV(uvPoint, space=kObject, uvSet=None, tolerance=0) -> MPoint
 
         Return the position of the point at the given UV value in the current polygon.
@@ -11602,14 +13012,14 @@ class MItMeshPolygon:
         * uvSet (string) - UV set to work with
         * tolerance (float) - tolerance value to compare float data type
         """
-    def getPoints(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPoints(self, *args: Any, **kwargs: Any) -> Any:
         """getPoints(space=kObject) -> MPointArray
 
         Retrieves the positions of the vertices on the current face/polygon that the iterator is pointing to. Vertex positions will be inserted into the given array and will be indexed using face-relative vertex IDs (ie. ordered from 0 to (vertexCount of the face) - 1), which should not be confused with the vertexIDs of each vertex in relation to the entire mesh object.
 
         * space (int) - The coordinate system for this operation
         """
-    def getTriangle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getTriangle(self, *args: Any, **kwargs: Any) -> Any:
         """getTriangle(localTriIndex, space=kObject) -> [MPointArray, MIntArray]
 
         Get the vertices and vertex positions of the given triangle in the current face's triangulation.
@@ -11617,14 +13027,14 @@ class MItMeshPolygon:
         * localTriIndex (int) - Local index of the desired triangle in this face
         * space (int) - World Space or Object Space
         """
-    def getTriangles(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getTriangles(self, *args: Any, **kwargs: Any) -> Any:
         """getTriangles(space=kObject) -> [MPointArray, MIntArray]
 
         Get the vertices and vertex positions of all the triangles in the current face's triangulation
 
         * space (int) - World Space or Object Space
         """
-    def getUV(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getUV(self, *args: Any, **kwargs: Any) -> Any:
         """getUV(vertexId, uvSet=None) -> [float, float]
 
         Return the texture coordinate for the given vertex.
@@ -11632,14 +13042,14 @@ class MItMeshPolygon:
         * vertex (int) - The face-relative vertex index to get UV for
         * uvSet (string) - UV set to work with
         """
-    def getUVArea(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getUVArea(self, *args: Any, **kwargs: Any) -> Any:
         """getUVArea(uvSet=None) -> float
 
         This method gets the UV area of the face
 
         * uvSet (string) - UV set to work with
         """
-    def getUVAtPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getUVAtPoint(self, *args: Any, **kwargs: Any) -> Any:
         """getUVAtPoint(pt, space=kObject, uvSet=None) -> [float, float]
 
         Find the point closest to the given point in the current polygon, and return the UV value at that point.
@@ -11648,7 +13058,7 @@ class MItMeshPolygon:
         * space (int) - The coordinate system for this operation
         * uvSet (string) - UV set to work with
         """
-    def getUVIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getUVIndex(self, *args: Any, **kwargs: Any) -> Any:
         """getUVIndex(vertex, uvSet=None) -> int
 
         Returns the index of the texture coordinate for the given vertex.
@@ -11657,7 +13067,7 @@ class MItMeshPolygon:
         * vertex (int) - The face-relative vertex index of the current polygon
         * uvSet (string) - UV set to work with
         """
-    def getUVIndexAndValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getUVIndexAndValue(self, *args: Any, **kwargs: Any) -> Any:
         """getUVIndexAndValue(vertex, uvSet=None) -> [int, float, float]
 
         Return the index and value of the texture coordinate for the given vertex. This index refers to an element of the texture coordinate array for the polygonal object returned by MFnMesh.getUVs.
@@ -11665,24 +13075,24 @@ class MItMeshPolygon:
         * vertex (int) - The face-relative vertex index of the current polygon
         * uvSet (string) - UV set to work with
         """
-    def getUVSetNames(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getUVSetNames(self, *args: Any, **kwargs: Any) -> Any:
         """getUVSetNames() -> list of strings
 
         This method is used to find the UV set names mapped to the current face
         """
-    def getUVs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getUVs(self, *args: Any, **kwargs: Any) -> Any:
         """getUVs(uvSet=None) -> [MFloatArray, MFloatArray]
 
         Return the all the texture coordinates for the vertices of this face (in local vertex order).
 
         * uvSet (string) - UV set to work with
         """
-    def getVertices(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getVertices(self, *args: Any, **kwargs: Any) -> Any:
         """getVertices() -> MIntArray
 
         This method gets the indices of the vertices of the current face
         """
-    def hasColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasColor(self, *args: Any, **kwargs: Any) -> Any:
         """hasColor() -> bool
         hasColor(localVertexIndex) -> bool
 
@@ -11690,96 +13100,96 @@ class MItMeshPolygon:
 
         * localVertexIndex (int) - face-relative vertex index to check for color on
         """
-    def hasUVs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasUVs(self, *args: Any, **kwargs: Any) -> Any:
         """hasUVs(uvSet=None) -> bool
 
         Tests whether this face has UV's mapped or not (either all the vertices for a face should have UV's, or none of them do, so the UV count for a face is either 0, or equal to the number of vertices).
 
         * uvSet (string) - UV set to work with
         """
-    def hasValidTriangulation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasValidTriangulation(self, *args: Any, **kwargs: Any) -> Any:
         """hasValidTriangulation() -> bool
 
         This method checks if the face has a valid triangulation. If it doesn't, then the face was bad geometry: it may gave degenerate points or cross over itself.
         """
-    def index(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def index(self, *args: Any, **kwargs: Any) -> Any:
         """index() -> int
 
         Returns the index of the current polygon
         """
-    def isConnectedToEdge(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isConnectedToEdge(self, *args: Any, **kwargs: Any) -> Any:
         """isConnectedToEdge(index) -> bool
 
         This method determines whether the given face is adjacent to the current face
 
         * index (int) - Index of the face to be tested for
         """
-    def isConnectedToFace(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isConnectedToFace(self, *args: Any, **kwargs: Any) -> Any:
         """isConnectedToFace(index) -> bool
 
         This method determines whether the given face is adjacent to the current face
 
         * index (int) - Index of the face to be tested for
         """
-    def isConnectedToVertex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isConnectedToVertex(self, *args: Any, **kwargs: Any) -> Any:
         """isConnectedToVertex(index) -> bool
 
         This method determines whether the given vertex shares an edge with a vertex in the current face
 
         * index (int) - Index of the face to be tested for
         """
-    def isConvex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isConvex(self, *args: Any, **kwargs: Any) -> Any:
         """isConvex() -> bool
 
         This method checks if the face is convex.
         """
-    def isDone(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isDone(self, *args: Any, **kwargs: Any) -> Any:
         """isDone() -> bool
 
         Indicates if all of the polygons have been traversed yet.
         """
-    def isHoled(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isHoled(self, *args: Any, **kwargs: Any) -> Any:
         """isHoled() -> bool
 
         This method checks if the face has any holes.
         """
-    def isLamina(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isLamina(self, *args: Any, **kwargs: Any) -> Any:
         """isLamina() -> bool
 
         This method checks if the face is a lamina (the face is folded over onto itself).
         """
-    def isPlanar(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isPlanar(self, *args: Any, **kwargs: Any) -> Any:
         """isPlanar() -> bool
 
         This method checks if the face is planar
         """
-    def isStarlike(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isStarlike(self, *args: Any, **kwargs: Any) -> Any:
         """isStarlike() -> bool
 
         This method checks if the face is starlike. That is, a line from the centre to any vertex lies entirely within the face.
         """
-    def isUVReversed(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isUVReversed(self, *args: Any, **kwargs: Any) -> Any:
         """isUVReversed(faceId) -> bool
 
         Returns True if the texture coordinates (uv's) for the face are
         reversed (clockwise), False if they are not reversed (counter clockwise).
         """
-    def iter(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def iter(self, *args: Any, **kwargs: Any) -> Any:
         """iter() -> self
 
         Initializes the iterator object for pythonic iteration.
         """
-    def iternext(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def iternext(self, *args: Any, **kwargs: Any) -> Any:
         """iternext() -> self
 
         Used in pythonic iteration to move the iterator
         """
-    def next(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def next(self, *args: Any, **kwargs: Any) -> Any:
         """next() -> self
 
         Advance to the next polygon in the iteration.
         """
-    def normalIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def normalIndex(self, *args: Any, **kwargs: Any) -> Any:
         """normalIndex(vertex) -> int
 
         Returns the normal index for the specified vertex.
@@ -11787,34 +13197,34 @@ class MItMeshPolygon:
 
         * localVertexIndex (int) - The face-relative index of the vertex to examine for the current polygon
         """
-    def numColors(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numColors(self, *args: Any, **kwargs: Any) -> Any:
         """numColors(colorSetName=None) -> int
 
         This method checks for the number of colors on vertices in this face
 
         * colorSetName (string) - Name of the color set.
         """
-    def numConnectedEdges(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numConnectedEdges(self, *args: Any, **kwargs: Any) -> Any:
         """numConnectedEdges() -> int
 
         This method checks for the number of connected edges on the vertices of this face
         """
-    def numConnectedFaces(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numConnectedFaces(self, *args: Any, **kwargs: Any) -> Any:
         """numConnectedFaces() -> int
 
         This method checks for the number of connected faces
         """
-    def numTriangles(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numTriangles(self, *args: Any, **kwargs: Any) -> Any:
         """numTriangles() -> int
 
         This Method checks for the number of triangles in this face in the current triangulation
         """
-    def onBoundary(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def onBoundary(self, *args: Any, **kwargs: Any) -> Any:
         """onBoundary() -> bool
 
         This method determines whether the current face is on a boundary
         """
-    def point(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def point(self, *args: Any, **kwargs: Any) -> Any:
         """point(index, space=kObject) -> MPoint
 
         Return the position of the vertex at index in the current polygon.
@@ -11822,12 +13232,12 @@ class MItMeshPolygon:
         * index (int) - The face-relative index of the vertex in the current polygon
         * space (int) - The coordinate system for this operation
         """
-    def polygonVertexCount(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def polygonVertexCount(self, *args: Any, **kwargs: Any) -> Any:
         """polygonVertexCount() -> int
 
         Return the number of vertices for the current polygon
         """
-    def reset(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def reset(self, *args: Any, **kwargs: Any) -> Any:
         """reset() -> self
         reset(polyObject) -> self
         reset(polyObject, component=None) -> self
@@ -11844,7 +13254,7 @@ class MItMeshPolygon:
         * polyObject (MDagPath) - The surface (mesh) to iterate over
         * component (MObject) - The polygons (faces) of the polyObject to iterate over
         """
-    def setIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setIndex(self, *args: Any, **kwargs: Any) -> Any:
         """setIndex(index) -> int
 
         This method sets the index of the current face to be accessed.
@@ -11853,7 +13263,7 @@ class MItMeshPolygon:
 
         * index (int) - The index of desired face to access.
         """
-    def setPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setPoint(self, *args: Any, **kwargs: Any) -> Any:
         """setPoint(point, index, space=kObject) -> self
 
         Set the vertex at the given index in the current polygon.
@@ -11862,7 +13272,7 @@ class MItMeshPolygon:
         * index (int) - The face-relative index of the vertex in the current polygon
         * space (int) - The coordinate system for this operation
         """
-    def setPoints(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setPoints(self, *args: Any, **kwargs: Any) -> Any:
         """setPoints(pointArray, space=kObject) -> self
 
         Sets new locations for vertices of the current polygon that the iterator is pointing to.
@@ -11870,7 +13280,7 @@ class MItMeshPolygon:
         * pointArray (MPointArray) - The new positions for the vertices.
         * space (int) - The coordinate system for this operation.
         """
-    def setUV(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setUV(self, *args: Any, **kwargs: Any) -> Any:
         """setUV(vertexId, uvPoint, uvSet=None) -> self
 
         Modify the UV value for the given vertex in the current face.
@@ -11880,7 +13290,7 @@ class MItMeshPolygon:
         * uvPoint ([float, float]) - The UV values to set it to
         * uvSet (string) - UV set to work with
         """
-    def setUVs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setUVs(self, *args: Any, **kwargs: Any) -> Any:
         """setUVs(uArray, vArray, uvSet=None) -> self
 
         Modify the UV value for all vertices in the current face.
@@ -11890,7 +13300,7 @@ class MItMeshPolygon:
         * vArray (MFloatArray) - The corresponding V values
         * uvSet (string) - UV set to work with
         """
-    def tangentIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def tangentIndex(self, *args: Any, **kwargs: Any) -> Any:
         """tangentIndex(localVertexIndex) -> int
 
         Returns the tangent (or binormal) index for the specified vertex.
@@ -11899,12 +13309,12 @@ class MItMeshPolygon:
 
         * localVertexIndex(int) - The face-relative index of the vertex to examine for the current polygon
         """
-    def updateSurface(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def updateSurface(self, *args: Any, **kwargs: Any) -> Any:
         """updateSurface() -> self
 
         Signal that this polygonal surface has changed and needs to redraw itself.
         """
-    def vertexIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def vertexIndex(self, *args: Any, **kwargs: Any) -> Any:
         """vertexIndex(index) -> int
 
         Returns the object-relative index of the specified vertex of the current polygon.
@@ -11912,12 +13322,12 @@ class MItMeshPolygon:
 
         * index (int) - The face-relative index of the vertex in the polygon
         """
-    def zeroArea(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def zeroArea(self, *args: Any, **kwargs: Any) -> Any:
         """zeroArea() -> bool
 
         This method checks if its a zero area face
         """
-    def zeroUVArea(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def zeroUVArea(self, *args: Any, **kwargs: Any) -> Any:
         """zeroUVArea(uvSet=None) -> bool
 
         This method checks if the UV area of the face is zero
@@ -11926,26 +13336,36 @@ class MItMeshPolygon:
         """
 
 class MItMeshVertex:
-    def connectedToEdge(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __iter__(self) -> Any:
+        """Implement iter(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __next__(self) -> Any:
+        """Implement next(self)."""
+    def connectedToEdge(self, *args: Any, **kwargs: Any) -> Any:
         """connectedToEdge(index) -> bool
 
         This method determines whether the given edge contains the current vertex
 
         * index (int) - Index of edge to check.
         """
-    def connectedToFace(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def connectedToFace(self, *args: Any, **kwargs: Any) -> Any:
         """connectedToFace(index) -> bool
 
         This method determines whether the given face contains the current vertex
 
         * index (int) - Index of face to check.
         """
-    def count(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def count(self, *args: Any, **kwargs: Any) -> Any:
         """count() -> int
 
         Return the number of vertices in the iteration
         """
-    def currentItem(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def currentItem(self, *args: Any, **kwargs: Any) -> Any:
         """currentItem() -> MObject
 
         Get the current vertex in the iteration as a component.
@@ -11953,7 +13373,7 @@ class MItMeshVertex:
         Components are used to specify one or more vertices and are usefull in operating on groups of non-contiguous vertices for a surface.
         Components do not contain any information about the surface that they refer to so an MDagPath must be specified when dealing with components.
         """
-    def geomChanged(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def geomChanged(self, *args: Any, **kwargs: Any) -> Any:
         """geomChanged() -> self
 
         Reset the geom pointer in the MItMeshVertex. If you're using MFnMesh to
@@ -11963,7 +13383,7 @@ class MItMeshVertex:
         A similar approach must be taken for updating upstream vertex tweaks
         with an MPlug. After the update, call this method.
         """
-    def getColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getColor(self, *args: Any, **kwargs: Any) -> Any:
         """getColor(colorSetName=None) -> MColor
         getColor(faceIndex, colorSetName=None) -> MColor
 
@@ -11975,7 +13395,7 @@ class MItMeshVertex:
 
         * index (int) - The face to get the color for this vertex for* colorSetName (string) - Name of the color set.
         """
-    def getColorIndices(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getColorIndices(self, *args: Any, **kwargs: Any) -> Any:
         """getColorIndices(colorSetName=None) -> MIntArray
 
         This method returns the colorIndices into the color array see MFnMesh::getColors()
@@ -11983,7 +13403,7 @@ class MItMeshVertex:
 
         * colorSetName (string) - Name of the color set.
         """
-    def getColors(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getColors(self, *args: Any, **kwargs: Any) -> Any:
         """getColors(colorSetName=None) -> MColorArray
 
         This method gets the colors of the current vertex for each face it
@@ -11994,22 +13414,22 @@ class MItMeshVertex:
 
         * colorSetName (string) - Name of the color set.
         """
-    def getConnectedEdges(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getConnectedEdges(self, *args: Any, **kwargs: Any) -> Any:
         """getConnectedEdges() -> MIntArray
 
         This method gets the indices of the edges contained in the current vertex.
         """
-    def getConnectedFaces(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getConnectedFaces(self, *args: Any, **kwargs: Any) -> Any:
         """getConnectedFaces() -> MIntArray
 
         This method gets the indices of the faces connected to the current vertex.
         """
-    def getConnectedVertices(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getConnectedVertices(self, *args: Any, **kwargs: Any) -> Any:
         """getConnectedVertices() -> MIntArray
 
         This method gets the indices of the vertices surrounding the current vertex.
         """
-    def getNormal(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getNormal(self, *args: Any, **kwargs: Any) -> Any:
         """getNormal(space=kObject) -> MVector
         getNormal(faceIndex, space=kObject) -> MVector
 
@@ -12022,27 +13442,27 @@ class MItMeshVertex:
         * faceIndex (int) - face index to get normal for
         * space (int) - The transformation space
         """
-    def getNormalIndices(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getNormalIndices(self, *args: Any, **kwargs: Any) -> Any:
         """getNormalIndices() -> MIntArray
 
         This method returns the normal indices of the face/vertex associated
         with the current vertex.
         """
-    def getNormals(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getNormals(self, *args: Any, **kwargs: Any) -> Any:
         """getNormals(space=kObject) -> MVectorArray
 
         Return the normals of the current vertex for all faces
 
         * space (int) - The transformation space
         """
-    def getOppositeVertex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getOppositeVertex(self, *args: Any, **kwargs: Any) -> Any:
         """getOppositeVertex(edgeId) -> int
 
         This method gets the other vertex of the given edge
 
         * edgeId (int) - The edge to get the other vertex for
         """
-    def getUV(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getUV(self, *args: Any, **kwargs: Any) -> Any:
         """getUV(uvSet=None) -> [float, float]getUV(faceId, uvSet=None) -> [float, float]
 
         Get the shared UV value at this vertex.
@@ -12054,7 +13474,7 @@ class MItMeshVertex:
         * faceId (int) - Index of the required face
         * uvSet (string) - Name of the uv set to work with
         """
-    def getUVIndices(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getUVIndices(self, *args: Any, **kwargs: Any) -> Any:
         """getUVIndices(uvSet=None) -> MIntArray
 
         This method returns the uv indices into the normal array see MFnMesh::getUVs()
@@ -12062,7 +13482,7 @@ class MItMeshVertex:
 
         * uvSet (string) - Name of the uv set.
         """
-    def getUVs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getUVs(self, *args: Any, **kwargs: Any) -> Any:
         """getUVs(uvSet=None) -> [MFloatArray, MFloatArray, MIntArray]
 
         Get the UV values for all mapped faces at the current vertex.
@@ -12070,7 +13490,7 @@ class MItMeshVertex:
 
         * uvSet (string) - Name of the uv set to work with
         """
-    def hasColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasColor(self, *args: Any, **kwargs: Any) -> Any:
         """hasColor() -> bool
         hasColor(index) -> bool
 
@@ -12079,7 +13499,7 @@ class MItMeshVertex:
 
         * index (int) - Index of face to check
         """
-    def index(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def index(self, *args: Any, **kwargs: Any) -> Any:
         """index() -> int
 
         Returns the index of the current vertex in the vertex list for this
@@ -12088,49 +13508,49 @@ class MItMeshVertex:
         specified as indicies from this list, in this way vertices can
         be shared amoung faces and edges.
         """
-    def isDone(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isDone(self, *args: Any, **kwargs: Any) -> Any:
         """isDone() -> bool
 
         Indicates if all of the vertices have been traversed yet.
         """
-    def iter(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def iter(self, *args: Any, **kwargs: Any) -> Any:
         """iter() -> self
 
         Initializes the iterator object for pythonic iteration.
         """
-    def iternext(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def iternext(self, *args: Any, **kwargs: Any) -> Any:
         """iternext() -> self
 
         Used in pythonic iteration to move the iterator
         """
-    def next(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def next(self, *args: Any, **kwargs: Any) -> Any:
         """next() -> self
 
         Advance to the next edge in the iteration.
         """
-    def numConnectedEdges(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numConnectedEdges(self, *args: Any, **kwargs: Any) -> Any:
         """numConnectedEdges() -> int
 
         This Method checks for the number of connected Edges on this vertex
         """
-    def numConnectedFaces(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numConnectedFaces(self, *args: Any, **kwargs: Any) -> Any:
         """numConnectedFaces() -> int
 
         This Method checks for the number of Connected Faces
         """
-    def numUVs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numUVs(self, *args: Any, **kwargs: Any) -> Any:
         """numUVs(uvSet=None) -> int
 
         This method returns the number of unique UVs mapped on this vertex
 
         * uvSet (string) - Name of the uv set to work with
         """
-    def onBoundary(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def onBoundary(self, *args: Any, **kwargs: Any) -> Any:
         """onBoundary() -> bool
 
         This method determines whether the current vertex is on a Boundary
         """
-    def position(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def position(self, *args: Any, **kwargs: Any) -> Any:
         """position(space=kObject) -> MPoint
 
         Return the position of the current vertex in the specified space.
@@ -12139,7 +13559,7 @@ class MItMeshVertex:
 
         * space (int) - The  transformation space
         """
-    def reset(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def reset(self, *args: Any, **kwargs: Any) -> Any:
         """reset() -> self
         reset(polyObject) -> self
         reset(polyObject, component=None) -> self
@@ -12156,7 +13576,7 @@ class MItMeshVertex:
         * polyObject (MDagPath) - The surface (mesh) to iterate over
         * component (MObject) - The vertices of the polyObject to iterate over
         """
-    def setIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setIndex(self, *args: Any, **kwargs: Any) -> Any:
         """setIndex(index) -> int
 
         This method sets the index of the current vertex to be accessed.
@@ -12164,7 +13584,7 @@ class MItMeshVertex:
 
         * index (int) - The index of desired vertex to access.
         """
-    def setPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setPosition(self, *args: Any, **kwargs: Any) -> Any:
         """setPosition(point, space=kObject) -> self
 
         Set the position of the current vertex in the given space.
@@ -12172,7 +13592,7 @@ class MItMeshVertex:
         * point (MPoint) - The new position for the current vertex
         * space (int) - The Transformation space
         """
-    def setUV(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setUV(self, *args: Any, **kwargs: Any) -> Any:
         """setUV(uvPoint, uvSet=None) -> selfsetUV(faceId, uvPoint, uvSet=None) -> self
 
         Set the shared UV value at this vertex
@@ -12186,7 +13606,7 @@ class MItMeshVertex:
         * uvPoint ([float, float]) - The UV values to set
         * uvSet (string) - Name of the UV set to work with
         """
-    def setUVs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setUVs(self, *args: Any, **kwargs: Any) -> Any:
         """setUVs(uArray, vArray, faceIds, uvSet=None) -> self
 
         Set the UV value for the specified faces at the current vertex.
@@ -12199,7 +13619,7 @@ class MItMeshVertex:
         * faceIds (MIntArray) - The corresponding face Ids
         * uvSet (string) - UV set to work with
         """
-    def translateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def translateBy(self, *args: Any, **kwargs: Any) -> Any:
         """translateBy(vector, space=kObject) -> self
 
         Translate the current vertex by the amount specified
@@ -12208,50 +13628,60 @@ class MItMeshVertex:
         * vector (MVector) - The amount of translation
         * space (int) - The Transformation space
         """
-    def updateSurface(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def updateSurface(self, *args: Any, **kwargs: Any) -> Any:
         """updateSurface() -> self
 
         Signal that this polygonal surface has changed and needs to redraw itself.
         """
 
 class MItSelectionList:
-    def getComponent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __iter__(self) -> Any:
+        """Implement iter(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __next__(self) -> Any:
+        """Implement next(self)."""
+    def getComponent(self, *args: Any, **kwargs: Any) -> Any:
         """getComponent() -> (MDagPath, MObject)
 
         This method retrieves the dag path and the component of the current selection item.
         """
-    def getDagPath(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getDagPath(self, *args: Any, **kwargs: Any) -> Any:
         """getDagPath() -> MDagPath
 
         This method retrieves the dag path of the current selection item.
         """
-    def getDependNode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getDependNode(self, *args: Any, **kwargs: Any) -> Any:
         """getDependNode() -> MObject
 
         This method retrieves the dependency node of the current selection itemRaises kFailure if there is no dependency node associated with the current item
         """
-    def getPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPlug(self, *args: Any, **kwargs: Any) -> Any:
         """getPlug() -> MPlug
 
         This method retrieves the plug of the current selection item.
         """
-    def getStrings(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getStrings(self, *args: Any, **kwargs: Any) -> Any:
         """getStrings() -> list of strings
 
         Get the string representation of the current item in the selection list.
         It is possible that it will require more than one string to represent the item (the item may contain groups of CVs for example)
         """
-    def hasComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasComponents(self, *args: Any, **kwargs: Any) -> Any:
         """hasComponents() -> bool
 
         Returns whether or not the current selection item has components.
         """
-    def isDone(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isDone(self, *args: Any, **kwargs: Any) -> Any:
         """isDone() -> bool
 
         Specifies whether or not there is anything more to iterator over.
         """
-    def itemType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def itemType(self, *args: Any, **kwargs: Any) -> Any:
         """itemType() -> int
 
         Returns the current selection item type.
@@ -12260,12 +13690,12 @@ class MItSelectionList:
           kAnimSelectionItem   selection item is a keyset
           kDNselectionItem     selection item is a dependency node
         """
-    def iter(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def iter(self, *args: Any, **kwargs: Any) -> Any:
         """iter() -> self
 
         Initializes the iterator object for pythonic iteration.
         """
-    def iternext(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def iternext(self, *args: Any, **kwargs: Any) -> Any:
         """iternext() -> self
 
         Used in pythonic iteration to move the iterator
@@ -12276,20 +13706,20 @@ class MItSelectionList:
     kPlugSelectionItem: int = ...
     kUnknownItem: int = ...
 
-    def next(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def next(self, *args: Any, **kwargs: Any) -> Any:
         """next() -> self
 
         Advance to the next item. If components are selected then advance to next component.
 
         If a filter is specified then the next item will be one that matches the filter.
         """
-    def reset(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def reset(self, *args: Any, **kwargs: Any) -> Any:
         """reset() -> self
 
         Reset the iterator.
         If a filter has been specified then the current item will be the first selected item that matches the filter.
         """
-    def setFilter(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setFilter(self, *args: Any, **kwargs: Any) -> Any:
         """setFilter(filter) -> self
 
         Apply a filter to the iteration.
@@ -12297,7 +13727,25 @@ class MItSelectionList:
         """
 
 class MItSurfaceCV:
-    def currentItem(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __iter__(self) -> Any:
+        """Implement iter(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __next__(self) -> Any:
+        """Implement next(self)."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def currentItem(self, *args: Any, **kwargs: Any) -> Any:
         """currentItem() -> MObject
 
         Get the current CV in the iteration as a component.
@@ -12305,59 +13753,59 @@ class MItSurfaceCV:
         Components are used to specify one or more CVs and are useful in operating on groups of non-contiguous CVs for a curve or surface.
         Components do not contain any information about the surface that they refer to so an MDagPath must be specified when dealing with components.
         """
-    def hasHistoryOnCreate(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasHistoryOnCreate(self, *args: Any, **kwargs: Any) -> Any:
         """hasHistoryOnCreate() -> bool
 
         This method determines if the shape was created with history.
 
         If the object that this iterator is attached to is not a shape then this method will raise.
         """
-    def index(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def index(self, *args: Any, **kwargs: Any) -> Any:
         """index() -> int
 
         Get the index of the current CV as it appears in CV array for this surface.
         """
-    def isDone(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isDone(self, *args: Any, **kwargs: Any) -> Any:
         """isDone() -> bool
 
         Returns True if the iteration is finished, i.e. there are no more CVs to iterate on.
         """
-    def isRowDone(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isRowDone(self, *args: Any, **kwargs: Any) -> Any:
         """isRowDone() -> bool
 
         Returns True if the current row has no more CVs to iterate over.
         The row can be in the U or V direction depending on what value of useURows has been set in the constructor.
         """
-    def iter(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def iter(self, *args: Any, **kwargs: Any) -> Any:
         """iter() -> self
 
         Initializes the iterator object for pythonic iteration.
         """
-    def iternext(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def iternext(self, *args: Any, **kwargs: Any) -> Any:
         """iternext() -> self
 
         Used in pythonic iteration to move the iterator
         """
-    def next(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def next(self, *args: Any, **kwargs: Any) -> Any:
         """next() -> self
 
         Advance to the next CV in the iteration.
         If the iterator is already at the last CV then this method has no effect. Use isDone() to determine if the iterator is at the last CV.
         """
-    def nextRow(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def nextRow(self, *args: Any, **kwargs: Any) -> Any:
         """nextRow() -> self
 
         Advance to the next row in the iteration.
         The row can be in the U or V direction depending on what value of useURows has been set in the constructor.
         """
-    def position(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def position(self, *args: Any, **kwargs: Any) -> Any:
         """position(space=kObject) -> MPoint
 
         Returns the position of the current CV in the iteration in the specified space.
 
         * space (int) - The coordinate space in which the CV is set
         """
-    def reset(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def reset(self, *args: Any, **kwargs: Any) -> Any:
         """reset() -> self
         reset(surface, useURows=True) -> self
         reset(surface, component, useURows=True) -> self
@@ -12377,7 +13825,7 @@ class MItSurfaceCV:
         * component (MObject) - A group of CVs to be iterated on
         * useURows (bool) - If True then the iterator will iterate in the U direction, otherwise it will be in the V direction.
         """
-    def setPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setPosition(self, *args: Any, **kwargs: Any) -> Any:
         """setPosition(point, space=kObject) -> self
 
         Set the position of the current CV in the iteration to the specified point.
@@ -12385,7 +13833,7 @@ class MItSurfaceCV:
         * point (MPoint) - The new position for the current CV in the iteration
         * space (int) - The coordinate space in which the CV is set
         """
-    def translateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def translateBy(self, *args: Any, **kwargs: Any) -> Any:
         """translateBy(vector, space=kObject) -> self
 
         Move the current CV in the iteration by the sepcified vector.
@@ -12393,20 +13841,26 @@ class MItSurfaceCV:
         * vector (MVector) - The translation vector
         * space (int) - The coordinate space in which the CV is set
         """
-    def updateSurface(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def updateSurface(self, *args: Any, **kwargs: Any) -> Any:
         """updateSurface() -> self
 
         This method is used to signal the surface that it has been changed and needs to redraw itself.
 
         When modifying a large number of CVs, it is most efficient to call this method after all of the CVs have been modified.
         """
-    def uvIndices(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def uvIndices(self, *args: Any, **kwargs: Any) -> Any:
         """uvIndices() -> (indexU, indexV)
 
         Get the u and v index of the current CV.
         """
 
 class MIteratorType:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     @property
     def filterList(*args: Any, **kwargs: Any) -> Any:
         """Filter list (MIntArray containing MFn.Type)."""
@@ -12437,6 +13891,7 @@ class MIteratorType:
         """Object type (MIteratorType.objFilterType)."""
 
 class MLockMessage(MMessage):
+    __doc__: str = ...
     kAddAttr: int = ...
     kChildReorder: int = ...
     kCreateChildInstance: int = ...
@@ -12458,7 +13913,7 @@ class MLockMessage(MMessage):
     kUnlockAttr: int = ...
     kUnlockNode: int = ...
 
-    def setNodeLockDAGQueryCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setNodeLockDAGQueryCallback(self, *args: Any, **kwargs: Any) -> Any:
         """setNodeLockDAGQueryCallback(dagPath, function, clientData=None) -> id
 
         This methods registers a callback that is invoked in any situation
@@ -12531,7 +13986,7 @@ class MLockMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def setNodeLockQueryCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setNodeLockQueryCallback(self, *args: Any, **kwargs: Any) -> Any:
         """setNodeLockQueryCallback(node, function, clientData=None) -> id
 
         This methods registers a callback that is invoked in any locking
@@ -12627,7 +14082,7 @@ class MLockMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def setPlugLockQueryCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setPlugLockQueryCallback(self, *args: Any, **kwargs: Any) -> Any:
         """setPlugLockQueryCallback(plug, function, clientData=None) -> id
 
         This method registers a callback that is invoked in any locking
@@ -12708,46 +14163,134 @@ class MLockMessage(MMessage):
         """
 
 class MMatrix:
-    def adjoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __add__(self, value: Any) -> Any:
+        """Return self+value."""
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    __doc__: str = ...
+
+    def __eq__(self, value: Any) -> Any:
+        """Return self==value."""
+    def __ge__(self, value: Any) -> Any:
+        """Return self>=value."""
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __gt__(self, value: Any) -> Any:
+        """Return self>value."""
+    __hash__: NoneType = ...
+
+    def __iadd__(self, value: Any) -> Any:
+        """Return self+=value."""
+    def __imul__(self, value: Any) -> Any:
+        """Return self*=value."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __isub__(self, value: Any) -> Any:
+        """Return self-=value."""
+    def __le__(self, value: Any) -> Any:
+        """Return self<=value."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __lt__(self, value: Any) -> Any:
+        """Return self<value."""
+    def __mul__(self, value: Any) -> Any:
+        """Return self*value."""
+    def __ne__(self, value: Any) -> Any:
+        """Return self!=value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __radd__(self, value: Any) -> Any:
+        """Return value+self."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __rmul__(self, value: Any) -> Any:
+        """Return value*self."""
+    def __rsub__(self, value: Any) -> Any:
+        """Return value-self."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def __sub__(self, value: Any) -> Any:
+        """Return self-value."""
+    def adjoint(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a new matrix containing this matrix's adjoint."""
-    def det3x3(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def det3x3(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the determinant of the 3x3 matrix formed by the first 3 elements of the first 3 rows of this matrix."""
-    def det4x4(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def det4x4(self, *args: Any, **kwargs: Any) -> Any:
         """Returns this matrix's determinant."""
-    def getElement(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getElement(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the matrix element for the specified row and column."""
-    def homogenize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def homogenize(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a new matrix containing the homogenized version of this matrix."""
-    def inverse(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def inverse(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a new matrix containing this matrix's inverse."""
-    def isEquivalent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isEquivalent(self, *args: Any, **kwargs: Any) -> Any:
         """Test for equivalence of two matrices, within a tolerance."""
-    def isSingular(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isSingular(self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if this matrix is singular."""
     kIdentity: MMatrix = ...
     kTolerance: float = ...
 
-    def setElement(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setElement(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the matrix element for the specified row and column."""
-    def setToIdentity(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setToIdentity(self, *args: Any, **kwargs: Any) -> Any:
         """Sets this matrix to the identity."""
-    def setToProduct(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setToProduct(self, *args: Any, **kwargs: Any) -> Any:
         """Sets this matrix to the product of the two matrices passed in."""
-    def transpose(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def transpose(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a new matrix containing this matrix's transpose."""
 
 class MMatrixArray:
-    def append(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __add__(self, value: Any) -> Any:
+        """Return self+value."""
+    def __contains__(self, key: Any) -> Any:
+        """Return key in self."""
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    __doc__: str = ...
+
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __iadd__(self, value: Any) -> Any:
+        """Implement self+=value."""
+    def __imul__(self, value: Any) -> Any:
+        """Implement self*=value."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __mul__(self, value: Any) -> Any:
+        """Return self*value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __rmul__(self, value: Any) -> Any:
+        """Return value*self."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """Remove all elements from the array."""
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """Replace the array contents with that of another or of a compatible Python sequence."""
-    def insert(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def insert(self, *args: Any, **kwargs: Any) -> Any:
         """Insert a new value into the array at the given index."""
-    def remove(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def remove(self, *args: Any, **kwargs: Any) -> Any:
         """Remove an element from the array."""
-    def setLength(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setLength(self, *args: Any, **kwargs: Any) -> Any:
         """Grow or shrink the array to contain a specific number of elements."""
     @property
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
@@ -12757,7 +14300,13 @@ class MMatrixArray:
         """Number of elements by which to grow the array when necessary."""
 
 class MMeshIntersector:
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """create(mesh, matrix) -> self
 
         Creates the internal data required by the intersector. It is a
@@ -12767,7 +14316,7 @@ class MMeshIntersector:
         matrix (MMatrix) - transformation to use to bring points into the
         mesh's object space.faceIds (list) - the faces of the mesh to be passed to the intersector
         """
-    def getClosestPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getClosestPoint(self, *args: Any, **kwargs: Any) -> Any:
         """getClosestPoint(referencePoint, maxDistance=sys.float_info.max) -> MPointOnMesh
 
         Finds the closest point within 'maxDistance' of the reference point
@@ -12792,9 +14341,20 @@ class MMeshIntersector:
         """True if the intersector has been created, False otherwise."""
 
 class MMeshIsectAccelParams:
-    pass
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
 
 class MMeshSmoothOptions:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     @property
     def boundaryRule(*args: Any, **kwargs: Any) -> Any:
         """Determines how boundary edges and vertices are creased."""
@@ -12856,7 +14416,9 @@ class MMeshSmoothOptions:
         """Determines subdivision algorithm used for mesh smoothing."""
 
 class MModelMessage(MMessage):
-    def addAfterDuplicateCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def addAfterDuplicateCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addAfterDuplicateCallback(function, clientData=None) -> id
 
         This method registers a callback that is called after a duplicate
@@ -12868,7 +14430,7 @@ class MModelMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addBeforeDuplicateCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addBeforeDuplicateCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addBeforeDuplicateCallback(function, clientData=None) -> id
 
         This method registers a callback that is called whenever a duplicate
@@ -12880,7 +14442,7 @@ class MModelMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addCallback(message, function, clientData=None) -> id
 
         Adds a new callback for the specified model message.
@@ -12893,7 +14455,7 @@ class MModelMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addNodeAddedToModelCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addNodeAddedToModelCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addNodeAddedToModelCallback(dagNode, function, clientData=None) -> id
 
         This method registers a callback that is called when a dag node is about
@@ -12906,7 +14468,7 @@ class MModelMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addNodeRemovedFromModelCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addNodeRemovedFromModelCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addNodeRemovedFromModelCallback(dagNode, function, clientData=None) -> id
 
         This method registers a callback that is called when the
@@ -12921,7 +14483,9 @@ class MModelMessage(MMessage):
         """
 
 class MNamespace:
-    def addNamespace(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def addNamespace(self, *args: Any, **kwargs: Any) -> Any:
         """addNamespace(MString name, MString parent=None)
 
         Create the namespace 'name'. If the `parent' namespace is given
@@ -12948,28 +14512,28 @@ class MNamespace:
                      then the 'parent' parameter will be ignored and the new namespace
                      will be created under the root namespace.
         """
-    def currentNamespace(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def currentNamespace(self, *args: Any, **kwargs: Any) -> Any:
         """currentNamespace() -> MString
 
         Get the name of the current namespace. This name is returned
         as an absolute namepath (i.e. fully qualfied from the root
         namespace downwards, ':a:b:c').
         """
-    def getNamespaceFromName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getNamespaceFromName(self, *args: Any, **kwargs: Any) -> Any:
         """getNamespaceFromName(MString fullName) -> MString
 
         Get namespace from a full name.
         For example, given a full name: 'a:b:c:d:ball' this method
         would return: 'a:b:c:d'.
         """
-    def getNamespaceObjects(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getNamespaceObjects(self, *args: Any, **kwargs: Any) -> Any:
         """getNamespaceObjects(MString parentNamespace, bool recurse=False) -> MObjectArray
 
         Return an array of MObjects representing the object contained within
         the specified namespace. To query the current namespace, call this
         method in this way:
         """
-    def getNamespaces(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getNamespaces(self, *args: Any, **kwargs: Any) -> Any:
         """getNamespaces(MString parentNamespace=None, bool recurse=False) -> [MString]
 
         Return a list of all namespaces in the current namespace.
@@ -12987,7 +14551,7 @@ class MNamespace:
                                     top-level namespaces to be returned. If
                                     true, all namespaces will be listed.
         """
-    def makeNamepathAbsolute(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def makeNamepathAbsolute(self, *args: Any, **kwargs: Any) -> Any:
         """makeNamepathAbsolute(MString fullName) -> MString
 
         Make a namepath which is relative to the root into an absolute
@@ -12995,7 +14559,7 @@ class MNamespace:
         returns ':a:sphere'. It also culls out duplicate and trailing
         separators, e.g. 'a:b::c:' will return ':a:b:c'.
         """
-    def moveNamespace(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def moveNamespace(self, *args: Any, **kwargs: Any) -> Any:
         """moveNamespace(MString src, MString dst, bool force=False)
 
         Move the contents of the namespace 'src' into the namespace 'dst'.
@@ -13010,12 +14574,12 @@ class MNamespace:
                             will not happen if there are clashes. The default
                             value is false.
         """
-    def namespaceExists(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def namespaceExists(self, *args: Any, **kwargs: Any) -> Any:
         """namespaceExists(MString name) -> bool
 
         Check if a given namespace exists.
         """
-    def parentNamespace(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def parentNamespace(self, *args: Any, **kwargs: Any) -> Any:
         """parentNamespace() -> MString
 
         Get the name of the current namespace's parent. This name is returned
@@ -13023,7 +14587,7 @@ class MNamespace:
         downwards, ':a:b'). If the root namespace is
         current, this method returns an error.
         """
-    def relativeNames(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def relativeNames(self, *args: Any, **kwargs: Any) -> Any:
         """relativeNames() -> bool
 
         Query Maya's current 'relative name lookup' state. Relative name
@@ -13040,27 +14604,27 @@ class MNamespace:
 
             setAttr a:b:sphere.translateX 10;
         """
-    def removeNamespace(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeNamespace(self, *args: Any, **kwargs: Any) -> Any:
         """removeNamespace(MString name, bool removeContents=False)
 
         Remove the specified namespace.
         Note that removing a namespace changes the scene, so any code
         that calls this method needs to handle undo.
         """
-    def renameNamespace(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def renameNamespace(self, *args: Any, **kwargs: Any) -> Any:
         """renameNamespace(MString oldName, MString newName, MString parent=None)
 
         Rename the specified namespace to a new name with optional parent name.
         Note that removing a namespace changes the scene, so any code
         that calls this method needs to handle undo.
         """
-    def rootNamespace(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rootNamespace(self, *args: Any, **kwargs: Any) -> Any:
         """rootNamespace() -> MString
 
         Get the name of the root namespace. This name is an absolute
         namepath (i.e. prefixed by a ':').
         """
-    def setCurrentNamespace(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setCurrentNamespace(self, *args: Any, **kwargs: Any) -> Any:
         """setCurrentNamespace(MString name) -> MString
 
         Set the specified namespace to be the current namespace. The 'name'
@@ -13072,7 +14636,7 @@ class MNamespace:
         To make the root namespace become current, use:
             MNamespace.setCurrentNamespace(MNamespace.rootNamespace())
         """
-    def setRelativeNames(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setRelativeNames(self, *args: Any, **kwargs: Any) -> Any:
         """setRelativeNames(bool newState)
 
         Set relative name lookup mode.
@@ -13090,14 +14654,14 @@ class MNamespace:
            newState         true to turn on relative name lookup, false to
                             turn it off. Maya's default setting is false.
         """
-    def stripNamespaceFromName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def stripNamespaceFromName(self, *args: Any, **kwargs: Any) -> Any:
         """stripNamespaceFromName(MString fullName) -> MString
 
         Strips the namespace from a full name.
         For example, given a full name: 'a:b:c:d:ball' this method
         would return: 'ball'.
         """
-    def validateName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def validateName(self, *args: Any, **kwargs: Any) -> Any:
         """validateName(MString name) -> MString
 
         Convert the specified name to a validated name which
@@ -13113,39 +14677,51 @@ class MNamespace:
         """
 
 class MNodeCacheDisablingInfo:
-    def getCacheDisabled(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def getCacheDisabled(self, *args: Any, **kwargs: Any) -> Any:
         """getCacheDisabled() -> bool
 
         Return True if the cache should be disabled because of this node.
         """
-    def reset(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def reset(self, *args: Any, **kwargs: Any) -> Any:
         """reset()
 
         Resets the disabling info to an enabled state.
         """
-    def setCacheDisabled(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setCacheDisabled(self, *args: Any, **kwargs: Any) -> Any:
         """setCacheDisabled(bool)
 
         Set if the cache should be disabled because of this node.
         """
-    def setMitigation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setMitigation(self, *args: Any, **kwargs: Any) -> Any:
         """setMitigation(mitigation)
 
         Sets the mitigation to fix the reason for disabling Cached Playback.
         """
-    def setReason(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setReason(self, *args: Any, **kwargs: Any) -> Any:
         """setReason(reason)
 
         Sets the reason for disabling Cached Playback.
         """
 
 class MNodeCacheSetupInfo:
-    def getPreference(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def getPreference(self, *args: Any, **kwargs: Any) -> Any:
         """getPreference(PreferenceFlag) -> bool
 
         Get a preference flag for this node.
         """
-    def getRequirement(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getRequirement(self, *args: Any, **kwargs: Any) -> Any:
         """getRequirement(RequirementFlag) -> bool
 
         Get a requirement flag for this node.
@@ -13155,21 +14731,31 @@ class MNodeCacheSetupInfo:
     kSimulationSupport: int = ...
     kWantToCacheByDefault: int = ...
 
-    def setPreference(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setPreference(self, *args: Any, **kwargs: Any) -> Any:
         """setPreference(PreferenceFlag, bool)
 
         Set a preference flag for this node.
         """
-    def setRequirement(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setRequirement(self, *args: Any, **kwargs: Any) -> Any:
         """setRequirement(RequirementFlag, bool)
 
         Set a requirement flag for this node.
         """
 
 class MNodeClass:
-    def addExtensionAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def addExtensionAttribute(self, *args: Any, **kwargs: Any) -> Any:
         """Adds an extension attribute to the node class. An extension attribute is a class-level attribute which has been added dynamically to a node class. Because it is added at the class level, all nodes of that class will have the given attribute, and will only store the attribute's value if it differs from the default. Returns the type of the object at the end of the path."""
-    def attribute(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def attribute(self, *args: Any, **kwargs: Any) -> Any:
         """If passed an int: Returns the node class's i'th attribute. Raises IndexError if index is out of bounds.  If passed a string, Returns the node class's attribute having the given name. Returns MObject.kNullObj if the class does not have an attribute with that name."""
     @property
     def attributeCount(*args: Any, **kwargs: Any) -> Any:
@@ -13183,9 +14769,9 @@ class MNodeClass:
     @classification.setter
     def classification(*args: Any, **kwargs: Any) -> Any:
         """This is a string that is used in dependency nodes that are also shaders to provide more detailed type information to the rendering system."""
-    def getAttributes(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getAttributes(self, *args: Any, **kwargs: Any) -> Any:
         """Returns an MObjectArray array containing all of the node class's attributes."""
-    def hasAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasAttribute(self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the node class has an attribute of the given name, False otherwise."""
     @property
     def pluginName(*args: Any, **kwargs: Any) -> Any:
@@ -13193,9 +14779,9 @@ class MNodeClass:
     @pluginName.setter
     def pluginName(*args: Any, **kwargs: Any) -> Any:
         """File path of the plug-in in which the node class is defined. The empty string is returned for Maya's built-in node types."""
-    def removeExtensionAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeExtensionAttribute(self, *args: Any, **kwargs: Any) -> Any:
         """Removes an extension attribute from the node class. Raises ValueError if attr is not an extension attribute of this node class."""
-    def removeExtensionAttributeIfUnset(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeExtensionAttributeIfUnset(self, *args: Any, **kwargs: Any) -> Any:
         """Removes an extension attribute from the node class, but only if there are no nodes in the graph with non-default values for this attribute. Returns True if the attribute was removed, False otherwise. Raises ValueError if attr is not an extension attribute of this node class."""
     @property
     def typeId(*args: Any, **kwargs: Any) -> Any:
@@ -13211,7 +14797,9 @@ class MNodeClass:
         """Name of the node class. This is the name that is given to the createNode command to create nodes of this type."""
 
 class MNodeMessage(MMessage):
-    def addAttributeAddedOrRemovedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def addAttributeAddedOrRemovedCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addAttributeAddedOrRemovedCallback(node, function, clientData=None) -> id
 
         Registers callbacks for attribute add/removed messages.
@@ -13227,7 +14815,7 @@ class MNodeMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addAttributeChangedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addAttributeChangedCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addAttributeChangedCallback(node, function, clientData=None) -> id
 
         This method registers a callback for attribute changed messages.
@@ -13254,7 +14842,7 @@ class MNodeMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addKeyableChangeOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addKeyableChangeOverride(self, *args: Any, **kwargs: Any) -> Any:
         """addKeyableChangeOverride(plug, function, clientData=None) -> id
 
         This method registers a callback that is invoked by any class that
@@ -13278,7 +14866,7 @@ class MNodeMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addNameChangedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addNameChangedCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addNameChangedCallback(node, function, clientData=None) -> id
 
         Registers a callback for name changed messages.
@@ -13292,7 +14880,7 @@ class MNodeMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addNodeAboutToDeleteCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addNodeAboutToDeleteCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addNodeAboutToDeleteCallback(node, function, clientData=None) -> id
 
         Registers a callback which will get called when a node is about to
@@ -13334,7 +14922,7 @@ class MNodeMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addNodeDestroyedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addNodeDestroyedCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addNodeDestroyedCallback(node, function, clientData=None) -> id
 
         Registers a callback which will get called when a node's destructor is
@@ -13347,7 +14935,7 @@ class MNodeMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addNodeDirtyCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addNodeDirtyCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addNodeDirtyCallback(node, function, clientData=None) -> id
 
         Registers a callback for node dirty messages.
@@ -13359,7 +14947,7 @@ class MNodeMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addNodeDirtyPlugCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addNodeDirtyPlugCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addNodeDirtyPlugCallback(node, function, clientData=None) -> id
 
         Registers a callback for node dirty messages.  This callback provides
@@ -13373,7 +14961,7 @@ class MNodeMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addNodePreRemovalCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addNodePreRemovalCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addNodePreRemovalCallback(node, function, clientData=None) -> id
 
         Registers a callback which will get called before a node is deleted.
@@ -13398,7 +14986,7 @@ class MNodeMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addUuidChangedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addUuidChangedCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addUuidChangedCallback(node, function, clientData=None) -> id
 
         Registers a callback for UUID changed messages.
@@ -13429,32 +15017,117 @@ class MNodeMessage(MMessage):
     kOtherPlugSet: int = ...
 
 class MObject:
-    def apiType(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the function set type for the object."""
+    __doc__: str = ...
+
+    def __eq__(self, value: object) -> bool:
+        """Return self==value."""
+    def __ge__(self, value: object) -> bool:
+        """Return self>=value."""
+    def __gt__(self, value: object) -> bool:
+        """Return self>value."""
+    __hash__: NoneType = ...
+
+    @overload
+    def __init__(self) -> None: ...
+    @overload
+    def __init__(self, src: MObject) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __le__(self, value: object) -> bool:
+        """Return self<=value."""
+    def __lt__(self, value: object) -> bool:
+        """Return self<value."""
+    def __ne__(self, value: object) -> bool:
+        """Return self!=value."""
+    def __new__(cls: type[Self]) -> Self:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def apiType(self) -> int:
+        """Returns the function set type for the object.
+
+        Returns:
+            MFn type constant.
+            Returns a constant indicating the type of the internal Maya object.
+            If the MObject is null MFn.kInvalid will be returned.
+        """
     @property
-    def apiTypeStr(*args: Any, **kwargs: Any) -> Any:
+    def apiTypeStr(self) -> Any:
         """(readonly) String containing the object's type name."""
     @apiTypeStr.setter
-    def apiTypeStr(*args: Any, **kwargs: Any) -> Any:
+    def apiTypeStr(self, value) -> Any:
         """(readonly) String containing the object's type name."""
-    def hasFn(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Tests whether object is compatible with the specified function set."""
-    def isNull(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Tests whether there is an internal Maya object."""
+    @property
+    def apiTypeStr(self) -> Any:
+        """(readonly) String containing the object's type name."""
+    @apiTypeStr.setter
+    def apiTypeStr(self, value) -> Any:
+        """(readonly) String containing the object's type name."""
+    def hasFn(self, fn: int) -> bool:
+        """Tests whether object is compatible with the specified function set.
+
+        Args:
+            fn: MFn type constant
+
+        Returns:
+            Returns True if the internal Maya object supports the specified function set specified by fn.
+        """
+    def isNull(self) -> bool:
+        """Tests whether there is an internal Maya object.
+
+        Returns:
+            Returns True if the MObject is not referring to any Maya internal object
+            (i.e. it is equivalent to kNullObj).
+        """
     kNullObj: MObject = ...
 
 class MObjectArray:
-    def append(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __add__(self, value: Any) -> Any:
+        """Return self+value."""
+    def __contains__(self, key: Any) -> Any:
+        """Return key in self."""
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    __doc__: str = ...
+
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __iadd__(self, value: Any) -> Any:
+        """Implement self+=value."""
+    def __imul__(self, value: Any) -> Any:
+        """Implement self*=value."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __mul__(self, value: Any) -> Any:
+        """Return self*value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __rmul__(self, value: Any) -> Any:
+        """Return value*self."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """Remove all elements from the array."""
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """Replace the array contents with that of another or of a compatible Python sequence."""
-    def insert(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def insert(self, *args: Any, **kwargs: Any) -> Any:
         """Insert a new value into the array at the given index."""
-    def remove(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def remove(self, *args: Any, **kwargs: Any) -> Any:
         """Remove an element from the array."""
-    def setLength(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setLength(self, *args: Any, **kwargs: Any) -> Any:
         """Grow or shrink the array to contain a specific number of elements."""
     @property
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
@@ -13464,36 +15137,58 @@ class MObjectArray:
         """Number of elements by which to grow the array when necessary."""
 
 class MObjectHandle:
-    def assign(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __eq__(self, value: Any) -> Any:
+        """Return self==value."""
+    def __ge__(self, value: Any) -> Any:
+        """Return self>=value."""
+    def __gt__(self, value: Any) -> Any:
+        """Return self>value."""
+    __hash__: NoneType = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __le__(self, value: Any) -> Any:
+        """Return self<=value."""
+    def __lt__(self, value: Any) -> Any:
+        """Return self<value."""
+    def __ne__(self, value: Any) -> Any:
+        """Return self!=value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def assign(self, *args: Any, **kwargs: Any) -> Any:
         """assign(source) -> self
 
         Assigns this MObjectHandle to an instance of another MObjectHandle, or to a MObject instance.
 
         * source (MObject/MObjectHandle) - other instance to assign from.
         """
-    def hashCode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hashCode(self, *args: Any, **kwargs: Any) -> Any:
         """hashCode() -> int
 
         Returns a hash code for the internal Maya object referenced by the MObject within this MObjectHandle. If the MObject is null or no longer alive then 0 will be returned, otherwise the hash code is guaranteed to be non-zero
         """
-    def isAlive(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isAlive(self, *args: Any, **kwargs: Any) -> Any:
         """isAlive() -> bool
 
         Returns the live state of the associated MObject. An object can still be 'alive' but not 'valid' (eg. a deleted object that resides in the undo queue).
         """
-    def isValid(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isValid(self, *args: Any, **kwargs: Any) -> Any:
         """isValid() -> bool
 
         Returns the validity of the associated MObject.
         """
-    def object(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def object(self, *args: Any, **kwargs: Any) -> Any:
         """object() -> MObject
 
         Returns the MObject associated with this handle. The returned MObject will be MObject.kNullObj if the object is invalid.
         """
 
 class MObjectSetMessage(MMessage):
-    def addSetMembersModifiedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def addSetMembersModifiedCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addSetMembersModifiedCallback(node, function, clientData=None) -> id
 
         Registers callbacks for set modified messages.
@@ -13508,12 +15203,18 @@ class MObjectSetMessage(MMessage):
         """
 
 class MPlane:
-    def distance(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def distance(self, *args: Any, **kwargs: Any) -> Any:
         """distance() -> float
 
         Returns the distance of the plane along the normal.
         """
-    def distanceToPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def distanceToPoint(self, *args: Any, **kwargs: Any) -> Any:
         """distanceToPoint(point, signed=False) -> float
 
         Returns the distance from the plane to the specified point.
@@ -13521,12 +15222,12 @@ class MPlane:
         * point (MVector) - The point from which to calculate the distance
         * signed (bool) - Whether to return a signed or unsigned distance
         """
-    def normal(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def normal(self, *args: Any, **kwargs: Any) -> Any:
         """normal() -> MVector
 
         Returns the normal of the plane.
         """
-    def setPlane(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setPlane(self, *args: Any, **kwargs: Any) -> Any:
         """setPlane(a, b, c, d) -> self
         setPlane(n, d) -> self
 
@@ -13544,66 +15245,88 @@ class MPlane:
         """
 
 class MPlug:
-    def array(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __eq__(self, value: Any) -> Any:
+        """Return self==value."""
+    def __ge__(self, value: Any) -> Any:
+        """Return self>=value."""
+    def __gt__(self, value: Any) -> Any:
+        """Return self>value."""
+    __hash__: NoneType = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __le__(self, value: Any) -> Any:
+        """Return self<=value."""
+    def __lt__(self, value: Any) -> Any:
+        """Return self<value."""
+    def __ne__(self, value: Any) -> Any:
+        """Return self!=value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def array(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a plug for the array of plugs of which this plug is an element."""
-    def asBool(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asBool(self, *args: Any, **kwargs: Any) -> Any:
         """Retrieves the plug's value, as a boolean."""
-    def asChar(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asChar(self, *args: Any, **kwargs: Any) -> Any:
         """Retrieves the plug's value, as a single-byte integer."""
-    def asDouble(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asDouble(self, *args: Any, **kwargs: Any) -> Any:
         """Retrieves the plug's value, as a double-precision float."""
-    def asFloat(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asFloat(self, *args: Any, **kwargs: Any) -> Any:
         """Retrieves the plug's value, as a single-precision float."""
-    def asInt(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asInt(self, *args: Any, **kwargs: Any) -> Any:
         """Retrieves the plug's value, as a regular integer."""
-    def asMAngle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asMAngle(self, *args: Any, **kwargs: Any) -> Any:
         """Retrieves the plug's value, as an MAngle."""
-    def asMDataHandle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asMDataHandle(self, *args: Any, **kwargs: Any) -> Any:
         """Retrieve the current value of the attribute this plug references."""
-    def asMDistance(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asMDistance(self, *args: Any, **kwargs: Any) -> Any:
         """Retrieves the plug's value, as an MDistance."""
-    def asMObject(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asMObject(self, *args: Any, **kwargs: Any) -> Any:
         """Retrieves the plug's value, as as an MObject containing a direct reference to the plug's data."""
-    def asMTime(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asMTime(self, *args: Any, **kwargs: Any) -> Any:
         """Retrieves the plug's value, as an MTime."""
-    def asShort(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asShort(self, *args: Any, **kwargs: Any) -> Any:
         """Retrieves the plug's value, as a short integer."""
-    def asString(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asString(self, *args: Any, **kwargs: Any) -> Any:
         """Retrieves the plug's value, as a string."""
-    def attribute(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def attribute(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the attribute currently referenced by this plug."""
-    def child(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def child(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a plug for the specified child attribute of this plug."""
-    def connectedTo(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def connectedTo(self, *args: Any, **kwargs: Any) -> Any:
         """Returns an array of plugs which are connected to this one."""
-    def connectionByPhysicalIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def connectionByPhysicalIndex(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a plug for the index'th connected element of this plug."""
-    def constructHandle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def constructHandle(self, *args: Any, **kwargs: Any) -> Any:
         """Constructs a data handle for the plug."""
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """Copies one plug to another."""
-    def destinations(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def destinations(self, *args: Any, **kwargs: Any) -> Any:
         """If this plug is a source, return the destination plugs connected to it.
         If this plug is not a source, a null plug is returned.
         This method will produce the networked version of the connected plug.
         """
-    def destinationsWithConversions(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def destinationsWithConversions(self, *args: Any, **kwargs: Any) -> Any:
         """If this plug is a source, return the destination plugs connected to it.
         This method is very similar to the destinations() method.  The only difference is that the destinations() method skips over any unit conversion node connected to this source, and returns the destination of the unit conversion node.
         destinationsWithConversionNode() does not skip over unit conversion nodes, and returns the destination plug on a unit conversion node, if present.
         Note that the behavior of connectedTo() is identical to destinationsWithConversions(), that is, do not skip over unit conversion nodes.
         """
-    def destructHandle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def destructHandle(self, *args: Any, **kwargs: Any) -> Any:
         """Destroys a data handle previously constructed using constructHandle()."""
-    def elementByLogicalIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def elementByLogicalIndex(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a plug for the element of this plug array having the specified logical index."""
-    def elementByPhysicalIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def elementByPhysicalIndex(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a plug for the element of this plug array having the specified physical index."""
-    def evaluateNumElements(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def evaluateNumElements(self, *args: Any, **kwargs: Any) -> Any:
         """Like numElements() but evaluates all connected elements first to ensure that they are included in the count."""
-    def getExistingArrayAttributeIndices(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getExistingArrayAttributeIndices(self, *args: Any, **kwargs: Any) -> Any:
         """Returns an array of all the plug's logical indices which are currently in use."""
-    def getSetAttrCmds(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getSetAttrCmds(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list of strings containing the setAttr commands (in MEL syntax) for this plug and all of its descendents."""
     @property
     def info(*args: Any, **kwargs: Any) -> Any:
@@ -13647,7 +15370,7 @@ class MPlug:
     @isConnected.setter
     def isConnected(*args: Any, **kwargs: Any) -> Any:
         """True if plug has any connections."""
-    def isDefaultValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isDefaultValue(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a value indicating if the plug's value is equivalent to the plug's default value."""
     @property
     def isDestination(*args: Any, **kwargs: Any) -> Any:
@@ -13667,7 +15390,7 @@ class MPlug:
     @isElement.setter
     def isElement(*args: Any, **kwargs: Any) -> Any:
         """True if plug is an element of an array of plugs."""
-    def isFreeToChange(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isFreeToChange(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a value indicating if the plug's value can be changed, after taking into account the effects of locking and connections."""
     @property
     def isFromReferencedFile(*args: Any, **kwargs: Any) -> Any:
@@ -13731,64 +15454,64 @@ class MPlug:
     kNonDefault: int = ...
     kNotFreeToChange: int = ...
 
-    def logicalIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def logicalIndex(self, *args: Any, **kwargs: Any) -> Any:
         """Returns this plug's logical index within its parent array."""
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def name(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the name of the plug."""
-    def node(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def node(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node that this plug belongs to."""
-    def numChildren(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numChildren(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the number of children this plug has."""
-    def numConnectedChildren(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numConnectedChildren(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the number of this plug's children which have connections."""
-    def numConnectedElements(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numConnectedElements(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the number of this plug's elements which have connections."""
-    def numElements(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numElements(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the number of the plug's logical indices which are currently in use. Connected elements which have not yet been evaluated may not yet fully exist and may be excluded from the count."""
-    def parent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def parent(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a plug for the parent of this plug."""
-    def partialName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def partialName(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the name of the plug, formatted according to various criteria."""
-    def proxied(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def proxied(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the proxied plug for this plug."""
-    def selectAncestorLogicalIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def selectAncestorLogicalIndex(self, *args: Any, **kwargs: Any) -> Any:
         """Changes the logical index of the specified attribute in the plug's path."""
-    def setAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setAttribute(self, *args: Any, **kwargs: Any) -> Any:
         """Switches the plug to reference the given attribute of the same node as the previously referenced attribute."""
-    def setBool(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setBool(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the plug's value as a boolean."""
-    def setChar(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setChar(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the plug's value as a single-byte integer."""
-    def setDouble(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDouble(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the plug's value as a double-precision float."""
-    def setFloat(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setFloat(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the plug's value as a single-precision float."""
-    def setInt(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setInt(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the plug's value as a regular integer."""
-    def setMAngle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setMAngle(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the plug's value as an MAngle."""
-    def setMDataHandle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setMDataHandle(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the plug's value as a data handle."""
-    def setMDistance(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setMDistance(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the plug's value as an MDistance."""
-    def setMObject(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setMObject(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the plug's value as an MObject."""
-    def setMPxData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setMPxData(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the plug's value using custom plug-in data."""
-    def setMTime(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setMTime(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the plug's value as an MTime."""
-    def setNumElements(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setNumElements(self, *args: Any, **kwargs: Any) -> Any:
         """Pre-allocates space for count elements in an array of plugs."""
-    def setShort(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setShort(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the plug's value as a short integer."""
-    def setString(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setString(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the plug's value as a string."""
-    def source(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def source(self, *args: Any, **kwargs: Any) -> Any:
         """If this plug is a destination, return the source plug connected to it.
         If this plug is not a destination, a null plug is returned.
         This method will produce the networked version of the connectedplug.
         """
-    def sourceWithConversion(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def sourceWithConversion(self, *args: Any, **kwargs: Any) -> Any:
         """If this plug is a destination, return the source plug connected to it.
         This method is very similar to the source() method.  The only difference is that the source() method skips over any unit conversionnode connected to this destination, and returns the source of the unit conversion node.
         sourceWithConversion() does not skip over unitconversion nodes, and returns the source plug on a unit conversionnode, if present.
@@ -13796,17 +15519,55 @@ class MPlug:
         """
 
 class MPlugArray:
-    def append(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __add__(self, value: Any) -> Any:
+        """Return self+value."""
+    def __contains__(self, key: Any) -> Any:
+        """Return key in self."""
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    __doc__: str = ...
+
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __iadd__(self, value: Any) -> Any:
+        """Implement self+=value."""
+    def __imul__(self, value: Any) -> Any:
+        """Implement self*=value."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __mul__(self, value: Any) -> Any:
+        """Return self*value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __rmul__(self, value: Any) -> Any:
+        """Return value*self."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """Remove all elements from the array."""
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """Replace the array contents with that of another or of a compatible Python sequence."""
-    def insert(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def insert(self, *args: Any, **kwargs: Any) -> Any:
         """Insert a new value into the array at the given index."""
-    def remove(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def remove(self, *args: Any, **kwargs: Any) -> Any:
         """Remove an element from the array."""
-    def setLength(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setLength(self, *args: Any, **kwargs: Any) -> Any:
         """Grow or shrink the array to contain a specific number of elements."""
     @property
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
@@ -13816,18 +15577,72 @@ class MPlugArray:
         """Number of elements by which to grow the array when necessary."""
 
 class MPoint:
-    def cartesianize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __add__(self, value: Any) -> Any:
+        """Return self+value."""
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    __doc__: str = ...
+
+    def __eq__(self, value: Any) -> Any:
+        """Return self==value."""
+    def __ge__(self, value: Any) -> Any:
+        """Return self>=value."""
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __gt__(self, value: Any) -> Any:
+        """Return self>value."""
+    __hash__: NoneType = ...
+
+    def __iadd__(self, value: Any) -> Any:
+        """Return self+=value."""
+    def __imul__(self, value: Any) -> Any:
+        """Return self*=value."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __isub__(self, value: Any) -> Any:
+        """Return self-=value."""
+    def __le__(self, value: Any) -> Any:
+        """Return self<=value."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __lt__(self, value: Any) -> Any:
+        """Return self<value."""
+    def __mul__(self, value: Any) -> Any:
+        """Return self*value."""
+    def __ne__(self, value: Any) -> Any:
+        """Return self!=value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __radd__(self, value: Any) -> Any:
+        """Return value+self."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __rmul__(self, value: Any) -> Any:
+        """Return value*self."""
+    def __rsub__(self, value: Any) -> Any:
+        """Return value-self."""
+    def __rtruediv__(self, value: Any) -> Any:
+        """Return value/self."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def __sub__(self, value: Any) -> Any:
+        """Return self-value."""
+    def __truediv__(self, value: Any) -> Any:
+        """Return self/value."""
+    def cartesianize(self, *args: Any, **kwargs: Any) -> Any:
         """Convert point to cartesian form."""
-    def distanceTo(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def distanceTo(self, *args: Any, **kwargs: Any) -> Any:
         """Return distance between this point and another."""
-    def homogenize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def homogenize(self, *args: Any, **kwargs: Any) -> Any:
         """Convert point to homogenous form."""
-    def isEquivalent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isEquivalent(self, *args: Any, **kwargs: Any) -> Any:
         """Test for equivalence of two points, within a tolerance."""
     kOrigin: MPoint = ...
     kTolerance: float = ...
 
-    def rationalize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rationalize(self, *args: Any, **kwargs: Any) -> Any:
         """Convert point to rational form."""
     @property
     def w(*args: Any, **kwargs: Any) -> Any:
@@ -13855,17 +15670,55 @@ class MPoint:
         """Z coordinate"""
 
 class MPointArray:
-    def append(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __add__(self, value: Any) -> Any:
+        """Return self+value."""
+    def __contains__(self, key: Any) -> Any:
+        """Return key in self."""
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    __doc__: str = ...
+
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __iadd__(self, value: Any) -> Any:
+        """Implement self+=value."""
+    def __imul__(self, value: Any) -> Any:
+        """Implement self*=value."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __mul__(self, value: Any) -> Any:
+        """Return self*value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __rmul__(self, value: Any) -> Any:
+        """Return value*self."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """Remove all elements from the array."""
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """Replace the array contents with that of another or of a compatible Python sequence."""
-    def insert(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def insert(self, *args: Any, **kwargs: Any) -> Any:
         """Insert a new value into the array at the given index."""
-    def remove(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def remove(self, *args: Any, **kwargs: Any) -> Any:
         """Remove an element from the array."""
-    def setLength(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setLength(self, *args: Any, **kwargs: Any) -> Any:
         """Grow or shrink the array to contain a specific number of elements."""
     @property
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
@@ -13875,6 +15728,12 @@ class MPointArray:
         """Number of elements by which to grow the array when necessary."""
 
 class MPointOnMesh:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     @property
     def barycentricCoords(*args: Any, **kwargs: Any) -> Any:
         """(float, float) Tuple containing the barycentric coordinates of the
@@ -13919,7 +15778,9 @@ class MPointOnMesh:
         """(int) Face-local index of the triangle containing the point."""
 
 class MPolyMessage(MMessage):
-    def addPolyComponentIdChangedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def addPolyComponentIdChangedCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addPolyComponentIdChangedCallback(node, (wantVertIds, wantEdgeIds, wantFaceIds), function, clientData=None) -> id
 
         This method registers a callback that should be called whenever a poly
@@ -13961,7 +15822,7 @@ class MPolyMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addPolyTopologyChangedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addPolyTopologyChangedCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addPolyTopologyChangedCallback(node, function, clientData=None) -> id
 
         This method registers a callback that will be called when a node impacting
@@ -13984,12 +15845,33 @@ class MPolyMessage(MMessage):
         """
 
 class MPxAttributePatternFactory:
-    pass
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
 
 class MPxCommand:
-    def appendToResult(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def appendToResult(self, *args: Any, **kwargs: Any) -> Any:
         """Append a value to the result to be returned by the command."""
-    def clearResult(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clearResult(self, *args: Any, **kwargs: Any) -> Any:
         """Clears the command's result."""
     @property
     def commandString(*args: Any, **kwargs: Any) -> Any:
@@ -13997,19 +15879,19 @@ class MPxCommand:
     @commandString.setter
     def commandString(*args: Any, **kwargs: Any) -> Any:
         """Command string to be echoed to the user."""
-    def currentResult(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def currentResult(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the command's current result."""
-    def currentResultType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def currentResultType(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the type of the current result."""
-    def displayError(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def displayError(self, *args: Any, **kwargs: Any) -> Any:
         """Display an error message."""
-    def displayInfo(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def displayInfo(self, *args: Any, **kwargs: Any) -> Any:
         """Display an informational message."""
-    def displayWarning(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def displayWarning(self, *args: Any, **kwargs: Any) -> Any:
         """Display a warning message."""
-    def doIt(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doIt(self, *args: Any, **kwargs: Any) -> Any:
         """Called by Maya to execute the command."""
-    def hasSyntax(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasSyntax(self, *args: Any, **kwargs: Any) -> Any:
         """Called by Maya to determine if the command provides an MSyntax object describing its syntax."""
     @property
     def historyOn(*args: Any, **kwargs: Any) -> Any:
@@ -14017,26 +15899,32 @@ class MPxCommand:
     @historyOn.setter
     def historyOn(*args: Any, **kwargs: Any) -> Any:
         """Determines if construction history is on for the command."""
-    def isCurrentResultArray(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isCurrentResultArray(self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if the command's current result is an array of values."""
-    def isUndoable(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isUndoable(self, *args: Any, **kwargs: Any) -> Any:
         """Called by Maya to determine if the command supports undo."""
     kDouble: int = ...
     kLong: int = ...
     kNoArg: int = ...
     kString: int = ...
 
-    def redoIt(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def redoIt(self, *args: Any, **kwargs: Any) -> Any:
         """Called by Maya to redo a previously undone command."""
-    def setResult(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setResult(self, *args: Any, **kwargs: Any) -> Any:
         """Set the value of the result to be returned by the command."""
-    def syntax(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def syntax(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the command's MSyntax object, if it has one."""
-    def undoIt(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def undoIt(self, *args: Any, **kwargs: Any) -> Any:
         """Called by Maya to undo a previously executed command."""
 
 class MPxData:
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """copy(src) -> self
 
         This method initializes an instance of an MPxData derived class from another existing instance.  This method can be thought of as the second half of a copy constructor for the class.  The default constructor has already been called for the instance, and this method is used to set the private data by copying the values from an existing instance.
@@ -14048,13 +15936,13 @@ class MPxData:
     kGeometryData: int = ...
     kLast: int = ...
 
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def name(self, *args: Any, **kwargs: Any) -> Any:
         """name() -> string
 
         Returns the name of the custom data type.
         This method must be implemented by the derived class.
         """
-    def readASCII(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def readASCII(self, *args: Any, **kwargs: Any) -> Any:
         """readASCII(argList, endOfTheLastParsedElement) -> int
 
         Creates Data in Data Block as specified by input from ASCII file record.
@@ -14062,7 +15950,7 @@ class MPxData:
 
         * argList (MArgList) - List of arguments read from ASCII record* endOfTheLastParsedElement (int) - points to last argument already parsed.
         """
-    def readBinary(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def readBinary(self, *args: Any, **kwargs: Any) -> Any:
         """readBinary(in, length) -> int
 
         Creates Data in Data Block as specified by binary data from the given stream.
@@ -14071,25 +15959,31 @@ class MPxData:
         * in (bytearray) - Input stream
         * length (int) - Length in bytes of binary data to be read.
         """
-    def typeId(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def typeId(self, *args: Any, **kwargs: Any) -> Any:
         """typeId() -> MTypeId
 
         Determines the type id of the Data object.
         This method must be implemented by the derived class.
         """
-    def writeASCII(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def writeASCII(self, *args: Any, **kwargs: Any) -> Any:
         """writeASCII() -> string
 
         Encodes Data in accordance with the ASCII file format and returns as string.
         """
-    def writeBinary(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def writeBinary(self, *args: Any, **kwargs: Any) -> Any:
         """writeBinary() -> bytearray
 
         Encodes Data in accordance with the binary file format and returns as bytearray.
         """
 
 class MPxGeometryData(MPxData):
-    def deleteComponent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def deleteComponent(self, *args: Any, **kwargs: Any) -> Any:
         """deleteComponent(compList) -> bool
 
         This method should be overridden if this data is to support component deletion. For user defined shapes (MPxSurfaceShape) which support components, this method must be overridden if component deletion is to be supported when the shape has history.
@@ -14098,7 +15992,7 @@ class MPxGeometryData(MPxData):
 
         * compList (MObjectArray) - a list of components that are to be deleted
         """
-    def deleteComponentsFromGroups(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deleteComponentsFromGroups(self, *args: Any, **kwargs: Any) -> Any:
         """deleteComponentsFromGroups(compList, groupIdArray, groupComponentArray) -> bool
 
         This method should be overridden to modify the groups that flows along with the geometry, as part of the data, based on the components being deleted. It should intelligently update the groups based on what gets deleted. The class MFnGeometryData can be used to access and modify grouping information for data.
@@ -14111,14 +16005,14 @@ class MPxGeometryData(MPxData):
         * groupIdArray [OUT] (MIntArray) - array of group id's
         * groupComponentArray (MObjectArray) - array of updated components, one for each group id
         """
-    def getMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getMatrix(self, *args: Any, **kwargs: Any) -> Any:
         """getMatrix(matrix) -> bool
 
         Gets the matrix associated to MPxGeometryData and retursn True if is identity
 
         * matrix [OUT] (MMatrix) - the returned matrix that takes a point from local object space to world space.
         """
-    def iterator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def iterator(self, *args: Any, **kwargs: Any) -> Any:
         """iterator(componentList, component, useComponents, world=None) -> MPxGeometryIterator
 
         Associates a control point based geometry iterator with this data.
@@ -14139,7 +16033,7 @@ class MPxGeometryData(MPxData):
     @matrix.setter
     def matrix(*args: Any, **kwargs: Any) -> Any:
         """The matrix associated to MPxGeometryData."""
-    def smartCopy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def smartCopy(self, *args: Any, **kwargs: Any) -> Any:
         """smartCopy(srcGeom) -> self
 
         This method is used in conjunction with MPxSurfaceShape classes which support maya's deformations.
@@ -14150,7 +16044,7 @@ class MPxGeometryData(MPxData):
 
         * srcGeom (MPxGeometryData) - the data to be copied
         """
-    def updateCompleteVertexGroup(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def updateCompleteVertexGroup(self, *args: Any, **kwargs: Any) -> Any:
         """updateCompleteVertexGroup(component) -> bool
 
         This method is used in conjunction with MPxSurfaceShape classes which support maya's deformations.
@@ -14166,7 +16060,17 @@ class MPxGeometryData(MPxData):
         """
 
 class MPxGeometryIterator:
-    def component(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __iter__(self) -> Any:
+        """Implement iter(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __next__(self) -> Any:
+        """Implement next(self)."""
+    def component(self, *args: Any, **kwargs: Any) -> Any:
         """component() -> MObject
 
         Returns a component for the current item in the iteration.
@@ -14181,39 +16085,39 @@ class MPxGeometryIterator:
         """The current index of the iteration.
         This value is used when iterating over all elements of your geometry, i.e. when there are no components specified.
         """
-    def geometry(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def geometry(self, *args: Any, **kwargs: Any) -> Any:
         """geometry() -> long/object
 
         Returns the user geometry that this iterator is iterating over.
         """
-    def hasNormals(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasNormals(self, *args: Any, **kwargs: Any) -> Any:
         """hasNormals() -> bool
 
         Returns whether the underlying geometry has normals.
         """
-    def hasPoints(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasPoints(self, *args: Any, **kwargs: Any) -> Any:
         """hasPoints() -> bool
 
         Returns whether the underlying geometry has point data.
         """
-    def index(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def index(self, *args: Any, **kwargs: Any) -> Any:
         """index() -> int
 
         Returns a unique index for the current item in the iteration.
         If the iteration is over the whole geometry then this index is the same as current point. If the iteration is over some elements of the geometry specified by a component then this index is the index in your geometry.
         """
-    def indexUnsimplified(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def indexUnsimplified(self, *args: Any, **kwargs: Any) -> Any:
         """indexUnsimplified() -> int
 
         Returns a unique index for the current item in the iteration.
         Rather than being the iterator index this is the index for the actual item when simplification is skipping items. This index will be equal to index() if no simplification, otherwise it will be larger.
         """
-    def isDone(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isDone(self, *args: Any, **kwargs: Any) -> Any:
         """isDone() -> bool
 
         Returns whether all the items have been traversed yet.
         """
-    def iteratorCount(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def iteratorCount(self, *args: Any, **kwargs: Any) -> Any:
         """iteratorCount() -> int
 
         Returns an estimate of how many items will be iterated over.
@@ -14228,36 +16132,36 @@ class MPxGeometryIterator:
         """The largest index that will be iterated over.
         This value is used when iterating over all elements of your geometry, i.e. when there are no components specified.
         """
-    def next(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def next(self, *args: Any, **kwargs: Any) -> Any:
         """next() -> self
 
         Advances to the next component.
         """
-    def point(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def point(self, *args: Any, **kwargs: Any) -> Any:
         """point() -> MPoint
 
         Returns the current component's positional data.
         """
-    def reset(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def reset(self, *args: Any, **kwargs: Any) -> Any:
         """reset() -> self
 
         Resets the iterator to the start of the components so that another pass over them may be made.
         """
-    def setObject(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setObject(self, *args: Any, **kwargs: Any) -> Any:
         """setObject(shape) -> self
 
         Optional method to set a shape object to iterate over to allow tweaking of the shape's history (input geometry).
 
         * shape (MPxSurfaceShape) - a user defined shape object.
         """
-    def setPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setPoint(self, *args: Any, **kwargs: Any) -> Any:
         """setPoint(point) -> self
 
         Sets the current component's positional data.
 
         * point (MPoint) - the new positional value to set.
         """
-    def setPointGetNext(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setPointGetNext(self, *args: Any, **kwargs: Any) -> Any:
         """setPointGetNext(point) -> int
 
         Sets the current component's positional data, and returns the next index value.
@@ -14266,7 +16170,13 @@ class MPxGeometryIterator:
         """
 
 class MPxNode:
-    def addAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addAttribute(self, *args: Any, **kwargs: Any) -> Any:
         """addAttribute(attr) -> None
 
         This method adds a new attribute to a user defined node type during the type's initialization.
@@ -14278,7 +16188,7 @@ class MPxNode:
 
         * attr (MObject) - new attribute to add.
         """
-    def addExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addExternalContentForFileAttr(self, *args: Any, **kwargs: Any) -> Any:
         """addExternalContentForFileAttr(table, attr) -> bool
 
         This method is a helper for derived clases implementing getExternalContent().  It augments the external content info table passed in with an entry describing external content whose location is described by the specified attribute.
@@ -14290,7 +16200,7 @@ class MPxNode:
 
         Returns True if an item was sucessfully added to the table.  False if the attribute does not describe a non-empty location, or an item with the same key was already present in the table.
         """
-    def attributeAffects(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def attributeAffects(self, *args: Any, **kwargs: Any) -> Any:
         """attributeAffects(whenChanges, isAffected) -> None
 
         This method specifies that a particular input attribute affects a specific output attribute.  This is required to make evaluation efficient.  When an input changes, only the affected outputs will be computed. Output attributes cannot be keyable - if they are keyable, this method will fail.
@@ -14302,7 +16212,7 @@ class MPxNode:
         * whenChanges (MObject) - input attribute - MObject that points to an input attribute that has already been added.
         * isAffected (MObject) - affected output attribute - MObject that points to an output attribute that has already been added.
         """
-    def compute(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def compute(self, *args: Any, **kwargs: Any) -> Any:
         """compute(plug, dataBlock) -> self
 
         This method should be overridden in user defined nodes.
@@ -14320,7 +16230,7 @@ class MPxNode:
         * plug (MPlug) - plug representing the attribute that needs to be recomputed.
         * block (MDataBlock) - data block containing storage for the node's attributes.
         """
-    def configCache(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def configCache(self, *args: Any, **kwargs: Any) -> Any:
         """configCache(evalNode, schema) -> None
 
         Defines the node's behavior when participating in Cached Playback.
@@ -14330,7 +16240,7 @@ class MPxNode:
         * evalNode (MEvaluationNode)  - This node's evaluation node, contains animated plug information
         * schema (MCacheSchema)       - Specification about what attributes to cache
         """
-    def connectionBroken(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def connectionBroken(self, *args: Any, **kwargs: Any) -> Any:
         """connectionBroken( plug, otherPlug, asSrc) -> self
 
         This method gets called when connections are broken with attributes of this node.
@@ -14339,7 +16249,7 @@ class MPxNode:
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (bool) - is this plug a source of the connection.
         """
-    def connectionMade(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def connectionMade(self, *args: Any, **kwargs: Any) -> Any:
         """connectionMade(plug, otherPlug, asSrc) -> self
 
         This method gets called when connections are made to attributes of this node.
@@ -14348,7 +16258,7 @@ class MPxNode:
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (bool) - is this plug a source of the connection.
         """
-    def copyInternalData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copyInternalData(self, *args: Any, **kwargs: Any) -> Any:
         """copyInternalData(node) -> self
 
         This method is overriden by nodes that store attribute data in some internal format.
@@ -14357,7 +16267,7 @@ class MPxNode:
 
         * node (MPxNode) - the node that is being duplicated.
         """
-    def dependsOn(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def dependsOn(self, *args: Any, **kwargs: Any) -> Any:
         """dependsOn( plug, otherPlug) -> bool/None
 
         This method may be overridden by the user defined node. It should only be required to override this on rare occasions.
@@ -14371,12 +16281,12 @@ class MPxNode:
         * plug (MPlug) - attribute on this node.
         * otherPlug (MPlug) - attribute on other node.
         """
-    def doNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doNotWrite(self, *args: Any, **kwargs: Any) -> Any:
         """doNotWrite() -> bool
 
         use this method to query the "do not write" state of this proxy node. True is returned if this node will not be saved when the maya model is written out.
         """
-    def existWithoutInConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def existWithoutInConnections(self, *args: Any, **kwargs: Any) -> Any:
         """existWithoutInConnections() -> bool
 
         Determines whether or not this node can exist without input connections.
@@ -14388,7 +16298,7 @@ class MPxNode:
 
         Returns true if this node can exist without input connections, false otherwise
         """
-    def existWithoutOutConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def existWithoutOutConnections(self, *args: Any, **kwargs: Any) -> Any:
         """existWithoutOutConnections() -> bool
 
         Determines whether or not this node can exist without output connections.
@@ -14400,7 +16310,7 @@ class MPxNode:
 
         Returns true if this node can exist without output connections, false otherwise
         """
-    def forceCache(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def forceCache(self, *args: Any, **kwargs: Any) -> Any:
         """forceCache(ctx=MDGContext::current()) -> MDataBlock
 
         Get the datablock for this node. If there is no datablock then one will be created.
@@ -14408,7 +16318,7 @@ class MPxNode:
 
         * ctx (MDGContext) - The context in which the datablock will be retrieved.
         """
-    def getCacheSetup(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getCacheSetup(self, *args: Any, **kwargs: Any) -> Any:
         """getCacheSetup(evalNode, disablingInfo, setupInfo, objectArray) -> None
 
         Provide node-specific setup info for the Cached Playback system.
@@ -14428,7 +16338,7 @@ class MPxNode:
         * cacheSetupInfo (MNodeCacheSetupInfo)    - Preferences and requirements this node has for Cached Playback
         * monitoredAttributes (MObjectArray)      - Attributes impacting the behavior of this method that will be monitored for change
         """
-    def getExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getExternalContent(self, *args: Any, **kwargs: Any) -> Any:
         """getExternalContent(table) -> self
 
         The table populated by this method must include the location of all the content (files) used by this node, including those that do not exist.  See MExternalContentInfoTable for details.
@@ -14441,7 +16351,7 @@ class MPxNode:
 
         * table [OUT] (MExternalContentInfoTable) - Content information table that this method must populate.
         """
-    def getFilesToArchive(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getFilesToArchive(self, *args: Any, **kwargs: Any) -> Any:
         """getFilesToArchive(shortName=False, unresolvedName=False, markCouldBeImageSequence=False) -> list of strings
 
         Use this method to return all external files used by this node. This file list will be used by the File > Archive zip feature, maya.exe -archive and the `file -q -list` mel command.
@@ -14456,7 +16366,7 @@ class MPxNode:
         * unresolvedName (bool) - If True, add paths before any resolution, rather than absolute paths.
         * markCouldBeImageSequence (bool) - If True, append an asterisk after any file path that could be an image sequence (note: only used by maya.exe -archive).
         """
-    def getInternalValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getInternalValue(self, *args: Any, **kwargs: Any) -> Any:
         """getInternalValue(plug, dataHandle) -> bool
 
         This method is overridden by nodes that store attribute data in some internal format.
@@ -14470,7 +16380,7 @@ class MPxNode:
         * plug (MPlug) - the attribute that is being queried.
         * dataHandle [OUT] (MDataHandle) - the dataHandle to store the attribute value.
         """
-    def getInternalValueInContext(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getInternalValueInContext(self, *args: Any, **kwargs: Any) -> Any:
         """getInternalValueInContext(plug, dataHandle, ctx) -> bool [OBSOLETE]
 
         This method is obsolete. Override MPxNode.getInternalValue instead.
@@ -14479,12 +16389,12 @@ class MPxNode:
         * dataHandle [OUT] (MDataHandle) - the dataHandle to store the attribute value.
         * ctx (MDGContext) - the context the method is being evaluated in.
         """
-    def hasInvalidationRangeTransformation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasInvalidationRangeTransformation(self, *args: Any, **kwargs: Any) -> Any:
         """hasInvalidationRangeTransformation() -> bool
 
         Checks if this MPxNode derived node overrides the MPxNode::transformInvalidationRange method
         """
-    def inheritAttributesFrom(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def inheritAttributesFrom(self, *args: Any, **kwargs: Any) -> Any:
         """inheritAttributesFrom(parentClassName) -> None
 
         This method allows a class of plugin node to inherit all of the attributes of a second class of plugin node.
@@ -14497,7 +16407,7 @@ class MPxNode:
 
         * parentClassName (string) - class of node to inherit attributes from.
         """
-    def internalArrayCount(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def internalArrayCount(self, *args: Any, **kwargs: Any) -> Any:
         """internalArrayCount(plug) -> int
         internalArrayCount(plug, ctx) -> int  [OBSOLETE]
 
@@ -14512,14 +16422,14 @@ class MPxNode:
         * plug (MPlug) - the array plug.
         * ctx (MDGContext) - the context, default to MDGContext.current().
         """
-    def isAbstractClass(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isAbstractClass(self, *args: Any, **kwargs: Any) -> Any:
         """isAbstractClass() -> bool
 
         Override this class to return True if this node is an abstract node. An abstract node can only be used as a base class.  It cannot be created using the 'createNode' command.
 
         It is not necessary to override this method.
         """
-    def isPassiveOutput(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isPassiveOutput(self, *args: Any, **kwargs: Any) -> Any:
         """isPassiveOutput(plug) -> bool
 
         This method may be overridden by the user defined node if it wants to provide output attributes which do not prevent value modifications to the destination attribute. For example, output plugs on animation curve nodes are passive. This allows the attributes driven by the animation curves to be set to new values by the user.
@@ -14558,7 +16468,7 @@ class MPxNode:
     kThreadedDeviceNode: int = ...
     kTransformNode: int = ...
 
-    def legalConnection(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def legalConnection(self, *args: Any, **kwargs: Any) -> Any:
         """legalConnection(plug, otherPlug, asSrc) -> bool/None
 
         This method allows you to check for legal connections being made to attributes of this node.
@@ -14569,7 +16479,7 @@ class MPxNode:
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (bool) - is this plug a source of the connection.
         """
-    def legalDisconnection(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def legalDisconnection(self, *args: Any, **kwargs: Any) -> Any:
         """legalDisconnection(plug, otherPlug, arsSrc) -> bool/None
 
         This method allows you to check for legal disconnections being made to attributes of this node.
@@ -14580,7 +16490,7 @@ class MPxNode:
         * otherPlug (MPlug) - attribute on other node.
         * asSrc (boool) - is this plug a source of the connection.
         """
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def name(self, *args: Any, **kwargs: Any) -> Any:
         """name() -> string
 
         Returns the name of this particular instance of this class.  Each objectin the dependency graph has a name.  This name will be used by the UIand by MEL.
@@ -14589,7 +16499,7 @@ class MPxNode:
 
         Returns the name of the node
         """
-    def passThroughToMany(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def passThroughToMany(self, *args: Any, **kwargs: Any) -> Any:
         """passThroughToMany(plug, plugArray) -> bool
 
         This method is overriden by nodes that want to control the traversal behavior of some Maya search algorithms which traverse the history/future of shape nodes looking for directly related nodes. In particular, the Artisan paint code uses this method when searching for paintable nodes, and the disk cache code uses this method when searching for upstream cacheFile nodes.
@@ -14599,7 +16509,7 @@ class MPxNode:
         * plug (MPlug) - the plug.
         * plugArray (MPlugArray) - the corresponding plugs.
         """
-    def passThroughToOne(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def passThroughToOne(self, *args: Any, **kwargs: Any) -> Any:
         """passThroughToOne(plug) -> plug
 
         This method may be overriden by nodes that have a one-to-one relationship between an input attribute and a corresponding output attribute. This method is used by Maya to perform the following capabilities:
@@ -14610,14 +16520,14 @@ class MPxNode:
 
         * plug (MPlug) - the plug.
         """
-    def postConstructor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def postConstructor(self, *args: Any, **kwargs: Any) -> Any:
         """postConstructor() -> self
 
         Internally maya creates two objects when a user defined node is created, the internal MObject and the user derived object.
         The association between the these two objects is not made until after the MPxNode constructor is called. This implies that no MPxNode member function can be called from the MPxNode constructor.
         The postConstructor will get called immediately after the constructor when it is safe to call any MPxNode member function.
         """
-    def postEvaluation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def postEvaluation(self, *args: Any, **kwargs: Any) -> Any:
         """postEvaluation(context, evalNode, evalType) -> None
 
         Clean up node's internal state after threaded evaluation.
@@ -14644,7 +16554,7 @@ class MPxNode:
           * kLeaveDirty          : Evaluation was performed without updating this node. Internal
                                    state should be updated to reflect that the node is dirty.
         """
-    def preEvaluation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def preEvaluation(self, *args: Any, **kwargs: Any) -> Any:
         """preEvaluation(context, evalNode) -> None
 
         Prepare a node's internal state for threaded evaluation.
@@ -14665,7 +16575,7 @@ class MPxNode:
                                              are about to be evaluated for the context.
                                              Should be only used to query information.
         """
-    def setDependentsDirty(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDependentsDirty(self, *args: Any, **kwargs: Any) -> Any:
         """setDependentsDirty(plug, plugArray) -> self
 
         This method can be overridden in user defined nodes to specify which plugs should be set dirty based upon an input plug which Maya is marking dirty. The list of plugs for Maya to mark dirty is returned by the plug array. This method handles both dynamic as well as non-dynamic plugs and is useful in the following ways:
@@ -14685,7 +16595,7 @@ class MPxNode:
         * plug (MPlug) - plug which is being set dirty by Maya.
         * plugArray the programmer should add any plugs which they want to set dirty to this list.
         """
-    def setDoNotWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDoNotWrite(self, *args: Any, **kwargs: Any) -> Any:
         """setDoNotWrite(bool) -> self
 
         Use this method to mark the "do not write" state of this proxy node.  If set, this node will not be saved when the Maya model is written out.
@@ -14694,7 +16604,7 @@ class MPxNode:
         1. Plug-in "requires" information will be written out with the model when saved.  But a subsequent reload and resave of the file will cause these to go away.
         2. If this node is a DAG and has a parent or children, the "do not write" flag of the parent or children will not be set. It is the developer's responsibility to ensure that the resulting scene file is capable of being read in without errors due to unwritten nodes.
         """
-    def setExistWithoutInConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setExistWithoutInConnections(self, *args: Any, **kwargs: Any) -> Any:
         """setExistWithoutInConnections(bool) -> bool
 
         This method specifies whether or not the node can exist without input
@@ -14707,7 +16617,7 @@ class MPxNode:
 
         * flag (bool) true if this node can exist without input connections, false otherwise
         """
-    def setExistWithoutOutConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setExistWithoutOutConnections(self, *args: Any, **kwargs: Any) -> Any:
         """setExistWithoutOutConnections(bool) -> bool
 
         This method specifies whether or not the node can exist without
@@ -14720,7 +16630,7 @@ class MPxNode:
 
         * flag (bool) true if this node can exist without output connections, false otherwise
         """
-    def setExternalContent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setExternalContent(self, *args: Any, **kwargs: Any) -> Any:
         """setExternalContent(table) -> self
 
         This is useful in the context of content relocation.  This will be called while the scene is being loaded to apply path changes performed externally. Consequently, interaction with the rest of the scene must be kept to a minimum.  It is however valid to call this method outside of scene loading contexts.
@@ -14733,7 +16643,7 @@ class MPxNode:
 
         * table Key->location table with new content locations.
         """
-    def setExternalContentForFileAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setExternalContentForFileAttr(self, *args: Any, **kwargs: Any) -> Any:
         """setExternalContentForFileAttr(attr, table) -> bool
 
         This method is a helper for derived clases implementing setExternalContent().  It assigns a value to a plug with the one from the table whose key is the same as the passed in attribute name.
@@ -14745,7 +16655,7 @@ class MPxNode:
 
         Returns True if the plug was successfully written to. False if no entry in the table was named after the attribute or if no plug was found.
         """
-    def setInternalValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setInternalValue(self, *args: Any, **kwargs: Any) -> Any:
         """setInternalValue(plug, dataHandle) -> bool
 
 
@@ -14762,7 +16672,7 @@ class MPxNode:
         * plug (MPlug) - the attribute that is being set.
         * dataHandle (MDataHandle) - the dataHandle containing the value to set.
         """
-    def setInternalValueInContext(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setInternalValueInContext(self, *args: Any, **kwargs: Any) -> Any:
         """setInternalValueInContext(plug, dataHandle, ctx) -> bool  [OBSOLETE]
 
         This method is obsolete. Override MPxNode.setInternalValue instead.
@@ -14771,7 +16681,7 @@ class MPxNode:
         * dataHandle (MDataHandle) - the dataHandle containing the value to set.
         * ctx (MDGContext) - the context the method is being evaluated in.
         """
-    def setMPSafe(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setMPSafe(self, *args: Any, **kwargs: Any) -> Any:
         """setMPSafe(bool) -> self
 
         This method is obsolete. Override MPxNode.setSchedulingType instead.
@@ -14780,7 +16690,7 @@ class MPxNode:
 
         NOTE: This should be called from the postConstructor() method for shading node plug-ins only. If a shading node is non-safe, then it will only be useful during single processor rendering.
         """
-    def shouldSave(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def shouldSave(self, *args: Any, **kwargs: Any) -> Any:
         """shouldSave(plug) -> bool/None
 
         This method may be overridden by the user defined node.  It should only be required to override this on rare occasions.
@@ -14790,12 +16700,12 @@ class MPxNode:
 
         * plug (MPlug) - plug representing the attribute to be saved.
         """
-    def thisMObject(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def thisMObject(self, *args: Any, **kwargs: Any) -> Any:
         """thisMObject() -> MObject
 
         Returns the MObject associated with this user defined node.  This makes it possible to use MFnDependencyNode or to construct plugs to this node's attributes.
         """
-    def transformInvalidationRange(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def transformInvalidationRange(self, *args: Any, **kwargs: Any) -> Any:
         """transformInvalidationRange(plug, timeRange) -> timeRange
 
         Override this method to register this node as an Invalidation-Range-Transformation kernel (IRT kernel) An IRT kernel node will change the invalidation time range for its downstream nodes For example, Dynamics-solver will transform invalidation time range [a,b] to [a,+inf) And Clip-Time-Editor will send out the invalidation range for each of the clip [a,b] to ( [t0+a,t0+b] U [t1+a,t1+b] U [t2+a,t2+b] U ... )
@@ -14810,7 +16720,7 @@ class MPxNode:
         WARNING: Do *not* call MPxNode::transformInvalidationRange from your override method
         NOTE: If a plugin node have invalidation-range-transformation *conditionally* Only transform the invalidation range when attribute 'enableIRT' is set The plugin should call MPxNode::transformInvalidationRange to signal it does not perform any IRT.
         """
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def type(self, *args: Any, **kwargs: Any) -> Any:
         """type() -> int
 
         Returns the type of node that this is.  This is used to differentiate user defined nodes that are derived off different MPx base classes.
@@ -14843,19 +16753,23 @@ class MPxNode:
           kGeometryFilter				Custom deformer derived from MPxGeometryFilter
                  kBlendShape					Custom deformer derived from MPxBlendShape
         """
-    def typeId(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def typeId(self, *args: Any, **kwargs: Any) -> Any:
         """typeId() -> MTypeId
 
         Returns the TYPEID of this node.
         """
-    def typeName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def typeName(self, *args: Any, **kwargs: Any) -> Any:
         """typeName() -> string
 
         Returns the type name of this node.  The type name identifies the node type to the ASCII file format
         """
 
 class MPxSurfaceShape(MPxNode):
-    def acceptsGeometryIterator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def acceptsGeometryIterator(self, *args: Any, **kwargs: Any) -> Any:
         """acceptsGeometryIterator(component, writeable=True, forReadOnly=False) -> bool
         acceptsGeometryIterator(writeable=True) -> boolboundingBox() -> MBoundingBox
 
@@ -14866,12 +16780,12 @@ class MPxSurfaceShape(MPxNode):
         * writeable (bool) - is this component type writable by an iterator
         * forReadOnly (bool) - is this component type readable by an iterator
         """
-    def activeComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def activeComponents(self, *args: Any, **kwargs: Any) -> Any:
         """activeComponents() -> MObjectArray
 
         Returns a list of active (selected) components for the shape.
         """
-    def boundingBox(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def boundingBox(self, *args: Any, **kwargs: Any) -> Any:
         """boundingBox() -> MBoundingBox
 
         This method should be overridden to return a bounding box for the shape.
@@ -14881,19 +16795,19 @@ class MPxSurfaceShape(MPxNode):
     boundingBoxCenterY: MObject = ...
     boundingBoxCenterZ: MObject = ...
 
-    def cachedShapeAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def cachedShapeAttr(self, *args: Any, **kwargs: Any) -> Any:
         """cachedShapeAttr() -> MObject
 
         Returns the attribute containing the shape's cached geometry, if it has one.
         """
-    def canMakeLive(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def canMakeLive(self, *args: Any, **kwargs: Any) -> Any:
         """canMakeLive() -> bool
 
         This method is used by Maya to determine whether a surface can be made live. It can be overridden to return True if you wish to allow your surface to be made live. If you return True, you will also need to implement both closestPoint() overloads. The default is to return False.
         """
     center: MObject = ...
 
-    def childChanged(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def childChanged(self, *args: Any, **kwargs: Any) -> Any:
         """childChanged(state=kObjectChanged) -> self
 
         This method can be used to trigger the shape to recalculate its bounding box.
@@ -14905,7 +16819,7 @@ class MPxSurfaceShape(MPxNode):
           kBoundingBoxChanged    Object geometry is unchanged but its bounding box has changed.
                                  This might happen if the object was moved or an offset changed.
         """
-    def closestPoint(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def closestPoint(self, *args: Any, **kwargs: Any) -> Any:
         """closestPoint(toThisPoint, theClosestPoint, tolerance=MPoint.kTolerance) -> self
         closestPoint(raySource, rayDirection, theClosestPoint, theClosestNormal, findClosestOnMiss, tolerance=MPoint.kTolerance) -> bool
 
@@ -14936,7 +16850,7 @@ class MPxSurfaceShape(MPxNode):
         * findClosestOnMiss (bool) - when True, you should calculate theClosestPoint and theClosestNormal even if the ray misses your surface.
         * tolerance (float) - tolerance to use in your calculations
         """
-    def componentToPlugs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def componentToPlugs(self, *args: Any, **kwargs: Any) -> Any:
         """componentToPlugs(component, selectionList) -> self
 
         Converts the given component into a selection list of plugs.
@@ -14947,7 +16861,7 @@ class MPxSurfaceShape(MPxNode):
         * component (MObject) - the component to be converted
         * list (MSelectionList) - a selection list where the plug should be added
         """
-    def convertToTweakNodePlug(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def convertToTweakNodePlug(self, *args: Any, **kwargs: Any) -> Any:
         """convertToTweakNodePlug(plug) -> bool
 
         Check if a tweak node is connected to this node. If it is, then reset the supplied plug to contain the controlPoints attribute on the tweak node.
@@ -14955,7 +16869,7 @@ class MPxSurfaceShape(MPxNode):
 
         * plug (MPlug) - plug which will be set to point to the associated tweak node plug if a tweak node is connected
         """
-    def createFullRenderGroup(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def createFullRenderGroup(self, *args: Any, **kwargs: Any) -> Any:
         """createFullRenderGroup() -> MObject
 
         Returns a component containing all of renderable elements in the shape.
@@ -14963,7 +16877,7 @@ class MPxSurfaceShape(MPxNode):
 
         This method is supposed to return non-null object only if the dag object contains renderable components. Type of the return component should is the same as the one returned by MPxSurfaceShape::renderGroupComponentType().
         """
-    def createFullVertexGroup(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def createFullVertexGroup(self, *args: Any, **kwargs: Any) -> Any:
         """createFullVertexGroup() -> MObject
 
         Returns a component containing all of the vertices in the shape.
@@ -14971,7 +16885,7 @@ class MPxSurfaceShape(MPxNode):
 
         This method is supposed to return non-null object only if the dag object contains vertices/CVs (control points), so derived classes that do should override this method.
         """
-    def deleteComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deleteComponents(self, *args: Any, **kwargs: Any) -> Any:
         """deleteComponents(componentList, undoInfo) -> bool
 
         Returns True if this method was successful, False otherwise.
@@ -14980,21 +16894,21 @@ class MPxSurfaceShape(MPxNode):
         * componentList (MObjectArray) - List of components to be deleted
         * undoInfo (MDoubleArray) - Values used for undo purposes
         """
-    def excludeAsPluginShape(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def excludeAsPluginShape(self, *args: Any, **kwargs: Any) -> Any:
         """excludeAsPluginShape() -> bool
 
         A Maya viewport can be set to not display "Plugin Shapes", which means shapes derived from MPxSurfaceShape. By overriding excludeAsPluginShape() to return False, you can change that behaviour so that this shape is still displayed even when the display of "Plugin Shapes" is disabled.
         The default implementation returns True.
         Returns True to have this shape obey the "Plugin Shapes" settings in the viewport's "Show" menu; False to have it ignore that setting.
         """
-    def geometryData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def geometryData(self, *args: Any, **kwargs: Any) -> Any:
         """geometryData() -> MObject
 
         Returns the geometry data of the shape. The geometry data must be derived from the MPxGeometryData class.
 
         The data is used by Maya to add, edit and query component grouping (set) information for the shape. This set information is stored and managed by Maya's shape base class, geometryShape.
         """
-    def geometryIteratorSetup(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def geometryIteratorSetup(self, *args: Any, **kwargs: Any) -> Any:
         """geometryIteratorSetup(componentList, components, forReadOnly=False) -> MPxGeometryIterator
 
         This method should be overridden by the user to return a geometry iterator compatible with the user's geometry.
@@ -15007,19 +16921,19 @@ class MPxSurfaceShape(MPxNode):
         * components (MObject) - the components to be iterated over
         * forReadOnly (bool) - specifies whether the iterator is for read-only
         """
-    def getComponentSelectionMask(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getComponentSelectionMask(self, *args: Any, **kwargs: Any) -> Any:
         """getComponentSelectionMask() -> MSelectionMask
 
         Returns the selection mask of the shape.
         This routine must be overridden if the shape is to support interactive component selection in Viewport 2.0 and should provide information about the selection mask of the shape component.
         """
-    def getShapeSelectionMask(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getShapeSelectionMask(self, *args: Any, **kwargs: Any) -> Any:
         """getShapeSelectionMask() -> MSelectionMask
 
         Returns the selection mask of the shape.
         This routine must be overridden if the shape is to support interactive object selection in Viewport 2.0 and should provide information about the selection mask of the shape.
         """
-    def getWorldMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getWorldMatrix(self, *args: Any, **kwargs: Any) -> Any:
         """getWorldMatrix(block, instanceGeom) -> MMatrix
 
         Returns MMatrix which takes a point from local object space to world space.
@@ -15027,7 +16941,7 @@ class MPxSurfaceShape(MPxNode):
         * block (MDataBlock) - a MDataBlock
         * instanceGeom (int) - the instance this MPxSurfaceShape corresponds to
         """
-    def hasActiveComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasActiveComponents(self, *args: Any, **kwargs: Any) -> Any:
         """hasActiveComponents() -> bool
 
         This method is used to determine whether or not the shape has active (selected) components.
@@ -15036,7 +16950,7 @@ class MPxSurfaceShape(MPxNode):
     intermediateObject: MObject = ...
     inverseMatrix: MObject = ...
 
-    def isBounded(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isBounded(self, *args: Any, **kwargs: Any) -> Any:
         """isBounded() -> bool
 
         This method should be overridden to return True if the user supplies a bounding box routine.  Supplying a bounding box routine makes refresh and selection more efficient.
@@ -15054,14 +16968,14 @@ class MPxSurfaceShape(MPxNode):
         """
     isTemplated: MObject = ...
 
-    def localShapeInAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def localShapeInAttr(self, *args: Any, **kwargs: Any) -> Any:
         """localShapeInAttr() -> MObject
 
         Returns the attribute containing the shape's input geometry in local space.
 
         This method will be called by Maya to determine if the shape has construction history and must be overridden if the shape is to support deformers.
         """
-    def localShapeOutAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def localShapeOutAttr(self, *args: Any, **kwargs: Any) -> Any:
         """localShapeOutAttr() -> MObject
 
         Returns the attribute containing the shape's output geometry in local space.
@@ -15074,7 +16988,7 @@ class MPxSurfaceShape(MPxNode):
     mControlValueZ: MObject = ...
     mHasHistoryOnCreate: MObject = ...
 
-    def match(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def match(self, *args: Any, **kwargs: Any) -> Any:
         """match(mask, componentList) -> bool
 
         This method is used to check for matches between a selection type (or mask) and a given component. If your shape has components representing attributes then this method is used to match up your components with selection masks.
@@ -15084,7 +16998,7 @@ class MPxSurfaceShape(MPxNode):
         * mask (MSelectionMask) - the selection mask to test against
         * componentList (MObjectArray) - a list of components to be tested
         """
-    def matchComponent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def matchComponent(self, *args: Any, **kwargs: Any) -> Any:
         """matchComponent(item, spec, list) -> int
 
         This method is used to convert the string representation of a component into a component object and to validate that the indices.
@@ -15107,7 +17021,7 @@ class MPxSurfaceShape(MPxNode):
         """
     matrix: MObject = ...
 
-    def newControlPointComponent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def newControlPointComponent(self, *args: Any, **kwargs: Any) -> Any:
         """newControlPointComponent() -> MObject
 
         The default action of this method is to return an MFnSingleIndexedComponent (of type MFn::kMeshVertComponent) in order to support rigid skinning binds.
@@ -15134,7 +17048,7 @@ class MPxSurfaceShape(MPxNode):
     parentInverseMatrix: MObject = ...
     parentMatrix: MObject = ...
 
-    def pointAtParm(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def pointAtParm(self, *args: Any, **kwargs: Any) -> Any:
         """pointAtParm(atThisParm, evaluatedPoint) -> bool
 
         This method is used by Maya in functions (such as select) that require point at parameter values. This only makes sense for parametric surfaces such as NURBS.
@@ -15143,7 +17057,7 @@ class MPxSurfaceShape(MPxNode):
         * atThisParm (MPoint) - the parameter to check
         * evaluatedPoint [OUT] (MPoint) - the surface point
         """
-    def renderGroupComponentType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def renderGroupComponentType(self, *args: Any, **kwargs: Any) -> Any:
         """renderGroupComponentType() -> int
 
         This method is used to return the type of renderable components for this shape. It should return a type among MFn::kMeshPolygonComponent, MFn::kSubdivFaceComponent and MFn::kSurfaceFaceComponent, which is used in the creation of per-face/patch shader assignment.
@@ -15151,7 +17065,7 @@ class MPxSurfaceShape(MPxNode):
         Returns the type of renderable components for this shape.
         See MFnSet.addMember()
         """
-    def transformUsing(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def transformUsing(self, *args: Any, **kwargs: Any) -> Any:
         """transformUsing(matrix, componentList, cachingMode=None, pointCache=None) -> self
 
         Transform the given components using the specified transformation matrix.
@@ -15169,7 +17083,7 @@ class MPxSurfaceShape(MPxNode):
           kUpdatePoints               Transform and update the points in the point cache.
           kTransformOriginalPoints    Transform using use the original pre-transformation values stored in the pointCache.
         """
-    def tweakUsing(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def tweakUsing(self, *args: Any, **kwargs: Any) -> Any:
         """tweakUsing(matrix, componentList, cachingMode, pointCache, handle) -> self
 
         Transform the given components using the specified transformation matrix.
@@ -15183,7 +17097,7 @@ class MPxSurfaceShape(MPxNode):
 
         See transformUsing() for a list of valid caching mode
         """
-    def undeleteComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def undeleteComponents(self, *args: Any, **kwargs: Any) -> Any:
         """undeleteComponents(componentList, undoInfo) -> bool
 
         This method should be overridden if the shape is to support undeletion of components. A list of components to be deleted will be passed in as well as an array of doubles where information about each deleted component is stored for undo purposes. A typical use for this array is to store knot values or weights for control points that are deleted.
@@ -15194,7 +17108,7 @@ class MPxSurfaceShape(MPxNode):
         """
     useObjectColor: MObject = ...
 
-    def vertexOffsetDirection(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def vertexOffsetDirection(self, *args: Any, **kwargs: Any) -> Any:
         """vertexOffsetDirection(component, direction, mode, normalize) -> bool
 
         This method should be overridden if the shape supports components that can be moved in the direction of the normal or UV's using the move vertex normal tool.
@@ -15217,7 +17131,7 @@ class MPxSurfaceShape(MPxNode):
         """
     visibility: MObject = ...
 
-    def weightedTransformUsing(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def weightedTransformUsing(self, *args: Any, **kwargs: Any) -> Any:
         """weightedTransformUsing(xform, space, componentList, cachingMode, pointCache, freezePlane) -> self
 
         Transform the given components with interpolation using the specified transformation matrix.
@@ -15233,7 +17147,7 @@ class MPxSurfaceShape(MPxNode):
 
         See transformUsing() for a list of valid caching mode
         """
-    def weightedTweakUsing(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def weightedTweakUsing(self, *args: Any, **kwargs: Any) -> Any:
         """weightedTweakUsing(xform, space, componentList, cachingMode, pointCache, freezePlane, handle) -> self
 
         Transform the given components with interpolation using the specified transformation matrix.
@@ -15255,7 +17169,7 @@ class MPxSurfaceShape(MPxNode):
     worldInverseMatrix: MObject = ...
     worldMatrix: MObject = ...
 
-    def worldShapeOutAttr(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def worldShapeOutAttr(self, *args: Any, **kwargs: Any) -> Any:
         """worldShapeOutAttr() -> MObject
 
         Returns the attribute containing the shape's output geometry in world space.
@@ -15264,48 +17178,104 @@ class MPxSurfaceShape(MPxNode):
         """
 
 class MQuaternion:
-    def asAxisAngle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __add__(self, value: Any) -> Any:
+        """Return self+value."""
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    __doc__: str = ...
+
+    def __eq__(self, value: Any) -> Any:
+        """Return self==value."""
+    def __ge__(self, value: Any) -> Any:
+        """Return self>=value."""
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __gt__(self, value: Any) -> Any:
+        """Return self>value."""
+    __hash__: NoneType = ...
+
+    def __imul__(self, value: Any) -> Any:
+        """Return self*=value."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __le__(self, value: Any) -> Any:
+        """Return self<=value."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __lt__(self, value: Any) -> Any:
+        """Return self<value."""
+    def __mul__(self, value: Any) -> Any:
+        """Return self*value."""
+    def __ne__(self, value: Any) -> Any:
+        """Return self!=value."""
+    def __neg__(self) -> Any:
+        """-self"""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __radd__(self, value: Any) -> Any:
+        """Return value+self."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __rmul__(self, value: Any) -> Any:
+        """Return value*self."""
+    def __rsub__(self, value: Any) -> Any:
+        """Return value-self."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def __sub__(self, value: Any) -> Any:
+        """Return self-value."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def asAxisAngle(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the rotation as a tuple containing an axis vector and an angle in radians about that axis."""
-    def asEulerRotation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asEulerRotation(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the rotation as an equivalent MEulerRotation."""
-    def asMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asMatrix(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the rotation as an equivalent rotation matrix."""
-    def conjugate(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def conjugate(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the conjugate of this quaternion (i.e. x, y and z components negated)."""
-    def conjugateIt(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def conjugateIt(self, *args: Any, **kwargs: Any) -> Any:
         """In-place conjugation (i.e. negates the x, y and z components)."""
-    def exp(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def exp(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a new quaternion containing the exponent of this one."""
-    def inverse(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def inverse(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a new quaternion containing the inverse of this one."""
-    def invertIt(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def invertIt(self, *args: Any, **kwargs: Any) -> Any:
         """In-place inversion."""
-    def isEquivalent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isEquivalent(self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the distance between the two quaternions (in quaternion space) is less than or equal to the given tolerance."""
     kIdentity: MQuaternion = ...
     kTolerance: float = ...
 
-    def log(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def log(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a new quaternion containing the natural log of this one."""
-    def negateIt(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def negateIt(self, *args: Any, **kwargs: Any) -> Any:
         """In-place negation of the x, y, z and w components."""
-    def normal(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def normal(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a new quaternion containing the normalized version of this one (i.e. scaled to unit length)."""
-    def normalizeIt(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def normalizeIt(self, *args: Any, **kwargs: Any) -> Any:
         """In-place normalization (i.e. scales the quaternion to unit length)."""
-    def setToXAxis(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setToXAxis(self, *args: Any, **kwargs: Any) -> Any:
         """Set this quaternion to be equivalent to a rotation of a given angle, in radians, about the X-axis."""
-    def setToYAxis(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setToYAxis(self, *args: Any, **kwargs: Any) -> Any:
         """Set this quaternion to be equivalent to a rotation of a given angle, in radians, about the Y-axis."""
-    def setToZAxis(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setToZAxis(self, *args: Any, **kwargs: Any) -> Any:
         """Set this quaternion to be equivalent to a rotation of a given angle, in radians, about the Z-axis."""
-    def setValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setValue(self, *args: Any, **kwargs: Any) -> Any:
         """Set the value of this quaternion to that of the specified MQuaternion, MEulerRotation, MMatrix or MVector and angle."""
-    def slerp(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def slerp(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the quaternion at a given interpolation value along the shortest path between two quaternions."""
-    def squad(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def squad(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the quaternion at a given interpolation value along a cubic curve segment in quaternion space."""
-    def squadPt(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def squadPt(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a new quaternion representing an intermediate point which when used with squad() will produce a C1 continuous spline."""
     @property
     def w(*args: Any, **kwargs: Any) -> Any:
@@ -15333,21 +17303,27 @@ class MQuaternion:
         """Imaginary Z component"""
 
 class MRampAttribute:
-    def addEntries(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addEntries(self, *args: Any, **kwargs: Any) -> Any:
         """Adds entries to the ramp."""
-    def createColorRamp(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def createColorRamp(self, *args: Any, **kwargs: Any) -> Any:
         """Creates and returns a new color ramp attribute."""
-    def createCurveRamp(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def createCurveRamp(self, *args: Any, **kwargs: Any) -> Any:
         """Creates and returns a new curve ramp attribute."""
-    def createRamp(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def createRamp(self, *args: Any, **kwargs: Any) -> Any:
         """Creates and returns a new color or curve ramp attribute initialized with values."""
-    def deleteEntries(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deleteEntries(self, *args: Any, **kwargs: Any) -> Any:
         """Removes from the ramp those entries with the specified indices."""
-    def getEntries(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getEntries(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a tuple containing all of the entries in the ramp."""
-    def getValueAtPosition(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getValueAtPosition(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the value of the entry at the given position."""
-    def hasIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasIndex(self, *args: Any, **kwargs: Any) -> Any:
         """Return true if an entry is defined at this index."""
     @property
     def isColorRamp(*args: Any, **kwargs: Any) -> Any:
@@ -15366,29 +17342,35 @@ class MRampAttribute:
     kSmooth: int = ...
     kSpline: int = ...
 
-    def numEntries(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numEntries(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the number of entries in the ramp."""
-    def pack(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def pack(self, *args: Any, **kwargs: Any) -> Any:
         """Change the indices numbering by re-ordering them from 0."""
-    def setInterpolationAtIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setInterpolationAtIndex(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the interpolation of the entry at the given index."""
-    def setPositionAtIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setPositionAtIndex(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the position of the entry at the given index."""
-    def setRamp(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setRamp(self, *args: Any, **kwargs: Any) -> Any:
         """Set this ramp with one or multiple entries. Current entries are removed before adding the new one(s)."""
-    def setValueAtIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setValueAtIndex(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the value of the entry at the given index."""
-    def sort(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def sort(self, *args: Any, **kwargs: Any) -> Any:
         """Sort the ramp by position. Indices are also re-ordered during sort."""
 
 class MRichSelection:
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """clear() -> self
 
 
         Empties the rich selection.
         """
-    def getRawSymmetryMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getRawSymmetryMatrix(self, *args: Any, **kwargs: Any) -> Any:
         """getRawSymmetryMatrix() -> (MMatrix, space)
 
         Returns a tuple containing the raw symmetry matrix to use for the
@@ -15396,24 +17378,24 @@ class MRichSelection:
         space used by the matrix (see MSpace). The caller is responsible for
         handling any necessary transformation space conversions.
         """
-    def getSelection(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getSelection(self, *args: Any, **kwargs: Any) -> Any:
         """getSelection() -> MSelectionList
 
         Returns a copy of the non-symmetry component of the rich selection.
         """
-    def getSymmetry(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getSymmetry(self, *args: Any, **kwargs: Any) -> Any:
         """getSymmetry() -> MSelectionList
 
         Returns a copy of the symmetry component of the rich selection.
         """
-    def getSymmetryMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getSymmetryMatrix(self, *args: Any, **kwargs: Any) -> Any:
         """getSymmetryMatrix(MDagPath, space) -> MMatrix
 
         Returns the symmetry matrix to use for the symmetric component of
         the specified DAG object. The matrix will already be converted to
         use the specified transformation space (see MSpace).
         """
-    def getSymmetryPlane(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getSymmetryPlane(self, *args: Any, **kwargs: Any) -> Any:
         """getSymmetryPlane(MDagPath, space) -> MPlane
 
         Returns the plane of symmetry, in the specified transformation space
@@ -15422,14 +17404,16 @@ class MRichSelection:
         significance. Specifically, having a positive offset from the plane
         does not imply a point is part of the non-symmetric selection.
         """
-    def setSelection(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setSelection(self, *args: Any, **kwargs: Any) -> Any:
         """setSelection(MSelectionList) -> self
 
         Sets the non-symmetry component of the rich selection.
         """
 
 class MSceneMessage(MMessage):
-    def addCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def addCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addCallback(message, function, clientData=None) -> id
 
         Adds a new callback for the specified scene message.
@@ -15512,7 +17496,7 @@ class MSceneMessage(MMessage):
          * function - callable which will be passed the clientData object
          * clientData - user data that will be passed to the callback function
         """
-    def addCheckCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addCheckCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addCheckCallback(message, function, clientData=None) -> id
 
         This function adds a new callback for the specified scene message.
@@ -15535,7 +17519,7 @@ class MSceneMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addCheckFileCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addCheckFileCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addCheckFileCallback(message, function, clientData=None) -> id
 
         This function adds a new callback for the specified scene message. This
@@ -15561,7 +17545,7 @@ class MSceneMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addCheckReferenceCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addCheckReferenceCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addCheckReferenceCallback(message, function, clientData=None) -> id
 
         This function adds a new callback for the specified scene message.
@@ -15580,7 +17564,7 @@ class MSceneMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addConnectionFailedCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addConnectionFailedCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addConnectionFailedCallback(function, clientData=None) -> id
 
         This method registers a callback that is called when a connection was
@@ -15601,7 +17585,7 @@ class MSceneMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addReferenceCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addReferenceCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addReferenceCallback(message, function, clientData=None) -> id
 
         This function adds a new callback for the specified scene message.
@@ -15626,7 +17610,7 @@ class MSceneMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def addStringArrayCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addStringArrayCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addStringArrayCallback(message, function, clientData=None) -> id
 
         Adds a new callback which takes a string array argument, in addition to
@@ -15702,7 +17686,15 @@ class MSceneMessage(MMessage):
     kSoftwareRenderInterrupted: int = ...
 
 class MSelectionList:
-    def add(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def add(self, *args: Any, **kwargs: Any) -> Any:
         """add(pattern, searchChildNamespaces=False) -> self
         add(item, mergeWithExisting=True) -> self
 
@@ -15714,17 +17706,17 @@ class MSelectionList:
         item can be a plug (MPlug), a node (MObject), a DAG path (MDagPath)
         or a component (tuple of (MDagPath, MObject) ).
         """
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """clear() -> self
 
         Empties the selection list.
         """
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """copy(src) -> self
 
         Replaces the contents of the selection list with a copy of those from src (MSelectionList).
         """
-    def getComponent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getComponent(self, *args: Any, **kwargs: Any) -> Any:
         """getComponent(index) -> (MDagPath, MObject)
 
         Returns the index'th item of the list as a component, represented by
@@ -15734,14 +17726,14 @@ class MSelectionList:
         neither a DAG path nor a component. Raises IndexError if index is
         out of range.
         """
-    def getDagPath(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getDagPath(self, *args: Any, **kwargs: Any) -> Any:
         """getDagPath(index) -> MDagPath
 
         Returns the DAG path associated with the index'th item of the list.
         Raises TypeError if the item is neither a DAG path nor a component.
         Raises IndexError if index is out of range.
         """
-    def getDependNode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getDependNode(self, *args: Any, **kwargs: Any) -> Any:
         """getDependNode(index) -> MObject
 
         Returns the node associated with the index'th item, whether it be a
@@ -15749,7 +17741,7 @@ class MSelectionList:
         Raises kFailure if there is no dependency node associated with the current item.
         Raises IndexError if index is out of range.
         """
-    def getPlug(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPlug(self, *args: Any, **kwargs: Any) -> Any:
         """getPlug(index) -> MPluggetPlug(index, convertComponents) -> MPlug
 
         Returns the index'th item of the list as a plug. Raises TypeError if
@@ -15757,7 +17749,7 @@ class MSelectionList:
         If convertComponents is True then components in the selection list that have a corresponding plug will return that instead.
         Note: This only works if the component selection can be converted into a single plug - single component or all components selected.
         """
-    def getSelectionStrings(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getSelectionStrings(self, *args: Any, **kwargs: Any) -> Any:
         """getSelectionStrings(index=None) -> (string, string, ...)
 
         Returns a tuple containing the string representation of the
@@ -15768,7 +17760,7 @@ class MSelectionList:
         then the string representations of all the items in the selection
         list are returned. Raises IndexError if index is out of bounds.
         """
-    def hasItem(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasItem(self, *args: Any, **kwargs: Any) -> Any:
         """hasItem(item) -> bool
 
         Returns True if the given item is on the selection list. For a
@@ -15776,19 +17768,19 @@ class MSelectionList:
         be on the list. A component is passed as a tuple containing the
         MDagPath of the DAG node and an MObject containing the component.
         """
-    def hasItemPartly(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasItemPartly(self, *args: Any, **kwargs: Any) -> Any:
         """hasItemPartly(dagPath, component) -> bool
 
         Returns True if at least one of the component's elements is on the
         selection list. Raises TypeError if dagPath is invalid or component
         does not contain a component.
         """
-    def intersect(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def intersect(self, *args: Any, **kwargs: Any) -> Any:
         """intersect(other, expandToLeaves=False) -> self
 
         Modify this list to contain the intersection of itself and the given list.
         """
-    def isEmpty(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isEmpty(self, *args: Any, **kwargs: Any) -> Any:
         """isEmpty() -> bool
 
         Returns True if the selection list is empty.
@@ -15797,12 +17789,12 @@ class MSelectionList:
     kRemoveFromList: int = ...
     kXORWithList: int = ...
 
-    def length(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def length(self, *args: Any, **kwargs: Any) -> Any:
         """length() -> int
 
         Returns the number of items on the selection list.
         """
-    def merge(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def merge(self, *args: Any, **kwargs: Any) -> Any:
         """merge(other, strategy=kMergeNormal) -> self
         merge(dagPath, component, strategy=kMergeNormal) -> self
 
@@ -15812,13 +17804,13 @@ class MSelectionList:
         The second version merges the specified component with those already
         on the list.
         """
-    def remove(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def remove(self, *args: Any, **kwargs: Any) -> Any:
         """remove(index) -> self
 
         Removes the index'th item from the list. Raises IndexError if the
         index is out of range.
         """
-    def replace(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def replace(self, *args: Any, **kwargs: Any) -> Any:
         """replace(index, newItem) -> self
 
         Replaces the index'th item on the list with a new item. A component
@@ -15826,7 +17818,7 @@ class MSelectionList:
         MObject containing the component. Raises IndexError if the index is
         out of range.
         """
-    def toggle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def toggle(self, *args: Any, **kwargs: Any) -> Any:
         """toggle(dagPath, component) -> self
 
         Removes from the list those elements of the given component which
@@ -15834,7 +17826,13 @@ class MSelectionList:
         """
 
 class MSelectionMask:
-    def addMask(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addMask(self, *args: Any, **kwargs: Any) -> Any:
         """addMask(selType) -> self
 
         Add the specified selection type to this mask.
@@ -15926,28 +17924,28 @@ class MSelectionMask:
           kSelectDynamicConstraints
           kSelectNParticles
         """
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """copy(source) -> self
 
         Copy data from source selection mask.
 
         * source (MSelectionMask) - The source selection mask to copy from
         """
-    def deregisterSelectionType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deregisterSelectionType(self, *args: Any, **kwargs: Any) -> Any:
         """deregisterSelectionType(selTypeName) -> bool
 
         Unregisters a previously registered selection type.
 
         * selTypeName (string) - Name of the selection type.
         """
-    def getSelectionTypePriority(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getSelectionTypePriority(self, *args: Any, **kwargs: Any) -> Any:
         """getSelectionTypePriority(selTypeName) -> int
 
         Gets the selection priority corresponding to a given selection type.
 
         * selTypeName (string) - Name of the selection type.
         """
-    def intersects(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def intersects(self, *args: Any, **kwargs: Any) -> Any:
         """intersects(mask) -> bool
         intersects(selType) -> bool
 
@@ -16041,7 +18039,7 @@ class MSelectionMask:
     kSelectVertices: int = ...
     kSelectXYZLocators: int = ...
 
-    def registerSelectionType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def registerSelectionType(self, *args: Any, **kwargs: Any) -> Any:
         """registerSelectionType(selTypeName, priority=0) -> bool
 
         Registers a new selection type. It is perfectly legal for 2 plug-ins to register the same selection type.
@@ -16053,7 +18051,7 @@ class MSelectionMask:
         * selTypeName (string) - Name of the selection type.
         * priority (int) - Priority of the selection type.
         """
-    def setMask(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setMask(self, *args: Any, **kwargs: Any) -> Any:
         """setMask(mask) -> self
         setMask(selType) -> self
 
@@ -16064,6 +18062,7 @@ class MSelectionMask:
         """
 
 class MSpace:
+    __doc__: str = ...
     kInvalid: int = ...
     kLast: int = ...
     kObject: int = ...
@@ -16073,9 +18072,23 @@ class MSpace:
     kWorld: int = ...
 
 class MSyntax:
-    def addArg(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def addArg(self, *args: Any, **kwargs: Any) -> Any:
         """Add a command argument."""
-    def addFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addFlag(self, *args: Any, **kwargs: Any) -> Any:
         """Add a flag and its arguments."""
     @property
     def enableEdit(*args: Any, **kwargs: Any) -> Any:
@@ -16107,25 +18120,81 @@ class MSyntax:
     kTime: int = ...
     kUnsigned: int = ...
 
-    def makeFlagMultiUse(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def makeFlagMultiUse(self, *args: Any, **kwargs: Any) -> Any:
         """Set whether a flag may be used multiple times on the command line."""
-    def makeFlagQueryWithFullArgs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def makeFlagQueryWithFullArgs(self, *args: Any, **kwargs: Any) -> Any:
         """Set whether a flag requires its args when queried."""
-    def maxObjects(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def maxObjects(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the maximum number of objects which can be passed to the command."""
-    def minObjects(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def minObjects(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the minimum number of objects which can be passed to the command."""
-    def setMaxObjects(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setMaxObjects(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the maximum number of objects which can be passed to the command."""
-    def setMinObjects(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setMinObjects(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the minimum number of objects which can be passed to the command."""
-    def setObjectType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setObjectType(self, *args: Any, **kwargs: Any) -> Any:
         """Set the type and number of objects to be passed to the command."""
-    def useSelectionAsDefault(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def useSelectionAsDefault(self, *args: Any, **kwargs: Any) -> Any:
         """If set to True then when no objects are provided on the command-line Maya will pass the current selection instead."""
 
 class MTime:
-    def asUnits(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __add__(self, value: Any) -> Any:
+        """Return self+value."""
+    __doc__: str = ...
+
+    def __eq__(self, value: Any) -> Any:
+        """Return self==value."""
+    def __ge__(self, value: Any) -> Any:
+        """Return self>=value."""
+    def __gt__(self, value: Any) -> Any:
+        """Return self>value."""
+    __hash__: NoneType = ...
+
+    def __iadd__(self, value: Any) -> Any:
+        """Return self+=value."""
+    def __imul__(self, value: Any) -> Any:
+        """Return self*=value."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __isub__(self, value: Any) -> Any:
+        """Return self-=value."""
+    def __itruediv__(self, value: Any) -> Any:
+        """Return self/=value."""
+    def __le__(self, value: Any) -> Any:
+        """Return self<=value."""
+    def __lt__(self, value: Any) -> Any:
+        """Return self<value."""
+    def __mul__(self, value: Any) -> Any:
+        """Return self*value."""
+    def __ne__(self, value: Any) -> Any:
+        """Return self!=value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __radd__(self, value: Any) -> Any:
+        """Return value+self."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __rmul__(self, value: Any) -> Any:
+        """Return value*self."""
+    def __rsub__(self, value: Any) -> Any:
+        """Return value-self."""
+    def __rtruediv__(self, value: Any) -> Any:
+        """Return value/self."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def __sub__(self, value: Any) -> Any:
+        """Return self-value."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def __truediv__(self, value: Any) -> Any:
+        """Return self/value."""
+    def asUnits(self, *args: Any, **kwargs: Any) -> Any:
         """Return the time value, converted to the specified units."""
     k100FPS: int = ...
     k10FPS: int = ...
@@ -16188,11 +18257,11 @@ class MTime:
     kShowScan: int = ...
     kUserDef: int = ...
 
-    def setUIUnit(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setUIUnit(self, *args: Any, **kwargs: Any) -> Any:
         """Change the units used to display time in Maya's UI."""
-    def ticksPerSecond(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def ticksPerSecond(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the number of ticks per second, the smallest unit of time available."""
-    def uiUnit(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def uiUnit(self, *args: Any, **kwargs: Any) -> Any:
         """Return the units used to display time in Maya's UI."""
     @property
     def unit(*args: Any, **kwargs: Any) -> Any:
@@ -16208,17 +18277,55 @@ class MTime:
         """Value of the time in the current units."""
 
 class MTimeArray:
-    def append(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __add__(self, value: Any) -> Any:
+        """Return self+value."""
+    def __contains__(self, key: Any) -> Any:
+        """Return key in self."""
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    __doc__: str = ...
+
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __iadd__(self, value: Any) -> Any:
+        """Implement self+=value."""
+    def __imul__(self, value: Any) -> Any:
+        """Implement self*=value."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __mul__(self, value: Any) -> Any:
+        """Return self*value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __rmul__(self, value: Any) -> Any:
+        """Return value*self."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """Remove all elements from the array."""
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """Replace the array contents with that of another or of a compatible Python sequence."""
-    def insert(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def insert(self, *args: Any, **kwargs: Any) -> Any:
         """Insert a new value into the array at the given index."""
-    def remove(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def remove(self, *args: Any, **kwargs: Any) -> Any:
         """Remove an element from the array."""
-    def setLength(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setLength(self, *args: Any, **kwargs: Any) -> Any:
         """Grow or shrink the array to contain a specific number of elements."""
     @property
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
@@ -16228,24 +18335,54 @@ class MTimeArray:
         """Number of elements by which to grow the array when necessary."""
 
 class MTimeRange:
-    def contains(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __eq__(self, value: Any) -> Any:
+        """Return self==value."""
+    def __ge__(self, value: Any) -> Any:
+        """Return self>=value."""
+    def __gt__(self, value: Any) -> Any:
+        """Return self>value."""
+    __hash__: NoneType = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __le__(self, value: Any) -> Any:
+        """Return self<=value."""
+    def __lt__(self, value: Any) -> Any:
+        """Return self<value."""
+    def __ne__(self, value: Any) -> Any:
+        """Return self!=value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __or__(self, value: Any) -> Any:
+        """Return self|value."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __ror__(self, value: Any) -> Any:
+        """Return value|self."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def contains(self, *args: Any, **kwargs: Any) -> Any:
         """contains(MTime) -> boolcontains(MTime, MTime) -> bool
 
         Checks if the given time point or interval is contained in this time range.
         """
-    def empty(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def empty(self, *args: Any, **kwargs: Any) -> Any:
         """empty() -> bool
 
         Checks if this time range is an empty set
         """
-    def intersects(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def intersects(self, *args: Any, **kwargs: Any) -> Any:
         """intersects(MTime, MTime) -> bool
 
         Checks if the given interval intersects with this time range.
         """
 
 class MTimerMessage(MMessage):
-    def addTimerCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def addTimerCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addTimerCallback(period, function, clientData=None) -> id
 
         This method registers a callback which is called repeatedly with a
@@ -16274,15 +18411,35 @@ class MTimerMessage(MMessage):
         """
 
 class MTransformationMatrix:
-    def asMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __eq__(self, value: Any) -> Any:
+        """Return self==value."""
+    def __ge__(self, value: Any) -> Any:
+        """Return self>=value."""
+    def __gt__(self, value: Any) -> Any:
+        """Return self>value."""
+    __hash__: NoneType = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __le__(self, value: Any) -> Any:
+        """Return self<=value."""
+    def __lt__(self, value: Any) -> Any:
+        """Return self<value."""
+    def __ne__(self, value: Any) -> Any:
+        """Return self!=value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def asMatrix(self, *args: Any, **kwargs: Any) -> Any:
         """Interpolates between the identity transformation and that currently in the object, returning the result as an MMatrix."""
-    def asMatrixInverse(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asMatrixInverse(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the inverse of the matrix representing the transformation."""
-    def asRotateMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asRotateMatrix(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the matrix which takes points from object space to the space immediately following the scale/shear/rotation transformations."""
-    def asScaleMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asScaleMatrix(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the matrix which takes points from object space to the space immediately following scale and shear transformations."""
-    def isEquivalent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isEquivalent(self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if this transformation's matrix is within tolerance of another's matrix."""
     kIdentity: MTransformationMatrix = ...
     kInvalid: int = ...
@@ -16295,273 +18452,370 @@ class MTransformationMatrix:
     kZXY: int = ...
     kZYX: int = ...
 
-    def reorderRotation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def reorderRotation(self, *args: Any, **kwargs: Any) -> Any:
         """Reorders the transformation's rotate component to give the same overall rotation but using a new order or rotations."""
-    def rotateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rotateBy(self, *args: Any, **kwargs: Any) -> Any:
         """Adds to the transformation's rotation component."""
-    def rotateByComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rotateByComponents(self, *args: Any, **kwargs: Any) -> Any:
         """Adds to the transformation's rotation component."""
-    def rotatePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rotatePivot(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transformation's rotate pivot component."""
-    def rotatePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rotatePivotTranslation(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transformation's rotate pivot translation component."""
-    def rotation(self: Self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the transformation's rotation component as either an Euler rotation or a quaternion."""
-    def rotationComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
+    @overload
+    def rotation(self, asQuaternion: Literal[True]) -> MQuaternion: ...
+    @overload
+    def rotation(self, asQuaternion: Literal[False] = ...) -> MEulerRotation:
+        """Returns the transform's rotation as an MEulerRotation or MQuaternion."""
+    def rotationComponents(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the four components of the transformation's rotate component."""
-    def rotationOrder(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rotationOrder(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the order of rotations when the transformation's rotate component is expressed as an euler rotation."""
-    def rotationOrientation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rotationOrientation(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a quaternion which orients the local rotation space."""
-    def scale(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def scale(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transformation's scale components."""
-    def scaleBy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def scaleBy(self, *args: Any, **kwargs: Any) -> Any:
         """Multiplies the transformation's scale components by the three floats in the provided sequence."""
-    def scalePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def scalePivot(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transformation's scale pivot component."""
-    def scalePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def scalePivotTranslation(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transformation's scale pivot translation component."""
-    def setRotatePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setRotatePivot(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transformation's rotate pivot component."""
-    def setRotatePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setRotatePivotTranslation(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transformation's rotate pivot translation component."""
-    def setRotation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setRotation(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transformation's rotation component."""
-    def setRotationComponents(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setRotationComponents(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transformation's rotate component from the four values in the provided sequence."""
-    def setRotationOrientation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setRotationOrientation(self, *args: Any, **kwargs: Any) -> Any:
         """Sets a quaternion which orients the local rotation space."""
-    def setScale(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setScale(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transformation's scale components to the three floats in the provided sequence."""
-    def setScalePivot(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setScalePivot(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transformation's scale pivot component."""
-    def setScalePivotTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setScalePivotTranslation(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transformation's scale pivot translation component."""
-    def setShear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setShear(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transformation's shear component."""
-    def setToRotationAxis(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setToRotationAxis(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transformation's rotate component to be a given axis vector and angle in radians."""
-    def setTranslation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setTranslation(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transformation's translation component."""
-    def shear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def shear(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transformation's shear components."""
-    def shearBy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def shearBy(self, *args: Any, **kwargs: Any) -> Any:
         """Multiplies the transformation's shear components by the three floats in the provided sequence."""
-    def translateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def translateBy(self, *args: Any, **kwargs: Any) -> Any:
         """Adds a vector to the transformation's translation component."""
-    def translation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def translation(self, space: MSpace) -> MVector:
         """Returns the transformation's translation component as a vector."""
 
 class MTypeId:
-    def id(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __eq__(self, value: Any) -> Any:
+        """Return self==value."""
+    def __ge__(self, value: Any) -> Any:
+        """Return self>=value."""
+    def __gt__(self, value: Any) -> Any:
+        """Return self>value."""
+    __hash__: NoneType = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __le__(self, value: Any) -> Any:
+        """Return self<=value."""
+    def __lt__(self, value: Any) -> Any:
+        """Return self<value."""
+    def __ne__(self, value: Any) -> Any:
+        """Return self!=value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def id(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the type id as a long."""
 
 class MURI:
-    def addQueryItem(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __eq__(self, value: Any) -> Any:
+        """Return self==value."""
+    def __ge__(self, value: Any) -> Any:
+        """Return self>=value."""
+    def __gt__(self, value: Any) -> Any:
+        """Return self>value."""
+    __hash__: NoneType = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __le__(self, value: Any) -> Any:
+        """Return self<=value."""
+    def __lt__(self, value: Any) -> Any:
+        """Return self<value."""
+    def __ne__(self, value: Any) -> Any:
+        """Return self!=value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def addQueryItem(self, *args: Any, **kwargs: Any) -> Any:
         """addQueryItem(key, value) -> self
 
         Add a key/value pair to the query string of the URI.
         """
-    def asString(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asString(self, *args: Any, **kwargs: Any) -> Any:
         """asString() -> string
 
         Returns the string representation of the URI.
         """
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """clear() -> self
 
         Clears the contents of the MURI object.
         """
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """copy(source) -> self
 
         Copy method. Assigns the value of one MURI to another.
 
         * source (MURI) - Existing MURI object to copy.
         """
-    def getAllQueryItemKeys(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getAllQueryItemKeys(self, *args: Any, **kwargs: Any) -> Any:
         """getAllQueryItemKeys() -> array
 
         Returns an array containing the keys from all query string pairs.
         """
-    def getAllQueryItemValues(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getAllQueryItemValues(self, *args: Any, **kwargs: Any) -> Any:
         """getAllQueryItemValues(key) -> array
 
         Returns an array containing the values from all query string pairs which have a given key.
         """
-    def getAuthority(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getAuthority(self, *args: Any, **kwargs: Any) -> Any:
         """getAuthority() -> string
 
         Returns the authority component of the URI.
         """
-    def getDirectory(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getDirectory(self, *args: Any, **kwargs: Any) -> Any:
         """getDirectory() -> string
 
         Returns just the file directory portion of the URI, without the file name.
         """
-    def getFileName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getFileName(self, *args: Any, **kwargs: Any) -> Any:
         """getFileName(bool includeExtension=True) -> string
 
         Returns just the file name portion of the URI, with or without the extension.
         """
-    def getFragment(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getFragment(self, *args: Any, **kwargs: Any) -> Any:
         """getFragment() -> string
 
         Returns the fragment component of the URI.
         """
-    def getHost(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getHost(self, *args: Any, **kwargs: Any) -> Any:
         """getHost() -> string
 
         Returns the host component of the URI.
         """
-    def getPassword(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPassword(self, *args: Any, **kwargs: Any) -> Any:
         """getPassword() -> string
 
         Returns the password component of the URI.
         """
-    def getPath(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPath(self, *args: Any, **kwargs: Any) -> Any:
         """getPath() -> string
 
         Returns the path component of the URI.
         """
-    def getPort(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPort(self, *args: Any, **kwargs: Any) -> Any:
         """getPort() -> int
 
         Returns the port component of the URI, or -1 if the port is not defined.
         """
-    def getQueryItemValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getQueryItemValue(self, *args: Any, **kwargs: Any) -> Any:
         """getQueryItemValue(key) -> string
 
         Returns the value from the first query string pair in the URI which has a given key.
         """
-    def getQueryPairDelimiter(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getQueryPairDelimiter(self, *args: Any, **kwargs: Any) -> Any:
         """getQueryPairDelimiter() -> string
 
         Returns the character used to delimit between key-value pairs in the query string of the URI.
         """
-    def getQueryValueDelimiter(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getQueryValueDelimiter(self, *args: Any, **kwargs: Any) -> Any:
         """getQueryValueDelimiter() -> string
 
         Returns the character used to delimit keys and values in the query string of the URI.
         """
-    def getScheme(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getScheme(self, *args: Any, **kwargs: Any) -> Any:
         """getScheme() -> string
 
         Returns the scheme of the URI.
         """
-    def getUserInfo(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getUserInfo(self, *args: Any, **kwargs: Any) -> Any:
         """getUserInfo() -> string
 
         Returns the user info component of the URI.
         """
-    def getUserName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getUserName(self, *args: Any, **kwargs: Any) -> Any:
         """getUserName() -> string
 
         Returns the user name component of the URI.
         """
-    def isEmpty(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isEmpty(self, *args: Any, **kwargs: Any) -> Any:
         """isEmpty() -> bool
 
         Determines if the URI does not contain any data.
         """
-    def isValid(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isValid(self, *args: Any, **kwargs: Any) -> Any:
         """isValid() -> bool
 
         Determines if the URI is valid.
         """
-    def isValidURI(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isValidURI(self, *args: Any, **kwargs: Any) -> Any:
         """isValidURI(uri) -> bool
 
         Determines if a string value represents a valid URI.
         """
-    def removeAllQueryItems(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeAllQueryItems(self, *args: Any, **kwargs: Any) -> Any:
         """removeAllQueryItems(int) -> self
 
         Removes all query string pairs having a given key from the URI.
         """
-    def removeQueryItem(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeQueryItem(self, *args: Any, **kwargs: Any) -> Any:
         """removeQueryItem(int) -> self
 
         Removes the first query string pair with a given key from the URI.
         """
-    def setAuthority(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setAuthority(self, *args: Any, **kwargs: Any) -> Any:
         """setAuthority(string) -> self
 
         Set the authority portion of the URI.
         """
-    def setDirectory(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDirectory(self, *args: Any, **kwargs: Any) -> Any:
         """setDirectory(string) -> self
 
         Sets just the directory portion of the URI (i.e. not including the filename).
         """
-    def setFileName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setFileName(self, *args: Any, **kwargs: Any) -> Any:
         """setFileName(string) -> self
 
         Sets just the filename portion of the URI (i.e. not including the directory).
         """
-    def setFragment(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setFragment(self, *args: Any, **kwargs: Any) -> Any:
         """setFragment(string) -> self
 
         Sets the fragment component of the URI.
         """
-    def setHost(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setHost(self, *args: Any, **kwargs: Any) -> Any:
         """setHost(string) -> self
 
         Set the host component of the URI.
         """
-    def setPassword(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setPassword(self, *args: Any, **kwargs: Any) -> Any:
         """setPassword(string) -> self
 
         Sets the password part of the user info component.
         """
-    def setPath(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setPath(self, *args: Any, **kwargs: Any) -> Any:
         """setPath(string) -> self
 
         Sets the path component of the URI.
         """
-    def setPort(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setPort(self, *args: Any, **kwargs: Any) -> Any:
         """setPort(int) -> self
 
         Set the port component of the URI.
         """
-    def setQueryDelimiters(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setQueryDelimiters(self, *args: Any, **kwargs: Any) -> Any:
         """setQueryDelimiters(valueDelimiter, pairDelimiter) -> self
 
         Sets the delimiter characters used in the query string of the URI.
         """
-    def setScheme(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setScheme(self, *args: Any, **kwargs: Any) -> Any:
         """setScheme(string) -> self
 
         Sets the scheme component of the URI.
         """
-    def setURI(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setURI(self, *args: Any, **kwargs: Any) -> Any:
         """setURI(uri) -> self
 
         Initialize the MURI from a string value.
         """
-    def setUserInfo(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setUserInfo(self, *args: Any, **kwargs: Any) -> Any:
         """setUserInfo(string) -> self
 
         Decomposes the userInfo string to fill out the userInfo-related component values.
         """
-    def setUserName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setUserName(self, *args: Any, **kwargs: Any) -> Any:
         """setUserName(string) -> self
 
         Sets the user name part of the user info component.
         """
 
 class MUint64Array:
-    def append(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __add__(self, value: Any) -> Any:
+        """Return self+value."""
+    def __contains__(self, key: Any) -> Any:
+        """Return key in self."""
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    __doc__: str = ...
+
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __iadd__(self, value: Any) -> Any:
+        """Implement self+=value."""
+    def __imul__(self, value: Any) -> Any:
+        """Implement self*=value."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __mul__(self, value: Any) -> Any:
+        """Return self*value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __rmul__(self, value: Any) -> Any:
+        """Return value*self."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """Remove all elements from the array."""
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """Replace the array contents with that of another or of a compatible Python sequence."""
-    def insert(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def insert(self, *args: Any, **kwargs: Any) -> Any:
         """Insert a new value into the array at the given index."""
-    def remove(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def remove(self, *args: Any, **kwargs: Any) -> Any:
         """Remove an element from the array."""
-    def setLength(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setLength(self, *args: Any, **kwargs: Any) -> Any:
         """Grow or shrink the array to contain a specific number of elements."""
     @property
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
@@ -16571,17 +18825,55 @@ class MUint64Array:
         """Number of elements by which to grow the array when necessary."""
 
 class MUintArray:
-    def append(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __add__(self, value: Any) -> Any:
+        """Return self+value."""
+    def __contains__(self, key: Any) -> Any:
+        """Return key in self."""
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    __doc__: str = ...
+
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __iadd__(self, value: Any) -> Any:
+        """Implement self+=value."""
+    def __imul__(self, value: Any) -> Any:
+        """Implement self*=value."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __mul__(self, value: Any) -> Any:
+        """Return self*value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __rmul__(self, value: Any) -> Any:
+        """Return value*self."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """Remove all elements from the array."""
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """Replace the array contents with that of another or of a compatible Python sequence."""
-    def insert(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def insert(self, *args: Any, **kwargs: Any) -> Any:
         """Insert a new value into the array at the given index."""
-    def remove(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def remove(self, *args: Any, **kwargs: Any) -> Any:
         """Remove an element from the array."""
-    def setLength(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setLength(self, *args: Any, **kwargs: Any) -> Any:
         """Grow or shrink the array to contain a specific number of elements."""
     @property
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
@@ -16591,7 +18883,13 @@ class MUintArray:
         """Number of elements by which to grow the array when necessary."""
 
 class MUserData:
-    def deleteAfterUse(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def deleteAfterUse(self, *args: Any, **kwargs: Any) -> Any:
         """deleteAfterUse() -> bool
 
         Returns whether or not this user data should be deleted immediately after use instead of being
@@ -16599,7 +18897,7 @@ class MUserData:
 
             DEPRECATED in 2022, deleteAfterUse is deprecated.
         """
-    def setDeleteAfterUse(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDeleteAfterUse(self, *args: Any, **kwargs: Any) -> Any:
         """setDeleteAfterUse(bool) -> self
 
         Sets whether or not this user data should be deleted immediately after use instead of being
@@ -16614,7 +18912,9 @@ class MUserData:
         """
 
 class MUserEventMessage(MMessage):
-    def addUserEventCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def addUserEventCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addUserEventCallback(eventName, function, clientData=None) -> id
 
         This method registers a callback for user-defined messages.
@@ -16630,7 +18930,7 @@ class MUserEventMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-    def deregisterUserEvent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deregisterUserEvent(self, *args: Any, **kwargs: Any) -> Any:
         """deregisterUserEvent(eventName)
 
         Removes the event type with the given event name.  If callbacks have been
@@ -16639,14 +18939,14 @@ class MUserEventMessage(MMessage):
 
          * eventName (string) - the name of the new event to deregister.
         """
-    def isUserEvent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isUserEvent(self, *args: Any, **kwargs: Any) -> Any:
         """isUserEvent(eventName) -> bool
 
         Checks if an event type exists with the given event name.
 
          * eventName (string) - the name of the new event to check.
         """
-    def postUserEvent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def postUserEvent(self, *args: Any, **kwargs: Any) -> Any:
         """postUserEvent(eventName, clientData=None)
 
         Notifies all callbacks attached to the given event type of the occurence
@@ -16660,7 +18960,7 @@ class MUserEventMessage(MMessage):
          * eventName (string) - the name of the new event.
          * clientData - User defined data.
         """
-    def registerUserEvent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def registerUserEvent(self, *args: Any, **kwargs: Any) -> Any:
         """registerUserEvent(eventName)
 
         Adds a new event type with the given string identifier.  The string
@@ -16672,35 +18972,129 @@ class MUserEventMessage(MMessage):
         """
 
 class MUuid:
-    def asString(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+
+    def __eq__(self, value: Any) -> Any:
+        """Return self==value."""
+    def __ge__(self, value: Any) -> Any:
+        """Return self>=value."""
+    def __gt__(self, value: Any) -> Any:
+        """Return self>value."""
+    __hash__: NoneType = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __le__(self, value: Any) -> Any:
+        """Return self<=value."""
+    def __lt__(self, value: Any) -> Any:
+        """Return self<value."""
+    def __ne__(self, value: Any) -> Any:
+        """Return self!=value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def asString(self, *args: Any, **kwargs: Any) -> Any:
         """asString() -> string
 
         Return the UUID as a string.
         """
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """copy(source) -> self
 
         Copy method. Assigns the value of one MUuid to another.
 
         * source (MUuid) - Existing MUuid object to copy.
         """
-    def generate(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def generate(self, *args: Any, **kwargs: Any) -> Any:
         """generate() -> self
 
         Generate a new UUID.
         """
-    def valid(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def valid(self, *args: Any, **kwargs: Any) -> Any:
         """valid() -> bool
 
         Return whether the UUID is valid.
         """
 
 class MVector:
-    def angle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __add__(self, value: Any) -> Any:
+        """Return self+value."""
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    __doc__: str = ...
+
+    def __eq__(self, value: Any) -> Any:
+        """Return self==value."""
+    def __ge__(self, value: Any) -> Any:
+        """Return self>=value."""
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __gt__(self, value: Any) -> Any:
+        """Return self>value."""
+    __hash__: NoneType = ...
+
+    def __iadd__(self, value: Any) -> Any:
+        """Return self+=value."""
+    def __imul__(self, value: Any) -> Any:
+        """Return self*=value."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __isub__(self, value: Any) -> Any:
+        """Return self-=value."""
+    def __itruediv__(self, value: Any) -> Any:
+        """Return self/=value."""
+    def __le__(self, value: Any) -> Any:
+        """Return self<=value."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __lt__(self, value: Any) -> Any:
+        """Return self<value."""
+    def __mul__(self, value: Any) -> Any:
+        """Return self*value."""
+    def __ne__(self, value: Any) -> Any:
+        """Return self!=value."""
+    def __neg__(self) -> Any:
+        """-self"""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __radd__(self, value: Any) -> Any:
+        """Return value+self."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __rmul__(self, value: Any) -> Any:
+        """Return value*self."""
+    def __rsub__(self, value: Any) -> Any:
+        """Return value-self."""
+    def __rtruediv__(self, value: Any) -> Any:
+        """Return value/self."""
+    def __rxor__(self, value: Any) -> Any:
+        """Return value^self."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def __sub__(self, value: Any) -> Any:
+        """Return self-value."""
+    def __truediv__(self, value: Any) -> Any:
+        """Return self/value."""
+    def __xor__(self, value: Any) -> Any:
+        """Return self^value."""
+    def angle(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the angle, in radians, between this vector and another."""
-    def isEquivalent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isEquivalent(self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if this vector and another are within a given tolerance of being equal."""
-    def isParallel(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isParallel(self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if this vector and another are within the given tolerance of being parallel."""
     kOneVector: MVector = ...
     kTolerance: float = ...
@@ -16716,17 +19110,17 @@ class MVector:
     kZeroVector: MVector = ...
     kZnegAxisVector: MVector = ...
 
-    def length(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def length(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the magnitude of this vector."""
-    def normal(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def normal(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a new vector containing the normalized version of this one."""
-    def normalize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def normalize(self, *args: Any, **kwargs: Any) -> Any:
         """Normalizes this vector in-place and returns a new reference to it."""
-    def rotateBy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rotateBy(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the vector resulting from rotating this one by the given amount."""
-    def rotateTo(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rotateTo(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the quaternion which will rotate this vector into another."""
-    def transformAsNormal(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def transformAsNormal(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a new vector which is calculated by postmultiplying this vector by the transpose of the given matrix's inverse and then normalizing the result."""
     @property
     def x(*args: Any, **kwargs: Any) -> Any:
@@ -16748,17 +19142,55 @@ class MVector:
         """Z coordinate"""
 
 class MVectorArray:
-    def append(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __add__(self, value: Any) -> Any:
+        """Return self+value."""
+    def __contains__(self, key: Any) -> Any:
+        """Return key in self."""
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    __doc__: str = ...
+
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __iadd__(self, value: Any) -> Any:
+        """Implement self+=value."""
+    def __imul__(self, value: Any) -> Any:
+        """Implement self*=value."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __mul__(self, value: Any) -> Any:
+        """Return self*value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __rmul__(self, value: Any) -> Any:
+        """Return value*self."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
+    def __str__(self) -> Any:
+        """Return str(self)."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """Remove all elements from the array."""
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """Replace the array contents with that of another or of a compatible Python sequence."""
-    def insert(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def insert(self, *args: Any, **kwargs: Any) -> Any:
         """Insert a new value into the array at the given index."""
-    def remove(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def remove(self, *args: Any, **kwargs: Any) -> Any:
         """Remove an element from the array."""
-    def setLength(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setLength(self, *args: Any, **kwargs: Any) -> Any:
         """Grow or shrink the array to contain a specific number of elements."""
     @property
     def sizeIncrement(*args: Any, **kwargs: Any) -> Any:
@@ -16768,6 +19200,12 @@ class MVectorArray:
         """Number of elements by which to grow the array when necessary."""
 
 class MWeight:
+    __doc__: str = ...
+
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     @property
     def influence(*args: Any, **kwargs: Any) -> Any:
         """Controls how much of a given operation is applied to the entity

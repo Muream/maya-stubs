@@ -2,34 +2,47 @@ from typing import *
 from typing_extensions import Self
 from _typeshed import Incomplete
 
+__builtins__: dict
+__cached__: str
+__doc__: NoneType
+__file__: str
+__loader__: SourceFileLoader
+__name__: str
+__package__: str
+__spec__: ModuleSpec
 key: str
 ourdict: dict
 py2dict: dict
 val: str
 
 class MAttributeParameterMapping:
-    def allowConnection(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def allowConnection(self, *args: Any, **kwargs: Any) -> Any:
         """allowConnection() -> bool
 
         This method returns true if Maya is allowed to connect other shade fragments to the parameter named by this mapping.
         """
-    def allowRename(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def allowRename(self, *args: Any, **kwargs: Any) -> Any:
         """allowRename() -> bool
 
         This method returns true if the parameter named by this mapping may be renamed in the final shading effect.
         If false, name collisions of parameters will be unresolved and results will be unpredictable.
         """
-    def attributeName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def attributeName(self, *args: Any, **kwargs: Any) -> Any:
         """attributeName() -> string
 
         Get the attribute name for this mapping.
         """
-    def parameterName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def parameterName(self, *args: Any, **kwargs: Any) -> Any:
         """parameterName() -> string
 
         Get the parameter name for this mapping.
         """
-    def resolvedParameterName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def resolvedParameterName(self, *args: Any, **kwargs: Any) -> Any:
         """resolvedParameterName() -> string
 
         Get the resolved parameter name for this mapping. After the fragment has been joined with other
@@ -41,23 +54,32 @@ class MAttributeParameterMapping:
         """
 
 class MAttributeParameterMappingList:
-    def append(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def append(self, *args: Any, **kwargs: Any) -> Any:
         """append(MAttributeParameterMapping) -> self
 
         Add a mapping to the list. The list makes a copy; ownership of the original is left with the caller.
         """
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """clear() -> self
 
         Clear all mappings from the list.
         """
-    def findByAttributeName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def findByAttributeName(self, *args: Any, **kwargs: Any) -> Any:
         """findByAttributeName(attributeName) -> MAttributeParameterMapping
 
         Find a mapping by attribute name.
         This will return the first mapping found with a matching attribute name.
         """
-    def findByParameterName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def findByParameterName(self, *args: Any, **kwargs: Any) -> Any:
         """findByParameterName(parameterName) -> MAttributeParameterMapping
 
         Find a mapping by parameter name.
@@ -65,7 +87,12 @@ class MAttributeParameterMappingList:
         """
 
 class MBlendState:
-    def desc(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def desc(self, *args: Any, **kwargs: Any) -> Any:
         """desc() -> MBlendStateDesc
 
         Get the blend state descriptor that was used to create the state object.
@@ -98,7 +125,7 @@ class MBlendState:
     kSourceColor: int = ...
     kSubtract: int = ...
     kZero: int = ...
-    def resourceHandle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def resourceHandle(self, *args: Any, **kwargs: Any) -> Any:
         """resourceHandle() -> long
 
         Returns a long containing a C++ 'void' pointer which points to the draw API dependent handle for a blend state.
@@ -107,6 +134,11 @@ class MBlendState:
         """
 
 class MBlendStateDesc:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     @property
     def alphaToCoverageEnable(*args: Any, **kwargs: Any) -> Any:
         """Enable alpha to coverage. Default false"""
@@ -131,7 +163,7 @@ class MBlendStateDesc:
     @multiSampleMask.setter
     def multiSampleMask(*args: Any, **kwargs: Any) -> Any:
         """Each bit in this mask, starting at the least significant bit (LSB), controls modification of one of the samples in a multisample render target"""
-    def setDefaults(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDefaults(self, *args: Any, **kwargs: Any) -> Any:
         """setDefaults() -> self
 
         Set all values for the blend state to their default values.
@@ -144,6 +176,11 @@ class MBlendStateDesc:
         """An array of 8 MTargetBlendDesc, one for each target"""
 
 class MCameraOverride:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     @property
     def mCameraPath(*args: Any, **kwargs: Any) -> Any:
         """Camera path override"""
@@ -212,7 +249,12 @@ class MCameraOverride:
         """Camera view matrix override"""
 
 class MRenderOperation:
-    def enableSRGBWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def enableSRGBWrite(self, *args: Any, **kwargs: Any) -> Any:
         """enableSRGBWrite() -> bool
 
         Return whether to enable GPU based gamma correction during pixel writes.
@@ -223,102 +265,116 @@ class MRenderOperation:
     kQuadRender: int = ...
     kSceneRender: int = ...
     kUserDefined: int = ...
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def name(self, *args: Any, **kwargs: Any) -> Any:
         """name() -> string
 
         Returns the name of the render operator.
         """
-    def operationType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def operationType(self, *args: Any, **kwargs: Any) -> Any:
         """operationType() -> int
 
         Returns the type of a render operator.
         """
-    def targetOverrideList(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def targetOverrideList(self, *args: Any, **kwargs: Any) -> Any:
         """targetOverrideList() -> list of MRenderTarget
 
         Return a list of render target which will be used as the target overrides for the operation.
         """
-    def viewportRectangleOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def viewportRectangleOverride(self, *args: Any, **kwargs: Any) -> Any:
         """viewportRectangleOverride() -> MFloatPoint
 
         Query for a viewport rectangle override.
         """
 
 class MClearOperation(MRenderOperation):
-    def clearColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def clearColor(self, *args: Any, **kwargs: Any) -> Any:
         """clearColor() -> [float, float, float, float]
 
         Query the first clear color values.
         """
-    def clearColor2(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clearColor2(self, *args: Any, **kwargs: Any) -> Any:
         """clearColor2() -> [float, float, float, float]
 
         Query the second clear color values.
         """
-    def clearDepth(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clearDepth(self, *args: Any, **kwargs: Any) -> Any:
         """clearDepth() -> float
 
         Query the clear depth value.
         """
-    def clearGradient(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clearGradient(self, *args: Any, **kwargs: Any) -> Any:
         """clearGradient() -> bool
 
         Query if the clear should clear with a vertical color gradient.
         """
-    def clearStencil(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clearStencil(self, *args: Any, **kwargs: Any) -> Any:
         """clearStencil() -> int
 
         Query the stencil clear value.
         """
     kClearAll: int = ...
-    def mask(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def mask(self, *args: Any, **kwargs: Any) -> Any:
         """mask() -> int
 
         Query the clear mask.
         """
-    def overridesColors(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def overridesColors(self, *args: Any, **kwargs: Any) -> Any:
         """overridesColors() -> bool
 
         Query whether clear colors are set by the override or come from Maya's preferences.
         """
-    def setClearColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setClearColor(self, *args: Any, **kwargs: Any) -> Any:
         """setClearColor([float, float, float, float]) -> self
 
         Set the first clear color values.
         """
-    def setClearColor2(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setClearColor2(self, *args: Any, **kwargs: Any) -> Any:
         """setClearColor2([float, float, float, float]) -> self
 
         Set the second clear color values.
         """
-    def setClearDepth(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setClearDepth(self, *args: Any, **kwargs: Any) -> Any:
         """setClearDepth(float) -> self
 
         Set the clear depth value.
         """
-    def setClearGradient(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setClearGradient(self, *args: Any, **kwargs: Any) -> Any:
         """setClearGradient(bool) -> self
 
         Set whether to clear with a vertical color gradient.
         """
-    def setClearStencil(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setClearStencil(self, *args: Any, **kwargs: Any) -> Any:
         """setClearStencil(int) -> self
 
         Set the clear stencil value.
         """
-    def setMask(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setMask(self, *args: Any, **kwargs: Any) -> Any:
         """setMask(int) -> self
 
         Set the clear mask to define which channels to clear.
         """
-    def setOverridesColors(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setOverridesColors(self, *args: Any, **kwargs: Any) -> Any:
         """setOverridesColors(bool) -> self
 
         Set the enabled state to control whether the clear operation overrides Maya's color preferences.
         """
 
 class MColorManagementUtilities:
-    def getColorTransformCacheIdForInputSpace(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def getColorTransformCacheIdForInputSpace(self, *args: Any, **kwargs: Any) -> Any:
         """getColorTransformCacheIdForInputSpace(inputSpaceName) -> transformId
 
         Utility function to retrieve the id of a color transform
@@ -342,7 +398,7 @@ class MColorManagementUtilities:
         Returns identifier of the color transform required to be
         applied to the node.
         """
-    def getColorTransformCacheIdForOutputTransform(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getColorTransformCacheIdForOutputTransform(self, *args: Any, **kwargs: Any) -> Any:
         """getColorTransformCacheIdForOutputTransform() -> transformId
 
         Utility function to retrieve the id of the color transform to be applied on the final output.
@@ -356,7 +412,7 @@ class MColorManagementUtilities:
         Returns identifier of the color transform required to be
         applied on the rendered image
         """
-    def getColorTransformData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getColorTransformData(self, *args: Any, **kwargs: Any) -> Any:
         """getColorTransformData() -> (size, data)
 
         Obtain a reference to opaque data containing the color transform
@@ -369,14 +425,14 @@ class MColorManagementUtilities:
 
         Returns the color transform data block info (bytearray).
         """
-    def isColorManagementAvailable(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isColorManagementAvailable(self, *args: Any, **kwargs: Any) -> Any:
         """isColorManagementAvailable() -> Boolean
 
         Returns whether color management is available for the current scene.
 
         True if color management is enabled.
         """
-    def isColorManagementEnabled(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isColorManagementEnabled(self, *args: Any, **kwargs: Any) -> Any:
         """isColorManagementEnabled() -> Boolean
 
         Returns whether color management is enabled for the current scene.
@@ -385,41 +441,60 @@ class MColorManagementUtilities:
         """
 
 class MComponentDataIndexing:
-    def componentType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def componentType(self, *args: Any, **kwargs: Any) -> Any:
         """componentType() -> MComponentType
 
         Get the component type that the vertex indices represent.
         """
-    def indices(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def indices(self, *args: Any, **kwargs: Any) -> Any:
         """indices() -> MUintArray
 
         Get the array of vertex indices for the component.
         """
     kFaceVertex: int = ...
-    def setComponentType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setComponentType(self, *args: Any, **kwargs: Any) -> Any:
         """setComponentType(MComponentType) -> self
 
         Set the component type that the vertex indices represent.
         """
 
 class MComponentDataIndexingList:
-    def append(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def append(self, *args: Any, **kwargs: Any) -> Any:
         """append(MComponentDataIndexing) -> bool
 
         Add a MComponentDataIndexing to the list. Creates and stores a copy which is owned by the list.
         """
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """clear() -> self
 
         Clear the list.
         """
-    def remove(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def remove(self, *args: Any, **kwargs: Any) -> Any:
         """remove(index) -> bool
 
         Remove a MComponentDataIndexing from the list.
         """
 
 class MDepthNormalizationDescription:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     @property
     def fDepthBias(*args: Any, **kwargs: Any) -> Any:
         """Bias to apply to depth value"""
@@ -446,7 +521,12 @@ class MDepthNormalizationDescription:
         """Near clip plane of a camera"""
 
 class MDepthStencilState:
-    def desc(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def desc(self, *args: Any, **kwargs: Any) -> Any:
         """desc() -> MDepthStencilStateDesc
 
         Get the depth-stencil state descriptor that was used to create the state object.
@@ -459,7 +539,7 @@ class MDepthStencilState:
     kKeepStencil: int = ...
     kReplaceStencil: int = ...
     kZeroStencil: int = ...
-    def resourceHandle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def resourceHandle(self, *args: Any, **kwargs: Any) -> Any:
         """resourceHandle() -> long
 
         Returns a long containing a C++ 'void' pointer which points to the draw API dependent handle for a depth-stencil state.
@@ -468,6 +548,11 @@ class MDepthStencilState:
         """
 
 class MDepthStencilStateDesc:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     @property
     def backFace(*args: Any, **kwargs: Any) -> Any:
         """Sets the stencil op for the back facing fragments"""
@@ -498,7 +583,7 @@ class MDepthStencilStateDesc:
     @frontFace.setter
     def frontFace(*args: Any, **kwargs: Any) -> Any:
         """Sets the stencil op for the front facing fragments"""
-    def setDefaults(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDefaults(self, *args: Any, **kwargs: Any) -> Any:
         """setDefaults() -> self
 
         Set all values for the depth stencil state to their default values.
@@ -529,34 +614,39 @@ class MDepthStencilStateDesc:
         """Sets a bitwise stencil buffer write mask, default 0xff"""
 
 class MFrameContext:
-    def classificationExclusions(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def classificationExclusions(self, *args: Any, **kwargs: Any) -> Any:
         """classificationExclusions() -> [classification strings]
 
         Get a list of drawdb strings for object which are excluded from display
         """
-    def getBackgroundParameters(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getBackgroundParameters(self, *args: Any, **kwargs: Any) -> Any:
         """getBackgroundParameters() -> [displayGradient, clearColorFlag, clearDepthFlag, clearStencilFlag, clearColor1, clearColor2, clearDepthValue, clearStencilValue]
 
         Get parameters related to how the background is cleared
         """
-    def getCurrentCameraPath(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getCurrentCameraPath(self, *args: Any, **kwargs: Any) -> Any:
         """getCurrentCameraPath() -> MDagPath
 
         Get the path to the camera being used to render the current frame.
         """
-    def getCurrentColorRenderTarget(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getCurrentColorRenderTarget(self, *args: Any, **kwargs: Any) -> Any:
         """getCurrentColorRenderTarget() -> MRenderTarget
 
         Get current color render target.
         Calling code is responsible for invoking MRenderTargetManager::releaseRenderTarget() to release the reference to the target after use.
         """
-    def getCurrentDepthRenderTarget(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getCurrentDepthRenderTarget(self, *args: Any, **kwargs: Any) -> Any:
         """getCurrentDepthRenderTarget() -> MRenderTarget
 
         Get current depth render target.
         Calling code is responsible for invoking MRenderTargetManager::releaseRenderTarget() to release the reference to the target after use.
         """
-    def getDOFParameters(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getDOFParameters(self, *args: Any, **kwargs: Any) -> Any:
         """getDOFParameters() -> [enabled, focalDistance, alpha]
 
         Get the parameters generated by Maya for the circle-of-confusion depth shader used
@@ -567,7 +657,7 @@ class MFrameContext:
         The shader fragment used is called cocDepthSurface.
         The XML wrapper can be queried from MFragmentManager or using the 'ogs -xml maya_CocDepthSurface' command.
         """
-    def getDisplayStyle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getDisplayStyle(self, *args: Any, **kwargs: Any) -> Any:
         """getDisplayStyle() -> int
 
         The DisplayStyle enums can be use to test the bit field for the enabling of any
@@ -589,7 +679,7 @@ class MFrameContext:
           MFrameContext.kBackfaceCulling		 Backface culling enabled.
           MFrameContext.kSmoothWireframe	     Smooth wireframe enabled.
         """
-    def getEnvironmentParameters(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getEnvironmentParameters(self, *args: Any, **kwargs: Any) -> Any:
         """getEnvironmentParameters() -> [bool, string]
 
         Get parameters for currently used environment. Note that this information is set
@@ -597,12 +687,12 @@ class MFrameContext:
         displayed at the same time.
         Return the destination (type and name) that the renderer is drawing to.
         """
-    def getGlobalLineWidth(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getGlobalLineWidth(self, *args: Any, **kwargs: Any) -> Any:
         """getGlobalLineWidth() -> float
 
         Get global line width.
         """
-    def getHwFogParameters(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getHwFogParameters(self, *args: Any, **kwargs: Any) -> Any:
         """getHwFogParameters() -> [enabled, mode, start, end, density, color]
 
         Get all the hardware fog parameters.
@@ -620,12 +710,12 @@ class MFrameContext:
         - hardware fog density: The density of the exponential fog.
         - hardware fog color: (r, g, b, a).
         """
-    def getLightLimit(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getLightLimit(self, *args: Any, **kwargs: Any) -> Any:
         """getLightLimit() -> int
 
         Get the current light limit.
         """
-    def getLightingMode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getLightingMode(self, *args: Any, **kwargs: Any) -> Any:
         """getLightingMode() -> int
 
         Get the current light mode.
@@ -637,7 +727,7 @@ class MFrameContext:
           MFrameContext.kSceneLights       Use all lights in the scene
           MFrameContext.kCustomLights      Use a custom set of lights which are not part of the scene. Currently this applies for use in the Hypershade Material Viewer panel
         """
-    def getMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getMatrix(self, *args: Any, **kwargs: Any) -> Any:
         """getMatrix(int) -> MMatrix
 
         Get a matrix value of a certain type.
@@ -645,7 +735,7 @@ class MFrameContext:
         Return None if matrix type not available from MFrameContext.
         For a list of matrix type, see MDrawContext.semanticToMatrixType() description.
         """
-    def getPostEffectEnabled(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPostEffectEnabled(self, *args: Any, **kwargs: Any) -> Any:
         """getPostEffectEnabled(int) -> bool
 
         Returns if a given post effect is currently enabled.
@@ -656,12 +746,12 @@ class MFrameContext:
           MFrameContext.kDepthOfField        Depth of field
           MFrameContext.kAntiAliasing        Hardware multi-sampling
         """
-    def getRenderOverrideInformation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getRenderOverrideInformation(self, *args: Any, **kwargs: Any) -> Any:
         """getRenderOverrideInformation() -> [overrideName]
 
         Get information about any render override
         """
-    def getTransparencyAlgorithm(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getTransparencyAlgorithm(self, *args: Any, **kwargs: Any) -> Any:
         """getTransparencyAlgorithm() -> int
 
         Get the current transparency algoritm.
@@ -671,19 +761,19 @@ class MFrameContext:
           MFrameContext.kWeightedAverage     Weight average transparency
           MFrameContext.kDepthPeeling        Depth-peel transparency
         """
-    def getTuple(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getTuple(self, *args: Any, **kwargs: Any) -> Any:
         """getTuple(int) -> MDoubleArray
 
         Get a tuple (vector, position or single) value of a certain type.
         Note that not all types are available for querying in MFrameContext.
         Return None if unknown tuple type.
         """
-    def getViewportDimensions(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getViewportDimensions(self, *args: Any, **kwargs: Any) -> Any:
         """getViewportDimensions() -> [originX, originY, width, height]
 
         Get the viewport dimensions. The origin is the upper left corner of the viewport.
         """
-    def inUserInteraction(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def inUserInteraction(self, *args: Any, **kwargs: Any) -> Any:
         """inUserInteraction() -> bool
 
         Returns True during any interactive refresh, as when user is interacting with the scene
@@ -799,13 +889,13 @@ class MFrameContext:
     kXray: int = ...
     kXrayActiveComponents: int = ...
     kXrayJoint: int = ...
-    def objectTypeExclusions(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def objectTypeExclusions(self, *args: Any, **kwargs: Any) -> Any:
         """objectTypeExclusions() -> long
 
         Get the object type exclusions as a bitfield.
                 The bitfield can be tested using the bits defined by class statics starting with kExclude.
         """
-    def renderingDestination(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def renderingDestination(self, *args: Any, **kwargs: Any) -> Any:
         """renderingDestination() -> [int, destinationName]
 
         Return the destination (type and name) that the renderer is drawing to.
@@ -814,7 +904,7 @@ class MFrameContext:
           MFrameContext.k2dViewport    Rendering to an interactive 2d viewport such as the render view
           MFrameContext.kImage         Rendering to an image
         """
-    def semanticToMatrixType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def semanticToMatrixType(self, *args: Any, **kwargs: Any) -> Any:
         """semanticToMatrixType(string) -> int
 
         Given a semantic name return the corresponding matrix enumeration that can be used to retrieve a matrix value via the getMatrix() method.
@@ -844,7 +934,7 @@ class MFrameContext:
           MFrameContext.kWorldViewProjInverseMtx         World * view * projection matrix inverse
           MFrameContext.kWorldViewProjTranspInverseMtx   World * view * projection matrix tranpose inverse (adjoint)
         """
-    def semanticToTupleType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def semanticToTupleType(self, *args: Any, **kwargs: Any) -> Any:
         """semanticToTupleType(string) -> int
 
         Given a semantic name return the corresponding tuple enumeration that can be used to retrieve a value via the getTuple() method.
@@ -859,18 +949,18 @@ class MFrameContext:
           MFrameContext.kViewUnnormlizedNearClipValue Unnormalized camera near clip value (single value)
                  MFrameContext.kViewUnnormalizedFarClipValue Unnormalized camera far clip value (single value)
         """
-    def shadeTemplates(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def shadeTemplates(self, *args: Any, **kwargs: Any) -> Any:
         """shadeTemplates() -> bool
 
         Returns the display preference indicating whether templated objects should be drawn shaded.
         """
-    def userChangingViewContext(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def userChangingViewContext(self, *args: Any, **kwargs: Any) -> Any:
         """userChangingViewContext() -> bool
 
         Returns True during any interactive refresh, as when user is	changing the view using view context
         tools such as tumble, dolly or track.
         """
-    def wireOnShadedMode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def wireOnShadedMode(self, *args: Any, **kwargs: Any) -> Any:
         """wireOnShadedMode() -> int
 
         Returns the global user display preference which indicates how wireframe should be drawn on top of objects while in shaded mode.
@@ -887,215 +977,226 @@ class MFrameContext:
         """
 
 class MDrawContext(MFrameContext):
-    def copyCurrentColorRenderTarget(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def copyCurrentColorRenderTarget(self, *args: Any, **kwargs: Any) -> Any:
         """copyCurrentColorRenderTarget(string) -> MRenderTarget
 
         Get a copy of the current color render target.
         When the object is no longer needed, MRenderTargetManager::releaseRenderTarget() should be called
         to notify the target manager that the caller is done with the render target.
         """
-    def copyCurrentColorRenderTargetToTexture(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copyCurrentColorRenderTargetToTexture(self, *args: Any, **kwargs: Any) -> Any:
         """copyCurrentColorRenderTargetToTexture() -> MTexture
 
         Get a copy of the current color render target as a texture.
         When the texture is no longer needed, MTextureManager::releaseTexture() should be called.
         """
-    def copyCurrentDepthRenderTarget(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copyCurrentDepthRenderTarget(self, *args: Any, **kwargs: Any) -> Any:
         """copyCurrentDepthRenderTarget(string) -> MRenderTarget
 
         Get a copy of the current depth render target.
         When the object is no longer needed, MRenderTargetManager::releaseRenderTarget() should be called
         to notify the target manager that the caller is done with the render target.
         """
-    def copyCurrentDepthRenderTargetToTexture(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copyCurrentDepthRenderTargetToTexture(self, *args: Any, **kwargs: Any) -> Any:
         """copyCurrentDepthRenderTargetToTexture() -> MTexture
 
         Get a copy of the current depth render target as a texture.
         When the texture is no longer needed, MTextureManager::releaseTexture() should be called.
         """
-    def getDepthRange(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getDepthRange(self, *args: Any, **kwargs: Any) -> Any:
         """getDepthRange() -> [float, float]
 
         Get the depth range which specifies the mapping of depth values from normalized device coordinates to window coordinates.
         The depth range values are normally 0.0 and 1.0.
         """
-    def getFrameStamp(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getFrameStamp(self, *args: Any, **kwargs: Any) -> Any:
         """getFrameStamp() -> long
 
         Returns the current frame stamp.
         """
-    def getFrustumBox(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getFrustumBox(self, *args: Any, **kwargs: Any) -> Any:
         """getFrustumBox() -> MBoundingBox
 
         Get the bounding box of the current view frustum in world space.
         """
-    def getLightInformation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getLightInformation(self, *args: Any, **kwargs: Any) -> Any:
         """getLightInformation(lightNumber, lightFilter=kFilteredToLightLimit) -> [positions, direction, intensity, color, hasDirection, hasPosition]
 
         Return common lighting information for a given active light.
         """
-    def getLightParameterInformation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getLightParameterInformation(self, *args: Any, **kwargs: Any) -> Any:
         """getLightParameterInformation(lightNumber, lightFilter=kFilteredToLightLimit) -> MLightParameterInformation
 
         Return parameter information for a given active light.
         """
-    def getPassContext(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPassContext(self, *args: Any, **kwargs: Any) -> Any:
         """getPassContext() -> MPassContext
 
         Access the current pass context.
         """
-    def getRenderTargetSize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getRenderTargetSize(self, *args: Any, **kwargs: Any) -> Any:
         """getRenderTargetSize() -> [int, int]
 
         Get the size of the render target (output buffer) being rendered into.
         The dimensions of the target are in pixels
         """
-    def getSceneBox(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getSceneBox(self, *args: Any, **kwargs: Any) -> Any:
         """getSceneBox() -> MBoundingBox
 
         Get a bounding box of the scene in world space.
         """
-    def getStateManager(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getStateManager(self, *args: Any, **kwargs: Any) -> Any:
         """getStateManager() -> MStateManager
 
         Access the GPU state manager for the current draw context.
         """
-    def numberOfActiveLights(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numberOfActiveLights(self, *args: Any, **kwargs: Any) -> Any:
         """numberOfActiveLights(lightFilter=kFilteredToLightLimit) -> int
 
         Return the number of available lights to render the scene,
         only considering lights which pass the filter option.
         """
-    def viewDirectionAlongNegZ(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def viewDirectionAlongNegZ(self, *args: Any, **kwargs: Any) -> Any:
         """viewDirectionAlongNegZ() -> bool
 
         Return whether the view direction is pointing down the -Z axis.
         """
 
 class MDrawRegistry:
-    def deregisterComponentConverter(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def deregisterComponentConverter(self, *args: Any, **kwargs: Any) -> Any:
         """deregisterComponentConverter(renderItemName) -> None
 
         Deregister an implementation of MPxComponentConverter.
         """
-    def deregisterDrawOverrideCreator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deregisterDrawOverrideCreator(self, *args: Any, **kwargs: Any) -> Any:
         """deregisterDrawOverrideCreator(drawClassification, registrantId) -> None
 
         Deregister an implementation of MPxDrawOverride.
         """
-    def deregisterGeometryOverrideCreator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deregisterGeometryOverrideCreator(self, *args: Any, **kwargs: Any) -> Any:
         """deregisterGeometryOverrideCreator(drawClassification, registrantId) -> None
 
         Deregister an implementation of MPxGeometryOverride.
         """
-    def deregisterImagePlaneOverrideCreator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deregisterImagePlaneOverrideCreator(self, *args: Any, **kwargs: Any) -> Any:
         """deregisterImagePlaneOverrideCreator(drawClassification, registrantId) -> None
 
         Deregister an implementation of MPxImagePlaneOverride.
         """
-    def deregisterIndexBufferMutator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deregisterIndexBufferMutator(self, *args: Any, **kwargs: Any) -> Any:
         """deregisterIndexBufferMutator(primitiveType) -> None
 
         Deregister an implementation of MPxIndexBufferMutator.
         """
-    def deregisterPrimitiveGenerator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deregisterPrimitiveGenerator(self, *args: Any, **kwargs: Any) -> Any:
         """deregisterPrimitiveGenerator(primitiveType) -> None
 
         Deregister an implementation of MPxPrimitiveGenerator.
         """
-    def deregisterShaderOverrideCreator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deregisterShaderOverrideCreator(self, *args: Any, **kwargs: Any) -> Any:
         """deregisterShaderOverrideCreator(drawClassification, registrantId) -> None
 
         Deregister an implementation of MPxShaderOverride.
         """
-    def deregisterShadingNodeOverrideCreator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deregisterShadingNodeOverrideCreator(self, *args: Any, **kwargs: Any) -> Any:
         """deregisterShadingNodeOverrideCreator(drawClassification, registrantId) -> None
 
         Deregister an implementation of MPxShadingNodeOverride.
         """
-    def deregisterSubSceneOverrideCreator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deregisterSubSceneOverrideCreator(self, *args: Any, **kwargs: Any) -> Any:
         """deregisterSubSceneOverrideCreator(drawClassification, registrantId) -> None
 
         Deregister an implementation of MPxSubSceneOverride.
         """
-    def deregisterSurfaceShadingNodeOverrideCreator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deregisterSurfaceShadingNodeOverrideCreator(self, *args: Any, **kwargs: Any) -> Any:
         """deregisterSurfaceShadingNodeOverrideCreator(drawClassification, registrantId) -> None
 
         Deregister an implementation of MPxSurfaceShadingNodeOverride.
         """
-    def deregisterVertexBufferGenerator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deregisterVertexBufferGenerator(self, *args: Any, **kwargs: Any) -> Any:
         """deregisterVertexBufferGenerator(bufferName) -> None
 
         Deregister an implementation of MPxVertexBufferGenerator.
         """
-    def deregisterVertexBufferMutator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deregisterVertexBufferMutator(self, *args: Any, **kwargs: Any) -> Any:
         """deregisterVertexBufferMutator(bufferName) -> None
 
         Deregister an implementation of MPxVertexBufferMutator.
         """
-    def registerComponentConverter(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def registerComponentConverter(self, *args: Any, **kwargs: Any) -> Any:
         """registerComponentConverter(renderItemName, creator) -> None
 
         Register an implementation of MPxComponentConverter to use with render items that have the specified name.
         """
-    def registerDrawOverrideCreator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def registerDrawOverrideCreator(self, *args: Any, **kwargs: Any) -> Any:
         """registerDrawOverrideCreator(drawClassification, registrantId, creator) -> None
 
         Register an implementation of MPxDrawOverride to use with DAG objects that have the specified, draw-specific classification string.
         """
-    def registerGeometryOverrideCreator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def registerGeometryOverrideCreator(self, *args: Any, **kwargs: Any) -> Any:
         """registerGeometryOverrideCreator(drawClassification, registrantId, creator) -> None
 
         Register an implementation of MPxGeometryOverride to use with nodes that have the specified, draw-specific classification string.
         """
-    def registerImagePlaneOverrideCreator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def registerImagePlaneOverrideCreator(self, *args: Any, **kwargs: Any) -> Any:
         """registerImagePlaneOverrideCreator(drawClassification, registrantId, creator) -> None
 
         Register an implementation of MPxImagePlaneOverride to use with DAG objects that have the specified, draw-specific classification string.
         """
-    def registerIndexBufferMutator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def registerIndexBufferMutator(self, *args: Any, **kwargs: Any) -> Any:
         """registerIndexBufferMutator(primitiveType, creator) -> None
 
         Register an implementation of MPxIndexBufferMutator to generate custom primitive types for shapes.
         """
-    def registerPrimitiveGenerator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def registerPrimitiveGenerator(self, *args: Any, **kwargs: Any) -> Any:
         """registerPrimitiveGenerator(primitiveType, creator) -> None
 
         Register an implementation of MPxPrimitiveGenerator to generate custom primitive types for shapes.
         """
-    def registerShaderOverrideCreator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def registerShaderOverrideCreator(self, *args: Any, **kwargs: Any) -> Any:
         """registerShaderOverrideCreator(drawClassification, registrantId, creator) -> None
 
         Register an implementation of MPxShaderOverride to use with nodes that have the specified, draw-specific classification string.
         """
-    def registerShadingNodeOverrideCreator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def registerShadingNodeOverrideCreator(self, *args: Any, **kwargs: Any) -> Any:
         """registerShadingNodeOverrideCreator(drawClassification, registrantId, creator) -> None
 
         Register an implementation of MPxShadingNodeOverride to use with nodes that have the specified, draw-specific classification string.
         """
-    def registerSubSceneOverrideCreator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def registerSubSceneOverrideCreator(self, *args: Any, **kwargs: Any) -> Any:
         """registerSubSceneOverrideCreator(drawClassification, registrantId, creator) -> None
 
         Register an implementation of MPxSubSceneOverride to use with DAG objects that have the specified, draw-specific classification string.
         """
-    def registerSurfaceShadingNodeOverrideCreator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def registerSurfaceShadingNodeOverrideCreator(self, *args: Any, **kwargs: Any) -> Any:
         """registerSurfaceShadingNodeOverrideCreator(drawClassification, registrantId, creator) -> None
 
         Register an implementation of MPxSurfaceShadingNodeOverride to use with surface shaders that have the specified, draw-specific classification string.
         """
-    def registerVertexBufferGenerator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def registerVertexBufferGenerator(self, *args: Any, **kwargs: Any) -> Any:
         """registerVertexBufferGenerator(bufferName, creator) -> None
 
         Register an implementation of MPxVertexBufferGenerator to provide custom vertex streams for shapes.
         """
-    def registerVertexBufferMutator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def registerVertexBufferMutator(self, *args: Any, **kwargs: Any) -> Any:
         """registerVertexBufferMutator(bufferName, creator) -> None
 
         Register an implementation of MPxVertexBufferMutator to provide custom vertex streams for shapes.
         """
 
 class MFragmentManager:
-    def addAutomaticShaderStageInput(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addAutomaticShaderStageInput(self, *args: Any, **kwargs: Any) -> Any:
         """addAutomaticShaderStageInput(int, string, string, int, bool) -> bool
 
         Add a parameter to the list of automatic input parameters for a specified
@@ -1114,7 +1215,7 @@ class MFragmentManager:
         - parameterType (int) - Type of the parameter
         - isVaryingInput (bool) - Whether or not the parameter is a varying input
         """
-    def addDomainShaderInputNameMapping(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addDomainShaderInputNameMapping(self, *args: Any, **kwargs: Any) -> Any:
         """addDomainShaderInputNameMapping(string, string) -> bool
 
         Add a mapping between a parameter name (realParamName) and a transient
@@ -1130,7 +1231,7 @@ class MFragmentManager:
         - realParamName (string) - Real name of the parameter
         - domainParamName (string) - Transient name of the parameter in domain shader
         """
-    def addFragmentGraphFromBuffer(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addFragmentGraphFromBuffer(self, *args: Any, **kwargs: Any) -> Any:
         """addFragmentGraphFromBuffer(buffer) -> string
 
         Add a new fragment graph to the manager.
@@ -1138,7 +1239,7 @@ class MFragmentManager:
 
         - buffer (string) - String containing an XML description of the fragment graph.
         """
-    def addFragmentGraphFromFile(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addFragmentGraphFromFile(self, *args: Any, **kwargs: Any) -> Any:
         """addFragmentGraphFromFile(fileName) -> string
 
         Add a new fragment graph to the manager.
@@ -1146,13 +1247,13 @@ class MFragmentManager:
 
         - fileName (string) - The name of the file containing the fragment graph description.
         """
-    def addFragmentPath(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addFragmentPath(self, *args: Any, **kwargs: Any) -> Any:
         """addFragmentPath(path) -> bool
 
         Add a path to the list of fragment search paths used when parsing the file path for any
         methods which add fragments to the manager from files on disk.
         """
-    def addShadeFragmentFromBuffer(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addShadeFragmentFromBuffer(self, *args: Any, **kwargs: Any) -> Any:
         """addShadeFragmentFromBuffer(buffer, hidden) -> string
 
         Add a new fragment to the manager.
@@ -1163,7 +1264,7 @@ class MFragmentManager:
         - hidden (bool) - If True, this fragment will not appear in the list returned by fragmentList()
                           and it will not be possible to query the XML for it using getFragmentXML().
         """
-    def addShadeFragmentFromFile(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addShadeFragmentFromFile(self, *args: Any, **kwargs: Any) -> Any:
         """addShadeFragmentFromFile(fileName, hidden) -> string
 
         Add a new fragment to the manager.
@@ -1174,7 +1275,7 @@ class MFragmentManager:
         - hidden (bool) - If True, this fragment will not appear in the list returned by fragmentList()
                           and it will not be possible to query the XML for it using getFragmentXML().
         """
-    def findDomainShaderInputName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def findDomainShaderInputName(self, *args: Any, **kwargs: Any) -> Any:
         """findDomainShaderInputName(string) -> string
 
         Find the transient name which is used in domain shader.
@@ -1183,17 +1284,17 @@ class MFragmentManager:
 
         - realParamName (string) - Real name of the parameter
         """
-    def fragmentList(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def fragmentList(self, *args: Any, **kwargs: Any) -> Any:
         """fragmentList() -> list of string
 
         Returns a list of the names of all registered fragments and fragment graphs.
         """
-    def getEffectOutputDirectory(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getEffectOutputDirectory(self, *args: Any, **kwargs: Any) -> Any:
         """getEffectOutputDirectory() -> string
 
         Get the directory to be used for effect file output.
         """
-    def getFragmentXML(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getFragmentXML(self, *args: Any, **kwargs: Any) -> Any:
         """getFragmentXML(fragmentName) -> string
         getFragmentXML(shadingNode, includeUpstreamNodes=False, objectContext=None) -> string
 
@@ -1207,12 +1308,12 @@ class MFragmentManager:
         - includeUpstreamNodes (bool) - Return the XML for the entire fragment graph rooted at the given shading node if True.
         - objectContext (MDagPath) - Optional path to an instance that is associated with the shading node to provide object context.
         """
-    def getIntermediateGraphOutputDirectory(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getIntermediateGraphOutputDirectory(self, *args: Any, **kwargs: Any) -> Any:
         """getIntermediateGraphOutputDirectory() -> string
 
         Get the directory to be used for intermediate fragment graph output.
         """
-    def hasFragment(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasFragment(self, *args: Any, **kwargs: Any) -> Any:
         """hasFragment(string) -> bool
 
         Returns True if a fragment of the given name has been registered with the fragment manager.
@@ -1223,7 +1324,7 @@ class MFragmentManager:
     kHullShader: int = ...
     kPixelShader: int = ...
     kVertexShader: int = ...
-    def removeAutomaticShaderStageInput(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeAutomaticShaderStageInput(self, *args: Any, **kwargs: Any) -> Any:
         """removeAutomaticShaderStageInput(int, string) -> bool
 
         Remove a parameter from the list of automatic input parameters for a
@@ -1236,7 +1337,7 @@ class MFragmentManager:
         - shaderStage (int) - Shader stage
         - parameterName (string) - Name of the parameter
         """
-    def removeDomainShaderInputNameMapping(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeDomainShaderInputNameMapping(self, *args: Any, **kwargs: Any) -> Any:
         """removeDomainShaderInputNameMapping(string) -> bool
 
         Remove a mapping between a parameter name (realParamName) and a transient
@@ -1246,7 +1347,7 @@ class MFragmentManager:
 
         - realParamName (string) - Real name of the parameter
         """
-    def removeFragment(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeFragment(self, *args: Any, **kwargs: Any) -> Any:
         """removeFragment(fragmentName) -> bool
 
         Remove a named fragment or fragment graph from the fragment manager. This
@@ -1261,44 +1362,49 @@ class MFragmentManager:
 
         Returns True if the fragment was successfuly removed from the fragment manager.
         """
-    def setEffectOutputDirectory(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setEffectOutputDirectory(self, *args: Any, **kwargs: Any) -> Any:
         """setEffectOutputDirectory(string) -> self
 
         Set the path to use for dumping final effect files.
         """
-    def setIntermediateGraphOutputDirectory(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setIntermediateGraphOutputDirectory(self, *args: Any, **kwargs: Any) -> Any:
         """setIntermediateGraphOutputDirectory(string) -> self
 
         Set the path to use for dumping intermediate fragment graph XML files.
         """
 
 class MGeometry:
-    def addIndexBuffer(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addIndexBuffer(self, *args: Any, **kwargs: Any) -> Any:
         """addIndexBuffer(MIndexBuffer) -> bool
 
         Buffers cannot be added to the same object twice.Adds a index buffer to this MGeometry object.
         The buffer can only be added to this object once but may be added to others.
         """
-    def addVertexBuffer(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addVertexBuffer(self, *args: Any, **kwargs: Any) -> Any:
         """addVertexBuffer(MVertexBuffer) -> bool
 
         Adds a vertex buffer to this MGeometry object.
         The buffer can only be added to this object once but may be added to others.
         """
-    def createIndexBuffer(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def createIndexBuffer(self, *args: Any, **kwargs: Any) -> Any:
         """createIndexBuffer(int) -> MIndexBuffer
 
         Creates a index buffer which is bound to this MGeometry object and cannot be used with any other.
         The buffer is automatically added to the MGeometry object so there is no need to call addIndexBuffer().
         See MGeometry.dataTypeString() for a list of valid data types.
         """
-    def createVertexBuffer(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def createVertexBuffer(self, *args: Any, **kwargs: Any) -> Any:
         """createVertexBuffer(MVertexBufferDescriptor) -> MVertexBuffer
 
         Creates a vertex buffer which is bound to this MGeometry object and cannot be used with any other.
         The buffer is automatically added to the MGeometry object so there is no need to call addVertexBuffer().
         """
-    def dataTypeString(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def dataTypeString(self, *args: Any, **kwargs: Any) -> Any:
         """dataTypeString(int) -> string
 
         Get the string name (e.g. 'Unsigned Char') for the following data type values:
@@ -1313,19 +1419,19 @@ class MGeometry:
           kInt32           Signed 32-bit integer
           kUnsignedInt32   Unsigned 32-bit integer
         """
-    def deleteIndexBuffer(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deleteIndexBuffer(self, *args: Any, **kwargs: Any) -> Any:
         """deleteIndexBuffer(int) -> bool
 
         Remove a index buffer from this object.
         If the buffer was bound to this object (see createIndexBuffer()) then it will become inactive and any attempt to call any of its methods will result in an exception.
         """
-    def deleteVertexBuffer(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deleteVertexBuffer(self, *args: Any, **kwargs: Any) -> Any:
         """deleteVertexBuffer(int) -> bool
 
         Remove a vertex buffer from this object.
         If the buffer was bound to this object (see createVertexBuffer()) then it will become inactive and any attempt to call any of its methods will result in an exception.
         """
-    def drawModeString(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def drawModeString(self, *args: Any, **kwargs: Any) -> Any:
         """drawModeString(int) -> string
 
         Get the string name (e.g. 'Wireframe, Shaded, Textured') for a combination of the following draw mode values:
@@ -1338,12 +1444,12 @@ class MGeometry:
 
         The draw mode value kAll is a combination of the following modes: kWireframe, kShaded, kTextured, and kBoundingBox
         """
-    def indexBuffer(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def indexBuffer(self, *args: Any, **kwargs: Any) -> Any:
         """indexBuffer(int) -> MIndexBuffer
 
         Get the index buffer stored at the given index.
         """
-    def indexBufferCount(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def indexBufferCount(self, *args: Any, **kwargs: Any) -> Any:
         """indexBufferCount() -> int
 
         Get the number of index buffers contained in this MGeometry object.
@@ -1383,7 +1489,7 @@ class MGeometry:
     kUnsignedInt16: int = ...
     kUnsignedInt32: int = ...
     kWireframe: int = ...
-    def primitiveString(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def primitiveString(self, *args: Any, **kwargs: Any) -> Any:
         """primitiveString(int) -> string
 
         Get the string name (e.g. 'Triangles') for the following primitive values:
@@ -1400,7 +1506,7 @@ class MGeometry:
           kAdjacentLineStrip       A line strip with adjacency
           kPatch                   A patch
         """
-    def semanticString(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def semanticString(self, *args: Any, **kwargs: Any) -> Any:
         """semanticString(int) -> string
 
         Get the string name (e.g. 'Color') for the following semantic values:
@@ -1414,22 +1520,27 @@ class MGeometry:
           kBitangent          Bi-normal vector
           kTangentWithSign    Tangent vector with winding order sign
         """
-    def vertexBuffer(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def vertexBuffer(self, *args: Any, **kwargs: Any) -> Any:
         """vertexBuffer(int) -> MVertexBuffer
 
         Get the vertex buffer stored at the given index.
         """
-    def vertexBufferCount(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def vertexBufferCount(self, *args: Any, **kwargs: Any) -> Any:
         """vertexBufferCount() -> int
 
         Get the number of vertex buffers contained in this MGeometry object.
         """
 
 class MGeometryExtractor:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     kPolyGeom_BaseMesh: int = ...
     kPolyGeom_Normal: int = ...
     kPolyGeom_NotSharing: int = ...
-    def minimumBufferSize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def minimumBufferSize(self, *args: Any, **kwargs: Any) -> Any:
         """minimumBufferSize(primitiveCount, primitive, primitiveStride=0) -> int
 
         Get the minimum buffer size required by populateIndexBuffer().
@@ -1438,7 +1549,7 @@ class MGeometryExtractor:
         * primitive (int) - The primitive type. See MGeometry.primitiveString() for list of primitive types.
         * primitiveStride (int) - The number of control points in a patch when the type is kPatch.
         """
-    def populateIndexBuffer(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def populateIndexBuffer(self, *args: Any, **kwargs: Any) -> Any:
         """populateIndexBuffer(data, primitiveCount, indexDesc) -> self
 
         Fill a buffer with geometry indexing data.
@@ -1449,7 +1560,7 @@ class MGeometryExtractor:
         * primitiveCount (int) - The number of primitives you expect to be filled in the buffer.
         * indexDesc (MIndexBufferDescriptor) - The description of the buffer you are requesting.
         """
-    def populateVertexBuffer(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def populateVertexBuffer(self, *args: Any, **kwargs: Any) -> Any:
         """populateVertexBuffer(data, vertexCount, bufferDesc) -> self
 
         Fill a buffer with vertex data.
@@ -1461,7 +1572,7 @@ class MGeometryExtractor:
         * vertexCount (int) - The vertex count you expect to be filled in the buffer.
         * bufferDesc (MVertexBufferDescriptor) - The description of the buffer you are requesting.
         """
-    def primitiveCount(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def primitiveCount(self, *args: Any, **kwargs: Any) -> Any:
         """primitiveCount(indexDesc) -> int
 
         Returns the number of primitives (triangles, lines, points, etc.) that will be produced for the given indexing requirements.
@@ -1469,7 +1580,7 @@ class MGeometryExtractor:
 
         * indexDesc (MIndexBufferDescriptor) - The description of the index buffer you request the count for.
         """
-    def vertexCount(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def vertexCount(self, *args: Any, **kwargs: Any) -> Any:
         """vertexCount() -> int
 
         Returns the number of vertices that will be produced for the vertex requirement.
@@ -1477,28 +1588,41 @@ class MGeometryExtractor:
         """
 
 class MGeometryIndexMapping:
-    def component(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def component(self, *args: Any, **kwargs: Any) -> Any:
         """component(int) -> MObject
 
         Get the component of a geometry.
         """
-    def dagPath(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def dagPath(self, *args: Any, **kwargs: Any) -> Any:
         """dagPath(int) -> MDagPath
 
         Get the MDagPath of a geometry.
         """
-    def geometryCount(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def geometryCount(self, *args: Any, **kwargs: Any) -> Any:
         """geometryCount() -> int
 
         Get the number of geometry described by the mapping.
         """
-    def indexLength(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def indexLength(self, *args: Any, **kwargs: Any) -> Any:
         """indexLength(int) -> int
 
         Get the index length of a geometry.
         The index length represents the length of the geometry index data in the index buffer of the consolidated render item.
         """
-    def indexStart(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def indexStart(self, *args: Any, **kwargs: Any) -> Any:
         """indexStart(int) -> int
 
         Get the index start of a geometry.
@@ -1506,29 +1630,51 @@ class MGeometryIndexMapping:
         """
 
 class MGeometryRequirements:
-    def addIndexingRequirement(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def addIndexingRequirement(self, *args: Any, **kwargs: Any) -> Any:
         """addIndexingRequirement(MIndexBufferDescriptor) -> self
 
         Add a new indexing requirement to the list of indexing requirements.
         """
-    def addVertexRequirement(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addVertexRequirement(self, *args: Any, **kwargs: Any) -> Any:
         """addVertexRequirement(MVertexBufferDescriptor) -> self
 
         Add a new vertex requirement to the list of vertex requirements.
         """
-    def indexingRequirements(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def indexingRequirements(self, *args: Any, **kwargs: Any) -> Any:
         """indexingRequirements() -> MIndexBufferDescriptorList
 
         Get a list of descriptors that specify the geometry indexing requirements of an object.
         """
-    def vertexRequirements(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def vertexRequirements(self, *args: Any, **kwargs: Any) -> Any:
         """vertexRequirements() -> MVertexBufferDescriptorList
 
         Get a list of descriptors that specify the vertex geometry requirements of this object.
         """
 
 class MGeometryUtilities:
-    def acquireReferenceGeometry(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def acquireReferenceGeometry(self, *args: Any, **kwargs: Any) -> Any:
         """acquireReferenceGeometry(shape, requirements) -> MGeometry
 
         Acquire reference geometry with required buffers.
@@ -1544,7 +1690,7 @@ class MGeometryUtilities:
           kDefaultPlane    Plane with width and height of 1, centered at 0,0,0. Assuming Y-Up orientation: width = x-axis, and height = y-axis.
           kDefaultCube     Cube with width, height and depth of 1, centered at 0,0,0.
         """
-    def displayStatus(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def displayStatus(self, *args: Any, **kwargs: Any) -> Any:
         """displayStatus(path) -> DisplayStatus
 
         Returns the display status of the given DAG path. Note that the last selected object will have status kLead
@@ -1567,14 +1713,14 @@ class MGeometryUtilities:
     kLive: int = ...
     kNoStatus: int = ...
     kTemplate: int = ...
-    def releaseReferenceGeometry(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def releaseReferenceGeometry(self, *args: Any, **kwargs: Any) -> Any:
         """releaseReferenceGeometry(geometry) -> None
 
         Release a generated reference geometry.
 
         * geometry (MGeometry) - The geometry to delete.
         """
-    def wireframeColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def wireframeColor(self, *args: Any, **kwargs: Any) -> Any:
         """wireframeColor(path) -> MColor
 
         Returns the wireframe color used in Viewport 2.0 for the given DAG path.
@@ -1583,7 +1729,12 @@ class MGeometryUtilities:
         """
 
 class MHUDRender(MRenderOperation):
-    def addUIDrawables(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addUIDrawables(self, *args: Any, **kwargs: Any) -> Any:
         """addUIDrawables(drawManager2D, frameContext) -> self
 
         Provides access to the 2D version of MUIDrawManager, which can be used to queue up operations to draw simple UI shapes like lines, circles, text, etc.
@@ -1593,12 +1744,12 @@ class MHUDRender(MRenderOperation):
         * drawManager2D (MUIDrawManager) - A UI draw manager which can be used to draw simple 2D geometry, including text. When passing coordinates to the draw manager's methods, only X and Y have meaning. The origin (0, 0) is in the lower-left corner of the view.
         * frameContext (MFrameContext) - Frame level context information.
         """
-    def hasUIDrawables(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasUIDrawables(self, *args: Any, **kwargs: Any) -> Any:
         """hasUIDrawables() -> bool
 
         Query whether addUIDrawables() should be called or not.
         """
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def name(self, *args: Any, **kwargs: Any) -> Any:
         """name() -> string
 
         Returns the unique name for a hud render operation.
@@ -1606,7 +1757,12 @@ class MHUDRender(MRenderOperation):
         """
 
 class MIndexBuffer:
-    def acquire(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def acquire(self, *args: Any, **kwargs: Any) -> Any:
         """acquire(size, writeOnly) -> long
 
         Get a pointer to memory for the buffer.
@@ -1615,26 +1771,26 @@ class MIndexBuffer:
         * writeOnly (bool) - Specified if the returned memory should be uninitialized or filled with actual buffer content.
                              When the current buffer content is not needed, it is preferable to set the writeOnly flag to true for better performance.
         """
-    def commit(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def commit(self, *args: Any, **kwargs: Any) -> Any:
         """commit(long) -> self
 
         Commit the data stored in the memory given by acquire() to the buffer.
         If this method is not called, the acquired buffer will not be used in drawing.
         The pointer must be the same pointer returned from acquire().
         """
-    def dataType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def dataType(self, *args: Any, **kwargs: Any) -> Any:
         """dataType() -> int
 
         Get the data type of the buffer.
         See MGeometry.dataTypeString() for a list of valid data types.
         """
-    def hasCustomResourceHandle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasCustomResourceHandle(self, *args: Any, **kwargs: Any) -> Any:
         """hasCustomResourceHandle() -> bool
 
         Returns true if this index buffer is using a custom resource handle set
         by the plugin using MIndexBuffer.setResourceHandle(long, int).
         """
-    def lockResourceHandle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def lockResourceHandle(self, *args: Any, **kwargs: Any) -> Any:
         """lockResourceHandle() -> self
 
         Lock the resource handle. The pointer returned from resourceHandle() is
@@ -1666,42 +1822,42 @@ class MIndexBuffer:
         map() and unmap() will work if they are called between lockResourceHandle()
         and unlockResourceHandle(). They operate on the GPU representation.
         """
-    def map(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def map(self, *args: Any, **kwargs: Any) -> Any:
         """map() -> long
 
         Get a read-only pointer to the existing content of the buffer.
         Writing new content in this memory block is not supported and can lead to unexpected behavior.
         """
-    def resourceHandle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def resourceHandle(self, *args: Any, **kwargs: Any) -> Any:
         """resourceHandle() -> long
 
         Returns a long containing a C++ 'float' pointer which points to the graphics device dependent handle to the vertex indexing data.
         """
-    def setResourceHandle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setResourceHandle(self, *args: Any, **kwargs: Any) -> Any:
         """setResourceHandle(long, int) -> selfset the graphics-device-dependent hardware buffer resource handle."""
-    def size(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def size(self, *args: Any, **kwargs: Any) -> Any:
         """size() -> int
 
         Get the size of the buffer in units of dataType(). Returns 0 if unallocated.
         """
-    def unload(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def unload(self, *args: Any, **kwargs: Any) -> Any:
         """unload() -> self
 
         If the buffer is resident in GPU memory, calling this method will move it to system memory and free the GPU memory.
         """
-    def unlockResourceHandle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def unlockResourceHandle(self, *args: Any, **kwargs: Any) -> Any:
         """unlockResourceHandle() -> self
 
         Unlock the resource handle. The pointer returned from resourceHandle is not
         guaranteed to exist any more.
         See lockResourceHandle() for more details.
         """
-    def unmap(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def unmap(self, *args: Any, **kwargs: Any) -> Any:
         """unmap() -> self
 
         Release the data exposed by map(). If this method is not called, the buffer will not be recycled.
         """
-    def update(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def update(self, *args: Any, **kwargs: Any) -> Any:
         """update(buffer, destOffset, numIndices, truncateIfSmaller) -> self
 
         Set a portion (or all) of the contents of the MIndexBuffer using the data in the provided software buffer.
@@ -1716,6 +1872,19 @@ class MIndexBuffer:
         """
 
 class MIndexBufferDescriptor:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
     @property
     def component(*args: Any, **kwargs: Any) -> Any:
         """The component associated with the index buffer."""
@@ -1813,23 +1982,37 @@ class MIndexBufferDescriptor:
         """
 
 class MIndexBufferDescriptorList:
-    def append(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def append(self, *args: Any, **kwargs: Any) -> Any:
         """append(MIndexBufferDescriptor) -> bool
 
         Add a descriptor to the list. Creates and stores a copy which is owned by the list.
         """
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """clear() -> self
 
         Clear the list.
         """
-    def remove(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def remove(self, *args: Any, **kwargs: Any) -> Any:
         """remove(index) -> bool
 
         Remove a descriptor from the list and delete it.
         """
 
 class MInitContext:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     @property
     def dagPath(*args: Any, **kwargs: Any) -> Any:
         """A path to the instance of the Maya DAG object for which the shader is being initialized"""
@@ -1844,6 +2027,11 @@ class MInitContext:
         """The Maya shading node this override is used for"""
 
 class MInitFeedback:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     @property
     def customData(*args: Any, **kwargs: Any) -> Any:
         """Optional user data to be associated with the render item for the shader assignment"""
@@ -1852,6 +2040,11 @@ class MInitFeedback:
         """Optional user data to be associated with the render item for the shader assignment"""
 
 class MIntersection:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     @property
     def barycentricCoordinates(*args: Any, **kwargs: Any) -> Any:
         """Get the barycentric coordinates (a, b). Only valid for triangles.
@@ -1910,18 +2103,23 @@ class MIntersection:
         """
 
 class MLightParameterInformation:
-    def arrayParameterCount(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def arrayParameterCount(self, *args: Any, **kwargs: Any) -> Any:
         """arrayParameterCount(string) -> int
 
         Return the array size of a parameter. If the parameter is not an array then a value of 0 is returned.
         """
-    def getParameter(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getParameter(self, *args: Any, **kwargs: Any) -> Any:
         """getParameter(int) -> MIntArraygetParameter(int) -> MFloatArraygetParameter(int) -> MMatrixgetParameter(int) -> MSamplerStateDescgetParameter(int) -> MTexturegetParameter(string) -> MIntArraygetParameter(string) -> MFloatArraygetParameter(string) -> MMatrixgetParameter(string) -> MSamplerStateDescgetParameter(string) -> MTexture
 
         Get parameter value by name or by semantic.
         If more than one parameter matches the semantic, the value of the first matching parameter found will be returned.
         """
-    def getParameterTextureHandle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getParameterTextureHandle(self, *args: Any, **kwargs: Any) -> Any:
         """getParameterTextureHandle(int) -> longgetParameterTextureHandle(string) -> long
 
         Get a resource handle for a texture parameter by name or by semantic.
@@ -1962,27 +2160,27 @@ class MLightParameterInformation:
     kTextureCube: int = ...
     kWorldDirection: int = ...
     kWorldPosition: int = ...
-    def lightPath(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def lightPath(self, *args: Any, **kwargs: Any) -> Any:
         """lightPath() -> MDagPath
 
         Returns the DagPath to the scene light. Will return an unitialized DagPath for default lights.
         """
-    def lightType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def lightType(self, *args: Any, **kwargs: Any) -> Any:
         """lightType() -> string
 
         Get the classification of the light node.
         """
-    def parameterList(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def parameterList(self, *args: Any, **kwargs: Any) -> Any:
         """parameterList() -> list of string
 
         Get the names of all light parameters that are accessible.
         """
-    def parameterNames(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def parameterNames(self, *args: Any, **kwargs: Any) -> Any:
         """parameterNames(int) -> list of string
 
         Get the name of all parameters on the light which are tagged with the stock semantic.
         """
-    def parameterSemantic(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def parameterSemantic(self, *args: Any, **kwargs: Any) -> Any:
         """parameterSemantic(string) -> int
 
         Get the stock semantic for a named parameter:
@@ -2008,7 +2206,7 @@ class MLightParameterInformation:
           MDrawContext.kShadowOn         Local toggle per light for whether shadows are enabled or not
           MDrawContext.kShadowDirty      Indicates if the contents of the shadow map are out-of-date or uninitialized
         """
-    def parameterType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def parameterType(self, *args: Any, **kwargs: Any) -> Any:
         """parameterType(string) -> int
 
         Get the type of the named parameter, returns kInvalid if parameter is not found.
@@ -2027,7 +2225,12 @@ class MLightParameterInformation:
         """
 
 class MPassContext:
-    def hasShaderOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def hasShaderOverride(self, *args: Any, **kwargs: Any) -> Any:
         """hasShaderOverride() -> bool
 
         Return if there is a shader instance override set for the current pass.
@@ -2060,17 +2263,17 @@ class MPassContext:
     kUIGeometrySemantic: str = ...
     kUserPassSemantic: str = ...
     kXrayUISemantic: str = ...
-    def passIdentifier(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def passIdentifier(self, *args: Any, **kwargs: Any) -> Any:
         """passIdentifier() -> string
 
         Return the identifier for the pass context.
         """
-    def passSemantics(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def passSemantics(self, *args: Any, **kwargs: Any) -> Any:
         """passSemantics() -> list of string
 
         Return an array of semantics for the pass context.
         """
-    def shaderOverrideInstance(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def shaderOverrideInstance(self, *args: Any, **kwargs: Any) -> Any:
         """shaderOverrideInstance() -> MShaderInstance
 
         Return the shader instance override set for the current pass.
@@ -2079,23 +2282,36 @@ class MPassContext:
         """
 
 class MPresentTarget(MRenderOperation):
-    def presentDepth(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def presentDepth(self, *args: Any, **kwargs: Any) -> Any:
         """presentDepth() -> bool
 
         Query whether the present operation will display depth values.
         """
-    def setPresentDepth(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setPresentDepth(self, *args: Any, **kwargs: Any) -> Any:
         """setPresentDepth(bool) -> self
 
         Set whether the operation will present depth values.
         """
-    def setTargetBackBuffer(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setTargetBackBuffer(self, *args: Any, **kwargs: Any) -> Any:
         """setTargetBackBuffer(int) -> self
 
         Set the desired back-buffer to use on the output target.
         see MPresentTarget.targetBackBuffer() description for the list of available back-buffers.
         """
-    def targetBackBuffer(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def targetBackBuffer(self, *args: Any, **kwargs: Any) -> Any:
         """targetBackBuffer() -> int
 
         Query the desired back-buffer to use on the output target.
@@ -2106,7 +2322,12 @@ class MPresentTarget(MRenderOperation):
         """
 
 class MPxComponentConverter:
-    def addIntersection(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addIntersection(self, *args: Any, **kwargs: Any) -> Any:
         """addIntersection(intersection) -> self
 
         Maya calls this function for every selection hit on the render item.
@@ -2114,21 +2335,21 @@ class MPxComponentConverter:
 
         * intersection (MIntersection) - The selection intersection.
         """
-    def component(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def component(self, *args: Any, **kwargs: Any) -> Any:
         """component() -> MObject
 
         Once all of the geometry hits have been passed to the converter through calls to addIntersection(), Maya will call this method to retrieve the components corresponding to those hits.
 
         Returns the component selection.
         """
-    def initialize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def initialize(self, *args: Any, **kwargs: Any) -> Any:
         """initialize(renderItem) -> self
 
         Maya calls this function to allow the converter to initialize itself for the selection on the given render item.
 
         * renderItem (MRenderItem) - The render item.
         """
-    def selectionMask(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def selectionMask(self, *args: Any, **kwargs: Any) -> Any:
         """selectionMask() -> MSelectionMask
 
         Maya calls this function to allow the converter to specify the type of components it can handle..
@@ -2137,7 +2358,12 @@ class MPxComponentConverter:
         """
 
 class MPxDrawOverride:
-    def addUIDrawables(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addUIDrawables(self, *args: Any, **kwargs: Any) -> Any:
         """addUIDrawables(objPath, drawManager, frameContext, data) -> self
 
         Provides access to the MUIDrawManager, which can be used to queue up operations to draw simple UI shapes like lines, circles, text, etc.
@@ -2150,7 +2376,7 @@ class MPxDrawOverride:
         * frameContext (MFrameContext) - Frame level context information.
         * data (MUserData) - Data cached by prepareForDraw().
         """
-    def boundingBox(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def boundingBox(self, *args: Any, **kwargs: Any) -> Any:
         """boundingBox(objPath, cameraPath) -> MBoundingBox
 
         Called by Maya whenever the bounding box of the drawable object is needed.
@@ -2163,7 +2389,7 @@ class MPxDrawOverride:
 
         Returns The object space bounding box of object drawn in the draw callback
         """
-    def disableInternalBoundingBoxDraw(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def disableInternalBoundingBoxDraw(self, *args: Any, **kwargs: Any) -> Any:
         """disableInternalBoundingBoxDraw() -> bool
 
         Returns True to disable bounding box drawing. The default value is False.
@@ -2175,7 +2401,7 @@ class MPxDrawOverride:
         As noted the boundingBox() method is never called under this condition.
         As such with no bounding box information provided it is not possible to automatically draw due to insufficient information provided.
         """
-    def excludedFromPostEffects(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def excludedFromPostEffects(self, *args: Any, **kwargs: Any) -> Any:
         """excludedFromPostEffects() -> bool
 
         Returns False to indicate inclusion in post effects. The default value is true.
@@ -2186,7 +2412,7 @@ class MPxDrawOverride:
         Note that the appropriate pass identifier and pass semantic can be queried at draw time via the MPassContext data structure.
         Also note that if the pass requires a shader override that it can be obtained from the MDrawContext data structure provided at draw time.
         """
-    def handleTraceMessage(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def handleTraceMessage(self, *args: Any, **kwargs: Any) -> Any:
         """handleTraceMessage(message) -> self
 
         When debug tracing is enabled via MPxDrawOverride::traceCallSequence(),
@@ -2201,7 +2427,7 @@ class MPxDrawOverride:
         name for the DAG object (associated with the draw override) may
         be included as part of the string.
         """
-    def hasUIDrawables(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasUIDrawables(self, *args: Any, **kwargs: Any) -> Any:
         """hasUIDrawables() -> bool
 
         Query whether 'addUIDrawables()' will be called or not.
@@ -2210,7 +2436,7 @@ class MPxDrawOverride:
 
         This method should not be overridden if addUIDrawables() has not also been overridden as there may be associated wasted overhead.
         """
-    def isBounded(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isBounded(self, *args: Any, **kwargs: Any) -> Any:
         """isBounded(objPath, cameraPath) -> bool
 
         Returns True if object is bounded.
@@ -2226,14 +2452,14 @@ class MPxDrawOverride:
         * objPath (MDagPath) - The path to the object whose transform is needed.
         * cameraPath (MDagPath) - The path to the camera that is being used to draw.
         """
-    def isTransparent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isTransparent(self, *args: Any, **kwargs: Any) -> Any:
         """isTransparent() -> bool
 
         Returns True to indicate inclusion in transparency passes. The default value is false.
 
         Indicates whether or not the draw method should be called for each transparency pass(front-culling and back-culling).
         """
-    def pointSnappingActive(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def pointSnappingActive(self, *args: Any, **kwargs: Any) -> Any:
         """pointSnappingActive() -> bool
 
         This utility function can be called by a draw override to query whether Viewport 2.0 selection has been launched to find points for snapping. If so, in order for the associated DAG object to participate,
@@ -2246,7 +2472,7 @@ class MPxDrawOverride:
 
         The method returns true if snapping to points is active.
         """
-    def prepareForDraw(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def prepareForDraw(self, *args: Any, **kwargs: Any) -> Any:
         """prepareForDraw(objPath, cameraPath, frameContext, oldData) -> MUserData
 
         Called by Maya each time the object needs to be drawn. Any data needed from the Maya dependency graph must be retrieved and cached in this stage. It is invalid to pull data from the Maya dependency graph in the draw callback method and Maya may become unstable if that is attempted.
@@ -2260,7 +2486,7 @@ class MPxDrawOverride:
 
         Returns the data to be passed to the draw callback method
         """
-    def refineSelectionPath(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def refineSelectionPath(self, *args: Any, **kwargs: Any) -> Any:
         """refineSelectionPath(selectInfo, hitItem, path, components, objectMask) -> bool
 
         This method is called during the hit test phase of the viewport 2.0 selection and is used to override the selected path, the selected components or simply reject the selection.
@@ -2279,12 +2505,12 @@ class MPxDrawOverride:
         * components [IN/OUT] (MObject) - The selected components
         * objectMask [IN/OUT] (MSelectionMask) - The object selection mask
         """
-    def supportedDrawAPIs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def supportedDrawAPIs(self, *args: Any, **kwargs: Any) -> Any:
         """supportedDrawAPIs() -> DrawAPI
 
         Returns the draw API supported by this override.
         """
-    def traceCallSequence(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def traceCallSequence(self, *args: Any, **kwargs: Any) -> Any:
         """traceCallSequence() -> bool
 
         This method allows a way for a plug-in to examine
@@ -2293,7 +2519,7 @@ class MPxDrawOverride:
         The default implementation returns false meaning no
         tracing will occur.
         """
-    def transform(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def transform(self, *args: Any, **kwargs: Any) -> Any:
         """transform(objPath, cameraPath) -> MMatrix
 
         Returns The world space transformation matrix.
@@ -2305,7 +2531,7 @@ class MPxDrawOverride:
         * objPath (MDagPath) - The path to the object whose transform is needed.
         * cameraPath (MDagPath) - The path to the camera that is being used to draw.
         """
-    def updateSelectionGranularity(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def updateSelectionGranularity(self, *args: Any, **kwargs: Any) -> Any:
         """updateSelectionGranularity(path, selectionContext) -> self
 
         This is method is called during the pre-filtering phase of the viewport 2.0 selection and is used to setup the selection context of the given DAG object.
@@ -2321,7 +2547,7 @@ class MPxDrawOverride:
          path (MDagPath) - The path to the instance to update the selection context for
          selectionContext [OUT] (MSelectionContext) - The selection context
         """
-    def userSelect(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def userSelect(self, *args: Any, **kwargs: Any) -> Any:
         """userSelect(selectInfo, drawContext, objPath, data, selectionList, worldSpaceHitPts) -> bool
 
         This method is called during the hit test phase of Viewport 2.0 selection if wantUserSelection() returns true, in order to override the default hit test implementation for the associated DAG object.
@@ -2347,7 +2573,7 @@ class MPxDrawOverride:
         * selectionList [OUT] (MSelectionList) - List of items selected by this method
         * worldSpaceHitPts [OUT] (MPointArray) - List of hit points
         """
-    def wantUserSelection(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def wantUserSelection(self, *args: Any, **kwargs: Any) -> Any:
         """wantUserSelection() -> bool
 
         This method is called during the hit test phase of Viewport 2.0 selection and is used to indicate whether or not the userSelect() method should be called to override the default hit test implementation for the associated DAG object.
@@ -2358,7 +2584,12 @@ class MPxDrawOverride:
         """
 
 class MPxGeometryOverride:
-    def addUIDrawables(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addUIDrawables(self, *args: Any, **kwargs: Any) -> Any:
         """addUIDrawables(path, drawManager, frameContext) -> self
 
         For each instance of the object, besides the render items updated in updateRenderItems() there is also a render item list for rendering simple UI elements.
@@ -2374,12 +2605,12 @@ class MPxGeometryOverride:
         * drawManager (MUIDrawManager) - The draw manager used to draw simple geometry.
         * frameContext (MFrameContext) - Frame level context information.
         """
-    def cleanUp(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def cleanUp(self, *args: Any, **kwargs: Any) -> Any:
         """cleanUp() -> self
 
         Called after all other stages are completed. Clean up any cached data stored from the updateDG() phase.
         """
-    def configCache(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def configCache(self, *args: Any, **kwargs: Any) -> Any:
         """configCache(evalNode, schema) -> None
 
         Defines the node's behavior when participating in Cached Playback.
@@ -2389,13 +2620,13 @@ class MPxGeometryOverride:
         * evalNode (MEvaluationNode)  - This node's evaluation node, contains animated plug information
         * schema (MCacheSchema)       - Specification about what attributes to cache
         """
-    def getFrameContext(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getFrameContext(self, *args: Any, **kwargs: Any) -> Any:
         """getFrameContext() -> MFrameContext
 
         Return a frame context. The context is not available if called before setup or after cleanup.
         The context should never be deleted by the plug-in as it is owned by the geometry override.
         """
-    def handleTraceMessage(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def handleTraceMessage(self, *args: Any, **kwargs: Any) -> Any:
         """handleTraceMessage(message) -> self
 
         When debug tracing is enabled via MPxGeometryOverride::traceCallSequence(),
@@ -2410,7 +2641,7 @@ class MPxGeometryOverride:
         name for the DAG object (associated with the geometry override) may
         be included as part of the string.
         """
-    def hasUIDrawables(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasUIDrawables(self, *args: Any, **kwargs: Any) -> Any:
         """hasUIDrawables() -> bool
 
         Query whether 'addUIDrawables()' will be called or not.
@@ -2419,7 +2650,7 @@ class MPxGeometryOverride:
 
         This method should not be overridden if addUIDrawables() has not also been overridden as there may be associated wasted overhead.
         """
-    def isIndexingDirty(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isIndexingDirty(self, *args: Any, **kwargs: Any) -> Any:
         """isIndexingDirty(item) -> bool
 
         Returns True if the index buffer needs to be updated.
@@ -2428,7 +2659,7 @@ class MPxGeometryOverride:
 
         * item (MRenderItem) - The render item in question.
         """
-    def isStreamDirty(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isStreamDirty(self, *args: Any, **kwargs: Any) -> Any:
         """isStreamDirty(desc) -> bool
 
         Returns True if the vertex buffer needs to be updated.
@@ -2437,7 +2668,7 @@ class MPxGeometryOverride:
 
         * desc (MVertexBufferDescriptor) - The description of the vertex buffer.
         """
-    def pointSnappingActive(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def pointSnappingActive(self, *args: Any, **kwargs: Any) -> Any:
         """pointSnappingActive() -> bool
 
         Returns True if selection has been launched to find snap points.
@@ -2448,7 +2679,7 @@ class MPxGeometryOverride:
         - refineSelectionPath() will not be called. All points present in the render item will be
         considered suitable locations for snapping.
         """
-    def populateGeometry(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def populateGeometry(self, *args: Any, **kwargs: Any) -> Any:
         """populateGeometry(requirements, renderItems, data) -> self
 
         Implementations of this method should create and populate vertex and index buffers on the MGeometry instance 'data' in order to fulfill all of the geometry requirements defined by the 'requirements' parameter. Failure to do so will result in the object either drawing incorrectly or not drawing at all. See the documentation of MGeometryRequirements and MGeometry for more details on the usage of these classes. The geometry requirements will ask for index buffers on demand. Implementations can force the geometry requirements to update index buffers by calling MRenderer.setGeometryDrawDirty() with topologyChanged setting to True.
@@ -2457,7 +2688,7 @@ class MPxGeometryOverride:
         * renderItems (MRenderItemList) - The list of render items that need to be updated.
         * data [OUT] (MGeometry) - The container for the geometry data
         """
-    def refineSelectionPath(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def refineSelectionPath(self, *args: Any, **kwargs: Any) -> Any:
         """refineSelectionPath(selectInfo, hitItem, path, components, objectMask) -> bool
 
         This method is called during the hit test phase of the viewport 2.0 selection and is used to override the selected path, the selected components or simply reject the selection.
@@ -2476,34 +2707,34 @@ class MPxGeometryOverride:
         * components [IN/OUT] (MObject) - The selected components
         * objectMask [IN/OUT] (MSelectionMask) - The object selection mask
         """
-    def requiresGeometryUpdate(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def requiresGeometryUpdate(self, *args: Any, **kwargs: Any) -> Any:
         """requiresGeometryUpdate() -> bool
 
         This method is called one during each draw - preparation phase. If this method returns true then all of the other MPxGeometryOverride methods will be called for the associated DAG object this draw preparation phase.If this method returns false then all of the other MPxGeometryOverride methods may be called.This code has to be thread safe, non - blocking and work only on data owned by the associated DAG object.
         """
-    def requiresUpdateRenderItems(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def requiresUpdateRenderItems(self, *args: Any, **kwargs: Any) -> Any:
         """requiresUpdateRenderItems(path) -> bool
 
         This method is called for each instance of the associated DAG object whenever the object changes.If, during a single draw - preparation phase this method returns false for all DAG instances of this MPxGeometryOverride then updateRenderItems() will not be called for the draw - preparation phase.
 
         * path (MDagPath) - The path to the instance to update render items for
         """
-    def supportedDrawAPIs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def supportedDrawAPIs(self, *args: Any, **kwargs: Any) -> Any:
         """supportedDrawAPIs() -> DrawAPI
 
         Returns the draw API supported by this override.
         """
-    def supportsEvaluationManagerParallelUpdate(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def supportsEvaluationManagerParallelUpdate(self, *args: Any, **kwargs: Any) -> Any:
         """supportsEvaluationManagerParallelUpdate() -> bool
 
         This method is called for each MPxGeometryOverride in the scene to determine if the MPxGeometryOverride is eligible for Evaluation Manager Parallel Update.
         """
-    def supportsVP2CustomCaching(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def supportsVP2CustomCaching(self, *args: Any, **kwargs: Any) -> Any:
         """supportsVP2CustomCaching() -> bool
 
         This method is called for each MPxGeometryOverride in the scene to determine if the MPxGeometryOverride is eligible for VP2 Evaluation Caching.
         """
-    def traceCallSequence(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def traceCallSequence(self, *args: Any, **kwargs: Any) -> Any:
         """traceCallSequence() -> bool
 
         This method allows a way for a plug-in to examine
@@ -2512,12 +2743,12 @@ class MPxGeometryOverride:
         The default implementation returns false meaning no
         tracing will occur.
         """
-    def updateDG(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def updateDG(self, *args: Any, **kwargs: Any) -> Any:
         """updateDG() -> self
 
         Perform any work required to translate the geometry data that needs to get information from the dependency graph.  This should be the only place that dependency graph evaluation occurs. Any data retrieved should be cached for later stages.
         """
-    def updateRenderItems(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def updateRenderItems(self, *args: Any, **kwargs: Any) -> Any:
         """updateRenderItems(path, list) -> self
 
         This method is called for each instance of the associated DAG object whenever the object changes. The method is passed the path to the instance and the current list of render items associated with that instance. By default the list will contain one render item for each shader assigned to the instance. Implementations of this method method may add, remove or modify items in the list. Note that removal of items created by Maya for assigned shaders is not allowed and will fail. As an alternative this method can disable those items so that they do not draw.
@@ -2525,7 +2756,7 @@ class MPxGeometryOverride:
         * path (MDagPath) - The path to the instance to update render items for
         * list [IN/OUT] (MRenderItemList) - The current render item list, items may be modified, added or removed.
         """
-    def updateSelectionGranularity(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def updateSelectionGranularity(self, *args: Any, **kwargs: Any) -> Any:
         """updateSelectionGranularity(path, selectionContext) -> self
 
         This is method is called during the pre-filtering phase of the viewport 2.0 selection and is used to setup the selection context of the given DAG object.
@@ -2543,14 +2774,24 @@ class MPxGeometryOverride:
         """
 
 class MPxImagePlaneOverride:
-    def supportedDrawAPIs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def supportedDrawAPIs(self, *args: Any, **kwargs: Any) -> Any:
         """supportedDrawAPIs() -> DrawAPI
 
         Returns the draw API supported by this override.
         """
 
 class MPxIndexBufferMutator:
-    def mutateIndexing(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def mutateIndexing(self, *args: Any, **kwargs: Any) -> Any:
         """mutateIndexing(sourceIndexBuffers, vertexBuffers, indexBuffer) -> (int, int)
 
         This method gets called to allow the generator to mutate the data for a custom index stream using information stored in the vertex buffers.
@@ -2564,7 +2805,12 @@ class MPxIndexBufferMutator:
         """
 
 class MPxPrimitiveGenerator:
-    def computeIndexCount(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def computeIndexCount(self, *args: Any, **kwargs: Any) -> Any:
         """computeIndexCount(object, component) -> int
 
         This function is called to allow the primitive generator to provide the number of vertices it will use.
@@ -2572,7 +2818,7 @@ class MPxPrimitiveGenerator:
         * object (MObject) - The object being evaluated.
         * component (MObject) - The components to use.
         """
-    def generateIndexing(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def generateIndexing(self, *args: Any, **kwargs: Any) -> Any:
         """generateIndexing(object, component, sourceIndexing, targetIndexing, indexBuffer) -> (int, int)
 
         This method gets called to allow the generator to fill in the data for a custom index stream.
@@ -2588,7 +2834,12 @@ class MPxPrimitiveGenerator:
         """
 
 class MPxShaderOverride:
-    def activateKey(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def activateKey(self, *args: Any, **kwargs: Any) -> Any:
         """activateKey(context, key) -> self
 
         This is the activateKey callback.
@@ -2597,7 +2848,7 @@ class MPxShaderOverride:
 
         The default implementation is empty.
         """
-    def addGeometryRequirement(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addGeometryRequirement(self, *args: Any, **kwargs: Any) -> Any:
         """addGeometryRequirement(MVertexBufferDescriptor) -> self
 
         During the initialization phase the geometry requirements for the shading effect can be updated. The update is
@@ -2607,7 +2858,7 @@ class MPxShaderOverride:
         of the vertex descriptor can be used to select the desired one. If that member is empty or does not match any of the
         fields then the default field of that type will be used.
         """
-    def addGeometryRequirements(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addGeometryRequirements(self, *args: Any, **kwargs: Any) -> Any:
         """addGeometryRequirements(MVertexBufferDescriptorList) -> self
 
 
@@ -2621,7 +2872,7 @@ class MPxShaderOverride:
         This method will attempt to add as many requirements as possible from the list, skipping invalid ones.
         If kInvalidParameter is returned it means at least one requirement failed to be added.
         """
-    def addIndexingRequirement(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addIndexingRequirement(self, *args: Any, **kwargs: Any) -> Any:
         """addIndexingRequirement(MIndexBufferDescriptor) -> self
 
         During the initialization phase the indexing requirements for the shading effect can be updated. The update is accomplished by
@@ -2638,7 +2889,7 @@ class MPxShaderOverride:
         When requesting custom primitives you should register an MPxPrimitiveGenerator that knows how to produce the custom primitive needed
         by the shader.
         """
-    def addShaderSignature(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addShaderSignature(self, *args: Any, **kwargs: Any) -> Any:
         """addShaderSignature(signature, signatureSize) -> selfaddShaderSignature(MShaderInstance) -> self
 
         During the initialization phase, the "signature" for the shader may be set. Certain Draw APIs (like DirectX 11) require a
@@ -2646,7 +2897,7 @@ class MPxShaderOverride:
         MPxShaderOverride.drawGeometry() in the draw phase in order to perform drawing. If drawing is done manually, adding a shader
         signature is not necessary.
         """
-    def boundingBoxExtraScale(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def boundingBoxExtraScale(self, *args: Any, **kwargs: Any) -> Any:
         """boundingBoxExtraScale() -> float
 
         Returns the Extra scale factor.
@@ -2662,7 +2913,7 @@ class MPxShaderOverride:
 
         The default implementation returns the unit scale factor (1.0).
         """
-    def draw(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def draw(self, *args: Any, **kwargs: Any) -> Any:
         """draw(context, renderItemList) -> bool
 
         This is the draw callback, the method is called during the draw phase.
@@ -2680,12 +2931,12 @@ class MPxShaderOverride:
 
         Returns True if draw was successful, False otherwise.
         """
-    def drawGeometry(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def drawGeometry(self, *args: Any, **kwargs: Any) -> Any:
         """drawGeometry(MDrawContext) -> self
 
         This method may be called from draw() and will cause Maya to immediately draw the current geometry using the current state of the draw API.
         """
-    def endUpdate(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def endUpdate(self, *args: Any, **kwargs: Any) -> Any:
         """endUpdate() -> self
 
         This is the final part of the update phase.
@@ -2693,7 +2944,7 @@ class MPxShaderOverride:
         This method is called by Maya to allow the plugin to clean up any data or state from the previous update stages.
         No dependency graph evaluation, nor graphics device access should be performed during this phase.
         """
-    def handlesConsolidatedGeometry(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def handlesConsolidatedGeometry(self, *args: Any, **kwargs: Any) -> Any:
         """handlesConsolidatedGeometry() -> bool
 
         Returns True if the shader instance should disable the consolidation
@@ -2707,7 +2958,7 @@ class MPxShaderOverride:
         The default implementation returns true indicating that the shader instance
         should not be disable the consolidation of the geometry.
         """
-    def handlesDraw(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def handlesDraw(self, *args: Any, **kwargs: Any) -> Any:
         """handlesDraw(context) -> bool
 
         Returns True if shader handles drawing.
@@ -2717,7 +2968,7 @@ class MPxShaderOverride:
         The default implementation will check the pass context. If the pass semantic is specified to be a color pass
         and the pass has no shader override (MPassContext.hasShaderOverride() returns False) then this method will return True.
         """
-    def initialize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def initialize(self, *args: Any, **kwargs: Any) -> Any:
         """initialize(shader) -> string
         initialize(initContext, initFeedback) -> string
 
@@ -2728,7 +2979,7 @@ class MPxShaderOverride:
 
         The default implementation returns a constant string.
         """
-    def initialize2(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def initialize2(self, *args: Any, **kwargs: Any) -> Any:
         """initialize2(initContext) -> string, userData
 
         Initialization occurs when Maya determines that the hardware shader needs to be rebuilt. Any initialization
@@ -2736,7 +2987,7 @@ class MPxShaderOverride:
 
         The default implementation returns a string and None MUserData
         """
-    def isTransparent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isTransparent(self, *args: Any, **kwargs: Any) -> Any:
         """isTransparent() -> bool
 
         Returns True if semi-transparent drawing should occur.
@@ -2747,7 +2998,7 @@ class MPxShaderOverride:
 
         The default return value is False.
         """
-    def nonTexturedShaderInstance(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def nonTexturedShaderInstance(self, *args: Any, **kwargs: Any) -> Any:
         """nonTexturedShaderInstance() -> MShaderInstancenonTexturedShaderInstance() -> (MShaderInstance, bool)
 
         Returns an override shader instance to be used when drawing in non-textured
@@ -2764,7 +3015,7 @@ class MPxShaderOverride:
 
         The default implementation returns None indicating that no shader instance will be used.
         """
-    def overridesDrawState(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def overridesDrawState(self, *args: Any, **kwargs: Any) -> Any:
         """overridesDrawState() -> bool
 
         Returns True if the override overrides the draw state.
@@ -2779,7 +3030,7 @@ class MPxShaderOverride:
 
         The default return value is False.
         """
-    def overridesNonMaterialItems(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def overridesNonMaterialItems(self, *args: Any, **kwargs: Any) -> Any:
         """overridesNonMaterialItems() -> bool
 
         Returns True if the shader instance should also be used to render non material items.
@@ -2793,7 +3044,7 @@ class MPxShaderOverride:
         The default implementation returns False indicating that the shader instance
         should not be used for non material items.
         """
-    def rebuildAlways(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rebuildAlways(self, *args: Any, **kwargs: Any) -> Any:
         """rebuildAlways() -> bool
 
         Returns True if the shader and geometry should be rebuilt on every update.
@@ -2804,7 +3055,7 @@ class MPxShaderOverride:
 
         The default return value is False.
         """
-    def setGeometryRequirements(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setGeometryRequirements(self, *args: Any, **kwargs: Any) -> Any:
         """setGeometryRequirements(MShaderInstance) -> self
 
 
@@ -2820,7 +3071,7 @@ class MPxShaderOverride:
         The corresponding addShaderSignature() method, which takes an MShaderInstance as an input argument, should also be
         called during initialization if the utility method drawGeometry() is used by the plug-in.
         """
-    def shaderInstance(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def shaderInstance(self, *args: Any, **kwargs: Any) -> Any:
         """shaderInstance() -> MShaderInstance
 
         Returns the Shader instance.
@@ -2829,7 +3080,7 @@ class MPxShaderOverride:
 
         The default implementation returns None indicating that no shader instance will be used.
         """
-    def supportedDrawAPIs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def supportedDrawAPIs(self, *args: Any, **kwargs: Any) -> Any:
         """supportedDrawAPIs() -> DrawAPI
 
         Returns The draw API supported by this override.
@@ -2838,7 +3089,7 @@ class MPxShaderOverride:
         of render drawAPI elements to indicate that the override supports multiple draw APIs. See MRenderer.drawAPI().
         This method returns 'MRender.kOpenGL' by default.
         """
-    def supportsAdvancedTransparency(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def supportsAdvancedTransparency(self, *args: Any, **kwargs: Any) -> Any:
         """supportsAdvancedTransparency() -> bool
 
         Returns True if advanced tranparency algorithm is supported.
@@ -2846,7 +3097,7 @@ class MPxShaderOverride:
         During the update phase the override will be called to return whether it supports advanced transparency algorithms
         (such as depth peeling).
         """
-    def terminateKey(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def terminateKey(self, *args: Any, **kwargs: Any) -> Any:
         """terminateKey(context, key) -> self
 
         This is the terminateKey callback.
@@ -2855,7 +3106,7 @@ class MPxShaderOverride:
 
         The default implementation is empty.
         """
-    def updateDG(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def updateDG(self, *args: Any, **kwargs: Any) -> Any:
         """updateDG(object) -> self
 
         This is the first part of the update phase.
@@ -2864,7 +3115,7 @@ class MPxShaderOverride:
         This should be the only place that dependency graph evaluation occurs. Data retrieved from Maya may be cached
         on the override for use in later stages.
         """
-    def updateDevice(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def updateDevice(self, *args: Any, **kwargs: Any) -> Any:
         """updateDevice() -> self
 
         This is the second part of the update phase.
@@ -2874,7 +3125,12 @@ class MPxShaderOverride:
         """
 
 class MPxShadingNodeOverride:
-    def allowConnections(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def allowConnections(self, *args: Any, **kwargs: Any) -> Any:
         """allowConnections() -> bool
 
         Returns True if connections should be allowed to parameters of the fragment that do not have custom mappings that
@@ -2889,7 +3145,7 @@ class MPxShadingNodeOverride:
 
         This method is called once only, just after creation of the override.
         """
-    def fragmentName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def fragmentName(self, *args: Any, **kwargs: Any) -> Any:
         """fragmentName() -> string
 
         Override this method to return the name of the fragment or fragment graph to use for rendering the shading node associated with this override. This fragment will be automatically connected to the other fragments for the other nodes in the shading network to produce a complete shading effect.
@@ -2902,7 +3158,7 @@ class MPxShadingNodeOverride:
 
         Returns the name of the fragment to use
         """
-    def getCustomMappings(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getCustomMappings(self, *args: Any, **kwargs: Any) -> Any:
         """getCustomMappings(mappings) -> self
 
         Maya will automatically match parameters on the shade fragment specified by this override with attributes on the
@@ -2922,7 +3178,7 @@ class MPxShadingNodeOverride:
 
         * mappings [OUT] (MAttributeParameterMappingList) - An attribute parameter mapping list; fill with any desired custom mappings.
         """
-    def outputForConnection(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def outputForConnection(self, *args: Any, **kwargs: Any) -> Any:
         """outputForConnection(sourcePlug, destinationPlug) -> string
 
         Returns the name of an output parameter on the fragment for the override.
@@ -2944,19 +3200,19 @@ class MPxShadingNodeOverride:
                                By default the name of the attribute for this plug is returned.
         * destinationPlug (MPlug) - The plug on the node which is the destination of the connection.
         """
-    def supportedDrawAPIs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def supportedDrawAPIs(self, *args: Any, **kwargs: Any) -> Any:
         """supportedDrawAPIs() -> DrawAPI
 
         Returns the draw API supported by this override.
         """
-    def updateDG(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def updateDG(self, *args: Any, **kwargs: Any) -> Any:
         """updateDG() -> self
 
         This method is called every time Maya needs to update the parameter values on the final shading effect of which the fragment
         produced by this override is a part. In this method implementations should query and cache any values needed for setting
         parameters on the final shading effect in updateShader().
         """
-    def updateShader(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def updateShader(self, *args: Any, **kwargs: Any) -> Any:
         """updateShader(shader, mappings) -> self
 
         This method is called every time Maya needs to update the parameter values on the final shading effect of which the fragment
@@ -2980,7 +3236,7 @@ class MPxShadingNodeOverride:
         * shader (MShaderInstance) - The shader instance.
         * mappings (MAttributeParameterMappingList) - The attribute parameter mappings for this override.
         """
-    def valueChangeRequiresFragmentRebuild(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def valueChangeRequiresFragmentRebuild(self, *args: Any, **kwargs: Any) -> Any:
         """valueChangeRequiresFragmentRebuild(plug) -> bool
 
         Returns True if a change in attribute values should cause a rebuild of the complete shading effect.
@@ -3002,7 +3258,12 @@ class MPxShadingNodeOverride:
         """
 
 class MPxSubSceneOverride:
-    def addInstanceTransform(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addInstanceTransform(self, *args: Any, **kwargs: Any) -> Any:
         """addInstanceTransform(renderItem, transform) -> int
 
         Returns The instance ID for the new instance. This ID can be used to change the matrix or remove it. A return value of 0 indicates an error (render item does not support instancing or invalid state). 0 is never a valid instance ID.
@@ -3012,7 +3273,7 @@ class MPxSubSceneOverride:
         * renderItem (MRenderItem) - The render item to add a new instance to.
         * transform (MMatrix) - The transformation matrix of the new instance.
         """
-    def addUIDrawables(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addUIDrawables(self, *args: Any, **kwargs: Any) -> Any:
         """addUIDrawables(drawManager, frameContext) -> int
 
         Provides access to a MUIDrawManager, which can be used to queue upoperations to draw simple UI shapes like lines, circles, text, etc.If you override this method you must also override hasUIDrawables()to return true, otherwise this method will not be called.If you are not going to override this function, please don't make 'hasUIDrawables()' return trueor there may be some wasted performance overhead.By default the drawables will persist until either the DAG object associated with the overrideis destroyed or the override is deregistered.If you don't want them to be redrawn on each refresh,override areUIDrawablesDirty() to return false.That will cause the drawables to be destroyedon next refresh and this method called again to replace them.
@@ -3020,7 +3281,7 @@ class MPxSubSceneOverride:
         drawManager The UI draw manager, it can be used to draw some simple geometry including text
         frameContext Frame level context information
         """
-    def areUIDrawablesDirty(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def areUIDrawablesDirty(self, *args: Any, **kwargs: Any) -> Any:
         """areUIDrawablesDirty() -> bool
 
         Determines whether addUIDrawables() should be called on the next refresh.
@@ -3029,7 +3290,7 @@ class MPxSubSceneOverride:
 
         If you've overridden addUIDrawables() then at the start of each refresh Maya willdestroy the drawables added in the previous refresh and call addUIDrawables() again.If you override this method to return false then Maya will preserve the UI drawablesfrom the previous refresh until either the DAG object associated with the override isdestroyed, or the override is deregistered.
         """
-    def furtherUpdateRequired(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def furtherUpdateRequired(self, *args: Any, **kwargs: Any) -> Any:
         """furtherUpdateRequired(frameContext) -> bool
 
         Returns True if further update is required. The default value return is False.
@@ -3042,7 +3303,7 @@ class MPxSubSceneOverride:
 
         * frameContext (MFrameContext) - Context information for the current frame.
         """
-    def getInstancedSelectionPath(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getInstancedSelectionPath(self, *args: Any, **kwargs: Any) -> Any:
         """getInstancedSelectionPath(renderItem, intersection, dagPath) -> bool
 
         Returns True if a dag path was found for the instantiable render item.
@@ -3055,7 +3316,7 @@ class MPxSubSceneOverride:
         * intersection (MIntersection) - Extra information to help find out how the render item got selected.
         * dagPath [OUT] (MDagPath) - the MDagPath associated with the provided render item.
         """
-    def getSelectionPath(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getSelectionPath(self, *args: Any, **kwargs: Any) -> Any:
         """getSelectionPath(renderItem, dagPath) -> bool
 
         Returns True if a dag path was found for the render item.
@@ -3071,14 +3332,14 @@ class MPxSubSceneOverride:
         * renderItem (MRenderItem) - Render item found inside the selection frustum.
         * dagPath [OUT] (MDagPath) - the MDagPath associated with the provided render item.
         """
-    def hasUIDrawables(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasUIDrawables(self, *args: Any, **kwargs: Any) -> Any:
         """hasUIDrawables() -> bool
 
         Return Whether addUIDrawables() will be called or not.
 
         In order for any override for the addUIDrawables() method to be calledthis method must also be overridden to return true.This method should not be overridden if addUIDrawables() has not alsobeen overridden as there may be associated wasted overhead.
         """
-    def pointSnappingActive(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def pointSnappingActive(self, *args: Any, **kwargs: Any) -> Any:
         """pointSnappingActive() -> bool
 
         Returns True if selection has been launched to find snap points.
@@ -3089,14 +3350,14 @@ class MPxSubSceneOverride:
         - getSelectionPath() will not be called. All points present in the render item will be
         considered suitable locations for snapping.
         """
-    def removeAllInstances(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeAllInstances(self, *args: Any, **kwargs: Any) -> Any:
         """removeAllInstances(renderItem) -> self
 
         Remove all instances for a render item. This render item will remain set up for instancing and will render nothing until new instances are added.
 
         * renderItem (MRenderItem) - The render item to operate on.
         """
-    def removeExtraInstanceData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeExtraInstanceData(self, *args: Any, **kwargs: Any) -> Any:
         """removeExtraInstanceData(renderItem, parameterName) -> self
 
         Remove an entire extra instance data stream from the instanced render item.
@@ -3104,7 +3365,7 @@ class MPxSubSceneOverride:
         * renderItem (MRenderItem) - The render item to operate on.
         * parameterName (string) - The name of the parameter associated with the extra instance data stream.
         """
-    def removeInstance(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeInstance(self, *args: Any, **kwargs: Any) -> Any:
         """removeInstance(renderItem, instanceId) -> self
 
         Remove one instance of a render item.
@@ -3112,7 +3373,7 @@ class MPxSubSceneOverride:
         * renderItem (MRenderItem) - The render item to operate on.
         * instanceId (int) - The instance ID of the instance to remove. This must be a value returned by addInstanceTransform.
         """
-    def requiresUpdate(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def requiresUpdate(self, *args: Any, **kwargs: Any) -> Any:
         """requiresUpdate(container, frameContext) -> bool
 
         On each frame Maya will give each instantiated MPxSubSceneOverride object a chance to update its set of render items. Before beginning the update process for a specific override, Maya will first call this method to give the override a chance to indicate whether or not an update is necessary. If this method returns False, MPxSubSceneOverride.update() will not be called.
@@ -3124,7 +3385,7 @@ class MPxSubSceneOverride:
 
         Returns True if Maya should trigger the update process for this override
         """
-    def setAllowTransparentInstances(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setAllowTransparentInstances(self, *args: Any, **kwargs: Any) -> Any:
         """setAllowTransparentInstances(renderItem, transform) -> int
 
         Instancing is disabled automatically by default when the shader is transparent.This achieves the best appearance because Maya can sort individual instances.
@@ -3134,7 +3395,7 @@ class MPxSubSceneOverride:
         renderItem The render item to operate on.
         allow Whether to allow instancing with transparent shader.
         """
-    def setExtraInstanceData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setExtraInstanceData(self, *args: Any, **kwargs: Any) -> Any:
         """setExtraInstanceData(renderItem, parameterName, data, instanceId=None) -> self
 
         Adds an extra stream of instanced data to an instanced render item. Once a render item has been instanced, additional per-instance data may be bound to a parameter on the shader for that item. Supported shader parameter types for instanced data include: float, float2, float3 and float4. Once a stream of instanced data is specified for a shader parameter, the original value of that parameter will be ignored in favor of the per-instance data specified in this method.
@@ -3148,7 +3409,7 @@ class MPxSubSceneOverride:
         * data (MFloatArray) - The instanced data stream.
         * instanceId (int) - The instance ID of the instance to set the data for.
         """
-    def setGeometryForRenderItem(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setGeometryForRenderItem(self, *args: Any, **kwargs: Any) -> Any:
         """setGeometryForRenderItem(renderItem, vertexBuffers, indexBuffer=None, objectBox=None) -> self
 
         Call this method to provide the geometry for a render item. Although the render item will add a reference to each buffer, ultimate ownership of the geometric data remains with the caller. This method may only be called on render items which have been generated by this override and it may only be called during update(). Buffers may be shared among multiple render items. This method will replace any geometry currently associated with the render item with the newly provided geometry.
@@ -3164,7 +3425,7 @@ class MPxSubSceneOverride:
         * indexBuffer (MIndexBuffer) - The index buffer for the geometry, may be None.
         * objectBox (MBoundingBox) - Object-space bounding box, may be None.
         """
-    def setInstanceTransformArray(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setInstanceTransformArray(self, *args: Any, **kwargs: Any) -> Any:
         """setInstanceTransformArray(renderItem, matrixArray) -> self
 
         Sets the entire instance array for a render item.  Will convert the MRenderItem to instanced rendering if not already done.  Any pre-existing instances will be removed. The render item should already have it's other properties set (including shader and geometry). A render item converted to instanced rendering will ignore its typical matrix from setMatrix().
@@ -3173,12 +3434,12 @@ class MPxSubSceneOverride:
         * renderItem (MRenderItem) - The render item to set the instance matrix array for.
         * matrixArray (MMatrixArray) - The transformation matrix array for all the instances.
         """
-    def supportedDrawAPIs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def supportedDrawAPIs(self, *args: Any, **kwargs: Any) -> Any:
         """supportedDrawAPIs() -> DrawAPI
 
         Returns the draw API supported by this override.
         """
-    def update(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def update(self, *args: Any, **kwargs: Any) -> Any:
         """update(container, frameContext) -> self
 
         This method is called by Maya on each frame as long as the implementation of MPxSubSceneOverride.requiresUpdate() returns True. In this method, the MSubSceneContainer should be populated with the render items that are required to draw the associated DAG object. The render items will remain in the container until they are explicitly removed or the associated object is deleted. Render items in the container may also be modified at this time.
@@ -3190,7 +3451,7 @@ class MPxSubSceneOverride:
         * container (MSubSceneContainer) - The container for this override
         * frameContext (MFrameContext) - Context information for the current frame
         """
-    def updateInstanceTransform(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def updateInstanceTransform(self, *args: Any, **kwargs: Any) -> Any:
         """updateInstanceTransform(renderItem, instanceId, transform) -> self
 
         Update the instance transform matrix for one instance of a render item.
@@ -3199,7 +3460,7 @@ class MPxSubSceneOverride:
         * instanceId (int) - The instance ID of the instance to update. This must be a value returned by addInstanceTransform.
         * transform (MMatrix) - The new transformation matrix for the instance.
         """
-    def updateSelectionGranularity(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def updateSelectionGranularity(self, *args: Any, **kwargs: Any) -> Any:
         """updateSelectionGranularity(path, selectionContext) -> self
 
         This method is called during the pre-filtering phase of the viewport 2.0 selection and is used to allow derived classes to modify the selection context of the given DAG object.
@@ -3217,7 +3478,11 @@ class MPxSubSceneOverride:
         """
 
 class MPxSurfaceShadingNodeOverride(MPxShadingNodeOverride):
-    def bumpAttribute(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def bumpAttribute(self, *args: Any, **kwargs: Any) -> Any:
         """bumpAttribute() -> string
 
         Returns the name of the attribute that accepts bump connections from bump nodes.
@@ -3231,7 +3496,7 @@ class MPxSurfaceShadingNodeOverride(MPxShadingNodeOverride):
 
         The default implementation returns the empty string (no bump).
         """
-    def primaryColorParameter(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def primaryColorParameter(self, *args: Any, **kwargs: Any) -> Any:
         """primaryColorParameter() -> string
 
         Returns the name of the fragment parameter to use as the primary color.
@@ -3246,7 +3511,7 @@ class MPxSurfaceShadingNodeOverride(MPxShadingNodeOverride):
         The name must correspond to a parameter on the fragment that is mapped to an attribute on the node either automatically
         or through custom attribute parameter mappings.
         """
-    def transparencyParameter(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def transparencyParameter(self, *args: Any, **kwargs: Any) -> Any:
         """transparencyParameter() -> string
 
         Returns the name of the fragment parameter that should drive transparency.
@@ -3263,7 +3528,12 @@ class MPxSurfaceShadingNodeOverride(MPxShadingNodeOverride):
         """
 
 class MPxVertexBufferGenerator:
-    def createVertexStream(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def createVertexStream(self, *args: Any, **kwargs: Any) -> Any:
         """createVertexStream(object, vertexBuffer, targetIndexing, sharedIndexing, sourceStreams) -> self
 
         This method gets called to allow the generator to fill in the data for a custom vertex stream. Use the requirements in the vertexBuffer to get the description of the stream. Use vertexBuffer.acquire() and vertexBuffer.commit() to fill the buffer.
@@ -3274,7 +3544,7 @@ class MPxVertexBufferGenerator:
         * sharedIndexing (MComponentDataIndexing) - Vertex index mapping in the declared MComponentDataIndexing::MComponentType space.
         * sourceStreams (MVertexBufferArray) - Array of Vertex Buffers that can be used to create the new stream.
         """
-    def getSourceIndexing(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getSourceIndexing(self, *args: Any, **kwargs: Any) -> Any:
         """getSourceIndexing(object, sourceIndexing) -> self
 
         This function is called to allow the vertex buffer generator to provide its vertex indexing information as well as the space the vertices are in.  The indexing and the component type are stored in the  sourceIndexing argument.  This indexing information is to allow the system to identify any potential  vertex sharing that is common across all vertex requirements.
@@ -3282,7 +3552,7 @@ class MPxVertexBufferGenerator:
         * object (MObject) - The object being evaluated.
         * sourceIndexing [OUT] (MComponentDataIndexing) - Vertex index mapping in the declared MComponentDataIndexing::MComponentType space.
         """
-    def getSourceStreams(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getSourceStreams(self, *args: Any, **kwargs: Any) -> Any:
         """getSourceStreams(object, sourceStreams) -> self
 
         This function is called to allow the vertex buffer generator to provide the list of stream names that it requires. The names will be used to fill the array of vertex buffers that will be passed to createVertexStream.
@@ -3292,7 +3562,12 @@ class MPxVertexBufferGenerator:
         """
 
 class MPxVertexBufferMutator:
-    def modifyVertexStream(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def modifyVertexStream(self, *args: Any, **kwargs: Any) -> Any:
         """modifyVertexStream(object, vertexBuffer, targetIndexing) -> self
 
         This method gets called to allow the mutator to alter the data for a custom vertex stream.
@@ -3305,17 +3580,21 @@ class MPxVertexBufferMutator:
         """
 
 class MQuadRender(MRenderOperation):
-    def blendStateOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def blendStateOverride(self, *args: Any, **kwargs: Any) -> Any:
         """blendStateOverride() -> MBlendState
 
         Query if a blend state override is performed by this quad operation.
         """
-    def clearOperation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clearOperation(self, *args: Any, **kwargs: Any) -> Any:
         """clearOperation() -> MClearOperation
 
         Get the scene clear operation.
         """
-    def depthStencilStateOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def depthStencilStateOverride(self, *args: Any, **kwargs: Any) -> Any:
         """depthStencilStateOverride() -> MDepthStencilState
 
         Query if a depth-stencil state override is performed by this quad operation.
@@ -3326,19 +3605,24 @@ class MQuadRender(MRenderOperation):
     @mClearOperation.setter
     def mClearOperation(*args: Any, **kwargs: Any) -> Any:
         """Clear operation"""
-    def rasterizerStateOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rasterizerStateOverride(self, *args: Any, **kwargs: Any) -> Any:
         """rasterizerStateOverride() -> MRasterizerState
 
         Query if a rasterizer state override is performed by this quad operation.
         """
-    def shader(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def shader(self, *args: Any, **kwargs: Any) -> Any:
         """shader() -> MShaderInstance
 
         Get the shader to use when rendering a quad.
         """
 
 class MRasterizerState:
-    def desc(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def desc(self, *args: Any, **kwargs: Any) -> Any:
         """desc() -> MRasterizerStateDesc
 
         Get the rasterizer state descriptor that was used to create the state object.
@@ -3348,7 +3632,7 @@ class MRasterizerState:
     kCullNone: int = ...
     kFillSolid: int = ...
     kFillWireFrame: int = ...
-    def resourceHandle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def resourceHandle(self, *args: Any, **kwargs: Any) -> Any:
         """resourceHandle() -> long
 
         Returns a long containing a C++ 'void' pointer which points to the draw API dependent handle for a rasterizer state.
@@ -3357,6 +3641,11 @@ class MRasterizerState:
         """
 
 class MRasterizerStateDesc:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     @property
     def antialiasedLineEnable(*args: Any, **kwargs: Any) -> Any:
         """Enables HW anti-aliased lines, auto disabled by multi-sample AA, default false"""
@@ -3417,7 +3706,7 @@ class MRasterizerStateDesc:
     @scissorEnable.setter
     def scissorEnable(*args: Any, **kwargs: Any) -> Any:
         """Enables HW scissor clip rectangle, default false"""
-    def setDefaults(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDefaults(self, *args: Any, **kwargs: Any) -> Any:
         """setDefaults() -> self
 
         Set all values for the rasterizer state to their default values.
@@ -3441,14 +3730,27 @@ class MRenderItem:
     NonMaterialSceneItem: int = ...
     OverrideNonMaterialItem: int = ...
     SkipWhenDefaultMaterialActive: int = ...
-    def allowIsolateSelectCopy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def allowIsolateSelectCopy(self, *args: Any, **kwargs: Any) -> Any:
         """allowIsolateSelectCopy() -> bool
 
         Returns whether or not the render item allows its copies to be created forthe drawing of isolate selected components.
 
         See setAllowIsolateSelectCopy() for more information.
         """
-    def associateWithIndexBuffer(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def associateWithIndexBuffer(self, *args: Any, **kwargs: Any) -> Any:
         """associateWithIndexBuffer(MIndexBuffer) -> bool
 
         Use to indicate that a particular index buffer should be used with this render item.
@@ -3456,13 +3758,13 @@ class MRenderItem:
         the MGeometry class with specific render items.
         Without an index buffer, a render item cannot draw.
         """
-    def availableShaderParameters(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def availableShaderParameters(self, *args: Any, **kwargs: Any) -> Any:
         """availableShaderParameters() -> list of string
 
         Returns the list of available shader parameters.
         This is useful for OverrideNonMaterialItem to retrieve default parameters.
         """
-    def boundingBox(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def boundingBox(self, *args: Any, **kwargs: Any) -> Any:
         """boundingBox(space=kObject) -> MBoundingBox
 
         Returns the bounding box for the geometry data of the render item.
@@ -3470,19 +3772,19 @@ class MRenderItem:
 
         * space (Space) - The requested space of the bounding box.
         """
-    def castsShadows(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def castsShadows(self, *args: Any, **kwargs: Any) -> Any:
         """castsShadows() -> bool
 
         Get the castsShadows state of the render item.
         """
-    def component(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def component(self, *args: Any, **kwargs: Any) -> Any:
         """component() -> MObject
 
         Get the optional component for the render item if the render item representsthe drawing of a component as a result of per - face shader assignment, componentselection highlighting etc.
 
         If the render item doesn't represent the drawing of a component, then a nullMObject will be returned. Use the isNull() method of the MObject to check.
         """
-    def create(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def create(self, *args: Any, **kwargs: Any) -> Any:
         """create(name, type, primitive) -> MRenderItem
         create(item) -> MRenderItem
 
@@ -3500,128 +3802,128 @@ class MRenderItem:
         Create new render item and copy all parameters from the incoming MRenderItem:
         * item (MRenderItem) - The item to copy.
         """
-    def customData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def customData(self, *args: Any, **kwargs: Any) -> Any:
         """customData() -> MUserData
 
         Retrieve custom data from the render item, returns None if no such data has ever been set on the render item.
 
             DEPRECATED in 2022, use getCustomData instead.
         """
-    def depthPriority(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def depthPriority(self, *args: Any, **kwargs: Any) -> Any:
         """depthPriority() -> int
 
         Get the depth priority of the render item.
         The higher the depth priority the closer it will be drawn to the camera.
         """
-    def destroy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def destroy(self, *args: Any, **kwargs: Any) -> Any:
         """destroy(item) -> None
 
         Static MRenderItem destruction utility.
         Destroys the internal data structures associated with this MRenderItem.
         Any attempt to use the MRenderItem after this will result in an exception.
         """
-    def drawMode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def drawMode(self, *args: Any, **kwargs: Any) -> Any:
         """drawMode() -> int
 
         Get the draw mode for the render item.
         See MGeometry.drawModeString() for a list of valid draw modes.
         """
-    def enable(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def enable(self, *args: Any, **kwargs: Any) -> Any:
         """enable(bool) -> self
 
         Enable or disable the render item for rendering.
         """
-    def excludedFromPostEffects(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def excludedFromPostEffects(self, *args: Any, **kwargs: Any) -> Any:
         """excludedFromPostEffects() -> bool
 
         Get whether this item is excluded from post-effects like SSAO and depth-of-field.
         """
-    def geometry(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def geometry(self, *args: Any, **kwargs: Any) -> Any:
         """geometry() -> MGeometry
 
         Access full geometry data for the render item.
         Returns None if geometry has not been generated yet.
         """
-    def getCustomData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getCustomData(self, *args: Any, **kwargs: Any) -> Any:
         """getCustomData() -> MUserData
 
         Retrieve custom data from the render item, returns None if no such data has ever been set on the render item.
         """
-    def getDefaultMaterialHandling(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getDefaultMaterialHandling(self, *args: Any, **kwargs: Any) -> Any:
         """getDefaultMaterialHandling() -> MRenderItem.DefaultMaterialFiltering
 
         Returns whether or not this render item will draw when default material mode is active.
         """
-    def getShader(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getShader(self, *args: Any, **kwargs: Any) -> Any:
         """getShader() -> MShaderInstance
 
         Get the shader used by this render item.
         The return value may be None if no shader is set on the render item.
         """
-    def getShaderParameters(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getShaderParameters(self, *args: Any, **kwargs: Any) -> Any:
         """getShaderParameters(name) -> bool / int / float / tuple of floats
 
         Get the value of a shader parameter.
         This is useful for OverrideNonMaterialItem to retrieve default parameters.
         Use availableShaderParameters() to get the list of available parameters.
         """
-    def isCompatibleWithMayaInstancer(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isCompatibleWithMayaInstancer(self, *args: Any, **kwargs: Any) -> Any:
         """isCompatibleWithMayaInstancer() -> bool
 
         Returns whether or not this render item can be used as an instance object with Maya Instancer node.
         """
-    def isConsolidated(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isConsolidated(self, *args: Any, **kwargs: Any) -> Any:
         """isConsolidated() -> bool
 
         Get the consolidated state of the render item.
         """
-    def isEnabled(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isEnabled(self, *args: Any, **kwargs: Any) -> Any:
         """isEnabled() -> bool
 
         Get the enable state of the render item.
         """
-    def isIsolateSelectCopy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isIsolateSelectCopy(self, *args: Any, **kwargs: Any) -> Any:
         """isIsolateSelectCopy() -> bool
 
         Returns whether or not the render item is a copy created to represent thedrawing of an isolate selected component.
 
         See setAllowIsolateSelectCopy() for more information.
         """
-    def isShaderFromNode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isShaderFromNode(self, *args: Any, **kwargs: Any) -> Any:
         """isShaderFromNode() -> bool
 
         Return True if the shader instance was set by evaluating the shading network of
         a surface shader node (either standard or custom) in the scene via setShaderFromNode().
         """
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def name(self, *args: Any, **kwargs: Any) -> Any:
         """name() -> string
 
         Get the name of the render item.
         """
-    def objectTypeExclusionFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def objectTypeExclusionFlag(self, *args: Any, **kwargs: Any) -> Any:
         """objectTypeExclusionFlag() -> long
 
         Query the bit flag which is used in display filtering based on object types.
         See setObjectTypeExclusionFlag() for details.
         """
-    def primitive(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def primitive(self, *args: Any, **kwargs: Any) -> Any:
         """primitive() -> int
 
         Get the primitive type drawn by the render item.
         See MGeometry.primitiveString() for a list of valid primitive types.
         """
-    def primitiveAndStride(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def primitiveAndStride(self, *args: Any, **kwargs: Any) -> Any:
         """primitiveAndStride() -> [int, int]
 
         Get the primitive type drawn by the render item, as well as its stride.
         See MGeometry.primitiveString() for a list of valid primitive types.
         """
-    def receivesShadows(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def receivesShadows(self, *args: Any, **kwargs: Any) -> Any:
         """receivesShadows() -> bool
 
         Get the receivesShadows state of the render item.
         """
-    def requiredVertexBuffers(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def requiredVertexBuffers(self, *args: Any, **kwargs: Any) -> Any:
         """requiredVertexBuffers() -> MVertexBufferDescriptorList
 
         Get a list of vertex buffer descriptors that describe the buffers required to draw the given render item.
@@ -3636,12 +3938,12 @@ class MRenderItem:
     sDormantWireDepthPriority: int = ...
     sHiliteWireDepthPriority: int = ...
     sSelectionDepthPriority: int = ...
-    def selectionMask(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def selectionMask(self, *args: Any, **kwargs: Any) -> Any:
         """selectionMask() -> MSelectionMask
 
         Get the render item selection mask.
         """
-    def setAllowIsolateSelectCopy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setAllowIsolateSelectCopy(self, *args: Any, **kwargs: Any) -> Any:
         """setAllowIsolateSelectCopy(bool) -> self
 
         When a 3D model view activates Isolate Select for components, Viewport 2.0will create and maintain necessary render items to represent the drawingof the isolate selected components specifically for that view. These renderitems are copies of their original items and thus have the same propertiesincluding name, type, primitive type, draw mode etc., but their shadingcomponents are filtered from the view selected set of that view.
@@ -3652,7 +3954,7 @@ class MRenderItem:
 
         The lifetime of the copies is managed by Viewport 2.0, thus it is not safefor plug-ins to cache their pointers.
         """
-    def setBoundingBox(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setBoundingBox(self, *args: Any, **kwargs: Any) -> Any:
         """setBoundingBox(bounds) -> self
 
         Sets the bounding box for the render item.
@@ -3660,37 +3962,37 @@ class MRenderItem:
 
         * bounds (MBoundingBox) - The new bounding box.
         """
-    def setCastsShadows(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setCastsShadows(self, *args: Any, **kwargs: Any) -> Any:
         """setCastsShadows(bool) -> self
 
         Set the castsShadows state of the render item.
         """
-    def setCompatibleWithMayaInstancer(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setCompatibleWithMayaInstancer(self, *args: Any, **kwargs: Any) -> Any:
         """setCompatibleWithMayaInstancer(bool) -> self
 
         Set whether or not this render item can be used as an instance object with Maya Instancer node.
         """
-    def setCustomData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setCustomData(self, *args: Any, **kwargs: Any) -> Any:
         """setCustomData(MUserData) -> self
 
         Associate custom user data with this render item.
         If deleteAfterUse() is true on the data, then the data object will automatically be deleted when the render item is deleted.
         Otherwise, the lifetime of the user data object is the responsibility of the caller.
         """
-    def setDefaultMaterialHandling(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDefaultMaterialHandling(self, *args: Any, **kwargs: Any) -> Any:
         """setDefaultMaterialHandling(MRenderItem.DefaultMaterialFiltering) -> self
 
         Set whether or not this object should be drawn when default material mode is active.
         Set this to DrawOnlyWhenDefaultMaterialActive on render items dedicated to rendering a default material and set it to SkipWhenDefaultMaterialActive on regular shader items that should not draw in that mode.
         If a render item is to be drawn regardless of the mode, leave it at IgnoreDefaultMaterialMode.
         """
-    def setDepthPriority(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDepthPriority(self, *args: Any, **kwargs: Any) -> Any:
         """setDepthPriority(int) -> self
 
         Set the depth priority of the render item.
         The higher the depth priority the closer it will be drawn to the camera.
         """
-    def setDrawMode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDrawMode(self, *args: Any, **kwargs: Any) -> Any:
         """setDrawMode(int) -> self
 
         Set the draw mode for the render item.
@@ -3698,20 +4000,20 @@ class MRenderItem:
         Otherwise the render item will only be drawn when the viewport is set to draw objects in the specified mode.
         See MGeometry.drawModeString() for a list of valid draw modes.
         """
-    def setExcludedFromPostEffects(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setExcludedFromPostEffects(self, *args: Any, **kwargs: Any) -> Any:
         """setExcludedFromPostEffects(bool) -> self
 
         Set whether this item should be excluded from post-effects like SSAO and depth-of-field.
         Render items default to being excluded from post-effects.
         """
-    def setMatrix(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setMatrix(self, *args: Any, **kwargs: Any) -> Any:
         """setMatrix(MMatrix) -> bool
 
         Override the object to world transformation matrix to use when drawing this render item.
         If unset, the render item will draw using the transformation matrix of the associated Maya DAG node.
         Pass None to this method to remove the override
         """
-    def setObjectTypeExclusionFlag(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setObjectTypeExclusionFlag(self, *args: Any, **kwargs: Any) -> Any:
         """setObjectTypeExclusionFlag(long) -> self
 
         Set a bit flag for use in display filtering based on object types. The
@@ -3733,7 +4035,7 @@ class MRenderItem:
 
          * val (long) - A "kExclude" bit flag defined in MFrameContext
         """
-    def setPrimitive(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setPrimitive(self, *args: Any, **kwargs: Any) -> Any:
         """setPrimitive(int, int) -> self
 
         Set the primitive type of the render item. If it is kPatch, stride will be required to specify the number of control points per patch and the valid values are [1, 32]; otherwise stride won't be used.
@@ -3742,12 +4044,12 @@ class MRenderItem:
 
         This method only affects items explicitly created by the plug-in.
         """
-    def setReceivesShadows(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setReceivesShadows(self, *args: Any, **kwargs: Any) -> Any:
         """setReceivesShadows(bool) -> self
 
         Set the receivesShadows state of the render item.
         """
-    def setSelectionMask(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setSelectionMask(self, *args: Any, **kwargs: Any) -> Any:
         """setSelectionMask(mask) -> selfsetSelectionMask(type) -> self
 
         Set the render item selection mask.
@@ -3755,7 +4057,7 @@ class MRenderItem:
         * mask (MSelectionMask) - The selection mask.
         * type (int) - The selection type (see MSelectionMask.addMask() for a list of values).
         """
-    def setShader(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setShader(self, *args: Any, **kwargs: Any) -> Any:
         """setShader(shader, customStreamName=None) -> bool
 
         Set shader to use when drawing this render item.
@@ -3766,7 +4068,7 @@ class MRenderItem:
         * shader (MShaderInstance) - The shader to use when drawing this item.
         * customStreamName (string) - If specified, shader will generate geometry requirements with the given name.
         """
-    def setShaderFromNode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setShaderFromNode(self, *args: Any, **kwargs: Any) -> Any:
         """setShaderFromNode(shaderNode, shapePath, linkLostCb=None, linkLostUserData=None, nonTextured=False) -> self
 
         Set shader to use when drawing this render item. If no shader is ever set this render item will not draw. This method sets the shader instance to a render item by evaluating the shading network of a surface shader node (either standard or custom) in the scene.
@@ -3789,12 +4091,12 @@ class MRenderItem:
          * linkLostUserData (MUserData) - User supplied data to be passed into the link lost callback.
          * nonTextured (bool) - Whether or not a non-textured effect instance is needed. The default value is false.
         """
-    def setTreatAsTransparent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setTreatAsTransparent(self, *args: Any, **kwargs: Any) -> Any:
         """setTreatAsTransparent(bool) -> self
 
         Set whether or not this object should be treated as a transparent item.Set this to true if the object has vertex colors with alpha or other inputsthat make it important to treat this object as if it were transparent.
         """
-    def setWantConsolidation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setWantConsolidation(self, *args: Any, **kwargs: Any) -> Any:
         """setWantConsolidation(bool) -> self
 
         Set whether or not this render item wants to participate in consolidation.
@@ -3805,7 +4107,7 @@ class MRenderItem:
 
         For render items added to an MSubSceneContainer, if wantConsolidation is set to true, this will prevent them from being instanced until wantConsolidation is set to false.
         """
-    def setWantSubSceneConsolidation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setWantSubSceneConsolidation(self, *args: Any, **kwargs: Any) -> Any:
         """setWantSubSceneConsolidation(bool) -> self
 
         Sets whether or not this render item is eligible for consolidation in sub scene overrides.
@@ -3813,7 +4115,7 @@ class MRenderItem:
         Render items that are already instanced cannot be consolidated. Setting a render item to
         want sub scene consolidation will prevent the render item from being instanced.
         """
-    def shadingComponent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def shadingComponent(self, *args: Any, **kwargs: Any) -> Any:
         """shadingComponent() -> MObject
 
         Get the optional shading component for the render item. It is different fromthe component() method only when a view selected filter is applied.
@@ -3822,7 +4124,7 @@ class MRenderItem:
 
         If the render item doesn't represent the drawing of a shading component,then a null MObject will be returned. Use the isNull() method of the MObjectto check.
         """
-    def sourceDagPath(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def sourceDagPath(self, *args: Any, **kwargs: Any) -> Any:
         """sourceDagPath() -> MDagPath
 
         Retrieve the MDagPath for the instance of the object that generated this render item.
@@ -3831,7 +4133,7 @@ class MRenderItem:
 
         The method sourceIndexMapping() should be used if the item is consolidatedto access the corresponding dag paths for the objects making up this item.
         """
-    def sourceIndexMapping(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def sourceIndexMapping(self, *args: Any, **kwargs: Any) -> Any:
         """sourceIndexMapping() -> MGeometryIndexMapping
 
         Get the geometry index mapping of the objects contained by this consolidated render item.
@@ -3839,7 +4141,7 @@ class MRenderItem:
         You can access the index mapping of the geometries in order to render them separately.
         The index mapping gives you the name, and index start and length of each geometry.
         """
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def type(self, *args: Any, **kwargs: Any) -> Any:
         """type() -> int
 
         Get the type of the render item.
@@ -3859,29 +4161,46 @@ class MRenderItem:
           MRenderItem.InternalUnsupportedMaterialItem
              An internally created MaterialSceneItem for showing an unsupported material
         """
-    def wantConsolidation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def wantConsolidation(self, *args: Any, **kwargs: Any) -> Any:
         """wantConsolidation() -> bool
 
         Return whether or not this render item wants to participate in consolidation.
         """
-    def wantSubSceneConsolidation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def wantSubSceneConsolidation(self, *args: Any, **kwargs: Any) -> Any:
         """wantSubSceneConsolidation() -> bool
 
         Returns True if this render item is eligible for consolidation in sub scene overrides.
         """
 
 class MRenderItemList:
-    def append(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def append(self, *args: Any, **kwargs: Any) -> Any:
         """append(MVertexBufferDescriptor) -> bool
 
         Add the item to the list. The list assumes ownership of the item.
         """
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """clear() -> self
 
         Clear the list.
         """
-    def indexOf(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def indexOf(self, *args: Any, **kwargs: Any) -> Any:
         """indexOf(name) -> int
         indexOf(name, type) -> int
         indexOf(name, primitive, mode) -> int
@@ -3897,40 +4216,45 @@ class MRenderItemList:
         See MGeometry.primitiveString() for a list of valid primitive types.
         See MGeometry.drawModeString() for a list of valid draw modes.
         """
-    def remove(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def remove(self, *args: Any, **kwargs: Any) -> Any:
         """remove(index) -> bool
 
         Remove the item at the specified index. Item is deleted.
         """
 
 class MRenderOverride:
-    def cleanup(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def cleanup(self, *args: Any, **kwargs: Any) -> Any:
         """cleanup() -> self
 
         Perform any cleanup required following the execution of render operations.
         """
-    def getFrameContext(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getFrameContext(self, *args: Any, **kwargs: Any) -> Any:
         """getFrameContext() -> MFrameContext
 
         Return a frame context. The context is not available if called before setup() or after cleanup().
         The context should never be deleted by the plug-in as it is owned by the render override.
         """
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def name(self, *args: Any, **kwargs: Any) -> Any:
         """name() -> string
 
         Returns the name of the override.
         """
-    def nextRenderOperation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def nextRenderOperation(self, *args: Any, **kwargs: Any) -> Any:
         """nextRenderOperation() -> bool
 
         Iterate to the next operation. If there are no more operations then this method should return false.
         """
-    def renderOperation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def renderOperation(self, *args: Any, **kwargs: Any) -> Any:
         """renderOperation() -> MRenderOperation
 
         Return the current operation being iterated over.
         """
-    def select(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def select(self, *args: Any, **kwargs: Any) -> Any:
         """select(frameContext, selectInfo, useDepth, selectionList, worldSpaceHitPts) -> bool
 
         The method is called by Maya to override the default Viewport 2.0 selection. It returns false by default, meaning the default selection will be used. If an implementation returns true, selectionList and worldSpaceHitPts will be used to override the default selection.
@@ -3949,30 +4273,35 @@ class MRenderOverride:
         * selectionList [OUT] (MSelectionList) - List of items selected by this method
         * worldSpaceHitPts [OUT] (MPointArray) - List of hit points
         """
-    def setup(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setup(self, *args: Any, **kwargs: Any) -> Any:
         """setup(destination) -> self
 
         Perform any setup required before render operations are to be executed.
         """
-    def startOperationIterator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def startOperationIterator(self, *args: Any, **kwargs: Any) -> Any:
         """startOperationIterator() -> bool
 
         Query if there are any operations to iterate over.
         """
-    def supportedDrawAPIs(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def supportedDrawAPIs(self, *args: Any, **kwargs: Any) -> Any:
         """supportedDrawAPIs() -> int
 
         Returns the draw APIs supported by this override.
         See MRenderer.drawAPI() description for the list of draw APIs.
         """
-    def uiName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def uiName(self, *args: Any, **kwargs: Any) -> Any:
         """uiName() -> string
 
         Returns the user interface name for the override.
         """
 
 class MRenderParameters:
-    def getParameter(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def getParameter(self, *args: Any, **kwargs: Any) -> Any:
         """getParameter(parameterName, bool) -> self
         getParameter(parameterName, int) -> self
         getParameter(parameterName, float) -> self
@@ -3986,27 +4315,27 @@ class MRenderParameters:
 
         Get the value of the named parameter.
         """
-    def isArrayParameter(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isArrayParameter(self, *args: Any, **kwargs: Any) -> Any:
         """isArrayParameter(string) -> bool
 
         Determine whether the named parameter is an array.
         """
-    def parameterList(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def parameterList(self, *args: Any, **kwargs: Any) -> Any:
         """parameterList() -> list of string
 
         Get the names of all parameters that are settable on this shader instance.
         """
-    def parameterType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def parameterType(self, *args: Any, **kwargs: Any) -> Any:
         """parameterType(string) -> int
 
         Get the type of the named parameter, returns kInvalid if parameter is not found.
         """
-    def semantic(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def semantic(self, *args: Any, **kwargs: Any) -> Any:
         """semantic(string) -> string
 
         Return the semantic for a named parameter.
         """
-    def setArrayParameter(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setArrayParameter(self, *args: Any, **kwargs: Any) -> Any:
         """setArrayParameter(parameterName, sequence of bool, int) -> self
         setArrayParameter(parameterName, sequence of int, int) -> self
         setArrayParameter(parameterName, sequence of float, int) -> self
@@ -4014,7 +4343,7 @@ class MRenderParameters:
 
         Set the value of a named array parameter.
         """
-    def setParameter(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setParameter(self, *args: Any, **kwargs: Any) -> Any:
         """setParameter(parameterName, bool) -> self
         setParameter(parameterName, int) -> self
         setParameter(parameterName, float) -> self
@@ -4030,7 +4359,12 @@ class MRenderParameters:
         """
 
 class MRenderProfile:
-    def addRenderer(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addRenderer(self, *args: Any, **kwargs: Any) -> Any:
         """addRenderer(renderer) -> selfaddRenderer(name, version) -> self
 
         Add an internal renderer to this profile:
@@ -4044,7 +4378,7 @@ class MRenderProfile:
         * version (float) = The version of the renderer or rendering API.
         The name and version specified must correspond to a renderer registered with Maya. Currently, only Maya's internal renderers (just named after the APIs they use: 'OpenGL', 'D3D', or 'Software') are supported. When registering support for Maya's internal renderers, it's simpler to use the other version of this method.
         """
-    def hasRenderer(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasRenderer(self, *args: Any, **kwargs: Any) -> Any:
         """hasRenderer(renderer) -> boolhasRenderer(name, version) -> bool
 
         Check if a Maya renderer is listed in this profile:
@@ -4058,18 +4392,23 @@ class MRenderProfile:
     kMayaD3D: int = ...
     kMayaOpenGL: int = ...
     kMayaSoftware: int = ...
-    def numberOfRenderers(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numberOfRenderers(self, *args: Any, **kwargs: Any) -> Any:
         """numberOfRenderers() -> int
 
         Return the number of renderers in this profile.
         """
 
 class MRenderTarget:
-    def freeRawData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def freeRawData(self, *args: Any, **kwargs: Any) -> Any:
         """freeRawData(long) -> None
         Deallocate system memory - retrieved from rawData().
         """
-    def rawData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rawData(self, *args: Any, **kwargs: Any) -> Any:
         """rawData() -> [long, rowPitch, slicePitch]
 
         Get a copy of the raw data mapped to the target.
@@ -4078,25 +4417,30 @@ class MRenderTarget:
         * rowPitch [OUT] (int) - The row pitch of the data. It represents the number of bytes of one line of the target data.
         * slicePitch [OUT] (int) - The slice pitch of the data. It represents the number of bytes of the whole target data.
         """
-    def resourceHandle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def resourceHandle(self, *args: Any, **kwargs: Any) -> Any:
         """resourceHandle() -> long
 
         Returns a long containing a C++ 'void' pointer which points to the draw API dependent handle for a render target.
         For OpenGL, a pointer to an OpenGL texture identifier is returned.
         For DirectX, a reference to a Direct3D "view" of a target is returned.
         """
-    def targetDescription(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def targetDescription(self, *args: Any, **kwargs: Any) -> Any:
         """targetDescription() -> MRenderTargetDescription
 
         Get target description.
         """
-    def updateDescription(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def updateDescription(self, *args: Any, **kwargs: Any) -> Any:
         """updateDescription(MRenderTargetDescription) -> self
 
         Change the description of a render target.
         """
 
 class MRenderTargetAssignment:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     @property
     def target(*args: Any, **kwargs: Any) -> Any:
         """The render target"""
@@ -4105,117 +4449,128 @@ class MRenderTargetAssignment:
         """The render target"""
 
 class MRenderTargetDescription:
-    def allowsUnorderedAccess(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def allowsUnorderedAccess(self, *args: Any, **kwargs: Any) -> Any:
         """allowsUnorderedAccess() -> bool
 
         Query whether unordered access is supported.
         """
-    def arraySliceCount(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def arraySliceCount(self, *args: Any, **kwargs: Any) -> Any:
         """arraySliceCount() -> int
 
         Query the number of array slices defined by the description.
         """
-    def compatibleWithDescription(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def compatibleWithDescription(self, *args: Any, **kwargs: Any) -> Any:
         """compatibleWithDescription(MRenderTargetDescription) -> bool
 
         Determine if another target with a given description is 'compatible' with a target using this description.
         """
-    def height(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def height(self, *args: Any, **kwargs: Any) -> Any:
         """height() -> int
 
         Query the height of a 2D render target slice.
         """
-    def isCubeMap(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isCubeMap(self, *args: Any, **kwargs: Any) -> Any:
         """isCubeMap() -> bool
 
         Query whether this is a cube map target.
         """
-    def multiSampleCount(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def multiSampleCount(self, *args: Any, **kwargs: Any) -> Any:
         """multiSampleCount() -> int
 
         Query the multi-sample count defined by the description.
         """
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def name(self, *args: Any, **kwargs: Any) -> Any:
         """name() -> string
 
         Query the name identifier for the target description.
         """
-    def rasterFormat(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rasterFormat(self, *args: Any, **kwargs: Any) -> Any:
         """rasterFormat() -> int
 
         Query the raster format defined by the description.
         """
-    def setAllowsUnorderedAccess(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setAllowsUnorderedAccess(self, *args: Any, **kwargs: Any) -> Any:
         """setAllowsUnorderedAccess(bool) -> self
 
         Set the flag for unordered data access for the target.
         """
-    def setArraySliceCount(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setArraySliceCount(self, *args: Any, **kwargs: Any) -> Any:
         """setArraySliceCount(int) -> self
 
         Set array slice count of the target.
         """
-    def setHeight(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setHeight(self, *args: Any, **kwargs: Any) -> Any:
         """setHeight(int) -> self
 
         Set height of the target.
         """
-    def setIsCubeMap(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setIsCubeMap(self, *args: Any, **kwargs: Any) -> Any:
         """setIsCubeMap(bool) -> self
 
         Set cube map flag for the target.
         """
-    def setMultiSampleCount(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setMultiSampleCount(self, *args: Any, **kwargs: Any) -> Any:
         """setMultiSampleCount(int) -> self
 
         Set multisample count of the target.
         """
-    def setName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setName(self, *args: Any, **kwargs: Any) -> Any:
         """setName(string) -> self
 
         Set name of the target.
         """
-    def setRasterFormat(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setRasterFormat(self, *args: Any, **kwargs: Any) -> Any:
         """setRasterFormat(int) -> self
 
         Set the raster format of the target.
         """
-    def setWidth(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setWidth(self, *args: Any, **kwargs: Any) -> Any:
         """setWidth(int) -> self
 
         Set width of the target.
         """
-    def width(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def width(self, *args: Any, **kwargs: Any) -> Any:
         """width() -> int
 
         Query the width of a 2D render target slice.
         """
 
 class MRenderTargetManager:
-    def acquireRenderTarget(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def acquireRenderTarget(self, *args: Any, **kwargs: Any) -> Any:
         """acquireRenderTarget(MRenderTargetDescription) -> MRenderTarget
         Acquire an instance of a render target.
         When the object is no longer needed, releaseRenderTarget() should be called
         to notify the target manager that the caller is done with the render target.
         """
-    def acquireRenderTargetFromScreen(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def acquireRenderTargetFromScreen(self, *args: Any, **kwargs: Any) -> Any:
         """acquireRenderTargetFromScreen(string) -> MRenderTarget
         Acquire an instance of a render target with the same characteristics as the current on-screen target.
         When the object is no longer needed, releaseRenderTarget() should be called
         to notify the target manager that the caller is done with the render target.
         """
-    def formatSupportsSRGBWrite(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def formatSupportsSRGBWrite(self, *args: Any, **kwargs: Any) -> Any:
         """formatSupportsSRGBWrite(int) -> bool
         This method will perform a check to determine whether gamma correction can be performed
         by the GPU when writing pixels to a render target of a given format.
         """
-    def releaseRenderTarget(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def releaseRenderTarget(self, *args: Any, **kwargs: Any) -> Any:
         """releaseRenderTarget(MRenderTarget) -> self
         Deletes the MRenderTarget and releases the reference to the underlying target which is held by the MRenderTarget object.
         """
 
 class MRenderUtilities:
-    def acquireSwatchDrawContext(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def acquireSwatchDrawContext(self, *args: Any, **kwargs: Any) -> Any:
         """acquireSwatchDrawContext() -> MDrawContext
         acquireSwatchDrawContext(colorTarget) -> MDrawContext
         acquireSwatchDrawContext(colorTarget, depthTarget) -> MDrawContext
@@ -4228,7 +4583,7 @@ class MRenderUtilities:
         If targets are not provided, the caller is responsible for properly setting up render targets.
         Specifying targets also insures that the proper GL context is made active when using GL devices.
         """
-    def acquireUVTextureDrawContext(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def acquireUVTextureDrawContext(self, *args: Any, **kwargs: Any) -> Any:
         """acquireUVTextureDrawContext() -> MDrawContext
         acquireUVTextureDrawContext(colorTarget) -> MDrawContext
         acquireUVTextureDrawContext(colorTarget, depthTarget) -> MDrawContext
@@ -4241,7 +4596,7 @@ class MRenderUtilities:
         If targets are not provided, the caller is responsible for properly setting up render targets.
         Specifying targets also insures that the proper GL context is made active when using GL devices.
         """
-    def blitTargetToGL(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def blitTargetToGL(self, *args: Any, **kwargs: Any) -> Any:
         """blitTargetToGL(target, region, unfiltered) -> None
 
         Blit the data from a target to current GL context.
@@ -4250,7 +4605,7 @@ class MRenderUtilities:
         * region (float[2][2]) - Rectangular region to be rendered - [ [x1, y1], [x2, y2] ].
         * unfiltered (bool) - Render with hardware filtering or sharply defined pixels.
         """
-    def blitTargetToImage(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def blitTargetToImage(self, *args: Any, **kwargs: Any) -> Any:
         """blitTargetToImage(target, image) -> None
 
         Copy the data from a target to an image.
@@ -4258,7 +4613,7 @@ class MRenderUtilities:
         * target (MRenderTarget) - The source target to get the data from.
         * image (MImage) - The destination image to copy the data to.
         """
-    def drawSimpleMesh(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def drawSimpleMesh(self, *args: Any, **kwargs: Any) -> Any:
         """drawSimpleMesh(context, vertexBuffer, indexBuffer, primitiveType, start, count) -> None
 
         Render a simple mesh.
@@ -4276,7 +4631,7 @@ class MRenderUtilities:
     kOrthogonalCameraWithMargin: int = ...
     kPerspectiveCamera: int = ...
     kSwatchLight: int = ...
-    def releaseDrawContext(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def releaseDrawContext(self, *args: Any, **kwargs: Any) -> Any:
         """releaseDrawContext(context) -> None
         releaseDrawContext(context, releaseTargets) -> None
 
@@ -4286,7 +4641,7 @@ class MRenderUtilities:
         * releaseTargets (bool) - Removes the current draw targets from the device, defaults to true.
         If releaseTargets is requested, the device will have NULL targets on function exit.
         """
-    def renderMaterialViewerGeometry(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def renderMaterialViewerGeometry(self, *args: Any, **kwargs: Any) -> Any:
         """renderMaterialViewerGeometry(shape, shaderNode, image, cameraMode=kPerspectiveCamera, lightRig=kDefaultLights) -> None
 
         Do an off-screen render replicating the results shown by the Material Viewer window of Hypershade..
@@ -4297,54 +4652,55 @@ class MRenderUtilities:
         * cameraMode (int) The camera to use for rendering. Defaults to MRenderUtilities.kPerspectiveCamera.
         * lightRig (int) The light rig to use for rendering. Defaults to MRenderUtilities.kDefaultLights.
         """
-    def swatchBackgroundColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def swatchBackgroundColor(self, *args: Any, **kwargs: Any) -> Any:
         """swatchBackgroundColor() -> MColor
 
         Returns the default background color for the hardware rendered swatch.
         """
 
 class MRenderer:
-    def GPUDeviceHandle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def GPUDeviceHandle(self, *args: Any, **kwargs: Any) -> Any:
         """GPUDeviceHandle() -> long
 
         Returns a long containing a C++ 'void' pointer which points to the GPU "device".In the case that the drawing API is OpenGL then the "device" is a handle to an OpenGL context.
         In the case that the drawing API is DirectX then the "device" is a pointer to a DirectX device.
         """
-    def GPUmaximumPrimitiveCount(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def GPUmaximumPrimitiveCount(self, *args: Any, **kwargs: Any) -> Any:
         """GPUmaximumPrimitiveCount() -> int
 
         Returns the maximum number of primitives that can be drawn per draw call by the GPU device.
         0 if device has not been initialized.
         """
-    def GPUmaximumVertexBufferSize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def GPUmaximumVertexBufferSize(self, *args: Any, **kwargs: Any) -> Any:
         """GPUmaximumVertexBufferSize() -> int
 
         Returns the maximum number of vertices allowed in a vertex buffer by the GPU device.
         0 if device has not been initialized.
         """
-    def activeRenderOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def activeRenderOverride(self, *args: Any, **kwargs: Any) -> Any:
         """activeRenderOverride() -> string
 
         Returns the name of the active override.
         """
-    def copyTargetToScreen(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copyTargetToScreen(self, *args: Any, **kwargs: Any) -> Any:
         """copyTargetToScreen(MRenderTarget) -> bool
 
         Copy a render target to the screen.
         If the target's dimensions are not the same as the active viewport it will be scaled up or down as necessary to fill the entire viewport.
         """
-    def deregisterOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def deregisterOverride(self, *args: Any, **kwargs: Any) -> Any:
         """deregisterOverride(MRenderOverride) -> None
 
         Deregister an existing render override on the renderer.
         The renderer will remove this override from it's list of registered overrides.
         """
-    def disableChangeManagementUntilNextRefresh(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def disableChangeManagementUntilNextRefresh(self, *args: Any, **kwargs: Any) -> Any:
         """disableChangeManagementUntilNextRefresh() -> None
 
         Calling this method will cause Viewport 2.0 to stop processing all changes to the Maya scene until the next viewport refresh.
         """
-    def drawAPI(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def drawAPI(self, *args: Any, **kwargs: Any) -> Any:
         """drawAPI() -> int
 
         Returns the current drawing API. Returns 'kNone' if the renderer is not initialized.
@@ -4354,37 +4710,37 @@ class MRenderer:
           MRenderer.kDirectX11     Direct X 11
           MRenderer.kAllDevices    All : OpenGL and Direct X 11
         """
-    def drawAPIIsOpenGL(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def drawAPIIsOpenGL(self, *args: Any, **kwargs: Any) -> Any:
         """drawAPIIsOpenGL() -> bool
 
         Returns whether the current drawing API is OpenGL or not
         """
-    def drawAPIVersion(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def drawAPIVersion(self, *args: Any, **kwargs: Any) -> Any:
         """drawAPIVersion() -> int
 
         Returns the version of drawing API.
         """
-    def findRenderOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def findRenderOverride(self, *args: Any, **kwargs: Any) -> Any:
         """findRenderOverride(string) -> MRenderOverride
 
         Returns a reference to an existing render override registered with the renderer.
         """
-    def getFragmentManager(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getFragmentManager(self, *args: Any, **kwargs: Any) -> Any:
         """getFragmentManager() -> MFragmentManager
 
         Returns the fragment manager or None if the renderer is not initialized properly.
         """
-    def getRenderTargetManager(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getRenderTargetManager(self, *args: Any, **kwargs: Any) -> Any:
         """getRenderTargetManager() -> MRenderTargetManager
 
         Returns the render target manager or None if the renderer is not initialized properly.
         """
-    def getShaderManager(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getShaderManager(self, *args: Any, **kwargs: Any) -> Any:
         """getShaderManager() -> MShaderManager
 
         Returns the shader manager or None if the renderer is not initialized properly.
         """
-    def getTextureManager(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getTextureManager(self, *args: Any, **kwargs: Any) -> Any:
         """getTextureManager() -> MTextureManager
 
         Returns the texture manager or None if the renderer is not initialized properly.
@@ -4468,7 +4824,7 @@ class MRenderer:
     kR8_UINT: int = ...
     kR8_UNORM: int = ...
     kR9G9B9E5_FLOAT: int = ...
-    def needEvaluateAllLights(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def needEvaluateAllLights(self, *args: Any, **kwargs: Any) -> Any:
         """needEvaluateAllLights() -> None
 
         Notify the Viewport 2.0 renderer that it should evaluate all lights marked dirty, regardless of the light limit.For example, if there are 8 lights accessible because of the Viewport 2.0 light limit option, Only the first 8 non-ambient lights created will be evaluated.Call this method to instruct Viewport 2.0 to evaluate all dirty lights regardless of the light limit option.
@@ -4479,18 +4835,18 @@ class MRenderer:
 
         An example application of this method is to obtain light information while ignoring the light limit.If this method is not called, information on unused lights cannot be obtained via MDrawContext, even if LightFilter is set to kFilteredToLightLimit.This is because unused lights are not evaluated automatically by Viewport 2.0 by default.
         """
-    def outputTargetSize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def outputTargetSize(self, *args: Any, **kwargs: Any) -> Any:
         """outputTargetSize() -> [int, int]
 
         Get target size in format [width, height].
         """
-    def registerOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def registerOverride(self, *args: Any, **kwargs: Any) -> Any:
         """registerOverride(MRenderOverride) -> None
 
         Register the override as being usable by the renderer.
         If the override is already registered it will not be registered again.
         """
-    def render(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def render(self, *args: Any, **kwargs: Any) -> Any:
         """render(sourceName, targetList) -> bool
 
         Render images from a panel to render targets.
@@ -4498,18 +4854,18 @@ class MRenderer:
         * sourceName (string) - The name of the source view want to render.
         * targetList (PyListObject:MRenderTarget) - Render target list want to render into.
         """
-    def renderOverrideCount(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def renderOverrideCount(self, *args: Any, **kwargs: Any) -> Any:
         """renderOverrideCount() -> int
 
         Returns the number of registered render overrides.
         """
-    def renderOverrideName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def renderOverrideName(self, *args: Any, **kwargs: Any) -> Any:
         """renderOverrideName() -> string
 
         Get the current render override name used for batch rendering.
         If there is no override then an empty string will be returned.
         """
-    def setGeometryDrawDirty(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setGeometryDrawDirty(self, *args: Any, **kwargs: Any) -> Any:
         """setGeometryDrawDirty(object, topologyChanged=True) -> None
 
         Notify the Viewport 2.0 renderer that the geometry (size, shape, etc.) of object has changed, causing the object to be updated in the viewport.
@@ -4517,7 +4873,7 @@ class MRenderer:
         * object (MObject) - DAG object which has been modified.
         * topologyChanged (bool) - has the object topology changed
         """
-    def setLightRequiresShadows(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setLightRequiresShadows(self, *args: Any, **kwargs: Any) -> Any:
         """setLightRequiresShadows(object, flag) -> bool
 
         This method allows for plug-in writers to indicate that the shadow map contents for a given light are required, regardless of the light limit.
@@ -4526,19 +4882,24 @@ class MRenderer:
         * object (MObject) - Light to request shadow update for
         * flag (bool) - Indicate if an update is requested. When set to true a request is added, and when set false any existing request is removed.
         """
-    def setLightsAndShadowsDirty(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setLightsAndShadowsDirty(self, *args: Any, **kwargs: Any) -> Any:
         """setLightsAndShadowsDirty() -> None
 
         Notify the Viewport 2.0 renderer that something has changed which requires re-evaluation of lighting and shadows.
         """
-    def setRenderOverrideName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setRenderOverrideName(self, *args: Any, **kwargs: Any) -> Any:
         """setRenderOverrideName(string) -> bool
 
         Set the name of a render override (MRenderOverride) for batch rendering.
         """
 
 class MSamplerState:
-    def desc(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def desc(self, *args: Any, **kwargs: Any) -> Any:
         """desc() -> MSamplerStateDesc
 
         Get the sampler state descriptor that was used to create the state object.
@@ -4556,7 +4917,7 @@ class MSamplerState:
     kTexClamp: int = ...
     kTexMirror: int = ...
     kTexWrap: int = ...
-    def resourceHandle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def resourceHandle(self, *args: Any, **kwargs: Any) -> Any:
         """resourceHandle() -> long
 
         Returns a long containing a C++ 'void' pointer which points to the draw API dependent handle for a sampler state.
@@ -4565,6 +4926,11 @@ class MSamplerState:
         """
 
 class MSamplerStateDesc:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     @property
     def addressU(*args: Any, **kwargs: Any) -> Any:
         """Select the u coordinate addressing mode, default kTexWrap"""
@@ -4637,14 +5003,18 @@ class MSamplerStateDesc:
     @mipLODBias.setter
     def mipLODBias(*args: Any, **kwargs: Any) -> Any:
         """Set a float bias to be added to the computed mip LOD level, default 0"""
-    def setDefaults(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDefaults(self, *args: Any, **kwargs: Any) -> Any:
         """setDefaults() -> self
 
         Set all values for the target blend state to their default values.
         """
 
 class MSceneRender(MRenderOperation):
-    def addPostUIDrawables(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addPostUIDrawables(self, *args: Any, **kwargs: Any) -> Any:
         """addPostUIDrawables(drawManager, frameContext) -> self
 
         Provides access to the MUIDrawManager, which can be used to queue up operations to draw simple UI shapes like lines, circles, text, etc.
@@ -4656,7 +5026,7 @@ class MSceneRender(MRenderOperation):
         * drawManager (MUIDrawManager) - The UI draw manager, it can be used to draw some simple geometry including text.
         * frameContext (MFrameContext) - Frame level context information
         """
-    def addPreUIDrawables(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addPreUIDrawables(self, *args: Any, **kwargs: Any) -> Any:
         """addPreUIDrawables(drawManager, frameContext) -> self
 
         Provides access to the MUIDrawManager, which can be used to queue up operations to draw simple UI shapes like lines, circles, text, etc.
@@ -4668,17 +5038,17 @@ class MSceneRender(MRenderOperation):
         * drawManager (MUIDrawManager) - The UI draw manager, it can be used to draw some simple geometry including text.
         * frameContext (MFrameContext) - Frame level context information
         """
-    def cameraOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def cameraOverride(self, *args: Any, **kwargs: Any) -> Any:
         """cameraOverride() -> MCameraOverride
 
         Query for a camera override.
         """
-    def clearOperation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clearOperation(self, *args: Any, **kwargs: Any) -> Any:
         """clearOperation() -> MClearOperation
 
         Get the scene clear operation.
         """
-    def cullingOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def cullingOverride(self, *args: Any, **kwargs: Any) -> Any:
         """cullingOverride() -> int
 
         Query for a face culling override.
@@ -4688,7 +5058,7 @@ class MSceneRender(MRenderOperation):
           MSceneRender.kCullBackFaces        Cull back faces
           MSceneRender.kCullFrontFaces       Cull front faces
         """
-    def displayModeOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def displayModeOverride(self, *args: Any, **kwargs: Any) -> Any:
         """displayModeOverride() -> int
 
         Query for any display mode override.
@@ -4702,12 +5072,12 @@ class MSceneRender(MRenderOperation):
           MSceneRender.kDefaultMaterial        Use default material. Only applicable if kShade or kFlatShaded is enabled.
           MSceneRender.kTextured               Display textured. Only applicable if kShade or kFlatShaded is enabled.
         """
-    def fragmentName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def fragmentName(self, *args: Any, **kwargs: Any) -> Any:
         """fragmentName() -> String
 
         Query the name of the fragment used to render the scene.
         """
-    def getObjectTypeExclusions(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getObjectTypeExclusions(self, *args: Any, **kwargs: Any) -> Any:
         """getObjectTypeExclusions() -> long
 
         Query for any object type exclusions.
@@ -4752,12 +5122,12 @@ class MSceneRender(MRenderOperation):
           MFrameContext.kExcludeControllers			Exclude controllers objects
           MFrameContext.kExcludeAll                  Exclude all listed object types
         """
-    def getParameters(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getParameters(self, *args: Any, **kwargs: Any) -> Any:
         """getParameters() -> MRenderParameters
 
         Method to return the operation's parameter set.
         """
-    def hasUIDrawables(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasUIDrawables(self, *args: Any, **kwargs: Any) -> Any:
         """hasUIDrawables() -> bool
 
         Query whether addUIDrawables() should be called or not.
@@ -4802,7 +5172,7 @@ class MSceneRender(MRenderOperation):
     kRenderUIItems: int = ...
     kShadeActiveOnly: int = ...
     kTextured: int = ...
-    def lightModeOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def lightModeOverride(self, *args: Any, **kwargs: Any) -> Any:
         """lightModeOverride() -> int
 
         Query for any lighting mode override.
@@ -4820,7 +5190,7 @@ class MSceneRender(MRenderOperation):
     @mClearOperation.setter
     def mClearOperation(*args: Any, **kwargs: Any) -> Any:
         """Default clear operation object."""
-    def objectSetOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def objectSetOverride(self, *args: Any, **kwargs: Any) -> Any:
         """objectSetOverride() -> MSelectionList
 
         Query for override for the set of objects to view.
@@ -4831,7 +5201,7 @@ class MSceneRender(MRenderOperation):
 
         By default NULL is returned which indicates that no override is present.
         """
-    def objectTypeExclusions(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def objectTypeExclusions(self, *args: Any, **kwargs: Any) -> Any:
         """objectTypeExclusions() -> int
 
         Query for any object type exclusions.
@@ -4839,7 +5209,7 @@ class MSceneRender(MRenderOperation):
 
         This method is deprecated. Use getObjectTypeExclusions instead.
         """
-    def postEffectsOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def postEffectsOverride(self, *args: Any, **kwargs: Any) -> Any:
         """postEffectsOverride() -> int
 
         Query for post effects override.
@@ -4850,14 +5220,14 @@ class MSceneRender(MRenderOperation):
           MSceneRender.kPostEffectDisableDOF         Disable depth-of-field post effect
           MSceneRender.kPostEffectDisableAll         Disable all post effects
         """
-    def postRender(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def postRender(self, *args: Any, **kwargs: Any) -> Any:
         """postRender() -> self
 
         Method to allow for the operation to clean up itself after being executed.
 
         By default this method performs no action
         """
-    def postSceneRender(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def postSceneRender(self, *args: Any, **kwargs: Any) -> Any:
         """postSceneRender(context) -> self
 
         Method to allow for the operation to update itself after a scene rendering ends.
@@ -4868,7 +5238,7 @@ class MSceneRender(MRenderOperation):
 
         By default this method performs no action
         """
-    def preRender(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def preRender(self, *args: Any, **kwargs: Any) -> Any:
         """preRender() -> self
 
         Method to allow for the operation to update itself before being executed. In general this would be used to update any operation parameters.
@@ -4878,7 +5248,7 @@ class MSceneRender(MRenderOperation):
 
         By default this method performs no action
         """
-    def preSceneRender(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def preSceneRender(self, *args: Any, **kwargs: Any) -> Any:
         """preSceneRender(context) -> self
 
         Method to allow for the operation to update itself before a scene rendering begins.
@@ -4889,7 +5259,7 @@ class MSceneRender(MRenderOperation):
 
         By default this method performs no action
         """
-    def renderFilterOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def renderFilterOverride(self, *args: Any, **kwargs: Any) -> Any:
         """renderFilterOverride() -> int
 
         Query which elements of a scene render will be drawn based on semantic meaning.
@@ -4903,12 +5273,12 @@ class MSceneRender(MRenderOperation):
           MSceneRender.kRenderUIItems				  kRenderPreSceneUIItems | kRenderPostSceneUIItems
           MSceneRender.kRenderAllItems				  Render all items.
         """
-    def shaderOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def shaderOverride(self, *args: Any, **kwargs: Any) -> Any:
         """shaderOverride() -> MShaderInstance
 
         Query for a scene level shader override.
         """
-    def shadowEnableOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def shadowEnableOverride(self, *args: Any, **kwargs: Any) -> Any:
         """shadowEnableOverride() -> bool/None
 
         Query for shadow display override.
@@ -4916,6 +5286,11 @@ class MSceneRender(MRenderOperation):
         """
 
 class MSelectionContext:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     kComponent: int = ...
     kEdge: int = ...
     kFace: int = ...
@@ -4952,6 +5327,11 @@ class MSelectionContext:
         """
 
 class MSelectionInfo:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     @property
     def alignmentMatrix(*args: Any, **kwargs: Any) -> Any:
         """The alignment matrix.
@@ -5006,7 +5386,7 @@ class MSelectionInfo:
     @selectClosest.setter
     def selectClosest(*args: Any, **kwargs: Any) -> Any:
         """Whether or not we want to select the closest shape or component."""
-    def selectForHilite(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def selectForHilite(self, *args: Any, **kwargs: Any) -> Any:
         """selectForHilite(mask) -> bool
 
         Given the selection mask, determines if this shape can be selected for the hilite list.
@@ -5025,14 +5405,14 @@ class MSelectionInfo:
     @selectRect.setter
     def selectRect(*args: Any, **kwargs: Any) -> Any:
         """The current selection rectangle dimensions (x, y, width, height)."""
-    def selectable(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def selectable(self, *args: Any, **kwargs: Any) -> Any:
         """selectable(mask) -> bool
 
         Given the selection mask, determines if the shape is selectable.
 
         * mask (MSelectionMask) - The mask to test.
         """
-    def selectableComponent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def selectableComponent(self, *args: Any, **kwargs: Any) -> Any:
         """selectableComponent(displayed, mask) -> bool
 
         Given the selection mask, determines if the component is selectable.
@@ -5042,6 +5422,11 @@ class MSelectionInfo:
         """
 
 class MShaderCompileMacro:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     @property
     def definition(*args: Any, **kwargs: Any) -> Any:
         """Macro definition"""
@@ -5056,12 +5441,17 @@ class MShaderCompileMacro:
         """Name of the macro"""
 
 class MShaderInstance:
-    def activatePass(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def activatePass(self, *args: Any, **kwargs: Any) -> Any:
         """activatePass(MDrawContext, int) -> self
         Activates the given pass of the shader.
         Must be called between calls to bind() and unbind().
         """
-    def addInputFragment(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addInputFragment(self, *args: Any, **kwargs: Any) -> Any:
         """addInputFragment(fragmentName, outputName, inputName, promotedInputName=None) -> self
 
         Connect a fragment that has been registered with the fragment manager to an input on the existing MShaderInstance.
@@ -5072,7 +5462,7 @@ class MShaderInstance:
         * outputName (string) - The name of the output on the registered fragment to connect to.
         * inputName (string) - The name of the input parameter on the MShaderInstance to connect to.* promotedInputName (string) - The name of the input parameter on the new fragment that will be promoted to replace the input parameter being connected to.
         """
-    def addInputFragmentForMultiParams(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addInputFragmentForMultiParams(self, *args: Any, **kwargs: Any) -> Any:
         """addInputFragmentForMultiParams(fragmentName, uniqueName, outputNames, inputNames, invalidParameterIndices=None, fragmentUsage=MShaderInstance.kPixelShader) -> self
 
         Connect a named fragment that has been registered with the MFragmentManager
@@ -5112,7 +5502,7 @@ class MShaderInstance:
         * invalidParameterIndices (list of ints) - Optional list to query indices of invalid parameters.
         * fragmentUsage (int) - Not implemented.
         """
-    def addOutputFragment(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addOutputFragment(self, *args: Any, **kwargs: Any) -> Any:
         """addOutputFragment(fragmentName, inputName) -> self
 
         Connect a fragment that has been registered with the fragment manager to an output on the existing MShaderInstance.
@@ -5122,7 +5512,7 @@ class MShaderInstance:
         * fragmentName (string) - The name of a fragment that has been registered with the MFragmentManager.
         * inputName (string) - The name of the input parameter on the fragment to connect the shaders output to.
         """
-    def annotation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def annotation(self, *args: Any, **kwargs: Any) -> Any:
         """annotation(parameterName, annotationName) -> int / float / string
 
         Returns the value of a named parameter annotation.
@@ -5130,16 +5520,16 @@ class MShaderInstance:
          * parameterName (string) - The name of the parameter.
          * annotationName (string) - The name of the annotation.
         """
-    def bind(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def bind(self, *args: Any, **kwargs: Any) -> Any:
         """bind(MDrawContext) -> self
         Binds the shader instance to the draw context, so that it is the active shader.
         """
-    def clone(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clone(self, *args: Any, **kwargs: Any) -> Any:
         """clone() -> MShaderInstance
 
         Clone the shader. This will return a new MShaderInstance object which is identical to the existing shader.
         """
-    def createShaderInstanceWithColorManagementFragment(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def createShaderInstanceWithColorManagementFragment(self, *args: Any, **kwargs: Any) -> Any:
         """createShaderInstanceWithColorManagementFragment(inputColorSpace) -> MShaderInstance
 
         Return a new shader instance with Color Management fragment added, which is based on the callee.
@@ -5154,27 +5544,27 @@ class MShaderInstance:
 
          * inputColorSpace (string) - The color space the current image is in
         """
-    def getArraySize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getArraySize(self, *args: Any, **kwargs: Any) -> Any:
         """getArraySize(string) -> int
 
         Return the size of an array if it is an array. Returns 0 if it is not an array
         """
-    def getPassCount(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getPassCount(self, *args: Any, **kwargs: Any) -> Any:
         """getPassCount(MDrawContext) -> int
         Returns the number of draw passes defined by the shader.
         None if the shader instance or draw context was invalid.
         """
-    def isArrayParameter(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isArrayParameter(self, *args: Any, **kwargs: Any) -> Any:
         """isArrayParameter(string) -> bool
 
         Determine whether the named parameter is an array.
         """
-    def isTransparent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isTransparent(self, *args: Any, **kwargs: Any) -> Any:
         """isTransparent() -> bool
 
         Return whether the shader will render with transparency.
         """
-    def isVaryingParameter(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isVaryingParameter(self, *args: Any, **kwargs: Any) -> Any:
         """isVaryingParameter(string) -> bool
 
         Return the true if a named parameter's values vary per vertex.
@@ -5209,27 +5599,27 @@ class MShaderInstance:
     kTexture3: int = ...
     kTextureCube: int = ...
     kVertexShader: int = ...
-    def parameterDefaultValue(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def parameterDefaultValue(self, *args: Any, **kwargs: Any) -> Any:
         """parameterDefaultValue(parameterName) -> bool / int / float / tuple of float
 
         Returns the default value of named parameter, None if no default value.
         """
-    def parameterList(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def parameterList(self, *args: Any, **kwargs: Any) -> Any:
         """parameterList() -> list of string
 
         Get the names of all parameters that are settable on this shader instance.
         """
-    def parameterSemantic(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def parameterSemantic(self, *args: Any, **kwargs: Any) -> Any:
         """parameterSemantic(parameterName) -> string
 
         Returns the semantic associated to a named parameter.
         """
-    def parameterType(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def parameterType(self, *args: Any, **kwargs: Any) -> Any:
         """parameterType(string) -> int
 
         Get the type of the named parameter, returns kInvalid if parameter is not found.
         """
-    def passAnnotation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def passAnnotation(self, *args: Any, **kwargs: Any) -> Any:
         """passAnnotation(pass, annotationName) -> int / float / string
 
         Returns the value of the current technique's pass annotation.
@@ -5237,29 +5627,29 @@ class MShaderInstance:
          * pass (int) - The index of the pass.
          * annotationName (string) - The name of the pass annotation.
         """
-    def postDrawCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def postDrawCallback(self, *args: Any, **kwargs: Any) -> Any:
         """postDrawCallback() -> function/None
 
         Returns the post-draw callback function set for the this shader instance.
         Returns None if the callback function is not set or is not a python function.
         """
-    def preDrawCallback(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def preDrawCallback(self, *args: Any, **kwargs: Any) -> Any:
         """preDrawCallback() -> function/None
 
         Returns the pre-draw callback function set for the this shader instance.
         Returns None if the callback function is not set or is not a python function.
         """
-    def renameParameter(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def renameParameter(self, *args: Any, **kwargs: Any) -> Any:
         """renameParameter(parameterName, string) -> self
 
         Rename a named parameter.
         """
-    def requiredVertexBuffers(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def requiredVertexBuffers(self, *args: Any, **kwargs: Any) -> Any:
         """requiredVertexBuffers(MVertexBufferDescriptorList) -> self
         Get the vertex buffer descriptors that describe the buffers required
         by a given shader instance.
         """
-    def resourceName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def resourceName(self, *args: Any, **kwargs: Any) -> Any:
         """resourceName(parameterName) -> string
 
         Returns the resource name of a named texture parameter.
@@ -5267,12 +5657,12 @@ class MShaderInstance:
         It allows users to define a default texture using an external file.
         If no resource was defined for a texture, this function returns an empty string.
         """
-    def semantic(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def semantic(self, *args: Any, **kwargs: Any) -> Any:
         """semantic(string) -> string
 
         Return the semantic for a named parameter.
         """
-    def setArrayParameter(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setArrayParameter(self, *args: Any, **kwargs: Any) -> Any:
         """setArrayParameter(parameterName, sequence of bool, int) -> self
         setArrayParameter(parameterName, sequence of int, int) -> self
         setArrayParameter(parameterName, sequence of float, int) -> self
@@ -5280,17 +5670,17 @@ class MShaderInstance:
 
         Set the value of a named array parameter.
         """
-    def setAsVarying(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setAsVarying(self, *args: Any, **kwargs: Any) -> Any:
         """setAsVarying(parameterName, bool) -> self
 
         Set whether the named parameter's values will vary per vertex.
         """
-    def setIsTransparent(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setIsTransparent(self, *args: Any, **kwargs: Any) -> Any:
         """setIsTransparent(bool) -> self
 
         Set whether the shader will render with transparency.
         """
-    def setParameter(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setParameter(self, *args: Any, **kwargs: Any) -> Any:
         """setParameter(parameterName, bool) -> self
         setParameter(parameterName, int) -> self
         setParameter(parameterName, float) -> self
@@ -5304,45 +5694,45 @@ class MShaderInstance:
 
         Set the value of the named parameter.
         """
-    def setSemantic(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setSemantic(self, *args: Any, **kwargs: Any) -> Any:
         """setSemantic(parameterName, string) -> self
 
         Set the semantic of a named parameter.
         """
-    def techniqueAnnotation(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def techniqueAnnotation(self, *args: Any, **kwargs: Any) -> Any:
         """techniqueAnnotation(annotationName) -> int / float / string
 
         Returns the value of the current technique annotation.
 
          * annotationName (string) - The name of the technique annotation.
         """
-    def techniqueNames(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def techniqueNames(self, *args: Any, **kwargs: Any) -> Any:
         """techniqueNames() -> list of strings
 
         Returns a list of the technique names for the effect.
         """
-    def uiName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def uiName(self, *args: Any, **kwargs: Any) -> Any:
         """uiName(parameterName) -> string
 
         Returns the UI name associated with a named parameter.
         The UI name can be specified in shader using the 'UIName' annotation.
         The UI name can be used to specify the name that will be displayed in the Attribute Editor.
         """
-    def uiWidget(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def uiWidget(self, *args: Any, **kwargs: Any) -> Any:
         """uiWidget(parameterName) -> string
 
         Returns the UI widget type associated with a named parameter.
         The UI widget type can be specified in shader using the 'UIWidget' annotation.The UI widget can be used to specify which widget should be used to control the parameter in the Attribute Editor.
         """
-    def unbind(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def unbind(self, *args: Any, **kwargs: Any) -> Any:
         """unbind(MDrawContext) -> self
         Unbinds the shader instance from the draw context.
         """
-    def updateParameters(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def updateParameters(self, *args: Any, **kwargs: Any) -> Any:
         """updateParameters(MDrawContext) -> self
         Updates the bound shader instance with the current parameter data.
         """
-    def writeEffectSourceToFile(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def writeEffectSourceToFile(self, *args: Any, **kwargs: Any) -> Any:
         """writeEffectSourceToFile(filePath) -> self
         Write the source of the final OGSFX/HLSL/CgFX effect to a specified file. Use
         this for debugging to see how fragments are turned into the final effect for
@@ -5353,22 +5743,27 @@ class MShaderInstance:
         """
 
 class MShaderManager:
-    def addShaderIncludePath(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addShaderIncludePath(self, *args: Any, **kwargs: Any) -> Any:
         """addShaderIncludePath(string) -> self
 
         Add a path to the list of paths used for searching for shader include files.
         """
-    def addShaderPath(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addShaderPath(self, *args: Any, **kwargs: Any) -> Any:
         """addShaderPath(string) -> self
 
         Add a path to the list of shader search paths.
         """
-    def clearEffectCache(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clearEffectCache(self, *args: Any, **kwargs: Any) -> Any:
         """clearEffectCache() -> self
         Clear the effect cache.
         This will allow all relevant effects to be updated when the implementation of a shader fragment or fragment graph has been modified.
         """
-    def getEffectsBufferShader(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getEffectsBufferShader(self, *args: Any, **kwargs: Any) -> Any:
         """getEffectsBufferShader(buffer, size, techniqueName, macros=None, useEffectCache=True, preCb=None, postCb=None) -> MShaderInstance
 
         Get a new instance of a shader generated from a block of memory containing device-specific source code (as char*).
@@ -5382,7 +5777,7 @@ class MShaderManager:
         * postCb (function) - A function, or other Python callable, to be called after render items are drawn with this shader.
               see MShaderManager.getEffectsFileShader() for details on the preCb and postCb functions
         """
-    def getEffectsFileShader(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getEffectsFileShader(self, *args: Any, **kwargs: Any) -> Any:
         """getEffectsFileShader(effecsFileName, techniqueName, macros=None, useEffectCache=True, preCb=None, postCb=None) -> MShaderInstance
 
         Get a new instance of a shader generated from an effects file stored on disk.
@@ -5396,7 +5791,7 @@ class MShaderManager:
         * postCb (function) - A function, or other Python callable, to be called after render items are drawn with this shader.
                   def postCb(MDrawContext, MRenderItemList, MShaderInstance)
         """
-    def getEffectsTechniques(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getEffectsTechniques(self, *args: Any, **kwargs: Any) -> Any:
         """getEffectsTechniques(effecsFileName, macros=None, useEffectCache=True) -> tuple of strings
 
         Analyzes a given effect file to extract the names of the techniques that are defined.
@@ -5405,7 +5800,7 @@ class MShaderManager:
         * macros (sequence of MShaderCompileMacro) - Sequence of shader macros. The default value is None, meaning that no macros are specified.
         * useEffectCache (bool) - Use the internal effect cache to prevent reloading the effect every time it is requested. The default value is True.
         """
-    def getFragmentShader(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getFragmentShader(self, *args: Any, **kwargs: Any) -> Any:
         """getFragmentShader(fragmentName, structOutputName, decorateFragment, preCb=None, postCb=None) -> MShaderInstance
 
         Get a new instance of a shader generated from a named shader fragment or fragment graph.
@@ -5418,13 +5813,13 @@ class MShaderManager:
         * postCb (function) - A function, or other Python callable, to be called after render items are drawn with this shader.
               see MShaderManager.getEffectsFileShader() for details on the preCb and postCb functions
         """
-    def getLastError(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getLastError(self, *args: Any, **kwargs: Any) -> Any:
         """getLastError() -> string
 
         Get the description of the last error encountered by the shader manager regarding an effect.
         This includes fragment and effect loading, technique query, and shader binding.
         """
-    def getLastErrorSource(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getLastErrorSource(self, *args: Any, **kwargs: Any) -> Any:
         """getLastErrorSource(displayLineNumber=False, filterSource=False, numSurroundingLines=2) -> string
 
         Get the source of the shader that generated the last error. See getLastError().
@@ -5432,7 +5827,7 @@ class MShaderManager:
          * filterSource (bool) - If True, only display the lines surrounding the error(s). The default is False.
          * numSurroundingLines (int) - The number of leading and trailing lines to display around filtered source. The default is 2.
         """
-    def getShaderFromNode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getShaderFromNode(self, *args: Any, **kwargs: Any) -> Any:
         """getShaderFromNode(shaderNode, shapePath, linkLostCb=None, linkLostUserData=None, preCb=None, postCb=None, nonTextured=False) -> MShaderInstance
 
         Get the shader instance by evaluating the shading network of a surface shader node (either standard or custom) in the scene.
@@ -5457,7 +5852,7 @@ class MShaderManager:
               see MShaderManager.getEffectsFileShader() for details on the preCb and postCb functions.
         * nonTextured (bool) - Whether or not a non-textured effect instance is needed. The default value is false.
         """
-    def getStockShader(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getStockShader(self, *args: Any, **kwargs: Any) -> Any:
         """getStockShader(shaderId, preCb=None, postCb=None) -> MShaderInstance
 
         Get a new instance of a stock shader.
@@ -5491,7 +5886,7 @@ class MShaderManager:
           k3dFloat3NumericShader          An instance of a stock shader for drawing 3 float values per vertex for 3d rendering.
           k3dPointVectorShader            An instance of a stock shader that can be used for 3d rendering of lines based on a point and a vector stream
         """
-    def isSupportedShaderSemantic(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isSupportedShaderSemantic(self, *args: Any, **kwargs: Any) -> Any:
         """isSupportedShaderSemantic(string) -> bool
         Return if a given string is a supported shader semantic.
         """
@@ -5523,11 +5918,11 @@ class MShaderManager:
     k3dStippleShader: int = ...
     k3dThickDashLineShader: int = ...
     k3dThickLineShader: int = ...
-    def releaseShader(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def releaseShader(self, *args: Any, **kwargs: Any) -> Any:
         """releaseShader(MShaderInstance) -> None
         Deletes the MShaderInstance and releases its reference to the underlying shader which is held by the MShaderInstance object.
         """
-    def removeEffectFromCache(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeEffectFromCache(self, *args: Any, **kwargs: Any) -> Any:
         """removeEffectFromCache(effecsFileName, techniqueName, macros=None) -> self
         Remove an effect from the cache.
         This is particulary useful when calling the getEffectsTechniques() and/or getEffectsFileShader() with the flag useEffectCache set to True for maximum performance, and will allow reloading the effect from the disk when the shader file has been modified.
@@ -5535,59 +5930,64 @@ class MShaderManager:
         * techniqueName (string) - The name of a technique in the effects file. If an empty string is specified then the first technique in the effects file will be used.
         * macros (sequence of MShaderCompileMacro) - Sequence of shader macros. The default value is None, meaning that no macros are specified.
         """
-    def shaderIncludePaths(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def shaderIncludePaths(self, *args: Any, **kwargs: Any) -> Any:
         """shaderIncludePaths() -> list of strings
 
         Query the list of search paths user for searching for shader include files.
         """
-    def shaderPaths(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def shaderPaths(self, *args: Any, **kwargs: Any) -> Any:
         """shaderPaths() -> list of strings
 
         Query the list of shader search paths.
         """
 
 class MStateManager:
-    def acquireBlendState(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def acquireBlendState(self, *args: Any, **kwargs: Any) -> Any:
         """acquireBlendState(MBlendStateDesc) -> MBlendState
 
         Acquires an immutable unique blend state matching the blend state descriptor.
         """
-    def acquireDepthStencilState(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def acquireDepthStencilState(self, *args: Any, **kwargs: Any) -> Any:
         """acquireDepthStencilState(MDepthStencilStateDesc) -> MDepthStencilState
 
         Acquires an immutable unique depth-stencil state matching the blend state descriptor.
         """
-    def acquireRasterizerState(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def acquireRasterizerState(self, *args: Any, **kwargs: Any) -> Any:
         """acquireRasterizerState(MRasterizerStateDesc) -> MRasterizerState
 
         Acquires an immutable unique rasterizer state matching the rasterizer state descriptor.
         """
-    def acquireSamplerState(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def acquireSamplerState(self, *args: Any, **kwargs: Any) -> Any:
         """acquireSamplerState(MSamplerStateDesc) -> MSamplerState
 
         Acquires an immutable unique sampler state matching the blend state descriptor.
         """
-    def getBlendState(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getBlendState(self, *args: Any, **kwargs: Any) -> Any:
         """getBlendState() -> MBlendState
 
         Gets the current active blend state from the device.
         """
-    def getDepthStencilState(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getDepthStencilState(self, *args: Any, **kwargs: Any) -> Any:
         """getDepthStencilState() -> MDepthStencilState
 
         Gets the current depth-stencil blend state from the device.
         """
-    def getMaxSamplerCount(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getMaxSamplerCount(self, *args: Any, **kwargs: Any) -> Any:
         """getMaxSamplerCount() -> int
 
         Get the maximum number of simulataneous texture coordinate interpolation channels.
         """
-    def getRasterizerState(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getRasterizerState(self, *args: Any, **kwargs: Any) -> Any:
         """getRasterizerState() -> MRasterizerState
 
         Gets the current active rasterizer state from the device.
         """
-    def getSamplerState(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getSamplerState(self, *args: Any, **kwargs: Any) -> Any:
         """getSamplerState(shader, samplerIndex) -> MSamplerState
 
         Gets the current active sampler state from the device.
@@ -5608,42 +6008,42 @@ class MStateManager:
     kNoShader: int = ...
     kPixelShader: int = ...
     kVertexShader: int = ...
-    def releaseBlendState(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def releaseBlendState(self, *args: Any, **kwargs: Any) -> Any:
         """releaseBlendState(MBlendState) -> None
 
         Deletes the MBlendState and releases the reference to the underlying state object which is held by the MBlendState object.
         """
-    def releaseDepthStencilState(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def releaseDepthStencilState(self, *args: Any, **kwargs: Any) -> Any:
         """releaseDepthStencilState(MDepthStencilState) -> None
 
         Deletes the MDepthStencilState and releases the reference to the underlying state object which is held by the MDepthStencilState object.
         """
-    def releaseRasterizerState(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def releaseRasterizerState(self, *args: Any, **kwargs: Any) -> Any:
         """releaseRasterizerState(MRasterizerState) -> None
 
         Deletes the MRasterizerState and releases the reference to the underlying state object which is held by the MRasterizerState object.
         """
-    def releaseSamplerState(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def releaseSamplerState(self, *args: Any, **kwargs: Any) -> Any:
         """releaseSamplerState(MSamplerState) -> None
 
         Deletes the MSamplerState and releases the reference to the underlying state object which is held by the MSamplerState object.
         """
-    def setBlendState(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setBlendState(self, *args: Any, **kwargs: Any) -> Any:
         """setBlendState(MBlendState) -> self
 
         Sets the active blend state on the device.
         """
-    def setDepthStencilState(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDepthStencilState(self, *args: Any, **kwargs: Any) -> Any:
         """setDepthStencilState(MDepthStencilState) -> self
 
         Sets the active depth-stencil state on the device.
         """
-    def setRasterizerState(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setRasterizerState(self, *args: Any, **kwargs: Any) -> Any:
         """setRasterizerState(MRasterizerState) -> self
 
         Sets the active rasterizer state on the device.
         """
-    def setSamplerState(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setSamplerState(self, *args: Any, **kwargs: Any) -> Any:
         """setSamplerState(shader, samplerIndex, samplerState) -> self
 
         Sets the active sampler state for any of the texture samplers on the device.
@@ -5653,7 +6053,12 @@ class MStateManager:
         """
 
 class MStencilOpDesc:
-    def setDefaults(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def setDefaults(self, *args: Any, **kwargs: Any) -> Any:
         """setDefaults() -> self
 
         Set all values for the stencil operation state to their default values.
@@ -5684,7 +6089,14 @@ class MStencilOpDesc:
         """Stencil op to use when the fragment passes the stencil test, default kKeepStencil"""
 
 class MSubSceneContainer:
-    def add(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def add(self, *args: Any, **kwargs: Any) -> Any:
         """add(item) -> bool
 
         Add a render item to the set of render items that will be used to draw the DAG object associated with the override that owns this container. Each item in the container must have a unique name and the same render item may not be used in the container more than once. When Viewport 2.0 draws the associated DAG object, it will process all render items in this container.
@@ -5695,30 +6107,30 @@ class MSubSceneContainer:
 
         * item (MRenderItem) - The item to add.
         """
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """clear() -> self
 
         Remove all render items from this container. After calling, any render items owned by this container will be invalid.
         """
-    def count(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def count(self, *args: Any, **kwargs: Any) -> Any:
         """count() -> int
 
         Get the number of render items in the container.
         """
-    def find(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def find(self, *args: Any, **kwargs: Any) -> Any:
         """find(name) -> MRenderItem
 
         Get a render item by name from the container. The ownership of the render item remains with the container and callers should not call MRenderItem.destroy() on it. The render items may be cached and will remain valid until removed from the container.
 
         * name (string) - The name of the render item to retrieve.
         """
-    def getIterator(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getIterator(self, *args: Any, **kwargs: Any) -> Any:
         """getIterator() -> MSubSceneContainerIterator
 
         Get an iterator for the container.
         Caller is responsible for deleting the iterator when it is no longer needed.
         """
-    def remove(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def remove(self, *args: Any, **kwargs: Any) -> Any:
         """remove(name) -> bool
 
         Remove a render item by name from the set of render items used to draw the object associated with the override that owns this container. Note that on successful removal any render item that was removed become invalid and any attempts to use such items will result in instability.
@@ -5727,20 +6139,25 @@ class MSubSceneContainer:
         """
 
 class MSubSceneContainerIterator:
-    def destroy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def destroy(self, *args: Any, **kwargs: Any) -> Any:
         """destroy() -> self
 
         Call this method to delete the iterator. After calling, the iterator will be invalid.
         Users of MSubSceneContainer iterators are responsible for deleting the iterators after use.
         """
-    def next(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def next(self, *args: Any, **kwargs: Any) -> Any:
         """next() -> MRenderItem
 
         Advance the iterator to the next render item in the associated MSubSceneContainer and return it.
 
         Returns the next render item in the container or None if no more items.
         """
-    def reset(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def reset(self, *args: Any, **kwargs: Any) -> Any:
         """reset() -> self
 
         Reset the iterator to the beginning of the associated MSubSceneContainer.
@@ -5748,20 +6165,33 @@ class MSubSceneContainerIterator:
         """
 
 class MSwatchRenderBase:
-    def cancelCurrentSwatchRender(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def cancelCurrentSwatchRender(self, *args: Any, **kwargs: Any) -> Any:
         """cancelCurrentSwatchRender() -> None
 
         The method cancels the swatch which is being rendered in parallel, and push the swatch render item back to the render queue after.
 
         The render plugins should make sure that MSwatchRenderBase.cancelParallelRendering() is implemented acoordingly.
         """
-    def cancelParallelRendering(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def cancelParallelRendering(self, *args: Any, **kwargs: Any) -> Any:
         """cancelParallelRendering() -> self
 
         Method to cancel the parallel rendering.
         The derived classes should provide the implementation accordingly if required.
         """
-    def doIteration(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def doIteration(self, *args: Any, **kwargs: Any) -> Any:
         """doIteration() -> bool
 
         Method called from the MSwatchRenderRegister for generation of swatch image. The doIteration function is called repeatedly (during idle events) until it returns true. Using this swatch image can be generated in stages.
@@ -5770,23 +6200,23 @@ class MSwatchRenderBase:
 
         Returns False as long as the swatch computation is not completed.
         """
-    def finishParallelRender(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def finishParallelRender(self, *args: Any, **kwargs: Any) -> Any:
         """finishParallelRender() -> self
 
         Method to update the swatch image when the parallel rendering is finished.
         If swatch is rendered parallel, this method must be called after parallel rendering finished.
         """
-    def image(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def image(self, *args: Any, **kwargs: Any) -> Any:
         """image() -> MImage
 
         This method returns the render swatch as an image.
         """
-    def node(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def node(self, *args: Any, **kwargs: Any) -> Any:
         """node() -> MObject
 
         This method returns the node that is used to compute the swatch.
         """
-    def renderParallel(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def renderParallel(self, *args: Any, **kwargs: Any) -> Any:
         """renderParallel() -> bool
 
         Method indicates if the swatch is rendered parallel.
@@ -5798,18 +6228,23 @@ class MSwatchRenderBase:
     @renderQuality.setter
     def renderQuality(*args: Any, **kwargs: Any) -> Any:
         """The quality in which the swatch will be rendered (the larger the number is set, the better quality is applied)."""
-    def resolution(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def resolution(self, *args: Any, **kwargs: Any) -> Any:
         """resolution() -> int
 
         This method returns the expected resolution of the swatch.
         """
-    def swatchNode(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def swatchNode(self, *args: Any, **kwargs: Any) -> Any:
         """swatchNode() -> MObject
 
         This method returns the node for which the swatch is required to be generated.
         """
 
 class MTargetBlendDesc:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     @property
     def alphaBlendOperation(*args: Any, **kwargs: Any) -> Any:
         """The blend operation for alpha, default is add"""
@@ -5846,7 +6281,7 @@ class MTargetBlendDesc:
     @destinationBlend.setter
     def destinationBlend(*args: Any, **kwargs: Any) -> Any:
         """The blend factor for the destination color, default is zero"""
-    def setDefaults(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDefaults(self, *args: Any, **kwargs: Any) -> Any:
         """setDefaults() -> self
 
         Set all values for the target blend state to their default values.
@@ -5865,36 +6300,41 @@ class MTargetBlendDesc:
         """Indicates what color components(red, green, blue, alpha) are writable, the default is RGBA"""
 
 class MTexture:
-    def bytesPerPixel(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def bytesPerPixel(self, *args: Any, **kwargs: Any) -> Any:
         """bytesPerPixel() -> int
 
         Get the number of bytes per pixel in the texture.
         """
-    def freeRawData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def freeRawData(self, *args: Any, **kwargs: Any) -> Any:
         """freeRawData(long) -> None
         Deallocate system memory - retrieved from rawData().
         """
-    def hasAlpha(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasAlpha(self, *args: Any, **kwargs: Any) -> Any:
         """hasAlpha() -> bool
 
         Get whether the texture has an alpha channel.
         """
-    def hasTransparentAlpha(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasTransparentAlpha(self, *args: Any, **kwargs: Any) -> Any:
         """hasTransparentAlpha() -> bool
 
         Get whether the texture has semi-transparent texels.
         """
-    def hasZeroAlpha(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasZeroAlpha(self, *args: Any, **kwargs: Any) -> Any:
         """hasZeroAlpha() -> bool
 
         Get whether the texture has any texels with an alpha value of 0.0.
         """
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def name(self, *args: Any, **kwargs: Any) -> Any:
         """name() -> string
 
         Get the name of the texture.
         """
-    def rawData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rawData(self, *args: Any, **kwargs: Any) -> Any:
         """rawData() -> (long, rowPitch, slicePitch)
 
         Returns a long containing a C++ 'void' pointer which points to the raw data mapped to the texture.
@@ -5903,32 +6343,32 @@ class MTexture:
         * rowPitch [OUT] (int) - The row pitch of the data. It represents the number of bytes of one line of the texture data.
         * slicePitch [OUT] (int) - The slice pitch of the data. It represents the number of bytes of the whole texture data.
         """
-    def resourceHandle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def resourceHandle(self, *args: Any, **kwargs: Any) -> Any:
         """resourceHandle() -> long
 
         Returns a long containing a C++ 'void' pointer which points to the texture.
         """
-    def setHasAlpha(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setHasAlpha(self, *args: Any, **kwargs: Any) -> Any:
         """setHasAlpha(bool) -> self
 
         Specify that the texture has an alpha channel.
         """
-    def setHasTransparentAlpha(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setHasTransparentAlpha(self, *args: Any, **kwargs: Any) -> Any:
         """setHasTransparentAlpha(bool) -> self
 
         Specify that the texture has texels with an alpha value greater than or equal to 0.0 and less than 1.0.
         """
-    def setHasZeroAlpha(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setHasZeroAlpha(self, *args: Any, **kwargs: Any) -> Any:
         """setHasZeroAlpha(bool) -> self
 
         Specify that the texture has texels with an alpha value of 0.0.
         """
-    def textureDescription(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def textureDescription(self, *args: Any, **kwargs: Any) -> Any:
         """textureDescription() -> MTextureDescription
 
         Get texture description.
         """
-    def update(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def update(self, *args: Any, **kwargs: Any) -> Any:
         """update(pixelData, generateMipMaps, rowPitch=0, region=None) -> self
         update(image, generateMipMaps) -> selfupdate(textureNode) -> self
 
@@ -5947,6 +6387,11 @@ class MTexture:
         """
 
 class MTextureAssignment:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     @property
     def texture(*args: Any, **kwargs: Any) -> Any:
         """The texture"""
@@ -5955,6 +6400,11 @@ class MTextureAssignment:
         """The texture"""
 
 class MTextureDescription:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     @property
     def fArraySlices(*args: Any, **kwargs: Any) -> Any:
         """Number of array slices. e.g. 6 would be required for a cube-map"""
@@ -6031,14 +6481,27 @@ class MTextureDescription:
     kNumberOfEnvMapTypes: int = ...
     kNumberOfTextureTypes: int = ...
     kVolumeTexture: int = ...
-    def setToDefault2DTexture(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setToDefault2DTexture(self, *args: Any, **kwargs: Any) -> Any:
         """setToDefault2DTexture() -> self
 
         Utility to set texture description to describe a 0 size 2-dimensional texture.
         """
 
 class MTextureManager:
-    def acquireDepthTexture(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def acquireDepthTexture(self, *args: Any, **kwargs: Any) -> Any:
         """acquireDepthTexture(textureName, image, generateMipMaps=True, normalizationDesc=None) -> MTexture
         acquireDepthTexture(textureName, pixelData, width, height, generateMipMaps=True, normalizationDesc=None) -> MTexture
 
@@ -6058,7 +6521,7 @@ class MTextureManager:
         * generateMipMaps (bool) - Generate the mipmap levels
         * normalizationDesc (MDepthNormalizationDescription) - Optional information to perform normalization on the depth values. Default value is None
         """
-    def acquireTexture(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def acquireTexture(self, *args: Any, **kwargs: Any) -> Any:
         """(Deprecated) acquireTexture(filePath, mipmapLevels=0, layerName="", alphaChannelIdx=-1) -> MTexture
         acquireTexture(filePath, contextNodeFullName, mipmapLevels=0, layerName="", alphaChannelIdx=-1) -> MTexture
         acquireTexture(textureName, plug, width, height, generateMipMaps=True) -> MTexture
@@ -6095,7 +6558,7 @@ class MTextureManager:
         * textureNode (MObject) - Node to acquire texture from
         * allowBackgroundLoad (bool) - Allow for background texture loading. The default value is false.
         """
-    def acquireTiledTexture(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def acquireTiledTexture(self, *args: Any, **kwargs: Any) -> Any:
         """acquireTiledTexture(textureName, tilePaths, tilePositions, undefinedColor, width, height) -> [MTexture, failedTilePaths, uvScaleOffset]
 
         Ask the renderer to acquire a tiled hardware texture.
@@ -6109,28 +6572,33 @@ class MTextureManager:
         * failedTilePaths [OUT] (list of strings) - List of files which were not written to the output texture
         * uvScaleOffset [OUT] (MFloatArray) - Transform to map to the uv range of the output texture
         """
-    def addImagePath(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def addImagePath(self, *args: Any, **kwargs: Any) -> Any:
         """addImagePath(string) -> self
 
         Adds an additional search path for looking up images on disk.
         """
-    def imagePaths(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def imagePaths(self, *args: Any, **kwargs: Any) -> Any:
         """imagePaths() -> list of strings
 
         Get the current set of image search paths.
         """
-    def releaseTexture(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def releaseTexture(self, *args: Any, **kwargs: Any) -> Any:
         """releaseTexture(MTexture) -> self
 
         Deletes the MTexture and releases the reference to the underlying texture which is held by the MTexture object.
         """
-    def saveTexture(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def saveTexture(self, *args: Any, **kwargs: Any) -> Any:
         """saveTexture(MTexture, string) -> self
 
         Ask the renderer to save a hardware texture to disk.
         """
 
 class MTextureUpdateRegion:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     @property
     def fXRangeMax(*args: Any, **kwargs: Any) -> Any:
         """X max value"""
@@ -6169,7 +6637,12 @@ class MTextureUpdateRegion:
         """Z min value"""
 
 class MUIDrawManager:
-    def arc(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def arc(self, *args: Any, **kwargs: Any) -> Any:
         """arc(center, start, end, normal, radius, numSubdivisions, filled) -> selfarc(center, start, end, normal, radius, filled=False) -> self
 
         Draw an arc. The arc is within the plane determined by a normal vector.
@@ -6184,7 +6657,7 @@ class MUIDrawManager:
         * subdivisions (int) - Number of subdivisions of the arc.
         * filled (bool) - If true the arc will be filled otherwise it will just be drawn as an outline.
         """
-    def arc2d(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def arc2d(self, *args: Any, **kwargs: Any) -> Any:
         """arc2d(center, start, end, radius, numSubdivisions, filled) -> selfarc2d(center, start, end, radius, filled=False) -> self
 
         Draw a 2D arc on the screen. The arc is always facing the camera.
@@ -6197,7 +6670,7 @@ class MUIDrawManager:
         * subdivisions (int) - Number of subdivisions of the arc.
         * filled (bool) - If true the arc will be filled otherwise it will just be drawn as an outline.
         """
-    def beginDrawInXray(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def beginDrawInXray(self, *args: Any, **kwargs: Any) -> Any:
         """beginDrawInXray() -> self
 
         The drawables to be drawn between calls to beginDrawInXray() and endDrawInXray() will display
@@ -6209,7 +6682,7 @@ class MUIDrawManager:
         Any other drawables to be drawn between calls to beginDrawInXray() and endDrawInXray() would display as normal.
         If several meshes are drawn between these two APIs, occlusion order is decided by their specification order.
         """
-    def beginDrawable(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def beginDrawable(self, *args: Any, **kwargs: Any) -> Any:
         """beginDrawable(selectability = kAutomatic, selectionName = 0) -> self
 
         Resets all draw state, such as color and line style, to defaults and indicates the start of a sequence of drawing operations.
@@ -6227,7 +6700,7 @@ class MUIDrawManager:
           kAutomatic      Use geometries for selection when not in manipulator context
         * selectionName (int) - Selection name for manipulators, usually derived from MPxManipulatorNode.glFirstHandle().
         """
-    def box(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def box(self, *args: Any, **kwargs: Any) -> Any:
         """box(center, up, right, scaleX=1.0, scaleY=1.0, scaleZ=1.0, filled=False) -> self
 
         Draw a box.
@@ -6240,7 +6713,7 @@ class MUIDrawManager:
         * scaleZ (float) - Z size of the box.
         * filled (bool) - If true the box will be filled otherwise it will just be drawn as an outline.
         """
-    def capsule(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def capsule(self, *args: Any, **kwargs: Any) -> Any:
         """capsule(center, up,radius, height, subdivisionsAxis, subdivisionsHeight, filled=False) -> self
 
         Draw a capsule.
@@ -6253,7 +6726,7 @@ class MUIDrawManager:
         * subdivisionsHeight (int) - Subdivisions along height.
         * filled (bool) - If true the capsule will be filled otherwise it will just be drawn as an outline.
         """
-    def circle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def circle(self, *args: Any, **kwargs: Any) -> Any:
         """circle(center, normal, radius, numSubdivision, filled) -> selfcircle(center, normal, radius, filled=False) -> self
 
         Draw a circle.
@@ -6265,7 +6738,7 @@ class MUIDrawManager:
         * numSubdivision (int) - Number of Subdivisions for the circle.
         * filled (bool) - If true the circle will be filled otherwise it will just be drawn as an outline.
         """
-    def circle2d(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def circle2d(self, *args: Any, **kwargs: Any) -> Any:
         """circle2d(center, radius, numSubdivision, filled) -> selfcircle2d(center, radius, filled=False) -> self
 
         Draw a 2D circle on the screen.
@@ -6276,7 +6749,7 @@ class MUIDrawManager:
         * numSubdivision (int) - Number of Subdivisions for the circle.
         * filled (bool) - If true the circle will be filled otherwise it will just be drawn as an outline.
         """
-    def cone(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def cone(self, *args: Any, **kwargs: Any) -> Any:
         """cone(base, direction, radius, height, subdivisionsCap, filled) -> selfcone(base, direction, radius, height, filled=False) -> self
 
         Draw a cone.
@@ -6288,7 +6761,7 @@ class MUIDrawManager:
         * subdivisionsCap (int) - Number of subdivisions of the cap.
         * filled (bool) - If true the cone will be filled otherwise it will just be drawn as an outline.
         """
-    def cylinder(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def cylinder(self, *args: Any, **kwargs: Any) -> Any:
         """cylinder(center, up, radius, height, subdivisionsAxis, filled=False) -> self
 
         Draw a cylinder.
@@ -6300,37 +6773,37 @@ class MUIDrawManager:
         * subdivisionsAxis (int) - Number of subdivisions along the main axis.
         * filled (bool) - If true the cylinder will be filled otherwise it will just be drawn as an outline.
         """
-    def depthPriority(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def depthPriority(self, *args: Any, **kwargs: Any) -> Any:
         """depthPriority() -> int
 
         Get the current depth priority value for primitive drawing.
 
         If the method failed to execute a value of 0 will be returned.
         """
-    def endDrawInXray(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def endDrawInXray(self, *args: Any, **kwargs: Any) -> Any:
         """endDrawInXray() -> self
 
         Pair with beginDrawInXray().
         """
-    def endDrawable(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def endDrawable(self, *args: Any, **kwargs: Any) -> Any:
         """endDrawable() -> self
 
         Indicates the end of a sequence of drawing operations.
         All internal drawing state, such as color and line style, are reset to defaults.
         """
-    def getFontList(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getFontList(self, *args: Any, **kwargs: Any) -> Any:
         """getFontList() -> list of strings
 
         Get the names of all font faces that are available on current system.
         The names can then be used for MUIDrawManager::setFontName().
         """
-    def getIconNames(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getIconNames(self, *args: Any, **kwargs: Any) -> Any:
         """getIconNames() -> list of strings
 
         Get list of icon names. The names can be used
         for drawing icons using the MUIDrawManager::icon() method.
         """
-    def icon(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def icon(self, *args: Any, **kwargs: Any) -> Any:
         """icon(position, name, scale)) -> self
 
         Draw an icon at a given 3d position.
@@ -6384,7 +6857,7 @@ class MUIDrawManager:
     kWeightDemiBold: int = ...
     kWeightLight: int = ...
     kWeightNormal: int = ...
-    def line(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def line(self, *args: Any, **kwargs: Any) -> Any:
         """line(startPoint, endPoint) -> self
 
         Draw a straight line between two points.
@@ -6392,7 +6865,7 @@ class MUIDrawManager:
         * startPoint (MPoint) - The start point of the line.
         * endPoint (MPoint) - The end point of the line.
         """
-    def line2d(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def line2d(self, *args: Any, **kwargs: Any) -> Any:
         """line2d(startPoint, endPoint) -> self
 
         Draw a straight line between two points.
@@ -6400,7 +6873,7 @@ class MUIDrawManager:
         * startPoint (MPoint) - The start point of the line, only x-y components(in pixels) are used.
         * endPoint (MPoint) - The end point of the line, only x-y components(in pixels) are used.
         """
-    def lineList(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def lineList(self, *args: Any, **kwargs: Any) -> Any:
         """lineList(points, draw2D) -> self
 
         Draw a series of line segments in 3D or 2D.
@@ -6410,7 +6883,7 @@ class MUIDrawManager:
         does not form a line segment.
         * draw2D (bool) Draw in 2D or 3D.
         """
-    def lineStrip(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def lineStrip(self, *args: Any, **kwargs: Any) -> Any:
         """lineStrip(points, draw2D) -> self
 
         Draw a series of connected line segments in 3D or 2D
@@ -6419,7 +6892,7 @@ class MUIDrawManager:
         to form a line strip.
         * draw2D (bool) Draw in 2D or 3D.
         """
-    def mesh(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def mesh(self, *args: Any, **kwargs: Any) -> Any:
         """mesh(mode, position, normal=None, color=None, index=None, texcoord=None) -> self
 
         Draw custom geometric shapes from an array of vertices.
@@ -6446,7 +6919,7 @@ class MUIDrawManager:
         * index (MUintArray) - List of the vertex indices.
         * texcoord (MPointArray) - List of the vertex texture coordinates.
         """
-    def mesh2d(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def mesh2d(self, *args: Any, **kwargs: Any) -> Any:
         """mesh2d(mode, position, color=None, index=None, texcoord=None) -> self
 
         Draw custom 2d geometric shapes from an array of vertices.
@@ -6472,21 +6945,21 @@ class MUIDrawManager:
         * index (MUintArray) - List of the vertex indices.
         * texcoord (MPointArray) - List of the vertex texture coordinates.
         """
-    def point(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def point(self, *args: Any, **kwargs: Any) -> Any:
         """point(point) -> self
 
         Draw a point.
 
         * point (MPoint) - Position of the point.
         """
-    def point2d(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def point2d(self, *args: Any, **kwargs: Any) -> Any:
         """point2d(point) -> self
 
         Draw a point.
 
         * point (MPoint) - Position of the point, only x-y components(in pixels) are used.
         """
-    def points(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def points(self, *args: Any, **kwargs: Any) -> Any:
         """points(points, draw2D) -> self
 
         Draw a series of points in 3D or 2D.
@@ -6494,7 +6967,7 @@ class MUIDrawManager:
         * points (MPointArray) - Array of point positions.
         * draw2D (bool) Draw in 2D or 3D.
         """
-    def rect(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rect(self, *args: Any, **kwargs: Any) -> Any:
         """rect(center, up, normal, scaleX, scaleY, filled=False) -> self
 
         Draw a rectangle.
@@ -6507,7 +6980,7 @@ class MUIDrawManager:
         * scaleY (float) - Scale factor in Y-direction.
         * filled (bool) - If true the rectangle will be filled otherwise it will just be drawn as an outline.
         """
-    def rect2d(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def rect2d(self, *args: Any, **kwargs: Any) -> Any:
         """rect2d(center, up, scaleX, scaleY, filled=False) -> self
 
         Draw a 2D rectangle on the screen.
@@ -6519,7 +6992,7 @@ class MUIDrawManager:
         * scaleY (float) - Scale factor in Y-direction.
         * filled (bool) - If true the rectangle will be filled otherwise it will just be drawn as an outline.
         """
-    def setColor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setColor(self, *args: Any, **kwargs: Any) -> Any:
         """setColor(color) -> self
 
         Set the draw color. This will remain in effect until the next call to setColor(), setColorIndex() or endDrawable().
@@ -6529,7 +7002,7 @@ class MUIDrawManager:
 
         Default: (0.7, 0.7, 0.7, 1)
         """
-    def setColorIndex(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setColorIndex(self, *args: Any, **kwargs: Any) -> Any:
         """setColorIndex(index) -> self
 
         Set the color index for the later primitive and text drawing.
@@ -6537,7 +7010,7 @@ class MUIDrawManager:
 
         * index (int) - Color index
         """
-    def setDepthPriority(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDepthPriority(self, *args: Any, **kwargs: Any) -> Any:
         """setDepthPriority(priority) -> self
 
         Set the depth priority for primitive drawing.
@@ -6546,49 +7019,49 @@ class MUIDrawManager:
 
         * priority (int) - Depth priority.
         """
-    def setFontIncline(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setFontIncline(self, *args: Any, **kwargs: Any) -> Any:
         """setFontIncline(fontIncline) -> self
 
         Set the incline of font to be used when drawing text.
 
         * fontIncline (int) - The font incline to use.
         """
-    def setFontLine(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setFontLine(self, *args: Any, **kwargs: Any) -> Any:
         """setFontLine(fontLine) -> self
 
         Set the line of font to be used when drawing text.
 
         * fontLine (int) - The font line to use.
         """
-    def setFontName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setFontName(self, *args: Any, **kwargs: Any) -> Any:
         """setFontName(faceName) -> self
 
         Set the face name of font to be used when drawing text.
 
         * faceName (string) - The font face name(case-insensitive) to use, All system font faces are supported. "helvetica" is the default for invalid input.
         """
-    def setFontSize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setFontSize(self, *args: Any, **kwargs: Any) -> Any:
         """setFontSize(fontSize) -> self
 
         Set the size of font to be used when drawing text.
 
         * fontSize (int) - The font height(in pixel) to use.
         """
-    def setFontStretch(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setFontStretch(self, *args: Any, **kwargs: Any) -> Any:
         """setFontStretch(fontStretch) -> self
 
         Set the stretch of font to be used when drawing text.
 
         * fontStretch (int) - The font stretch to use.
         """
-    def setFontWeight(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setFontWeight(self, *args: Any, **kwargs: Any) -> Any:
         """setFontWeight(fontWeight) -> self
 
         Set the weight of font to be used when drawing text.
 
         * weight (int) - The font weight to use.
         """
-    def setLineStyle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setLineStyle(self, *args: Any, **kwargs: Any) -> Any:
         """setLineStyle(style) -> self
         setLineStyle(factor, pattern) -> self
 
@@ -6606,14 +7079,14 @@ class MUIDrawManager:
         * factor (int) - a multiplier for each bit in the line stipple pattern.
         * pattern (int) - a bit pattern indicating which fragments of a line will be drawn
         """
-    def setLineWidth(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setLineWidth(self, *args: Any, **kwargs: Any) -> Any:
         """setLineWidth(value) -> self
 
         Set the line width for the primitive drawing (line, rect, box...)
 
         * value (float) - Line width in pixels.
         """
-    def setPaintStyle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setPaintStyle(self, *args: Any, **kwargs: Any) -> Any:
         """setPaintStyle(style) -> self
 
         Set the paint style for filled primitive drawing.
@@ -6623,14 +7096,14 @@ class MUIDrawManager:
           kStippled  Stippled
           kShaded    Shaded with lighting
         """
-    def setPointSize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setPointSize(self, *args: Any, **kwargs: Any) -> Any:
         """setPointSize(value) -> self
 
         Set the point size for the point drawing.
 
         * value (float) - Point size in pixels.
         """
-    def setTexture(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setTexture(self, *args: Any, **kwargs: Any) -> Any:
         """setTexture(texture) -> self
 
         Set the active texture to apply when drawing a mesh.
@@ -6638,7 +7111,7 @@ class MUIDrawManager:
 
         * texture (MTexture) - The texture which will affect the later drawing.
         """
-    def setTextureMask(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setTextureMask(self, *args: Any, **kwargs: Any) -> Any:
         """setTextureMask(mask) -> self
 
         Set the channel mask to used when applying a texture to a mesh.
@@ -6649,7 +7122,7 @@ class MUIDrawManager:
         * mask (int) - The channel mask which will affect the later drawing.
                 Currently, only MBlendState.kRGBAChannels, MBlendState.kRGBChannels and MBlendState.kAlphaChannel are supported.
         """
-    def setTextureSampler(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setTextureSampler(self, *args: Any, **kwargs: Any) -> Any:
         """setTextureSampler(filter, address) -> self
 
         Set the filter and address mode used when applying a texture to a mesh.
@@ -6662,7 +7135,7 @@ class MUIDrawManager:
         * address (int) - The canonical range which will affect the later drawing.
                 Currently, only MSamplerState.kTexWrap and MSamplerState.kTexClamp are supported.
         """
-    def sphere(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def sphere(self, *args: Any, **kwargs: Any) -> Any:
         """sphere(center, radius, subdivisionsAxis, subdivisionsHeight, filled=False) -> selfsphere(center, radius, filled=False) -> self
 
         Draw a sphere.
@@ -6673,7 +7146,7 @@ class MUIDrawManager:
         * subdivisionsHeight (int) - Number of subdivisions along height.
         * filled (bool) - If true the sphere will be filled otherwise it will just be drawn as a wireframe.
         """
-    def text(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def text(self, *args: Any, **kwargs: Any) -> Any:
         """text(position, text, alignment=kLeft, backgroundSize=None, backgroundColor=None, dynamic=False) -> self
 
         Draw a screen facing and horizontal aligned text in viewport 2.0.
@@ -6699,7 +7172,7 @@ class MUIDrawManager:
                                 If the text draw is changing very often like it is showing some dynamic numbers,
                  in this case making dynamic true will give better performance.
         """
-    def text2d(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def text2d(self, *args: Any, **kwargs: Any) -> Any:
         """text2d(position, text, alignment=kLeft, backgroundSize=None, backgroundColor=None, dynamic=False) -> self
 
         Draw a text on the screen.
@@ -6726,7 +7199,12 @@ class MUIDrawManager:
         """
 
 class MUniformParameter:
-    def asBool(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def asBool(self, *args: Any, **kwargs: Any) -> Any:
         """asBool(context) -> bool
 
         Get the value of this uniform parameter as a boolean value.
@@ -6734,7 +7212,7 @@ class MUniformParameter:
 
         * context (MDrawContext) - Draw context being used for render.
         """
-    def asFloat(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asFloat(self, *args: Any, **kwargs: Any) -> Any:
         """asFloat(context) -> float
 
         Get the value of this uniform parameter as a float.
@@ -6742,7 +7220,7 @@ class MUniformParameter:
 
         * context (MDrawContext) - Draw context being used for render.
         """
-    def asFloatArray(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asFloatArray(self, *args: Any, **kwargs: Any) -> Any:
         """asFloatArray(context) -> tuple of floats
 
         Get the value of this uniform parameter as one or more floating point values.
@@ -6750,7 +7228,7 @@ class MUniformParameter:
 
         * context (MDrawContext) - Draw context being used for render.
         """
-    def asInt(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asInt(self, *args: Any, **kwargs: Any) -> Any:
         """asInt(context) -> int
 
         Get the value of this uniform parameter as an integer.
@@ -6758,7 +7236,7 @@ class MUniformParameter:
 
         * context (MDrawContext) - Draw context being used for render.
         """
-    def asString(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def asString(self, *args: Any, **kwargs: Any) -> Any:
         """asString(context) -> string
 
         Get the value of this uniform parameter as a string.
@@ -6766,7 +7244,7 @@ class MUniformParameter:
 
         * context (MDrawContext) - Draw context being used for render.
         """
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """copy(source) -> self
 
         Copy data from source parameter.
@@ -6779,7 +7257,7 @@ class MUniformParameter:
     @enumFieldNames.setter
     def enumFieldNames(*args: Any, **kwargs: Any) -> Any:
         """The field names of an enum attribute."""
-    def hasChanged(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasChanged(self, *args: Any, **kwargs: Any) -> Any:
         """hasChanged(context) -> bool
 
         Has the value of this parameter changed since the last time it was accessed?
@@ -6787,7 +7265,7 @@ class MUniformParameter:
 
         * context (MDrawContext) - Draw context being used for render.
         """
-    def isATexture(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def isATexture(self, *args: Any, **kwargs: Any) -> Any:
         """isATexture() -> bool
 
         Returns True if this parameter represents a texture, False otherwise.
@@ -6869,27 +7347,27 @@ class MUniformParameter:
     @keyable.setter
     def keyable(*args: Any, **kwargs: Any) -> Any:
         """The keyable state of this parameter"""
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def name(self, *args: Any, **kwargs: Any) -> Any:
         """name() -> string
 
         Get the name of this parameter.
         """
-    def numColumns(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numColumns(self, *args: Any, **kwargs: Any) -> Any:
         """numColumns() -> int
 
         Get the number of columns in this parameter.
         """
-    def numElements(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numElements(self, *args: Any, **kwargs: Any) -> Any:
         """numElements() -> int
 
         Get the number of elements in this parameter (including rows and columns).
         """
-    def numRows(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numRows(self, *args: Any, **kwargs: Any) -> Any:
         """numRows() -> int
 
         Get the number of rows in this parameter.
         """
-    def plug(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def plug(self, *args: Any, **kwargs: Any) -> Any:
         """plug() -> MPlug
 
         Get the plug managed by this parameter.
@@ -6906,7 +7384,7 @@ class MUniformParameter:
     @rangeMin.setter
     def rangeMin(*args: Any, **kwargs: Any) -> Any:
         """The hard range lower bound for a numeric uniform parameter."""
-    def semantic(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def semantic(self, *args: Any, **kwargs: Any) -> Any:
         """semantic() -> int
 
         Get the semantic of this parameter.
@@ -6914,7 +7392,7 @@ class MUniformParameter:
         The list of available semantic values can be obtained with the following commands:
           print filter(lambda k: k.startswith('kSemantic'), dir(maya.api.OpenMayaRender.MUniformParameter))
         """
-    def setBool(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setBool(self, *args: Any, **kwargs: Any) -> Any:
         """setBool(value) -> self
 
         Set the value of this uniform parameter as a boolean value.
@@ -6922,12 +7400,12 @@ class MUniformParameter:
 
         * value (bool) - the new value for this parameter.
         """
-    def setDirty(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setDirty(self, *args: Any, **kwargs: Any) -> Any:
         """setDirty() -> self
 
         Mark the data for this parameter as dirty. This will force the parameter to report that it has been changed the next time it is accessed. This allows external events (e.g. device lost, texture management, etc) to force a shader to re-set parameters tied to externally managed resources.
         """
-    def setFloat(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setFloat(self, *args: Any, **kwargs: Any) -> Any:
         """setFloat(value) -> self
 
         Set the value of this uniform parameter as a float.
@@ -6935,7 +7413,7 @@ class MUniformParameter:
 
         * value (float) - the new float value for this parameter.
         """
-    def setFloatArray(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setFloatArray(self, *args: Any, **kwargs: Any) -> Any:
         """setFloatArray(value) -> self
 
         Set the value of this uniform parameter as one or more floating point values.
@@ -6943,7 +7421,7 @@ class MUniformParameter:
 
         * value (tuple of floats) - a tuple of floats holding the new floating point value(s) for this parameter.
         """
-    def setInt(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setInt(self, *args: Any, **kwargs: Any) -> Any:
         """setInt(value) -> self
 
         Set the value of this uniform parameter as an integer value.
@@ -6951,7 +7429,7 @@ class MUniformParameter:
 
         * value (int) - the new value for this parameter.
         """
-    def setString(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setString(self, *args: Any, **kwargs: Any) -> Any:
         """setString(value) -> self
 
         Set the value of this uniform parameter as a string.
@@ -6971,12 +7449,12 @@ class MUniformParameter:
     @softRangeMin.setter
     def softRangeMin(*args: Any, **kwargs: Any) -> Any:
         """The soft range lower bound for a numeric uniform parameter."""
-    def source(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def source(self, *args: Any, **kwargs: Any) -> Any:
         """source() -> MPlug
 
         Get the source plug connected to this parameter. Other than textures, this will typically be an invalid plug.
         """
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def type(self, *args: Any, **kwargs: Any) -> Any:
         """type() -> int
 
         Get the type of this parameter.
@@ -7006,28 +7484,37 @@ class MUniformParameter:
     @uiNiceName.setter
     def uiNiceName(*args: Any, **kwargs: Any) -> Any:
         """The UI Nice Name for the attribute."""
-    def userData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def userData(self, *args: Any, **kwargs: Any) -> Any:
         """userData() -> int
 
         Get the user data for this parameter. User data can be used to store plugin specific information that you want to associate with this parameter. Typically this will be used to store a handle to the effect parameter.
         """
 
 class MUniformParameterList:
-    def append(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def append(self, *args: Any, **kwargs: Any) -> Any:
         """append(element) -> bool
 
         Append a new parameter to this end of this list.
 
         * element (MUniformParameter) - The new parameter to append
         """
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """copy(source) -> self
 
         Copy data from source list.
 
         * source (MUniformParameterList) - The source list to copy from
         """
-    def setElement(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setElement(self, *args: Any, **kwargs: Any) -> Any:
         """setElement(n, element) -> bool
 
         Set the nth parameter in this list.
@@ -7035,7 +7522,7 @@ class MUniformParameterList:
         * n (int) - The index of the element to set
         * element (MUniformParameter) - The value to set
         """
-    def setLength(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setLength(self, *args: Any, **kwargs: Any) -> Any:
         """setLength(length) -> bool
 
         Set the number of parameters in this list. If this is greater than the current number of parameters in the list, the caller is responsible for setting the new parameters to valid values using setElement.
@@ -7044,7 +7531,12 @@ class MUniformParameterList:
         """
 
 class MUserRenderOperation(MRenderOperation):
-    def addUIDrawables(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addUIDrawables(self, *args: Any, **kwargs: Any) -> Any:
         """addUIDrawables(drawManager, frameContext) -> self
 
         Provides access to the MUIDrawManager, which can be used to queue up operations to draw simple UI shapes like lines, circles, text, etc.
@@ -7054,24 +7546,29 @@ class MUserRenderOperation(MRenderOperation):
         * drawManager (MUIDrawManager) - The UI draw manager, it can be used to draw some simple geometry including text.
         * frameContext (MFrameContext) - Frame level context information
         """
-    def cameraOverride(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def cameraOverride(self, *args: Any, **kwargs: Any) -> Any:
         """cameraOverride() -> MCameraOverride
 
         Query for a camera override.
         """
-    def hasUIDrawables(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasUIDrawables(self, *args: Any, **kwargs: Any) -> Any:
         """hasUIDrawables() -> bool
 
         Query whether addUIDrawables() should be called or not.
         """
-    def requiresLightData(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def requiresLightData(self, *args: Any, **kwargs: Any) -> Any:
         """requiresLightData() -> bool
 
         Indicates whether light data from the renderer is required for this user operation.
         """
 
 class MVaryingParameter:
-    def addElement(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def addElement(self, *args: Any, **kwargs: Any) -> Any:
         """addElement(child) -> self
 
         Add a child element to this parameter.
@@ -7079,29 +7576,29 @@ class MVaryingParameter:
 
         * child (MVaryingParameter) - the parameter to add to the structure.
         """
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """copy(source) -> self
 
         Copy data from source parameter.
 
         * source (MVaryingParameter) - The source parameter to copy from
         """
-    def destinationSetName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def destinationSetName(self, *args: Any, **kwargs: Any) -> Any:
         """destinationSetName() -> string
 
         Get the destination Set of this parameter.
         """
-    def dimension(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def dimension(self, *args: Any, **kwargs: Any) -> Any:
         """dimension() -> int
 
         Get the dimension of this parameter.
         """
-    def elementSize(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def elementSize(self, *args: Any, **kwargs: Any) -> Any:
         """elementSize() -> int
 
         Get the size in bytes of one element of this parameter.
         """
-    def getElement(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getElement(self, *args: Any, **kwargs: Any) -> Any:
         """getElement(index) -> MVaryingParameter
 
         Get an element within a structure.
@@ -7127,30 +7624,30 @@ class MVaryingParameter:
     kUnsignedInt16: int = ...
     kUnsignedInt32: int = ...
     kWeight: int = ...
-    def maximumStride(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def maximumStride(self, *args: Any, **kwargs: Any) -> Any:
         """maximumStride() -> int
 
         Get the maximum stride of this parameter in bytes.
         For parameter that accept a range of element counts, this corresponds to the maximum number of elements the parameter supports.
         """
-    def name(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def name(self, *args: Any, **kwargs: Any) -> Any:
         """name() -> string
 
         Get the name of this parameter.
         """
-    def numElements(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def numElements(self, *args: Any, **kwargs: Any) -> Any:
         """numElements() -> int
 
         Get the number of elements in this structure.
         This operation is only valid for parameters of type kStructure.
         """
-    def removeElements(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def removeElements(self, *args: Any, **kwargs: Any) -> Any:
         """removeElements() -> self
 
         Remove all child elements from a structure.
         This operation is only valid for parameters of type kStructure.
         """
-    def semantic(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def semantic(self, *args: Any, **kwargs: Any) -> Any:
         """semantic() -> int
 
         Get the semantic of this parameter.
@@ -7165,13 +7662,13 @@ class MVaryingParameter:
           kTangent,
           kBinormal
         """
-    def semanticName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def semanticName(self, *args: Any, **kwargs: Any) -> Any:
         """semanticName() -> string
 
         Get the semantic name assigned to this parameter.
         The semanticName is used to identify a custom vertex stream request in order to fill the stream with the appropriate data requested by a shader override.
         """
-    def setSource(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setSource(self, *args: Any, **kwargs: Any) -> Any:
         """setSource(semantic, name) -> self
 
         While the source of geometry parameters is usually configured by the artist through Maya's user interface, this method allows you to programatically set the source of a geometry parameter, including both the data type (e.g. position, normal, etc) and an optional set name (e.g. UV set 'map1'). This is useful for implementing custom default values or shader operations.
@@ -7179,19 +7676,19 @@ class MVaryingParameter:
         * type (int) - the type of data to populate this parameter with (see semantic())
         * name (string) - the specific data set to use for parameter types which support data sets, such as UV and color.
         """
-    def sourceSemantic(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def sourceSemantic(self, *args: Any, **kwargs: Any) -> Any:
         """sourceSemantic() -> int
 
         Get the type of data (e.g. position, normal, uv) currently populating this parameter.
         This method will only return a useful value when called on leaf-level parameters (e.g. structures do not have sources, only the elements of a structure have sources).
         See semantic() for the list of values.
         """
-    def sourceSetName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def sourceSetName(self, *args: Any, **kwargs: Any) -> Any:
         """sourceSetName() -> string
 
         If the current data type supports data sets (e.g. uv sets, color sets), get the name of the data set populating this parameter. This method will only return a useful value when called on leaf-level parameters (e.g. structures do not have sources, only the elements of a structure have sources).
         """
-    def type(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def type(self, *args: Any, **kwargs: Any) -> Any:
         """type() -> int
 
         Get the type of this parameter.
@@ -7208,7 +7705,7 @@ class MVaryingParameter:
           kInt32,
           kUnsignedInt32
         """
-    def updateId(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def updateId(self, *args: Any, **kwargs: Any) -> Any:
         """updateId() -> int
 
         Get the update id.
@@ -7216,21 +7713,30 @@ class MVaryingParameter:
         """
 
 class MVaryingParameterList:
-    def append(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def append(self, *args: Any, **kwargs: Any) -> Any:
         """append(element) -> bool
 
         Append a new parameter to this end of this list.
 
         * element (MVaryingParameter) - The new parameter to append
         """
-    def copy(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, *args: Any, **kwargs: Any) -> Any:
         """copy(source) -> self
 
         Copy data from source list.
 
         * source (MVaryingParameterList) - The source list to copy from
         """
-    def setElement(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setElement(self, *args: Any, **kwargs: Any) -> Any:
         """setElement(n, element) -> bool
 
         Set the nth parameter in this list.
@@ -7238,7 +7744,7 @@ class MVaryingParameterList:
         * n (int) - The index of the element to set
         * element (MVaryingParameter) - The value to set
         """
-    def setLength(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setLength(self, *args: Any, **kwargs: Any) -> Any:
         """setLength(length) -> bool
 
         Set the number of parameters in this list. If this is greater than the current number of parameters in the list, the caller is responsible for setting the new parameters to valid values using setElement.
@@ -7247,7 +7753,12 @@ class MVaryingParameterList:
         """
 
 class MVertexBuffer:
-    def acquire(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def acquire(self, *args: Any, **kwargs: Any) -> Any:
         """acquire(size, writeOnly) -> long
 
         Get a pointer to memory for the buffer.
@@ -7256,25 +7767,25 @@ class MVertexBuffer:
         * writeOnly (bool) - Specified if the returned memory should be uninitialized or filled with actual buffer content.
                              When the current buffer content is not needed, it is preferable to set the writeOnly flag to true for better performance.
         """
-    def commit(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def commit(self, *args: Any, **kwargs: Any) -> Any:
         """commit(long) -> self
 
         Commit the data stored in the memory given by acquire() to the buffer.
         If this method is not called, the acquired buffer will not be used in drawing.
         The pointer must be the same pointer returned from acquire().
         """
-    def descriptor(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def descriptor(self, *args: Any, **kwargs: Any) -> Any:
         """descriptor() -> MVertexBufferDescriptor
 
         Get the the buffer descriptor.
         """
-    def hasCustomResourceHandle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def hasCustomResourceHandle(self, *args: Any, **kwargs: Any) -> Any:
         """hasCustomResourceHandle() -> bool
 
         Returns true if this vertex buffer is using a custom resource handle set
         by the plugin using MVertexBuffer.setResourceHandle(long, int).
         """
-    def lockResourceHandle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def lockResourceHandle(self, *args: Any, **kwargs: Any) -> Any:
         """lockResourceHandle() -> self
 
         Lock the resource handle. The pointer returned from resourceHandle() is
@@ -7306,40 +7817,40 @@ class MVertexBuffer:
         map() and unmap() will work if they are called between lockResourceHandle()
         and unlockResourceHandle(). They operate on the GPU representation.
         """
-    def map(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def map(self, *args: Any, **kwargs: Any) -> Any:
         """map() -> long
 
         Get a read-only pointer to the existing content of the buffer.
         Writing new content in this memory block is not supported and can lead to unexpected behavior.
         """
-    def resourceHandle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def resourceHandle(self, *args: Any, **kwargs: Any) -> Any:
         """resourceHandle() -> long
 
         Returns a long containing a C++ 'float' pointer which points to the graphics device dependent handle to the vertex buffer.
         """
-    def setResourceHandle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def setResourceHandle(self, *args: Any, **kwargs: Any) -> Any:
         """setResourceHandle(long, int) -> self
 
         Set the graphics-device-dependent hardware buffer resource handle.
         """
-    def unload(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def unload(self, *args: Any, **kwargs: Any) -> Any:
         """unload() -> self
 
         If the buffer is resident in GPU memory, calling this method will move it to system memory and free the GPU memory.
         """
-    def unlockResourceHandle(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def unlockResourceHandle(self, *args: Any, **kwargs: Any) -> Any:
         """unlockResourceHandle() -> self
 
         Unlock the resource handle. The pointer returned from resourceHandle is not
         guaranteed to exist any more.
         See lockResourceHandle() for more details.
         """
-    def unmap(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def unmap(self, *args: Any, **kwargs: Any) -> Any:
         """unmap() -> self
 
         Release the data exposed by map(). If this method is not called, the buffer will not be recycled.
         """
-    def update(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def update(self, *args: Any, **kwargs: Any) -> Any:
         """update(buffer, destOffset, numVerts, truncateIfSmaller) -> self
 
         Set a portion (or all) of the contents of the MVertexBuffer using the data in the provided software buffer.
@@ -7352,35 +7863,57 @@ class MVertexBuffer:
                                      then the buffer contents will be truncated to the new size. Truncating the buffer size
                                      will not cause a reallocation and will not lose data before the destOffset.
         """
-    def vertexCount(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def vertexCount(self, *args: Any, **kwargs: Any) -> Any:
         """vertexCount() -> int
 
         Get the size of the vertex buffer.
         """
 
 class MVertexBufferArray:
-    def append(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def append(self, *args: Any, **kwargs: Any) -> Any:
         """append(MVertexBuffer, name) -> self
 
         Add a new vertex buffer to the list.
         """
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """clear() -> self
 
         Clear the array.
         """
-    def getBuffer(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getBuffer(self, *args: Any, **kwargs: Any) -> Any:
         """getBuffer(string) -> MVertexBuffer
 
         Get vertex buffer by name.
         """
-    def getName(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def getName(self, *args: Any, **kwargs: Any) -> Any:
         """getName(int) -> string
 
         Get the name of the buffer at desired index.
         """
 
 class MVertexBufferDescriptor:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
     @property
     def dataType(*args: Any, **kwargs: Any) -> Any:
         """The data type of the buffer.
@@ -7455,17 +7988,26 @@ class MVertexBufferDescriptor:
         """The number of points per primitive."""
 
 class MVertexBufferDescriptorList:
-    def append(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def append(self, *args: Any, **kwargs: Any) -> Any:
         """append(MVertexBufferDescriptor) -> bool
 
         Add a descriptor to the list. Creates and stores a copy which is owned by the list.
         """
-    def clear(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, *args: Any, **kwargs: Any) -> Any:
         """clear() -> self
 
         Clear the list.
         """
-    def remove(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def remove(self, *args: Any, **kwargs: Any) -> Any:
         """remove(index) -> bool
 
         Remove a descriptor from the list and delete it.

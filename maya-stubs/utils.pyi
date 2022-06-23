@@ -3,6 +3,77 @@ from typing_extensions import Self
 from _typeshed import Incomplete
 from logging import Handler
 
+__cached__: str
+__doc__: str
+__file__: str
+__loader__: SourceFileLoader
+__name__: str
+__package__: str
+__spec__: ModuleSpec
+
+def _decodeStack(tbStack: Any) -> Any: ...
+def _dumpCurrentFrames() -> Any: ...
+def _fixConsoleLineNumbers(tbStack: Any) -> Any: ...
+def formatGuiException(exceptionType: Any, exceptionObject: Any, traceBack: Any, detail: Any = ...) -> Any:
+    """Format a trace stack into a string.
+
+        exceptionType   : Type of exception
+        exceptionObject : Detailed exception information
+        traceBack       : Exception traceback stack information
+        detail          : 0 = no trace info, 1 = line/file only, 2 = full trace
+
+    To perform an action when an exception occurs without modifying Maya's
+    default printing of exceptions, do the following::
+
+        import maya.utils
+        def myExceptCB(etype, value, tb, detail=2):
+            # do something here...
+            return maya.utils._formatGuiException(etype, value, tb, detail)
+        maya.utils.formatGuiException = myExceptCB
+    """
+
+def formatGuiResult(obj: Any) -> Any:
+    """Gets a string representation of a result object.
+
+    To perform an action when a result is about to returned to the script editor
+    without modifying Maya's default printing of results, do the following:
+
+        import maya.utils
+        def myResultCallback(obj):
+            # do something here...
+            return maya.utils._formatGuiResult(obj)
+        maya.utils.formatGuiResult = myResultCallback
+    """
+
+def _guiExceptHook(exceptionType: Any, exceptionObject: Any, traceBack: Any, detail: Any = ...) -> Any:
+    """Whenever Maya receives an error from the command engine it comes into here
+    to format the message for display.
+    Formatting is performed by formatGuiException.
+        exceptionType   : Type of exception
+        exceptionObject : Detailed exception information
+        traceBack       : Exception traceback stack information
+        detail          : 0 = no trace info, 1 = line/file only, 2 = full trace
+    """
+
+_guiLogHandler: NoneType
+
+def _guiResultHook(obj: Any) -> Any:
+    """In GUI mode, called by the command engine to stringify a result for display."""
+
+def _mayadisplayhook(*args: Any, **kwargs: Any) -> Any:
+    """Display hook function used to capture interpreter results"""
+
+def _overriden_import(*args: Any, **kwargs: Any) -> Any:
+    """Import hook function used to capture import statement"""
+
+def _prefixTraceStack(tbStack: Any, prefix: Any = ...) -> Any:
+    """prefix with '#', being sure to get internal newlines. do not prefix first line
+    as that will be added automatically.
+    """
+
+_shellLogHandler: StreamHandler
+_shellStdoutLogHandler: NoneType
+
 def abs_over(*args: Any, **kwargs: Any) -> Any:
     """abs"""
 
@@ -353,24 +424,87 @@ def zip_over(*args: Any, **kwargs: Any) -> Any:
     """zip"""
 
 class MayaGuiLogHandler(Handler):
-    def emit(self: Self, record: Any) -> Any: ...
+    __dict__: mappingproxy = ...
+    __doc__: str = ...
+    def __init__(self) -> Any: ...
+    __module__: str = ...
+    def emit(self, record: Any) -> Any: ...
 
 class Output:
-    def flush(self: Self, *args: Any, **kwargs: Any) -> Any:
+    __doc__: str = ...
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
+        """Abstract classes can override this to customize issubclass().
+
+        This is invoked early on by abc.ABCMeta.__subclasscheck__().
+        It should return True, False or NotImplemented.  If it returns
+        NotImplemented, the normal algorithm is used.  Otherwise, it
+        overrides the normal algorithm (and the outcome is cached).
+        """
+    def flush(self, *args: Any, **kwargs: Any) -> Any:
         """Flush no-op"""
     softspace: member_descriptor = ...
-    def write(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def write(self, *args: Any, **kwargs: Any) -> Any:
         """Write the given string"""
-    def writelines(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def writelines(self, *args: Any, **kwargs: Any) -> Any:
         """Write the given sequence"""
 
 class StringTable:
-    pass
+    def __delitem__(self, key: Any) -> Any:
+        """Delete self[key]."""
+    __doc__: str = ...
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __init__(self, args: Any, kwargs: Any) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __setitem__(self, key: Any, value: Any) -> Any:
+        """Set self[key] to value."""
 
 class range:
-    def count(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def __bool__(self) -> Any:
+        """self != 0"""
+    def __contains__(self, key: Any) -> Any:
+        """Return key in self."""
+    __doc__: str = ...
+    def __eq__(self, value: Any) -> Any:
+        """Return self==value."""
+    def __ge__(self, value: Any) -> Any:
+        """Return self>=value."""
+    def __getattribute__(self, name: Any) -> Any:
+        """Return getattr(self, name)."""
+    def __getitem__(self, key: Any) -> Any:
+        """Return self[key]."""
+    def __gt__(self, value: Any) -> Any:
+        """Return self>value."""
+    def __hash__(self) -> Any:
+        """Return hash(self)."""
+    def __iter__(self) -> Any:
+        """Implement iter(self)."""
+    def __le__(self, value: Any) -> Any:
+        """Return self<=value."""
+    def __len__(self) -> Any:
+        """Return len(self)."""
+    def __lt__(self, value: Any) -> Any:
+        """Return self<value."""
+    def __ne__(self, value: Any) -> Any:
+        """Return self!=value."""
+    def __new__(self, args: Any, kwargs: Any) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+    def __reduce__(self, *args: Any, **kwargs: Any) -> Any: ...
+    def __repr__(self) -> Any:
+        """Return repr(self)."""
+    def __reversed__(self, *args: Any, **kwargs: Any) -> Any:
+        """Return a reverse iterator."""
+    def count(self, *args: Any, **kwargs: Any) -> Any:
         """rangeobject.count(value) -> integer -- return number of occurrences of value"""
-    def index(self: Self, *args: Any, **kwargs: Any) -> Any:
+    def index(self, *args: Any, **kwargs: Any) -> Any:
         """rangeobject.index(value) -> integer -- return index of value.
         Raise ValueError if the value is not present.
         """

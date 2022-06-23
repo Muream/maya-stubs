@@ -69,10 +69,6 @@ def generate_generic_stub(module: ModuleInfo) -> str:
     for name, member in inspect.getmembers(module):
         stub_member = None
 
-        if name.startswith("_"):
-            # ignore private members
-            continue
-
         if inspect.ismodule(member):
             # Ignore modules
             continue
@@ -89,9 +85,6 @@ def generate_generic_stub(module: ModuleInfo) -> str:
             content.append(stub_member.stub)
 
     for name, cls in get_classes(module):
-        if name.startswith("_"):
-            # ignore private members
-            continue
         if name in ["type", "object"]:
             continue
 
