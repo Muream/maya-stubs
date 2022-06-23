@@ -24,7 +24,7 @@ def _args_from_help(synopsis: str) -> List[Variable]:
         arguments = []
 
         # https://regex101.com/r/9595nC/1
-        header_regex = r"Synopsis: (?P<name>\w+)( \[flags\] ?(?P<implicit_args>.*))?"
+        header_regex = r"Synopsis: (?P<name>\w+)( \[flags\] ?(?P<positional_args>.*))?"
 
         # https://regex101.com/r/bBZoCh/3
         flag_regex = (
@@ -40,32 +40,37 @@ def _args_from_help(synopsis: str) -> List[Variable]:
 
             match_header = re.match(header_regex, line)
             if match_header:
-                implicit_args = match_header["implicit_args"]
+                positional_args = match_header["positional_args"]
 
-                if not implicit_args:
+                if not positional_args:
                     continue
 
-                implicit_args = implicit_args.strip()
+                positional_args = positional_args.strip()
 
-                if "..." in implicit_args:
-                    # the type is a list. Eg [String...]
-                    implicit_args = implicit_args[1:-1].replace("...", "")
-                    list_type = mel_to_python_type(implicit_args)
+                add_positional_arguments_separator = False
+                if "..." in positional_args:
+                    # the type is a list. Eg: [String...]
+                    positional_args = positional_args[1:-1].replace("...", "")
+                    list_type = mel_to_python_type(positional_args)
                     arg_type = f"List[{list_type}]"
                     arg_name = "*args"
-                elif implicit_args.count(" ") > 0:
+                elif positional_args.count(" ") > 0:
                     # the type is a tuple
-                    implicit_args = implicit_args.replace("[", "").replace("]", "")
-                    tuple_types = map(mel_to_python_type, implicit_args.split())
+                    positional_args = positional_args.replace("[", "").replace("]", "")
+                    tuple_types = map(mel_to_python_type, positional_args.split())
                     arg_type = f"Tuple[{', '.join(tuple_types)}]"
                     arg_name = "*args"
                 else:
                     # the type is a basic type
-                    arg_type = mel_to_python_type(implicit_args)
+                    arg_type = mel_to_python_type(positional_args)
                     arg_name = "arg0"
+                    add_positional_arguments_separator = True
 
                 argument = Variable(arg_name, arg_type)
                 arguments.append(argument)
+
+                if add_positional_arguments_separator:
+                    arguments.extend(("/"))
 
                 continue
 
