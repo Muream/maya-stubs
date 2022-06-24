@@ -110,8 +110,6 @@ class MDagPath:
         """Returns true if the DAG Node at the end of the path is visible."""
     def length(self) -> int:
         """Returns the number of nodes on the path, not including the DAG's root node."""
-    def matchTransform(self, *args: Any, **kwargs: Any) -> Any:
-        """Do some new stuff."""
     def node(self) -> MObject:
         """Returns the DAG node at the end of the path."""
     def numberOfShapesDirectlyBelow(self) -> int:
@@ -142,6 +140,7 @@ class MFnBase:
 class MFnDagNode(MFnDependencyNode):
     def fullPathName(self) -> str:
         """Returns the full path of the attached object, from the root of the DAG on down."""
+    def transformationMatrix(self) -> MMatrix: ...
 
 class MTransformationMatrix:
     @overload
@@ -151,3 +150,7 @@ class MTransformationMatrix:
         """Returns the transform's rotation as an MEulerRotation or MQuaternion."""
     def translation(self, space: MSpace) -> MVector:
         """Returns the transformation's translation component as a vector."""
+
+class MFnTransform(MFnDagNode):
+    def translation(self, space: MSpace) -> MVector: ...
+    def setTranslation(self, trans: MVector, space: MSpace) -> Self: ...

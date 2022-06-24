@@ -436,14 +436,6 @@ class Output:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def flush(self, *args: Any, **kwargs: Any) -> Any:
         """Flush no-op"""
     softspace: member_descriptor = ...

@@ -292,14 +292,6 @@ class MClearOperation(MRenderOperation):
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def clearColor(self, *args: Any, **kwargs: Any) -> Any:
         """clearColor() -> [float, float, float, float]
 
@@ -1593,14 +1585,6 @@ class MGeometryIndexMapping:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def component(self, *args: Any, **kwargs: Any) -> Any:
         """component(int) -> MObject
 
@@ -1635,14 +1619,6 @@ class MGeometryRequirements:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addIndexingRequirement(self, *args: Any, **kwargs: Any) -> Any:
         """addIndexingRequirement(MIndexBufferDescriptor) -> self
 
@@ -1666,14 +1642,6 @@ class MGeometryRequirements:
 
 class MGeometryUtilities:
     __doc__: str = ...
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def acquireReferenceGeometry(self, *args: Any, **kwargs: Any) -> Any:
         """acquireReferenceGeometry(shape, requirements) -> MGeometry
 
@@ -1877,14 +1845,6 @@ class MIndexBufferDescriptor:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def component(*args: Any, **kwargs: Any) -> Any:
         """The component associated with the index buffer."""
@@ -2287,14 +2247,6 @@ class MPresentTarget(MRenderOperation):
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def presentDepth(self, *args: Any, **kwargs: Any) -> Any:
         """presentDepth() -> bool
 
@@ -3735,14 +3687,6 @@ class MRenderItem:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def allowIsolateSelectCopy(self, *args: Any, **kwargs: Any) -> Any:
         """allowIsolateSelectCopy() -> bool
 
@@ -4182,14 +4126,6 @@ class MRenderItemList:
         """Return len(self)."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def append(self, *args: Any, **kwargs: Any) -> Any:
         """append(MVertexBufferDescriptor) -> bool
 
@@ -6170,14 +6106,6 @@ class MSwatchRenderBase:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def cancelCurrentSwatchRender(self, *args: Any, **kwargs: Any) -> Any:
         """cancelCurrentSwatchRender() -> None
 
@@ -6493,14 +6421,6 @@ class MTextureManager:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def acquireDepthTexture(self, *args: Any, **kwargs: Any) -> Any:
         """acquireDepthTexture(textureName, image, generateMipMaps=True, normalizationDesc=None) -> MTexture
         acquireDepthTexture(textureName, pixelData, width, height, generateMipMaps=True, normalizationDesc=None) -> MTexture
@@ -7879,14 +7799,6 @@ class MVertexBufferArray:
         """Return len(self)."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def append(self, *args: Any, **kwargs: Any) -> Any:
         """append(MVertexBuffer, name) -> self
 

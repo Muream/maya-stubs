@@ -1,8 +1,10 @@
 import ast
 import importlib
 import logging
+import shutil
 import traceback
 from copy import deepcopy
+from pathlib import Path
 from pkgutil import ModuleInfo, walk_packages
 
 import black
@@ -122,6 +124,10 @@ def ignore_module(module: ModuleInfo):
 @click.command()
 def generate_stubs() -> None:
     logger.info("Generating Stubs")
+
+    maya_stubs_path = Path() / "maya-stubs"
+    if maya_stubs_path.exists():
+        shutil.rmtree(maya_stubs_path)
 
     whitelist = [
         # OpenMaya 1.0

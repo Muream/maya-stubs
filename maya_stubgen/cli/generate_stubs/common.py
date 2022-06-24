@@ -75,9 +75,18 @@ class Class(StubItem):
         else:
             parent_members = []
 
+        ignored_members = [
+            "__subclasshook__",
+            "__subclasscheck__",
+            "__init_subclass__",
+        ]
+
         for member_name, member in inspect.getmembers(obj):
+            if member_name in ignored_members:
+                continue
 
             is_inherited = id(member) in parent_members
+
             if is_inherited:
                 continue
 

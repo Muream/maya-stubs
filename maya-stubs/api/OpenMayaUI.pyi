@@ -942,14 +942,6 @@ class MCursor:
         """Return self!=value."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     kCrossHairCursor: MCursor = ...
     kDefaultCursor: MCursor = ...
     kDoubleCrossHairCursor: MCursor = ...
@@ -2334,12 +2326,6 @@ class MHWShaderSwatchGenerator(MSwatchRenderBase):
     __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
     def createObj(self, *args: Any, **kwargs: Any) -> Any:
@@ -2616,14 +2602,6 @@ class MMaterialArray:
         """Return len(self)."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def append(self, *args: Any, **kwargs: Any) -> Any:
         """append(element) -> self
 
@@ -5439,12 +5417,6 @@ class MPxToolCommand(MPxCommand):
     __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
     def cancel(self, *args: Any, **kwargs: Any) -> Any:

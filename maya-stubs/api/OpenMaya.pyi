@@ -33,14 +33,6 @@ class MAngle:
         """Return repr(self)."""
     def __str__(self) -> Any:
         """Return str(self)."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def asAngMinutes(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the angular value, converted to minutes of arc."""
     def asAngSeconds(self, *args: Any, **kwargs: Any) -> Any:
@@ -88,14 +80,6 @@ class MArgParser:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def commandArgumentBool(self, *args: Any, **kwargs: Any) -> Any:
         """commandArgumentBool(argIndex) -> bool
 
@@ -237,12 +221,6 @@ class MArgDatabase(MArgParser):
 
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
     def commandArgumentMSelectionList(self, *args: Any, **kwargs: Any) -> Any:
@@ -754,14 +732,6 @@ class MAttributeSpecArray:
         """Set self[key] to value."""
     def __str__(self) -> Any:
         """Return str(self)."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
     def clear(self, *args: Any, **kwargs: Any) -> Any:
@@ -792,14 +762,6 @@ class MBoundingBox:
         """Return repr(self)."""
     def __str__(self) -> Any:
         """Return str(self)."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     @property
     def center(*args: Any, **kwargs: Any) -> Any:
         """Center point"""
@@ -900,14 +862,6 @@ class MCallbackIdArray:
         """Set self[key] to value."""
     def __str__(self) -> Any:
         """Return str(self)."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
     def clear(self, *args: Any, **kwargs: Any) -> Any:
@@ -1043,14 +997,6 @@ class MColor:
         """Set self[key] to value."""
     def __str__(self) -> Any:
         """Return str(self)."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __truediv__(self, value: Any) -> Any:
         """Return self/value."""
     @property
@@ -1122,14 +1068,6 @@ class MColorArray:
         """Set self[key] to value."""
     def __str__(self) -> Any:
         """Return str(self)."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
     def clear(self, *args: Any, **kwargs: Any) -> Any:
@@ -1361,14 +1299,6 @@ class MDGContext:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def copy(self, *args: Any, **kwargs: Any) -> Any:
         """copy(source) -> self
 
@@ -2325,14 +2255,6 @@ class MDagPathArray:
         """Set self[key] to value."""
     def __str__(self) -> Any:
         """Return str(self)."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
     def clear(self, *args: Any, **kwargs: Any) -> Any:
@@ -2359,14 +2281,6 @@ class MDataBlock:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def context(self, *args: Any, **kwargs: Any) -> Any:
         """context() -> MDGContext
 
@@ -2927,14 +2841,6 @@ class MDistance:
         """Return repr(self)."""
     def __str__(self) -> Any:
         """Return str(self)."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def asCentimeters(self, *args: Any, **kwargs: Any) -> Any:
         """Return the distance value, converted to centimeters."""
     def asFeet(self, *args: Any, **kwargs: Any) -> Any:
@@ -3018,14 +2924,6 @@ class MDoubleArray:
         """Set self[key] to value."""
     def __str__(self) -> Any:
         """Return str(self)."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
     def clear(self, *args: Any, **kwargs: Any) -> Any:
@@ -3577,14 +3475,6 @@ class MFloatArray:
         """Set self[key] to value."""
     def __str__(self) -> Any:
         """Return str(self)."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
     def clear(self, *args: Any, **kwargs: Any) -> Any:
@@ -3804,14 +3694,6 @@ class MFloatPointArray:
         """Set self[key] to value."""
     def __str__(self) -> Any:
         """Return str(self)."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
     def clear(self, *args: Any, **kwargs: Any) -> Any:
@@ -3968,14 +3850,6 @@ class MFloatVectorArray:
         """Set self[key] to value."""
     def __str__(self) -> Any:
         """Return str(self)."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
     def clear(self, *args: Any, **kwargs: Any) -> Any:
@@ -5156,14 +5030,6 @@ class MFnBase:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def hasObj(self, type: int | MObject) -> bool:
         """Returns True if the function set is compatible with the specified Maya object."""
     def object(self) -> MObject:
@@ -5178,12 +5044,6 @@ class MFnAttribute(MFnBase):
 
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
     def accepts(self, *args: Any, **kwargs: Any) -> Any:
@@ -5364,12 +5224,6 @@ class MFnDependencyNode(MFnBase):
 
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
     def absoluteName(self, *args: Any, **kwargs: Any) -> Any:
@@ -5750,14 +5604,6 @@ class MFnCamera(MFnDagNode):
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def aspectRatio(self, *args: Any, **kwargs: Any) -> Any:
         """aspectRatio() -> float
 
@@ -6343,12 +6189,6 @@ class MFnComponent(MFnBase):
 
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
     @property
@@ -6403,12 +6243,6 @@ class MFnData(MFnBase):
 
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
     kAny: int = ...
@@ -6515,14 +6349,6 @@ class MFnContainerNode(MFnDependencyNode):
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def clear(self, *args: Any, **kwargs: Any) -> Any:
         """clear()
 
@@ -10392,12 +10218,6 @@ class MFnPlugin(MFnBase):
 
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
     def apiVersion(self, *args: Any, **kwargs: Any) -> Any:
@@ -10585,14 +10405,6 @@ class MFnSet(MFnDependencyNode):
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addMember(self, *args: Any, **kwargs: Any) -> Any:
         """addMember( object ) -> self
 
@@ -10867,8 +10679,7 @@ class MFnTransform(MFnDagNode):
         """Sets the transform's shear."""
     def setTransformation(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's attribute values to represent the given transformation matrix."""
-    def setTranslation(self, *args: Any, **kwargs: Any) -> Any:
-        """Sets the transform's translation."""
+    def setTranslation(self, trans: MVector, space: MSpace) -> Self: ...
     def shear(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transform's shear components."""
     def shearBy(self, *args: Any, **kwargs: Any) -> Any:
@@ -10877,8 +10688,7 @@ class MFnTransform(MFnDagNode):
         """Returns the transformation matrix represented by this transform."""
     def translateBy(self, *args: Any, **kwargs: Any) -> Any:
         """Adds an MVector to the transform's translation."""
-    def translation(self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the transform's translation as an MVector."""
+    def translation(self, space: MSpace) -> MVector: ...
 
 class MFnTripleIndexedComponent(MFnComponent):
     __doc__: str = ...
@@ -11613,14 +11423,6 @@ class MImage:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def create(self, *args: Any, **kwargs: Any) -> Any:
         """create(width, height, channels=4, type=kByte) -> self
 
@@ -11845,14 +11647,6 @@ class MInt64Array:
         """Set self[key] to value."""
     def __str__(self) -> Any:
         """Return str(self)."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
     def clear(self, *args: Any, **kwargs: Any) -> Any:
@@ -11889,12 +11683,6 @@ class MIntArray:
         """Implement self*=value."""
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __init_subclass__(self, *args: Any, **kwargs: Any) -> Any:
-        """This method is called when a class is subclassed.
-
-        The default implementation does nothing. It may be
-        overridden to extend subclasses.
-        """
     def __len__(self) -> Any:
         """Return len(self)."""
     def __mul__(self, value: Any) -> Any:
@@ -13737,14 +13525,6 @@ class MItSurfaceCV:
         """Create and return a new object.  See help(type) for accurate signature."""
     def __next__(self) -> Any:
         """Implement next(self)."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def currentItem(self, *args: Any, **kwargs: Any) -> Any:
         """currentItem() -> MObject
 
@@ -14272,14 +14052,6 @@ class MMatrixArray:
         """Set self[key] to value."""
     def __str__(self) -> Any:
         """Return str(self)."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
     def clear(self, *args: Any, **kwargs: Any) -> Any:
@@ -15109,14 +14881,6 @@ class MObjectArray:
         """Set self[key] to value."""
     def __str__(self) -> Any:
         """Return str(self)."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
     def clear(self, *args: Any, **kwargs: Any) -> Any:
@@ -15549,14 +15313,6 @@ class MPlugArray:
         """Set self[key] to value."""
     def __str__(self) -> Any:
         """Return str(self)."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
     def clear(self, *args: Any, **kwargs: Any) -> Any:
@@ -15700,14 +15456,6 @@ class MPointArray:
         """Set self[key] to value."""
     def __str__(self) -> Any:
         """Return str(self)."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
     def clear(self, *args: Any, **kwargs: Any) -> Any:
@@ -15861,14 +15609,6 @@ class MPxCommand:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def appendToResult(self, *args: Any, **kwargs: Any) -> Any:
         """Append a value to the result to be returned by the command."""
     def clearResult(self, *args: Any, **kwargs: Any) -> Any:
@@ -17226,14 +16966,6 @@ class MQuaternion:
         """Return str(self)."""
     def __sub__(self, value: Any) -> Any:
         """Return self-value."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def asAxisAngle(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the rotation as a tuple containing an axis vector and an angle in radians about that axis."""
     def asEulerRotation(self, *args: Any, **kwargs: Any) -> Any:
@@ -18078,14 +17810,6 @@ class MSyntax:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addArg(self, *args: Any, **kwargs: Any) -> Any:
         """Add a command argument."""
     def addFlag(self, *args: Any, **kwargs: Any) -> Any:
@@ -18184,14 +17908,6 @@ class MTime:
         """Return str(self)."""
     def __sub__(self, value: Any) -> Any:
         """Return self-value."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def __truediv__(self, value: Any) -> Any:
         """Return self/value."""
     def asUnits(self, *args: Any, **kwargs: Any) -> Any:
@@ -18307,14 +18023,6 @@ class MTimeArray:
         """Set self[key] to value."""
     def __str__(self) -> Any:
         """Return str(self)."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
     def clear(self, *args: Any, **kwargs: Any) -> Any:
@@ -18565,14 +18273,6 @@ class MURI:
         """Return repr(self)."""
     def __str__(self) -> Any:
         """Return str(self)."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def addQueryItem(self, *args: Any, **kwargs: Any) -> Any:
         """addQueryItem(key, value) -> self
 
@@ -18797,14 +18497,6 @@ class MUint64Array:
         """Set self[key] to value."""
     def __str__(self) -> Any:
         """Return str(self)."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
     def clear(self, *args: Any, **kwargs: Any) -> Any:
@@ -18855,14 +18547,6 @@ class MUintArray:
         """Set self[key] to value."""
     def __str__(self) -> Any:
         """Return str(self)."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
     def clear(self, *args: Any, **kwargs: Any) -> Any:
@@ -18996,14 +18680,6 @@ class MUuid:
         """Return repr(self)."""
     def __str__(self) -> Any:
         """Return str(self)."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def asString(self, *args: Any, **kwargs: Any) -> Any:
         """asString() -> string
 
@@ -19172,14 +18848,6 @@ class MVectorArray:
         """Set self[key] to value."""
     def __str__(self) -> Any:
         """Return str(self)."""
-    def __subclasshook__(self, *args: Any, **kwargs: Any) -> Any:
-        """Abstract classes can override this to customize issubclass().
-
-        This is invoked early on by abc.ABCMeta.__subclasscheck__().
-        It should return True, False or NotImplemented.  If it returns
-        NotImplemented, the normal algorithm is used.  Otherwise, it
-        overrides the normal algorithm (and the outcome is cached).
-        """
     def append(self, *args: Any, **kwargs: Any) -> Any:
         """Add a value to the end of the array."""
     def clear(self, *args: Any, **kwargs: Any) -> Any:
