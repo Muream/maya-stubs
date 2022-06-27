@@ -141,7 +141,29 @@ def mel_to_python_type(type: str) -> str:
     return type_map.get(type, "Incomplete")
 
 
+def load_plugins() -> None:
+    """Load plugins that register maya commands."""
+    logger.debug("Loading plugins that register maya commands")
+
+    plugins = ["poseInterpolator.mll", "invertShape.mll"]
+
+    for plugin in plugins:
+        if not cmds.pluginInfo(plugin, query=True, loaded=True):
+            try:
+                cmds.loadPlugin(plugin)
+            except RuntimeError as exc:
+                logger.warning(exc)
+
+
 def generate_cmds_stubs() -> str:
+    """Generate stubs for maya.cmds
+
+    Returns:
+        stub source for maya.cmds
+    """
+
+    load_plugins()
+
     lines = []
     for func, _ in cmds_functions():
         try:
