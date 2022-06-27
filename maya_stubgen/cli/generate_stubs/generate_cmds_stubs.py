@@ -166,6 +166,9 @@ def generate_cmds_stubs() -> str:
 
     lines = []
     for func, _ in cmds_functions():
+        if func[0].isupper():
+            continue
+
         try:
             help_ = cmds.help(func).strip("\n")
         except RuntimeError:
