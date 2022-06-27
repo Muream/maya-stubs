@@ -154,3 +154,16 @@ class MTransformationMatrix:
 class MFnTransform(MFnDagNode):
     def translation(self, space: MSpace) -> MVector: ...
     def setTranslation(self, trans: MVector, space: MSpace) -> Self: ...
+    @overload
+    def rotation(
+        self,
+        space: MSpace = ...,
+        asQuaternion: Literal[True] = ...,
+    ) -> MQuaternion: ...
+    @overload
+    def rotation(
+        self,
+        space: MSpace = ...,
+        asQuaternion: Literal[False] = ...,
+    ) -> MEulerRotation: ...
+    def setRotation(self, rot: MEulerRotation | MQuaternion, space: MSpace) -> Self: ...
