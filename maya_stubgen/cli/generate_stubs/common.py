@@ -76,7 +76,10 @@ class Class(StubItem):
             parent_members = []
 
         ignored_members = [
+            # These members somehow sometime share their id with their `super`
+            # but sometimes don't
             "__subclasshook__",
+            "__dict__",
             "__subclasscheck__",
             "__init_subclass__",
         ]

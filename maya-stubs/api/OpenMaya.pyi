@@ -5585,11 +5585,7 @@ class MFnDagNode(MFnDependencyNode):
 
         Attaches the function set to the specified node or DAG path.
         """
-    def transformationMatrix(self, *args: Any, **kwargs: Any) -> Any:
-        """transformationMatrix() -> MMatrix
-
-        Returns the object space transformation matrix for this DAG node.
-        """
+    def transformationMatrix(self) -> MMatrix: ...
     @property
     def useObjectColor(*args: Any, **kwargs: Any) -> Any:
         """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
@@ -10639,8 +10635,10 @@ class MFnTransform(MFnDagNode):
         """Returns the transform's rotate pivot."""
     def rotatePivotTranslation(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotate pivot translation."""
-    def rotation(self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the transform's rotation as an MEulerRotation or MQuaternion."""
+    @overload
+    def rotation(self, space: MSpace = ..., asQuaternion: Literal[True] = ...) -> MQuaternion: ...
+    @overload
+    def rotation(self, space: MSpace = ..., asQuaternion: Literal[False] = ...) -> MEulerRotation: ...
     def rotationComponents(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotation as the individual components of an MEulerRotation or MQuaternion."""
     def rotationOrder(self, *args: Any, **kwargs: Any) -> Any:
@@ -10663,8 +10661,7 @@ class MFnTransform(MFnDagNode):
         """Sets the transform's rotate pivot."""
     def setRotatePivotTranslation(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotate pivot translation."""
-    def setRotation(self, *args: Any, **kwargs: Any) -> Any:
-        """Sets the transform's rotation using an MEulerRotation or MQuaternion."""
+    def setRotation(self, rot: MEulerRotation | MQuaternion, space: MSpace) -> Self: ...
     def setRotationComponents(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation using the individual components of an MEulerRotation or MQuaternion."""
     def setRotationOrder(self, *args: Any, **kwargs: Any) -> Any:

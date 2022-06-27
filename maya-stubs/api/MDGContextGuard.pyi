@@ -15,7 +15,6 @@ __spec__: ModuleSpec
 class MDGContextGuard:
     def _MDGContextGuard__save_state(self, new_current_context: Any) -> Any:
         """Save the state of the current evaluation context"""
-    __dict__: mappingproxy = ...
     __doc__: str = ...
     def __enter__(self) -> Any:
         """Begin the scope, the work is done in __init__"""
