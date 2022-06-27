@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "MayaPy: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "internalConsole",
+            "justMyCode": true,
+            "python": "${workspaceFolder}/mayapy.bat",
+            "purpose": [
+                "debug-test",
+                "debug-in-terminal"
+            ]
+        }
+    ]
+}
