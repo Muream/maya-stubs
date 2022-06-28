@@ -4,18 +4,41 @@ import logging
 import re
 from typing import *
 
+import bs4
+import requests
 from maya import cmds
 
-from .common import STUB_HEADER, Function, Variable
+from .common import STUB_HEADER, Docstring, Function, Variable
 
 logger = logging.getLogger(__name__)
+
+cmds_documentation_url = (
+    "https://help.autodesk.com/cloudhelp/2023/ENU/Maya-Tech-Docs/CommandsPython/{}.html"
+)
 
 
 def cmds_functions() -> List[Callable]:
     return inspect.getmembers(cmds, callable)
 
 
-def _args_from_help(synopsis: str) -> List[Variable]:
+def function_from_synopsis(command: str) -> Function:
+    """Returns a `Function` Object from the command's synopsis
+
+    Args:
+        command: the command to generate the Function from
+
+    Raises:
+        NameError: if the command doesn't exist or any other reason why
+            `cmds.help` might fail.
+
+    Returns:
+        The Function.
+    """
+    try:
+        synopsis = cmds.help(command)
+    except RuntimeError as exc:
+        raise NameError(exc) from exc
+
     if "No Flags" in synopsis:
         arguments = []
     elif "Quick help is not available" in synopsis:
@@ -108,7 +131,45 @@ def _args_from_help(synopsis: str) -> List[Variable]:
                     arguments.append(argument)
                 continue
 
-    return arguments
+    return Function(command, arguments, docstring=synopsis)
+
+
+def function_from_documentation(command: str) -> Function:
+    """Returns a `Function` object from the command's HTML documentation
+
+    Args:
+        command: the name of the command
+
+    Returns:
+        the Function with all the relevant data parsed from the doc.
+    Raises:
+        requests.exceptions.HTTPError: If there's any error with loading the page.
+    """
+    command_url = cmds_documentation_url.format(command)
+
+    response = requests.get(command_url)
+    response.raise_for_status()
+
+    soup = bs4.BeautifulSoup(response.content, "html.parser")
+
+    arguments = []
+
+    # The docstring is the only piece of text in the body that has no tag.
+    body_text = [t.strip() for t in soup.body.findAll(text=True, recursive=False)]
+    # filter the "," and "", that we get with the previous line.
+    body_text = [t for t in body_text if len(t) > 1]
+    description = "".join(body_text)
+
+    docstring = Docstring(description)
+
+    # for title in soup.find_all("h2"):
+    #     title: bs4.element.Tag
+    #     if title.text == "Synopsis":
+    #         while True:
+    #             tag = title.find_next()
+    #         pass
+
+    return Function(command, arguments, docstring)
 
 
 def mel_to_python_type(type: str) -> str:
@@ -165,18 +226,21 @@ def generate_cmds_stubs() -> str:
     load_plugins()
 
     lines = []
-    for func, _ in cmds_functions():
-        if func[0].isupper():
+    for command, _ in cmds_functions():
+        if command != "createNode":
+            continue
+
+        if command[0].isupper():
             continue
 
         try:
-            help_ = cmds.help(func).strip("\n")
-        except RuntimeError:
-            help_ = ""
+            function = function_from_documentation(command)
+        except requests.exceptions.HTTPError:
+            try:
+                function = function_from_synopsis(command)
+            except NameError:
+                function = Function(command, arguments=[])
 
-        args = _args_from_help(help_)
-
-        function = Function(func, arguments=args)
         lines.append(function.stub)
 
     return STUB_HEADER.format(imports="") + "\n".join(lines)

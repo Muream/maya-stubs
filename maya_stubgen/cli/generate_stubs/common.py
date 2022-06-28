@@ -169,12 +169,13 @@ class Variable(StubItem):
 class Function:
     name: str
     arguments: List[Variable] = field(default_factory=list)
-    docstring: Optional[str] = None
+    docstring: Optional[str | Docstring] = None
     return_type: Type = Any
     function_type: FunctionType = FunctionType.function
 
     def __post_init__(self):
-        self.docstring = self._process_docstring(self.docstring)
+        if isinstance(self.docstring, str):
+            self.docstring = self._process_docstring(self.docstring)
 
         if self.function_type is FunctionType.method:
             if len(self.arguments) == 0 or self.arguments[0].name != "self":
@@ -271,6 +272,51 @@ class Function:
         signature += ":"
 
         return signature
+
+
+@dataclass
+class Docstring:
+    short_description: str
+    long_description: Optional[str] = None
+    parameters: Optional[List[Variable]] = None
+    returns: Optional[str] = None
+    yields: Optional[str] = None
+    raises: Optional[str] = None
+
+    def __str__(self):
+        return self.stub()
+
+    def stub(self):
+        docstring = f'"""{self.short_description}'
+
+        if self.long_description:
+            docstring += f"\n\n{self.long_description}\n"
+
+        if self.parameters:
+            docstring += "\nArgs:\n"
+            for parameter in self.parameters:
+                docstring += f"    {parameter}"
+            docstring += "\n"
+
+        if self.returns:
+            docstring += "\nReturns:\n"
+            docstring += f"    {self.returns}\n"
+
+        if self.yields:
+            docstring += "\nYields:\n"
+            docstring += f"    {self.yields}\n"
+
+        if self.raises:
+            docstring += "\nRaises:\n"
+            docstring += f"    {self.raises}\n"
+
+        if self.raises:
+            docstring += "\nRaises:\n"
+            docstring += f"    {self.raises}\n"
+
+        docstring += '"""'
+
+        return docstring
 
 
 def get_stub_path(module: ModuleInfo, override=False) -> Path:

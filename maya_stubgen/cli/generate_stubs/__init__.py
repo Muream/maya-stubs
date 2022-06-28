@@ -130,24 +130,24 @@ def generate_stubs() -> None:
         shutil.rmtree(maya_stubs_path)
 
     whitelist = [
-        # OpenMaya 1.0
-        "maya.OpenMaya",
-        "maya.OpenMayaAnim",
-        "maya.OpenMayaFX",
-        "maya.OpenMayaMPx",
-        "maya.OpenMayaRender",
-        "maya.OpenMayaUI",
-        # OpenMaya 2.0
-        "maya.api.MDGContextGuard",
-        "maya.api.OpenMaya",
-        "maya.api.OpenMayaAnim",
-        "maya.api.OpenMayaRender",
-        "maya.api.OpenMayaUI",
-        # other
+        # # OpenMaya 1.0
+        # "maya.OpenMaya",
+        # "maya.OpenMayaAnim",
+        # "maya.OpenMayaFX",
+        # "maya.OpenMayaMPx",
+        # "maya.OpenMayaRender",
+        # "maya.OpenMayaUI",
+        # # OpenMaya 2.0
+        # "maya.api.MDGContextGuard",
+        # "maya.api.OpenMaya",
+        # "maya.api.OpenMayaAnim",
+        # "maya.api.OpenMayaRender",
+        # "maya.api.OpenMayaUI",
+        # # other
         "maya.cmds",
-        "maya.standalone",
-        "maya.utils",
-        "maya.mel",
+        # "maya.standalone",
+        # "maya.utils",
+        # "maya.mel",
     ]
 
     try:
