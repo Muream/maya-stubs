@@ -2,6 +2,18 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Mayapy: Generate Stubs",
+            "type": "python",
+            "request": "launch",
+            "module": "maya_stubgen",
+            "args": [
+                "generate-stubs"
+            ],
+            "console": "internalConsole",
+            "justMyCode": true,
+            "python": "${workspaceFolder}/mayapy.bat",
+        },
+        {
             "name": "MayaPy: Current File",
             "type": "python",
             "request": "launch",
@@ -13,6 +25,6 @@
                 "debug-test",
                 "debug-in-terminal"
             ]
-        }
+        },
     ]
 }

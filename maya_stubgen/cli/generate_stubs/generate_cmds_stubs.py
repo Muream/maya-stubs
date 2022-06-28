@@ -2,6 +2,8 @@ import inspect
 import keyword
 import logging
 import re
+from dataclasses import dataclass, field
+from enum import Enum
 from typing import *
 
 import bs4
@@ -17,8 +19,43 @@ cmds_documentation_url = (
 )
 
 
-def cmds_functions() -> List[Callable]:
-    return inspect.getmembers(cmds, callable)
+class Property(Enum):
+    create = "create"
+    query = "query"
+    edit = "edit"
+    multi = "multi"
+
+
+@dataclass
+class Flag(Variable):
+    short_name: Optional[str] = None
+    properties: List[Property] = field(default_factory=list)
+    description: str = ""
+
+    # A flag is always an argument
+    is_argument: bool = field(default=True, init=False)
+
+    def __post_init__(self) -> None:
+        super().__post_init__()
+        self.type = mel_to_python_type(self.type)
+
+
+@dataclass
+class ReturnValue:
+    type: Type = Any
+    description: str = ""
+
+    def __post_init__(self) -> None:
+        self.type = mel_to_python_type(self.type)
+
+    def __str__(self) -> str:
+        return self.stub()
+
+    def stub(self) -> str:
+        return str(self.type).replace("typing.", "")
+
+
+flag_name_re = r"(?P<long_name>\w+)\((?P<short_name>\w+)\)"
 
 
 def function_from_synopsis(command: str) -> Function:
@@ -146,13 +183,71 @@ def function_from_documentation(command: str) -> Function:
         requests.exceptions.HTTPError: If there's any error with loading the page.
     """
     command_url = cmds_documentation_url.format(command)
+    logger.debug("Scraping %s", command_url)
 
     response = requests.get(command_url)
     response.raise_for_status()
 
     soup = bs4.BeautifulSoup(response.content, "html.parser")
 
-    arguments = []
+    flags = []
+    return_value = ReturnValue("Any")
+    for title in soup.find_all("h2"):
+        title: bs4.element.Tag
+        if title.text == "Flags":
+            # All the flags are stored in the first table after the Flags H2 Title.
+            table = title.find_next("table")
+
+            # each link in the table corresponds to a flag name
+            flag_links = table.find_all("a")
+
+            for link in flag_links:
+                # We can now easily get the parent row of the link to get access
+                flag_data_row: bs4.element.Tag = link.find_parent("tr")
+                long_name = None
+                short_name = None
+                flag_type = None
+                properties = None
+                for i, child in enumerate(flag_data_row.findChildren("td")):
+                    if i == 0:
+                        # First column is the flag name
+                        name = child.text.strip()
+                        match = re.match(flag_name_re, name)
+                        if match:
+                            long_name = match["long_name"]
+                            short_name = match["short_name"]
+                    elif i == 1:
+                        # Second column is the flag Type
+                        flag_type = child.text.strip()
+                    elif i == 2:
+                        # Third column is the flag properties
+                        properties = [
+                            Property(img["alt"]) for img in child.find_all("img")
+                        ]
+                flag_description_row = flag_data_row.find_next_sibling("tr")
+                flag_description = flag_description_row.text.strip()
+
+                flag = Flag(
+                    name=long_name,
+                    type=flag_type,
+                    short_name=short_name,
+                    properties=properties,
+                    description=flag_description,
+                )
+                flags.append(flag)
+
+        if title.text == "Return value":
+            table: bs4.element.Tag = title.find_next("table")
+            return_type, return_description = [
+                t.text.strip() for t in table.find_all("td")
+            ]
+            return_value = ReturnValue(return_type, return_description)
+
+        if title.text == "Python examples":
+            examples = title.find_next("pre").text
+            examples = examples.replace(
+                "import maya.cmds as cmds", "from maya import cmds"
+            )
 
     # The docstring is the only piece of text in the body that has no tag.
     body_text = [t.strip() for t in soup.body.findAll(text=True, recursive=False)]
@@ -160,46 +255,46 @@ def function_from_documentation(command: str) -> Function:
     body_text = [t for t in body_text if len(t) > 1]
     description = "".join(body_text)
 
-    docstring = Docstring(description)
+    docstring = Docstring(
+        short_description=description,
+        parameters=flags,
+        returns=return_description,
+        examples=examples,
+    )
 
-    # for title in soup.find_all("h2"):
-    #     title: bs4.element.Tag
-    #     if title.text == "Synopsis":
-    #         while True:
-    #             tag = title.find_next()
-    #         pass
-
-    return Function(command, arguments, docstring)
+    return Function(command, flags, docstring, return_type=return_value)
 
 
-def mel_to_python_type(type: str) -> str:
+def mel_to_python_type(type_name: str) -> str:
     """Transform the given MEL type to a python type
 
     Notes:
         None is converted to bool as an unnamed argument in mel is equivalent to a bool
         on|off is converted to bool
     """
+    type_name = type_name.lower()
     type_map = {
         # str
-        "String": "str",
-        "Name": "str",
-        "Script": "Callable",
+        "string": "str",
+        "name": "str",
+        "script": "Callable",
         # float
-        "Float": "float",
-        "Length": "float",
-        "Angle": "float",
+        "float": "float",
+        "length": "float",
+        "angle": "float",
         # int
-        "Int": "int",
-        "Int64": "int",
-        "UnsignedInt": "int",
-        "Time": "int",
+        "int": "int",
+        "int64": "int",
+        "unsignedint": "int",
+        "time": "int",
         # bool
         "": "bool",
+        "boolean": "bool",
         None: "bool",
-        "None": "bool",
+        "none": "bool",
         "on|off": "bool",
     }
-    return type_map.get(type, "Incomplete")
+    return type_map.get(type_name, "Incomplete")
 
 
 def load_plugins() -> None:
@@ -226,9 +321,9 @@ def generate_cmds_stubs() -> str:
     load_plugins()
 
     lines = []
-    for command, _ in cmds_functions():
-        if command != "createNode":
-            continue
+    for command, _ in inspect.getmembers(cmds, callable):
+        # if command != "createNode":
+        #     continue
 
         if command[0].isupper():
             continue

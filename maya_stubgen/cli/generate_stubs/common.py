@@ -135,6 +135,7 @@ class Variable(StubItem):
     type: Type = Any
     value: Any = MISSING
     is_argument: bool = False
+    description: str = ""
 
     def __post_init__(self) -> None:
         if self.name == "self":
@@ -282,6 +283,34 @@ class Docstring:
     returns: Optional[str] = None
     yields: Optional[str] = None
     raises: Optional[str] = None
+    examples: Optional[str] = None
+
+    def __post_init__(self):
+        self.process_examples()
+
+    def set_returns(self, value):
+        self.returns = value
+
+    def set_examples(self, value: str):
+        self.examples = value
+        self.process_examples()
+
+    def process_examples(self):
+        if self.examples is None:
+            return
+
+        new_content = []
+        for line in self.examples.splitlines():
+            line = line.strip()
+
+            if not line:
+                continue
+
+            if not line.startswith(">>>"):
+                line = ">>> " + line
+            new_content.append(line)
+
+        self.examples = "\n".join(new_content)
 
     def __str__(self):
         return self.stub()
@@ -290,29 +319,38 @@ class Docstring:
         docstring = f'"""{self.short_description}'
 
         if self.long_description:
-            docstring += f"\n\n{self.long_description}\n"
+            docstring += f"\n\n{self.long_description}"
 
         if self.parameters:
-            docstring += "\nArgs:\n"
+            docstring += "\n\nArgs:"
             for parameter in self.parameters:
-                docstring += f"    {parameter}"
-            docstring += "\n"
+                description = parameter.description.replace("\n", " ")
+                docstring += f"\n    {parameter.name}: {description}"
 
         if self.returns:
-            docstring += "\nReturns:\n"
-            docstring += f"    {self.returns}\n"
+            docstring += "\n\nReturns:"
+            docstring += f"\n    {self.returns}"
 
         if self.yields:
-            docstring += "\nYields:\n"
-            docstring += f"    {self.yields}\n"
+            docstring += "\n\nYields:"
+            docstring += f"\n    {self.yields}"
 
         if self.raises:
-            docstring += "\nRaises:\n"
-            docstring += f"    {self.raises}\n"
+            docstring += "\n\nRaises:"
+            docstring += f"\n    {self.raises}"
 
         if self.raises:
-            docstring += "\nRaises:\n"
-            docstring += f"    {self.raises}\n"
+            docstring += "\n\nRaises:"
+            docstring += f"\n    {self.raises}"
+
+        if self.examples:
+            docstring += "\n\nExamples:"
+            for line in self.examples.splitlines():
+                docstring += f"\n    {line}"
+
+        if "\n" in docstring:
+            # If the docstring is a multiline, add one last line before closing it.
+            docstring += "\n"
 
         docstring += '"""'
 
