@@ -4,7 +4,6 @@ import click
 
 from ..utils import initialize_maya, uninitialize_maya
 from .generate_stubs import generate_stubs
-from .get_cmds_synopsis import get_cmds_synopsis
 
 logger = logging.getLogger("maya_stubgen")
 
@@ -32,4 +31,3 @@ def test_log():
 
 
 cli.add_command(generate_stubs)
-cli.add_command(get_cmds_synopsis)

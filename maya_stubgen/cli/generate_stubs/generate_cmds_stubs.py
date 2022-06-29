@@ -4,6 +4,7 @@ import logging
 import re
 from dataclasses import dataclass, field
 from enum import Enum
+from pathlib import Path
 from typing import *
 
 import bs4
@@ -71,10 +72,21 @@ def function_from_synopsis(command: str) -> Function:
     Returns:
         The Function.
     """
-    try:
-        synopsis = cmds.help(command)
-    except RuntimeError as exc:
-        raise NameError(exc) from exc
+    logger.debug("Parsing synopsis for: %s", command)
+
+    cache_page = Path() / ".cache" / "synopsis" / f"{command}.txt"
+    if not cache_page.exists():
+
+        try:
+            synopsis = cmds.help(command)
+        except RuntimeError as exc:
+            raise NameError(exc) from exc
+
+        cache_page.parent.mkdir(parents=True, exist_ok=True)
+        with cache_page.open("w", encoding="utf8") as f:
+            f.write(synopsis.strip())
+
+    synopsis = cache_page.read_text()
 
     if "No Flags" in synopsis:
         arguments = []
@@ -179,16 +191,21 @@ def function_from_documentation(command: str) -> Function:
 
     Returns:
         the Function with all the relevant data parsed from the doc.
-    Raises:
-        requests.exceptions.HTTPError: If there's any error with loading the page.
     """
-    command_url = cmds_documentation_url.format(command)
-    logger.debug("Scraping %s", command_url)
+    logger.debug("Scraping docs for: %s", command)
 
-    response = requests.get(command_url)
-    response.raise_for_status()
+    cache_page = Path() / ".cache" / "docs" / "maya" / "cmds" / f"{command}.html"
+    if not cache_page.exists():
+        command_url = cmds_documentation_url.format(command)
 
-    soup = bs4.BeautifulSoup(response.content, "html.parser")
+        response = requests.get(command_url)
+        response.raise_for_status()
+
+        cache_page.parent.mkdir(parents=True, exist_ok=True)
+        with cache_page.open("w", encoding="utf8") as f:
+            f.write(str(response.content))
+
+    soup = bs4.BeautifulSoup(cache_page.read_text(), "html.parser")
 
     flags = []
     return_value = ReturnValue("Any")
