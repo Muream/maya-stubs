@@ -20,7 +20,6 @@ mypy = { version = "*", python = "^3.7" }
 click = { version = "*", python = "^3.7" }
 furo = { version = "*", python = "^3.7" }
 requests = { version = "^2.28.0", python = "^3.7" }
-html2text = { version = "^2020.1.16", python = "^3.7" }
 
 [tool.pylint.messages_control]
 max-line-length = 88
