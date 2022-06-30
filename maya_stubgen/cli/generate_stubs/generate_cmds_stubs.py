@@ -8,6 +8,8 @@ from pathlib import Path
 from typing import *
 
 import bs4
+import cchardet
+import lxml
 import requests
 from maya import cmds
 
@@ -32,6 +34,10 @@ synopsis_flag_regex = re.compile(
     r"(?P<multi_use>\(multi-use\))?\s?"
     r"(\(Query Arg (?P<query_arg_mandatory>Mandatory|Optional)\))?"
 )
+
+#: Reusable request session to improve performance when
+#: getting pages from the same domain
+requests_session = requests.Session()
 
 
 class Property(Enum):
@@ -207,7 +213,7 @@ def function_from_documentation(command: str) -> Function:
     if not cache_page.exists():
         command_url = cmds_documentation_url.format(command)
 
-        response = requests.get(command_url)
+        response = requests_session.get(command_url)
         response.raise_for_status()
 
         cache_page.parent.mkdir(parents=True, exist_ok=True)
@@ -215,7 +221,7 @@ def function_from_documentation(command: str) -> Function:
             f.write(response.text)
 
     logger.debug("Documentation cache: %s", str(cache_page))
-    soup = bs4.BeautifulSoup(cache_page.read_text(), "html.parser")
+    soup = bs4.BeautifulSoup(cache_page.read_text(), "lxml")
 
     flags = []
     return_value = ReturnValue("Any")
