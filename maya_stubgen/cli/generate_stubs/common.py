@@ -346,8 +346,8 @@ class Docstring:
             if not line:
                 continue
 
-            # if not line.startswith(">>>"):
-            #     line = ">>> " + line
+            if not line.startswith(">>>"):
+                line = ">>> " + line
             new_content.append(line)
 
         self.examples = "\n".join(new_content)
