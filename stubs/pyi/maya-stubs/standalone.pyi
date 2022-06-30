@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from typing import *
 from typing_extensions import Self
 
@@ -5,13 +7,6 @@ if TYPE_CHECKING:
     from _typeshed import Incomplete
 else:
     Incomplete = Any
-
-__doc__: NoneType
-__file__: str
-__loader__: ExtensionFileLoader
-__name__: str
-__package__: str
-__spec__: ModuleSpec
 
 def initialize(*args: Any, **kwargs: Any) -> Any:
     """This function initializes Maya within a standalone Python interpreter

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from typing import *
 from typing_extensions import Self
 
@@ -5,16 +7,6 @@ if TYPE_CHECKING:
     from _typeshed import Incomplete
 else:
     Incomplete = Any
-
-__builtins__: dict
-__cached__: str
-__doc__: NoneType
-__file__: str
-__loader__: SourceFileLoader
-__name__: str
-__package__: str
-__path__: list
-__spec__: ModuleSpec
 
 def createMelWrapper(fn: Any, types: Any = ..., retType: Any = ..., ignoreDefaultArgs: Any = ..., returnCmd: Any = ..., outDir: Any = ...) -> Any:
     """@brief Create a wrapper mel proc for a python function
@@ -61,7 +53,6 @@ def eval(*args: Any, **kwargs: Any) -> Any:
     """
 
 class zip:
-    __doc__: str = ...
     def __getattribute__(self, name: Any) -> Any:
         """Return getattr(self, name)."""
     def __iter__(self) -> Any:

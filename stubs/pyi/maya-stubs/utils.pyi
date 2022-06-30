@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from typing import *
 from typing_extensions import Self
 
@@ -5,78 +7,8 @@ if TYPE_CHECKING:
     from _typeshed import Incomplete
 else:
     Incomplete = Any
+
 from logging import Handler
-
-__cached__: str
-__doc__: str
-__file__: str
-__loader__: SourceFileLoader
-__name__: str
-__package__: str
-__spec__: ModuleSpec
-
-def _decodeStack(tbStack: Any) -> Any: ...
-def _dumpCurrentFrames() -> Any: ...
-def _fixConsoleLineNumbers(tbStack: Any) -> Any: ...
-def formatGuiException(exceptionType: Any, exceptionObject: Any, traceBack: Any, detail: Any = ...) -> Any:
-    """Format a trace stack into a string.
-
-        exceptionType   : Type of exception
-        exceptionObject : Detailed exception information
-        traceBack       : Exception traceback stack information
-        detail          : 0 = no trace info, 1 = line/file only, 2 = full trace
-
-    To perform an action when an exception occurs without modifying Maya's
-    default printing of exceptions, do the following::
-
-        import maya.utils
-        def myExceptCB(etype, value, tb, detail=2):
-            # do something here...
-            return maya.utils._formatGuiException(etype, value, tb, detail)
-        maya.utils.formatGuiException = myExceptCB
-    """
-
-def formatGuiResult(obj: Any) -> Any:
-    """Gets a string representation of a result object.
-
-    To perform an action when a result is about to returned to the script editor
-    without modifying Maya's default printing of results, do the following:
-
-        import maya.utils
-        def myResultCallback(obj):
-            # do something here...
-            return maya.utils._formatGuiResult(obj)
-        maya.utils.formatGuiResult = myResultCallback
-    """
-
-def _guiExceptHook(exceptionType: Any, exceptionObject: Any, traceBack: Any, detail: Any = ...) -> Any:
-    """Whenever Maya receives an error from the command engine it comes into here
-    to format the message for display.
-    Formatting is performed by formatGuiException.
-        exceptionType   : Type of exception
-        exceptionObject : Detailed exception information
-        traceBack       : Exception traceback stack information
-        detail          : 0 = no trace info, 1 = line/file only, 2 = full trace
-    """
-
-_guiLogHandler: NoneType
-
-def _guiResultHook(obj: Any) -> Any:
-    """In GUI mode, called by the command engine to stringify a result for display."""
-
-def _mayadisplayhook(*args: Any, **kwargs: Any) -> Any:
-    """Display hook function used to capture interpreter results"""
-
-def _overriden_import(*args: Any, **kwargs: Any) -> Any:
-    """Import hook function used to capture import statement"""
-
-def _prefixTraceStack(tbStack: Any, prefix: Any = ...) -> Any:
-    """prefix with '#', being sure to get internal newlines. do not prefix first line
-    as that will be added automatically.
-    """
-
-_shellLogHandler: StreamHandler
-_shellStdoutLogHandler: NoneType
 
 def abs_over(*args: Any, **kwargs: Any) -> Any:
     """abs"""
@@ -428,13 +360,10 @@ def zip_over(*args: Any, **kwargs: Any) -> Any:
     """zip"""
 
 class MayaGuiLogHandler(Handler):
-    __doc__: str = ...
     def __init__(self) -> Any: ...
-    __module__: str = ...
     def emit(self, record: Any) -> Any: ...
 
 class Output:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -450,7 +379,6 @@ class Output:
 class StringTable:
     def __delitem__(self, key: Any) -> Any:
         """Delete self[key]."""
-    __doc__: str = ...
     def __getitem__(self, key: Any) -> Any:
         """Return self[key]."""
     def __init__(self, args: Any, kwargs: Any) -> Any:
@@ -467,7 +395,6 @@ class range:
         """self != 0"""
     def __contains__(self, key: Any) -> Any:
         """Return key in self."""
-    __doc__: str = ...
     def __eq__(self, value: Any) -> Any:
         """Return self==value."""
     def __ge__(self, value: Any) -> Any:
@@ -478,8 +405,6 @@ class range:
         """Return self[key]."""
     def __gt__(self, value: Any) -> Any:
         """Return self>value."""
-    def __hash__(self) -> Any:
-        """Return hash(self)."""
     def __iter__(self) -> Any:
         """Implement iter(self)."""
     def __le__(self, value: Any) -> Any:

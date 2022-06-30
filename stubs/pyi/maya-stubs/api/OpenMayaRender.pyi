@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from typing import *
 from typing_extensions import Self
 
@@ -6,21 +8,12 @@ if TYPE_CHECKING:
 else:
     Incomplete = Any
 
-__builtins__: dict
-__cached__: str
-__doc__: NoneType
-__file__: str
-__loader__: SourceFileLoader
-__name__: str
-__package__: str
-__spec__: ModuleSpec
 key: str
 ourdict: dict
 py2dict: dict
 val: str
 
 class MAttributeParameterMapping:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -58,7 +51,6 @@ class MAttributeParameterMapping:
         """
 
 class MAttributeParameterMappingList:
-    __doc__: str = ...
     def __getitem__(self, key: Any) -> Any:
         """Return self[key]."""
     def __init__(self, args: Any, kwargs: Any) -> Any:
@@ -91,7 +83,6 @@ class MAttributeParameterMappingList:
         """
 
 class MBlendState:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -138,7 +129,6 @@ class MBlendState:
         """
 
 class MBlendStateDesc:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -180,7 +170,6 @@ class MBlendStateDesc:
         """An array of 8 MTargetBlendDesc, one for each target"""
 
 class MCameraOverride:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -253,7 +242,6 @@ class MCameraOverride:
         """Camera view matrix override"""
 
 class MRenderOperation:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -291,7 +279,6 @@ class MRenderOperation:
         """
 
 class MClearOperation(MRenderOperation):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -369,7 +356,6 @@ class MClearOperation(MRenderOperation):
         """
 
 class MColorManagementUtilities:
-    __doc__: str = ...
     def getColorTransformCacheIdForInputSpace(self, *args: Any, **kwargs: Any) -> Any:
         """getColorTransformCacheIdForInputSpace(inputSpaceName) -> transformId
 
@@ -437,7 +423,6 @@ class MColorManagementUtilities:
         """
 
 class MComponentDataIndexing:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -460,7 +445,6 @@ class MComponentDataIndexing:
         """
 
 class MComponentDataIndexingList:
-    __doc__: str = ...
     def __getitem__(self, key: Any) -> Any:
         """Return self[key]."""
     def __init__(self, args: Any, kwargs: Any) -> Any:
@@ -486,7 +470,6 @@ class MComponentDataIndexingList:
         """
 
 class MDepthNormalizationDescription:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -517,7 +500,6 @@ class MDepthNormalizationDescription:
         """Near clip plane of a camera"""
 
 class MDepthStencilState:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -544,7 +526,6 @@ class MDepthStencilState:
         """
 
 class MDepthStencilStateDesc:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -610,7 +591,6 @@ class MDepthStencilStateDesc:
         """Sets a bitwise stencil buffer write mask, default 0xff"""
 
 class MFrameContext:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -973,7 +953,6 @@ class MFrameContext:
         """
 
 class MDrawContext(MFrameContext):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -1064,7 +1043,6 @@ class MDrawContext(MFrameContext):
         """
 
 class MDrawRegistry:
-    __doc__: str = ...
     def deregisterComponentConverter(self, *args: Any, **kwargs: Any) -> Any:
         """deregisterComponentConverter(renderItemName) -> None
 
@@ -1187,7 +1165,6 @@ class MDrawRegistry:
         """
 
 class MFragmentManager:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -1370,7 +1347,6 @@ class MFragmentManager:
         """
 
 class MGeometry:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -1528,7 +1504,6 @@ class MGeometry:
         """
 
 class MGeometryExtractor:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -1584,7 +1559,6 @@ class MGeometryExtractor:
         """
 
 class MGeometryIndexMapping:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -1618,7 +1592,6 @@ class MGeometryIndexMapping:
         """
 
 class MGeometryRequirements:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -1645,7 +1618,6 @@ class MGeometryRequirements:
         """
 
 class MGeometryUtilities:
-    __doc__: str = ...
     def acquireReferenceGeometry(self, *args: Any, **kwargs: Any) -> Any:
         """acquireReferenceGeometry(shape, requirements) -> MGeometry
 
@@ -1701,7 +1673,6 @@ class MGeometryUtilities:
         """
 
 class MHUDRender(MRenderOperation):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -1729,7 +1700,6 @@ class MHUDRender(MRenderOperation):
         """
 
 class MIndexBuffer:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -1844,7 +1814,6 @@ class MIndexBuffer:
         """
 
 class MIndexBufferDescriptor:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -1946,7 +1915,6 @@ class MIndexBufferDescriptor:
         """
 
 class MIndexBufferDescriptorList:
-    __doc__: str = ...
     def __getitem__(self, key: Any) -> Any:
         """Return self[key]."""
     def __init__(self, args: Any, kwargs: Any) -> Any:
@@ -1972,7 +1940,6 @@ class MIndexBufferDescriptorList:
         """
 
 class MInitContext:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -1991,7 +1958,6 @@ class MInitContext:
         """The Maya shading node this override is used for"""
 
 class MInitFeedback:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -2004,7 +1970,6 @@ class MInitFeedback:
         """Optional user data to be associated with the render item for the shader assignment"""
 
 class MIntersection:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -2067,7 +2032,6 @@ class MIntersection:
         """
 
 class MLightParameterInformation:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -2189,7 +2153,6 @@ class MLightParameterInformation:
         """
 
 class MPassContext:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -2246,7 +2209,6 @@ class MPassContext:
         """
 
 class MPresentTarget(MRenderOperation):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -2278,7 +2240,6 @@ class MPresentTarget(MRenderOperation):
         """
 
 class MPxComponentConverter:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -2314,7 +2275,6 @@ class MPxComponentConverter:
         """
 
 class MPxDrawOverride:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -2540,7 +2500,6 @@ class MPxDrawOverride:
         """
 
 class MPxGeometryOverride:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -2730,7 +2689,6 @@ class MPxGeometryOverride:
         """
 
 class MPxImagePlaneOverride:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -2742,7 +2700,6 @@ class MPxImagePlaneOverride:
         """
 
 class MPxIndexBufferMutator:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -2761,7 +2718,6 @@ class MPxIndexBufferMutator:
         """
 
 class MPxPrimitiveGenerator:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -2790,7 +2746,6 @@ class MPxPrimitiveGenerator:
         """
 
 class MPxShaderOverride:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -3081,7 +3036,6 @@ class MPxShaderOverride:
         """
 
 class MPxShadingNodeOverride:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -3214,7 +3168,6 @@ class MPxShadingNodeOverride:
         """
 
 class MPxSubSceneOverride:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -3484,7 +3437,6 @@ class MPxSurfaceShadingNodeOverride(MPxShadingNodeOverride):
         """
 
 class MPxVertexBufferGenerator:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -3518,7 +3470,6 @@ class MPxVertexBufferGenerator:
         """
 
 class MPxVertexBufferMutator:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -3573,7 +3524,6 @@ class MQuadRender(MRenderOperation):
         """
 
 class MRasterizerState:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -3597,7 +3547,6 @@ class MRasterizerState:
         """
 
 class MRasterizerStateDesc:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -3686,7 +3635,6 @@ class MRenderItem:
     NonMaterialSceneItem: int = ...
     OverrideNonMaterialItem: int = ...
     SkipWhenDefaultMaterialActive: int = ...
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -4121,7 +4069,6 @@ class MRenderItem:
         """
 
 class MRenderItemList:
-    __doc__: str = ...
     def __getitem__(self, key: Any) -> Any:
         """Return self[key]."""
     def __init__(self, args: Any, kwargs: Any) -> Any:
@@ -4163,7 +4110,6 @@ class MRenderItemList:
         """
 
 class MRenderOverride:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -4236,7 +4182,6 @@ class MRenderOverride:
         """
 
 class MRenderParameters:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -4299,7 +4244,6 @@ class MRenderParameters:
         """
 
 class MRenderProfile:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -4339,7 +4283,6 @@ class MRenderProfile:
         """
 
 class MRenderTarget:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -4376,7 +4319,6 @@ class MRenderTarget:
         """
 
 class MRenderTargetAssignment:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -4389,7 +4331,6 @@ class MRenderTargetAssignment:
         """The render target"""
 
 class MRenderTargetDescription:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -4481,7 +4422,6 @@ class MRenderTargetDescription:
         """
 
 class MRenderTargetManager:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -4509,7 +4449,6 @@ class MRenderTargetManager:
         """
 
 class MRenderUtilities:
-    __doc__: str = ...
     def acquireSwatchDrawContext(self, *args: Any, **kwargs: Any) -> Any:
         """acquireSwatchDrawContext() -> MDrawContext
         acquireSwatchDrawContext(colorTarget) -> MDrawContext
@@ -4617,7 +4556,6 @@ class MRenderer:
         Returns the maximum number of vertices allowed in a vertex buffer by the GPU device.
         0 if device has not been initialized.
         """
-    __doc__: str = ...
     def activeRenderOverride(self, *args: Any, **kwargs: Any) -> Any:
         """activeRenderOverride() -> string
 
@@ -4834,7 +4772,6 @@ class MRenderer:
         """
 
 class MSamplerState:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -4866,7 +4803,6 @@ class MSamplerState:
         """
 
 class MSamplerStateDesc:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -5226,7 +5162,6 @@ class MSceneRender(MRenderOperation):
         """
 
 class MSelectionContext:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -5267,7 +5202,6 @@ class MSelectionContext:
         """
 
 class MSelectionInfo:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -5362,7 +5296,6 @@ class MSelectionInfo:
         """
 
 class MShaderCompileMacro:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -5381,7 +5314,6 @@ class MShaderCompileMacro:
         """Name of the macro"""
 
 class MShaderInstance:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -5683,7 +5615,6 @@ class MShaderInstance:
         """
 
 class MShaderManager:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -5882,7 +5813,6 @@ class MShaderManager:
         """
 
 class MStateManager:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -5993,7 +5923,6 @@ class MStateManager:
         """
 
 class MStencilOpDesc:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -6029,7 +5958,6 @@ class MStencilOpDesc:
         """Stencil op to use when the fragment passes the stencil test, default kKeepStencil"""
 
 class MSubSceneContainer:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __len__(self) -> Any:
@@ -6079,7 +6007,6 @@ class MSubSceneContainer:
         """
 
 class MSubSceneContainerIterator:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -6105,7 +6032,6 @@ class MSubSceneContainerIterator:
         """
 
 class MSwatchRenderBase:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -6172,7 +6098,6 @@ class MSwatchRenderBase:
         """
 
 class MTargetBlendDesc:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -6232,7 +6157,6 @@ class MTargetBlendDesc:
         """Indicates what color components(red, green, blue, alpha) are writable, the default is RGBA"""
 
 class MTexture:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -6319,7 +6243,6 @@ class MTexture:
         """
 
 class MTextureAssignment:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -6332,7 +6255,6 @@ class MTextureAssignment:
         """The texture"""
 
 class MTextureDescription:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -6420,7 +6342,6 @@ class MTextureDescription:
         """
 
 class MTextureManager:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -6518,7 +6439,6 @@ class MTextureManager:
         """
 
 class MTextureUpdateRegion:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -6561,7 +6481,6 @@ class MTextureUpdateRegion:
         """Z min value"""
 
 class MUIDrawManager:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -7123,7 +7042,6 @@ class MUIDrawManager:
         """
 
 class MUniformParameter:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -7415,7 +7333,6 @@ class MUniformParameter:
         """
 
 class MUniformParameterList:
-    __doc__: str = ...
     def __getitem__(self, key: Any) -> Any:
         """Return self[key]."""
     def __init__(self, args: Any, kwargs: Any) -> Any:
@@ -7455,7 +7372,6 @@ class MUniformParameterList:
         """
 
 class MUserRenderOperation(MRenderOperation):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -7487,7 +7403,6 @@ class MUserRenderOperation(MRenderOperation):
         """
 
 class MVaryingParameter:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -7637,7 +7552,6 @@ class MVaryingParameter:
         """
 
 class MVaryingParameterList:
-    __doc__: str = ...
     def __getitem__(self, key: Any) -> Any:
         """Return self[key]."""
     def __init__(self, args: Any, kwargs: Any) -> Any:
@@ -7677,7 +7591,6 @@ class MVaryingParameterList:
         """
 
 class MVertexBuffer:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -7794,7 +7707,6 @@ class MVertexBuffer:
         """
 
 class MVertexBufferArray:
-    __doc__: str = ...
     def __getitem__(self, key: Any) -> Any:
         """Return self[key]."""
     def __init__(self, args: Any, kwargs: Any) -> Any:
@@ -7825,7 +7737,6 @@ class MVertexBufferArray:
         """
 
 class MVertexBufferDescriptor:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -7904,7 +7815,6 @@ class MVertexBufferDescriptor:
         """The number of points per primitive."""
 
 class MVertexBufferDescriptorList:
-    __doc__: str = ...
     def __getitem__(self, key: Any) -> Any:
         """Return self[key]."""
     def __init__(self, args: Any, kwargs: Any) -> Any:

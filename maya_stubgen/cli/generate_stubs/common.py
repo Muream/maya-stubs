@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import inspect
-import sys
 from abc import ABC, abstractclassmethod, abstractmethod
 from dataclasses import dataclass, field
 from enum import Enum
@@ -13,9 +12,16 @@ from typing import *
 from typing_extensions import Self
 
 STUB_HEADER = """\
+from __future__ import annotations
+
 from typing import *
 from typing_extensions import Self
-from _typeshed import Incomplete
+
+if TYPE_CHECKING:
+    from _typeshed import Incomplete
+else:
+    Incomplete = Any
+
 {imports}
 \n
 """
@@ -78,10 +84,18 @@ class Class(StubItem):
         ignored_members = [
             # These members somehow sometime share their id with their `super`
             # but sometimes don't
-            "__subclasshook__",
             "__dict__",
-            "__subclasscheck__",
+            "__bases__",
+            "__mro__",
+            "__name__",
+            "__qualname__",
+            "__doc__",
+            "__hash__",
             "__init_subclass__",
+            "__module__",
+            "__subclasscheck__",
+            "__subclasshook__",
+            "__weakref__",
         ]
 
         for member_name, member in inspect.getmembers(obj):
@@ -305,6 +319,10 @@ class Docstring:
 
             if not line:
                 continue
+            line = line.replace('"""', "'''")
+
+            if "C:" in line:
+                line = line.replace("\\\\", "\\").replace("\\", "/")
 
             if not line.startswith(">>>"):
                 line = ">>> " + line
@@ -360,7 +378,12 @@ class Docstring:
 def get_stub_path(module: ModuleInfo, override=False) -> Path:
     folder_name = "maya-stubs-override" if override else "maya-stubs"
 
-    stub_path = Path(module.name.replace("maya", folder_name, 1).replace(".", "/"))
+    stub_path = (
+        Path()
+        / "stubs"
+        / "pyi"
+        / Path(module.name.replace("maya", folder_name, 1).replace(".", "/"))
+    )
 
     if module.ispkg:
         stub_path = stub_path / f"__init__.pyi"

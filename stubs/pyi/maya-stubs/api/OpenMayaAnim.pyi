@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from typing import *
 from typing_extensions import Self
 
@@ -5,23 +7,15 @@ if TYPE_CHECKING:
     from _typeshed import Incomplete
 else:
     Incomplete = Any
+
 from maya.api.OpenMaya import *
 
-__builtins__: dict
-__cached__: str
-__doc__: NoneType
-__file__: str
-__loader__: SourceFileLoader
-__name__: str
-__package__: str
-__spec__: ModuleSpec
 key: str
 ourdict: dict
 py2dict: dict
 val: str
 
 class MAnimControl:
-    __doc__: str = ...
     def animationEndTime(self, *args: Any, **kwargs: Any) -> Any:
         """animationEndTime() -> MTime
 
@@ -200,7 +194,6 @@ class MAnimControl:
         """
 
 class MAnimCurveChange:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -211,7 +204,6 @@ class MAnimCurveChange:
         """Undo all of the Anim Curve changes in this cache."""
 
 class MAnimCurveClipboard:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -267,7 +259,6 @@ class MAnimCurveClipboard:
     theAPIClipboard: MAnimCurveClipboard = ...
 
 class MAnimCurveClipboardItem:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -330,7 +321,6 @@ class MAnimCurveClipboardItemArray:
         """Return key in self."""
     def __delitem__(self, key: Any) -> Any:
         """Delete self[key]."""
-    __doc__: str = ...
     def __getitem__(self, key: Any) -> Any:
         """Return self[key]."""
     def __iadd__(self, value: Any) -> Any:
@@ -373,7 +363,6 @@ class MAnimCurveClipboardItemArray:
         """Number of elements by which to grow the array when necessary."""
 
 class MAnimMessage(MMessage):
-    __doc__: str = ...
     def addAnimCurveEditedCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addAnimCurveEditedCallback(function, clientData=None) -> id
 
@@ -500,7 +489,6 @@ class MAnimMessage(MMessage):
         """
 
 class MAnimUtil:
-    __doc__: str = ...
     def findAnimatablePlugs(self, *args: Any, **kwargs: Any) -> Any:
         """findAnimatablePlugs(MSelectionList) -> MPlugArray
 
@@ -568,7 +556,6 @@ class MAnimUtil:
         """
 
 class MFnAnimCurve(MFnDependencyNode):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -858,7 +845,6 @@ class MFnAnimCurve(MFnDependencyNode):
         """
 
 class MFnGeometryFilter(MFnDependencyNode):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -979,7 +965,6 @@ class MFnGeometryFilter(MFnDependencyNode):
         """
 
 class MFnSkinCluster(MFnGeometryFilter):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:

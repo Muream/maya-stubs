@@ -1,3 +1,4 @@
+from __future__ import annotations
 from typing import *
 from typing_extensions import Self
 
@@ -5,15 +6,6 @@ if TYPE_CHECKING:
     from _typeshed import Incomplete
 else:
     Incomplete = Any
-
-__builtins__: dict
-__cached__: str
-__doc__: NoneType
-__file__: str
-__loader__: SourceFileLoader
-__name__: str
-__package__: str
-__spec__: ModuleSpec
 
 def getStringResource(*args: Any, **kwargs: Any) -> Any: ...
 
@@ -27,7 +19,6 @@ def registerStringResources(*args: Any, **kwargs: Any) -> Any: ...
 val: str
 
 class MAngle:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -56,6 +47,7 @@ class MAngle:
     kInvalid: int = ...
     kLast: int = ...
     kRadians: int = ...
+
     def setUIUnit(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the angular unit used in Maya's UI."""
     def uiToInternal(self, *args: Any, **kwargs: Any) -> Any:
@@ -76,7 +68,6 @@ class MAngle:
         """Value of the angle."""
 
 class MArgParser:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -218,7 +209,6 @@ class MArgParser:
         """Number of different flags used on the command line. If the same flag appears multiple times it is only counted once."""
 
 class MArgDatabase(MArgParser):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -244,7 +234,6 @@ class MArgDatabase(MArgParser):
         """
 
 class MArgList:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __len__(self) -> Any:
@@ -333,6 +322,7 @@ class MArgList:
         Return index of first occurrence of specified flag.
         """
     kInvalidArgIndex: int = ...
+
     def lastArgUsed(self, *args: Any, **kwargs: Any) -> Any:
         """lastArgUsed() -> int
 
@@ -340,7 +330,6 @@ class MArgList:
         """
 
 class MArrayDataBuilder:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __len__(self) -> Any:
@@ -409,7 +398,6 @@ class MArrayDataBuilder:
         """
 
 class MArrayDataHandle:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __len__(self) -> Any:
@@ -520,14 +508,12 @@ class MArrayDataHandle:
         """
 
 class MAttributeIndex:
-    __doc__: str = ...
     def __eq__(self, value: Any) -> Any:
         """Return self==value."""
     def __ge__(self, value: Any) -> Any:
         """Return self>=value."""
     def __gt__(self, value: Any) -> Any:
         """Return self>value."""
-    __hash__: NoneType = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __le__(self, value: Any) -> Any:
@@ -588,6 +574,7 @@ class MAttributeIndex:
         """
     kFloat: int = ...
     kInteger: int = ...
+
     def setLower(self, *args: Any, **kwargs: Any) -> Any:
         """setLower(value) -> self
 
@@ -624,7 +611,6 @@ class MAttributeIndex:
         """
 
 class MAttributePattern:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -649,7 +635,6 @@ class MAttributePattern:
         """Return the number of root attributes in this pattern."""
 
 class MAttributeSpec:
-    __doc__: str = ...
     def __eq__(self, value: Any) -> Any:
         """Return self==value."""
     def __ge__(self, value: Any) -> Any:
@@ -658,7 +643,6 @@ class MAttributeSpec:
         """Return self[key]."""
     def __gt__(self, value: Any) -> Any:
         """Return self>value."""
-    __hash__: NoneType = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __le__(self, value: Any) -> Any:
@@ -698,7 +682,6 @@ class MAttributeSpecArray:
         """Return key in self."""
     def __delitem__(self, key: Any) -> Any:
         """Delete self[key]."""
-    __doc__: str = ...
     def __getitem__(self, key: Any) -> Any:
         """Return self[key]."""
     def __iadd__(self, value: Any) -> Any:
@@ -741,7 +724,6 @@ class MAttributeSpecArray:
         """Number of elements by which to grow the array when necessary."""
 
 class MBoundingBox:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -798,7 +780,6 @@ class MBoundingBox:
         """Size in X"""
 
 class MCacheSchema:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -825,7 +806,6 @@ class MCallbackIdArray:
         """Return key in self."""
     def __delitem__(self, key: Any) -> Any:
         """Delete self[key]."""
-    __doc__: str = ...
     def __getitem__(self, key: Any) -> Any:
         """Return self[key]."""
     def __iadd__(self, value: Any) -> Any:
@@ -868,7 +848,6 @@ class MCallbackIdArray:
         """Number of elements by which to grow the array when necessary."""
 
 class MMessage:
-    __doc__: str = ...
     def currentCallbackId(self, *args: Any, **kwargs: Any) -> Any:
         """currentCallbackId() -> id
 
@@ -879,6 +858,7 @@ class MMessage:
     kDefaultAction: int = ...
     kDoAction: int = ...
     kDoNotDoAction: int = ...
+
     def nodeCallbacks(self, *args: Any, **kwargs: Any) -> Any:
         """nodeCallbacks(node) -> ids
 
@@ -907,7 +887,6 @@ class MMessage:
         """
 
 class MCameraMessage(MMessage):
-    __doc__: str = ...
     def addBeginManipulationCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addBeginManipulationCallback(node, function, clientData=None) -> id
 
@@ -936,7 +915,6 @@ class MColor:
         """Return self+value."""
     def __delitem__(self, key: Any) -> Any:
         """Delete self[key]."""
-    __doc__: str = ...
     def __eq__(self, value: Any) -> Any:
         """Return self==value."""
     def __ge__(self, value: Any) -> Any:
@@ -945,7 +923,6 @@ class MColor:
         """Return self[key]."""
     def __gt__(self, value: Any) -> Any:
         """Return self>value."""
-    __hash__: NoneType = ...
     def __iadd__(self, value: Any) -> Any:
         """Return self+=value."""
     def __imul__(self, value: Any) -> Any:
@@ -1008,6 +985,7 @@ class MColor:
     kOpaqueBlack: MColor = ...
     kRGB: int = ...
     kShort: int = ...
+
     @property
     def r(*args: Any, **kwargs: Any) -> Any:
         """red component"""
@@ -1024,7 +1002,6 @@ class MColorArray:
         """Return key in self."""
     def __delitem__(self, key: Any) -> Any:
         """Delete self[key]."""
-    __doc__: str = ...
     def __getitem__(self, key: Any) -> Any:
         """Return self[key]."""
     def __iadd__(self, value: Any) -> Any:
@@ -1067,7 +1044,6 @@ class MColorArray:
         """Number of elements by which to grow the array when necessary."""
 
 class MCommandMessage(MMessage):
-    __doc__: str = ...
     def addCommandCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addCommandCallback(function, clientData=None) -> id
 
@@ -1149,7 +1125,6 @@ class MCommandMessage(MMessage):
     kWarning: int = ...
 
 class MConditionMessage(MMessage):
-    __doc__: str = ...
     def addConditionCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addConditionCallback(conditionName, function, clientData=None) -> id
 
@@ -1184,7 +1159,6 @@ class MConditionMessage(MMessage):
         """
 
 class MContainerMessage(MMessage):
-    __doc__: str = ...
     def addBoundAttrCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addBoundAttrCallback(function, clientData=None) -> id
 
@@ -1213,7 +1187,6 @@ class MContainerMessage(MMessage):
         """
 
 class MDAGDrawOverrideInfo:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -1247,6 +1220,7 @@ class MDAGDrawOverrideInfo:
     kDisplayTypeTemplate: int = ...
     kLODBoundingBox: int = ...
     kLODFull: int = ...
+
     @property
     def lod(*args: Any, **kwargs: Any) -> Any:
         """Level of detail (kLODFull or kLODBoundingBox)"""
@@ -1267,7 +1241,6 @@ class MDAGDrawOverrideInfo:
         """Whether the object is visible during playback"""
 
 class MDGContext:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -1288,11 +1261,11 @@ class MDGContext:
     def isNormal(self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the context is set to evaluate normally. Returns False if the context is set to evaluate at a specific time."""
     kNormal: MDGContext = ...
+
     def makeCurrent(self, *args: Any, **kwargs: Any) -> Any:
         """Makes this context the new current one being used for evaluation. Returns the previous evaluation context."""
 
 class MDGMessage(MMessage):
-    __doc__: str = ...
     def addConnectionCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addConnectionCallback(function, clientData=None) -> id
 
@@ -1443,7 +1416,6 @@ class MDGMessage(MMessage):
         """
 
 class MDGModifier:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -1698,7 +1670,6 @@ class MDGModifier:
         """
 
 class MDagMessage(MMessage):
-    __doc__: str = ...
     def addAllDagChangesCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addAllDagChangesCallback(function, clientData=None) -> id
 
@@ -2075,7 +2046,6 @@ class MDagMessage(MMessage):
     kTranslation: int = ...
 
 class MDagModifier(MDGModifier):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -2109,14 +2079,12 @@ class MDagModifier(MDGModifier):
         """
 
 class MDagPath:
-    __doc__: str = ...
     def __eq__(self, value: Any) -> Any:
         """Return self==value."""
     def __ge__(self, value: Any) -> Any:
         """Return self>=value."""
     def __gt__(self, value: Any) -> Any:
         """Return self>value."""
-    __hash__: NoneType = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __le__(self, value: Any) -> Any:
@@ -2129,65 +2097,65 @@ class MDagPath:
         """Create and return a new object.  See help(type) for accurate signature."""
     def __str__(self) -> Any:
         """Return str(self)."""
-    def apiType(self, *args: Any, **kwargs: Any) -> Any:
+    def apiType(self) -> int:
         """Returns the type of the object at the end of the path."""
-    def child(self, *args: Any, **kwargs: Any) -> Any:
+    def child(self, childNum: int) -> MObject:
         """Returns the specified child of the object at the end of the path."""
-    def childCount(self, *args: Any, **kwargs: Any) -> Any:
+    def childCount(self) -> int:
         """Returns the number of objects parented directly beneath the object at the end of the path."""
-    def exclusiveMatrix(self, *args: Any, **kwargs: Any) -> Any:
+    def exclusiveMatrix(self) -> MMatrix:
         """Returns the matrix for all transforms in the path, excluding the end object."""
-    def exclusiveMatrixInverse(self, *args: Any, **kwargs: Any) -> Any:
+    def exclusiveMatrixInverse(self) -> MMatrix:
         """Returns the inverse of exclusiveMatrix()."""
-    def extendToShape(self, *args: Any, **kwargs: Any) -> Any:
+    def extendToShape(self, shapeNum: int = ...) -> str:
         """Extends the path to the specified shape node parented directly beneath the transform at the current end of the path."""
-    def fullPathName(self, *args: Any, **kwargs: Any) -> Any:
+    def fullPathName(self) -> str:
         """Returns a string representation of the path from the DAG root to the path's last node."""
-    def getAPathTo(self, *args: Any, **kwargs: Any) -> Any:
+    def getAPathTo(self, node: MObject) -> MDagPath:
         """Returns the first path found to the given node."""
-    def getAllPathsTo(self, *args: Any, **kwargs: Any) -> Any:
+    def getAllPathsTo(self, node: MObject) -> MDagPathArray:
         """Returns all paths to the given node."""
-    def getDisplayStatus(self, *args: Any, **kwargs: Any) -> Any:
+    def getDisplayStatus(self) -> int:
         """Returns the display status for this path."""
-    def getDrawOverrideInfo(self, *args: Any, **kwargs: Any) -> Any:
+    def getDrawOverrideInfo(self) -> MDAGDrawOverrideInfo:
         """Returns the draw override information for this path."""
-    def getPath(self, *args: Any, **kwargs: Any) -> Any:
+    def getPath(self, pathNum: int = ...) -> MDagPath:
         """Returns the specified sub-path of this path."""
-    def hasFn(self, *args: Any, **kwargs: Any) -> Any:
+    def hasFn(self, type: int) -> bool:
         """Returns True if the object at the end of the path supports the given function set."""
-    def inclusiveMatrix(self, *args: Any, **kwargs: Any) -> Any:
+    def inclusiveMatrix(self) -> MMatrix:
         """Returns the matrix for all transforms in the path, including the end object, if it is a transform."""
-    def inclusiveMatrixInverse(self, *args: Any, **kwargs: Any) -> Any:
+    def inclusiveMatrixInverse(self) -> MMatrix:
         """Returns the inverse of inclusiveMatrix()."""
-    def instanceNumber(self, *args: Any, **kwargs: Any) -> Any:
+    def instanceNumber(self) -> int:
         """Returns the instance number of this path to the object at the end."""
-    def isInstanced(self, *args: Any, **kwargs: Any) -> Any:
+    def isInstanced(self) -> bool:
         """Returns True if the object at the end of the path can be reached by more than one path."""
-    def isTemplated(self, *args: Any, **kwargs: Any) -> Any:
+    def isTemplated(self) -> bool:
         """Returns true if the DAG Node at the end of the path is templated."""
-    def isValid(self, *args: Any, **kwargs: Any) -> Any:
+    def isValid(self) -> bool:
         """Returns True if this is a valid path."""
-    def isVisible(self, *args: Any, **kwargs: Any) -> Any:
+    def isVisible(self) -> bool:
         """Returns true if the DAG Node at the end of the path is visible."""
-    def length(self, *args: Any, **kwargs: Any) -> Any:
+    def length(self) -> int:
         """Returns the number of nodes on the path, not including the DAG's root node."""
     def matchTransform(self, *args: Any, **kwargs: Any) -> Any:
         """Do some new stuff."""
-    def node(self, *args: Any, **kwargs: Any) -> Any:
+    def node(self) -> MObject:
         """Returns the DAG node at the end of the path."""
-    def numberOfShapesDirectlyBelow(self, *args: Any, **kwargs: Any) -> Any:
+    def numberOfShapesDirectlyBelow(self) -> int:
         """Returns the number of shape nodes parented directly beneath the transform at the end of the path."""
-    def partialPathName(self, *args: Any, **kwargs: Any) -> Any:
+    def partialPathName(self) -> str:
         """Returns the minimum string representation which will uniquely identify the path."""
-    def pathCount(self, *args: Any, **kwargs: Any) -> Any:
+    def pathCount(self) -> int:
         """Returns the number of sub-paths which make up this path."""
-    def pop(self, *args: Any, **kwargs: Any) -> Any:
+    def pop(self, nom: int = ...) -> Self:
         """Removes objects from the end of the path."""
-    def push(self, *args: Any, **kwargs: Any) -> Any:
+    def push(self, child: MObject) -> Self:
         """Extends the path to the specified child object, which must be parented directly beneath the object currently at the end of the path."""
-    def set(self, *args: Any, **kwargs: Any) -> Any:
+    def set(self, path: MDagPath) -> Self:
         """Replaces the current path held by this object with another."""
-    def transform(self, *args: Any, **kwargs: Any) -> Any:
+    def transform(self) -> MObject:
         """Returns the last transform node on the path."""
 
 class MDagPathArray:
@@ -2197,7 +2165,6 @@ class MDagPathArray:
         """Return key in self."""
     def __delitem__(self, key: Any) -> Any:
         """Delete self[key]."""
-    __doc__: str = ...
     def __getitem__(self, key: Any) -> Any:
         """Return self[key]."""
     def __iadd__(self, value: Any) -> Any:
@@ -2240,7 +2207,6 @@ class MDagPathArray:
         """Number of elements by which to grow the array when necessary."""
 
 class MDataBlock:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -2323,7 +2289,6 @@ class MDataBlock:
         """
 
 class MDataHandle:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -2794,7 +2759,6 @@ class MDataHandle:
         """
 
 class MDistance:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -2835,6 +2799,7 @@ class MDistance:
     kMiles: int = ...
     kMillimeters: int = ...
     kYards: int = ...
+
     def setUIUnit(self, *args: Any, **kwargs: Any) -> Any:
         """Change the units used to display distances in Maya's UI."""
     def uiToInternal(self, *args: Any, **kwargs: Any) -> Any:
@@ -2861,7 +2826,6 @@ class MDoubleArray:
         """Return key in self."""
     def __delitem__(self, key: Any) -> Any:
         """Delete self[key]."""
-    __doc__: str = ...
     def __getitem__(self, key: Any) -> Any:
         """Return self[key]."""
     def __iadd__(self, value: Any) -> Any:
@@ -2908,7 +2872,6 @@ class MEulerRotation:
         """Return self+value."""
     def __delitem__(self, key: Any) -> Any:
         """Delete self[key]."""
-    __doc__: str = ...
     def __eq__(self, value: Any) -> Any:
         """Return self==value."""
     def __ge__(self, value: Any) -> Any:
@@ -2917,7 +2880,6 @@ class MEulerRotation:
         """Return self[key]."""
     def __gt__(self, value: Any) -> Any:
         """Return self>value."""
-    __hash__: NoneType = ...
     def __iadd__(self, value: Any) -> Any:
         """Return self+=value."""
     def __imul__(self, value: Any) -> Any:
@@ -2998,6 +2960,7 @@ class MEulerRotation:
     kYZX: int = ...
     kZXY: int = ...
     kZYX: int = ...
+
     @property
     def order(*args: Any, **kwargs: Any) -> Any:
         """Rotation order"""
@@ -3036,7 +2999,6 @@ class MEulerRotation:
         """Z rotation in radians"""
 
 class MEvaluationNode:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -3053,7 +3015,6 @@ class MEvaluationNode:
         """Returns an iterator at the beginning of the dirty plug list."""
 
 class MEvaluationNodeIterator:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -3068,7 +3029,6 @@ class MEvaluationNodeIterator:
         """Resets the iterator to the first position in the dirty plug list."""
 
 class MEventMessage(MMessage):
-    __doc__: str = ...
     def addEventCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addEventCallback(eventName, function, clientData=None) -> id
 
@@ -3092,7 +3052,6 @@ class MEventMessage(MMessage):
         """
 
 class MExternalContentInfoTable:
-    __doc__: str = ...
     def __getitem__(self, key: Any) -> Any:
         """Return self[key]."""
     def __init__(self, args: Any, kwargs: Any) -> Any:
@@ -3138,7 +3097,6 @@ class MExternalContentInfoTable:
         """
 
 class MExternalContentLocationTable:
-    __doc__: str = ...
     def __getitem__(self, key: Any) -> Any:
         """Return self[key]."""
     def __init__(self, args: Any, kwargs: Any) -> Any:
@@ -3170,7 +3128,6 @@ class MExternalContentLocationTable:
         """
 
 class MFileObject:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -3280,6 +3237,7 @@ class MFileObject:
     kReferenceMappings: int = ...
     kRelative: int = ...
     kStrict: int = ...
+
     def overrideResolvedFullName(self, *args: Any, **kwargs: Any) -> Any:
         """overrideResolvedFullName(fullFileName, reresolveType=False) -> self
 
@@ -3401,7 +3359,6 @@ class MFloatArray:
         """Return key in self."""
     def __delitem__(self, key: Any) -> Any:
         """Delete self[key]."""
-    __doc__: str = ...
     def __getitem__(self, key: Any) -> Any:
         """Return self[key]."""
     def __iadd__(self, value: Any) -> Any:
@@ -3448,7 +3405,6 @@ class MFloatMatrix:
         """Return self+value."""
     def __delitem__(self, key: Any) -> Any:
         """Delete self[key]."""
-    __doc__: str = ...
     def __eq__(self, value: Any) -> Any:
         """Return self==value."""
     def __ge__(self, value: Any) -> Any:
@@ -3457,7 +3413,6 @@ class MFloatMatrix:
         """Return self[key]."""
     def __gt__(self, value: Any) -> Any:
         """Return self>value."""
-    __hash__: NoneType = ...
     def __iadd__(self, value: Any) -> Any:
         """Return self+=value."""
     def __imul__(self, value: Any) -> Any:
@@ -3507,6 +3462,7 @@ class MFloatMatrix:
     def isEquivalent(self, *args: Any, **kwargs: Any) -> Any:
         """Test for equivalence of two matrices, within a tolerance."""
     kTolerance: float = ...
+
     def setElement(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the matrix element for the specified row and column."""
     def setToIdentity(self, *args: Any, **kwargs: Any) -> Any:
@@ -3521,7 +3477,6 @@ class MFloatPoint:
         """Return self+value."""
     def __delitem__(self, key: Any) -> Any:
         """Delete self[key]."""
-    __doc__: str = ...
     def __eq__(self, value: Any) -> Any:
         """Return self==value."""
     def __ge__(self, value: Any) -> Any:
@@ -3530,7 +3485,6 @@ class MFloatPoint:
         """Return self[key]."""
     def __gt__(self, value: Any) -> Any:
         """Return self>value."""
-    __hash__: NoneType = ...
     def __iadd__(self, value: Any) -> Any:
         """Return self+=value."""
     def __imul__(self, value: Any) -> Any:
@@ -3579,6 +3533,7 @@ class MFloatPoint:
         """Test for equivalence of two points, within a tolerance."""
     kOrigin: MFloatPoint = ...
     kTolerance: float = ...
+
     def rationalize(self, *args: Any, **kwargs: Any) -> Any:
         """Convert point to rational form."""
     @property
@@ -3613,7 +3568,6 @@ class MFloatPointArray:
         """Return key in self."""
     def __delitem__(self, key: Any) -> Any:
         """Delete self[key]."""
-    __doc__: str = ...
     def __getitem__(self, key: Any) -> Any:
         """Return self[key]."""
     def __iadd__(self, value: Any) -> Any:
@@ -3660,7 +3614,6 @@ class MFloatVector:
         """Return self+value."""
     def __delitem__(self, key: Any) -> Any:
         """Delete self[key]."""
-    __doc__: str = ...
     def __eq__(self, value: Any) -> Any:
         """Return self==value."""
     def __ge__(self, value: Any) -> Any:
@@ -3669,7 +3622,6 @@ class MFloatVector:
         """Return self[key]."""
     def __gt__(self, value: Any) -> Any:
         """Return self>value."""
-    __hash__: NoneType = ...
     def __iadd__(self, value: Any) -> Any:
         """Return self+=value."""
     def __imul__(self, value: Any) -> Any:
@@ -3731,6 +3683,7 @@ class MFloatVector:
     kZaxisVector: MFloatVector = ...
     kZeroVector: MFloatVector = ...
     kZnegAxisVector: MFloatVector = ...
+
     def length(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the magnitude of this vector."""
     def normal(self, *args: Any, **kwargs: Any) -> Any:
@@ -3765,7 +3718,6 @@ class MFloatVectorArray:
         """Return key in self."""
     def __delitem__(self, key: Any) -> Any:
         """Delete self[key]."""
-    __doc__: str = ...
     def __getitem__(self, key: Any) -> Any:
         """Return self[key]."""
     def __iadd__(self, value: Any) -> Any:
@@ -3808,7 +3760,6 @@ class MFloatVectorArray:
         """Number of elements by which to grow the array when necessary."""
 
 class MFn:
-    __doc__: str = ...
     kAISEnvFacade: int = ...
     kAddDoubleLinear: int = ...
     kAdskMaterial: int = ...
@@ -4961,22 +4912,20 @@ class MFn:
     kXsectionSubdivEdit: int = ...
 
 class MFnBase:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def hasObj(self, *args: Any, **kwargs: Any) -> Any:
+    def hasObj(self, type: int | MObject) -> bool:
         """Returns True if the function set is compatible with the specified Maya object."""
-    def object(self, *args: Any, **kwargs: Any) -> Any:
+    def object(self) -> MObject:
         """Returns a reference to the object to which the function set is currently attached, or MObject.kNullObj if none."""
-    def setObject(self, *args: Any, **kwargs: Any) -> Any:
+    def setObject(self, object: MObject) -> Self:
         """Attaches the function set to the specified Maya object."""
-    def type(self, *args: Any, **kwargs: Any) -> Any:
+    def type(self) -> int:
         """Returns the type of the function set."""
 
 class MFnAttribute(MFnBase):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -5078,6 +5027,7 @@ class MFnAttribute(MFnBase):
     kDelete: int = ...
     kNothing: int = ...
     kReset: int = ...
+
     @property
     def keyable(*args: Any, **kwargs: Any) -> Any:
         """Can keys be set on the attribute?"""
@@ -5154,7 +5104,6 @@ class MFnAttribute(MFnBase):
         """Is the attribute writable?"""
 
 class MFnDependencyNode(MFnBase):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -5271,6 +5220,7 @@ class MFnDependencyNode(MFnBase):
     kTimerType_self: int = ...
     kTimerTypes: int = ...
     kTimerUninitialized: int = ...
+
     def name(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's name."""
     @property
@@ -5327,7 +5277,6 @@ class MFnDependencyNode(MFnBase):
         """Returns the node's UUID."""
 
 class MFnDagNode(MFnDependencyNode):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -5389,11 +5338,8 @@ class MFnDagNode(MFnDependencyNode):
 
         Duplicates the DAG hierarchy rooted at the current node.
         """
-    def fullPathName(self, *args: Any, **kwargs: Any) -> Any:
-        """fullPathName() -> string
-
-        Returns the full path of the attached object, from the root of the DAG on down.
-        """
+    def fullPathName(self) -> str:
+        """Returns the full path of the attached object, from the root of the DAG on down."""
     def getAllPaths(self, *args: Any, **kwargs: Any) -> Any:
         """getAllPaths() -> MDagPathArray
 
@@ -5470,6 +5416,7 @@ class MFnDagNode(MFnDependencyNode):
         Returns True if the specified node is a child of this one.
         """
     kNextPos: int = ...
+
     @property
     def objectColor(*args: Any, **kwargs: Any) -> Any:
         """Index from 0 to 7 indicating the color in which the node is to be drawn when inactive, assuming that it is drawable."""
@@ -5518,11 +5465,7 @@ class MFnDagNode(MFnDependencyNode):
 
         Attaches the function set to the specified node or DAG path.
         """
-    def transformationMatrix(self, *args: Any, **kwargs: Any) -> Any:
-        """transformationMatrix() -> MMatrix
-
-        Returns the object space transformation matrix for this DAG node.
-        """
+    def transformationMatrix(self) -> MMatrix: ...
     @property
     def useObjectColor(*args: Any, **kwargs: Any) -> Any:
         """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
@@ -5531,7 +5474,6 @@ class MFnDagNode(MFnDependencyNode):
         """If True then the node will be drawn using its 'objectColor', otherwise it will be drawn using Maya's default color. Thismethod is deprecated, use objectColorType instead."""
 
 class MFnCamera(MFnDagNode):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -6117,7 +6059,6 @@ class MFnCamera(MFnDagNode):
         """The camera 2D zoom value, which is the percent over the film viewable frustum to display"""
 
 class MFnComponent(MFnBase):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -6170,7 +6111,6 @@ class MFnComponent(MFnBase):
         """
 
 class MFnData(MFnBase):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -6204,7 +6144,6 @@ class MFnData(MFnBase):
     kVectorArray: int = ...
 
 class MFnComponentListData(MFnData):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -6252,7 +6191,6 @@ class MFnComponentListData(MFnData):
         """
 
 class MFnCompoundAttribute(MFnAttribute):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -6271,7 +6209,6 @@ class MFnCompoundAttribute(MFnAttribute):
         """Remove a child attribute."""
 
 class MFnContainerNode(MFnDependencyNode):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -6361,7 +6298,6 @@ class MFnDoubleArrayData(MFnData):
         """Sets values in the encapsulated array."""
 
 class MFnDoubleIndexedComponent(MFnComponent):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -6412,7 +6348,6 @@ class MFnDoubleIndexedComponent(MFnComponent):
         """
 
 class MFnEnumAttribute(MFnAttribute):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -6439,7 +6374,6 @@ class MFnEnumAttribute(MFnAttribute):
         """Set the default value using the name of an enumeration item. Equivalent to: attr.default = attr.fieldValue(name)"""
 
 class MFnGenericAttribute(MFnAttribute):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -6460,7 +6394,6 @@ class MFnGenericAttribute(MFnAttribute):
         """Removes the specified data typeId from the list of those accepted by the attribute."""
 
 class MFnGeometryData(MFnData):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -6634,7 +6567,6 @@ class MFnIntArrayData(MFnData):
         """Sets values in the encapsulated array."""
 
 class MFnLightDataAttribute(MFnAttribute):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -6673,7 +6605,6 @@ class MFnMatrixArrayData(MFnData):
         """Sets values in the encapsulated array."""
 
 class MFnMatrixAttribute(MFnAttribute):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -6688,7 +6619,6 @@ class MFnMatrixAttribute(MFnAttribute):
         """Default value"""
 
 class MFnMatrixData(MFnData):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -6705,7 +6635,6 @@ class MFnMatrixData(MFnData):
         """Returns the encapsulated matrix as an MTransformationMatrix."""
 
 class MFnMesh(MFnDagNode):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -8109,6 +8038,7 @@ class MFnMesh(MFnDagNode):
     kIntersectTolerance: float = ...
     kPointTolerance: float = ...
     kUVBorder: int = ...
+
     def lockFaceVertexNormals(self, *args: Any, **kwargs: Any) -> Any:
         """lockFaceVertexNormals(seq of faceIds, seq of vertIds) -> self
 
@@ -8655,7 +8585,6 @@ class MFnMesh(MFnDagNode):
         """
 
 class MFnMeshData(MFnGeometryData):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -8668,7 +8597,6 @@ class MFnMeshData(MFnGeometryData):
         """
 
 class MFnMessageAttribute(MFnAttribute):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -8677,7 +8605,6 @@ class MFnMessageAttribute(MFnAttribute):
         """Creates a new message attribute, attaches it to the function set and returns it as an MObject."""
 
 class MFnNumericAttribute(MFnAttribute):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -8726,7 +8653,6 @@ class MFnNumericAttribute(MFnAttribute):
         """Sets the attribute's soft minimum value."""
 
 class MFnNumericData(MFnData):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -8741,7 +8667,6 @@ class MFnNumericData(MFnData):
         """Sets the value of the data in the attached data object."""
 
 class MFnNurbsCurve(MFnDagNode):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -9002,6 +8927,7 @@ class MFnNurbsCurve(MFnDagNode):
         """
     kFindParamTolerance: float = ...
     kPointTolerance: float = ...
+
     def knot(self, *args: Any, **kwargs: Any) -> Any:
         """knot(index) -> float
 
@@ -9167,7 +9093,6 @@ class MFnNurbsCurve(MFnDagNode):
         """
 
 class MFnNurbsCurveData(MFnGeometryData):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -9180,7 +9105,6 @@ class MFnNurbsCurveData(MFnGeometryData):
         """
 
 class MFnNurbsSurface(MFnDagNode):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -9715,6 +9639,7 @@ class MFnNurbsSurface(MFnDagNode):
     def isUniform(*args: Any, **kwargs: Any) -> Any:
         """True if the knot spacing is uniform."""
     kPointTolerance: float = ...
+
     @property
     def knotDomainInU(*args: Any, **kwargs: Any) -> Any:
         """A tuple containing a pair of floats corresponding to the maximum and
@@ -10109,7 +10034,6 @@ class MFnNurbsSurface(MFnDagNode):
         """
 
 class MFnNurbsSurfaceData(MFnGeometryData):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -10122,7 +10046,6 @@ class MFnNurbsSurfaceData(MFnGeometryData):
         """
 
 class MFnPlugin(MFnBase):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -10180,7 +10103,6 @@ class MFnPlugin(MFnBase):
         """Plug-in version string."""
 
 class MFnPluginData(MFnData):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -10305,7 +10227,6 @@ class MFnReference(MFnDependencyNode):
         """
 
 class MFnSet(MFnDependencyNode):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -10413,7 +10334,6 @@ class MFnSet(MFnDependencyNode):
         """
 
 class MFnSingleIndexedComponent(MFnComponent):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -10484,7 +10404,6 @@ class MFnStringArrayData(MFnData):
         """Sets values in the encapsulated array."""
 
 class MFnStringData(MFnData):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -10497,7 +10416,6 @@ class MFnStringData(MFnData):
         """Returns the encapsulated string as a unicode object."""
 
 class MFnTransform(MFnDagNode):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -10524,6 +10442,7 @@ class MFnTransform(MFnDagNode):
     kTranslateMinX: int = ...
     kTranslateMinY: int = ...
     kTranslateMinZ: int = ...
+
     def limitValue(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the value of the specified limit."""
     def resetFromRestPosition(self, *args: Any, **kwargs: Any) -> Any:
@@ -10540,8 +10459,10 @@ class MFnTransform(MFnDagNode):
         """Returns the transform's rotate pivot."""
     def rotatePivotTranslation(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotate pivot translation."""
-    def rotation(self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the transform's rotation as an MEulerRotation or MQuaternion."""
+    @overload
+    def rotation(self, space: MSpace = ..., asQuaternion: Literal[True] = ...) -> MQuaternion: ...
+    @overload
+    def rotation(self, space: MSpace = ..., asQuaternion: Literal[False] = ...) -> MEulerRotation: ...
     def rotationComponents(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transform's rotation as the individual components of an MEulerRotation or MQuaternion."""
     def rotationOrder(self, *args: Any, **kwargs: Any) -> Any:
@@ -10564,8 +10485,7 @@ class MFnTransform(MFnDagNode):
         """Sets the transform's rotate pivot."""
     def setRotatePivotTranslation(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotate pivot translation."""
-    def setRotation(self, *args: Any, **kwargs: Any) -> Any:
-        """Sets the transform's rotation using an MEulerRotation or MQuaternion."""
+    def setRotation(self, rot: MEulerRotation | MQuaternion, space: MSpace) -> Self: ...
     def setRotationComponents(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's rotation using the individual components of an MEulerRotation or MQuaternion."""
     def setRotationOrder(self, *args: Any, **kwargs: Any) -> Any:
@@ -10580,8 +10500,7 @@ class MFnTransform(MFnDagNode):
         """Sets the transform's shear."""
     def setTransformation(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the transform's attribute values to represent the given transformation matrix."""
-    def setTranslation(self, *args: Any, **kwargs: Any) -> Any:
-        """Sets the transform's translation."""
+    def setTranslation(self, trans: MVector, space: MSpace) -> Self: ...
     def shear(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the transform's shear components."""
     def shearBy(self, *args: Any, **kwargs: Any) -> Any:
@@ -10590,11 +10509,9 @@ class MFnTransform(MFnDagNode):
         """Returns the transformation matrix represented by this transform."""
     def translateBy(self, *args: Any, **kwargs: Any) -> Any:
         """Adds an MVector to the transform's translation."""
-    def translation(self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the transform's translation as an MVector."""
+    def translation(self, space: MSpace) -> MVector: ...
 
 class MFnTripleIndexedComponent(MFnComponent):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -10646,7 +10563,6 @@ class MFnTripleIndexedComponent(MFnComponent):
         """
 
 class MFnTypedAttribute(MFnAttribute):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -10685,7 +10601,6 @@ class MFnUInt64ArrayData(MFnData):
         """Sets values in the encapsulated array."""
 
 class MFnUnitAttribute(MFnAttribute):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -10716,6 +10631,7 @@ class MFnUnitAttribute(MFnAttribute):
         """Returns True if the attribute has a soft minimum value."""
     kLast: int = ...
     kTime: int = ...
+
     def setMax(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the attribute's hard maximum value."""
     def setMin(self, *args: Any, **kwargs: Any) -> Any:
@@ -10750,7 +10666,6 @@ class MFnVectorArrayData(MFnData):
         """Sets values in the encapsulated array."""
 
 class MGlobal:
-    __doc__: str = ...
     def addToModel(self, *args: Any, **kwargs: Any) -> Any:
         """addToModel(MObject, MObject) -> None
 
@@ -11001,6 +10916,7 @@ class MGlobal:
     kSurfaceSelectMethod: int = ...
     kWireframeSelectMethod: int = ...
     kXORWithList: int = ...
+
     def mayaFeatureSet(self, *args: Any, **kwargs: Any) -> Any:
         """mayaFeatureSet() -> int
 
@@ -11314,7 +11230,6 @@ class MGlobal:
         """
 
 class MImage:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -11400,6 +11315,7 @@ class MImage:
     kNormalMapBumpFormat: int = ...
     kUnknown: int = ...
     kUnknownFormat: int = ...
+
     def pixelType(self, *args: Any, **kwargs: Any) -> Any:
         """pixelType() -> int
 
@@ -11518,7 +11434,6 @@ class MInt64Array:
         """Return key in self."""
     def __delitem__(self, key: Any) -> Any:
         """Delete self[key]."""
-    __doc__: str = ...
     def __getitem__(self, key: Any) -> Any:
         """Return self[key]."""
     def __iadd__(self, value: Any) -> Any:
@@ -11567,7 +11482,6 @@ class MIntArray:
         """Return key in self."""
     def __delitem__(self, key: Any) -> Any:
         """Delete self[key]."""
-    __doc__: str = ...
     def __getitem__(self, key: Any) -> Any:
         """Return self[key]."""
     def __iadd__(self, value: Any) -> Any:
@@ -11610,7 +11524,6 @@ class MIntArray:
         """Number of elements by which to grow the array when necessary."""
 
 class MItCurveCV:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __iter__(self) -> Any:
@@ -11696,7 +11609,6 @@ class MItCurveCV:
         """
 
 class MItDag:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __iter__(self) -> Any:
@@ -11778,6 +11690,7 @@ class MItDag:
     kBreadthFirst: int = ...
     kDepthFirst: int = ...
     kInvalidType: int = ...
+
     def next(self, *args: Any, **kwargs: Any) -> Any:
         """next() -> self
 
@@ -11835,7 +11748,6 @@ class MItDag:
         """Specifies whether underworld traversal is turned on (Bool)."""
 
 class MItDependencyGraph:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __iter__(self) -> Any:
@@ -11951,6 +11863,7 @@ class MItDependencyGraph:
     kNodeLevel: int = ...
     kPlugLevel: int = ...
     kUpstream: int = ...
+
     def next(self, *args: Any, **kwargs: Any) -> Any:
         """next() -> self
 
@@ -12043,7 +11956,6 @@ class MItDependencyGraph:
         """Whether the iterator is set to traverse world-space attribute dependencies (Bool)."""
 
 class MItDependencyNodes:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __iter__(self) -> Any:
@@ -12093,7 +12005,6 @@ class MItDependencyNodes:
         """
 
 class MItGeometry:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __iter__(self) -> Any:
@@ -12207,7 +12118,6 @@ class MItGeometry:
         """
 
 class MItMeshEdge:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __iter__(self) -> Any:
@@ -12388,7 +12298,6 @@ class MItMeshEdge:
         """
 
 class MItMeshFaceVertex:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __iter__(self) -> Any:
@@ -12558,7 +12467,6 @@ class MItMeshFaceVertex:
         """
 
 class MItMeshPolygon:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __iter__(self) -> Any:
@@ -13007,7 +12915,6 @@ class MItMeshPolygon:
         """
 
 class MItMeshVertex:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __iter__(self) -> Any:
@@ -13305,7 +13212,6 @@ class MItMeshVertex:
         """
 
 class MItSelectionList:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __iter__(self) -> Any:
@@ -13374,6 +13280,7 @@ class MItSelectionList:
     kDagSelectionItem: int = ...
     kPlugSelectionItem: int = ...
     kUnknownItem: int = ...
+
     def next(self, *args: Any, **kwargs: Any) -> Any:
         """next() -> self
 
@@ -13395,7 +13302,6 @@ class MItSelectionList:
         """
 
 class MItSurfaceCV:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __iter__(self) -> Any:
@@ -13514,7 +13420,6 @@ class MItSurfaceCV:
         """
 
 class MIteratorType:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -13540,6 +13445,7 @@ class MIteratorType:
     kMDagPathObject: int = ...
     kMObject: int = ...
     kMPlugObject: int = ...
+
     @property
     def objectType(*args: Any, **kwargs: Any) -> Any:
         """Object type (MIteratorType.objFilterType)."""
@@ -13548,7 +13454,6 @@ class MIteratorType:
         """Object type (MIteratorType.objFilterType)."""
 
 class MLockMessage(MMessage):
-    __doc__: str = ...
     kAddAttr: int = ...
     kChildReorder: int = ...
     kCreateChildInstance: int = ...
@@ -13569,6 +13474,7 @@ class MLockMessage(MMessage):
     kReparent: int = ...
     kUnlockAttr: int = ...
     kUnlockNode: int = ...
+
     def setNodeLockDAGQueryCallback(self, *args: Any, **kwargs: Any) -> Any:
         """setNodeLockDAGQueryCallback(dagPath, function, clientData=None) -> id
 
@@ -13823,7 +13729,6 @@ class MMatrix:
         """Return self+value."""
     def __delitem__(self, key: Any) -> Any:
         """Delete self[key]."""
-    __doc__: str = ...
     def __eq__(self, value: Any) -> Any:
         """Return self==value."""
     def __ge__(self, value: Any) -> Any:
@@ -13832,7 +13737,6 @@ class MMatrix:
         """Return self[key]."""
     def __gt__(self, value: Any) -> Any:
         """Return self>value."""
-    __hash__: NoneType = ...
     def __iadd__(self, value: Any) -> Any:
         """Return self+=value."""
     def __imul__(self, value: Any) -> Any:
@@ -13885,6 +13789,7 @@ class MMatrix:
         """Returns True if this matrix is singular."""
     kIdentity: MMatrix = ...
     kTolerance: float = ...
+
     def setElement(self, *args: Any, **kwargs: Any) -> Any:
         """Sets the matrix element for the specified row and column."""
     def setToIdentity(self, *args: Any, **kwargs: Any) -> Any:
@@ -13901,7 +13806,6 @@ class MMatrixArray:
         """Return key in self."""
     def __delitem__(self, key: Any) -> Any:
         """Delete self[key]."""
-    __doc__: str = ...
     def __getitem__(self, key: Any) -> Any:
         """Return self[key]."""
     def __iadd__(self, value: Any) -> Any:
@@ -13944,7 +13848,6 @@ class MMatrixArray:
         """Number of elements by which to grow the array when necessary."""
 
 class MMeshIntersector:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -13984,14 +13887,12 @@ class MMeshIntersector:
         """True if the intersector has been created, False otherwise."""
 
 class MMeshIsectAccelParams:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
 
 class MMeshSmoothOptions:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -14018,6 +13919,7 @@ class MMeshSmoothOptions:
     kLegacy: int = ...
     kOpenSubdivCatmullClarkAdaptive: int = ...
     kOpenSubdivCatmullClarkUniform: int = ...
+
     @property
     def keepBorderEdge(*args: Any, **kwargs: Any) -> Any:
         """If True, border edges will not be smoothed."""
@@ -14056,7 +13958,6 @@ class MMeshSmoothOptions:
         """Determines subdivision algorithm used for mesh smoothing."""
 
 class MModelMessage(MMessage):
-    __doc__: str = ...
     def addAfterDuplicateCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addAfterDuplicateCallback(function, clientData=None) -> id
 
@@ -14122,7 +14023,6 @@ class MModelMessage(MMessage):
         """
 
 class MNamespace:
-    __doc__: str = ...
     def addNamespace(self, *args: Any, **kwargs: Any) -> Any:
         """addNamespace(MString name, MString parent=None)
 
@@ -14315,7 +14215,6 @@ class MNamespace:
         """
 
 class MNodeCacheDisablingInfo:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -14347,7 +14246,6 @@ class MNodeCacheDisablingInfo:
         """
 
 class MNodeCacheSetupInfo:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -14366,6 +14264,7 @@ class MNodeCacheSetupInfo:
     kLastRequirement: int = ...
     kSimulationSupport: int = ...
     kWantToCacheByDefault: int = ...
+
     def setPreference(self, *args: Any, **kwargs: Any) -> Any:
         """setPreference(PreferenceFlag, bool)
 
@@ -14378,7 +14277,6 @@ class MNodeCacheSetupInfo:
         """
 
 class MNodeClass:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -14431,7 +14329,6 @@ class MNodeClass:
         """Name of the node class. This is the name that is given to the createNode command to create nodes of this type."""
 
 class MNodeMessage(MMessage):
-    __doc__: str = ...
     def addAttributeAddedOrRemovedCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addAttributeAddedOrRemovedCallback(node, function, clientData=None) -> id
 
@@ -14650,36 +14547,61 @@ class MNodeMessage(MMessage):
     kOtherPlugSet: int = ...
 
 class MObject:
-    __doc__: str = ...
-    def __eq__(self, value: Any) -> Any:
+    def __eq__(self, value: object) -> bool:
         """Return self==value."""
-    def __ge__(self, value: Any) -> Any:
+    def __ge__(self, value: object) -> bool:
         """Return self>=value."""
-    def __gt__(self, value: Any) -> Any:
+    def __gt__(self, value: object) -> bool:
         """Return self>value."""
-    __hash__: NoneType = ...
-    def __init__(self, args: Any, kwargs: Any) -> Any:
+    @overload
+    def __init__(self) -> None: ...
+    @overload
+    def __init__(self, src: MObject) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
-    def __le__(self, value: Any) -> Any:
+    def __le__(self, value: object) -> bool:
         """Return self<=value."""
-    def __lt__(self, value: Any) -> Any:
+    def __lt__(self, value: object) -> bool:
         """Return self<value."""
-    def __ne__(self, value: Any) -> Any:
+    def __ne__(self, value: object) -> bool:
         """Return self!=value."""
-    def __new__(self, args: Any, kwargs: Any) -> Any:
+    def __new__(cls: type[Self]) -> Self:
         """Create and return a new object.  See help(type) for accurate signature."""
-    def apiType(self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the function set type for the object."""
+    def apiType(self) -> int:
+        """Returns the function set type for the object.
+
+        Returns:
+            MFn type constant.
+            Returns a constant indicating the type of the internal Maya object.
+            If the MObject is null MFn.kInvalid will be returned.
+        """
     @property
-    def apiTypeStr(*args: Any, **kwargs: Any) -> Any:
+    def apiTypeStr(self) -> Any:
         """(readonly) String containing the object's type name."""
     @apiTypeStr.setter
-    def apiTypeStr(*args: Any, **kwargs: Any) -> Any:
+    def apiTypeStr(self, value) -> Any:
         """(readonly) String containing the object's type name."""
-    def hasFn(self, *args: Any, **kwargs: Any) -> Any:
-        """Tests whether object is compatible with the specified function set."""
-    def isNull(self, *args: Any, **kwargs: Any) -> Any:
-        """Tests whether there is an internal Maya object."""
+    @property
+    def apiTypeStr(self) -> Any:
+        """(readonly) String containing the object's type name."""
+    @apiTypeStr.setter
+    def apiTypeStr(self, value) -> Any:
+        """(readonly) String containing the object's type name."""
+    def hasFn(self, fn: int) -> bool:
+        """Tests whether object is compatible with the specified function set.
+
+        Args:
+            fn: MFn type constant
+
+        Returns:
+            Returns True if the internal Maya object supports the specified function set specified by fn.
+        """
+    def isNull(self) -> bool:
+        """Tests whether there is an internal Maya object.
+
+        Returns:
+            Returns True if the MObject is not referring to any Maya internal object
+            (i.e. it is equivalent to kNullObj).
+        """
     kNullObj: MObject = ...
 
 class MObjectArray:
@@ -14689,7 +14611,6 @@ class MObjectArray:
         """Return key in self."""
     def __delitem__(self, key: Any) -> Any:
         """Delete self[key]."""
-    __doc__: str = ...
     def __getitem__(self, key: Any) -> Any:
         """Return self[key]."""
     def __iadd__(self, value: Any) -> Any:
@@ -14732,14 +14653,12 @@ class MObjectArray:
         """Number of elements by which to grow the array when necessary."""
 
 class MObjectHandle:
-    __doc__: str = ...
     def __eq__(self, value: Any) -> Any:
         """Return self==value."""
     def __ge__(self, value: Any) -> Any:
         """Return self>=value."""
     def __gt__(self, value: Any) -> Any:
         """Return self>value."""
-    __hash__: NoneType = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __le__(self, value: Any) -> Any:
@@ -14779,7 +14698,6 @@ class MObjectHandle:
         """
 
 class MObjectSetMessage(MMessage):
-    __doc__: str = ...
     def addSetMembersModifiedCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addSetMembersModifiedCallback(node, function, clientData=None) -> id
 
@@ -14795,7 +14713,6 @@ class MObjectSetMessage(MMessage):
         """
 
 class MPlane:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -14836,14 +14753,12 @@ class MPlane:
         """
 
 class MPlug:
-    __doc__: str = ...
     def __eq__(self, value: Any) -> Any:
         """Return self==value."""
     def __ge__(self, value: Any) -> Any:
         """Return self>=value."""
     def __gt__(self, value: Any) -> Any:
         """Return self>value."""
-    __hash__: NoneType = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __le__(self, value: Any) -> Any:
@@ -15042,6 +14957,7 @@ class MPlug:
     kLastAttrSelector: int = ...
     kNonDefault: int = ...
     kNotFreeToChange: int = ...
+
     def logicalIndex(self, *args: Any, **kwargs: Any) -> Any:
         """Returns this plug's logical index within its parent array."""
     def name(self, *args: Any, **kwargs: Any) -> Any:
@@ -15113,7 +15029,6 @@ class MPlugArray:
         """Return key in self."""
     def __delitem__(self, key: Any) -> Any:
         """Delete self[key]."""
-    __doc__: str = ...
     def __getitem__(self, key: Any) -> Any:
         """Return self[key]."""
     def __iadd__(self, value: Any) -> Any:
@@ -15160,7 +15075,6 @@ class MPoint:
         """Return self+value."""
     def __delitem__(self, key: Any) -> Any:
         """Delete self[key]."""
-    __doc__: str = ...
     def __eq__(self, value: Any) -> Any:
         """Return self==value."""
     def __ge__(self, value: Any) -> Any:
@@ -15169,7 +15083,6 @@ class MPoint:
         """Return self[key]."""
     def __gt__(self, value: Any) -> Any:
         """Return self>value."""
-    __hash__: NoneType = ...
     def __iadd__(self, value: Any) -> Any:
         """Return self+=value."""
     def __imul__(self, value: Any) -> Any:
@@ -15218,6 +15131,7 @@ class MPoint:
         """Test for equivalence of two points, within a tolerance."""
     kOrigin: MPoint = ...
     kTolerance: float = ...
+
     def rationalize(self, *args: Any, **kwargs: Any) -> Any:
         """Convert point to rational form."""
     @property
@@ -15252,7 +15166,6 @@ class MPointArray:
         """Return key in self."""
     def __delitem__(self, key: Any) -> Any:
         """Delete self[key]."""
-    __doc__: str = ...
     def __getitem__(self, key: Any) -> Any:
         """Return self[key]."""
     def __iadd__(self, value: Any) -> Any:
@@ -15295,7 +15208,6 @@ class MPointArray:
         """Number of elements by which to grow the array when necessary."""
 
 class MPointOnMesh:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -15344,7 +15256,6 @@ class MPointOnMesh:
         """(int) Face-local index of the triangle containing the point."""
 
 class MPolyMessage(MMessage):
-    __doc__: str = ...
     def addPolyComponentIdChangedCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addPolyComponentIdChangedCallback(node, (wantVertIds, wantEdgeIds, wantFaceIds), function, clientData=None) -> id
 
@@ -15410,7 +15321,6 @@ class MPolyMessage(MMessage):
         """
 
 class MPxAttributePatternFactory:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -15419,7 +15329,6 @@ class MPxAttributePatternFactory:
         """Return str(self)."""
 
 class MPxCommand:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -15462,6 +15371,7 @@ class MPxCommand:
     kLong: int = ...
     kNoArg: int = ...
     kString: int = ...
+
     def redoIt(self, *args: Any, **kwargs: Any) -> Any:
         """Called by Maya to redo a previously undone command."""
     def setResult(self, *args: Any, **kwargs: Any) -> Any:
@@ -15472,7 +15382,6 @@ class MPxCommand:
         """Called by Maya to undo a previously executed command."""
 
 class MPxData:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -15488,6 +15397,7 @@ class MPxData:
     kData: int = ...
     kGeometryData: int = ...
     kLast: int = ...
+
     def name(self, *args: Any, **kwargs: Any) -> Any:
         """name() -> string
 
@@ -15529,7 +15439,6 @@ class MPxData:
         """
 
 class MPxGeometryData(MPxData):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -15611,7 +15520,6 @@ class MPxGeometryData(MPxData):
         """
 
 class MPxGeometryIterator:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __iter__(self) -> Any:
@@ -15720,7 +15628,6 @@ class MPxGeometryIterator:
         """
 
 class MPxNode:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -16016,6 +15923,7 @@ class MPxNode:
     kSurfaceShape: int = ...
     kThreadedDeviceNode: int = ...
     kTransformNode: int = ...
+
     def legalConnection(self, *args: Any, **kwargs: Any) -> Any:
         """legalConnection(plug, otherPlug, asSrc) -> bool/None
 
@@ -16342,6 +16250,7 @@ class MPxSurfaceShape(MPxNode):
     boundingBoxCenterX: MObject = ...
     boundingBoxCenterY: MObject = ...
     boundingBoxCenterZ: MObject = ...
+
     def cachedShapeAttr(self, *args: Any, **kwargs: Any) -> Any:
         """cachedShapeAttr() -> MObject
 
@@ -16353,6 +16262,7 @@ class MPxSurfaceShape(MPxNode):
         This method is used by Maya to determine whether a surface can be made live. It can be overridden to return True if you wish to allow your surface to be made live. If you return True, you will also need to implement both closestPoint() overloads. The default is to return False.
         """
     center: MObject = ...
+
     def childChanged(self, *args: Any, **kwargs: Any) -> Any:
         """childChanged(state=kObjectChanged) -> self
 
@@ -16495,6 +16405,7 @@ class MPxSurfaceShape(MPxNode):
     instObjGroups: MObject = ...
     intermediateObject: MObject = ...
     inverseMatrix: MObject = ...
+
     def isBounded(self, *args: Any, **kwargs: Any) -> Any:
         """isBounded() -> bool
 
@@ -16512,6 +16423,7 @@ class MPxSurfaceShape(MPxNode):
         Making a shape renderable allows the shape to have shading group assignments.
         """
     isTemplated: MObject = ...
+
     def localShapeInAttr(self, *args: Any, **kwargs: Any) -> Any:
         """localShapeInAttr() -> MObject
 
@@ -16531,6 +16443,7 @@ class MPxSurfaceShape(MPxNode):
     mControlValueY: MObject = ...
     mControlValueZ: MObject = ...
     mHasHistoryOnCreate: MObject = ...
+
     def match(self, *args: Any, **kwargs: Any) -> Any:
         """match(mask, componentList) -> bool
 
@@ -16563,6 +16476,7 @@ class MPxSurfaceShape(MPxNode):
           kMatchInvalidAttributeDim      The attribute specification provided the wrong number of dimensions for an attribute.
         """
     matrix: MObject = ...
+
     def newControlPointComponent(self, *args: Any, **kwargs: Any) -> Any:
         """newControlPointComponent() -> MObject
 
@@ -16589,6 +16503,7 @@ class MPxSurfaceShape(MPxNode):
     objectGrpCompList: MObject = ...
     parentInverseMatrix: MObject = ...
     parentMatrix: MObject = ...
+
     def pointAtParm(self, *args: Any, **kwargs: Any) -> Any:
         """pointAtParm(atThisParm, evaluatedPoint) -> bool
 
@@ -16648,6 +16563,7 @@ class MPxSurfaceShape(MPxNode):
         * undoInfo (MDoubleArray) - Values used for undo purposes
         """
     useObjectColor: MObject = ...
+
     def vertexOffsetDirection(self, *args: Any, **kwargs: Any) -> Any:
         """vertexOffsetDirection(component, direction, mode, normalize) -> bool
 
@@ -16670,6 +16586,7 @@ class MPxSurfaceShape(MPxNode):
           kUVNTriad     Calculate u, v, and normal offsets.
         """
     visibility: MObject = ...
+
     def weightedTransformUsing(self, *args: Any, **kwargs: Any) -> Any:
         """weightedTransformUsing(xform, space, componentList, cachingMode, pointCache, freezePlane) -> self
 
@@ -16707,6 +16624,7 @@ class MPxSurfaceShape(MPxNode):
         """
     worldInverseMatrix: MObject = ...
     worldMatrix: MObject = ...
+
     def worldShapeOutAttr(self, *args: Any, **kwargs: Any) -> Any:
         """worldShapeOutAttr() -> MObject
 
@@ -16720,7 +16638,6 @@ class MQuaternion:
         """Return self+value."""
     def __delitem__(self, key: Any) -> Any:
         """Delete self[key]."""
-    __doc__: str = ...
     def __eq__(self, value: Any) -> Any:
         """Return self==value."""
     def __ge__(self, value: Any) -> Any:
@@ -16729,7 +16646,6 @@ class MQuaternion:
         """Return self[key]."""
     def __gt__(self, value: Any) -> Any:
         """Return self>value."""
-    __hash__: NoneType = ...
     def __imul__(self, value: Any) -> Any:
         """Return self*=value."""
     def __init__(self, args: Any, kwargs: Any) -> Any:
@@ -16782,6 +16698,7 @@ class MQuaternion:
         """Returns True if the distance between the two quaternions (in quaternion space) is less than or equal to the given tolerance."""
     kIdentity: MQuaternion = ...
     kTolerance: float = ...
+
     def log(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a new quaternion containing the natural log of this one."""
     def negateIt(self, *args: Any, **kwargs: Any) -> Any:
@@ -16830,7 +16747,6 @@ class MQuaternion:
         """Imaginary Z component"""
 
 class MRampAttribute:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -16867,6 +16783,7 @@ class MRampAttribute:
     kNone: int = ...
     kSmooth: int = ...
     kSpline: int = ...
+
     def numEntries(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the number of entries in the ramp."""
     def pack(self, *args: Any, **kwargs: Any) -> Any:
@@ -16883,7 +16800,6 @@ class MRampAttribute:
         """Sort the ramp by position. Indices are also re-ordered during sort."""
 
 class MRichSelection:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -16935,7 +16851,6 @@ class MRichSelection:
         """
 
 class MSceneMessage(MMessage):
-    __doc__: str = ...
     def addCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addCallback(message, function, clientData=None) -> id
 
@@ -17209,7 +17124,6 @@ class MSceneMessage(MMessage):
     kSoftwareRenderInterrupted: int = ...
 
 class MSelectionList:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -17310,6 +17224,7 @@ class MSelectionList:
     kMergeNormal: int = ...
     kRemoveFromList: int = ...
     kXORWithList: int = ...
+
     def length(self, *args: Any, **kwargs: Any) -> Any:
         """length() -> int
 
@@ -17347,7 +17262,6 @@ class MSelectionList:
         """
 
 class MSelectionMask:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -17558,6 +17472,7 @@ class MSelectionMask:
     kSelectUVLocators: int = ...
     kSelectVertices: int = ...
     kSelectXYZLocators: int = ...
+
     def registerSelectionType(self, *args: Any, **kwargs: Any) -> Any:
         """registerSelectionType(selTypeName, priority=0) -> bool
 
@@ -17581,7 +17496,6 @@ class MSelectionMask:
         """
 
 class MSpace:
-    __doc__: str = ...
     kInvalid: int = ...
     kLast: int = ...
     kObject: int = ...
@@ -17591,7 +17505,6 @@ class MSpace:
     kWorld: int = ...
 
 class MSyntax:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -17629,6 +17542,7 @@ class MSyntax:
     kStringObjects: int = ...
     kTime: int = ...
     kUnsigned: int = ...
+
     def makeFlagMultiUse(self, *args: Any, **kwargs: Any) -> Any:
         """Set whether a flag may be used multiple times on the command line."""
     def makeFlagQueryWithFullArgs(self, *args: Any, **kwargs: Any) -> Any:
@@ -17649,14 +17563,12 @@ class MSyntax:
 class MTime:
     def __add__(self, value: Any) -> Any:
         """Return self+value."""
-    __doc__: str = ...
     def __eq__(self, value: Any) -> Any:
         """Return self==value."""
     def __ge__(self, value: Any) -> Any:
         """Return self>=value."""
     def __gt__(self, value: Any) -> Any:
         """Return self>value."""
-    __hash__: NoneType = ...
     def __iadd__(self, value: Any) -> Any:
         """Return self+=value."""
     def __imul__(self, value: Any) -> Any:
@@ -17755,6 +17667,7 @@ class MTime:
     kSeconds: int = ...
     kShowScan: int = ...
     kUserDef: int = ...
+
     def setUIUnit(self, *args: Any, **kwargs: Any) -> Any:
         """Change the units used to display time in Maya's UI."""
     def ticksPerSecond(self, *args: Any, **kwargs: Any) -> Any:
@@ -17781,7 +17694,6 @@ class MTimeArray:
         """Return key in self."""
     def __delitem__(self, key: Any) -> Any:
         """Delete self[key]."""
-    __doc__: str = ...
     def __getitem__(self, key: Any) -> Any:
         """Return self[key]."""
     def __iadd__(self, value: Any) -> Any:
@@ -17824,14 +17736,12 @@ class MTimeArray:
         """Number of elements by which to grow the array when necessary."""
 
 class MTimeRange:
-    __doc__: str = ...
     def __eq__(self, value: Any) -> Any:
         """Return self==value."""
     def __ge__(self, value: Any) -> Any:
         """Return self>=value."""
     def __gt__(self, value: Any) -> Any:
         """Return self>value."""
-    __hash__: NoneType = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __le__(self, value: Any) -> Any:
@@ -17867,7 +17777,6 @@ class MTimeRange:
         """
 
 class MTimerMessage(MMessage):
-    __doc__: str = ...
     def addTimerCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addTimerCallback(period, function, clientData=None) -> id
 
@@ -17897,14 +17806,12 @@ class MTimerMessage(MMessage):
         """
 
 class MTransformationMatrix:
-    __doc__: str = ...
     def __eq__(self, value: Any) -> Any:
         """Return self==value."""
     def __ge__(self, value: Any) -> Any:
         """Return self>=value."""
     def __gt__(self, value: Any) -> Any:
         """Return self>value."""
-    __hash__: NoneType = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __le__(self, value: Any) -> Any:
@@ -17935,6 +17842,7 @@ class MTransformationMatrix:
     kYZX: int = ...
     kZXY: int = ...
     kZYX: int = ...
+
     def reorderRotation(self, *args: Any, **kwargs: Any) -> Any:
         """Reorders the transformation's rotate component to give the same overall rotation but using a new order or rotations."""
     def rotateBy(self, *args: Any, **kwargs: Any) -> Any:
@@ -17945,8 +17853,11 @@ class MTransformationMatrix:
         """Returns the transformation's rotate pivot component."""
     def rotatePivotTranslation(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the transformation's rotate pivot translation component."""
-    def rotation(self, *args: Any, **kwargs: Any) -> Any:
-        """Returns the transformation's rotation component as either an Euler rotation or a quaternion."""
+    @overload
+    def rotation(self, asQuaternion: Literal[True]) -> MQuaternion: ...
+    @overload
+    def rotation(self, asQuaternion: Literal[False] = ...) -> MEulerRotation:
+        """Returns the transform's rotation as an MEulerRotation or MQuaternion."""
     def rotationComponents(self, *args: Any, **kwargs: Any) -> Any:
         """Returns a list containing the four components of the transformation's rotate component."""
     def rotationOrder(self, *args: Any, **kwargs: Any) -> Any:
@@ -17989,18 +17900,16 @@ class MTransformationMatrix:
         """Multiplies the transformation's shear components by the three floats in the provided sequence."""
     def translateBy(self, *args: Any, **kwargs: Any) -> Any:
         """Adds a vector to the transformation's translation component."""
-    def translation(self, *args: Any, **kwargs: Any) -> Any:
+    def translation(self, space: MSpace) -> MVector:
         """Returns the transformation's translation component as a vector."""
 
 class MTypeId:
-    __doc__: str = ...
     def __eq__(self, value: Any) -> Any:
         """Return self==value."""
     def __ge__(self, value: Any) -> Any:
         """Return self>=value."""
     def __gt__(self, value: Any) -> Any:
         """Return self>value."""
-    __hash__: NoneType = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __le__(self, value: Any) -> Any:
@@ -18019,14 +17928,12 @@ class MTypeId:
         """Returns the type id as a long."""
 
 class MURI:
-    __doc__: str = ...
     def __eq__(self, value: Any) -> Any:
         """Return self==value."""
     def __ge__(self, value: Any) -> Any:
         """Return self>=value."""
     def __gt__(self, value: Any) -> Any:
         """Return self>value."""
-    __hash__: NoneType = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __le__(self, value: Any) -> Any:
@@ -18241,7 +18148,6 @@ class MUint64Array:
         """Return key in self."""
     def __delitem__(self, key: Any) -> Any:
         """Delete self[key]."""
-    __doc__: str = ...
     def __getitem__(self, key: Any) -> Any:
         """Return self[key]."""
     def __iadd__(self, value: Any) -> Any:
@@ -18290,7 +18196,6 @@ class MUintArray:
         """Return key in self."""
     def __delitem__(self, key: Any) -> Any:
         """Delete self[key]."""
-    __doc__: str = ...
     def __getitem__(self, key: Any) -> Any:
         """Return self[key]."""
     def __iadd__(self, value: Any) -> Any:
@@ -18333,7 +18238,6 @@ class MUintArray:
         """Number of elements by which to grow the array when necessary."""
 
 class MUserData:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -18361,7 +18265,6 @@ class MUserData:
         """
 
 class MUserEventMessage(MMessage):
-    __doc__: str = ...
     def addUserEventCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addUserEventCallback(eventName, function, clientData=None) -> id
 
@@ -18420,14 +18323,12 @@ class MUserEventMessage(MMessage):
         """
 
 class MUuid:
-    __doc__: str = ...
     def __eq__(self, value: Any) -> Any:
         """Return self==value."""
     def __ge__(self, value: Any) -> Any:
         """Return self>=value."""
     def __gt__(self, value: Any) -> Any:
         """Return self>value."""
-    __hash__: NoneType = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __le__(self, value: Any) -> Any:
@@ -18470,7 +18371,6 @@ class MVector:
         """Return self+value."""
     def __delitem__(self, key: Any) -> Any:
         """Delete self[key]."""
-    __doc__: str = ...
     def __eq__(self, value: Any) -> Any:
         """Return self==value."""
     def __ge__(self, value: Any) -> Any:
@@ -18479,7 +18379,6 @@ class MVector:
         """Return self[key]."""
     def __gt__(self, value: Any) -> Any:
         """Return self>value."""
-    __hash__: NoneType = ...
     def __iadd__(self, value: Any) -> Any:
         """Return self+=value."""
     def __imul__(self, value: Any) -> Any:
@@ -18545,6 +18444,7 @@ class MVector:
     kZaxisVector: MVector = ...
     kZeroVector: MVector = ...
     kZnegAxisVector: MVector = ...
+
     def length(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the magnitude of this vector."""
     def normal(self, *args: Any, **kwargs: Any) -> Any:
@@ -18583,7 +18483,6 @@ class MVectorArray:
         """Return key in self."""
     def __delitem__(self, key: Any) -> Any:
         """Delete self[key]."""
-    __doc__: str = ...
     def __getitem__(self, key: Any) -> Any:
         """Return self[key]."""
     def __iadd__(self, value: Any) -> Any:
@@ -18626,7 +18525,6 @@ class MVectorArray:
         """Number of elements by which to grow the array when necessary."""
 
 class MWeight:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:

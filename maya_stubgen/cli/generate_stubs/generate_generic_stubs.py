@@ -69,6 +69,9 @@ def generate_generic_stub(module: ModuleInfo) -> str:
     for name, member in inspect.getmembers(module):
         stub_member = None
 
+        if name.startswith("_"):
+            continue
+
         if inspect.ismodule(member):
             # Ignore modules
             continue

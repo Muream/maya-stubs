@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from typing import *
 from typing_extensions import Self
 
@@ -5,24 +7,16 @@ if TYPE_CHECKING:
     from _typeshed import Incomplete
 else:
     Incomplete = Any
+
 from maya.api.OpenMaya import *
 from maya.api.OpenMayaRender import *
 
-__builtins__: dict
-__cached__: str
-__doc__: NoneType
-__file__: str
-__loader__: SourceFileLoader
-__name__: str
-__package__: str
-__spec__: ModuleSpec
 key: str
 ourdict: dict
 py2dict: dict
 val: str
 
 class M3dView:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -928,14 +922,12 @@ class M3dView:
         """
 
 class MCursor:
-    __doc__: str = ...
     def __eq__(self, value: Any) -> Any:
         """Return self==value."""
     def __ge__(self, value: Any) -> Any:
         """Return self>=value."""
     def __gt__(self, value: Any) -> Any:
         """Return self>value."""
-    __hash__: NoneType = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __le__(self, value: Any) -> Any:
@@ -954,7 +946,6 @@ class MCursor:
     kPencilCursor: MCursor = ...
 
 class MDrawData:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -967,7 +958,6 @@ class MDrawData:
         """
 
 class MDrawInfo:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -1064,7 +1054,6 @@ class MDrawInfo:
         """
 
 class MDrawProperties:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -1095,7 +1084,6 @@ class MDrawProperties:
         """point size"""
 
 class MDrawRequest:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -1219,7 +1207,6 @@ class MDrawRequest:
         """The view where drawing will be done."""
 
 class MEvent:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -1315,7 +1302,6 @@ class MEvent:
     shiftKey: int = ...
 
 class MFnManip3D(MFnTransform):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -1394,7 +1380,6 @@ class MFnManip3D(MFnTransform):
         """
 
 class MFnCircleSweepManip(MFnManip3D):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -1493,7 +1478,6 @@ class MFnCircleSweepManip(MFnManip3D):
         """The start point of the CircleSweepManip."""
 
 class MFnCurveSegmentManip(MFnManip3D):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -1562,7 +1546,6 @@ class MFnCurveSegmentManip(MFnManip3D):
         """The start parameter of the CurveSegmentManip."""
 
 class MFnDirectionManip(MFnManip3D):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -1631,7 +1614,6 @@ class MFnDirectionManip(MFnManip3D):
         """
 
 class MFnDiscManip(MFnManip3D):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -1701,7 +1683,6 @@ class MFnDiscManip(MFnManip3D):
         """
 
 class MFnDistanceManip(MFnManip3D):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -1792,7 +1773,6 @@ class MFnDistanceManip(MFnManip3D):
         """
 
 class MFnFreePointTriadManip(MFnManip3D):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -1876,7 +1856,6 @@ class MFnFreePointTriadManip(MFnManip3D):
         """
 
 class MFnPointOnCurveManip(MFnManip3D):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -1937,7 +1916,6 @@ class MFnPointOnCurveManip(MFnManip3D):
         """The parameter of the PointOnCurveManip."""
 
 class MFnPointOnSurfaceManip(MFnManip3D):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -2197,7 +2175,6 @@ class MFnScaleManip(MFnManip3D):
         """The snap increment is specified in the working	unit, and is the distance between snap points when dragging the scale handles."""
 
 class MFnStateManip(MFnManip3D):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -2256,7 +2233,6 @@ class MFnStateManip(MFnManip3D):
         """
 
 class MFnToggleManip(MFnManip3D):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -2327,7 +2303,6 @@ class MFnToggleManip(MFnManip3D):
         """
 
 class MHWShaderSwatchGenerator(MSwatchRenderBase):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -2363,7 +2338,6 @@ class MHWShaderSwatchGenerator(MSwatchRenderBase):
         """
 
 class MManipData:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -2415,7 +2389,6 @@ class MManipData:
         """
 
 class MMaterial:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -2597,7 +2570,6 @@ class MMaterial:
         """
 
 class MMaterialArray:
-    __doc__: str = ...
     def __getitem__(self, key: Any) -> Any:
         """Return self[key]."""
     def __init__(self, args: Any, kwargs: Any) -> Any:
@@ -2663,7 +2635,6 @@ class MMaterialArray:
         """The size by which the array will be expanded whenever expansion is necessary."""
 
 class MPaintMessage(MMessage):
-    __doc__: str = ...
     def addVertexColorCallback(self, *args: Any, **kwargs: Any) -> Any:
         """addVertexColorCallback(function, clientData=None) -> id
 
@@ -2685,7 +2656,6 @@ class MPaintMessage(MMessage):
         """
 
 class MPanelCanvas:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -2825,7 +2795,6 @@ class MPanelCanvas:
         """
 
 class MPanelCanvasInfo:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -2872,7 +2841,6 @@ class MPanelCanvasInfo:
         """
 
 class MPxContext:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -3337,7 +3305,6 @@ class MPxContext:
         """
 
 class MPxContextCommand:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -3399,7 +3366,6 @@ class MPxContextCommand:
         """Returns the context command's MSyntax object, if it has one."""
 
 class MPxDragAndDropBehavior:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -5005,7 +4971,6 @@ class MPxManipulatorNode(MPxNode):
         """
 
 class MPxSelectionContext(MPxContext):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -5310,7 +5275,6 @@ class MPxSelectionContext(MPxContext):
         """
 
 class MPxSurfaceShapeUI:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -5411,7 +5375,6 @@ class MPxSurfaceShapeUI:
         """
 
 class MPxToolCommand(MPxCommand):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -5444,7 +5407,6 @@ class MPxToolCommand(MPxCommand):
         """
 
 class MSelectInfo(MDrawInfo):
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -5550,7 +5512,6 @@ class MSelectInfo(MDrawInfo):
         """
 
 class MTextureEditorDrawInfo:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -5587,7 +5548,6 @@ class MTextureEditorDrawInfo:
     kDrawWireframe: int = ...
 
 class MTimeSliderCustomDrawManager:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -5613,7 +5573,6 @@ class MTimeSliderCustomDrawManager:
     def setTooltip(self, *args: Any, **kwargs: Any) -> Any: ...
 
 class MTimeSliderDrawPrimitive:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -5695,7 +5654,6 @@ class MTimeSliderDrawPrimitive:
         """Tooltip of the primitive."""
 
 class MUiMessage(MMessage):
-    __doc__: str = ...
     def add3dViewDestroyMsgCallback(self, *args: Any, **kwargs: Any) -> Any:
         """add3dViewDestroyMsgCallback(panelName, function, clientData=None) -> id
 
@@ -5818,7 +5776,6 @@ class MUiMessage(MMessage):
         """
 
 class RenderParameters:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
@@ -5843,7 +5800,6 @@ class RenderParameters:
         """Unfiltered state"""
 
 class ShaderContext:
-    __doc__: str = ...
     def __init__(self, args: Any, kwargs: Any) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
     def __new__(self, args: Any, kwargs: Any) -> Any:
