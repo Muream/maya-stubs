@@ -60,8 +60,7 @@ class Flag(Variable):
         super().__post_init__()
         self.type = mel_to_python_type(self.type)
 
-        self.description = self.description.replace("\\0", "")
-        self.description = self.description.strip("\\n")
+        self.description = self.description.replace("\\n\\0", "")
         self.description = self.description.strip()
 
 

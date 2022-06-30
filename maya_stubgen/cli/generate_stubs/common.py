@@ -327,8 +327,8 @@ class Docstring:
 
     @staticmethod
     def process_line(line: str) -> str:
-        line = line.replace("\\0", "")
-        line = line.strip().strip("\\0")
+        # line = line.replace("\\0", "")
+        line = line.strip()
 
         line = line.replace('"""', "'''")
 
