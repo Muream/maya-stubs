@@ -19,12 +19,26 @@ cmds_documentation_url = (
     "https://help.autodesk.com/cloudhelp/2023/ENU/Maya-Tech-Docs/CommandsPython/{}.html"
 )
 
+# https://regex101.com/r/9595nC/1
+synopsis_header_regex = re.compile(
+    r"Synopsis: (?P<name>\w+)( \[flags\] ?(?P<positional_args>.*))?"
+)
+
+# https://regex101.com/r/bBZoCh/3
+synopsis_flag_regex = re.compile(
+    r"-(?P<short_name>\w+)\s+"
+    r"-(?P<long_name>\w+)"
+    r"(?P<types>[\w\|\s\[\]]+)?\s?"
+    r"(?P<multi_use>\(multi-use\))?\s?"
+    r"(\(Query Arg (?P<query_arg_mandatory>Mandatory|Optional)\))?"
+)
+
 
 class Property(Enum):
     create = "create"
     query = "query"
     edit = "edit"
-    multi = "multi"
+    multiuse = "multiuse"
 
 
 @dataclass
@@ -39,6 +53,10 @@ class Flag(Variable):
     def __post_init__(self) -> None:
         super().__post_init__()
         self.type = mel_to_python_type(self.type)
+
+        self.description = self.description.replace("\\0", "")
+        self.description = self.description.strip("\\n")
+        self.description = self.description.strip()
 
 
 @dataclass
@@ -56,7 +74,7 @@ class ReturnValue:
         return str(self.type).replace("typing.", "")
 
 
-flag_name_re = r"(?P<long_name>\w+)\((?P<short_name>\w+)\)"
+flag_name_re = r"(?P<long_name>\w+)\((?P<short_name>\w*)\)"
 
 
 def function_from_synopsis(command: str) -> Function:
@@ -75,6 +93,7 @@ def function_from_synopsis(command: str) -> Function:
     logger.debug("Parsing synopsis for: %s", command)
 
     cache_page = Path() / ".cache" / "synopsis" / f"{command}.txt"
+    cache_page = cache_page.resolve()
     if not cache_page.exists():
 
         try:
@@ -86,6 +105,7 @@ def function_from_synopsis(command: str) -> Function:
         with cache_page.open("w", encoding="utf8") as f:
             f.write(synopsis.strip())
 
+    logger.debug("Synopsis cache: %s", str(cache_page))
     synopsis = cache_page.read_text()
 
     if "No Flags" in synopsis:
@@ -95,22 +115,10 @@ def function_from_synopsis(command: str) -> Function:
     else:
         arguments = []
 
-        # https://regex101.com/r/9595nC/1
-        header_regex = r"Synopsis: (?P<name>\w+)( \[flags\] ?(?P<positional_args>.*))?"
-
-        # https://regex101.com/r/bBZoCh/3
-        flag_regex = (
-            r"-(?P<short_name>\w+)\s+"
-            r"-(?P<long_name>\w+)"
-            r"(?P<types>[\w\|\s\[\]]+)?\s?"
-            r"(?P<multi_use>\(multi-use\))?\s?"
-            r"(\(Query Arg (?P<query_arg_mandatory>Mandatory|Optional)\))?"
-        )
-
         for line in synopsis.splitlines():
             line = line.strip()
 
-            match_header = re.match(header_regex, line)
+            match_header = synopsis_header_regex.match(line)
             if match_header:
                 positional_args = match_header["positional_args"]
 
@@ -146,7 +154,7 @@ def function_from_synopsis(command: str) -> Function:
 
                 continue
 
-            match_flag = re.match(flag_regex, line)
+            match_flag = synopsis_flag_regex.match(line)
             if match_flag:
                 long_name = match_flag["long_name"]
                 short_name = match_flag["short_name"]
@@ -180,7 +188,7 @@ def function_from_synopsis(command: str) -> Function:
                     arguments.append(argument)
                 continue
 
-    return Function(command, arguments, docstring=synopsis)
+    return Function(command, arguments)
 
 
 def function_from_documentation(command: str) -> Function:
@@ -195,6 +203,7 @@ def function_from_documentation(command: str) -> Function:
     logger.debug("Scraping docs for: %s", command)
 
     cache_page = Path() / ".cache" / "docs" / "maya" / "cmds" / f"{command}.html"
+    cache_page = cache_page.resolve()
     if not cache_page.exists():
         command_url = cmds_documentation_url.format(command)
 
@@ -203,12 +212,15 @@ def function_from_documentation(command: str) -> Function:
 
         cache_page.parent.mkdir(parents=True, exist_ok=True)
         with cache_page.open("w", encoding="utf8") as f:
-            f.write(str(response.content))
+            f.write(response.text)
 
+    logger.debug("Documentation cache: %s", str(cache_page))
     soup = bs4.BeautifulSoup(cache_page.read_text(), "html.parser")
 
     flags = []
     return_value = ReturnValue("Any")
+    return_description = ""
+    examples = ""
     for title in soup.find_all("h2"):
         title: bs4.element.Tag
         if title.text == "Flags":
@@ -254,10 +266,18 @@ def function_from_documentation(command: str) -> Function:
                 flags.append(flag)
 
         if title.text == "Return value":
-            table: bs4.element.Tag = title.find_next("table")
-            return_type, return_description = [
-                t.text.strip() for t in table.find_all("td")
-            ]
+            next_tag: bs4.element.Tag = title.find_next_sibling()
+            if next_tag.name == "table":
+                first_return_type_row = next_tag.find("tr")
+                return_type, return_description = [
+                    t.text.strip() for t in first_return_type_row.find_all("td")
+                ]
+                return_value = ReturnValue(return_type, return_description)
+            elif next_tag.name == "p":
+                return_type = next_tag.text
+                return_description = "\n".join(
+                    [p.text for p in next_tag.find_next_siblings("p")]
+                )
             return_value = ReturnValue(return_type, return_description)
 
         if title.text == "Python examples":
@@ -289,7 +309,6 @@ def mel_to_python_type(type_name: str) -> str:
         None is converted to bool as an unnamed argument in mel is equivalent to a bool
         on|off is converted to bool
     """
-    type_name = type_name.lower()
     type_map = {
         # str
         "string": "str",
@@ -310,8 +329,47 @@ def mel_to_python_type(type_name: str) -> str:
         None: "bool",
         "none": "bool",
         "on|off": "bool",
+        "any": "Any",
     }
-    return type_map.get(type_name, "Incomplete")
+
+    class SequenceType(Enum):
+        NONE = "None"
+        LIST = "List"
+        TUPLE = "Tuple"
+
+    type_name = type_name.lower()
+
+    array_regex = r"(?P<type>\w+)\[(?P<length>\d+)?\]"
+    tuple_regex = r"\[(?P<types>(\w+(, )?)+)\]"
+
+    match_array = re.match(array_regex, type_name)
+    match_tuple = re.match(tuple_regex, type_name)
+
+    if match_array:
+        match_dict = match_array.groupdict()
+        type_name = match_dict.get("type")
+        length = int(match_dict.get("length") or 0)
+
+        python_type = type_map.get(type_name, "Incomplete")
+        if length:
+            sequence_type = SequenceType.TUPLE
+            python_type = ", ".join([python_type] * length)
+        else:
+            sequence_type = SequenceType.LIST
+    elif match_tuple:
+        match_dict = match_tuple.groupdict()
+        types = match_dict["types"].split(", ")
+        python_types = [type_map.get(t.lower(), "Incomplete") for t in types]
+        python_type = ", ".join(python_types)
+        sequence_type = SequenceType.TUPLE
+    else:
+        sequence_type = SequenceType.NONE
+        python_type = type_map.get(type_name, "Incomplete")
+
+    if sequence_type is not SequenceType.NONE:
+        python_type = f"{sequence_type.value}[{python_type}]"
+
+    return python_type
 
 
 def load_plugins() -> None:
@@ -348,6 +406,10 @@ def generate_cmds_stubs() -> str:
         try:
             function = function_from_documentation(command)
         except requests.exceptions.HTTPError:
+            logger.debug(
+                "Couldn't find documentation for %s, falling back to parsing synopsis.",
+                command,
+            )
             try:
                 function = function_from_synopsis(command)
             except NameError:

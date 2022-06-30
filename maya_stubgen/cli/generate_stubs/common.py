@@ -300,32 +300,54 @@ class Docstring:
     examples: Optional[str] = None
 
     def __post_init__(self):
+        if self.short_description:
+            self.short_description = "\n".join(
+                self.process_lines(self.short_description)
+            )
+
+        if self.long_description:
+            self.long_description = "\n".join(self.process_lines(self.long_description))
+
+        if self.returns:
+            self.returns = "\n".join(self.process_lines(self.returns))
+
+        if self.yields:
+            self.yields = "\n".join(self.process_lines(self.yields))
+
+        if self.raises:
+            self.raises = "\n".join(self.process_lines(self.raises))
+
         self.process_examples()
 
-    def set_returns(self, value):
-        self.returns = value
+    @classmethod
+    def process_lines(cls, text: str) -> str:
+        for line in text.splitlines():
+            line = cls.process_line(line)
+            yield line
 
-    def set_examples(self, value: str):
-        self.examples = value
-        self.process_examples()
+    @staticmethod
+    def process_line(line: str) -> str:
+        line = line.replace("\\0", "")
+        line = line.strip().strip("\\0")
+
+        line = line.replace('"""', "'''")
+
+        if "C:" in line:
+            line = line.replace("\\\\", "\\").replace("\\", "/")
+        return line
 
     def process_examples(self):
         if self.examples is None:
             return
 
         new_content = []
-        for line in self.examples.splitlines():
-            line = line.strip()
+        for line in self.process_lines(self.examples):
 
             if not line:
                 continue
-            line = line.replace('"""', "'''")
 
-            if "C:" in line:
-                line = line.replace("\\\\", "\\").replace("\\", "/")
-
-            if not line.startswith(">>>"):
-                line = ">>> " + line
+            # if not line.startswith(">>>"):
+            #     line = ">>> " + line
             new_content.append(line)
 
         self.examples = "\n".join(new_content)
