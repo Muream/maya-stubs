@@ -6,13 +6,12 @@
 Welcome to Maya's documentation!
 ================================
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+.. autosummary::
+   :toctree: _maya
+   :template: custom-module-template.rst
+   :recursive:
 
-   modules
-
-
+   maya
 
 
 Indices and tables

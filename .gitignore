@@ -1,5 +1,9 @@
 temp/
 .cache/
+ 
+# docs
+docs/_maya/
+stubs/py/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
