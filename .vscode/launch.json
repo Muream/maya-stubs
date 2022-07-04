@@ -2,6 +2,19 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "internalConsole",
+            "justMyCode": false,
+            "presentation": {
+                "hidden": false,
+                "group": "Python",
+                "order": 1
+            },
+        },
+        {
             "name": "Mayapy: Generate Stubs",
             "type": "python",
             "request": "launch",
@@ -10,8 +23,13 @@
                 "generate-stubs"
             ],
             "console": "internalConsole",
-            "justMyCode": true,
+            "justMyCode": false,
             "python": "${workspaceFolder}/mayapy.bat",
+            "presentation": {
+                "hidden": false,
+                "group": "Maya",
+                "order": 2
+            }
         },
         {
             "name": "MayaPy: Current File",
@@ -19,8 +37,13 @@
             "request": "launch",
             "program": "${file}",
             "console": "internalConsole",
-            "justMyCode": true,
+            "justMyCode": false,
             "python": "${workspaceFolder}/mayapy.bat",
+            "presentation": {
+                "hidden": false,
+                "group": "Maya",
+                "order": 3
+            },
             "purpose": [
                 "debug-test",
                 "debug-in-terminal"
