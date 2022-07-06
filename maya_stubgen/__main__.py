@@ -15,14 +15,13 @@ def ensure_venv():
             "Make sure to run `poetry install` first."
         )
 
-    site_dir = venv_path / "Lib" / "site-packages"
-    if str(site_dir) not in sys.path:
-        site.addsitedir(str(site_dir))
+    site_dir = str(venv_path / "Lib" / "site-packages")
+    if site_dir not in sys.path:
+        site.addsitedir(site_dir)
 
 
 if __name__ == "__main__":
     ensure_venv()
-
     from .cli import cli
 
     cli()

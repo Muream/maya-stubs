@@ -44,6 +44,7 @@
                 "group": "Maya",
                 "order": 3
             },
+            "cwd": "${workspaceFolder}",
             "purpose": [
                 "debug-test",
                 "debug-in-terminal"

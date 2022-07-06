@@ -9,7 +9,12 @@ from pkgutil import ModuleInfo
 from textwrap import indent
 from typing import *
 
-from typing_extensions import Self
+from docstring_parser.common import (
+    DocstringExample,
+    DocstringParam,
+    DocstringRaises,
+    DocstringReturns,
+)
 
 STUB_HEADER = """\
 from __future__ import annotations
@@ -46,7 +51,7 @@ class FunctionType(Enum):
 @dataclass
 class StubItem(ABC):
     @abstractclassmethod
-    def from_object(cls, obj: type, name: Optional[str] = None) -> Self:
+    def from_object(cls, obj: type, name: Optional[str] = None) -> StubItem:
         ...
 
     @property
@@ -65,7 +70,7 @@ class Class(StubItem):
     members: List[Class | Function | Variable] = field(default_factory=list)
 
     @classmethod
-    def from_object(cls, obj: object, name: str = None) -> Self:
+    def from_object(cls, obj: object, name: str = None) -> Class:
 
         if name is None:
             name = obj.__name__
@@ -156,7 +161,7 @@ class Variable(StubItem):
             self.type = MISSING
 
     @classmethod
-    def from_object(cls, obj: type, name: Optional[str] = None) -> Self:
+    def from_object(cls, obj: type, name: Optional[str] = None) -> Variable:
         raise NotImplementedError
 
     @property
@@ -184,7 +189,7 @@ class Variable(StubItem):
 class Function:
     name: str
     arguments: List[Variable] = field(default_factory=list)
-    docstring: Optional[str | Docstring] = None
+    docstring: Optional[str | DocstringBuilder] = None
     return_type: Type = Any
     function_type: FunctionType = FunctionType.function
 
@@ -194,7 +199,7 @@ class Function:
 
         if self.function_type is FunctionType.method:
             if len(self.arguments) == 0 or self.arguments[0].name != "self":
-                self.arguments.insert(0, Variable("self", Self, is_argument=True))
+                self.arguments.insert(0, Variable("self", "Self", is_argument=True))
 
     @classmethod
     def from_object(
@@ -202,7 +207,7 @@ class Function:
         obj: type,
         name: Optional[str] = None,
         function_type=FunctionType.function,
-    ) -> Self:
+    ) -> Function:
         if name is None:
             name = obj.__name__
 
@@ -290,14 +295,14 @@ class Function:
 
 
 @dataclass
-class Docstring:
+class DocstringBuilder:
     short_description: str
     long_description: Optional[str] = None
-    parameters: Optional[List[Variable]] = None
-    returns: Optional[str] = None
+    parameters: Optional[List[DocstringParam]] = None
+    returns: Optional[DocstringReturns] = None
     yields: Optional[str] = None
-    raises: Optional[str] = None
-    examples: Optional[str] = None
+    raises: Optional[DocstringRaises] = None
+    examples: Optional[DocstringExample] = None
 
     def __post_init__(self):
         if self.short_description:
@@ -364,8 +369,7 @@ class Docstring:
         if self.parameters:
             docstring += "\n\nArgs:"
             for parameter in self.parameters:
-                description = parameter.description.replace("\n", " ")
-                docstring += f"\n    {parameter.name}: {description}"
+                docstring += f"\n    {parameter.arg_name}: {parameter.description}"
 
         if self.returns:
             docstring += "\n\nReturns:"

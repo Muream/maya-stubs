@@ -6,6 +6,8 @@ from importlib import import_module
 from pkgutil import ModuleInfo
 from typing import *
 
+import docspec
+
 from .common import STUB_HEADER, Class, Function, Variable, get_classes
 
 logger = logging.getLogger(__name__)

@@ -1,15 +1,18 @@
 import ast
 import importlib
 import logging
-import traceback
+import os
 from copy import deepcopy
 from pathlib import Path
 from pkgutil import ModuleInfo, walk_packages
+from typing import List, Optional
 
 import black
-import click
+import docspec_to_jinja
+from docspec import Module
 
 from .common import get_stub_path
+from .docspec_parsers import parse_builtin_module, parse_cmds_module
 from .generate_cmds_stubs import generate_cmds_stubs
 from .generate_generic_stubs import generate_generic_stub
 
@@ -120,6 +123,27 @@ def ignore_module(module: ModuleInfo):
     return ignore
 
 
+def parse_package(
+    package_name: str,
+    whitelist: Optional[List[str]] = None,
+) -> List[Module]:
+    logger.debug("Parsing package: %s", package_name)
+
+    docspec_modules = []
+
+    package = importlib.import_module(package_name)
+    for module in walk_packages(package.__path__, package.__name__ + "."):
+        if whitelist is not None and module.name not in whitelist:
+            continue
+        if module.name == "maya.cmds":
+            docspec_module = parse_cmds_module(module)
+        else:
+            docspec_module = parse_builtin_module(module)
+        docspec_modules.append(docspec_module)
+
+    return docspec_modules
+
+
 def generate_stubs():
     whitelist = [
         # # OpenMaya 1.0
@@ -142,14 +166,26 @@ def generate_stubs():
         # "maya.mel",
     ]
 
-    try:
-        package = importlib.import_module("maya")
-        for module in walk_packages(package.__path__, package.__name__ + "."):
-            if ignore_module(module):
-                continue
-            if module.name in whitelist:  # temporary work on a specific stub
-                generate_stubs_for_module(module)
-    except BaseException:
-        logger.error("Failed to generate stubs: %s", traceback.format_exc())
-    else:
-        logger.success("Stubs generated")
+    modules = parse_package("maya", whitelist=whitelist)
+    for module in modules:
+        stub = docspec_to_jinja.render_module(module, "pyi/module.pyi")
+
+        stub_path = (
+            Path().resolve()
+            / "stubs"
+            / "pyi"
+            / (module.name.replace(".", "/") + ".pyi")
+        )
+
+        os.makedirs(stub_path.parent, exist_ok=True)
+
+        with stub_path.open("w", encoding="utf-8") as f:
+            f.write(stub)
+
+        doc = docspec_to_jinja.render_module(module, "markdown/module.md")
+        doc_path = Path().resolve() / "docs" / (module.name.replace(".", "/") + ".md")
+
+        os.makedirs(doc_path.parent, exist_ok=True)
+
+        with doc_path.open("w", encoding="utf-8") as f:
+            f.write(doc)

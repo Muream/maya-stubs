@@ -13,7 +13,7 @@ import lxml
 import requests
 from maya import cmds
 
-from .common import STUB_HEADER, Docstring, Function, Variable
+from .common import STUB_HEADER, DocstringBuilder, Function, Variable
 
 logger = logging.getLogger(__name__)
 
@@ -297,7 +297,7 @@ def function_from_documentation(command: str) -> Function:
     body_text = [t for t in body_text if len(t) > 1]
     description = "".join(body_text)
 
-    docstring = Docstring(
+    docstring = DocstringBuilder(
         short_description=description,
         parameters=flags,
         returns=return_description,
