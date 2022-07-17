@@ -1,4 +1,5 @@
 import ast
+import concurrent.futures
 import importlib
 import logging
 import os
@@ -8,13 +9,12 @@ from pkgutil import ModuleInfo, walk_packages
 from typing import List, Optional
 
 import black
+import docspec
 import docspec_to_jinja
 from docspec import Module
+from maya_stubgen.utils import initialize_maya, timed
 
 from .common import get_stub_path
-from .docspec_parsers import parse_builtin_module, parse_cmds_module
-from .generate_cmds_stubs import generate_cmds_stubs
-from .generate_generic_stubs import generate_generic_stub
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -22,7 +22,6 @@ logger.setLevel(logging.DEBUG)
 
 def apply_override(input_node: ast.AST, override_node: ast.AST, output_node: ast.AST):
     """Merge the input node with the override node into the output node.
-
 
     Notes:
         - For Classes, this will be called recursively and only apply the overridden
@@ -99,7 +98,7 @@ def generate_stubs_for_module(module: ModuleInfo):
     logger.debug("Formatting stubs.")
     content = black.format_str(
         content,
-        mode=black.Mode(line_length=10_000, is_pyi=True),
+        mode=black.FileMode(line_length=10_000, is_pyi=True),
     )
 
     stub_path = get_stub_path(module)
@@ -128,25 +127,34 @@ def parse_package(
     whitelist: Optional[List[str]] = None,
 ) -> List[Module]:
     logger.debug("Parsing package: %s", package_name)
+    from .docspec_parsers import parse_builtin_module, parse_cmds_module
 
     docspec_modules = []
 
+    #: Executor with pre-initialized maya interpreters passed around to
+    #: the different parsers
+    executor = concurrent.futures.ProcessPoolExecutor(initializer=initialize_maya)
+
     package = importlib.import_module(package_name)
+
     for module in walk_packages(package.__path__, package.__name__ + "."):
+
         if whitelist is not None and module.name not in whitelist:
             continue
+
         if module.name == "maya.cmds":
-            docspec_module = parse_cmds_module(module)
+            docspec_module = parse_cmds_module(module, executor)
         else:
-            docspec_module = parse_builtin_module(module)
+            docspec_module = parse_builtin_module(module, executor)
         docspec_modules.append(docspec_module)
 
     return docspec_modules
 
 
-def generate_stubs():
+@timed
+def dump_docspec():
     whitelist = [
-        # # OpenMaya 1.0
+        # # # OpenMaya 1.0
         # "maya.OpenMaya",
         # "maya.OpenMayaAnim",
         # "maya.OpenMayaFX",
@@ -168,7 +176,30 @@ def generate_stubs():
 
     modules = parse_package("maya", whitelist=whitelist)
     for module in modules:
-        stub = docspec_to_jinja.render_module(module, "pyi/module.pyi")
+        docspec_cache = (
+            Path().resolve()
+            / ".cache"
+            / "docspec"
+            / (module.name.replace(".", "/") + ".json")
+        )
+
+        os.makedirs(docspec_cache.parent, exist_ok=True)
+
+        logger.debug("Dumping %s", module.name)
+        docspec.dump_module(module, target=str(docspec_cache))
+
+
+def build_stubs(reuse_cache=False):
+
+    if not reuse_cache:
+        dump_docspec()
+
+    docspec_cache = Path().resolve() / ".cache" / "docspec"
+
+    for f in docspec_cache.glob("**/*.json"):
+        module = docspec.load_module(str(f))
+
+        stub = docspec_to_jinja.render_module(module, "pyi")
 
         stub_path = (
             Path().resolve()
@@ -182,10 +213,76 @@ def generate_stubs():
         with stub_path.open("w", encoding="utf-8") as f:
             f.write(stub)
 
-        doc = docspec_to_jinja.render_module(module, "markdown/module.md")
-        doc_path = Path().resolve() / "docs" / (module.name.replace(".", "/") + ".md")
 
-        os.makedirs(doc_path.parent, exist_ok=True)
+def build_docs(reuse_cache):
+    logger.info("Building docs")
 
-        with doc_path.open("w", encoding="utf-8") as f:
-            f.write(doc)
+    if not reuse_cache:
+        dump_docspec()
+
+    module_paths = {
+        # Commands
+        "maya.cmds": "maya/cmds",
+        # Open Maya 1.0
+        "maya.MDGContextGuard": "maya/open-maya-1/MDGContextGuard",
+        "maya.OpenMaya": "maya/open-maya-1/OpenMaya",
+        "maya.OpenMayaAnim": "maya/open-maya-1/OpenMayaAnim",
+        "maya.OpenMayaRender": "maya/open-maya-1/OpenMayaRender",
+        "maya.OpenMayaUI": "maya/open-maya-1/OpenMayaUI",
+        "maya.OpenMayaFX": "maya/open-maya-1/OpenMayaFX",
+        "maya.OpenMayaMPx": "maya/open-maya-1/OpenMayaMPx",
+        # Open Maya 2.0
+        "maya.api.MDGContextGuard": "maya/open-maya-2/MDGContextGuard",
+        "maya.api.OpenMaya": "maya/open-maya-2/OpenMaya",
+        "maya.api.OpenMayaAnim": "maya/open-maya-2/OpenMayaAnim",
+        "maya.api.OpenMayaRender": "maya/open-maya-2/OpenMayaRender",
+        "maya.api.OpenMayaUI": "maya/open-maya-2/OpenMayaUI",
+        # Other
+        "maya.mel": "maya/other/mel",
+        "maya.utils": "maya/other/utils",
+        "maya.standalone": "maya/other/standalone",
+    }
+    docspec_cache = Path().resolve() / ".cache" / "docspec"
+
+    for f in docspec_cache.glob("**/*.json"):
+
+        module = docspec.load_module(str(f))
+
+        logger.debug("Building docs for: %s", module.name)
+
+        rendered_module = docspec_to_jinja.render_module(module, "markdown")
+        module_doc_path = (
+            Path().resolve()
+            / "docs"
+            / "content"
+            / module_paths[module.name]
+            / "_index.md"
+        )
+
+        os.makedirs(module_doc_path.parent, exist_ok=True)
+
+        with module_doc_path.open("w", encoding="utf-8") as f:
+            f.write(rendered_module)
+
+        for member in module.members:
+            logger.debug("Building docs for: %s", member.name)
+
+            if isinstance(member, docspec.Class):
+                rendered_member = docspec_to_jinja.render_class(member, "markdown")
+            elif isinstance(member, docspec.Function):
+                rendered_member = docspec_to_jinja.render_function(member, "markdown")
+            else:
+                continue
+
+            member_doc_path = (
+                Path().resolve()
+                / "docs"
+                / "content"
+                / module_paths[module.name]
+                / f"{member.name}.md"
+            )
+
+            os.makedirs(member_doc_path.parent, exist_ok=True)
+
+            with member_doc_path.open("w", encoding="utf-8") as f:
+                f.write(rendered_member)

@@ -4,6 +4,7 @@ As opposed to docspec-python, this is uses runtime introspection instead of stat
 """
 from __future__ import annotations
 
+import concurrent.futures
 import importlib
 import inspect
 import logging
@@ -16,15 +17,19 @@ from docspec import (
     Docstring,
     Function,
     FunctionSemantic,
-    Location,
     Module,
     Variable,
 )
 
+from .common import NULL_LOCATION
+
 logger = logging.getLogger(__name__)
 
 
-def parse_builtin_module(module: ModuleInfo) -> Module:
+def parse_builtin_module(
+    module: ModuleInfo,
+    executor: concurrent.futures.Executor,
+) -> Module:
     logger.debug("Parsing module: %s", module.name)
 
     module_name = module.name
@@ -33,32 +38,42 @@ def parse_builtin_module(module: ModuleInfo) -> Module:
 
     docspec_members = []
     docstring = inspect.getdoc(module)
+    if docstring is not None:
+        docstring = Docstring(NULL_LOCATION, docstring)
 
-    for member_name, py_member in inspect.getmembers(module):
-        docspec_member = None
-
-        if member_name.startswith("_"):
-            continue
-
-        if inspect.ismodule(py_member):
-            # Ignore modules
-            continue
-
-        elif inspect.isclass(py_member):
-            # we will add classes in a 2nd pass
-            docspec_member = parse_builtin_class(member_name, py_member)
-
-        elif callable(py_member):
-            docspec_member = parse_builtin_function(member_name, py_member)
-        else:
-            # member has to be a variable now?
-            # docspec_member = parse_builtin_variable(name, py_member)
-            pass
-
-        if docspec_member is not None:
-            docspec_members.append(docspec_member)
+    members = inspect.getmembers(module)
+    with executor:
+        results = executor.map(parse_builtin_member, members)
+        for docspec_member in results:
+            if docspec_member is not None:
+                docspec_members.append(docspec_member)
 
     return Module(NULL_LOCATION, module_name, docstring, docspec_members)
+
+
+def parse_builtin_member(member):
+    member_name, py_member = member
+    docspec_member = None
+
+    if member_name.startswith("_"):
+        return
+
+    if inspect.ismodule(py_member):
+        # Ignore modules
+        return
+
+    elif inspect.isclass(py_member):
+        # we will add classes in a 2nd pass
+        docspec_member = parse_builtin_class(member_name, py_member)
+
+    elif callable(py_member):
+        docspec_member = parse_builtin_function(member_name, py_member)
+    else:
+        # member has to be a variable now?
+        # docspec_member = parse_builtin_variable(name, py_member)
+        pass
+
+    return docspec_member
 
 
 def parse_builtin_class(name: str, cls: Any) -> Class:
@@ -164,7 +179,7 @@ def parse_builtin_variable(name, variable: Any) -> Variable:
         name=name,
         docstring=None,
         datatype=variable.__class__.__name__,
-        value=variable,
+        value=str(variable),
         modifiers=[],
         semantic_hints=[],
     )

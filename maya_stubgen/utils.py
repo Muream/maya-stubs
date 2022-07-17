@@ -1,24 +1,25 @@
 import logging
-import os
 import shutil
+import time
 from contextlib import contextmanager
 from pathlib import Path
-from time import time
 from typing import *
 
 logger = logging.getLogger(__name__)
 
+try:
+    import maya
+except:
+    HAS_MAYA = False
+else:
+    HAS_MAYA = True
+
 
 def initialize_maya():
+    if not HAS_MAYA:
+        return
+
     logger.info("Initializing Maya Standalone")
-
-    clean_maya_app_dir = Path() / "clean-maya-app-dir" / "maya"
-    temp_maya_app_dir = Path() / "temp" / "maya_app_dir"
-
-    shutil.copytree(clean_maya_app_dir, temp_maya_app_dir, dirs_exist_ok=True)
-
-    os.environ["MAYA_APP_DIR"] = str(temp_maya_app_dir)
-    os.environ["MAYA_MODULE_PATH"] = ""
 
     try:
         import maya.standalone
@@ -33,6 +34,9 @@ def initialize_maya():
 
 
 def uninitialize_maya():
+    if not HAS_MAYA:
+        return
+
     logger.info("Uninitializing Maya Standalone")
     try:
         import maya.standalone
@@ -57,10 +61,10 @@ def maya_standalone():
 
 def timed(func):
     def wrap_func(*args, **kwargs):
-        t1 = time()
+        t1 = time.perf_counter()
         result = func(*args, **kwargs)
-        t2 = time()
-        logger.debug(f"Function {func.__name__!r} executed in {(t2-t1):.4f}s")
+        t2 = time.perf_counter()
+        logger.info("Function %s executed in %ss", func.__name__, t2 - t1)
         return result
 
     return wrap_func

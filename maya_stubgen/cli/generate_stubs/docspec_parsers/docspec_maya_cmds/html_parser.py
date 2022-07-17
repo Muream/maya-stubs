@@ -2,6 +2,7 @@
 
 import logging
 import re
+import textwrap
 from pathlib import Path
 from typing import List, Tuple
 
@@ -86,9 +87,11 @@ def function_from_documentation(command_name: str) -> docspec.Function:
 
     docstring_parser_docstring = docstring_parser.Docstring()
     docstring_parser_docstring.long_description = description
+
     if docstring_parser_return is not None:
         docstring_parser_docstring.meta.append(docstring_parser_return)
     docstring_parser_docstring.meta.extend(docstring_parser_params)
+
     if docstring_parser_example:
         docstring_parser_docstring.meta.append(docstring_parser_example)
 
@@ -117,13 +120,15 @@ def get_return_type(title: bs4.Tag) -> Tuple[str, docstring_parser.DocstringRetu
         return_type, return_description = [
             t.text.strip() for t in first_return_type_row.find_all("td")
         ]
-        return_type = (return_type, return_description)
     elif next_tag.name == "p":
         return_type = next_tag.text
         return_description = "\n".join(
             [p.text for p in next_tag.find_next_siblings("p")]
         )
-        return_type = (return_type, return_description)
+    else:
+        raise ValueError(f"Unspported Tag Type for return types {next_tag.name}")
+
+    return_type = mel_to_python_type(return_type)
 
     return (
         return_type,
@@ -171,7 +176,6 @@ def get_arguments(
                 match = flag_name_re.match(name)
                 if match:
                     long_name = match["long_name"]
-                    short_name = match["short_name"]
             elif i == 1:
                 # Second column is the flag Type
                 flag_type = mel_to_python_type(child.text.strip())
@@ -181,7 +185,26 @@ def get_arguments(
         flag_description_row = flag_data_row.find_next_sibling("tr")
         flag_description = flag_description_row.text.strip()
         flag_description = flag_description.replace("\\n\\0", "")
-        flag_description += f"\nProperties: {', '.join([p for p in properties])}"
+
+        # Standardize numbered lists
+        # `1 - `, `1: `, etc. are converted to `1. `
+        flag_description = re.sub(r"(\d+)\s?[:-]\s?", r"\1. ", flag_description)
+
+        if properties:
+            flag_description += f"\nProperties: {', '.join(properties)}"
+
+        # make sure everything following the first line is indented properly.
+        # Wrapped in a try except because some descriptions only have one line
+        # and can't be split between a short and long description.
+        try:
+            short_desc, long_desc = flag_description.split("\n", 1)
+            long_desc = textwrap.indent(long_desc, "    ")
+            flag_description = "\n".join([short_desc, long_desc])
+        except:
+            pass
+
+        # Support markdown's hard line breaks
+        flag_description = flag_description.replace("\n", "  \n")
 
         docstring_param = docstring_parser.DocstringParam(
             args=["param"],
