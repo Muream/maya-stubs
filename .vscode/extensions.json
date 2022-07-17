@@ -3,7 +3,6 @@
     "njpwerner.autodocstring",
     "streetsidesoftware.code-spell-checker",
     "davidanson.vscode-markdownlint",
-    "esbenp.prettier-vscode",
     "ms-python.vscode-pylance",
     "ms-python.python"
   ]
