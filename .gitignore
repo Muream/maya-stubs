@@ -2,7 +2,7 @@ temp/
 .cache/
  
 # docs
-docs/_maya/
+docs/public/
 stubs/py/
 
 # Byte-compiled / optimized / DLL files
