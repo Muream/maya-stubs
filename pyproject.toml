@@ -1,41 +1,21 @@
 [tool.poetry]
-name = "maya-stubs"
-version = "0.2.0"
-description = "Stubs for Maya"
+name = "maya-stubs-distrib"
+version = "0.1.0"
+description = ""
 authors = ["Loïc Pinsard <muream@gmail.com>"]
-license = "MIT"
-readme = "README.md"
-repository = "https://github.com/Muream/maya-stubs"
-packages = [{ include = "stubs/pyi/maya-stubs" }]
 
 [tool.poetry.dependencies]
-python = "^2.7 || ^3.7"
+python = "^3.7.2"
+maya-stubgen = { path = "maya-stubgen/", develop = true }
+docspec-to-jinja = { path = "docspec-to-jinja/", develop = true }
+# maya-stubs = { path = "maya-stubs/", develop = true }
+# maya-docs = { path = "maya-docs/", develop = true }
 
 [tool.poetry.dev-dependencies]
-# Since the stubs are available for python 2 and 3 and should _not_ depend on anything
-# all dependencies are dev dependencies.
-# `maya_stubgen` however depends on python 3 only so we need to specify that for each
-# dependency.
-black = { version = "*", python = "^3.7" }
-pylint = { version = "*", python = "^3.7" }
-mypy = { version = "*", python = "^3.7" }
-click = { version = "*", python = "^3.7" }
-requests = { version = "^2.28.0", python = "^3.7" }
-lxml = { version = "^4.9.0", python = "^3.7" }
-snakeviz = { version = "^2.1.1", python = "^3.7" }
-cchardet = { version = "^2.1.7", python = "^3.7" }
-docspec = { version = "^2.0.1", python = "^3.7" }
-docspec-python = { version = "^2.0.1", python = "^3.7" }
-docspec-to-jinja = { path = "../../python/docspec-to-jinja/", python = "^3.7", develop = true }
-beautifulsoup4 = { version = "^4.11.1", python = "^3.7" }
-
-[tool.pylint.messages_control]
-max-line-length = 88
-disable = ["import-error"]
+black = "^22.6.0"
+pylint = "^2.14.5"
+debugpy = "^1.6.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
-
-[tool.poetry.scripts]
-generate-stubs = "maya_stubgen.cli.generate_stubs:generate_stubs"

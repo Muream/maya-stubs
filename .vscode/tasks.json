@@ -6,7 +6,7 @@
         {
             "label": "Generate Stubs",
             "type": "shell",
-            "command": "./mayapy.bat -m maya_stubgen generate-stubs",
+            "command": "mayapy -m maya_stubgen generate-stubs",
             "problemMatcher": [],
             "group": {
                 "kind": "build",

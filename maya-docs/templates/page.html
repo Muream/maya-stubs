@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block docs_sidebar %}
+
+  {# Set the section to the first ancestor directly below the maya section #}
+  {% set section = page.ancestors | nth(n=2) %}
+
+  {{ sidebar::section_content(section=get_section(path=section)) }}
+
+{% endblock docs_sidebar %}
+
+{% block docs_content %}
+  <h1>{{ page.title }}</h1>
+
+  {% if page.content %}
+    {{ page.content | safe }}
+  {% endif %}
+{% endblock docs_content %}
+
+{% block docs_toc %}
+  {{ sidebar::page_content() }}
+{% endblock docs_toc %}

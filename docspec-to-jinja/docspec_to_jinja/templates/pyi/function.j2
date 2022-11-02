@@ -1,0 +1,12 @@
+{% import 'macros/macros.j2' as macros %}
+{% if function.decorations %}
+{% for decoration in function.decorations %}
+@{{ decoration.name }}{% if decoration.args %}{{ decoration.args }}{% endif %}
+
+{% endfor %}
+{% endif %}
+def {{function.name}}({{ macros.render_args(function.args) }}) -> {{function.return_type}}:
+{%- if function.docstring %}
+
+{{macros.format_docstring(function.docstring)}}
+{% else %} ...{% endif %}

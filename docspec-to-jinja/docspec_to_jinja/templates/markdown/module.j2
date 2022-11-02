@@ -1,0 +1,12 @@
+{% import 'macros/macros.j2' as macros %}
++++
+title = "{{ module.name }}"
++++
+{% if module.docstring %}
+{{ render_docstring(module.docstring, "markdown") }}
+{% endif %}
+{% for member in module.members %}
+{% if member.__class__.__name__ == "Variable" %}
+{{ member.name }}: {{ member.datatype }} = {{member.value}}
+{% endif %}
+{% endfor %}

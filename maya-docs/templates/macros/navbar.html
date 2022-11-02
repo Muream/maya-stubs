@@ -1,0 +1,30 @@
+{% macro navbar() %}
+<div class="navbar">
+  <div class="container flex">
+    <a class="navbar-title" href="{{ get_url(path='') }}">Maya Docs</a>
+    <nav>
+      <ul>
+        <li><a href="{{ get_url(path='maya/cmds') | safe }}">Commands</a></li>
+        <li>
+          <a href="{{ get_url(path='maya/open-maya-1') | safe }}"
+            >Open Maya 1.0</a
+          >
+        </li>
+        <li>
+          <a href="{{ get_url(path='maya/open-maya-2') | safe }}"
+            >Open Maya 2.0</a
+          >
+        </li>
+        <li><a href="{{ get_url(path='maya/other/') | safe }}">Other</a></li>
+      </ul>
+    </nav>
+    <div class="search-container">
+      <form class="search-input">
+        <input type="search" autocomplete="off" id="search" placeholder="Search docs..." />
+      </form>
+      <div class="search-results"></div>
+    </div>
+  </div>
+</div>
+
+{% endmacro navbar %}

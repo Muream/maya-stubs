@@ -1,0 +1,27 @@
+{% import "macros/navbar.html" as navbar %} {% import "macros/sidebar.html" as sidebar %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Maya Docs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <div class="container">
+    {{ navbar::navbar() }}
+    <div class="docs">
+      <div class="docs-sidebar">{% block docs_sidebar %} {% endblock %}</div>
+      <div class="docs-content"> {% block docs_content %} {% endblock %}</div>
+      <div class="docs-toc">{% block docs_toc %} {% endblock %}</div>
+    </div>
+  </div>
+</body>
+<script src="/elasticlunr.min.js"></script>
+<script src="/search_index.en.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+<script src="/search.js"></script>
+</html>

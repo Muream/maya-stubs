@@ -8,5 +8,4 @@ set MAYA_MODULE_PATH=%~dp0;%MAYA_MODULE_PATH%
 @REM `site.addsitedir` so that it handles `.pth` files properly
 set PYTHONPATH=%~dp0;%PYTHONPATH%
 
-for /f "tokens=2*" %%a in ('reg query "HKEY_LOCAL_MACHINE\SOFTWARE\Autodesk\Maya\2023\Setup\InstallPath" /v MAYA_INSTALL_LOCATION') do set "MAYA_LOCATION=%%~b"
-"%MAYA_LOCATION%\bin\mayapy.exe" %*
+mayapy.exe -2023 %*

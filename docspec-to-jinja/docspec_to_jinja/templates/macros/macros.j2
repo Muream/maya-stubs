@@ -1,0 +1,25 @@
+{# render a docspec.Argument #}
+{% macro render_arg(arg)%}
+{{ arg.name }}{% if arg.datatype %}: {{ arg.datatype }}{% endif %}{% if arg.default_value %} = {{ arg.default_value }}{% endif %}
+{% endmacro -%}
+
+{# render a list of docspec.Argument #}
+{% macro render_args(args)%}
+{% for arg in args -%}
+{{ render_arg(arg) }}{{ ", " if not loop.last else "" }}
+{%- endfor %}
+{% endmacro -%}
+
+
+{% macro format_docstring(docstring) %}
+{%if docstring %}
+{% filter indent(width=4, first=True) %}
+{% if docstring.content.splitlines()|length == 1%}
+"""{{docstring.content}}"""
+{%- else %}
+"""{{docstring.content}}
+"""
+{%- endif %}
+{% endfilter %}
+{% endif %}
+{% endmacro %}

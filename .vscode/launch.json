@@ -12,7 +12,7 @@
                 "hidden": false,
                 "group": "Python",
                 "order": 1
-            },
+            }
         },
         {
             "name": "Mayapy: Generate Stubs",
@@ -20,7 +20,8 @@
             "request": "launch",
             "module": "maya_stubgen",
             "args": [
-                "generate-stubs"
+                "generate-stubs",
+                "maya-stubs"
             ],
             "console": "internalConsole",
             "justMyCode": false,
@@ -49,6 +50,6 @@
                 "debug-test",
                 "debug-in-terminal"
             ]
-        },
+        }
     ]
 }

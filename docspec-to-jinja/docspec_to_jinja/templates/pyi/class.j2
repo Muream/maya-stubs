@@ -1,0 +1,10 @@
+{% import 'macros/macros.j2' as macros %}
+class {{ cls.name }}{% if cls.bases %}({{ cls.bases | join(", ") }}){% endif %}:
+{{ macros.format_docstring(cls.docstring) }}
+{% for member in cls.members %}
+{% if member.__class__.__name__ == "Variable" %}
+    {{ member.name }}: {{ member.datatype }} = {{member.value}}
+{% elif member.__class__.__name__ == "Function" %}
+{{ render_function(member, template_type="pyi") | indent(width=4, first=True) }}
+{% endif %}
+{% endfor%}

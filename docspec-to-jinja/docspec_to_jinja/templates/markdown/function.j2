@@ -1,0 +1,17 @@
+{% import 'macros/macros.j2' as macros %}
+{% if not nested %}
++++
+title = "{{ function.name }}"
++++
+{% endif %}
+
+```python
+{% set args_str =  macros.render_args(function.args) %}
+{{function.name}}({{ args_str }}) -> {{ function.return_type }}
+```
+
+{% if function.docstring %}
+{{ render_docstring(function.docstring, "markdown") }}
+{% else %}
+Missing documentation.
+{% endif %}

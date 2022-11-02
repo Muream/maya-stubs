@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+}
+
+// -- Reset ---------------------------------------------------------------------------
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+p {
+  margin: 10px 0;
+}
+
+pre {
+  padding: 1rem;
+  overflow: auto;
+}
+
+// Code in text
+p > code,
+li > code,
+dd > code,
+td > code {
+  color: red;
+  background: #eee;
+  word-wrap: break-word;
+  padding: 0.1rem 0.3rem 0.2rem;
+  border-radius: 0.2rem;
+}
+
+table {
+  border: 1rem transparent solid;
+}
+
+// -- General -------------------------------------------------------------------------
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.separator {
+  margin: 0.5rem 0;
+}
+
+// -- Navbar --------------------------------------------------------------------------
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.navbar .container {
+  padding: 1rem 2rem;
+  border-bottom: 1px #333 solid;
+}
+
+.navbar .flex > *:last-child {
+  margin-left: auto;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 1rem;
+  margin-left: 4rem;
+}
+
+html {
+  // account for the navbar height when jumping to a section in the page
+  scroll-padding-top: calc(80px);
+}
+
+
+.search-container {
+  width: 300px;
+  position: relative;
+  border-radius: 0.25rem;
+}
+
+.search-input {
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+}
+
+.search-input input {
+  background: #eee;
+  padding: .25rem;
+  width: 100%;
+  border-radius: 0.25rem;
+  border: none;
+  position: relative;
+}
+
+.search-results {
+  position: absolute;
+  overflow-y: auto;
+  max-height: 250px;
+  width: 100%;
+  right: 0;
+  background-color: #eee;
+  border-radius: .25rem;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+}
+
+.card {
+  padding: 1rem;
+  margin: .25rem;
+  border-radius: .25rem;
+
+  &:hover {
+    background-color: #ddd;
+  }
+}
+
+// -- Page ----------------------------------------------------------------------------
+
+.docs {
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.5;
+  position: relative;
+}
+
+.docs-sidebar,
+.docs-toc {
+  flex: 0 0 16rem;
+  position: sticky;
+  top: 72px;
+  height: calc(100vh - 73px);
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.sidebar-item {
+  margin: 0.1rem 0;
+  padding-left: 1rem;
+  color: #333;
+  border-left: 2px transparent solid;
+
+  &:hover {
+    border-left: 2px #333 solid;
+  }
+}
+
+.docs-content {
+  flex: 1 1 auto;
+  padding: 1rem;
+  overflow: auto;
+}
+
+.docs-content li {
+  margin: 0.5rem 0;
+  margin-left: 1rem;
+}
+.docs-content ul {
+  list-style-type: disc;
+}
