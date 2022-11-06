@@ -131,8 +131,8 @@ def parse_package(
 
     docspec_modules = []
 
-    #: Executor with pre-initialized maya interpreters passed around to
-    #: the different parsers
+    # Executor with pre-initialized maya interpreters passed around to
+    #  the different parsers
     executor = concurrent.futures.ProcessPoolExecutor(initializer=initialize_maya)
 
     package = importlib.import_module(package_name)
@@ -246,12 +246,7 @@ def build_docs(path: Path, reuse_cache):
         logger.debug("Building docs for: %s", module.name)
 
         rendered_module = docspec_to_jinja.render_module(module, "markdown")
-        module_doc_path = (
-            path
-            / "content"
-            / module_paths[module.name]
-            / "_index.md"
-        )
+        module_doc_path = path / "content" / module_paths[module.name] / "_index.md"
 
         os.makedirs(module_doc_path.parent, exist_ok=True)
 
@@ -280,7 +275,3 @@ def build_docs(path: Path, reuse_cache):
 
             with member_doc_path.open("w", encoding="utf-8") as f:
                 f.write(rendered_member)
-
-if __name__ == "__main__":
-    print("wassup")
-

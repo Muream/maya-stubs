@@ -1,5 +1,6 @@
 try:
     import maya
+
     HAS_MAYA = True
 except:
     HAS_MAYA = False
@@ -8,7 +9,6 @@ if HAS_MAYA:
     from pathlib import Path
     import site
     import sys
-
 
     current_dir = Path().resolve()
     if not (current_dir / "pyproject.toml").exists():

@@ -58,7 +58,7 @@ def function_from_documentation(command_name: str) -> docspec.Function:
         # Explicitly re-raise the error
         raise exc from exc
 
-    soup = bs4.BeautifulSoup(documentation, "lxml")
+    soup = bs4.BeautifulSoup(documentation, "html.parser")
 
     docspec_args: List[docspec.Argument] = []
     docstring_parser_params = []
@@ -218,10 +218,10 @@ def get_arguments(
         docspec_arg = docspec.Argument(
             location=NULL_LOCATION,
             name=long_name,
-            type=docspec.Argument.Type.POSITIONAL,
+            type=docspec.Argument.Type.KEYWORD_ONLY,
             decorations=None,
             datatype=flag_type,
-            default_value=None,
+            default_value="...",
         )
         arguments.append((docspec_arg, docstring_param))
 

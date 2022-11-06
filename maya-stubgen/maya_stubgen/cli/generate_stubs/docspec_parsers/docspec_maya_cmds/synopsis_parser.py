@@ -145,9 +145,9 @@ def parse_flag(match_flag: re.Match) -> Argument:
     return Argument(
         location=NULL_LOCATION,
         name=arg_name,
-        type=Argument.Type.POSITIONAL,
+        type=Argument.Type.KEYWORD_ONLY,
         datatype=arg_type,
-        default_value=None,
+        default_value="...",
     )
 
 

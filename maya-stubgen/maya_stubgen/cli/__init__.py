@@ -55,11 +55,22 @@ def generate_docspec(profile: bool) -> None:
 
 
 @cli.command()
-@click.argument("path", type=click.Path(exists=True, dir_okay=True, file_okay=False, resolve_path=True, path_type=Path))
+@click.argument(
+    "path",
+    type=click.Path(
+        exists=False,
+        dir_okay=True,
+        file_okay=False,
+        resolve_path=True,
+        path_type=Path,
+    ),
+)
 @click.option("-p", "--profile", is_flag=True)
 @click.option("-rc", "--reuse-cache", is_flag=True)
 def generate_stubs(path: Path, profile: bool, reuse_cache: bool) -> None:
     logger.info("Generating Stubs")
+
+    path.mkdir(parents=True, exist_ok=True)
 
     if profile:
         profiler = cProfile.Profile()
@@ -78,7 +89,12 @@ def generate_stubs(path: Path, profile: bool, reuse_cache: bool) -> None:
 
 
 @cli.command()
-@click.argument("path", type=click.Path(exists=True, dir_okay=True, file_okay=False, resolve_path=True, path_type=Path))
+@click.argument(
+    "path",
+    type=click.Path(
+        exists=True, dir_okay=True, file_okay=False, resolve_path=True, path_type=Path
+    ),
+)
 @click.option("-p", "--profile", is_flag=True)
 @click.option("-rc", "--reuse-cache", is_flag=True)
 def generate_docs(path: Path, profile: bool, reuse_cache: bool) -> None:

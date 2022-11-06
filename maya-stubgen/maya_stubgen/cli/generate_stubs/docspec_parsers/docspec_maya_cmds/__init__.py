@@ -1,8 +1,9 @@
+from __future__ import annotations
+
 import concurrent.futures
 import inspect
 import logging
 from pkgutil import ModuleInfo
-from typing import Optional
 
 from docspec import Argument, Function, Module
 from maya import cmds
@@ -43,7 +44,7 @@ def parse_cmds_module(
     )
 
 
-def parse_cmds_command(command_name) -> Optional[Function]:
+def parse_cmds_command(command_name) -> Function | None:
     """Parse a cmds command and return a docspec Function.
 
     The html Documentation is scrapped first as it gives the best results.
@@ -61,48 +62,57 @@ def parse_cmds_command(command_name) -> Optional[Function]:
     if command_name[0].isupper():
         return
 
-    docspec_member = None
+    # Default Docspec member overwritten if the parsers are successful
+    docspec_function = Function(
+        location=NULL_LOCATION,
+        name=command_name,
+        docstring=None,
+        modifiers=None,
+        args=[
+            Argument(
+                NULL_LOCATION,
+                "*args",
+                Argument.Type.POSITIONAL_REMAINDER,
+                decorations=None,
+                datatype="Any",
+                default_value=None,
+            ),
+            Argument(
+                NULL_LOCATION,
+                "**kwargs",
+                Argument.Type.KEYWORD_REMAINDER,
+                decorations=None,
+                datatype="Any",
+                default_value=None,
+            ),
+        ],
+        return_type="Any",
+        decorations=None,
+        semantic_hints=[],
+    )
 
     try:
-        docspec_member = function_from_documentation(command_name)
-    except DocumentationNotFound:
-        logger.debug(
-            "Couldn't find documentation for %s, falling back to parsing synopsis.",
-            command_name,
-        )
-        try:
-            docspec_member = function_from_synopsis(command_name)
-        except SynopsisNotFound:
-            logger.debug(
-                "Couldn't find synopsis for %s, using degraded signature.",
-                command_name,
-            )
-            docspec_member = Function(
-                location=NULL_LOCATION,
-                name=command_name,
-                docstring=None,
-                modifiers=None,
-                args=[
-                    Argument(
-                        NULL_LOCATION,
-                        "*args",
-                        Argument.Type.POSITIONAL_REMAINDER,
-                        decorations=None,
-                        datatype="Any",
-                        default_value=None,
-                    ),
-                    Argument(
-                        NULL_LOCATION,
-                        "**kwargs",
-                        Argument.Type.KEYWORD_REMAINDER,
-                        decorations=None,
-                        datatype="Any",
-                        default_value=None,
-                    ),
-                ],
-                return_type="Any",
-                decorations=None,
-                semantic_hints=[],
-            )
+        synopsis_docspec_function = function_from_synopsis(command_name)
+    except SynopsisNotFound:
+        logger.debug("Couldn't find synopsis for %s.", command_name)
+        synopsis_docspec_function = None
 
-    return docspec_member
+    try:
+        docs_docspec_function = function_from_documentation(command_name)
+    except DocumentationNotFound:
+        logger.debug("Couldn't find documentation for %s", command_name)
+        docs_docspec_function = None
+
+    # The docs parser doesn't parse positional arguments but the synopsis parser does
+    if synopsis_docspec_function and docs_docspec_function:
+        for arg in reversed(synopsis_docspec_function.args):
+            if arg.type is Argument.Type.POSITIONAL_ONLY:
+                docs_docspec_function.args.insert(0, arg)
+
+    if docspec_function:
+        docspec_function = synopsis_docspec_function
+
+    if docs_docspec_function:
+        docspec_function = docs_docspec_function
+
+    return docspec_function
