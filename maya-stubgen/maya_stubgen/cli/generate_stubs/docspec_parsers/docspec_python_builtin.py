@@ -42,11 +42,16 @@ def parse_builtin_module(
         docstring = Docstring(NULL_LOCATION, docstring)
 
     members = inspect.getmembers(module)
-    with executor:
-        results = executor.map(parse_builtin_member, members)
-        for docspec_member in results:
-            if docspec_member is not None:
-                docspec_members.append(docspec_member)
+    for member in members:
+        docspec_member = parse_builtin_member(member)
+        if docspec_member is not None:
+            docspec_members.append(docspec_member)
+
+    # with executor:
+    #     results = executor.map(parse_builtin_member, members)
+    #     for docspec_member in results:
+    #         if docspec_member is not None:
+    #             docspec_members.append(docspec_member)
 
     return Module(NULL_LOCATION, module_name, docstring, docspec_members)
 
