@@ -11,8 +11,9 @@
   "python.analysis.diagnosticSeverityOverrides": {
     "reportMissingModuleSource": "none"
   },
+  "python.analysis.typeCheckingMode": "strict",
   "python.formatting.provider": "black",
-  "python.sortImports.args": [
+  "isort.args": [
     "--profile",
     "black"
   ],
