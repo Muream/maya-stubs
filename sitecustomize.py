@@ -5,10 +5,11 @@ try:
 except:
     HAS_MAYA = False
 
+
 if HAS_MAYA:
-    from pathlib import Path
     import site
     import sys
+    from pathlib import Path
 
     current_dir = Path().resolve()
     if not (current_dir / "pyproject.toml").exists():

@@ -147,8 +147,6 @@ def get_arguments(
 ) -> List[Tuple[docspec.Argument, docstring_parser.DocstringParam]]:
     """Get the docspec arguments.
 
-    Args:
-
     Returns:
         The docspec arguments along with their descriptions.
     """

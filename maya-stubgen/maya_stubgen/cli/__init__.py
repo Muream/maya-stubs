@@ -92,7 +92,11 @@ def generate_stubs(path: Path, profile: bool, reuse_cache: bool) -> None:
 @click.argument(
     "path",
     type=click.Path(
-        exists=True, dir_okay=True, file_okay=False, resolve_path=True, path_type=Path
+        exists=True,
+        dir_okay=True,
+        file_okay=False,
+        resolve_path=True,
+        path_type=Path,
     ),
 )
 @click.option("-p", "--profile", is_flag=True)

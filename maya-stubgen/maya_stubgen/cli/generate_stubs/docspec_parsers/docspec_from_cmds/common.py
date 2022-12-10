@@ -74,3 +74,4 @@ def mel_to_python_type(type_name: str) -> str:
         python_type = f"{sequence_type.value}[{python_type}]"
 
     return python_type
+

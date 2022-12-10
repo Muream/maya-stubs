@@ -1354,7 +1354,7 @@ class MDGContext(object):
     def isNormal(self, *args: Any, **kwargs: Any) -> Any:
         """Returns True if the context is set to evaluate normally. Returns False if the context is set to evaluate at a specific time."""
 
-    kNormal: MDGContext = <OpenMaya.MDGContext object at 0x00000183C3CE2070>
+    kNormal: MDGContext = <OpenMaya.MDGContext object at 0x0000018408FBCEB0>
     def makeCurrent(self, *args: Any, **kwargs: Any) -> Any:
         """Makes this context the new current one being used for evaluation. Returns the previous evaluation context."""
 
@@ -4934,6 +4934,7 @@ class MFn(object):
     kOffsetSurface: int = 644
     kOffsetSurfaceManip: int = 652
     kOldGeometryConstraint: int = 449
+    kOpaqueAttribute: int = 1150
     kOpticalFX: int = 450
     kOrientConstraint: int = 239
     kOrientationComponent: int = 556
@@ -6522,6 +6523,84 @@ class MFnDependencyNode(MFnBase):
 
     def uuid(self, *args: Any, **kwargs: Any) -> Any:
         """Returns the node's UUID."""
+
+
+class MFnDisplayLayer(MFnDependencyNode):
+    """Function set display layer.
+
+    __init__()
+    Initializes a new, empty MFnDisplayLayer object.
+    """
+    def __init__(self, *args, **kwargs) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+
+    def __new__(*args, **kwargs) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+
+    def add(self, *args: Any, **kwargs: Any) -> Any:
+        """add(item) -> status
+        Adds the item to the display layer, where item can be a Ufe path string
+        (MString) or a Maya path (MDagPath).
+        """
+
+    def contains(self, *args: Any, **kwargs: Any) -> Any:
+        """contains(item) -> bool
+        Returns true if the item is in the display layer, where item can be a Ufe
+        path string (MString) or a Maya path (MDagPath).
+        """
+
+    def containsAncestorInclusive(self, *args: Any, **kwargs: Any) -> Any:
+        """containsAncestorInclusive(item) -> status
+        Returns true if the item or one of its ancestors is in the display layer,
+         where item can be a Ufe path string (MString) or a Maya path (MDagPath).
+        """
+
+    def getMembers(self, *args: Any, **kwargs: Any) -> Any:
+        """getMembers(members) -> status
+        Get the members of the display layer
+        """
+
+    def remove(self, *args: Any, **kwargs: Any) -> Any:
+        """remove(item) -> status
+        Removes the item to the display layer, where item can be a Ufe path string
+        (MString) or a Maya path (MDagPath).
+        """
+
+
+class MFnDisplayLayerManager(MFnDependencyNode):
+    """Function set display layer.
+
+    __init__()
+    Initializes a new, empty MFnDisplayLayerManager object.
+    """
+    def __init__(self, *args, **kwargs) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+
+    def __new__(*args, **kwargs) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+
+    def currentDisplayLayerManager(self, *args: Any, **kwargs: Any) -> Any:
+        """currentDisplayLayerManager() -> MObject
+        Get the current display layer manager
+        """
+
+    def getAllDisplayLayers(self, *args: Any, **kwargs: Any) -> Any:
+        """getAllDisplayLayers() -> object array
+        Get all the display layers managed by the display layer manager
+        (MString) or a Maya path (MDagPath).
+        """
+
+    def getAncestorLayersInclusive(self, *args: Any, **kwargs: Any) -> Any:
+        """getAncestorLayersInclusive(item) -> status
+        Finds the layers the item and it's ancestors are in, where item can be a Ufe
+        path string (MString) or a Maya object (MObject).
+        """
+
+    def getLayer(self, *args: Any, **kwargs: Any) -> Any:
+        """getLayer(item) -> status
+        Finds the layer the item is in, where item can be a Ufe
+        path string (MString) or a Maya object (MObject).
+        """
 
 
 class MFnDoubleArrayData(MFnData):
@@ -15932,7 +16011,7 @@ class MObject(object):
     def isNull(self, *args: Any, **kwargs: Any) -> Any:
         """Tests whether there is an internal Maya object."""
 
-    kNullObj: MObject = <OpenMaya.MObject object at 0x00000183C5451C70>
+    kNullObj: MObject = <OpenMaya.MObject object at 0x000001840A74D270>
 
 class MObjectArray(object):
     """Array of MObject values."""
@@ -17681,9 +17760,9 @@ class MPxSurfaceShape(MPxNode):
         If this method is overridden, then MPxSurfaceShape.isBounded() should also be overridden to return True.
         """
 
-    boundingBoxCenterX: MObject = <OpenMaya.MObject object at 0x00000183C5490130>
-    boundingBoxCenterY: MObject = <OpenMaya.MObject object at 0x00000183C5490150>
-    boundingBoxCenterZ: MObject = <OpenMaya.MObject object at 0x00000183C5490170>
+    boundingBoxCenterX: MObject = <OpenMaya.MObject object at 0x000001840A74D6F0>
+    boundingBoxCenterY: MObject = <OpenMaya.MObject object at 0x000001840A74D710>
+    boundingBoxCenterZ: MObject = <OpenMaya.MObject object at 0x000001840A74D730>
     def cachedShapeAttr(self, *args: Any, **kwargs: Any) -> Any:
         """cachedShapeAttr() -> MObject
 
@@ -17696,7 +17775,7 @@ class MPxSurfaceShape(MPxNode):
         This method is used by Maya to determine whether a surface can be made live. It can be overridden to return True if you wish to allow your surface to be made live. If you return True, you will also need to implement both closestPoint() overloads. The default is to return False.
         """
 
-    center: MObject = <OpenMaya.MObject object at 0x00000183C5490110>
+    center: MObject = <OpenMaya.MObject object at 0x000001840A74D6D0>
     def childChanged(self, *args: Any, **kwargs: Any) -> Any:
         """childChanged(state=kObjectChanged) -> self
 
@@ -17850,9 +17929,9 @@ class MPxSurfaceShape(MPxNode):
         This method is used to determine whether or not the shape has active (selected) components.
         """
 
-    instObjGroups: MObject = <OpenMaya.MObject object at 0x00000183C54902B0>
-    intermediateObject: MObject = <OpenMaya.MObject object at 0x00000183C5490270>
-    inverseMatrix: MObject = <OpenMaya.MObject object at 0x00000183C54901B0>
+    instObjGroups: MObject = <OpenMaya.MObject object at 0x000001840A74D870>
+    intermediateObject: MObject = <OpenMaya.MObject object at 0x000001840A74D830>
+    inverseMatrix: MObject = <OpenMaya.MObject object at 0x000001840A74D770>
     def isBounded(self, *args: Any, **kwargs: Any) -> Any:
         """isBounded() -> bool
 
@@ -17861,7 +17940,7 @@ class MPxSurfaceShape(MPxNode):
         """
 
     isRenderable: getset_descriptor = <attribute 'isRenderable' of 'OpenMaya.MPxSurfaceShape' objects>
-    isTemplated: MObject = <OpenMaya.MObject object at 0x00000183C5490290>
+    isTemplated: MObject = <OpenMaya.MObject object at 0x000001840A74D850>
     def localShapeInAttr(self, *args: Any, **kwargs: Any) -> Any:
         """localShapeInAttr() -> MObject
 
@@ -17878,11 +17957,11 @@ class MPxSurfaceShape(MPxNode):
         This method must be overridden if the shape is to support deformers.
         """
 
-    mControlPoints: MObject = <OpenMaya.MObject object at 0x00000183C5451ED0>
-    mControlValueX: MObject = <OpenMaya.MObject object at 0x00000183C5451EF0>
-    mControlValueY: MObject = <OpenMaya.MObject object at 0x00000183C5451F10>
-    mControlValueZ: MObject = <OpenMaya.MObject object at 0x00000183C5451F30>
-    mHasHistoryOnCreate: MObject = <OpenMaya.MObject object at 0x00000183C5451EB0>
+    mControlPoints: MObject = <OpenMaya.MObject object at 0x000001840A74D4D0>
+    mControlValueX: MObject = <OpenMaya.MObject object at 0x000001840A74D4F0>
+    mControlValueY: MObject = <OpenMaya.MObject object at 0x000001840A74D510>
+    mControlValueZ: MObject = <OpenMaya.MObject object at 0x000001840A74D530>
+    mHasHistoryOnCreate: MObject = <OpenMaya.MObject object at 0x000001840A74D4B0>
     def match(self, *args: Any, **kwargs: Any) -> Any:
         """match(mask, componentList) -> bool
 
@@ -17916,7 +17995,7 @@ class MPxSurfaceShape(MPxNode):
           kMatchInvalidAttributeDim      The attribute specification provided the wrong number of dimensions for an attribute.
         """
 
-    matrix: MObject = <OpenMaya.MObject object at 0x00000183C5490190>
+    matrix: MObject = <OpenMaya.MObject object at 0x000001840A74D750>
     def newControlPointComponent(self, *args: Any, **kwargs: Any) -> Any:
         """newControlPointComponent() -> MObject
 
@@ -17925,25 +18004,25 @@ class MPxSurfaceShape(MPxNode):
         This method can be overridden to support other types of components such as MFnDoubleIndexedComponent and MFnTripleIndexedComponent      and should return a new component of that type.  The types allowed are those listed in the create() method docs for each MFn*IndexedComponent.
         """
 
-    nodeBoundingBox: MObject = <OpenMaya.MObject object at 0x00000183C5451F50>
-    nodeBoundingBoxMax: MObject = <OpenMaya.MObject object at 0x00000183C5490030>
-    nodeBoundingBoxMaxX: MObject = <OpenMaya.MObject object at 0x00000183C5490050>
-    nodeBoundingBoxMaxZ: MObject = <OpenMaya.MObject object at 0x00000183C5490070>
-    nodeBoundingBoxMin: MObject = <OpenMaya.MObject object at 0x00000183C5451F70>
-    nodeBoundingBoxMinX: MObject = <OpenMaya.MObject object at 0x00000183C5451F90>
-    nodeBoundingBoxMinY: MObject = <OpenMaya.MObject object at 0x00000183C5451FB0>
-    nodeBoundingBoxMinZ: MObject = <OpenMaya.MObject object at 0x00000183C5451FD0>
-    nodeBoundingBoxSize: MObject = <OpenMaya.MObject object at 0x00000183C5490090>
-    nodeBoundingBoxSizeX: MObject = <OpenMaya.MObject object at 0x00000183C54900B0>
-    nodeBoundingBoxSizeY: MObject = <OpenMaya.MObject object at 0x00000183C54900D0>
-    nodeBoundingBoxSizeZ: MObject = <OpenMaya.MObject object at 0x00000183C54900F0>
-    objectColor: MObject = <OpenMaya.MObject object at 0x00000183C5490370>
-    objectGroupColor: MObject = <OpenMaya.MObject object at 0x00000183C5490330>
-    objectGroupId: MObject = <OpenMaya.MObject object at 0x00000183C5490310>
-    objectGroups: MObject = <OpenMaya.MObject object at 0x00000183C54902D0>
-    objectGrpCompList: MObject = <OpenMaya.MObject object at 0x00000183C54902F0>
-    parentInverseMatrix: MObject = <OpenMaya.MObject object at 0x00000183C5490230>
-    parentMatrix: MObject = <OpenMaya.MObject object at 0x00000183C5490210>
+    nodeBoundingBox: MObject = <OpenMaya.MObject object at 0x000001840A74D550>
+    nodeBoundingBoxMax: MObject = <OpenMaya.MObject object at 0x000001840A74D5F0>
+    nodeBoundingBoxMaxX: MObject = <OpenMaya.MObject object at 0x000001840A74D610>
+    nodeBoundingBoxMaxZ: MObject = <OpenMaya.MObject object at 0x000001840A74D630>
+    nodeBoundingBoxMin: MObject = <OpenMaya.MObject object at 0x000001840A74D570>
+    nodeBoundingBoxMinX: MObject = <OpenMaya.MObject object at 0x000001840A74D590>
+    nodeBoundingBoxMinY: MObject = <OpenMaya.MObject object at 0x000001840A74D5B0>
+    nodeBoundingBoxMinZ: MObject = <OpenMaya.MObject object at 0x000001840A74D5D0>
+    nodeBoundingBoxSize: MObject = <OpenMaya.MObject object at 0x000001840A74D650>
+    nodeBoundingBoxSizeX: MObject = <OpenMaya.MObject object at 0x000001840A74D670>
+    nodeBoundingBoxSizeY: MObject = <OpenMaya.MObject object at 0x000001840A74D690>
+    nodeBoundingBoxSizeZ: MObject = <OpenMaya.MObject object at 0x000001840A74D6B0>
+    objectColor: MObject = <OpenMaya.MObject object at 0x000001840A74D930>
+    objectGroupColor: MObject = <OpenMaya.MObject object at 0x000001840A74D8F0>
+    objectGroupId: MObject = <OpenMaya.MObject object at 0x000001840A74D8D0>
+    objectGroups: MObject = <OpenMaya.MObject object at 0x000001840A74D890>
+    objectGrpCompList: MObject = <OpenMaya.MObject object at 0x000001840A74D8B0>
+    parentInverseMatrix: MObject = <OpenMaya.MObject object at 0x000001840A74D7F0>
+    parentMatrix: MObject = <OpenMaya.MObject object at 0x000001840A74D7D0>
     def pointAtParm(self, *args: Any, **kwargs: Any) -> Any:
         """pointAtParm(atThisParm, evaluatedPoint) -> bool
 
@@ -18007,7 +18086,7 @@ class MPxSurfaceShape(MPxNode):
         * undoInfo (MDoubleArray) - Values used for undo purposes
         """
 
-    useObjectColor: MObject = <OpenMaya.MObject object at 0x00000183C5490350>
+    useObjectColor: MObject = <OpenMaya.MObject object at 0x000001840A74D910>
     def vertexOffsetDirection(self, *args: Any, **kwargs: Any) -> Any:
         """vertexOffsetDirection(component, direction, mode, normalize) -> bool
 
@@ -18030,7 +18109,7 @@ class MPxSurfaceShape(MPxNode):
           kUVNTriad     Calculate u, v, and normal offsets.
         """
 
-    visibility: MObject = <OpenMaya.MObject object at 0x00000183C5490250>
+    visibility: MObject = <OpenMaya.MObject object at 0x000001840A74D810>
     def weightedTransformUsing(self, *args: Any, **kwargs: Any) -> Any:
         """weightedTransformUsing(xform, space, componentList, cachingMode, pointCache, freezePlane) -> self
 
@@ -18068,8 +18147,8 @@ class MPxSurfaceShape(MPxNode):
         See transformUsing() for a list of valid caching mode
         """
 
-    worldInverseMatrix: MObject = <OpenMaya.MObject object at 0x00000183C54901F0>
-    worldMatrix: MObject = <OpenMaya.MObject object at 0x00000183C54901D0>
+    worldInverseMatrix: MObject = <OpenMaya.MObject object at 0x000001840A74D7B0>
+    worldMatrix: MObject = <OpenMaya.MObject object at 0x000001840A74D790>
     def worldShapeOutAttr(self, *args: Any, **kwargs: Any) -> Any:
         """worldShapeOutAttr() -> MObject
 
@@ -19447,7 +19526,7 @@ class MTransformationMatrix(object):
     def isEquivalent(self, *args: Any, **kwargs: Any) -> Any:
         """Returns true if this transformation's matrix is within tolerance of another's matrix."""
 
-    kIdentity: MTransformationMatrix = <OpenMaya.MTransformationMatrix object at 0x00000183C5490530>
+    kIdentity: MTransformationMatrix = <OpenMaya.MTransformationMatrix object at 0x000001840A74DAF0>
     kInvalid: int = 0
     kLast: int = 7
     kTolerance: float = 1e-10

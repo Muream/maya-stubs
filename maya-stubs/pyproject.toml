@@ -1,15 +1,15 @@
 [tool.poetry]
 name = "maya-stubs"
-version = "0.1.0"
-description = "Stubs for maya's Python APIs"
+version = "0.3.0"
+description = "Stubs for Autodesk Maya's Python APIs"
 authors = ["Loïc Pinsard <muream@gmail.com>"]
 license = "MIT"
+packages = [
+    {include = "maya-stubs"}
+]
 
 [tool.poetry.dependencies]
 python = "^2.7 || ^3.7"
-
-[tool.poetry.dev-dependencies]
-maya-stubgen = { path = "../maya-stubgen/", develop = true, python = "^3.7" }
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

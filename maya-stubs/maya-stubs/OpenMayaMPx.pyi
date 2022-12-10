@@ -16,7 +16,7 @@ class MExternalContentInfoTable(object):
     def getEntryByIndex(self, *args: Any, **kwargs: Any) -> Any: ...
     def getInfoByKey(self, *args: Any, **kwargs: Any) -> Any: ...
     def length(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C709E400>
+    thisown: property = <property object at 0x000001840C4C4F40>
 
 class MExternalContentLocationTable(object):
     """
@@ -30,7 +30,7 @@ class MExternalContentLocationTable(object):
     def getEntryByIndex(self, *args: Any, **kwargs: Any) -> Any: ...
     def getLocationByKey(self, *args: Any, **kwargs: Any) -> Any: ...
     def length(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C709E680>
+    thisown: property = <property object at 0x000001840C4F9220>
 
 class MFnPlugin(MFnBase):
     """
@@ -67,7 +67,7 @@ class MFnPlugin(MFnBase):
     def findPlugin(self, *args: Any, **kwargs: Any) -> Any: ...
     def getCallableInfo(self, *args: Any, **kwargs: Any) -> Any: ...
     def isNodeRegistered(self, *args: Any, **kwargs: Any) -> Any: ...
-    kDefaultDataLocation: SwigPyObject = <Swig Object of type 'MString *' at 0x00000183C6E00F60>
+    kDefaultDataLocation: SwigPyObject = <Swig Object of type 'MString *' at 0x000001840C4D7900>
     kImageFilePriorityDefault: int = 10
     kImageFilePriorityHigh: int = 10
     kImageFilePriorityHighest: int = 0
@@ -109,7 +109,7 @@ class MFnPlugin(MFnBase):
     def setName(self, *args: Any, **kwargs: Any) -> Any: ...
     def setRegisteringCallableScript(self, *args: Any, **kwargs: Any) -> Any: ...
     def setVersion(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C70247C0>
+    thisown: property = <property object at 0x000001840C44FEA0>
     def unregisterBakeEngine(self, *args: Any, **kwargs: Any) -> Any: ...
     def unregisterMaterialInfo(self, *args: Any, **kwargs: Any) -> Any: ...
     def vendor(self, *args: Any, **kwargs: Any) -> Any: ...
@@ -251,7 +251,7 @@ class MPx3dModelView(object):
     def setWireframeOnShaded(self, *args: Any, **kwargs: Any) -> Any: ...
     def setXrayEnabled(self, *args: Any, **kwargs: Any) -> Any: ...
     def templateColor(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C70F4720>
+    thisown: property = <property object at 0x000001840C526450>
     def updateViewingParameters(self, *args: Any, **kwargs: Any) -> Any: ...
     def userDefinedColorIndex(self, *args: Any, **kwargs: Any) -> Any: ...
     def viewIsFiltered(self, *args: Any, **kwargs: Any) -> Any: ...
@@ -279,7 +279,7 @@ class MPxAnimCurveInterpolator(object):
     def initialize(self, *args: Any, **kwargs: Any) -> Any: ...
     kEvaluateAtKey: int = 1
     kLockType: int = 2
-    thisown: property = <property object at 0x00000183C70F1770>
+    thisown: property = <property object at 0x000001840C5244A0>
     def typeId(self, *args: Any, **kwargs: Any) -> Any: ...
     def typeName(self, *args: Any, **kwargs: Any) -> Any: ...
 
@@ -333,7 +333,7 @@ class MPxAssembly(MPxNode):
     def setRepName(self, *args: Any, **kwargs: Any) -> Any: ...
     def supportsEdits(self, *args: Any, **kwargs: Any) -> Any: ...
     def supportsMemberChanges(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C70E3130>
+    thisown: property = <property object at 0x000001840C510DB0>
     def type(self, *args: Any, **kwargs: Any) -> Any: ...
     def updateRepNamespace(self, *args: Any, **kwargs: Any) -> Any: ...
 
@@ -351,7 +351,7 @@ class MPxAttributePatternFactory(object):
     def createPatternsFromFile(self, *args: Any, **kwargs: Any) -> Any: ...
     def createPatternsFromString(self, *args: Any, **kwargs: Any) -> Any: ...
     def name(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C707C950>
+    thisown: property = <property object at 0x000001840C4F35E0>
 
 def MPxAttributePatternFactory_className(*args: Any, **kwargs: Any) -> Any: ...
 class MPxBakeEngine(object):
@@ -366,7 +366,7 @@ class MPxBakeEngine(object):
     def bake(self, *args: Any, **kwargs: Any) -> Any: ...
     def getUVRange(self, *args: Any, **kwargs: Any) -> Any: ...
     def setNeedTransparency(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C707CB80>
+    thisown: property = <property object at 0x000001840C4F3810>
 
 class MPxBlendShape(MPxGeometryFilter):
     """
@@ -378,16 +378,16 @@ class MPxBlendShape(MPxGeometryFilter):
     def __swig_destroy__(self, *args: Any, **kwargs: Any) -> Any: ...
     def className(self, *args: Any, **kwargs: Any) -> Any: ...
     def deformData(self, *args: Any, **kwargs: Any) -> Any: ...
-    inputComponentsTarget: property = <property object at 0x00000183C70F0950>
-    inputGeomTarget: property = <property object at 0x00000183C70F08B0>
-    inputPointsTarget: property = <property object at 0x00000183C70F0900>
-    inputTarget: property = <property object at 0x00000183C7024310>
-    inputTargetGroup: property = <property object at 0x00000183C70F0810>
-    inputTargetItem: property = <property object at 0x00000183C70F0860>
-    targetWeights: property = <property object at 0x00000183C70F09A0>
-    thisown: property = <property object at 0x00000183C70F0720>
+    inputComponentsTarget: property = <property object at 0x000001840C520720>
+    inputGeomTarget: property = <property object at 0x000001840C520680>
+    inputPointsTarget: property = <property object at 0x000001840C5206D0>
+    inputTarget: property = <property object at 0x000001840C520590>
+    inputTargetGroup: property = <property object at 0x000001840C5205E0>
+    inputTargetItem: property = <property object at 0x000001840C520630>
+    targetWeights: property = <property object at 0x000001840C520770>
+    thisown: property = <property object at 0x000001840C520450>
     def type(self, *args: Any, **kwargs: Any) -> Any: ...
-    weight: property = <property object at 0x00000183C7024770>
+    weight: property = <property object at 0x000001840C520540>
 
 def MPxBlendShape_className(*args: Any, **kwargs: Any) -> Any: ...
 class MPxCacheConfigRuleFilter(object):
@@ -402,7 +402,7 @@ class MPxCacheConfigRuleFilter(object):
     def isMatch(self, *args: Any, **kwargs: Any) -> Any: ...
     def postRulesExecution(self, *args: Any, **kwargs: Any) -> Any: ...
     def preRulesExecution(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C70ED8B0>
+    thisown: property = <property object at 0x000001840C51F4A0>
 
 class MPxCacheFormat(object):
     """
@@ -441,7 +441,7 @@ class MPxCacheFormat(object):
     def readNextTime(self, *args: Any, **kwargs: Any) -> Any: ...
     def readTime(self, *args: Any, **kwargs: Any) -> Any: ...
     def rewind(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C70ECC70>
+    thisown: property = <property object at 0x000001840C51C8B0>
     def writeChannelName(self, *args: Any, **kwargs: Any) -> Any: ...
     def writeDescription(self, *args: Any, **kwargs: Any) -> Any: ...
     def writeDoubleArray(self, *args: Any, **kwargs: Any) -> Any: ...
@@ -462,13 +462,13 @@ class MPxCameraSet(MPxNode):
         """Initialize self.  See help(type(self)) for accurate signature."""
 
     def __swig_destroy__(self, *args: Any, **kwargs: Any) -> Any: ...
-    active: property = <property object at 0x00000183C709FE50>
-    camera: property = <property object at 0x00000183C709FDB0>
-    cameraLayer: property = <property object at 0x00000183C709FD60>
+    active: property = <property object at 0x000001840C4C49F0>
+    camera: property = <property object at 0x000001840C4C4950>
+    cameraLayer: property = <property object at 0x000001840C4C4900>
     def className(self, *args: Any, **kwargs: Any) -> Any: ...
-    order: property = <property object at 0x00000183C709FEA0>
-    sceneData: property = <property object at 0x00000183C709FE00>
-    thisown: property = <property object at 0x00000183C709FCC0>
+    order: property = <property object at 0x000001840C4C4A40>
+    sceneData: property = <property object at 0x000001840C4C49A0>
+    thisown: property = <property object at 0x000001840C4C4860>
     def type(self, *args: Any, **kwargs: Any) -> Any: ...
 
 def MPxCameraSet_className(*args: Any, **kwargs: Any) -> Any: ...
@@ -508,7 +508,7 @@ class MPxCommand(object):
     def setResult(self, *args: Any, **kwargs: Any) -> Any: ...
     def setUndoable(self, *args: Any, **kwargs: Any) -> Any: ...
     def syntax(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C707C0E0>
+    thisown: property = <property object at 0x000001840C4E5D60>
     def undoIt(self, *args: Any, **kwargs: Any) -> Any: ...
 
 def MPxCommand_appendToResult(*args: Any, **kwargs: Any) -> Any: ...
@@ -538,7 +538,7 @@ class MPxComponentShape(MPxSurfaceShape):
     def localShapeInAttr(self, *args: Any, **kwargs: Any) -> Any: ...
     def match(self, *args: Any, **kwargs: Any) -> Any: ...
     def setControlPoints(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C709F680>
+    thisown: property = <property object at 0x000001840C4C4220>
     def transformUsing(self, *args: Any, **kwargs: Any) -> Any: ...
 
 class MPxConstraint(MPxNode):
@@ -551,12 +551,12 @@ class MPxConstraint(MPxNode):
     def __swig_destroy__(self, *args: Any, **kwargs: Any) -> Any: ...
     def className(self, *args: Any, **kwargs: Any) -> Any: ...
     def constraintRotateOrderAttribute(self, *args: Any, **kwargs: Any) -> Any: ...
-    enableRestPosition: property = <property object at 0x00000183C70F1A40>
+    enableRestPosition: property = <property object at 0x000001840C524810>
     def getOutputAttributes(self, *args: Any, **kwargs: Any) -> Any: ...
-    lockOutput: property = <property object at 0x00000183C70F1A90>
+    lockOutput: property = <property object at 0x000001840C524860>
     def passiveOutputAttribute(self, *args: Any, **kwargs: Any) -> Any: ...
     def targetAttribute(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C70F1950>
+    thisown: property = <property object at 0x000001840C5246D0>
     def weightAttribute(self, *args: Any, **kwargs: Any) -> Any: ...
 
 class MPxConstraintCommand(MPxCommand):
@@ -596,7 +596,7 @@ class MPxConstraintCommand(MPxCommand):
     def setRestPosition(self, *args: Any, **kwargs: Any) -> Any: ...
     def supportsOffset(self, *args: Any, **kwargs: Any) -> Any: ...
     def targetType(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C70F1C70>
+    thisown: property = <property object at 0x000001840C524A40>
     def undoIt(self, *args: Any, **kwargs: Any) -> Any: ...
     def upVectorAttribute(self, *args: Any, **kwargs: Any) -> Any: ...
     def worldUpMatrixAttribute(self, *args: Any, **kwargs: Any) -> Any: ...
@@ -637,6 +637,7 @@ class MPxContext(object):
     def feedbackNumericalInput(self, *args: Any, **kwargs: Any) -> Any: ...
     def helpStateHasChanged(self, *args: Any, **kwargs: Any) -> Any: ...
     def image(self, *args: Any, **kwargs: Any) -> Any: ...
+    def inAlternateContext(self, *args: Any, **kwargs: Any) -> Any: ...
     kImage1: int = 0
     kImage2: int = 1
     kImage3: int = 2
@@ -644,7 +645,7 @@ class MPxContext(object):
     def processNumericalInput(self, *args: Any, **kwargs: Any) -> Any: ...
     def setImage(self, *args: Any, **kwargs: Any) -> Any: ...
     def stringClassName(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C70F7E00>
+    thisown: property = <property object at 0x000001840C52BB80>
     def toolOffCleanup(self, *args: Any, **kwargs: Any) -> Any: ...
     def toolOnSetup(self, *args: Any, **kwargs: Any) -> Any: ...
 
@@ -665,9 +666,19 @@ class MPxContextCommand(object):
     def doQueryFlags(self, *args: Any, **kwargs: Any) -> Any: ...
     def makeObj(self, *args: Any, **kwargs: Any) -> Any: ...
     def setResult(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C70F88B0>
+    thisown: property = <property object at 0x000001840C52D720>
 
 def MPxContextCommand_className(*args: Any, **kwargs: Any) -> Any: ...
+class MPxContextExitRegion(MPxContext):
+    """
+    """
+    def __init__(self, *args) -> Any:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+
+    def __swig_destroy__(self, *args: Any, **kwargs: Any) -> Any: ...
+    def doExitRegion(self, *args: Any, **kwargs: Any) -> Any: ...
+    thisown: property = <property object at 0x000001840C52D630>
+
 def MPxContext__ignoreEntry(*args: Any, **kwargs: Any) -> Any: ...
 def MPxContext_className(*args: Any, **kwargs: Any) -> Any: ...
 class MPxControlCommand(object):
@@ -690,7 +701,7 @@ class MPxControlCommand(object):
     def makeControl(self, *args: Any, **kwargs: Any) -> Any: ...
     def setResult(self, *args: Any, **kwargs: Any) -> Any: ...
     def skipFlagForCreate(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C70F8C20>
+    thisown: property = <property object at 0x000001840C52DA90>
 
 def MPxControlCommand_className(*args: Any, **kwargs: Any) -> Any: ...
 class MPxData(object):
@@ -709,7 +720,7 @@ class MPxData(object):
     def name(self, *args: Any, **kwargs: Any) -> Any: ...
     def readASCII(self, *args: Any, **kwargs: Any) -> Any: ...
     def readBinary(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C709F9A0>
+    thisown: property = <property object at 0x000001840C4C4590>
     def typeId(self, *args: Any, **kwargs: Any) -> Any: ...
     def writeASCII(self, *args: Any, **kwargs: Any) -> Any: ...
     def writeBinary(self, *args: Any, **kwargs: Any) -> Any: ...
@@ -726,11 +737,11 @@ class MPxDeformerNode(MPxGeometryFilter):
     def getDeformationDetails(self, *args: Any, **kwargs: Any) -> Any: ...
     def setDeformationDetails(self, *args: Any, **kwargs: Any) -> Any: ...
     def setUseExistingConnectionWhenSetEditing(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C70F00E0>
+    thisown: property = <property object at 0x000001840C51FCC0>
     def type(self, *args: Any, **kwargs: Any) -> Any: ...
-    weightList: property = <property object at 0x00000183C7078310>
+    weightList: property = <property object at 0x000001840C51FEA0>
     def weightValue(self, *args: Any, **kwargs: Any) -> Any: ...
-    weights: property = <property object at 0x00000183C7081040>
+    weights: property = <property object at 0x000001840C51FEF0>
 
 def MPxDeformerNode_className(*args: Any, **kwargs: Any) -> Any: ...
 class MPxDragAndDropBehavior(object):
@@ -748,7 +759,7 @@ class MPxDragAndDropBehavior(object):
     def connectNodeToAttr(self, *args: Any, **kwargs: Any) -> Any: ...
     def connectNodeToNode(self, *args: Any, **kwargs: Any) -> Any: ...
     def shouldBeUsedFor(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C70FA0E0>
+    thisown: property = <property object at 0x000001840C52DEF0>
 
 def MPxDragAndDropBehavior_className(*args: Any, **kwargs: Any) -> Any: ...
 class MPxEditData(object):
@@ -760,8 +771,8 @@ class MPxEditData(object):
 
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, *args: Any, **kwargs: Any) -> Any: ...
-    _dataStringValue: property = <property object at 0x00000183C709E270>
-    _dataValue: property = <property object at 0x00000183C709E220>
+    _dataStringValue: property = <property object at 0x000001840C4C4DB0>
+    _dataValue: property = <property object at 0x000001840C4C4D60>
     def _getStringValue(self, *args: Any, **kwargs: Any) -> Any: ...
     def _getValue(self) -> Any: ...
     def _setStringValue(self, *args: Any, **kwargs: Any) -> Any: ...
@@ -771,7 +782,7 @@ class MPxEditData(object):
     def isLessThan(self, *args: Any, **kwargs: Any) -> Any: ...
     def performIsEqual(self, *args: Any, **kwargs: Any) -> Any: ...
     def performIsLessThan(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C709E040>
+    thisown: property = <property object at 0x000001840C4C4B80>
 
 def MPxEditData_className(*args: Any, **kwargs: Any) -> Any: ...
 class MPxEmitterNode(MPxNode):
@@ -799,38 +810,38 @@ class MPxEmitterNode(MPxNode):
     def getWorldMatrix(self, *args: Any, **kwargs: Any) -> Any: ...
     def getWorldPosition(self, *args: Any, **kwargs: Any) -> Any: ...
     def hasValidEmission2dTexture(self, *args: Any, **kwargs: Any) -> Any: ...
-    mCurrentTime: property = <property object at 0x00000183C710A680>
-    mDeltaTime: property = <property object at 0x00000183C710A450>
-    mDirection: property = <property object at 0x00000183C710A040>
-    mDirectionX: property = <property object at 0x00000183C710A090>
-    mDirectionY: property = <property object at 0x00000183C710A0E0>
-    mDirectionZ: property = <property object at 0x00000183C710A130>
-    mEmitterType: property = <property object at 0x00000183C7108EF0>
-    mInheritFactor: property = <property object at 0x00000183C70F7DB0>
-    mIsFull: property = <property object at 0x00000183C710A4A0>
-    mMaxDistance: property = <property object at 0x00000183C710A770>
-    mMinDistance: property = <property object at 0x00000183C710A720>
-    mOutput: property = <property object at 0x00000183C710A6D0>
-    mOwnerCentroid: property = <property object at 0x00000183C710A220>
-    mOwnerCentroidX: property = <property object at 0x00000183C710A270>
-    mOwnerCentroidY: property = <property object at 0x00000183C710A2C0>
-    mOwnerCentroidZ: property = <property object at 0x00000183C710A310>
-    mOwnerPosData: property = <property object at 0x00000183C710A180>
-    mOwnerVelData: property = <property object at 0x00000183C710A1D0>
-    mRandState: property = <property object at 0x00000183C710A540>
-    mRandStateX: property = <property object at 0x00000183C710A590>
-    mRandStateY: property = <property object at 0x00000183C710A5E0>
-    mRandStateZ: property = <property object at 0x00000183C710A630>
-    mRate: property = <property object at 0x00000183C7108F40>
-    mSeed: property = <property object at 0x00000183C710A4F0>
-    mSpeed: property = <property object at 0x00000183C7108F90>
-    mStartTime: property = <property object at 0x00000183C710A400>
-    mSweptGeometry: property = <property object at 0x00000183C710A360>
-    mWorldMatrix: property = <property object at 0x00000183C710A3B0>
+    mCurrentTime: property = <property object at 0x000001840C53F5E0>
+    mDeltaTime: property = <property object at 0x000001840C53F400>
+    mDirection: property = <property object at 0x000001840C53CF90>
+    mDirectionX: property = <property object at 0x000001840C53F040>
+    mDirectionY: property = <property object at 0x000001840C53F090>
+    mDirectionZ: property = <property object at 0x000001840C53F0E0>
+    mEmitterType: property = <property object at 0x000001840C53CEA0>
+    mInheritFactor: property = <property object at 0x000001840C53F450>
+    mIsFull: property = <property object at 0x000001840C4EE720>
+    mMaxDistance: property = <property object at 0x000001840C53F6D0>
+    mMinDistance: property = <property object at 0x000001840C53F680>
+    mOutput: property = <property object at 0x000001840C53F630>
+    mOwnerCentroid: property = <property object at 0x000001840C53F1D0>
+    mOwnerCentroidX: property = <property object at 0x000001840C53F220>
+    mOwnerCentroidY: property = <property object at 0x000001840C53F270>
+    mOwnerCentroidZ: property = <property object at 0x000001840C53F2C0>
+    mOwnerPosData: property = <property object at 0x000001840C53F130>
+    mOwnerVelData: property = <property object at 0x000001840C53F180>
+    mRandState: property = <property object at 0x000001840C53F4F0>
+    mRandStateX: property = <property object at 0x000001840C53F540>
+    mRandStateY: property = <property object at 0x000001840C53F590>
+    mRandStateZ: property = <property object at 0x000001840C524450>
+    mRate: property = <property object at 0x000001840C53CEF0>
+    mSeed: property = <property object at 0x000001840C53F4A0>
+    mSpeed: property = <property object at 0x000001840C53CF40>
+    mStartTime: property = <property object at 0x000001840C53F3B0>
+    mSweptGeometry: property = <property object at 0x000001840C53F310>
+    mWorldMatrix: property = <property object at 0x000001840C53F360>
     def randgen(self, *args: Any, **kwargs: Any) -> Any: ...
     def resetRandomState(self, *args: Any, **kwargs: Any) -> Any: ...
     def setRandomState(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C7108DB0>
+    thisown: property = <property object at 0x000001840C53CD60>
     def type(self, *args: Any, **kwargs: Any) -> Any: ...
     def volumePrimitiveBoundingBox(self, *args: Any, **kwargs: Any) -> Any: ...
     def volumePrimitiveDistanceFromAxis(self, *args: Any, **kwargs: Any) -> Any: ...
@@ -853,28 +864,28 @@ class MPxFieldNode(MPxNode):
     def iconBitmap(self, *args: Any, **kwargs: Any) -> Any: ...
     def iconSizeAndOrigin(self, *args: Any, **kwargs: Any) -> Any: ...
     def isFalloffCurveConstantOne(self, *args: Any, **kwargs: Any) -> Any: ...
-    mApplyPerVertex: property = <property object at 0x00000183C710B360>
-    mAttenuation: property = <property object at 0x00000183C710B270>
-    mDeltaTime: property = <property object at 0x00000183C710B4F0>
-    mInputData: property = <property object at 0x00000183C710B3B0>
-    mInputForce: property = <property object at 0x00000183C710B540>
-    mInputMass: property = <property object at 0x00000183C710B4A0>
-    mInputPPData: property = <property object at 0x00000183C710B810>
-    mInputPositions: property = <property object at 0x00000183C710B400>
-    mInputVelocities: property = <property object at 0x00000183C710B450>
-    mMagnitude: property = <property object at 0x00000183C710B220>
-    mMaxDistance: property = <property object at 0x00000183C710B2C0>
-    mOutputForce: property = <property object at 0x00000183C710B590>
-    mOwnerCentroid: property = <property object at 0x00000183C710B6D0>
-    mOwnerCentroidX: property = <property object at 0x00000183C710B5E0>
-    mOwnerCentroidY: property = <property object at 0x00000183C710B630>
-    mOwnerCentroidZ: property = <property object at 0x00000183C710B680>
-    mOwnerPPData: property = <property object at 0x00000183C710B860>
-    mOwnerPosData: property = <property object at 0x00000183C710B720>
-    mOwnerVelData: property = <property object at 0x00000183C710B770>
-    mUseMaxDistance: property = <property object at 0x00000183C710B310>
-    mWorldMatrix: property = <property object at 0x00000183C710B7C0>
-    thisown: property = <property object at 0x00000183C710AEF0>
+    mApplyPerVertex: property = <property object at 0x000001840C541220>
+    mAttenuation: property = <property object at 0x000001840C541130>
+    mDeltaTime: property = <property object at 0x000001840C5413B0>
+    mInputData: property = <property object at 0x000001840C541270>
+    mInputForce: property = <property object at 0x000001840C541400>
+    mInputMass: property = <property object at 0x000001840C541360>
+    mInputPPData: property = <property object at 0x000001840C5416D0>
+    mInputPositions: property = <property object at 0x000001840C5412C0>
+    mInputVelocities: property = <property object at 0x000001840C541310>
+    mMagnitude: property = <property object at 0x000001840C5410E0>
+    mMaxDistance: property = <property object at 0x000001840C541180>
+    mOutputForce: property = <property object at 0x000001840C541450>
+    mOwnerCentroid: property = <property object at 0x000001840C541590>
+    mOwnerCentroidX: property = <property object at 0x000001840C5414A0>
+    mOwnerCentroidY: property = <property object at 0x000001840C5414F0>
+    mOwnerCentroidZ: property = <property object at 0x000001840C541540>
+    mOwnerPPData: property = <property object at 0x000001840C4D5860>
+    mOwnerPosData: property = <property object at 0x000001840C5415E0>
+    mOwnerVelData: property = <property object at 0x000001840C541630>
+    mUseMaxDistance: property = <property object at 0x000001840C5411D0>
+    mWorldMatrix: property = <property object at 0x000001840C541680>
+    thisown: property = <property object at 0x000001840C53FDB0>
     def type(self, *args: Any, **kwargs: Any) -> Any: ...
 
 def MPxFieldNode_className(*args: Any, **kwargs: Any) -> Any: ...
@@ -899,7 +910,7 @@ class MPxFileResolver(object):
     def resolveURI(self, *args: Any, **kwargs: Any) -> Any: ...
     def resolveURIWithContext(self, *args: Any, **kwargs: Any) -> Any: ...
     def resolverName(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C709E8B0>
+    thisown: property = <property object at 0x000001840C4F9450>
     def uriScheme(self, *args: Any, **kwargs: Any) -> Any: ...
 
 def MPxFileResolver_className(*args: Any, **kwargs: Any) -> Any: ...
@@ -938,7 +949,7 @@ class MPxFileTranslator(object):
     kSaveAccessMode: int = 4
     kUnknownAccessMode: int = 0
     def reader(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C709ECC0>
+    thisown: property = <property object at 0x000001840C4F98B0>
     def writer(self, *args: Any, **kwargs: Any) -> Any: ...
 
 def MPxFileTranslator_fileAccessMode(*args: Any, **kwargs: Any) -> Any: ...
@@ -960,19 +971,19 @@ class MPxFluidEmitterNode(MPxEmitterNode):
     def fluidFuelEmission(self, *args: Any, **kwargs: Any) -> Any: ...
     def fluidHeatEmission(self, *args: Any, **kwargs: Any) -> Any: ...
     def fluidJitter(self, *args: Any, **kwargs: Any) -> Any: ...
-    mEmissionFunction: property = <property object at 0x00000183C7085400>
-    mEmitFluidColor: property = <property object at 0x00000183C710BBD0>
-    mFluidColor: property = <property object at 0x00000183C710BC20>
-    mFluidColorB: property = <property object at 0x00000183C710BCC0>
-    mFluidColorG: property = <property object at 0x00000183C710BC70>
-    mFluidColorR: property = <property object at 0x00000183C70DE040>
-    mFluidDensityEmission: property = <property object at 0x00000183C710BAE0>
-    mFluidDropoff: property = <property object at 0x00000183C710BD10>
-    mFluidFuelEmission: property = <property object at 0x00000183C710BB80>
-    mFluidHeatEmission: property = <property object at 0x00000183C710BB30>
-    mFluidJitter: property = <property object at 0x00000183C710BDB0>
-    mTurbulence: property = <property object at 0x00000183C710BD60>
-    thisown: property = <property object at 0x00000183C710B9A0>
+    mEmissionFunction: property = <property object at 0x000001840C541C70>
+    mEmitFluidColor: property = <property object at 0x000001840C5419F0>
+    mFluidColor: property = <property object at 0x000001840C541A40>
+    mFluidColorB: property = <property object at 0x000001840C541B30>
+    mFluidColorG: property = <property object at 0x000001840C541AE0>
+    mFluidColorR: property = <property object at 0x000001840C541A90>
+    mFluidDensityEmission: property = <property object at 0x000001840C541950>
+    mFluidDropoff: property = <property object at 0x000001840C541B80>
+    mFluidFuelEmission: property = <property object at 0x000001840C487BD0>
+    mFluidHeatEmission: property = <property object at 0x000001840C5419A0>
+    mFluidJitter: property = <property object at 0x000001840C541C20>
+    mTurbulence: property = <property object at 0x000001840C541BD0>
+    thisown: property = <property object at 0x000001840C541810>
     def turbulence(self, *args: Any, **kwargs: Any) -> Any: ...
     def type(self, *args: Any, **kwargs: Any) -> Any: ...
 
@@ -993,7 +1004,7 @@ class MPxGeometryData(MPxData):
     def name(self, *args: Any, **kwargs: Any) -> Any: ...
     def setMatrix(self, *args: Any, **kwargs: Any) -> Any: ...
     def smartCopy(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C70D31D0>
+    thisown: property = <property object at 0x000001840C4F9D60>
     def typeId(self, *args: Any, **kwargs: Any) -> Any: ...
     def updateCompleteVertexGroup(self, *args: Any, **kwargs: Any) -> Any: ...
 
@@ -1008,20 +1019,20 @@ class MPxGeometryFilter(MPxNode):
     def accessoryAttribute(self, *args: Any, **kwargs: Any) -> Any: ...
     def accessoryNodeSetup(self, *args: Any, **kwargs: Any) -> Any: ...
     def className(self, *args: Any, **kwargs: Any) -> Any: ...
-    componentTagExpression: property = <property object at 0x00000183C70EDEF0>
+    componentTagExpression: property = <property object at 0x000001840C51FAE0>
     def deform(self, *args: Any, **kwargs: Any) -> Any: ...
-    envelope: property = <property object at 0x00000183C70D6400>
+    envelope: property = <property object at 0x000001840C51FB80>
     def getDeformationDetails(self, *args: Any, **kwargs: Any) -> Any: ...
     def getFixedSetupData(self, *args: Any, **kwargs: Any) -> Any: ...
     def getGeometryIterator(self, *args: Any, **kwargs: Any) -> Any: ...
-    groupId: property = <property object at 0x00000183C70EDEA0>
-    input: property = <property object at 0x00000183C70EDE00>
-    inputGeom: property = <property object at 0x00000183C70EDE50>
-    outputGeom: property = <property object at 0x00000183C70EDF40>
+    groupId: property = <property object at 0x000001840C51FA90>
+    input: property = <property object at 0x000001840C51F9F0>
+    inputGeom: property = <property object at 0x000001840C51FA40>
+    outputGeom: property = <property object at 0x000001840C51FB30>
     def setDeformationDetails(self, *args: Any, **kwargs: Any) -> Any: ...
     def setModifiedCallback(self, *args: Any, **kwargs: Any) -> Any: ...
     def setUseExistingConnectionWhenSetEditing(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C70EDA90>
+    thisown: property = <property object at 0x000001840C51F680>
     def type(self, *args: Any, **kwargs: Any) -> Any: ...
 
 def MPxGeometryFilter_className(*args: Any, **kwargs: Any) -> Any: ...
@@ -1054,7 +1065,7 @@ class MPxGeometryIterator(object):
     def setObject(self, *args: Any, **kwargs: Any) -> Any: ...
     def setPoint(self, *args: Any, **kwargs: Any) -> Any: ...
     def setPointGetNext(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C70D35E0>
+    thisown: property = <property object at 0x000001840C4FB180>
 
 def MPxGeometryIterator_className(*args: Any, **kwargs: Any) -> Any: ...
 class MPxGlBuffer(object):
@@ -1072,7 +1083,7 @@ class MPxGlBuffer(object):
     def closeFbo(self, *args: Any, **kwargs: Any) -> Any: ...
     def endBufferNotify(self, *args: Any, **kwargs: Any) -> Any: ...
     def openFbo(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C70FA360>
+    thisown: property = <property object at 0x000001840C5301D0>
     def unbindFbo(self, *args: Any, **kwargs: Any) -> Any: ...
 
 def MPxGlBuffer_className(*args: Any, **kwargs: Any) -> Any: ...
@@ -1087,16 +1098,16 @@ class MPxHardwareShader(MPxNode):
     def className(self, *args: Any, **kwargs: Any) -> Any: ...
     def findResource(self, *args: Any, **kwargs: Any) -> Any: ...
     def getHardwareShaderPtr(self, *args: Any, **kwargs: Any) -> Any: ...
-    outColor: property = <property object at 0x00000183C7105C20>
-    outColorB: property = <property object at 0x00000183C7105D10>
-    outColorG: property = <property object at 0x00000183C7105CC0>
-    outColorR: property = <property object at 0x00000183C7105C70>
+    outColor: property = <property object at 0x000001840C53BB80>
+    outColorB: property = <property object at 0x000001840C53BC70>
+    outColorG: property = <property object at 0x000001840C53BC20>
+    outColorR: property = <property object at 0x000001840C53BBD0>
     def profile(self, *args: Any, **kwargs: Any) -> Any: ...
     def render(self, *args: Any, **kwargs: Any) -> Any: ...
     def renderSwatchImage(self, *args: Any, **kwargs: Any) -> Any: ...
     def setUniformParameters(self, *args: Any, **kwargs: Any) -> Any: ...
     def setVaryingParameters(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C7105900>
+    thisown: property = <property object at 0x000001840C53B8B0>
     def transparencyOptions(self, *args: Any, **kwargs: Any) -> Any: ...
     def type(self, *args: Any, **kwargs: Any) -> Any: ...
 
@@ -1125,29 +1136,29 @@ class MPxHwShaderNode(MPxNode):
     def hasTransparency(self, *args: Any, **kwargs: Any) -> Any: ...
     def invertTexCoords(self, *args: Any, **kwargs: Any) -> Any: ...
     def normalsPerVertex(self, *args: Any, **kwargs: Any) -> Any: ...
-    outColor: property = <property object at 0x00000183C7105360>
-    outColorB: property = <property object at 0x00000183C7105450>
-    outColorG: property = <property object at 0x00000183C7105400>
-    outColorR: property = <property object at 0x00000183C71053B0>
-    outGlowColor: property = <property object at 0x00000183C71056D0>
-    outGlowColorB: property = <property object at 0x00000183C71057C0>
-    outGlowColorG: property = <property object at 0x00000183C7105770>
-    outGlowColorR: property = <property object at 0x00000183C7105720>
-    outMatteOpacity: property = <property object at 0x00000183C7105590>
-    outMatteOpacityB: property = <property object at 0x00000183C7105680>
-    outMatteOpacityG: property = <property object at 0x00000183C7105630>
-    outMatteOpacityR: property = <property object at 0x00000183C71055E0>
-    outTransparency: property = <property object at 0x00000183C71054A0>
-    outTransparencyB: property = <property object at 0x00000183C7105540>
-    outTransparencyG: property = <property object at 0x00000183C70C7C70>
-    outTransparencyR: property = <property object at 0x00000183C71054F0>
+    outColor: property = <property object at 0x000001840C53B2C0>
+    outColorB: property = <property object at 0x000001840C53B3B0>
+    outColorG: property = <property object at 0x000001840C53B360>
+    outColorR: property = <property object at 0x000001840C53B310>
+    outGlowColor: property = <property object at 0x000001840C53B680>
+    outGlowColorB: property = <property object at 0x000001840C53B770>
+    outGlowColorG: property = <property object at 0x000001840C53B720>
+    outGlowColorR: property = <property object at 0x000001840C53B6D0>
+    outMatteOpacity: property = <property object at 0x000001840C53B540>
+    outMatteOpacityB: property = <property object at 0x000001840C53B630>
+    outMatteOpacityG: property = <property object at 0x000001840C53B5E0>
+    outMatteOpacityR: property = <property object at 0x000001840C53B590>
+    outTransparency: property = <property object at 0x000001840C53B400>
+    outTransparencyB: property = <property object at 0x000001840C53B4F0>
+    outTransparencyG: property = <property object at 0x000001840C53B4A0>
+    outTransparencyR: property = <property object at 0x000001840C53B450>
     def provideFaceIDs(self, *args: Any, **kwargs: Any) -> Any: ...
     def provideLocalUVCoord(self, *args: Any, **kwargs: Any) -> Any: ...
     def provideVertexIDs(self, *args: Any, **kwargs: Any) -> Any: ...
     def renderSwatchImage(self, *args: Any, **kwargs: Any) -> Any: ...
     def supportsBatching(self, *args: Any, **kwargs: Any) -> Any: ...
     def texCoordsPerVertex(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C7103C70>
+    thisown: property = <property object at 0x000001840C538B30>
     def transparencyOptions(self, *args: Any, **kwargs: Any) -> Any: ...
     def type(self, *args: Any, **kwargs: Any) -> Any: ...
     def unbind(self, *args: Any, **kwargs: Any) -> Any: ...
@@ -1193,7 +1204,7 @@ class MPxIkSolverNode(MPxNode):
     def snapHandle(self, *args: Any, **kwargs: Any) -> Any: ...
     def solverTypeName(self, *args: Any, **kwargs: Any) -> Any: ...
     def supportJointLimits(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C70F0B30>
+    thisown: property = <property object at 0x000001840C520900>
     def toSolverSpace(self, *args: Any, **kwargs: Any) -> Any: ...
     def toWorldSpace(self, *args: Any, **kwargs: Any) -> Any: ...
     def type(self, *args: Any, **kwargs: Any) -> Any: ...
@@ -1213,7 +1224,7 @@ class MPxImageFile(object):
     def glLoad(self, *args: Any, **kwargs: Any) -> Any: ...
     def load(self, *args: Any, **kwargs: Any) -> Any: ...
     def open(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C70D3CC0>
+    thisown: property = <property object at 0x000001840C4FB8B0>
 
 class MPxImagePlane(MPxNode):
     """
@@ -1223,66 +1234,66 @@ class MPxImagePlane(MPxNode):
         """Initialize self.  See help(type(self)) for accurate signature."""
 
     def __swig_destroy__(self, *args: Any, **kwargs: Any) -> Any: ...
-    alphaGain: property = <property object at 0x00000183C70E1810>
-    alreadyPremult: property = <property object at 0x00000183C70E1EA0>
-    center: property = <property object at 0x00000183C70E1C20>
-    centerX: property = <property object at 0x00000183C70E1C70>
-    centerY: property = <property object at 0x00000183C70E1CC0>
-    centerZ: property = <property object at 0x00000183C70E1D10>
+    alphaGain: property = <property object at 0x000001840C4FF450>
+    alreadyPremult: property = <property object at 0x000001840C4FFB30>
+    center: property = <property object at 0x000001840C4FF860>
+    centerX: property = <property object at 0x000001840C4FF8B0>
+    centerY: property = <property object at 0x000001840C4FF900>
+    centerZ: property = <property object at 0x000001840C4FF950>
     def className(self, *args: Any, **kwargs: Any) -> Any: ...
-    colorGain: property = <property object at 0x00000183C70E1590>
-    colorGainB: property = <property object at 0x00000183C70E1680>
-    colorGainG: property = <property object at 0x00000183C70E1630>
-    colorGainR: property = <property object at 0x00000183C70E15E0>
-    colorOffset: property = <property object at 0x00000183C70E16D0>
-    colorOffsetB: property = <property object at 0x00000183C70E17C0>
-    colorOffsetG: property = <property object at 0x00000183C70E1770>
-    colorOffsetR: property = <property object at 0x00000183C70E1720>
-    composite: property = <property object at 0x00000183C70E1F40>
-    coverage: property = <property object at 0x00000183C70E1270>
-    coverageOrigin: property = <property object at 0x00000183C70E1360>
-    coverageOriginX: property = <property object at 0x00000183C70E13B0>
-    coverageOriginY: property = <property object at 0x00000183C70E1400>
-    coverageX: property = <property object at 0x00000183C70E12C0>
-    coverageY: property = <property object at 0x00000183C70E1310>
-    depth: property = <property object at 0x00000183C70E19A0>
-    depthBias: property = <property object at 0x00000183C70E20E0>
-    depthFile: property = <property object at 0x00000183C70E2090>
-    depthOversample: property = <property object at 0x00000183C70E1F90>
-    depthScale: property = <property object at 0x00000183C70E2130>
-    displayMode: property = <property object at 0x00000183C70E14F0>
-    displayOnlyIfCurrent: property = <property object at 0x00000183C70E1540>
+    colorGain: property = <property object at 0x000001840C4FF1D0>
+    colorGainB: property = <property object at 0x000001840C4FF2C0>
+    colorGainG: property = <property object at 0x000001840C4FF270>
+    colorGainR: property = <property object at 0x000001840C4FF220>
+    colorOffset: property = <property object at 0x000001840C4FF310>
+    colorOffsetB: property = <property object at 0x000001840C4FF400>
+    colorOffsetG: property = <property object at 0x000001840C4FF3B0>
+    colorOffsetR: property = <property object at 0x000001840C4FF360>
+    composite: property = <property object at 0x000001840C4FFBD0>
+    coverage: property = <property object at 0x000001840C4FBE50>
+    coverageOrigin: property = <property object at 0x000001840C4FBF40>
+    coverageOriginX: property = <property object at 0x000001840C4FBF90>
+    coverageOriginY: property = <property object at 0x000001840C4FF040>
+    coverageX: property = <property object at 0x000001840C4FBEA0>
+    coverageY: property = <property object at 0x000001840C4FBEF0>
+    depth: property = <property object at 0x000001840C4FF5E0>
+    depthBias: property = <property object at 0x000001840C4D4F90>
+    depthFile: property = <property object at 0x000001840C4FFCC0>
+    depthOversample: property = <property object at 0x000001840C4FFC20>
+    depthScale: property = <property object at 0x000001840C4FFD10>
+    displayMode: property = <property object at 0x000001840C4FF130>
+    displayOnlyIfCurrent: property = <property object at 0x000001840C4FF180>
     def exactImageFile(self, *args: Any, **kwargs: Any) -> Any: ...
-    fit: property = <property object at 0x00000183C70E14A0>
-    frameExtension: property = <property object at 0x00000183C70E11D0>
-    frameOffset: property = <property object at 0x00000183C70E1220>
-    height: property = <property object at 0x00000183C70E1DB0>
-    imageName: property = <property object at 0x00000183C70E1130>
-    imageType: property = <property object at 0x00000183C70E10E0>
+    fit: property = <property object at 0x000001840C4FF0E0>
+    frameExtension: property = <property object at 0x000001840C4FBDB0>
+    frameOffset: property = <property object at 0x000001840C4FBE00>
+    height: property = <property object at 0x000001840C4FF9F0>
+    imageName: property = <property object at 0x000001840C4FBD10>
+    imageType: property = <property object at 0x000001840C4FBCC0>
     def loadImageMap(self, *args: Any, **kwargs: Any) -> Any: ...
-    lockedToCamera: property = <property object at 0x00000183C70E1950>
-    maxShadingSamples: property = <property object at 0x00000183C70E1900>
-    offset: property = <property object at 0x00000183C70E1B30>
-    offsetX: property = <property object at 0x00000183C70E1B80>
-    offsetY: property = <property object at 0x00000183C70E1BD0>
+    lockedToCamera: property = <property object at 0x000001840C4FF590>
+    maxShadingSamples: property = <property object at 0x000001840C4FF540>
+    offset: property = <property object at 0x000001840C4FF770>
+    offsetX: property = <property object at 0x000001840C4FF7C0>
+    offsetY: property = <property object at 0x000001840C4FF810>
     def refreshImage(self, *args: Any, **kwargs: Any) -> Any: ...
-    rotate: property = <property object at 0x00000183C70E1E50>
-    separateDepth: property = <property object at 0x00000183C70E2040>
+    rotate: property = <property object at 0x000001840C4FFAE0>
+    separateDepth: property = <property object at 0x000001840C4FFC70>
     def setImageDirty(self, *args: Any, **kwargs: Any) -> Any: ...
-    shadingSamples: property = <property object at 0x00000183C70E18B0>
-    shadingSamplesOverride: property = <property object at 0x00000183C70E1860>
-    size: property = <property object at 0x00000183C70E1A40>
-    sizeX: property = <property object at 0x00000183C70E1A90>
-    sizeY: property = <property object at 0x00000183C70E1AE0>
-    sourceTexture: property = <property object at 0x00000183C70E1450>
-    squeezeCorrection: property = <property object at 0x00000183C70E19F0>
-    thisown: property = <property object at 0x00000183C70D3EA0>
+    shadingSamples: property = <property object at 0x000001840C4FF4F0>
+    shadingSamplesOverride: property = <property object at 0x000001840C4FF4A0>
+    size: property = <property object at 0x000001840C4FF680>
+    sizeX: property = <property object at 0x000001840C4FF6D0>
+    sizeY: property = <property object at 0x000001840C4FF720>
+    sourceTexture: property = <property object at 0x000001840C4FF090>
+    squeezeCorrection: property = <property object at 0x000001840C4FF630>
+    thisown: property = <property object at 0x000001840C4FBAE0>
     def type(self, *args: Any, **kwargs: Any) -> Any: ...
-    useDepthMap: property = <property object at 0x00000183C70E1EF0>
-    useFrameExtension: property = <property object at 0x00000183C70E1180>
-    visibleInReflections: property = <property object at 0x00000183C707CD10>
-    visibleInRefractions: property = <property object at 0x00000183C70E1E00>
-    width: property = <property object at 0x00000183C70E1D60>
+    useDepthMap: property = <property object at 0x000001840C4FFB80>
+    useFrameExtension: property = <property object at 0x000001840C4FBD60>
+    visibleInReflections: property = <property object at 0x000001840C4FFA40>
+    visibleInRefractions: property = <property object at 0x000001840C4FFA90>
+    width: property = <property object at 0x000001840C4FF9A0>
 
 def MPxImagePlane_className(*args: Any, **kwargs: Any) -> Any: ...
 class MPxLocatorNode(MPxNode):
@@ -1294,10 +1305,10 @@ class MPxLocatorNode(MPxNode):
 
     def __swig_destroy__(self, *args: Any, **kwargs: Any) -> Any: ...
     def boundingBox(self, *args: Any, **kwargs: Any) -> Any: ...
-    boundingBoxCenterX: property = <property object at 0x00000183C70FC310>
-    boundingBoxCenterY: property = <property object at 0x00000183C70FC360>
-    boundingBoxCenterZ: property = <property object at 0x00000183C70FC3B0>
-    center: property = <property object at 0x00000183C70FC2C0>
+    boundingBoxCenterX: property = <property object at 0x000001840C5311D0>
+    boundingBoxCenterY: property = <property object at 0x000001840C531220>
+    boundingBoxCenterZ: property = <property object at 0x000001840C531270>
+    center: property = <property object at 0x000001840C531180>
     def className(self, *args: Any, **kwargs: Any) -> Any: ...
     def closestPoint(self, *args: Any, **kwargs: Any) -> Any: ...
     def color(self, *args: Any, **kwargs: Any) -> Any: ...
@@ -1307,53 +1318,53 @@ class MPxLocatorNode(MPxNode):
     def excludeAsLocator(self, *args: Any, **kwargs: Any) -> Any: ...
     def getCacheSetup(self, *args: Any, **kwargs: Any) -> Any: ...
     def getShapeSelectionMask(self, *args: Any, **kwargs: Any) -> Any: ...
-    instObjGroups: property = <property object at 0x00000183C70FC6D0>
-    intermediateObject: property = <property object at 0x00000183C70FC630>
-    inverseMatrix: property = <property object at 0x00000183C70FC450>
+    instObjGroups: property = <property object at 0x000001840C531540>
+    intermediateObject: property = <property object at 0x000001840C5314A0>
+    inverseMatrix: property = <property object at 0x000001840C531310>
     def isBounded(self, *args: Any, **kwargs: Any) -> Any: ...
-    isTemplated: property = <property object at 0x00000183C70FC680>
+    isTemplated: property = <property object at 0x000001840C5314F0>
     def isTransparent(self, *args: Any, **kwargs: Any) -> Any: ...
-    localPosition: property = <property object at 0x00000183C70FAB30>
-    localPositionX: property = <property object at 0x00000183C70FAB80>
-    localPositionY: property = <property object at 0x00000183C70FABD0>
-    localPositionZ: property = <property object at 0x00000183C70FAC20>
-    localScale: property = <property object at 0x00000183C70FADB0>
-    localScaleX: property = <property object at 0x00000183C70FAE00>
-    localScaleY: property = <property object at 0x00000183C70FAE50>
-    localScaleZ: property = <property object at 0x00000183C70FAEA0>
-    matrix: property = <property object at 0x00000183C70FC400>
-    nodeBoundingBox: property = <property object at 0x00000183C708C770>
-    nodeBoundingBoxMax: property = <property object at 0x00000183C70FC090>
-    nodeBoundingBoxMaxX: property = <property object at 0x00000183C70FC0E0>
-    nodeBoundingBoxMaxY: property = <property object at 0x00000183C70FC130>
-    nodeBoundingBoxMaxZ: property = <property object at 0x00000183C70FC180>
-    nodeBoundingBoxMin: property = <property object at 0x00000183C70FAEF0>
-    nodeBoundingBoxMinX: property = <property object at 0x00000183C70FAF40>
-    nodeBoundingBoxMinY: property = <property object at 0x00000183C70FAF90>
-    nodeBoundingBoxMinZ: property = <property object at 0x00000183C70FC040>
-    nodeBoundingBoxSize: property = <property object at 0x00000183C70CC3B0>
-    nodeBoundingBoxSizeX: property = <property object at 0x00000183C70FC1D0>
-    nodeBoundingBoxSizeY: property = <property object at 0x00000183C70FC220>
-    nodeBoundingBoxSizeZ: property = <property object at 0x00000183C70FC270>
-    objectColor: property = <property object at 0x00000183C70FC8B0>
-    objectGroupColor: property = <property object at 0x00000183C70FC810>
-    objectGroupId: property = <property object at 0x00000183C70FC7C0>
-    objectGroups: property = <property object at 0x00000183C70FC720>
-    objectGrpCompList: property = <property object at 0x00000183C70FC770>
-    parentInverseMatrix: property = <property object at 0x00000183C70FC590>
-    parentMatrix: property = <property object at 0x00000183C70FC540>
-    thisown: property = <property object at 0x00000183C70FA680>
+    localPosition: property = <property object at 0x000001840C5309A0>
+    localPositionX: property = <property object at 0x000001840C5309F0>
+    localPositionY: property = <property object at 0x000001840C530A40>
+    localPositionZ: property = <property object at 0x000001840C530A90>
+    localScale: property = <property object at 0x000001840C530C20>
+    localScaleX: property = <property object at 0x000001840C530C70>
+    localScaleY: property = <property object at 0x000001840C530CC0>
+    localScaleZ: property = <property object at 0x000001840C530D10>
+    matrix: property = <property object at 0x000001840C5312C0>
+    nodeBoundingBox: property = <property object at 0x000001840C530D60>
+    nodeBoundingBoxMax: property = <property object at 0x000001840C530EA0>
+    nodeBoundingBoxMaxX: property = <property object at 0x000001840C530EF0>
+    nodeBoundingBoxMaxY: property = <property object at 0x000001840C530F40>
+    nodeBoundingBoxMaxZ: property = <property object at 0x000001840C530F90>
+    nodeBoundingBoxMin: property = <property object at 0x000001840C530DB0>
+    nodeBoundingBoxMinX: property = <property object at 0x000001840C49BF40>
+    nodeBoundingBoxMinY: property = <property object at 0x000001840C530E00>
+    nodeBoundingBoxMinZ: property = <property object at 0x000001840C530E50>
+    nodeBoundingBoxSize: property = <property object at 0x000001840C531040>
+    nodeBoundingBoxSizeX: property = <property object at 0x000001840C531090>
+    nodeBoundingBoxSizeY: property = <property object at 0x000001840C5310E0>
+    nodeBoundingBoxSizeZ: property = <property object at 0x000001840C531130>
+    objectColor: property = <property object at 0x000001840C531720>
+    objectGroupColor: property = <property object at 0x000001840C531680>
+    objectGroupId: property = <property object at 0x000001840C531630>
+    objectGroups: property = <property object at 0x000001840C531590>
+    objectGrpCompList: property = <property object at 0x000001840C5315E0>
+    parentInverseMatrix: property = <property object at 0x000001840C4F9860>
+    parentMatrix: property = <property object at 0x000001840C531400>
+    thisown: property = <property object at 0x000001840C5304F0>
     def type(self, *args: Any, **kwargs: Any) -> Any: ...
-    underWorldObject: property = <property object at 0x00000183C70FAAE0>
+    underWorldObject: property = <property object at 0x000001840C530950>
     def useClosestPointForSelection(self, *args: Any, **kwargs: Any) -> Any: ...
-    useObjectColor: property = <property object at 0x00000183C70FC860>
-    visibility: property = <property object at 0x00000183C70FC5E0>
-    worldInverseMatrix: property = <property object at 0x00000183C70FC4F0>
-    worldMatrix: property = <property object at 0x00000183C70FC4A0>
-    worldPosition: property = <property object at 0x00000183C70FAC70>
-    worldPositionX: property = <property object at 0x00000183C70FACC0>
-    worldPositionY: property = <property object at 0x00000183C70FAD10>
-    worldPositionZ: property = <property object at 0x00000183C70FAD60>
+    useObjectColor: property = <property object at 0x000001840C5316D0>
+    visibility: property = <property object at 0x000001840C531450>
+    worldInverseMatrix: property = <property object at 0x000001840C5313B0>
+    worldMatrix: property = <property object at 0x000001840C531360>
+    worldPosition: property = <property object at 0x000001840C530AE0>
+    worldPositionX: property = <property object at 0x000001840C530B30>
+    worldPositionY: property = <property object at 0x000001840C530B80>
+    worldPositionZ: property = <property object at 0x000001840C530BD0>
 
 def MPxLocatorNode_className(*args: Any, **kwargs: Any) -> Any: ...
 class MPxManipContainer(MPxNode):
@@ -1397,7 +1408,7 @@ class MPxManipContainer(MPxNode):
     def newManipulator(self, *args: Any, **kwargs: Any) -> Any: ...
     def plugToManipConversion(self, *args: Any, **kwargs: Any) -> Any: ...
     def removeFromManipConnectTable(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C70FC9F0>
+    thisown: property = <property object at 0x000001840C531860>
     def type(self, *args: Any, **kwargs: Any) -> Any: ...
 
 def MPxManipContainer_addToManipConnectTable(*args: Any, **kwargs: Any) -> Any: ...
@@ -1421,7 +1432,7 @@ class MPxManipulatorNode(MPxNode):
     def colorAndName(self, *args: Any, **kwargs: Any) -> Any: ...
     def connectPlugToValue(self, *args: Any, **kwargs: Any) -> Any: ...
     def connectToDependNode(self, *args: Any, **kwargs: Any) -> Any: ...
-    connectedNodes: property = <property object at 0x00000183C7108BD0>
+    connectedNodes: property = <property object at 0x000001840C53CB80>
     def dependentPlugsReset(self, *args: Any, **kwargs: Any) -> Any: ...
     def deregisterForMouseMove(self, *args: Any, **kwargs: Any) -> Any: ...
     def dimmedColor(self, *args: Any, **kwargs: Any) -> Any: ...
@@ -1456,7 +1467,7 @@ class MPxManipulatorNode(MPxNode):
     def setPointValue(self, *args: Any, **kwargs: Any) -> Any: ...
     def setVectorValue(self, *args: Any, **kwargs: Any) -> Any: ...
     def shouldDrawHandleAsSelected(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C7105E50>
+    thisown: property = <property object at 0x000001840C53BDB0>
     def xColor(self, *args: Any, **kwargs: Any) -> Any: ...
     def yColor(self, *args: Any, **kwargs: Any) -> Any: ...
     def zColor(self, *args: Any, **kwargs: Any) -> Any: ...
@@ -1479,7 +1490,7 @@ class MPxMaterialInformation(object):
     kTexture: int = 1
     def materialInfoIsDirty(self, *args: Any, **kwargs: Any) -> Any: ...
     def textureDisconnected(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C70EC9F0>
+    thisown: property = <property object at 0x000001840C51C630>
     def useMaterialAsTexture(self, *args: Any, **kwargs: Any) -> Any: ...
 
 class MPxMayaAsciiFilter(MPxFileTranslator):
@@ -1495,7 +1506,7 @@ class MPxMayaAsciiFilter(MPxFileTranslator):
     def processReadOptions(self, *args: Any, **kwargs: Any) -> Any: ...
     def processWriteOptions(self, *args: Any, **kwargs: Any) -> Any: ...
     def reader(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C70E23B0>
+    thisown: property = <property object at 0x000001840C4FFF90>
     def writePostConnectAttrsBlock(self, *args: Any, **kwargs: Any) -> Any: ...
     def writePostCreateNodesBlock(self, *args: Any, **kwargs: Any) -> Any: ...
     def writePostHeader(self, *args: Any, **kwargs: Any) -> Any: ...
@@ -1523,7 +1534,7 @@ class MPxMayaAsciiFilterOutput(object):
     def __lshift__(self, *args: Any, **kwargs: Any) -> Any: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C70E2270>
+    thisown: property = <property object at 0x000001840C4FFE50>
 
 class MPxMidiInputDevice(object):
     """
@@ -1544,7 +1555,7 @@ class MPxMidiInputDevice(object):
     def nameButtons(self, *args: Any, **kwargs: Any) -> Any: ...
     def openDevice(self, *args: Any, **kwargs: Any) -> Any: ...
     def sendMessage(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C70FD5E0>
+    thisown: property = <property object at 0x000001840C533450>
 
 def MPxMidiInputDevice_className(*args: Any, **kwargs: Any) -> Any: ...
 class MPxModelEditorCommand(object):
@@ -1568,7 +1579,7 @@ class MPxModelEditorCommand(object):
     def modelView(self, *args: Any, **kwargs: Any) -> Any: ...
     def setResult(self, *args: Any, **kwargs: Any) -> Any: ...
     def skipFlagForCreate(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C70FD9F0>
+    thisown: property = <property object at 0x000001840C533860>
 
 def MPxModelEditorCommand_className(*args: Any, **kwargs: Any) -> Any: ...
 class MPxMotionPathNode(MPxNode):
@@ -1579,51 +1590,51 @@ class MPxMotionPathNode(MPxNode):
         """Initialize self.  See help(type(self)) for accurate signature."""
 
     def __swig_destroy__(self, *args: Any, **kwargs: Any) -> Any: ...
-    allCoordinates: property = <property object at 0x00000183C70F40E0>
-    bank: property = <property object at 0x00000183C70F3EF0>
-    bankScale: property = <property object at 0x00000183C70F3F40>
-    bankThreshold: property = <property object at 0x00000183C70F3F90>
+    allCoordinates: property = <property object at 0x000001840C525DB0>
+    bank: property = <property object at 0x000001840C525C20>
+    bankScale: property = <property object at 0x000001840C525C70>
+    bankThreshold: property = <property object at 0x000001840C525CC0>
     def banking(self, *args: Any, **kwargs: Any) -> Any: ...
     def evaluatePath(self, *args: Any, **kwargs: Any) -> Any: ...
-    flowNode: property = <property object at 0x00000183C70F39F0>
-    follow: property = <property object at 0x00000183C70F3B30>
-    fractionMode: property = <property object at 0x00000183C70F4040>
+    flowNode: property = <property object at 0x000001840C525770>
+    follow: property = <property object at 0x000001840C5258B0>
+    fractionMode: property = <property object at 0x000001840C525D10>
     def fractionalToParametric(self, *args: Any, **kwargs: Any) -> Any: ...
-    frontAxis: property = <property object at 0x00000183C70F3C70>
-    frontTwist: property = <property object at 0x00000183C70F3900>
+    frontAxis: property = <property object at 0x000001840C5259F0>
+    frontTwist: property = <property object at 0x000001840C525680>
     def getVectors(self, *args: Any, **kwargs: Any) -> Any: ...
-    inverseFront: property = <property object at 0x00000183C70F3C20>
-    inverseUp: property = <property object at 0x00000183C70F3BD0>
+    inverseFront: property = <property object at 0x000001840C5259A0>
+    inverseUp: property = <property object at 0x000001840C525950>
     def matrix(self, *args: Any, **kwargs: Any) -> Any: ...
-    normal: property = <property object at 0x00000183C70F3B80>
-    orientMatrix: property = <property object at 0x00000183C70F4220>
-    orientationMarkerTime: property = <property object at 0x00000183C70F3AE0>
+    normal: property = <property object at 0x000001840C525900>
+    orientMatrix: property = <property object at 0x000001840C525EF0>
+    orientationMarkerTime: property = <property object at 0x000001840C525860>
     def parametricToFractional(self, *args: Any, **kwargs: Any) -> Any: ...
-    pathGeometry: property = <property object at 0x00000183C70F3A40>
+    pathGeometry: property = <property object at 0x000001840C5257C0>
     def position(self, *args: Any, **kwargs: Any) -> Any: ...
-    positionMarkerTime: property = <property object at 0x00000183C70F3A90>
-    rotate: property = <property object at 0x00000183C70F4270>
-    rotateOrder: property = <property object at 0x00000183C70F43B0>
-    rotateX: property = <property object at 0x00000183C70F42C0>
-    rotateY: property = <property object at 0x00000183C70F4310>
-    rotateZ: property = <property object at 0x00000183C70F4360>
-    sideTwist: property = <property object at 0x00000183C70F39A0>
-    thisown: property = <property object at 0x00000183C70F3810>
+    positionMarkerTime: property = <property object at 0x000001840C525810>
+    rotate: property = <property object at 0x000001840C525F40>
+    rotateOrder: property = <property object at 0x000001840C5260E0>
+    rotateX: property = <property object at 0x000001840C525F90>
+    rotateY: property = <property object at 0x000001840C526040>
+    rotateZ: property = <property object at 0x000001840C526090>
+    sideTwist: property = <property object at 0x000001840C525720>
+    thisown: property = <property object at 0x000001840C525590>
     def type(self, *args: Any, **kwargs: Any) -> Any: ...
-    uValue: property = <property object at 0x00000183C70F38B0>
-    upAxis: property = <property object at 0x00000183C70F3CC0>
-    upTwist: property = <property object at 0x00000183C70F3950>
-    updateOrientationMarkers: property = <property object at 0x00000183C70F4090>
-    worldUpMatrix: property = <property object at 0x00000183C70F3EA0>
-    worldUpType: property = <property object at 0x00000183C70F3D10>
-    worldUpVector: property = <property object at 0x00000183C70F3D60>
-    worldUpVectorX: property = <property object at 0x00000183C70F3DB0>
-    worldUpVectorY: property = <property object at 0x00000183C70F3E00>
-    worldUpVectorZ: property = <property object at 0x00000183C70F3E50>
+    uValue: property = <property object at 0x000001840C525630>
+    upAxis: property = <property object at 0x000001840C525A40>
+    upTwist: property = <property object at 0x000001840C5256D0>
+    updateOrientationMarkers: property = <property object at 0x000001840C525D60>
+    worldUpMatrix: property = <property object at 0x000001840C5208B0>
+    worldUpType: property = <property object at 0x000001840C525A90>
+    worldUpVector: property = <property object at 0x000001840C525AE0>
+    worldUpVectorX: property = <property object at 0x000001840C525B30>
+    worldUpVectorY: property = <property object at 0x000001840C525B80>
+    worldUpVectorZ: property = <property object at 0x000001840C525BD0>
     def wraparoundFractionalValue(self, *args: Any, **kwargs: Any) -> Any: ...
-    xCoordinate: property = <property object at 0x00000183C70F4130>
-    yCoordinate: property = <property object at 0x00000183C70F4180>
-    zCoordinate: property = <property object at 0x00000183C70F41D0>
+    xCoordinate: property = <property object at 0x000001840C525E00>
+    yCoordinate: property = <property object at 0x000001840C525E50>
+    zCoordinate: property = <property object at 0x000001840C525EA0>
 
 class MPxMultiPolyTweakUVCommand(MPxCommand):
     """
@@ -1637,7 +1648,7 @@ class MPxMultiPolyTweakUVCommand(MPxCommand):
     def newSyntax(self, *args: Any, **kwargs: Any) -> Any: ...
     def parseSyntax(self, *args: Any, **kwargs: Any) -> Any: ...
     def preProcessUVs(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C70EC4F0>
+    thisown: property = <property object at 0x000001840C51C180>
 
 def MPxMultiPolyTweakUVCommand_newSyntax(*args: Any, **kwargs: Any) -> Any: ...
 class MPxNode(object):
@@ -1656,7 +1667,7 @@ class MPxNode(object):
     def addAttribute(self, *args: Any, **kwargs: Any) -> Any: ...
     def addExternalContentForFileAttr(self, *args: Any, **kwargs: Any) -> Any: ...
     def attributeAffects(self, *args: Any, **kwargs: Any) -> Any: ...
-    caching: property = <property object at 0x00000183C703FA90>
+    caching: property = <property object at 0x000001840C4E5770>
     def className(self, *args: Any, **kwargs: Any) -> Any: ...
     def compute(self, *args: Any, **kwargs: Any) -> Any: ...
     def configCache(self, *args: Any, **kwargs: Any) -> Any: ...
@@ -1666,7 +1677,7 @@ class MPxNode(object):
     def dependsOn(self, *args: Any, **kwargs: Any) -> Any: ...
     def existWithoutInConnections(self, *args: Any, **kwargs: Any) -> Any: ...
     def existWithoutOutConnections(self, *args: Any, **kwargs: Any) -> Any: ...
-    frozen: property = <property object at 0x00000183C703FB30>
+    frozen: property = <property object at 0x000001840C4E5810>
     def getCacheSetup(self, *args: Any, **kwargs: Any) -> Any: ...
     def getExternalContent(self, *args: Any, **kwargs: Any) -> Any: ...
     def getFilesToArchive(self, *args: Any, **kwargs: Any) -> Any: ...
@@ -1676,7 +1687,7 @@ class MPxNode(object):
     def inheritAttributesFrom(self, *args: Any, **kwargs: Any) -> Any: ...
     def internalArrayCount(self, *args: Any, **kwargs: Any) -> Any: ...
     def isAbstractClass(self, *args: Any, **kwargs: Any) -> Any: ...
-    isHistoricallyInteresting: property = <property object at 0x00000183C703FA40>
+    isHistoricallyInteresting: property = <property object at 0x000001840C4E5720>
     def isPassiveOutput(self, *args: Any, **kwargs: Any) -> Any: ...
     def isTrackingTopology(self, *args: Any, **kwargs: Any) -> Any: ...
     kAssembly: int = 22
@@ -1720,7 +1731,7 @@ class MPxNode(object):
     kUntrusted: int = 3
     def legalConnection(self, *args: Any, **kwargs: Any) -> Any: ...
     def legalDisconnection(self, *args: Any, **kwargs: Any) -> Any: ...
-    message: property = <property object at 0x00000183C703F9F0>
+    message: property = <property object at 0x000001840C4E56D0>
     def name(self, *args: Any, **kwargs: Any) -> Any: ...
     def passThroughToMany(self, *args: Any, **kwargs: Any) -> Any: ...
     def passThroughToOne(self, *args: Any, **kwargs: Any) -> Any: ...
@@ -1736,9 +1747,9 @@ class MPxNode(object):
     def setInternalValue(self, *args: Any, **kwargs: Any) -> Any: ...
     def setInternalValueInContext(self, *args: Any, **kwargs: Any) -> Any: ...
     def shouldSave(self, *args: Any, **kwargs: Any) -> Any: ...
-    state: property = <property object at 0x00000183C703FAE0>
+    state: property = <property object at 0x000001840C4E57C0>
     def thisMObject(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C7028E50>
+    thisown: property = <property object at 0x000001840C4DDC20>
     def transformInvalidationRange(self, *args: Any, **kwargs: Any) -> Any: ...
     def type(self, *args: Any, **kwargs: Any) -> Any: ...
     def typeId(self, *args: Any, **kwargs: Any) -> Any: ...
@@ -1751,28 +1762,28 @@ def MPxNode_inheritAttributesFrom(*args: Any, **kwargs: Any) -> Any: ...
 class MPxObjectSet(MPxNode):
     """
     """
-    DNSetMembers: property = <property object at 0x00000183C70E2C70>
+    DNSetMembers: property = <property object at 0x000001840C510900>
     def __disown__(self) -> Any: ...
     def __init__(self, *args) -> Any:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
     def __swig_destroy__(self, *args: Any, **kwargs: Any) -> Any: ...
-    annotation: property = <property object at 0x00000183C70E2D10>
+    annotation: property = <property object at 0x000001840C5109A0>
     def canBeDeleted(self, *args: Any, **kwargs: Any) -> Any: ...
     def className(self, *args: Any, **kwargs: Any) -> Any: ...
-    dagSetMembers: property = <property object at 0x00000183C70E2C20>
-    edgesOnlySet: property = <property object at 0x00000183C70E2E00>
-    editPointsOnlySet: property = <property object at 0x00000183C70D3180>
-    facetsOnlySet: property = <property object at 0x00000183C70E2E50>
-    groupNodes: property = <property object at 0x00000183C70E2F40>
-    isLayer: property = <property object at 0x00000183C70E2D60>
-    memberWireframeColor: property = <property object at 0x00000183C70E2CC0>
-    partition: property = <property object at 0x00000183C70E2EF0>
-    renderableOnlySet: property = <property object at 0x00000183C70E2EA0>
-    thisown: property = <property object at 0x00000183C70E2B30>
+    dagSetMembers: property = <property object at 0x000001840C5108B0>
+    edgesOnlySet: property = <property object at 0x000001840C510A90>
+    editPointsOnlySet: property = <property object at 0x000001840C510B30>
+    facetsOnlySet: property = <property object at 0x000001840C510AE0>
+    groupNodes: property = <property object at 0x000001840C510C20>
+    isLayer: property = <property object at 0x000001840C5109F0>
+    memberWireframeColor: property = <property object at 0x000001840C510950>
+    partition: property = <property object at 0x000001840C510BD0>
+    renderableOnlySet: property = <property object at 0x000001840C510B80>
+    thisown: property = <property object at 0x000001840C5107C0>
     def type(self, *args: Any, **kwargs: Any) -> Any: ...
-    usedByNodes: property = <property object at 0x00000183C70E2F90>
-    verticesOnlySet: property = <property object at 0x00000183C70E2DB0>
+    usedByNodes: property = <property object at 0x000001840C510C70>
+    verticesOnlySet: property = <property object at 0x000001840C510A40>
 
 def MPxObjectSet_className(*args: Any, **kwargs: Any) -> Any: ...
 class MPxParticleAttributeMapperNode(MPxNode):
@@ -1785,20 +1796,20 @@ class MPxParticleAttributeMapperNode(MPxNode):
     def __swig_destroy__(self, *args: Any, **kwargs: Any) -> Any: ...
     def className(self, *args: Any, **kwargs: Any) -> Any: ...
     def compute(self, *args: Any, **kwargs: Any) -> Any: ...
-    computeNode: property = <property object at 0x00000183C710C590>
-    computeNodeColor: property = <property object at 0x00000183C710C720>
-    computeNodeColorB: property = <property object at 0x00000183C710C810>
-    computeNodeColorG: property = <property object at 0x00000183C710C7C0>
-    computeNodeColorR: property = <property object at 0x00000183C710C770>
-    outColorPP: property = <property object at 0x00000183C710C8B0>
-    outMaxValue: property = <property object at 0x00000183C710C6D0>
-    outMinValue: property = <property object at 0x00000183C710C680>
-    outValuePP: property = <property object at 0x00000183C710C900>
-    thisown: property = <property object at 0x00000183C710C4A0>
-    time: property = <property object at 0x00000183C710C860>
+    computeNode: property = <property object at 0x000001840C542450>
+    computeNodeColor: property = <property object at 0x000001840C5425E0>
+    computeNodeColorB: property = <property object at 0x000001840C5426D0>
+    computeNodeColorG: property = <property object at 0x000001840C542680>
+    computeNodeColorR: property = <property object at 0x000001840C542630>
+    outColorPP: property = <property object at 0x000001840C542770>
+    outMaxValue: property = <property object at 0x000001840C542590>
+    outMinValue: property = <property object at 0x000001840C542540>
+    outValuePP: property = <property object at 0x000001840C5427C0>
+    thisown: property = <property object at 0x000001840C542360>
+    time: property = <property object at 0x000001840C542720>
     def type(self, *args: Any, **kwargs: Any) -> Any: ...
-    uCoordPP: property = <property object at 0x00000183C710C5E0>
-    vCoordPP: property = <property object at 0x00000183C710C630>
+    uCoordPP: property = <property object at 0x000001840C5424A0>
+    vCoordPP: property = <property object at 0x000001840C5424F0>
 
 def MPxParticleAttributeMapperNode_className(*args: Any, **kwargs: Any) -> Any: ...
 class MPxPolyTrg(MPxNode):
@@ -1813,7 +1824,7 @@ class MPxPolyTrg(MPxNode):
     def isAbstractClass(self, *args: Any, **kwargs: Any) -> Any: ...
     def postConstructor(self, *args: Any, **kwargs: Any) -> Any: ...
     def registerTrgFunction(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C70E4310>
+    thisown: property = <property object at 0x000001840C514040>
     def unregisterTrgFunction(self, *args: Any, **kwargs: Any) -> Any: ...
 
 class MPxPolyTweakUVCommand(MPxCommand):
@@ -1827,7 +1838,7 @@ class MPxPolyTweakUVCommand(MPxCommand):
     def getTweakedUVs(self, *args: Any, **kwargs: Any) -> Any: ...
     def newSyntax(self, *args: Any, **kwargs: Any) -> Any: ...
     def parseSyntax(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C70EC310>
+    thisown: property = <property object at 0x000001840C51AF40>
 
 def MPxPolyTweakUVCommand_newSyntax(*args: Any, **kwargs: Any) -> Any: ...
 class MPxPolyTweakUVInteractiveCommand(MPxToolCommand):
@@ -1844,7 +1855,7 @@ class MPxPolyTweakUVInteractiveCommand(MPxToolCommand):
     def finalize(self, *args: Any, **kwargs: Any) -> Any: ...
     def isUndoable(self, *args: Any, **kwargs: Any) -> Any: ...
     def setUVs(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C7103130>
+    thisown: property = <property object at 0x000001840C538040>
 
 def MPxPolyTweakUVInteractiveCommand_className(*args: Any, **kwargs: Any) -> Any: ...
 class MPxRenderPassImpl(object):
@@ -1882,7 +1893,7 @@ class MPxRenderPassImpl(object):
     kUInt8: int = 1
     kVectorSemantic: int = 2
     def perLightPassContributionSupported(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C710CA40>
+    thisown: property = <property object at 0x000001840C542900>
     def typesSupported(self, *args: Any, **kwargs: Any) -> Any: ...
 
 class MPxRepresentation(object):
@@ -1902,7 +1913,7 @@ class MPxRepresentation(object):
     def getType(self, *args: Any, **kwargs: Any) -> Any: ...
     def inactivate(self, *args: Any, **kwargs: Any) -> Any: ...
     def setExternalContent(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C70E3F40>
+    thisown: property = <property object at 0x000001840C512C70>
 
 class MPxSelectionContext(MPxContext):
     """
@@ -1936,7 +1947,7 @@ class MPxSelectionContext(MPxContext):
     def setAllowSoftSelect(self, *args: Any, **kwargs: Any) -> Any: ...
     def setAllowSymmetry(self, *args: Any, **kwargs: Any) -> Any: ...
     def setImage(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C70FDEA0>
+    thisown: property = <property object at 0x000001840C533D10>
 
 def MPxSelectionContext_className(*args: Any, **kwargs: Any) -> Any: ...
 class MPxSkinCluster(MPxGeometryFilter):
@@ -1947,14 +1958,14 @@ class MPxSkinCluster(MPxGeometryFilter):
         """Initialize self.  See help(type(self)) for accurate signature."""
 
     def __swig_destroy__(self, *args: Any, **kwargs: Any) -> Any: ...
-    bindPreMatrix: property = <property object at 0x00000183C70F0590>
+    bindPreMatrix: property = <property object at 0x000001840C5202C0>
     def className(self, *args: Any, **kwargs: Any) -> Any: ...
-    matrix: property = <property object at 0x00000183C70F0540>
-    thisown: property = <property object at 0x00000183C70F03B0>
+    matrix: property = <property object at 0x000001840C520270>
+    thisown: property = <property object at 0x000001840C5200E0>
     def type(self, *args: Any, **kwargs: Any) -> Any: ...
-    weightList: property = <property object at 0x00000183C70F04A0>
+    weightList: property = <property object at 0x000001840C5201D0>
     def weightValue(self, *args: Any, **kwargs: Any) -> Any: ...
-    weights: property = <property object at 0x00000183C70F04F0>
+    weights: property = <property object at 0x000001840C520220>
 
 def MPxSkinCluster_className(*args: Any, **kwargs: Any) -> Any: ...
 class MPxSpringNode(MPxNode):
@@ -1967,10 +1978,10 @@ class MPxSpringNode(MPxNode):
     def __swig_destroy__(self, *args: Any, **kwargs: Any) -> Any: ...
     def applySpringLaw(self, *args: Any, **kwargs: Any) -> Any: ...
     def className(self, *args: Any, **kwargs: Any) -> Any: ...
-    mDeltaTime: property = <property object at 0x00000183C710C3B0>
-    mEnd1Weight: property = <property object at 0x00000183C710C310>
-    mEnd2Weight: property = <property object at 0x00000183C710C360>
-    thisown: property = <property object at 0x00000183C710C220>
+    mDeltaTime: property = <property object at 0x000001840C542270>
+    mEnd1Weight: property = <property object at 0x000001840C5421D0>
+    mEnd2Weight: property = <property object at 0x000001840C542220>
+    thisown: property = <property object at 0x000001840C5420E0>
     def type(self, *args: Any, **kwargs: Any) -> Any: ...
 
 def MPxSpringNode_className(*args: Any, **kwargs: Any) -> Any: ...
@@ -1985,12 +1996,12 @@ class MPxSurfaceShape(MPxNode):
     def acceptsGeometryIterator(self, *args: Any, **kwargs: Any) -> Any: ...
     def activeComponents(self, *args: Any, **kwargs: Any) -> Any: ...
     def boundingBox(self, *args: Any, **kwargs: Any) -> Any: ...
-    boundingBoxCenterX: property = <property object at 0x00000183C709CF40>
-    boundingBoxCenterY: property = <property object at 0x00000183C709CF90>
-    boundingBoxCenterZ: property = <property object at 0x00000183C709F040>
+    boundingBoxCenterX: property = <property object at 0x000001840C4C3B80>
+    boundingBoxCenterY: property = <property object at 0x000001840C4C3BD0>
+    boundingBoxCenterZ: property = <property object at 0x000001840C4C3C20>
     def cachedShapeAttr(self, *args: Any, **kwargs: Any) -> Any: ...
     def canMakeLive(self, *args: Any, **kwargs: Any) -> Any: ...
-    center: property = <property object at 0x00000183C709CEF0>
+    center: property = <property object at 0x000001840C4C3B30>
     def childChanged(self, *args: Any, **kwargs: Any) -> Any: ...
     def className(self, *args: Any, **kwargs: Any) -> Any: ...
     def closestPoint(self, *args: Any, **kwargs: Any) -> Any: ...
@@ -2007,58 +2018,58 @@ class MPxSurfaceShape(MPxNode):
     def getShapeSelectionMask(self, *args: Any, **kwargs: Any) -> Any: ...
     def getWorldMatrix(self, *args: Any, **kwargs: Any) -> Any: ...
     def hasActiveComponents(self, *args: Any, **kwargs: Any) -> Any: ...
-    instObjGroups: property = <property object at 0x00000183C709F360>
-    intermediateObject: property = <property object at 0x00000183C709F2C0>
-    inverseMatrix: property = <property object at 0x00000183C709F0E0>
+    instObjGroups: property = <property object at 0x000001840C4C3EA0>
+    intermediateObject: property = <property object at 0x000001840C4C3E00>
+    inverseMatrix: property = <property object at 0x000001840C443C70>
     def isBounded(self, *args: Any, **kwargs: Any) -> Any: ...
     def isRenderable(self, *args: Any, **kwargs: Any) -> Any: ...
-    isTemplated: property = <property object at 0x00000183C709F310>
+    isTemplated: property = <property object at 0x000001840C4C3E50>
     def localShapeInAttr(self, *args: Any, **kwargs: Any) -> Any: ...
     def localShapeOutAttr(self, *args: Any, **kwargs: Any) -> Any: ...
-    mControlPoints: property = <property object at 0x00000183C709C9A0>
-    mControlValueX: property = <property object at 0x00000183C709C9F0>
-    mControlValueY: property = <property object at 0x00000183C709CA40>
-    mControlValueZ: property = <property object at 0x00000183C709CA90>
-    mHasHistoryOnCreate: property = <property object at 0x00000183C709C950>
+    mControlPoints: property = <property object at 0x000001840C4C3630>
+    mControlValueX: property = <property object at 0x000001840C4C3680>
+    mControlValueY: property = <property object at 0x000001840C4F5220>
+    mControlValueZ: property = <property object at 0x000001840C4C36D0>
+    mHasHistoryOnCreate: property = <property object at 0x000001840C4C35E0>
     def match(self, *args: Any, **kwargs: Any) -> Any: ...
     def matchComponent(self, *args: Any, **kwargs: Any) -> Any: ...
-    matrix: property = <property object at 0x00000183C709F090>
+    matrix: property = <property object at 0x000001840C4C3C70>
     def newControlPointComponent(self, *args: Any, **kwargs: Any) -> Any: ...
-    nodeBoundingBox: property = <property object at 0x00000183C709CAE0>
-    nodeBoundingBoxMax: property = <property object at 0x00000183C709CC70>
-    nodeBoundingBoxMaxX: property = <property object at 0x00000183C709CCC0>
-    nodeBoundingBoxMaxY: property = <property object at 0x00000183C709CD10>
-    nodeBoundingBoxMaxZ: property = <property object at 0x00000183C709CD60>
-    nodeBoundingBoxMin: property = <property object at 0x00000183C709CB30>
-    nodeBoundingBoxMinX: property = <property object at 0x00000183C709CB80>
-    nodeBoundingBoxMinY: property = <property object at 0x00000183C709CBD0>
-    nodeBoundingBoxMinZ: property = <property object at 0x00000183C709CC20>
-    nodeBoundingBoxSize: property = <property object at 0x00000183C709CDB0>
-    nodeBoundingBoxSizeX: property = <property object at 0x00000183C709CE00>
-    nodeBoundingBoxSizeY: property = <property object at 0x00000183C709CE50>
-    nodeBoundingBoxSizeZ: property = <property object at 0x00000183C709CEA0>
-    objectColor: property = <property object at 0x00000183C709F540>
-    objectGroupColor: property = <property object at 0x00000183C709F4A0>
-    objectGroupId: property = <property object at 0x00000183C709F450>
-    objectGroups: property = <property object at 0x00000183C709F3B0>
-    objectGrpCompList: property = <property object at 0x00000183C709F400>
-    parentInverseMatrix: property = <property object at 0x00000183C709F220>
-    parentMatrix: property = <property object at 0x00000183C709F1D0>
+    nodeBoundingBox: property = <property object at 0x000001840C4C3720>
+    nodeBoundingBoxMax: property = <property object at 0x000001840C4C38B0>
+    nodeBoundingBoxMaxX: property = <property object at 0x000001840C4C3900>
+    nodeBoundingBoxMaxY: property = <property object at 0x000001840C4C3950>
+    nodeBoundingBoxMaxZ: property = <property object at 0x000001840C4C39A0>
+    nodeBoundingBoxMin: property = <property object at 0x000001840C4C3770>
+    nodeBoundingBoxMinX: property = <property object at 0x000001840C4C37C0>
+    nodeBoundingBoxMinY: property = <property object at 0x000001840C4C3810>
+    nodeBoundingBoxMinZ: property = <property object at 0x000001840C4C3860>
+    nodeBoundingBoxSize: property = <property object at 0x000001840C4C39F0>
+    nodeBoundingBoxSizeX: property = <property object at 0x000001840C4C3A40>
+    nodeBoundingBoxSizeY: property = <property object at 0x000001840C4C3A90>
+    nodeBoundingBoxSizeZ: property = <property object at 0x000001840C4C3AE0>
+    objectColor: property = <property object at 0x000001840C4C40E0>
+    objectGroupColor: property = <property object at 0x000001840C4C4040>
+    objectGroupId: property = <property object at 0x000001840C4C3F90>
+    objectGroups: property = <property object at 0x000001840C4C3EF0>
+    objectGrpCompList: property = <property object at 0x000001840C4C3F40>
+    parentInverseMatrix: property = <property object at 0x000001840C4C3D60>
+    parentMatrix: property = <property object at 0x000001840C4C3D10>
     def pointAtParm(self, *args: Any, **kwargs: Any) -> Any: ...
     def renderGroupComponentType(self, *args: Any, **kwargs: Any) -> Any: ...
     def setRenderable(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C707CD60>
+    thisown: property = <property object at 0x000001840C4F39F0>
     def transformUsing(self, *args: Any, **kwargs: Any) -> Any: ...
     def tweakUsing(self, *args: Any, **kwargs: Any) -> Any: ...
     def type(self, *args: Any, **kwargs: Any) -> Any: ...
     def undeleteComponents(self, *args: Any, **kwargs: Any) -> Any: ...
-    useObjectColor: property = <property object at 0x00000183C709F4F0>
+    useObjectColor: property = <property object at 0x000001840C4C4090>
     def vertexOffsetDirection(self, *args: Any, **kwargs: Any) -> Any: ...
-    visibility: property = <property object at 0x00000183C709F270>
+    visibility: property = <property object at 0x000001840C4C3DB0>
     def weightedTransformUsing(self, *args: Any, **kwargs: Any) -> Any: ...
     def weightedTweakUsing(self, *args: Any, **kwargs: Any) -> Any: ...
-    worldInverseMatrix: property = <property object at 0x00000183C709F180>
-    worldMatrix: property = <property object at 0x00000183C709F130>
+    worldInverseMatrix: property = <property object at 0x000001840C4C3CC0>
+    worldMatrix: property = <property object at 0x000001840C4F3590>
     def worldShapeOutAttr(self, *args: Any, **kwargs: Any) -> Any: ...
 
 class MPxSurfaceShapeUI(object):
@@ -2087,7 +2098,7 @@ class MPxSurfaceShapeUI(object):
     def snap(self, *args: Any, **kwargs: Any) -> Any: ...
     def surfaceShape(self, *args: Any, **kwargs: Any) -> Any: ...
     def surfaceShapeUI(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C7101720>
+    thisown: property = <property object at 0x000001840C535590>
 
 def MPxSurfaceShapeUI_className(*args: Any, **kwargs: Any) -> Any: ...
 def MPxSurfaceShapeUI_surfaceShapeUI(*args: Any, **kwargs: Any) -> Any: ...
@@ -2105,7 +2116,7 @@ class MPxTexContext(MPxContext):
     def newToolCommand(self, *args: Any, **kwargs: Any) -> Any: ...
     def portSize(self, *args: Any, **kwargs: Any) -> Any: ...
     def portToView(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C7101BD0>
+    thisown: property = <property object at 0x000001840C535A40>
     def viewRect(self, *args: Any, **kwargs: Any) -> Any: ...
     def viewToPort(self, *args: Any, **kwargs: Any) -> Any: ...
 
@@ -2124,7 +2135,7 @@ class MPxToolCommand(MPxCommand):
     def className(self, *args: Any, **kwargs: Any) -> Any: ...
     def doIt(self, *args: Any, **kwargs: Any) -> Any: ...
     def finalize(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C7101E50>
+    thisown: property = <property object at 0x000001840C535D60>
 
 def MPxToolCommand_className(*args: Any, **kwargs: Any) -> Any: ...
 class MPxTransform(MPxNode):
@@ -2158,12 +2169,12 @@ class MPxTransform(MPxNode):
     def applyTranslationLimits(self, *args: Any, **kwargs: Any) -> Any: ...
     def applyTranslationLocks(self, *args: Any, **kwargs: Any) -> Any: ...
     def assign(self, *args: Any, **kwargs: Any) -> Any: ...
-    baseTransformationMatrix: property = <property object at 0x00000183C70EB8B0>
+    baseTransformationMatrix: property = <property object at 0x000001840C51A590>
     def boundingBox(self, *args: Any, **kwargs: Any) -> Any: ...
-    boundingBoxCenterX: property = <property object at 0x00000183C70E8A90>
-    boundingBoxCenterY: property = <property object at 0x00000183C70E8AE0>
-    boundingBoxCenterZ: property = <property object at 0x00000183C70E8B30>
-    center: property = <property object at 0x00000183C70E8A40>
+    boundingBoxCenterX: property = <property object at 0x000001840C5178B0>
+    boundingBoxCenterY: property = <property object at 0x000001840C517900>
+    boundingBoxCenterZ: property = <property object at 0x000001840C517950>
+    center: property = <property object at 0x000001840C517860>
     def checkAndSetRotateOrientation(self, *args: Any, **kwargs: Any) -> Any: ...
     def checkAndSetRotatePivot(self, *args: Any, **kwargs: Any) -> Any: ...
     def checkAndSetRotatePivotTranslation(self, *args: Any, **kwargs: Any) -> Any: ...
@@ -2179,14 +2190,14 @@ class MPxTransform(MPxNode):
     def computeLocalTransformation(self, *args: Any, **kwargs: Any) -> Any: ...
     def copyInternalData(self, *args: Any, **kwargs: Any) -> Any: ...
     def createTransformationMatrix(self, *args: Any, **kwargs: Any) -> Any: ...
-    displayHandle: property = <property object at 0x00000183C70D6180>
-    displayLocalAxis: property = <property object at 0x00000183C70EB4F0>
-    displayRotatePivot: property = <property object at 0x00000183C70EB4A0>
-    displayScalePivot: property = <property object at 0x00000183C70EB450>
-    drawOverride: property = <property object at 0x00000183C70E9130>
-    dynamics: property = <property object at 0x00000183C70EB540>
+    displayHandle: property = <property object at 0x000001840C51A0E0>
+    displayLocalAxis: property = <property object at 0x000001840C51A1D0>
+    displayRotatePivot: property = <property object at 0x000001840C51A180>
+    displayScalePivot: property = <property object at 0x000001840C51A130>
+    drawOverride: property = <property object at 0x000001840C517EF0>
+    dynamics: property = <property object at 0x000001840C51A220>
     def enableLimit(self, *args: Any, **kwargs: Any) -> Any: ...
-    geometry: property = <property object at 0x00000183C70EB220>
+    geometry: property = <property object at 0x000001840C519E50>
     def getEulerRotation(self, *args: Any, **kwargs: Any) -> Any: ...
     def getMatrix(self, *args: Any, **kwargs: Any) -> Any: ...
     def getMatrixInverse(self, *args: Any, **kwargs: Any) -> Any: ...
@@ -2201,149 +2212,149 @@ class MPxTransform(MPxNode):
     def getScalePivotTranslation(self, *args: Any, **kwargs: Any) -> Any: ...
     def getShear(self, *args: Any, **kwargs: Any) -> Any: ...
     def getTranslation(self, *args: Any, **kwargs: Any) -> Any: ...
-    ghosting: property = <property object at 0x00000183C70E8E50>
-    identification: property = <property object at 0x00000183C70E9450>
-    inheritsTransform: property = <property object at 0x00000183C70EB400>
-    instObjGroups: property = <property object at 0x00000183C70E8EA0>
-    intermediateObject: property = <property object at 0x00000183C70E8DB0>
-    inverseMatrix: property = <property object at 0x00000183C70E8BD0>
+    ghosting: property = <property object at 0x000001840C517C70>
+    identification: property = <property object at 0x000001840C5182C0>
+    inheritsTransform: property = <property object at 0x000001840C51A090>
+    instObjGroups: property = <property object at 0x000001840C517CC0>
+    intermediateObject: property = <property object at 0x000001840C517BD0>
+    inverseMatrix: property = <property object at 0x000001840C5179F0>
     def isBounded(self, *args: Any, **kwargs: Any) -> Any: ...
     def isLimited(self, *args: Any, **kwargs: Any) -> Any: ...
     def isNonAffineMatricesEnabled(self, *args: Any, **kwargs: Any) -> Any: ...
-    isTemplated: property = <property object at 0x00000183C70E8E00>
-    layerOverrideColor: property = <property object at 0x00000183C70E94F0>
-    layerRenderable: property = <property object at 0x00000183C70E94A0>
+    isTemplated: property = <property object at 0x000001840C517C20>
+    layerOverrideColor: property = <property object at 0x000001840C518360>
+    layerRenderable: property = <property object at 0x000001840C518310>
     def limitValue(self, *args: Any, **kwargs: Any) -> Any: ...
-    lodVisibility: property = <property object at 0x00000183C70E93B0>
-    matrix: property = <property object at 0x00000183C70E8B80>
-    maxRotLimit: property = <property object at 0x00000183C70EA9A0>
-    maxRotLimitEnable: property = <property object at 0x00000183C70EAC20>
-    maxRotXLimit: property = <property object at 0x00000183C70EA9F0>
-    maxRotXLimitEnable: property = <property object at 0x00000183C70EAC70>
-    maxRotYLimit: property = <property object at 0x00000183C70EAA40>
-    maxRotYLimitEnable: property = <property object at 0x00000183C70EACC0>
-    maxRotZLimit: property = <property object at 0x00000183C70EAA90>
-    maxRotZLimitEnable: property = <property object at 0x00000183C70EAD10>
-    maxScaleLimit: property = <property object at 0x00000183C70EAE00>
-    maxScaleLimitEnable: property = <property object at 0x00000183C70EB0E0>
-    maxScaleXLimit: property = <property object at 0x00000183C70EAE50>
-    maxScaleXLimitEnable: property = <property object at 0x00000183C70EB130>
-    maxScaleYLimit: property = <property object at 0x00000183C70EAEA0>
-    maxScaleYLimitEnable: property = <property object at 0x00000183C70EB180>
-    maxScaleZLimit: property = <property object at 0x00000183C70EAEF0>
-    maxScaleZLimitEnable: property = <property object at 0x00000183C70EB1D0>
-    maxTransLimit: property = <property object at 0x00000183C70EA4A0>
-    maxTransLimitEnable: property = <property object at 0x00000183C70EA720>
-    maxTransXLimit: property = <property object at 0x00000183C70EA4F0>
-    maxTransXLimitEnable: property = <property object at 0x00000183C70EA770>
-    maxTransYLimit: property = <property object at 0x00000183C70EA540>
-    maxTransYLimitEnable: property = <property object at 0x00000183C70EA7C0>
-    maxTransZLimit: property = <property object at 0x00000183C70EA590>
-    maxTransZLimitEnable: property = <property object at 0x00000183C70EA810>
-    minRotLimit: property = <property object at 0x00000183C70EA860>
-    minRotLimitEnable: property = <property object at 0x00000183C70EAAE0>
-    minRotXLimit: property = <property object at 0x00000183C70EA8B0>
-    minRotXLimitEnable: property = <property object at 0x00000183C70EAB30>
-    minRotYLimit: property = <property object at 0x00000183C70EA900>
-    minRotYLimitEnable: property = <property object at 0x00000183C70EAB80>
-    minRotZLimit: property = <property object at 0x00000183C70EA950>
-    minRotZLimitEnable: property = <property object at 0x00000183C70EABD0>
-    minScaleLimit: property = <property object at 0x00000183C709F950>
-    minScaleLimitEnable: property = <property object at 0x00000183C70EAF40>
-    minScaleXLimit: property = <property object at 0x00000183C70227C0>
-    minScaleXLimitEnable: property = <property object at 0x00000183C70EAF90>
-    minScaleYLimit: property = <property object at 0x00000183C70EAD60>
-    minScaleYLimitEnable: property = <property object at 0x00000183C70EB040>
-    minScaleZLimit: property = <property object at 0x00000183C70EADB0>
-    minScaleZLimitEnable: property = <property object at 0x00000183C70EB090>
-    minTransLimit: property = <property object at 0x00000183C70EA360>
-    minTransLimitEnable: property = <property object at 0x00000183C70EA5E0>
-    minTransXLimit: property = <property object at 0x00000183C70EA3B0>
-    minTransXLimitEnable: property = <property object at 0x00000183C70EA630>
-    minTransYLimit: property = <property object at 0x00000183C70EA400>
-    minTransYLimitEnable: property = <property object at 0x00000183C70EA680>
-    minTransZLimit: property = <property object at 0x00000183C70EA450>
-    minTransZLimitEnable: property = <property object at 0x00000183C70EA6D0>
+    lodVisibility: property = <property object at 0x000001840C518220>
+    matrix: property = <property object at 0x000001840C5179A0>
+    maxRotLimit: property = <property object at 0x000001840C5196D0>
+    maxRotLimitEnable: property = <property object at 0x000001840C519900>
+    maxRotXLimit: property = <property object at 0x000001840C491540>
+    maxRotXLimitEnable: property = <property object at 0x000001840C519950>
+    maxRotYLimit: property = <property object at 0x000001840C519720>
+    maxRotYLimitEnable: property = <property object at 0x000001840C5199A0>
+    maxRotZLimit: property = <property object at 0x000001840C519770>
+    maxRotZLimitEnable: property = <property object at 0x000001840C5199F0>
+    maxScaleLimit: property = <property object at 0x000001840C519AE0>
+    maxScaleLimitEnable: property = <property object at 0x000001840C519D10>
+    maxScaleXLimit: property = <property object at 0x000001840C519B30>
+    maxScaleXLimitEnable: property = <property object at 0x000001840C519D60>
+    maxScaleYLimit: property = <property object at 0x000001840C519B80>
+    maxScaleYLimitEnable: property = <property object at 0x000001840C519DB0>
+    maxScaleZLimit: property = <property object at 0x000001840C48A8B0>
+    maxScaleZLimitEnable: property = <property object at 0x000001840C519E00>
+    maxTransLimit: property = <property object at 0x000001840C4DB3B0>
+    maxTransLimitEnable: property = <property object at 0x000001840C5194A0>
+    maxTransXLimit: property = <property object at 0x000001840C519270>
+    maxTransXLimitEnable: property = <property object at 0x000001840C5194F0>
+    maxTransYLimit: property = <property object at 0x000001840C5192C0>
+    maxTransYLimitEnable: property = <property object at 0x000001840C519540>
+    maxTransZLimit: property = <property object at 0x000001840C519310>
+    maxTransZLimitEnable: property = <property object at 0x000001840C519590>
+    minRotLimit: property = <property object at 0x000001840C5195E0>
+    minRotLimitEnable: property = <property object at 0x000001840C5197C0>
+    minRotXLimit: property = <property object at 0x000001840C4F37C0>
+    minRotXLimitEnable: property = <property object at 0x000001840C519810>
+    minRotYLimit: property = <property object at 0x000001840C519630>
+    minRotYLimitEnable: property = <property object at 0x000001840C519860>
+    minRotZLimit: property = <property object at 0x000001840C519680>
+    minRotZLimitEnable: property = <property object at 0x000001840C5198B0>
+    minScaleLimit: property = <property object at 0x000001840C4C4EF0>
+    minScaleLimitEnable: property = <property object at 0x000001840C519BD0>
+    minScaleXLimit: property = <property object at 0x000001840C519A40>
+    minScaleXLimitEnable: property = <property object at 0x000001840C519C20>
+    minScaleYLimit: property = <property object at 0x000001840C519A90>
+    minScaleYLimitEnable: property = <property object at 0x000001840C519C70>
+    minScaleZLimit: property = <property object at 0x000001840C510770>
+    minScaleZLimitEnable: property = <property object at 0x000001840C519CC0>
+    minTransLimit: property = <property object at 0x000001840C519180>
+    minTransLimitEnable: property = <property object at 0x000001840C519360>
+    minTransXLimit: property = <property object at 0x000001840C5191D0>
+    minTransXLimitEnable: property = <property object at 0x000001840C5193B0>
+    minTransYLimit: property = <property object at 0x000001840C519220>
+    minTransYLimitEnable: property = <property object at 0x000001840C519400>
+    minTransZLimit: property = <property object at 0x000001840C4433B0>
+    minTransZLimitEnable: property = <property object at 0x000001840C519450>
     def mustCallValidateAndSet(self, *args: Any, **kwargs: Any) -> Any: ...
-    nodeBoundingBox: property = <property object at 0x00000183C70E86D0>
-    nodeBoundingBoxMax: property = <property object at 0x00000183C70E8810>
-    nodeBoundingBoxMaxX: property = <property object at 0x00000183C70E8860>
-    nodeBoundingBoxMaxY: property = <property object at 0x00000183C70E88B0>
-    nodeBoundingBoxMaxZ: property = <property object at 0x00000183C70E8900>
-    nodeBoundingBoxMin: property = <property object at 0x00000183C7078630>
-    nodeBoundingBoxMinX: property = <property object at 0x00000183C70E8720>
-    nodeBoundingBoxMinY: property = <property object at 0x00000183C70E8770>
-    nodeBoundingBoxMinZ: property = <property object at 0x00000183C70E87C0>
-    nodeBoundingBoxSize: property = <property object at 0x00000183C70E8950>
-    nodeBoundingBoxSizeX: property = <property object at 0x00000183C70E89A0>
-    nodeBoundingBoxSizeY: property = <property object at 0x00000183C70E89F0>
-    nodeBoundingBoxSizeZ: property = <property object at 0x00000183C7083450>
-    objectColor: property = <property object at 0x00000183C70E90E0>
-    objectGroupColor: property = <property object at 0x00000183C70E9040>
-    objectGroupId: property = <property object at 0x00000183C70E8F90>
-    objectGroups: property = <property object at 0x00000183C70E8EF0>
-    objectGrpCompList: property = <property object at 0x00000183C70E8F40>
-    offsetParentMatrix: property = <property object at 0x00000183C70EB810>
-    overrideColor: property = <property object at 0x00000183C70E9360>
-    overrideDisplayType: property = <property object at 0x00000183C70229F0>
-    overrideEnabled: property = <property object at 0x00000183C70E92C0>
-    overrideLevelOfDetail: property = <property object at 0x00000183C70E9180>
-    overridePlayback: property = <property object at 0x00000183C70E9270>
-    overrideShading: property = <property object at 0x00000183C70E91D0>
-    overrideTexturing: property = <property object at 0x00000183C70E9220>
-    overrideVisibility: property = <property object at 0x00000183C70E9310>
-    parentInverseMatrix: property = <property object at 0x00000183C70E8D10>
-    parentMatrix: property = <property object at 0x00000183C70E8CC0>
+    nodeBoundingBox: property = <property object at 0x000001840C517450>
+    nodeBoundingBoxMax: property = <property object at 0x000001840C5175E0>
+    nodeBoundingBoxMaxX: property = <property object at 0x000001840C517630>
+    nodeBoundingBoxMaxY: property = <property object at 0x000001840C517680>
+    nodeBoundingBoxMaxZ: property = <property object at 0x000001840C5176D0>
+    nodeBoundingBoxMin: property = <property object at 0x000001840C5174A0>
+    nodeBoundingBoxMinX: property = <property object at 0x000001840C5174F0>
+    nodeBoundingBoxMinY: property = <property object at 0x000001840C517540>
+    nodeBoundingBoxMinZ: property = <property object at 0x000001840C517590>
+    nodeBoundingBoxSize: property = <property object at 0x000001840C517720>
+    nodeBoundingBoxSizeX: property = <property object at 0x000001840C517770>
+    nodeBoundingBoxSizeY: property = <property object at 0x000001840C5177C0>
+    nodeBoundingBoxSizeZ: property = <property object at 0x000001840C517810>
+    objectColor: property = <property object at 0x000001840C517EA0>
+    objectGroupColor: property = <property object at 0x000001840C517E00>
+    objectGroupId: property = <property object at 0x000001840C517DB0>
+    objectGroups: property = <property object at 0x000001840C517D10>
+    objectGrpCompList: property = <property object at 0x000001840C517D60>
+    offsetParentMatrix: property = <property object at 0x000001840C51A4F0>
+    overrideColor: property = <property object at 0x000001840C5181D0>
+    overrideDisplayType: property = <property object at 0x000001840C517F40>
+    overrideEnabled: property = <property object at 0x000001840C518130>
+    overrideLevelOfDetail: property = <property object at 0x000001840C517F90>
+    overridePlayback: property = <property object at 0x000001840C5180E0>
+    overrideShading: property = <property object at 0x000001840C518040>
+    overrideTexturing: property = <property object at 0x000001840C518090>
+    overrideVisibility: property = <property object at 0x000001840C518180>
+    parentInverseMatrix: property = <property object at 0x000001840C517B30>
+    parentMatrix: property = <property object at 0x000001840C517AE0>
     def postConstructor(self, *args: Any, **kwargs: Any) -> Any: ...
-    renderInfo: property = <property object at 0x00000183C70E9400>
-    renderLayerColor: property = <property object at 0x00000183C70E9630>
-    renderLayerId: property = <property object at 0x00000183C70E9590>
-    renderLayerInfo: property = <property object at 0x00000183C70E9540>
-    renderLayerRenderable: property = <property object at 0x00000183C70E95E0>
+    renderInfo: property = <property object at 0x000001840C518270>
+    renderLayerColor: property = <property object at 0x000001840C5184A0>
+    renderLayerId: property = <property object at 0x000001840C518400>
+    renderLayerInfo: property = <property object at 0x000001840C5183B0>
+    renderLayerRenderable: property = <property object at 0x000001840C518450>
     def resetTransformation(self, *args: Any, **kwargs: Any) -> Any: ...
-    rotate: property = <property object at 0x00000183C70E30E0>
-    rotateAxis: property = <property object at 0x00000183C70EA0E0>
-    rotateAxisX: property = <property object at 0x00000183C70EA130>
-    rotateAxisY: property = <property object at 0x00000183C70EA180>
-    rotateAxisZ: property = <property object at 0x00000183C70EA1D0>
+    rotate: property = <property object at 0x000001840C518630>
+    rotateAxis: property = <property object at 0x000001840C518EF0>
+    rotateAxisX: property = <property object at 0x000001840C518F40>
+    rotateAxisY: property = <property object at 0x000001840C518F90>
+    rotateAxisZ: property = <property object at 0x000001840C519040>
     def rotateBy(self, *args: Any, **kwargs: Any) -> Any: ...
-    rotateOrder: property = <property object at 0x00000183C70E98B0>
-    rotatePivot: property = <property object at 0x00000183C70E9B80>
-    rotatePivotTranslate: property = <property object at 0x00000183C70E9CC0>
-    rotatePivotTranslateX: property = <property object at 0x00000183C70E9D10>
-    rotatePivotTranslateY: property = <property object at 0x00000183C70E9D60>
-    rotatePivotTranslateZ: property = <property object at 0x00000183C70E9DB0>
-    rotatePivotX: property = <property object at 0x00000183C70E9BD0>
-    rotatePivotY: property = <property object at 0x00000183C70E9C20>
-    rotatePivotZ: property = <property object at 0x00000183C70E9C70>
-    rotateQuaternion: property = <property object at 0x00000183C70EB630>
-    rotateQuaternionW: property = <property object at 0x00000183C70EB770>
-    rotateQuaternionX: property = <property object at 0x00000183C70EB680>
-    rotateQuaternionY: property = <property object at 0x00000183C70EB6D0>
-    rotateQuaternionZ: property = <property object at 0x00000183C70EB720>
+    rotateOrder: property = <property object at 0x000001840C518720>
+    rotatePivot: property = <property object at 0x000001840C5189F0>
+    rotatePivotTranslate: property = <property object at 0x000001840C518B30>
+    rotatePivotTranslateX: property = <property object at 0x000001840C518B80>
+    rotatePivotTranslateY: property = <property object at 0x000001840C518BD0>
+    rotatePivotTranslateZ: property = <property object at 0x000001840C518C20>
+    rotatePivotX: property = <property object at 0x000001840C518A40>
+    rotatePivotY: property = <property object at 0x000001840C518A90>
+    rotatePivotZ: property = <property object at 0x000001840C518AE0>
+    rotateQuaternion: property = <property object at 0x000001840C51A310>
+    rotateQuaternionW: property = <property object at 0x000001840C51A450>
+    rotateQuaternionX: property = <property object at 0x000001840C51A360>
+    rotateQuaternionY: property = <property object at 0x000001840C51A3B0>
+    rotateQuaternionZ: property = <property object at 0x000001840C51A400>
     def rotateTo(self, *args: Any, **kwargs: Any) -> Any: ...
-    rotateX: property = <property object at 0x00000183C70E97C0>
-    rotateY: property = <property object at 0x00000183C70E9810>
-    rotateZ: property = <property object at 0x00000183C70E9860>
-    rotationInterpolation: property = <property object at 0x00000183C70EB7C0>
-    scale: property = <property object at 0x00000183C70E9900>
+    rotateX: property = <property object at 0x000001840C518680>
+    rotateY: property = <property object at 0x000001840C5186D0>
+    rotateZ: property = <property object at 0x000001840C4D9180>
+    rotationInterpolation: property = <property object at 0x000001840C51A4A0>
+    scale: property = <property object at 0x000001840C518770>
     def scaleBy(self, *args: Any, **kwargs: Any) -> Any: ...
-    scalePivot: property = <property object at 0x00000183C70E9E00>
-    scalePivotTranslate: property = <property object at 0x00000183C70E9F40>
-    scalePivotTranslateX: property = <property object at 0x00000183C70E9F90>
-    scalePivotTranslateY: property = <property object at 0x00000183C70EA040>
-    scalePivotTranslateZ: property = <property object at 0x00000183C70EA090>
-    scalePivotX: property = <property object at 0x00000183C70E9E50>
-    scalePivotY: property = <property object at 0x00000183C70E9EA0>
-    scalePivotZ: property = <property object at 0x00000183C70E9EF0>
+    scalePivot: property = <property object at 0x000001840C518C70>
+    scalePivotTranslate: property = <property object at 0x000001840C518DB0>
+    scalePivotTranslateX: property = <property object at 0x000001840C518E00>
+    scalePivotTranslateY: property = <property object at 0x000001840C518E50>
+    scalePivotTranslateZ: property = <property object at 0x000001840C518EA0>
+    scalePivotX: property = <property object at 0x000001840C518CC0>
+    scalePivotY: property = <property object at 0x000001840C518D10>
+    scalePivotZ: property = <property object at 0x000001840C518D60>
     def scaleTo(self, *args: Any, **kwargs: Any) -> Any: ...
-    scaleX: property = <property object at 0x00000183C70E9950>
-    scaleY: property = <property object at 0x00000183C70E99A0>
-    scaleZ: property = <property object at 0x00000183C70E99F0>
-    selectHandle: property = <property object at 0x00000183C70EB2C0>
-    selectHandleX: property = <property object at 0x00000183C70EB310>
-    selectHandleY: property = <property object at 0x00000183C70EB360>
-    selectHandleZ: property = <property object at 0x00000183C70EB3B0>
+    scaleX: property = <property object at 0x000001840C5187C0>
+    scaleY: property = <property object at 0x000001840C518810>
+    scaleZ: property = <property object at 0x000001840C518860>
+    selectHandle: property = <property object at 0x000001840C519EF0>
+    selectHandleX: property = <property object at 0x000001840C519F40>
+    selectHandleY: property = <property object at 0x000001840C519F90>
+    selectHandleZ: property = <property object at 0x000001840C51A040>
     def setLimit(self, *args: Any, **kwargs: Any) -> Any: ...
     def setNonAffineMatricesEnabled(self, *args: Any, **kwargs: Any) -> Any: ...
     def setRotateOrientation(self, *args: Any, **kwargs: Any) -> Any: ...
@@ -2352,36 +2363,36 @@ class MPxTransform(MPxNode):
     def setRotationOrder(self, *args: Any, **kwargs: Any) -> Any: ...
     def setScalePivot(self, *args: Any, **kwargs: Any) -> Any: ...
     def setScalePivotTranslation(self, *args: Any, **kwargs: Any) -> Any: ...
-    shear: property = <property object at 0x00000183C70E9A40>
+    shear: property = <property object at 0x000001840C5188B0>
     def shearBy(self, *args: Any, **kwargs: Any) -> Any: ...
     def shearTo(self, *args: Any, **kwargs: Any) -> Any: ...
-    shearXY: property = <property object at 0x00000183C70E9A90>
-    shearXZ: property = <property object at 0x00000183C70E9AE0>
-    shearYZ: property = <property object at 0x00000183C70E9B30>
-    showManipDefault: property = <property object at 0x00000183C70EB590>
-    specifiedManipLocation: property = <property object at 0x00000183C70EB5E0>
-    thisown: property = <property object at 0x00000183C70E7630>
-    transMinusRotatePivot: property = <property object at 0x00000183C70EA220>
-    transMinusRotatePivotX: property = <property object at 0x00000183C70EA270>
-    transMinusRotatePivotY: property = <property object at 0x00000183C70EA2C0>
-    transMinusRotatePivotZ: property = <property object at 0x00000183C70EA310>
+    shearXY: property = <property object at 0x000001840C518900>
+    shearXZ: property = <property object at 0x000001840C518950>
+    shearYZ: property = <property object at 0x000001840C5189A0>
+    showManipDefault: property = <property object at 0x000001840C51A270>
+    specifiedManipLocation: property = <property object at 0x000001840C51A2C0>
+    thisown: property = <property object at 0x000001840C515310>
+    transMinusRotatePivot: property = <property object at 0x000001840C488130>
+    transMinusRotatePivotX: property = <property object at 0x000001840C519090>
+    transMinusRotatePivotY: property = <property object at 0x000001840C5190E0>
+    transMinusRotatePivotZ: property = <property object at 0x000001840C519130>
     def transformationMatrix(self, *args: Any, **kwargs: Any) -> Any: ...
     def transformationMatrixPtr(self, *args: Any, **kwargs: Any) -> Any: ...
-    translate: property = <property object at 0x00000183C70E9680>
+    translate: property = <property object at 0x000001840C5184F0>
     def translateBy(self, *args: Any, **kwargs: Any) -> Any: ...
     def translateTo(self, *args: Any, **kwargs: Any) -> Any: ...
-    translateX: property = <property object at 0x00000183C70E96D0>
-    translateY: property = <property object at 0x00000183C70E9720>
-    translateZ: property = <property object at 0x00000183C70E9770>
+    translateX: property = <property object at 0x000001840C518540>
+    translateY: property = <property object at 0x000001840C518590>
+    translateZ: property = <property object at 0x000001840C5185E0>
     def treatAsTransform(self, *args: Any, **kwargs: Any) -> Any: ...
     def type(self, *args: Any, **kwargs: Any) -> Any: ...
     def updateMatrixAttrs(self, *args: Any, **kwargs: Any) -> Any: ...
-    useObjectColor: property = <property object at 0x00000183C70E9090>
+    useObjectColor: property = <property object at 0x000001840C517E50>
     def validateAndSetValue(self, *args: Any, **kwargs: Any) -> Any: ...
-    visibility: property = <property object at 0x00000183C70E8D60>
-    worldInverseMatrix: property = <property object at 0x00000183C70E8C70>
-    worldMatrix: property = <property object at 0x00000183C70E8C20>
-    xformMatrix: property = <property object at 0x00000183C70EB270>
+    visibility: property = <property object at 0x000001840C517B80>
+    worldInverseMatrix: property = <property object at 0x000001840C517A90>
+    worldMatrix: property = <property object at 0x000001840C517A40>
+    xformMatrix: property = <property object at 0x000001840C519EA0>
 
 def MPxTransform_className(*args: Any, **kwargs: Any) -> Any: ...
 def MPxTransform_isNonAffineMatricesEnabled(*args: Any, **kwargs: Any) -> Any: ...
@@ -2407,7 +2418,7 @@ class MPxTransformationMatrix(object):
     def asScaleMatrixInverse(self, *args: Any, **kwargs: Any) -> Any: ...
     def asTransformationMatrix(self, *args: Any, **kwargs: Any) -> Any: ...
     def assign(self, *args: Any, **kwargs: Any) -> Any: ...
-    baseTransformationMatrixId: property = <property object at 0x00000183C70E74F0>
+    baseTransformationMatrixId: property = <property object at 0x000001840C5151D0>
     def convertEulerRotationOrder(self, *args: Any, **kwargs: Any) -> Any: ...
     def convertTransformationRotationOrder(self, *args: Any, **kwargs: Any) -> Any: ...
     def copyValues(self, *args: Any, **kwargs: Any) -> Any: ...
@@ -2415,7 +2426,7 @@ class MPxTransformationMatrix(object):
     def decomposeMatrix(self, *args: Any, **kwargs: Any) -> Any: ...
     def eulerRotateOrientation(self, *args: Any, **kwargs: Any) -> Any: ...
     def eulerRotation(self, *args: Any, **kwargs: Any) -> Any: ...
-    identity: MPxTransformationMatrix = <maya.OpenMayaMPx.MPxTransformationMatrix; proxy of <Swig Object of type 'MPxTransformationMatrix *' at 0x00000183C5819DB0> >
+    identity: MPxTransformationMatrix = <maya.OpenMayaMPx.MPxTransformationMatrix; proxy of <Swig Object of type 'MPxTransformationMatrix *' at 0x000001840C513F00> >
     def isEquivalent(self, *args: Any, **kwargs: Any) -> Any: ...
     def preRotation(self, *args: Any, **kwargs: Any) -> Any: ...
     def reverse(self, *args: Any, **kwargs: Any) -> Any: ...
@@ -2440,7 +2451,7 @@ class MPxTransformationMatrix(object):
     def shear(self, *args: Any, **kwargs: Any) -> Any: ...
     def shearBy(self, *args: Any, **kwargs: Any) -> Any: ...
     def shearTo(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C70E4540>
+    thisown: property = <property object at 0x000001840C5142C0>
     def transformBy(self, *args: Any, **kwargs: Any) -> Any: ...
     def translateBy(self, *args: Any, **kwargs: Any) -> Any: ...
     def translateTo(self, *args: Any, **kwargs: Any) -> Any: ...
@@ -2462,7 +2473,7 @@ class MPxUIControl(object):
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, *args: Any, **kwargs: Any) -> Any: ...
     def className(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C7103450>
+    thisown: property = <property object at 0x000001840C538360>
 
 def MPxUIControl_className(*args: Any, **kwargs: Any) -> Any: ...
 class MPxUITableControl(MPxUIControl):
@@ -2496,7 +2507,7 @@ class MPxUITableControl(MPxUIControl):
     def setNumberOfRows(self, *args: Any, **kwargs: Any) -> Any: ...
     def setSelection(self, *args: Any, **kwargs: Any) -> Any: ...
     def suspendUpdates(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C7103590>
+    thisown: property = <property object at 0x000001840C5384A0>
 
 def MPxUITableControl_className(*args: Any, **kwargs: Any) -> Any: ...
 class MaterialInputData(object):
@@ -2507,13 +2518,13 @@ class MaterialInputData(object):
 
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, *args: Any, **kwargs: Any) -> Any: ...
-    ambient: property = <property object at 0x00000183C70EC7C0>
-    diffuse: property = <property object at 0x00000183C70EC810>
-    emission: property = <property object at 0x00000183C70EC860>
-    hasTransparency: property = <property object at 0x00000183C70EC900>
-    shininess: property = <property object at 0x00000183C70EC770>
-    specular: property = <property object at 0x00000183C70EC8B0>
-    thisown: property = <property object at 0x00000183C70EC720>
+    ambient: property = <property object at 0x000001840C51C450>
+    diffuse: property = <property object at 0x000001840C4E46D0>
+    emission: property = <property object at 0x000001840C51C4A0>
+    hasTransparency: property = <property object at 0x000001840C51C540>
+    shininess: property = <property object at 0x000001840C51C400>
+    specular: property = <property object at 0x000001840C51C4F0>
+    thisown: property = <property object at 0x000001840C51C3B0>
 
 def asHashable(mpxObj) -> Any: ...
 def asMPxPtr(mpxObj) -> Any: ...
@@ -2528,7 +2539,7 @@ class boolPtr(object):
     def assign(self, *args: Any, **kwargs: Any) -> Any: ...
     def cast(self, *args: Any, **kwargs: Any) -> Any: ...
     def frompointer(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C7024130>
+    thisown: property = <property object at 0x000001840C443A90>
     def value(self, *args: Any, **kwargs: Any) -> Any: ...
 
 def boolPtr_frompointer(*args: Any, **kwargs: Any) -> Any: ...
@@ -2543,7 +2554,7 @@ class charPtr(object):
     def assign(self, *args: Any, **kwargs: Any) -> Any: ...
     def cast(self, *args: Any, **kwargs: Any) -> Any: ...
     def frompointer(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C7022630>
+    thisown: property = <property object at 0x000001840C442F90>
     def value(self, *args: Any, **kwargs: Any) -> Any: ...
 
 def charPtr_frompointer(*args: Any, **kwargs: Any) -> Any: ...
@@ -2558,7 +2569,7 @@ class doublePtr(object):
     def assign(self, *args: Any, **kwargs: Any) -> Any: ...
     def cast(self, *args: Any, **kwargs: Any) -> Any: ...
     def frompointer(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C7022EA0>
+    thisown: property = <property object at 0x000001840C443860>
     def value(self, *args: Any, **kwargs: Any) -> Any: ...
 
 def doublePtr_frompointer(*args: Any, **kwargs: Any) -> Any: ...
@@ -2573,7 +2584,7 @@ class floatPtr(object):
     def assign(self, *args: Any, **kwargs: Any) -> Any: ...
     def cast(self, *args: Any, **kwargs: Any) -> Any: ...
     def frompointer(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C7022C70>
+    thisown: property = <property object at 0x000001840C443630>
     def value(self, *args: Any, **kwargs: Any) -> Any: ...
 
 def floatPtr_frompointer(*args: Any, **kwargs: Any) -> Any: ...
@@ -2589,7 +2600,7 @@ class intPtr(object):
     def assign(self, *args: Any, **kwargs: Any) -> Any: ...
     def cast(self, *args: Any, **kwargs: Any) -> Any: ...
     def frompointer(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C7022810>
+    thisown: property = <property object at 0x000001840C4431D0>
     def value(self, *args: Any, **kwargs: Any) -> Any: ...
 
 def intPtr_frompointer(*args: Any, **kwargs: Any) -> Any: ...
@@ -2604,7 +2615,7 @@ class shortPtr(object):
     def assign(self, *args: Any, **kwargs: Any) -> Any: ...
     def cast(self, *args: Any, **kwargs: Any) -> Any: ...
     def frompointer(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C7022A40>
+    thisown: property = <property object at 0x000001840C443400>
     def value(self, *args: Any, **kwargs: Any) -> Any: ...
 
 def shortPtr_frompointer(*args: Any, **kwargs: Any) -> Any: ...
@@ -2619,7 +2630,7 @@ class uCharPtr(object):
     def assign(self, *args: Any, **kwargs: Any) -> Any: ...
     def cast(self, *args: Any, **kwargs: Any) -> Any: ...
     def frompointer(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C7024590>
+    thisown: property = <property object at 0x000001840C443EF0>
     def value(self, *args: Any, **kwargs: Any) -> Any: ...
 
 def uCharPtr_frompointer(*args: Any, **kwargs: Any) -> Any: ...
@@ -2634,7 +2645,7 @@ class uIntPtr(object):
     def assign(self, *args: Any, **kwargs: Any) -> Any: ...
     def cast(self, *args: Any, **kwargs: Any) -> Any: ...
     def frompointer(self, *args: Any, **kwargs: Any) -> Any: ...
-    thisown: property = <property object at 0x00000183C7024360>
+    thisown: property = <property object at 0x000001840C443CC0>
     def value(self, *args: Any, **kwargs: Any) -> Any: ...
 
 def uIntPtr_frompointer(*args: Any, **kwargs: Any) -> Any: ...

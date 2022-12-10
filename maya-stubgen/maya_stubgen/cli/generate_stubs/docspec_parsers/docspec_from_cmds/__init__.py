@@ -5,11 +5,11 @@ import inspect
 import logging
 from pkgutil import ModuleInfo
 
-from docspec import Argument, Function, Module
+import docspec
 from maya import cmds
 from maya_stubgen.utils import timed
 
-from ..common import NULL_LOCATION
+from ..common import NULL_LOCATION, degraded_function
 from .html_parser import DocumentationNotFound, function_from_documentation
 from .synopsis_parser import SynopsisNotFound, function_from_synopsis
 
@@ -22,7 +22,7 @@ __all__ = ["parse_cmds_module"]
 def parse_cmds_module(
     module: ModuleInfo,
     executor: concurrent.futures.Executor,
-) -> Module:
+) -> docspec.Module:
     logger.debug("Parsing module: %s", module.name)
 
     module_name = module.name
@@ -36,7 +36,7 @@ def parse_cmds_module(
             if docspec_member is not None:
                 docspec_members.append(docspec_member)
 
-    return Module(
+    return docspec.Module(
         location=NULL_LOCATION,
         name=module_name,
         docstring=None,
@@ -44,7 +44,7 @@ def parse_cmds_module(
     )
 
 
-def parse_cmds_command(command_name) -> Function | None:
+def parse_cmds_command(command_name) -> docspec.Function | None:
     """Parse a cmds command and return a docspec Function.
 
     The html Documentation is scrapped first as it gives the best results.
@@ -63,33 +63,7 @@ def parse_cmds_command(command_name) -> Function | None:
         return
 
     # Default Docspec member overwritten if the parsers are successful
-    docspec_function = Function(
-        location=NULL_LOCATION,
-        name=command_name,
-        docstring=None,
-        modifiers=None,
-        args=[
-            Argument(
-                NULL_LOCATION,
-                "*args",
-                Argument.Type.POSITIONAL_REMAINDER,
-                decorations=None,
-                datatype="Any",
-                default_value=None,
-            ),
-            Argument(
-                NULL_LOCATION,
-                "**kwargs",
-                Argument.Type.KEYWORD_REMAINDER,
-                decorations=None,
-                datatype="Any",
-                default_value=None,
-            ),
-        ],
-        return_type="Any",
-        decorations=None,
-        semantic_hints=[],
-    )
+    docspec_function = degraded_function(command_name)
 
     try:
         synopsis_docspec_function = function_from_synopsis(command_name)
@@ -106,7 +80,7 @@ def parse_cmds_command(command_name) -> Function | None:
     # The docs parser doesn't parse positional arguments but the synopsis parser does
     if synopsis_docspec_function and docs_docspec_function:
         for arg in reversed(synopsis_docspec_function.args):
-            if arg.type is Argument.Type.POSITIONAL_ONLY:
+            if arg.type is docspec.Argument.Type.POSITIONAL_ONLY:
                 docs_docspec_function.args.insert(0, arg)
 
     if docspec_function:

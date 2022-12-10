@@ -1,17 +1,16 @@
-import ast
+from __future__ import annotations
+
 import concurrent.futures
 import importlib
 import logging
 import os
-from copy import deepcopy
 from pathlib import Path
-from pkgutil import ModuleInfo, walk_packages
-from typing import List, Optional
+from pkgutil import walk_packages
+from typing import Optional
 
 import black
 import docspec
 import docspec_to_jinja
-from docspec import Module
 from maya_stubgen.utils import initialize_maya, timed
 
 from .common import get_stub_path
@@ -20,116 +19,102 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
 
-def apply_override(input_node: ast.AST, override_node: ast.AST, output_node: ast.AST):
-    """Merge the input node with the override node into the output node.
+# def apply_override(input_node: ast.AST, override_node: ast.AST, output_node: ast.AST):
+#     """Merge the input node with the override node into the output node.
 
-    Notes:
-        - For Classes, this will be called recursively and only apply the overridden
-            methods
-        - This function doesn't return anything but modifies the reference to the output
-            node.
+#     Notes:
+#         - For Classes, this will be called recursively and only apply the overridden
+#             methods
+#         - This function doesn't return anything but modifies the reference to the output
+#             node.
 
-    Args:
-        input_node: The node to be overridden.
-        override_node: The node containing the overrides.
-        output_node: The node containing the result of the merge.
-    """
-    for input_subnode in input_node.body:
-        result_nodes = []
+#     Args:
+#         input_node: The node to be overridden.
+#         override_node: The node containing the overrides.
+#         output_node: The node containing the result of the merge.
+#     """
+#     for input_subnode in input_node.body:
+#         result_nodes = []
 
-        if isinstance(input_subnode, (ast.FunctionDef, ast.ClassDef)):
-            for override_subnode in override_node.body:
-                if not isinstance(override_subnode, type(input_subnode)):
-                    continue
+#         if isinstance(input_subnode, (ast.FunctionDef, ast.ClassDef)):
+#             for override_subnode in override_node.body:
+#                 if not isinstance(override_subnode, type(input_subnode)):
+#                     continue
 
-                if input_subnode.name == override_subnode.name:
-                    if isinstance(input_subnode, ast.ClassDef):
-                        result_node = deepcopy(override_subnode)
-                        result_node.body = []
-                        apply_override(input_subnode, override_subnode, result_node)
-                        result_nodes.append(result_node)
-                    else:
-                        result_nodes.append(override_subnode)
+#                 if input_subnode.name == override_subnode.name:
+#                     if isinstance(input_subnode, ast.ClassDef):
+#                         result_node = deepcopy(override_subnode)
+#                         result_node.body = []
+#                         apply_override(input_subnode, override_subnode, result_node)
+#                         result_nodes.append(result_node)
+#                     else:
+#                         result_nodes.append(override_subnode)
 
-        if not result_nodes:
-            result_nodes = [input_subnode]
+#         if not result_nodes:
+#             result_nodes = [input_subnode]
 
-        output_node.body.extend(result_nodes)
-
-
-def apply_stub_override(module: ModuleInfo, stub_source: str) -> str:
-    """Apply the hand written stub overrides to the stubs of the given module.
-
-    Args:
-        module_name: The name of the module to apply the stubs for.
-        stub_source: stubs string to apply the stubs to.
-
-    Returns:
-        The stubs string with the overrides applied.
-    """
-    stub_override_path = get_stub_path(module, override=True)
-
-    if not stub_override_path.exists():
-        return stub_source
-
-    stub_override_source = stub_override_path.read_text(encoding="utf8")
-
-    override_tree = ast.parse(stub_override_source)
-    input_tree = ast.parse(stub_source)
-    output_tree = ast.parse("")
-
-    apply_override(input_tree, override_tree, output_tree)
-
-    return ast.unparse(output_tree)
+#         output_node.body.extend(result_nodes)
 
 
-def generate_stubs_for_module(module: ModuleInfo):
-    logger.info("Generating stubs for %s.", module.name)
-    logger.debug("Generating stubs.")
+# def apply_stub_override(module: ModuleInfo, stub_source: str) -> str:
+#     """Apply the hand written stub overrides to the stubs of the given module.
 
-    if module.name == "maya.cmds":
-        content = generate_cmds_stubs()
-    else:
-        content = generate_generic_stub(module)
+#     Args:
+#         module_name: The name of the module to apply the stubs for.
+#         stub_source: stubs string to apply the stubs to.
 
-    logger.debug("Applying stubs overrides.")
-    content = apply_stub_override(module, content)
+#     Returns:
+#         The stubs string with the overrides applied.
+#     """
+#     stub_override_path = get_stub_path(module, override=True)
 
-    logger.debug("Formatting stubs.")
-    content = black.format_str(
-        content,
-        mode=black.FileMode(line_length=10_000, is_pyi=True),
-    )
+#     if not stub_override_path.exists():
+#         return stub_source
 
-    stub_path = get_stub_path(module)
-    stub_path.parent.mkdir(parents=True, exist_ok=True)
-    with stub_path.open("w", encoding="utf8") as f:
-        logger.debug("Writing content to %s", stub_path)
-        f.write(content)
+#     stub_override_source = stub_override_path.read_text(encoding="utf8")
+
+#     override_tree = ast.parse(stub_override_source)
+#     input_tree = ast.parse(stub_source)
+#     output_tree = ast.parse("")
+
+#     apply_override(input_tree, override_tree, output_tree)
+
+#     return ast.unparse(output_tree)
 
 
-def ignore_module(module: ModuleInfo):
-    blacklist = ["ge", "internal", "test", "unsupported"]
-    ignore = False
+# def generate_stubs_for_module(module: ModuleInfo):
+#     logger.info("Generating stubs for %s.", module.name)
+#     logger.debug("Generating stubs.")
 
-    if module.name.split(".")[-1].startswith("_"):
-        ignore = True
+#     if module.name == "maya.cmds":
+#         content = generate_cmds_stubs()
+#     else:
+#         content = generate_generic_stub(module)
 
-    for name in module.name.split("."):
-        if name in blacklist:
-            ignore = True
+#     logger.debug("Applying stubs overrides.")
+#     content = apply_stub_override(module, content)
 
-    return ignore
+#     logger.debug("Formatting stubs.")
+#     content = black.format_str(
+#         content,
+#         mode=black.FileMode(line_length=10_000, is_pyi=True),
+#     )
+
+#     stub_path = get_stub_path(module)
+#     stub_path.parent.mkdir(parents=True, exist_ok=True)
+#     with stub_path.open("w", encoding="utf8") as f:
+#         logger.debug("Writing content to %s", stub_path)
+#         f.write(content)
 
 
 def parse_package(
     package_name: str,
-    whitelist: Optional[List[str]] = None,
-) -> List[Module]:
+    whitelist: Optional[list[str]] = None,
+) -> list[docspec.Module]:
     logger.debug("Parsing package: %s", package_name)
     from .docspec_parsers import parse_builtin_module, parse_cmds_module
 
-    docspec_modules = []
+    docspec_modules: list[docspec.Module] = []
 
     # Executor with pre-initialized maya interpreters passed around to
     #  the different parsers
@@ -189,7 +174,7 @@ def dump_docspec():
         docspec.dump_module(module, target=str(docspec_cache))
 
 
-def build_stubs(path: Path, reuse_cache=False):
+def build_stubs(path: Path, reuse_cache: bool = False):
 
     if not reuse_cache:
         dump_docspec()
@@ -201,7 +186,9 @@ def build_stubs(path: Path, reuse_cache=False):
 
         stub = docspec_to_jinja.render_module(module, "pyi")
 
-        stub_path = path / (module.name.replace(".", "/") + ".pyi")
+        stub_path = path / (
+            module.name.replace("maya", "maya-stubs").replace(".", "/") + ".pyi"
+        )
 
         os.makedirs(stub_path.parent, exist_ok=True)
 
@@ -209,7 +196,7 @@ def build_stubs(path: Path, reuse_cache=False):
             f.write(stub)
 
 
-def build_docs(path: Path, reuse_cache):
+def build_docs(path: Path, reuse_cache: bool = False):
     logger.info("Building docs")
 
     if not reuse_cache:

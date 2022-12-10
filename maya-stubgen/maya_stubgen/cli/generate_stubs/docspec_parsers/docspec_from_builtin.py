@@ -11,15 +11,7 @@ import logging
 from pkgutil import ModuleInfo
 from typing import Any, Callable, List
 
-from docspec import (
-    Argument,
-    Class,
-    Docstring,
-    Function,
-    FunctionSemantic,
-    Module,
-    Variable,
-)
+import docspec
 
 from .common import NULL_LOCATION
 
@@ -29,7 +21,7 @@ logger = logging.getLogger(__name__)
 def parse_builtin_module(
     module: ModuleInfo,
     executor: concurrent.futures.Executor,
-) -> Module:
+) -> docspec.Module:
     logger.debug("Parsing module: %s", module.name)
 
     module_name = module.name
@@ -39,7 +31,7 @@ def parse_builtin_module(
     docspec_members = []
     docstring = inspect.getdoc(module)
     if docstring is not None:
-        docstring = Docstring(NULL_LOCATION, docstring)
+        docstring = docspec.Docstring(NULL_LOCATION, docstring)
 
     members = inspect.getmembers(module)
     for member in members:
@@ -53,7 +45,7 @@ def parse_builtin_module(
     #         if docspec_member is not None:
     #             docspec_members.append(docspec_member)
 
-    return Module(NULL_LOCATION, module_name, docstring, docspec_members)
+    return docspec.Module(NULL_LOCATION, module_name, docstring, docspec_members)
 
 
 def parse_builtin_member(member):
@@ -81,9 +73,9 @@ def parse_builtin_member(member):
     return docspec_member
 
 
-def parse_builtin_class(name: str, cls: Any) -> Class:
+def parse_builtin_class(name: str, cls: Any) -> docspec.Class:
     logger.debug("Parsing class: %s", name)
-    docstring = Docstring(NULL_LOCATION, inspect.getdoc(cls) or "")
+    docstring = docspec.Docstring(NULL_LOCATION, inspect.getdoc(cls) or "")
     members = []
 
     ignored_members = [
@@ -134,7 +126,7 @@ def parse_builtin_class(name: str, cls: Any) -> Class:
         else:
             members.append(parse_builtin_variable(member_name, member))
 
-    return Class(
+    return docspec.Class(
         location=NULL_LOCATION,
         name=name,
         docstring=docstring,
@@ -151,12 +143,14 @@ def parse_builtin_function(
     name: str,
     function: Callable,
     is_method: bool = False,
-) -> Function:
+) -> docspec.Function:
     logger.debug("Parsing function: %s", name)
 
     docstring_content = inspect.getdoc(function)
     docstring = (
-        Docstring(NULL_LOCATION, docstring_content) if docstring_content else None
+        docspec.Docstring(NULL_LOCATION, docstring_content)
+        if docstring_content
+        else None
     )
 
     args = get_args(function, is_method)
@@ -164,9 +158,9 @@ def parse_builtin_function(
 
     semantic_hints = []
     if is_method:
-        semantic_hints.append(FunctionSemantic.INSTANCE_METHOD)
+        semantic_hints.append(docspec.FunctionSemantic.INSTANCE_METHOD)
 
-    return Function(
+    return docspec.Function(
         location=NULL_LOCATION,
         name=name,
         docstring=docstring,
@@ -177,9 +171,9 @@ def parse_builtin_function(
     )
 
 
-def parse_builtin_variable(name, variable: Any) -> Variable:
+def parse_builtin_variable(name, variable: Any) -> docspec.Variable:
     logger.debug("Parsing variable: %s", name)
-    return Variable(
+    return docspec.Variable(
         location=NULL_LOCATION,
         name=name,
         docstring=None,
@@ -190,7 +184,7 @@ def parse_builtin_variable(name, variable: Any) -> Variable:
     )
 
 
-def get_args(function: Callable, is_method: bool = False) -> List[Argument]:
+def get_args(function: Callable, is_method: bool = False) -> List[docspec.Argument]:
     try:
         args = arguments_from_signature(function)
     except RuntimeError:
@@ -198,10 +192,10 @@ def get_args(function: Callable, is_method: bool = False) -> List[Argument]:
 
         if is_method:
             args.append(
-                Argument(
+                docspec.Argument(
                     location=NULL_LOCATION,
                     name="self",
-                    type=Argument.Type.POSITIONAL_ONLY,
+                    type=docspec.Argument.Type.POSITIONAL_ONLY,
                     decorations=[],
                     datatype=None,
                     default_value=None,
@@ -209,10 +203,10 @@ def get_args(function: Callable, is_method: bool = False) -> List[Argument]:
             )
 
         for _arg in ["*args", "**kwargs"]:
-            arg = Argument(
+            arg = docspec.Argument(
                 location=NULL_LOCATION,
                 name=_arg,
-                type=Argument.Type.POSITIONAL,
+                type=docspec.Argument.Type.POSITIONAL,
                 decorations=[],
                 datatype="Any",
                 default_value=None,
@@ -234,7 +228,7 @@ def get_return_type(function: Callable) -> str:
     )
 
 
-def arguments_from_signature(function: Callable) -> List[Argument]:
+def arguments_from_signature(function: Callable) -> List[docspec.Argument]:
     """Returns the docspec.Arguments from the function signature.
 
     Args:
@@ -258,7 +252,7 @@ def arguments_from_signature(function: Callable) -> List[Argument]:
     return args
 
 
-def param_to_argument(param: inspect.Parameter) -> Argument:
+def param_to_argument(param: inspect.Parameter) -> docspec.Argument:
     """Convert an `inspect.Parameter` to a `docspec.Argument`
 
     Args:
@@ -269,7 +263,7 @@ def param_to_argument(param: inspect.Parameter) -> Argument:
     """
 
     arg_name = str(param)
-    arg_type = Argument.Type(param.kind)
+    arg_type = docspec.Argument.Type(param.kind)
     arg_decorations = []
     arg_datatype = (
         param.annotation if param.annotation is not inspect.Signature.empty else None
@@ -277,7 +271,7 @@ def param_to_argument(param: inspect.Parameter) -> Argument:
     arg_default_value = (
         str(param.default) if param.default is not inspect.Signature.empty else None
     )
-    return Argument(
+    return docspec.Argument(
         location=NULL_LOCATION,
         name=arg_name,
         type=arg_type,
