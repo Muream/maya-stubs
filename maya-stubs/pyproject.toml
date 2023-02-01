@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "maya-stubs"
-version = "0.3.0"
+version = "0.3.1"
 description = "Stubs for Autodesk Maya's Python APIs"
 authors = ["Loïc Pinsard <muream@gmail.com>"]
 license = "MIT"
