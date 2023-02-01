@@ -1,13 +1,15 @@
 [tool.poetry]
 name = "maya-stubs"
 version = "0.3.1"
-description = "Stubs for Autodesk Maya's Python APIs"
+description = "Type Annotated Stubs for Autodesk Maya's python APIs"
 authors = ["Loïc Pinsard <muream@gmail.com>"]
 license = "MIT"
 packages = [
     {include = "maya-stubs"}
 ]
 repository = "https://www.github.com/Muream/maya-stubs"
+keywords = ["stubs", "autodesk", "maya", "cmds", "OpenMaya"]
+readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^2.7 || ^3.7"
