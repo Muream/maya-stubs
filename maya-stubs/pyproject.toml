@@ -7,6 +7,7 @@ license = "MIT"
 packages = [
     {include = "maya-stubs"}
 ]
+repository = "https://www.github.com/Muream/maya-stubs"
 
 [tool.poetry.dependencies]
 python = "^2.7 || ^3.7"

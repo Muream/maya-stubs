@@ -3,6 +3,7 @@ name = "maya-stubs-distrib"
 version = "0.3.1"
 description = ""
 authors = ["Loïc Pinsard <muream@gmail.com>"]
+repository = "https://www.github.com/Muream/maya-stubs"
 
 [tool.poetry.dependencies]
 python = "^3.7.2"
