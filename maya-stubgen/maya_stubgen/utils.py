@@ -1,5 +1,6 @@
 import logging
 import shutil
+import sys
 import time
 from contextlib import contextmanager
 from pathlib import Path
@@ -13,6 +14,9 @@ except:
     HAS_MAYA = False
 else:
     HAS_MAYA = True
+
+# List of plugins that contain commands that should have generated stubs
+PLUGINS = ["invertShape.mll", "poseInterpolator.mll"]
 
 
 def initialize_maya():
@@ -28,6 +32,13 @@ def initialize_maya():
     except BaseException:
         logger.error("Failed to initialize Maya Standalone")
     else:
+
+        for plugin in PLUGINS:
+            try:
+                maya.cmds.loadPlugin(plugin)
+            except BaseException:
+                logger.warning("Couldn't load %s", plugin)
+
         # remove maya's handler
         logging.getLogger().handlers.pop()
         logger.success("Maya Standalone Initialized")

@@ -139,7 +139,7 @@ def parse_package(
 @timed
 def dump_docspec():
     whitelist = [
-        # # OpenMaya 1.0
+        # OpenMaya 1.0
         "maya.OpenMaya",
         "maya.OpenMayaAnim",
         "maya.OpenMayaFX",

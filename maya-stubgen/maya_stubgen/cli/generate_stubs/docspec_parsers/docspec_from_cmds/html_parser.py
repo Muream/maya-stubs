@@ -1,10 +1,10 @@
 """A Docspec parser for maya.cmds"""
+from __future__ import annotations
 
 import logging
 import re
 import textwrap
 from pathlib import Path
-from typing import List, Tuple
 
 import bs4
 import docspec
@@ -60,7 +60,7 @@ def function_from_documentation(command_name: str) -> docspec.Function:
 
     soup = bs4.BeautifulSoup(documentation, "html.parser")
 
-    docspec_args: List[docspec.Argument] = []
+    docspec_args: list[docspec.Argument] = []
     docstring_parser_params = []
     docspec_return = None
     docstring_parser_return = None
@@ -113,7 +113,7 @@ def function_from_documentation(command_name: str) -> docspec.Function:
     )
 
 
-def get_return_type(title: bs4.Tag) -> Tuple[str, docstring_parser.DocstringReturns]:
+def get_return_type(title: bs4.Tag) -> tuple[str, docstring_parser.DocstringReturns]:
     next_tag: bs4.Tag = title.find_next_sibling()
     if next_tag.name == "table":
         first_return_type_row = next_tag.find("tr")
@@ -144,7 +144,7 @@ def get_return_type(title: bs4.Tag) -> Tuple[str, docstring_parser.DocstringRetu
 
 def get_arguments(
     title: bs4.Tag,
-) -> List[Tuple[docspec.Argument, docstring_parser.DocstringParam]]:
+) -> list[tuple[docspec.Argument, docstring_parser.DocstringParam]]:
     """Get the docspec arguments.
 
     Returns:
@@ -152,7 +152,7 @@ def get_arguments(
     """
 
     #: The docspec arguments we'll return, along with their descriptions.
-    arguments: List[Tuple[docspec.Argument, docstring_parser.DocstringParam]] = []
+    arguments: list[tuple[docspec.Argument, docstring_parser.DocstringParam]] = []
 
     #: The <table> containing all the information for the flags.
     table = title.find_next("table")

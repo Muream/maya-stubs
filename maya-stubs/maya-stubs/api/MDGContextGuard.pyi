@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from typing import *
 
+Unknown = Any
 
 class MDGContextGuard(object):
     """Scoping object to manage changes to the current evaluation context"""

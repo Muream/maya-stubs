@@ -8,7 +8,7 @@ authors = ["Loïc Pinsard <muream@gmail.com>"]
 python = "^3.7.2"
 maya-stubgen = { path = "maya-stubgen/", develop = true }
 docspec-to-jinja = { path = "docspec-to-jinja/", develop = true }
-# maya-stubs = { path = "maya-stubs/", develop = true }
+maya-stubs = { path = "maya-stubs/", develop = true }
 # maya-docs = { path = "maya-docs/", develop = true }
 
 [tool.poetry.dev-dependencies]
@@ -17,6 +17,9 @@ pylint = "^2.14.5"
 
 [tool.poetry.scripts]
 generate-stubs = 'maya_stubgen:cli'
+
+[tool.poetry.group.dev.dependencies]
+mayapy-launcher = "^0.1.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

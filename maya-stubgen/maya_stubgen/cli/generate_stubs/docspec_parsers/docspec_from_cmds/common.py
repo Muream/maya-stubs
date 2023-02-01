@@ -54,7 +54,7 @@ def mel_to_python_type(type_name: str) -> str:
         type_name = match_dict.get("type")
         length = int(match_dict.get("length") or 0)
 
-        python_type = type_map.get(type_name, "Incomplete")
+        python_type = type_map.get(type_name, "Unknown")
         if length:
             sequence_type = SequenceType.TUPLE
             python_type = ", ".join([python_type] * length)
@@ -63,15 +63,14 @@ def mel_to_python_type(type_name: str) -> str:
     elif match_tuple:
         match_dict = match_tuple.groupdict()
         types = match_dict["types"].split(", ")
-        python_types = [type_map.get(t.lower(), "Incomplete") for t in types]
+        python_types = [type_map.get(t.lower(), "Unknown") for t in types]
         python_type = ", ".join(python_types)
         sequence_type = SequenceType.TUPLE
     else:
         sequence_type = SequenceType.NONE
-        python_type = type_map.get(type_name, "Incomplete")
+        python_type = type_map.get(type_name, "Unknown")
 
     if sequence_type is not SequenceType.NONE:
         python_type = f"{sequence_type.value}[{python_type}]"
 
     return python_type
-

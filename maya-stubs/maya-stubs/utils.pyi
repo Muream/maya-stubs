@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from typing import *
 
+Unknown = Any
 
 class MayaGuiLogHandler(Handler):
     """A python logging handler that displays error and warning

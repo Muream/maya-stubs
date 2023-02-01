@@ -79,8 +79,23 @@ def parse_cmds_command(command_name) -> docspec.Function | None:
 
     # The docs parser doesn't parse positional arguments but the synopsis parser does
     if synopsis_docspec_function and docs_docspec_function:
-        for arg in reversed(synopsis_docspec_function.args):
-            if arg.type is docspec.Argument.Type.POSITIONAL_ONLY:
+        for arg in synopsis_docspec_function.args:
+            if arg.type is docspec.Argument.Type.POSITIONAL_REMAINDER:
+                docs_docspec_function.args.insert(0, arg)
+
+        positional_args = [
+            arg
+            for arg in synopsis_docspec_function.args
+            if arg.type is docspec.Argument.Type.POSITIONAL_ONLY
+        ]
+        if positional_args:
+            positional_args.append(
+                docspec.Argument(
+                    NULL_LOCATION, "/", docspec.Argument.Type.POSITIONAL_ONLY
+                )
+            )
+
+            for arg in reversed(positional_args):
                 docs_docspec_function.args.insert(0, arg)
 
     if docspec_function:

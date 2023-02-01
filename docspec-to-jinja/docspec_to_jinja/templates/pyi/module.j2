@@ -3,6 +3,7 @@ from __future__ import annotations
 
 from typing import *
 
+Unknown = Any
 
 {% for member in module.members %}
 {% if member.__class__.__name__ == "Variable" %}

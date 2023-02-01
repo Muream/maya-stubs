@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import keyword
 import logging
 import re
@@ -21,7 +23,7 @@ __all__ = [
 #: Regex used to parse the header of a command's synopsis
 #: https://regex101.com/r/9595nC/1
 synopsis_header_regex = re.compile(
-    r"Synopsis: (?P<name>\w+)( \[flags\] ?(?P<positional_args>.*))?"
+    r"Synopsis: (?P<name>\w+)( (\[flags\])? ?(?P<positional_args>.*))?"
 )
 
 #: Regex used to parse a flag line in the command's synopsis
@@ -59,9 +61,7 @@ def function_from_synopsis(command_name: str) -> Function:
         # Explicitly re-raise the error
         raise exc from exc
 
-    if "No Flags" in synopsis:
-        arguments = []
-    elif "Quick help is not available" in synopsis:
+    if "Quick help is not available" in synopsis:
         arguments = [
             Argument(
                 NULL_LOCATION,
@@ -81,16 +81,14 @@ def function_from_synopsis(command_name: str) -> Function:
             ),
         ]
     else:
-        arguments = []
+        arguments: list[Argument] = []
 
         for line in synopsis.splitlines():
             line = line.strip()
 
             match_header = synopsis_header_regex.match(line)
             if match_header:
-                argument = parse_header(match_header)
-                if argument is not None:
-                    arguments.append(argument)
+                arguments.extend(parse_header(match_header))
                 continue
 
             match_flag = synopsis_flag_regex.match(line)
@@ -143,47 +141,77 @@ def parse_flag(match_flag: re.Match) -> Argument:
         arg_type = f"List[{arg_type}]"
 
     return Argument(
-        location=NULL_LOCATION,
-        name=arg_name,
-        type=Argument.Type.KEYWORD_ONLY,
+        NULL_LOCATION,
+        arg_name,
+        Argument.Type.KEYWORD_ONLY,
         datatype=arg_type,
         default_value="...",
     )
 
 
-def parse_header(match_header: re.Match) -> Optional[Argument]:
+def parse_header(match_header: re.Match[str]) -> list[Argument]:
 
     positional_args = match_header["positional_args"]
 
     if not positional_args:
-        return
+        return []
 
     positional_args = positional_args.strip()
 
+    out_args = []
+
     if "..." in positional_args:
         # the type is a list. Eg: [String...]
-        positional_args = positional_args[1:-1].replace("...", "")
-        list_type = mel_to_python_type(positional_args)
-        arg_type = f"List[{list_type}]"
-        arg_name = "*args"
+        # We'll convert that in `*args: str`
+
+        # Remove any unwanted characters to get a clean type string
+        positional_args = positional_args.replace("[", "").replace("]", "").strip()
+        positional_args = positional_args.replace("...", "")
+
+        return [
+            Argument(
+                NULL_LOCATION,
+                "*args",
+                Argument.Type.POSITIONAL_REMAINDER,
+                decorations=None,
+                datatype=mel_to_python_type(positional_args),
+                default_value=None,
+            )
+        ]
     elif positional_args.count(" ") > 0:
-        # the type is a tuple
-        positional_args = positional_args.replace("[", "").replace("]", "")
-        tuple_types = map(mel_to_python_type, positional_args.split())
-        arg_type = f"Tuple[{', '.join(tuple_types)}]"
-        arg_name = "*args"
+        # the type is a tuple. Eg: [str, int, str]
+        # This means we need a specific number of positional only arguments
+        # each with the relevant type
+        # we'll convert that to `arg0: str, arg1: int, arg2: str`
+
+        # Remove any unwanted characters to get a clean "space" separated types string
+        positional_args = positional_args.replace("[", "").replace("]", "").strip()
+
+        out_args: list[Argument] = []
+        for i, data_type in enumerate(positional_args.split(" ")):
+            out_args.append(
+                Argument(
+                    NULL_LOCATION,
+                    f"arg{i}",
+                    Argument.Type.POSITIONAL_ONLY,
+                    decorations=None,
+                    datatype=mel_to_python_type(data_type),
+                    default_value=None,
+                )
+            )
+        return out_args
     else:
         # the type is a basic type
-        arg_type = mel_to_python_type(positional_args)
-        arg_name = "arg0"
-
-    return Argument(
-        location=NULL_LOCATION,
-        name=arg_name,
-        type=Argument.Type.POSITIONAL_ONLY,
-        datatype=arg_type,
-        default_value=None,
-    )
+        return [
+            Argument(
+                NULL_LOCATION,
+                "arg0",
+                Argument.Type.POSITIONAL_ONLY,
+                decorations=None,
+                datatype=mel_to_python_type(positional_args),
+                default_value=None,
+            )
+        ]
 
 
 def get_synopsis(command_name: str) -> str:

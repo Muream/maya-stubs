@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from typing import *
 
+Unknown = Any
 
 class MAttributeParameterMapping(object):
     """Class for defining relationship between Maya attributes and fragment parameters."""
