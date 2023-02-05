@@ -1049,12 +1049,12 @@ class MCursor(object):
     def __new__(*args, **kwargs) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
 
-    kCrossHairCursor: MCursor = <OpenMayaUI.MCursor object at 0x00000218ACC17DB0>
-    kDefaultCursor: MCursor = <OpenMayaUI.MCursor object at 0x00000218ACC17B50>
-    kDoubleCrossHairCursor: MCursor = <OpenMayaUI.MCursor object at 0x00000218ACC17650>
-    kEditCursor: MCursor = <OpenMayaUI.MCursor object at 0x00000218ACC17950>
-    kHandCursor: MCursor = <OpenMayaUI.MCursor object at 0x00000218ACC17230>
-    kPencilCursor: MCursor = <OpenMayaUI.MCursor object at 0x00000218ACC177D0>
+    kCrossHairCursor: MCursor = <OpenMayaUI.MCursor object at 0x0000026FF0598330>
+    kDefaultCursor: MCursor = <OpenMayaUI.MCursor object at 0x0000026FF0598310>
+    kDoubleCrossHairCursor: MCursor = <OpenMayaUI.MCursor object at 0x0000026FF0598350>
+    kEditCursor: MCursor = <OpenMayaUI.MCursor object at 0x0000026FF0598370>
+    kHandCursor: MCursor = <OpenMayaUI.MCursor object at 0x0000026FF05983B0>
+    kPencilCursor: MCursor = <OpenMayaUI.MCursor object at 0x0000026FF0598390>
 
 class MDrawData(object):
     """The MDrawData class holds geometry specific information for user defined shapes which maya does not intrinsicly know about."""
@@ -3615,10 +3615,10 @@ class MPxHardwareShader(MPxNode):
         Return a MPxHardwareShader. If the method failed for any reason then None will be returned.
         """
 
-    outColor: MObject = <OpenMaya.MObject object at 0x00000218ACC17FB0>
-    outColorB: MObject = <OpenMaya.MObject object at 0x00000218ACC17E30>
-    outColorG: MObject = <OpenMaya.MObject object at 0x00000218ACC17B70>
-    outColorR: MObject = <OpenMaya.MObject object at 0x00000218ACC17150>
+    outColor: MObject = <OpenMaya.MObject object at 0x0000026FF0598810>
+    outColorB: MObject = <OpenMaya.MObject object at 0x0000026FF0598870>
+    outColorG: MObject = <OpenMaya.MObject object at 0x0000026FF0598850>
+    outColorR: MObject = <OpenMaya.MObject object at 0x0000026FF0598830>
     def profile(self, *args: Any, **kwargs: Any) -> Any:
         """profile() -> MRenderProfile
 
@@ -3971,22 +3971,22 @@ class MPxHwShaderNode(MPxNode):
         Returns the number of normal values desired. (0 = none, 1 = surface normal only, 2 = surface normal + tangent, 3 = surface normal + tangent + binormal)
         """
 
-    outColor: MObject = <OpenMaya.MObject object at 0x00000218ACC179F0>
-    outColorB: MObject = <OpenMaya.MObject object at 0x00000218ACC177F0>
-    outColorG: MObject = <OpenMaya.MObject object at 0x00000218ACC173D0>
-    outColorR: MObject = <OpenMaya.MObject object at 0x00000218ACC17F30>
-    outGlowColor: MObject = <OpenMaya.MObject object at 0x00000218ACC17630>
-    outGlowColorB: MObject = <OpenMaya.MObject object at 0x00000218ACC171B0>
-    outGlowColorG: MObject = <OpenMaya.MObject object at 0x00000218ACC17830>
-    outGlowColorR: MObject = <OpenMaya.MObject object at 0x00000218ACC17D10>
-    outMatteOpacity: MObject = <OpenMaya.MObject object at 0x00000218ACC17710>
-    outMatteOpacityB: MObject = <OpenMaya.MObject object at 0x00000218ACC176B0>
-    outMatteOpacityG: MObject = <OpenMaya.MObject object at 0x00000218ACC17250>
-    outMatteOpacityR: MObject = <OpenMaya.MObject object at 0x00000218ACC17AD0>
-    outTransparency: MObject = <OpenMaya.MObject object at 0x00000218ACC17990>
-    outTransparencyB: MObject = <OpenMaya.MObject object at 0x00000218ACC17D90>
-    outTransparencyG: MObject = <OpenMaya.MObject object at 0x00000218ACC17390>
-    outTransparencyR: MObject = <OpenMaya.MObject object at 0x00000218ACC17A90>
+    outColor: MObject = <OpenMaya.MObject object at 0x0000026FF05988D0>
+    outColorB: MObject = <OpenMaya.MObject object at 0x0000026FF0598930>
+    outColorG: MObject = <OpenMaya.MObject object at 0x0000026FF0598910>
+    outColorR: MObject = <OpenMaya.MObject object at 0x0000026FF05988F0>
+    outGlowColor: MObject = <OpenMaya.MObject object at 0x0000026FF0598A50>
+    outGlowColorB: MObject = <OpenMaya.MObject object at 0x0000026FF0598AB0>
+    outGlowColorG: MObject = <OpenMaya.MObject object at 0x0000026FF0598A90>
+    outGlowColorR: MObject = <OpenMaya.MObject object at 0x0000026FF0598A70>
+    outMatteOpacity: MObject = <OpenMaya.MObject object at 0x0000026FF05989D0>
+    outMatteOpacityB: MObject = <OpenMaya.MObject object at 0x0000026FF0598A30>
+    outMatteOpacityG: MObject = <OpenMaya.MObject object at 0x0000026FF0598A10>
+    outMatteOpacityR: MObject = <OpenMaya.MObject object at 0x0000026FF05989F0>
+    outTransparency: MObject = <OpenMaya.MObject object at 0x0000026FF0598950>
+    outTransparencyB: MObject = <OpenMaya.MObject object at 0x0000026FF05989B0>
+    outTransparencyG: MObject = <OpenMaya.MObject object at 0x0000026FF0598990>
+    outTransparencyR: MObject = <OpenMaya.MObject object at 0x0000026FF0598970>
     def provideVertexIDs(self, *args: Any, **kwargs: Any) -> Any:
         """provideVertexIDs() -> bool
 
@@ -4109,10 +4109,10 @@ class MPxLocatorNode(MPxNode):
         If this method is overridden, then MPxLocatorNode.isBounded should also be overridden to return True.
         """
 
-    boundingBoxCenterX: MObject = <OpenMaya.MObject object at 0x00000218ACC28070>
-    boundingBoxCenterY: MObject = <OpenMaya.MObject object at 0x00000218ACC28090>
-    boundingBoxCenterZ: MObject = <OpenMaya.MObject object at 0x00000218ACC280B0>
-    center: MObject = <OpenMaya.MObject object at 0x00000218ACC28050>
+    boundingBoxCenterX: MObject = <OpenMaya.MObject object at 0x0000026FF0598E50>
+    boundingBoxCenterY: MObject = <OpenMaya.MObject object at 0x0000026FF0598E70>
+    boundingBoxCenterZ: MObject = <OpenMaya.MObject object at 0x0000026FF0598E90>
+    center: MObject = <OpenMaya.MObject object at 0x0000026FF0598E30>
     def closestPoint(self, *args: Any, **kwargs: Any) -> Any:
         """closestPoint(rayPoint, rayDir) -> MPoint
 
@@ -4188,16 +4188,16 @@ class MPxLocatorNode(MPxNode):
         This routine can be overridden to provide information aboutthe selection mask of the locator. By default the selection maskfor locators is returned.
         """
 
-    instObjGroups: MObject = <OpenMaya.MObject object at 0x00000218ACC281F0>
-    intermediateObject: MObject = <OpenMaya.MObject object at 0x00000218ACC281B0>
-    inverseMatrix: MObject = <OpenMaya.MObject object at 0x00000218ACC280F0>
+    instObjGroups: MObject = <OpenMaya.MObject object at 0x0000026FF0598FD0>
+    intermediateObject: MObject = <OpenMaya.MObject object at 0x0000026FF0598F90>
+    inverseMatrix: MObject = <OpenMaya.MObject object at 0x0000026FF0598ED0>
     def isBounded(self, *args: Any, **kwargs: Any) -> Any:
         """isBounded() -> bool
 
         This method should be overridden to return True if the user supplies a bounding box routine.  Supplying a bounding box routine makes refresh and selection more efficient.
         """
 
-    isTemplated: MObject = <OpenMaya.MObject object at 0x00000218ACC281D0>
+    isTemplated: MObject = <OpenMaya.MObject object at 0x0000026FF0598FB0>
     def isTransparent(self, *args: Any, **kwargs: Any) -> Any:
         """isTransparent() -> bool
 
@@ -4206,36 +4206,36 @@ class MPxLocatorNode(MPxNode):
         The default return value is False.
         """
 
-    localPosition: MObject = <OpenMaya.MObject object at 0x00000218ACC17E50>
-    localPositionX: MObject = <OpenMaya.MObject object at 0x00000218ACC17870>
-    localPositionY: MObject = <OpenMaya.MObject object at 0x00000218ACC178D0>
-    localPositionZ: MObject = <OpenMaya.MObject object at 0x00000218ACC17CB0>
-    localScale: MObject = <OpenMaya.MObject object at 0x00000218ACC17BB0>
-    localScaleX: MObject = <OpenMaya.MObject object at 0x00000218ACC178F0>
-    localScaleY: MObject = <OpenMaya.MObject object at 0x00000218ACC17F90>
-    localScaleZ: MObject = <OpenMaya.MObject object at 0x00000218ACC175D0>
-    matrix: MObject = <OpenMaya.MObject object at 0x00000218ACC280D0>
-    nodeBoundingBox: MObject = <OpenMaya.MObject object at 0x00000218ACC17910>
-    nodeBoundingBoxMax: MObject = <OpenMaya.MObject object at 0x00000218ACC17190>
-    nodeBoundingBoxMaxX: MObject = <OpenMaya.MObject object at 0x00000218ACC17730>
-    nodeBoundingBoxMaxY: MObject = <OpenMaya.MObject object at 0x00000218ACC17CD0>
-    nodeBoundingBoxMaxZ: MObject = <OpenMaya.MObject object at 0x00000218ACC174B0>
-    nodeBoundingBoxMin: MObject = <OpenMaya.MObject object at 0x00000218ACC17590>
-    nodeBoundingBoxMinX: MObject = <OpenMaya.MObject object at 0x00000218ACC17D50>
-    nodeBoundingBoxMinY: MObject = <OpenMaya.MObject object at 0x00000218ACC17410>
-    nodeBoundingBoxMinZ: MObject = <OpenMaya.MObject object at 0x00000218ACC179D0>
-    nodeBoundingBoxSize: MObject = <OpenMaya.MObject object at 0x00000218ACC17530>
-    nodeBoundingBoxSizeX: MObject = <OpenMaya.MObject object at 0x00000218ACC17570>
-    nodeBoundingBoxSizeY: MObject = <OpenMaya.MObject object at 0x00000218ACC17430>
-    nodeBoundingBoxSizeZ: MObject = <OpenMaya.MObject object at 0x00000218ACC28030>
-    objectColor: MObject = <OpenMaya.MObject object at 0x00000218ACC282B0>
-    objectGroupColor: MObject = <OpenMaya.MObject object at 0x00000218ACC28270>
-    objectGroupId: MObject = <OpenMaya.MObject object at 0x00000218ACC28250>
-    objectGroups: MObject = <OpenMaya.MObject object at 0x00000218ACC28210>
-    objectGrpCompList: MObject = <OpenMaya.MObject object at 0x00000218ACC28230>
-    parentInverseMatrix: MObject = <OpenMaya.MObject object at 0x00000218ACC28170>
-    parentMatrix: MObject = <OpenMaya.MObject object at 0x00000218ACC28150>
-    underWorldObject: MObject = <OpenMaya.MObject object at 0x00000218ACC174F0>
+    localPosition: MObject = <OpenMaya.MObject object at 0x0000026FF0598B10>
+    localPositionX: MObject = <OpenMaya.MObject object at 0x0000026FF0598B30>
+    localPositionY: MObject = <OpenMaya.MObject object at 0x0000026FF0598B50>
+    localPositionZ: MObject = <OpenMaya.MObject object at 0x0000026FF0598B70>
+    localScale: MObject = <OpenMaya.MObject object at 0x0000026FF0598C10>
+    localScaleX: MObject = <OpenMaya.MObject object at 0x0000026FF0598C30>
+    localScaleY: MObject = <OpenMaya.MObject object at 0x0000026FF0598C50>
+    localScaleZ: MObject = <OpenMaya.MObject object at 0x0000026FF0598C70>
+    matrix: MObject = <OpenMaya.MObject object at 0x0000026FF0598EB0>
+    nodeBoundingBox: MObject = <OpenMaya.MObject object at 0x0000026FF0598C90>
+    nodeBoundingBoxMax: MObject = <OpenMaya.MObject object at 0x0000026FF0598D30>
+    nodeBoundingBoxMaxX: MObject = <OpenMaya.MObject object at 0x0000026FF0598D50>
+    nodeBoundingBoxMaxY: MObject = <OpenMaya.MObject object at 0x0000026FF0598D70>
+    nodeBoundingBoxMaxZ: MObject = <OpenMaya.MObject object at 0x0000026FF0598D90>
+    nodeBoundingBoxMin: MObject = <OpenMaya.MObject object at 0x0000026FF0598CB0>
+    nodeBoundingBoxMinX: MObject = <OpenMaya.MObject object at 0x0000026FF0598CD0>
+    nodeBoundingBoxMinY: MObject = <OpenMaya.MObject object at 0x0000026FF0598CF0>
+    nodeBoundingBoxMinZ: MObject = <OpenMaya.MObject object at 0x0000026FF0598D10>
+    nodeBoundingBoxSize: MObject = <OpenMaya.MObject object at 0x0000026FF0598DB0>
+    nodeBoundingBoxSizeX: MObject = <OpenMaya.MObject object at 0x0000026FF0598DD0>
+    nodeBoundingBoxSizeY: MObject = <OpenMaya.MObject object at 0x0000026FF0598DF0>
+    nodeBoundingBoxSizeZ: MObject = <OpenMaya.MObject object at 0x0000026FF0598E10>
+    objectColor: MObject = <OpenMaya.MObject object at 0x0000026FF05A00D0>
+    objectGroupColor: MObject = <OpenMaya.MObject object at 0x0000026FF05A0090>
+    objectGroupId: MObject = <OpenMaya.MObject object at 0x0000026FF05A0070>
+    objectGroups: MObject = <OpenMaya.MObject object at 0x0000026FF05A0030>
+    objectGrpCompList: MObject = <OpenMaya.MObject object at 0x0000026FF05A0050>
+    parentInverseMatrix: MObject = <OpenMaya.MObject object at 0x0000026FF0598F50>
+    parentMatrix: MObject = <OpenMaya.MObject object at 0x0000026FF0598F30>
+    underWorldObject: MObject = <OpenMaya.MObject object at 0x0000026FF0598AF0>
     def useClosestPointForSelection(self, *args: Any, **kwargs: Any) -> Any:
         """useClosestPointForSelection() -> bool
 
@@ -4246,14 +4246,14 @@ class MPxLocatorNode(MPxNode):
         If this method is overridden to return True, then rather than using the locator's center to determine its distance from the selection ray, Maya will pass the ray to the closestPoint() method and use the point it returns. Note that you will have override closestPoint() as well to provide an appropriate point.
         """
 
-    useObjectColor: MObject = <OpenMaya.MObject object at 0x00000218ACC28290>
-    visibility: MObject = <OpenMaya.MObject object at 0x00000218ACC28190>
-    worldInverseMatrix: MObject = <OpenMaya.MObject object at 0x00000218ACC28130>
-    worldMatrix: MObject = <OpenMaya.MObject object at 0x00000218ACC28110>
-    worldPosition: MObject = <OpenMaya.MObject object at 0x00000218ACC17F10>
-    worldPositionX: MObject = <OpenMaya.MObject object at 0x00000218ACC17850>
-    worldPositionY: MObject = <OpenMaya.MObject object at 0x00000218ACC17A30>
-    worldPositionZ: MObject = <OpenMaya.MObject object at 0x00000218ACC173F0>
+    useObjectColor: MObject = <OpenMaya.MObject object at 0x0000026FF05A00B0>
+    visibility: MObject = <OpenMaya.MObject object at 0x0000026FF0598F70>
+    worldInverseMatrix: MObject = <OpenMaya.MObject object at 0x0000026FF0598F10>
+    worldMatrix: MObject = <OpenMaya.MObject object at 0x0000026FF0598EF0>
+    worldPosition: MObject = <OpenMaya.MObject object at 0x0000026FF0598B90>
+    worldPositionX: MObject = <OpenMaya.MObject object at 0x0000026FF0598BB0>
+    worldPositionY: MObject = <OpenMaya.MObject object at 0x0000026FF0598BD0>
+    worldPositionZ: MObject = <OpenMaya.MObject object at 0x0000026FF0598BF0>
 
 class MPxManipContainer(MPxNode):
     """Parent class of all user defined manipulators."""

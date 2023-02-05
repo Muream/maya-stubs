@@ -269,7 +269,7 @@ class MAnimCurveClipboard(object):
 
     startTime: getset_descriptor = <attribute 'startTime' of 'OpenMayaAnim.MAnimCurveClipboard' objects>
     startUnitlessInput: getset_descriptor = <attribute 'startUnitlessInput' of 'OpenMayaAnim.MAnimCurveClipboard' objects>
-    theAPIClipboard: MAnimCurveClipboard = <OpenMayaAnim.MAnimCurveClipboard object at 0x00000218AEF38FB0>
+    theAPIClipboard: MAnimCurveClipboard = <OpenMayaAnim.MAnimCurveClipboard object at 0x0000026FF1513390>
 
 class MAnimCurveClipboardItem(object):
     """This class provides a wrapper for a clipboard item.

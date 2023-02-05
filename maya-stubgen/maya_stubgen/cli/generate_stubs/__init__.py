@@ -11,9 +11,14 @@ from typing import Optional
 import black
 import docspec
 import docspec_to_jinja
+
+from maya_stubgen.cli.generate_stubs.parsers.cmds_parsers import CmdsParser
+from maya_stubgen.cli.generate_stubs.parsers.common import Parser
 from maya_stubgen.utils import initialize_maya, timed
 
-from .common import get_stub_path
+from .parsers import BuiltinParser, CmdsParser
+
+# from .common import get_stub_path
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -107,33 +112,48 @@ logger.setLevel(logging.DEBUG)
 #         f.write(content)
 
 
-def parse_package(
-    package_name: str,
-    whitelist: Optional[list[str]] = None,
-) -> list[docspec.Module]:
-    logger.debug("Parsing package: %s", package_name)
-    from .docspec_parsers import parse_builtin_module, parse_cmds_module
+class MayaParser(Parser):
+    def parse_package(
+        self,
+        name: str,
+        whitelist: Optional[list[str]],
+    ) -> list[docspec.Module]:
+        logger.debug("Parsing package: %s", name)
 
-    docspec_modules: list[docspec.Module] = []
+        docspec_modules: list[docspec.Module] = []
 
-    # Executor with pre-initialized maya interpreters passed around to
-    #  the different parsers
-    executor = concurrent.futures.ProcessPoolExecutor(initializer=initialize_maya)
+        # Executor with pre-initialized maya interpreters passed around to
+        # the different parsers
+        # executor = concurrent.futures.ProcessPoolExecutor(initializer=initialize_maya)
+        executor = None
 
-    package = importlib.import_module(package_name)
+        package = importlib.import_module(name)
 
-    for module in walk_packages(package.__path__, package.__name__ + "."):
+        for module in walk_packages(package.__path__, package.__name__ + "."):
 
-        if whitelist is not None and module.name not in whitelist:
-            continue
+            if whitelist is not None and module.name not in whitelist:
+                continue
 
-        if module.name == "maya.cmds":
-            docspec_module = parse_cmds_module(module, executor)
-        else:
-            docspec_module = parse_builtin_module(module, executor)
-        docspec_modules.append(docspec_module)
+            if module.name == "maya.cmds":
+                docspec_module = CmdsParser(executor).parse_module(module.name)
+            else:
+                docspec_module = BuiltinParser(executor).parse_module(module.name)
 
-    return docspec_modules
+            docspec_modules.append(docspec_module)
+
+        return docspec_modules
+
+    def parse_module(self, name: str) -> docspec.Module:
+        raise NotImplementedError
+
+    def parse_function(self, name: str) -> docspec.Function:
+        raise NotImplementedError
+
+    def parse_class(self, name: str) -> docspec.Class:
+        raise NotImplementedError
+
+    def parse_variable(self, name: str) -> docspec.Variable:
+        raise NotImplementedError
 
 
 @timed
@@ -159,7 +179,7 @@ def dump_docspec():
         "maya.mel",
     ]
 
-    modules = parse_package("maya", whitelist=whitelist)
+    modules = MayaParser().parse_package("maya", whitelist=whitelist)
     for module in modules:
         docspec_cache = (
             Path().resolve()

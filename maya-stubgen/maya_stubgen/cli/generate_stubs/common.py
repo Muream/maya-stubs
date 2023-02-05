@@ -9,12 +9,8 @@ from pkgutil import ModuleInfo
 from textwrap import indent
 from typing import *
 
-from docstring_parser.common import (
-    DocstringExample,
-    DocstringParam,
-    DocstringRaises,
-    DocstringReturns,
-)
+from docstring_parser.common import (DocstringExample, DocstringParam,
+                                     DocstringRaises, DocstringReturns)
 
 STUB_HEADER = """\
 from __future__ import annotations

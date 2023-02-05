@@ -6,6 +6,8 @@ from contextlib import contextmanager
 from pathlib import Path
 from typing import *
 
+from PySide2 import QtCore, QtWidgets
+
 logger = logging.getLogger(__name__)
 
 try:
@@ -24,6 +26,10 @@ def initialize_maya():
         return
 
     logger.info("Initializing Maya Standalone")
+
+    # Initialize the QApplication properly to remove the Qt Logging message
+    QtCore.QCoreApplication.setAttribute(QtCore.Qt.AA_ShareOpenGLContexts)
+    QtWidgets.QApplication(sys.argv)
 
     try:
         import maya.standalone

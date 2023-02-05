@@ -4,7 +4,6 @@ from typing import *
 
 Unknown = Any
 
-
 def createMelWrapper(fn, types=[] = [], retType='void' = void, ignoreDefaultArgs=True = True, returnCmd=False = False, outDir=None = None) -> Any:
     """@brief Create a wrapper mel proc for a python function
 
