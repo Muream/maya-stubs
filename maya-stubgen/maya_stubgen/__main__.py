@@ -1,27 +1,27 @@
 import site
-import sys
+import sysconfig
 from pathlib import Path
 
 
-def ensure_venv():
-    current_dir = Path().resolve()
-    if not (current_dir / "pyproject.toml").exists():
-        raise RuntimeError("maya_stubgen must be run from the root of the repo.")
+def ensure_maya():
+    maya_stdlib = Path(sysconfig.get_path("stdlib"))
+    site.addsitedir(str(maya_stdlib / "site-packages"))
 
-    venv_path = current_dir / ".venv"
-    if not venv_path.exists():
+    try:
+        import maya
+    except ModuleNotFoundError as e:
         raise RuntimeError(
-            f"No virtual environment found at {venv_path}.\n"
-            "Make sure to run `poetry install` first."
-        )
-
-    site_dir = str(venv_path / "Lib" / "site-packages")
-    if site_dir not in sys.path:
-        site.addsitedir(site_dir)
+            "could not import maya module; ensure you're using mayapy as "
+            "the base interpreter for your virtual environment"
+        ) from e
 
 
-if __name__ == "__main__":
-    ensure_venv()
+def main():
+    ensure_maya()
     from .cli import cli
 
     cli()
+
+
+if __name__ == "__main__":
+    main()
