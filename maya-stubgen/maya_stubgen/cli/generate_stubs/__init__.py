@@ -8,7 +8,6 @@ from pathlib import Path
 from pkgutil import walk_packages
 from typing import Optional
 
-import black
 import docspec
 import docspec_to_jinja
 
@@ -130,7 +129,6 @@ class MayaParser(Parser):
         package = importlib.import_module(name)
 
         for module in walk_packages(package.__path__, package.__name__ + "."):
-
             if whitelist is not None and module.name not in whitelist:
                 continue
 
@@ -195,7 +193,6 @@ def dump_docspec():
 
 
 def build_stubs(path: Path, reuse_cache: bool = False):
-
     if not reuse_cache:
         dump_docspec()
 
@@ -247,7 +244,6 @@ def build_docs(path: Path, reuse_cache: bool = False):
     docspec_cache = Path().resolve() / ".cache" / "docspec"
 
     for f in docspec_cache.glob("**/*.json"):
-
         module = docspec.load_module(str(f))
 
         logger.debug("Building docs for: %s", module.name)

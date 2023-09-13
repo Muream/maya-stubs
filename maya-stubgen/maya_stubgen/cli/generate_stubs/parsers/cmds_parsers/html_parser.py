@@ -18,7 +18,6 @@ logger = logging.getLogger(__name__)
 
 __all__ = [
     "DocumentationNotFound",
-    "function_from_documentation",
 ]
 
 #: The base URL for all maya commands doc pages
