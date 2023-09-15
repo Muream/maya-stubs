@@ -44,7 +44,7 @@ class CmdsParser(Parser):
             )
         ]
 
-        results = self.map(self.parse_function, commands)
+        results = self.map(lambda cmd: self.parse_function(module_name, cmd), commands)
         for docspec_member in results:
             if docspec_member is not None:
                 docspec_members.append(docspec_member)
@@ -56,7 +56,7 @@ class CmdsParser(Parser):
             members=docspec_members,
         )
 
-    def parse_function(self, name: str) -> docspec.Function:
+    def parse_function(self, module_name: str, name: str) -> docspec.Function:
         """Parse a cmds command and return a docspec Function.
 
         The html Documentation is scrapped first as it gives the best results.
@@ -64,7 +64,7 @@ class CmdsParser(Parser):
         If the synopsis also does not exist, we fallback to generating a degraded Function.
 
         Args:
-            command_name: The name of the maya command.
+            name: The name of the maya command.
 
         Returns:
             The Docspec Function for the maya command.
@@ -75,13 +75,15 @@ class CmdsParser(Parser):
         docspec_function = degraded_function(name)
 
         try:
-            synopsis_docspec_function = self.synposis_parser.parse_function(name)
+            synopsis_docspec_function = self.synposis_parser.parse_function(
+                module_name, name
+            )
         except SynopsisNotFound:
             logger.debug("Couldn't find synopsis for %s.", name)
             synopsis_docspec_function = None
 
         try:
-            docs_docspec_function = self.docs_parser.parse_function(name)
+            docs_docspec_function = self.docs_parser.parse_function(module_name, name)
         except DocumentationNotFound:
             logger.debug("Couldn't find documentation for %s", name)
             docs_docspec_function = None
@@ -115,8 +117,8 @@ class CmdsParser(Parser):
 
         return docspec_function
 
-    def parse_class(self, name: str) -> docspec.Class:
+    def parse_class(self, module_name: str, name: str) -> docspec.Class:
         raise NotImplementedError
 
-    def parse_variable(self, name: str) -> docspec.Variable:
+    def parse_variable(self, module_name: str, name: str) -> docspec.Variable:
         raise NotImplementedError

@@ -22,7 +22,7 @@ logger = logging.getLogger(__name__)
 class BuiltinParser(Parser):
     """Parser for builtins that works by inspecting objects at runtime."""
 
-    def parse_package(self) -> list[docspec.Module]:
+    def parse_package(self, name: str) -> list[docspec.Module]:
         raise NotImplementedError
 
     def parse_module(
@@ -54,14 +54,14 @@ class BuiltinParser(Parser):
                     continue
 
                 docspec_member = self._parse_builtin_member(
-                    member_name, member_value
+                    name, member_name, member_value
                 )
                 if docspec_member is not None:
                     docspec_members.append(docspec_member)
 
         return docspec.Module(NULL_LOCATION, name, docstring, docspec_members)
 
-    def parse_class(self, name: str) -> docspec.Class:
+    def parse_class(self, module_name: str, name: str) -> docspec.Class:
         logger.debug("Parsing class: %s", name)
 
         cls = self._members[name]
@@ -108,9 +108,9 @@ class BuiltinParser(Parser):
                 continue
 
             if inspect.isclass(member):
-                members.append(parser.parse_class(member_name))
+                members.append(parser.parse_class(module_name, member_name))
             elif callable(member):
-                method = parser.parse_function(member_name, is_method=True)
+                method = parser.parse_function(module_name, member_name, is_method=True)
                 members.append(method)
             # elif inspect.isgetsetdescriptor(member):
             #     getter = Function.from_object(member, member_name, FunctionType.getter)
@@ -118,7 +118,7 @@ class BuiltinParser(Parser):
             #     members.append(getter)
             #     members.append(setter)
             else:
-                members.append(parser.parse_variable(member_name))
+                members.append(parser.parse_variable(module_name, member_name))
 
         return docspec.Class(
             location=NULL_LOCATION,
@@ -132,7 +132,9 @@ class BuiltinParser(Parser):
             decorations=[],
         )
 
-    def parse_function(self, name: str, is_method: bool = False) -> docspec.Function:
+    def parse_function(
+        self, module_name: str, name: str, is_method: bool = False
+    ) -> docspec.Function:
         logger.debug("Parsing function: %s", name)
         function: Callable = self._members[name]
 
@@ -143,7 +145,7 @@ class BuiltinParser(Parser):
             else None
         )
 
-        args = self._get_args(function, is_method)
+        args = self._get_args(module_name, function, is_method)
         return_type = self.get_return_type(function)
 
         semantic_hints = []
@@ -160,7 +162,7 @@ class BuiltinParser(Parser):
             decorations=[],
         )
 
-    def parse_variable(self, name: str) -> docspec.Variable:
+    def parse_variable(self, module_name: str, name: str) -> docspec.Variable:
         logger.debug("Parsing variable: %s", name)
 
         variable = self._members[name]
@@ -177,6 +179,7 @@ class BuiltinParser(Parser):
 
     def _parse_builtin_member(
         self,
+        module_name: str,
         member_name: str,
         py_member: Any,
     ) -> Optional[
@@ -197,10 +200,9 @@ class BuiltinParser(Parser):
 
         elif inspect.isclass(py_member):
             # we will add classes in a 2nd pass
-            docspec_member = self.parse_class(member_name)
-
+            docspec_member = self.parse_class(module_name, member_name)
         elif callable(py_member):
-            docspec_member = self.parse_function(member_name)
+            docspec_member = self.parse_function(module_name, member_name)
         else:
             # member has to be a variable now?
             # docspec_member = parse_builtin_variable(name, py_member)
@@ -210,11 +212,12 @@ class BuiltinParser(Parser):
 
     def _get_args(
         self,
+        module_name: str,
         function: Callable[[Any], Any],
         is_method: bool = False,
     ) -> List[docspec.Argument]:
         try:
-            args = self._arguments_from_signature(function)
+            args = self._arguments_from_signature(module_name, function)
         except RuntimeError:
             args = []
 
@@ -256,6 +259,7 @@ class BuiltinParser(Parser):
 
     def _arguments_from_signature(
         self,
+        module_name: str,
         function: Callable[[Any], Any],
     ) -> List[docspec.Argument]:
         """Returns the docspec.Arguments from the function signature.
@@ -278,11 +282,13 @@ class BuiltinParser(Parser):
 
         args = []
         for param in signature.parameters.values():
-            args.append(self._param_to_argument(param))
+            args.append(self._param_to_argument(module_name, param))
 
         return args
 
-    def _param_to_argument(self, param: inspect.Parameter) -> docspec.Argument:
+    def _param_to_argument(
+        self, module_name: str, param: inspect.Parameter
+    ) -> docspec.Argument:
         """Convert an `inspect.Parameter` to a `docspec.Argument`"""
 
         arg_name = str(param)

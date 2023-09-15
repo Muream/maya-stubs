@@ -42,15 +42,15 @@ class Parser(ABC):
         ...
 
     @abstractmethod
-    def parse_class(self, name: str) -> docspec.Class:
+    def parse_class(self, module_name: str, name: str) -> docspec.Class:
         ...
 
     @abstractmethod
-    def parse_function(self, name: str) -> docspec.Function:
+    def parse_function(self, module_name: str, name: str) -> docspec.Function:
         ...
 
     @abstractmethod
-    def parse_variable(self, name: str) -> docspec.Variable:
+    def parse_variable(self, module_name: str, name: str) -> docspec.Variable:
         ...
 
 

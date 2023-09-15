@@ -158,13 +158,13 @@ class MayaParser(Parser):
     def parse_module(self, name: str) -> docspec.Module:
         raise NotImplementedError
 
-    def parse_function(self, name: str) -> docspec.Function:
+    def parse_function(self, module_name: str, name: str) -> docspec.Function:
         raise NotImplementedError
 
-    def parse_class(self, name: str) -> docspec.Class:
+    def parse_class(self, module_name: str, name: str) -> docspec.Class:
         raise NotImplementedError
 
-    def parse_variable(self, name: str) -> docspec.Variable:
+    def parse_variable(self, module_name: str, name: str) -> docspec.Variable:
         raise NotImplementedError
 
 

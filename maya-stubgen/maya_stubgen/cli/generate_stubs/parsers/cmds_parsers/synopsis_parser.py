@@ -48,10 +48,10 @@ class CmdsSynopsisParser(Parser):
     def parse_module(self, name: str) -> docspec.Module:
         return super().parse_module(name)
 
-    def parse_class(self, name: str) -> docspec.Class:
-        return super().parse_class(name)
+    def parse_class(self, module_name: str, name: str) -> docspec.Class:
+        return super().parse_class(module_name, name)
 
-    def parse_function(self, name: str) -> docspec.Function:
+    def parse_function(self, module_name: str, name: str) -> docspec.Function:
         """Return a docspec Function parsed from command's synopsis
 
         Args:
@@ -119,8 +119,8 @@ class CmdsSynopsisParser(Parser):
             semantic_hints=[],
         )
 
-    def parse_variable(self, name: str) -> docspec.Variable:
-        return super().parse_variable(name)
+    def parse_variable(self, module_name: str, name: str) -> docspec.Variable:
+        return super().parse_variable(module_name, name)
 
     def parse_flag(self, match_flag: re.Match) -> docspec.Argument:
         """Generate a docstring Argument from a flag string."""
@@ -161,15 +161,12 @@ class CmdsSynopsisParser(Parser):
         )
 
     def parse_header(self, match_header: re.Match[str]) -> list[docspec.Argument]:
-
         positional_args = match_header["positional_args"]
 
         if not positional_args:
             return []
 
         positional_args = positional_args.strip()
-
-        out_args = []
 
         if "..." in positional_args:
             # the type is a list. Eg: [String...]
