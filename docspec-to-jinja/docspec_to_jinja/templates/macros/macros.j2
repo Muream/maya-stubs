@@ -22,11 +22,12 @@
 
 {% macro format_docstring(docstring) %}
 {%if docstring %}
+{% set content = docstring.content | replace("\\", "\\\\") %}
 {% filter indent(width=4, first=True) %}
 {% if docstring.content.splitlines()|length == 1%}
-"""{{docstring.content}}"""
+"""{{content}}"""
 {%- else %}
-"""{{docstring.content}}
+"""{{content}}
 """
 {%- endif %}
 {% endfilter %}
