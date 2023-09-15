@@ -8,7 +8,8 @@ import importlib
 import inspect
 import logging
 import re
-from typing import Any, Callable, List, Optional
+from pkgutil import resolve_name
+from typing import Any, Callable, List, Optional, Type
 
 import docspec
 from attrs import define
@@ -117,7 +118,11 @@ class BuiltinParser(Parser):
             location=NULL_LOCATION,
             name=name,
             docstring=docstring,
-            bases=[base.__name__ for base in cls.__bases__],
+            bases=[
+                self._maybe_qualified(module_name, base)
+                for base in cls.__bases__
+                if base is not object
+            ],
             members=members,
             metaclass=None,
             modifiers=[],
@@ -190,6 +195,39 @@ class BuiltinParser(Parser):
             or isinstance(value, simple_types)
             or (isinstance(value, collection_types) and value in simple_values)
         )
+
+    _TYPE_OVERRIDES = {
+        "builtins.SwigPyObject": "Any",
+        "builtins.swigvarlink": "Any",
+        "builtins.list": "List[Any]",
+        "builtins.tuple": "Tuple[Any, ...]",
+        "builtins.dict": "Dict[str, Any]",
+    }
+
+    @staticmethod
+    def _maybe_qualified(module_name: str, cls: Type[Any]) -> str:
+        """
+        Returns the fully qualified name of a class.
+        """
+        class_module = cls.__module__
+        # maya.api classes report relative module names (e.g. "OpenMayaUI")
+        # instead of the full module path (e.g. "maya.api.OpenMayaUI");
+        # attempt to resolve the module as a full path, and if we can't,
+        # assume that it's a sibling of the current module
+        try:
+            resolve_name(class_module)
+        except (ImportError, AttributeError):
+            parent_package = module_name.rsplit(".", 1)[0]
+            class_module = ".".join((parent_package, class_module))
+
+        qualified_name = ".".join((class_module, cls.__qualname__))
+        if override := BuiltinParser._TYPE_OVERRIDES.get(qualified_name):
+            return override
+
+        # no need to qualify builtin types or types from the same module
+        if class_module in ("builtins", module_name):
+            return cls.__qualname__
+        return qualified_name
 
     def _parse_builtin_member(
         self,
