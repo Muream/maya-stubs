@@ -2,10 +2,11 @@ from __future__ import annotations
 
 import concurrent.futures
 import importlib
+import itertools
 import logging
 import os
 from pathlib import Path
-from pkgutil import walk_packages
+import pkgutil
 from typing import Optional
 
 import docspec
@@ -128,14 +129,22 @@ class MayaParser(Parser):
 
         package = importlib.import_module(name)
 
-        for module in walk_packages(package.__path__, package.__name__ + "."):
-            if whitelist is not None and module.name not in whitelist:
+        submodules = pkgutil.walk_packages(package.__path__, package.__name__ + ".")
+        # include root package
+        all_modules = itertools.chain(
+            [(package.__name__, True)], ((mod.name, mod.ispkg) for mod in submodules)
+        )
+        for module_name, ispkg in all_modules:
+            if whitelist is not None and module_name not in whitelist:
                 continue
 
-            if module.name == "maya.cmds":
-                docspec_module = CmdsParser(executor).parse_module(module.name)
+            if module_name == "maya.cmds":
+                docspec_module = CmdsParser(executor).parse_module(module_name)
             else:
-                docspec_module = BuiltinParser(executor).parse_module(module.name)
+                docspec_module = BuiltinParser(executor).parse_module(module_name)
+
+            if ispkg:
+                docspec_module.name += ".__init__"
 
             docspec_modules.append(docspec_module)
 
@@ -175,6 +184,7 @@ def dump_docspec():
         "maya.standalone",
         "maya.utils",
         "maya.mel",
+        "maya",
     ]
 
     logger.info("Dumping Docspec for %s", ", ".join(whitelist))
@@ -215,8 +225,15 @@ def build_stubs(path: Path, reuse_cache: bool = False):
 
         os.makedirs(stub_path.parent, exist_ok=True)
 
-        with stub_path.open("w", encoding="utf-8") as f:
-            f.write(stub)
+        logger.debug("Writing %s to %s", module.name, stub_path)
+        with stub_path.open("w", encoding="utf-8") as out_f:
+            out_f.write(stub)
+
+        if stub_path.parent.resolve() != docspec_cache.resolve():
+            # create empty __init__ if it does not exist already
+            init_path = stub_path.parent / "__init__.pyi"
+            with init_path.open("a"):
+                pass
 
 
 def build_docs(path: Path, reuse_cache: bool = False):
