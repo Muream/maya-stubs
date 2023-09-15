@@ -103,6 +103,7 @@ def render_module(module: Module, template_type: str, nested: bool = False) -> s
         render_docstring=render_docstring,
         render_function=render_function,
         render_class=render_class,
+        render_variable=render_variable,
         nested=nested,
         imports=get_imports(module),
     )
@@ -115,6 +116,7 @@ def render_class(cls: Class, template_type: str, nested: bool = False) -> str:
         cls=cls,
         render_docstring=render_docstring,
         render_function=render_function,
+        render_variable=render_variable,
         nested=nested,
     )
 
