@@ -23,6 +23,7 @@ env = Environment(
     autoescape=select_autoescape(),
     trim_blocks=True,
 )
+env.globals["ArgumentType"] = Argument.Type
 
 
 def render(api_object: ApiObject, template_type: str) -> str:
@@ -124,11 +125,44 @@ def render_function(
 ) -> str:
     template = env.get_template(f"{template_type}/function.j2")
 
+    args: List[Union[str, Argument]] = []
+
+    positional_only = _get_all_args(function, Argument.Type.POSITIONAL_ONLY)
+    positional = _get_all_args(function, Argument.Type.POSITIONAL)
+    positional_remainder = _get_one_arg(function, Argument.Type.POSITIONAL_REMAINDER)
+    keyword_only = _get_all_args(function, Argument.Type.KEYWORD_ONLY)
+    keyword_remainder = _get_one_arg(function, Argument.Type.KEYWORD_REMAINDER)
+
+    args.extend(positional_only)
+    if positional_only:
+        args.append("/")
+
+    args.extend(positional)
+
+    if positional_remainder:
+        args.append(positional_remainder)
+    elif keyword_only:
+        args.append("*")
+
+    args.extend(keyword_only)
+
+    if keyword_remainder:
+        args.append(keyword_remainder)
+
     return template.render(
         function=function,
         render_docstring=render_docstring,
         nested=nested,
+        args=args,
     )
+
+
+def _get_all_args(function: Function, arg_type: Argument.Type) -> list[Argument]:
+    return [arg for arg in function.args if arg.type == arg_type]
+
+
+def _get_one_arg(function: Function, arg_type: Argument.Type) -> Optional[Argument]:
+    return next((arg for arg in function.args if arg.type == arg_type), None)
 
 
 def render_docstring(
