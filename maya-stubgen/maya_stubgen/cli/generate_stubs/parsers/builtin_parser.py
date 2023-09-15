@@ -395,6 +395,14 @@ class BuiltinParser(Parser):
         for param in signature.parameters.values():
             args.append(self._param_to_argument(module_name, param))
 
+        if function.__name__ == "__new__" and (not args or args[0].name != "cls"):
+            cls_arg = docspec.Argument(
+                location=NULL_LOCATION,
+                name="cls",
+                type=docspec.Argument.Type.POSITIONAL_ONLY,
+            )
+            args.insert(0, cls_arg)
+
         return args
 
     def _param_to_argument(
