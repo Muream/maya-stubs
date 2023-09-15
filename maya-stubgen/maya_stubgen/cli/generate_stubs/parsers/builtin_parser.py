@@ -139,12 +139,17 @@ class BuiltinParser(Parser):
             else None
         )
 
-        args = self._get_args(module_name, function, is_method)
-        return_type = self.get_return_type(function)
-
         semantic_hints = []
         if is_method:
-            semantic_hints.append(docspec.FunctionSemantic.INSTANCE_METHOD)
+            if isinstance(member, classmethod):
+                semantic_hints.append(docspec.FunctionSemantic.CLASS_METHOD)
+            elif isinstance(member, staticmethod):
+                semantic_hints.append(docspec.FunctionSemantic.STATIC_METHOD)
+            else:
+                semantic_hints.append(docspec.FunctionSemantic.INSTANCE_METHOD)
+
+        args = self._get_args(module_name, function, semantic_hints)
+        return_type = self.get_return_type(function)
 
         return docspec.Function(
             location=NULL_LOCATION,
@@ -154,6 +159,7 @@ class BuiltinParser(Parser):
             args=args,
             return_type=return_type,
             decorations=[],
+            semantic_hints=semantic_hints,
         )
 
     def parse_variable(self, module_name: str, name: str) -> docspec.Variable:
@@ -208,24 +214,30 @@ class BuiltinParser(Parser):
         self,
         module_name: str,
         function: Callable[[Any], Any],
-        is_method: bool = False,
+        hints: Optional[List[docspec.FunctionSemantic]] = None,
     ) -> List[docspec.Argument]:
         try:
             args = self._arguments_from_signature(module_name, function)
         except RuntimeError:
             args = []
 
-            if is_method:
-                args.append(
-                    docspec.Argument(
-                        location=NULL_LOCATION,
-                        name="self",
-                        type=docspec.Argument.Type.POSITIONAL_ONLY,
-                        decorations=[],
-                        datatype=None,
-                        default_value=None,
+            if hints:
+                if docspec.FunctionSemantic.CLASS_METHOD in hints:
+                    args.append(
+                        docspec.Argument(
+                            location=NULL_LOCATION,
+                            name="cls",
+                            type=docspec.Argument.Type.POSITIONAL_ONLY,
+                        )
                     )
-                )
+                elif docspec.FunctionSemantic.INSTANCE_METHOD in hints:
+                    args.append(
+                        docspec.Argument(
+                            location=NULL_LOCATION,
+                            name="self",
+                            type=docspec.Argument.Type.POSITIONAL_ONLY,
+                        )
+                    )
 
             args.extend(
                 [
