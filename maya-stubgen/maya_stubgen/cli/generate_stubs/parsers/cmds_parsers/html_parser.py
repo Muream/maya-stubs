@@ -5,6 +5,7 @@ import logging
 import re
 import textwrap
 from pathlib import Path
+from typing import Optional
 
 import bs4
 import docspec
@@ -31,6 +32,12 @@ requests_session = requests.Session()
 
 
 flag_name_re = re.compile(r"(?P<long_name>\w+)\((?P<short_name>\w*)\)")
+
+properties_re = re.compile(
+    r"is (?P<not_undoable>NOT )?undoable, "
+    r"(?P<not_queryable>NOT )?queryable, and "
+    r"(?P<not_editable>NOT )?editable"
+)
 
 
 class DocumentationNotFound(Exception):
@@ -73,16 +80,15 @@ class CmdsDocsParser(Parser):
         docstring_parser_example = None
 
         # We iterate over the H2 titles as they act as nice section delimitations.
-        for title in soup.find_all("h2"):
-            title: bs4.Tag
-            if title.text == "Return value":
-                docspec_return, docstring_parser_return = get_return_type(title)
-            if title.text == "Flags":
-                arguments = get_arguments(title)
-                docspec_args = [arg[0] for arg in arguments]
-                docstring_parser_params = [arg[1] for arg in arguments]
-            if title.text == "Python examples":
-                docstring_parser_example = get_examples(title)
+        if return_title := soup.find("h2", string="Return value"):
+            docspec_return, docstring_parser_return = get_return_type(return_title)
+        if flag_title := soup.find("h2", string="Flags"):
+            synopsis_title = soup.select_one("#synopsis")
+            docspec_args, docstring_parser_params = get_arguments(
+                flag_title, synopsis_title
+            )
+        if examples_title := soup.find("h2", string="Python examples"):
+            docstring_parser_example = get_examples(examples_title)
 
         # The docstring is the only piece of text in the body that has no tag.
         body_text = [t.strip() for t in soup.body.findAll(text=True, recursive=False)]
@@ -156,7 +162,8 @@ def get_return_type(title: bs4.Tag) -> tuple[str, docstring_parser.DocstringRetu
 
 def get_arguments(
     title: bs4.Tag,
-) -> list[tuple[docspec.Argument, docstring_parser.DocstringParam]]:
+    synopsis: Optional[bs4.BeautifulSoup],
+) -> tuple[list[docspec.Argument], list[docstring_parser.DocstringParam]]:
     """Get the docspec arguments.
 
     Returns:
@@ -164,7 +171,32 @@ def get_arguments(
     """
 
     #: The docspec arguments we'll return, along with their descriptions.
-    arguments: list[tuple[docspec.Argument, docstring_parser.DocstringParam]] = []
+    arguments: list[docspec.Argument] = []
+    argument_docs: list[docstring_parser.DocstringParam] = []
+
+    if synopsis is not None and (props := synopsis.find_next_sibling("p")):
+        if m := properties_re.search(props.text):
+            if not m["not_editable"]:
+                arguments.append(
+                    docspec.Argument(
+                        location=NULL_LOCATION,
+                        name="edit",
+                        type=docspec.Argument.Type.KEYWORD_ONLY,
+                        datatype="bool",
+                        default_value="...",
+                    )
+                )
+
+            if not m["not_queryable"]:
+                arguments.append(
+                    docspec.Argument(
+                        location=NULL_LOCATION,
+                        name="query",
+                        type=docspec.Argument.Type.KEYWORD_ONLY,
+                        datatype="bool",
+                        default_value="...",
+                    )
+                )
 
     #: The <table> containing all the information for the flags.
     table = title.find_next("table")
@@ -216,26 +248,29 @@ def get_arguments(
         # Support markdown's hard line breaks
         flag_description = flag_description.replace("\n", "  \n")
 
-        docstring_param = docstring_parser.DocstringParam(
-            args=["param"],
-            description=flag_description,
-            arg_name=long_name,
-            type_name=flag_type,
-            is_optional=True,
-            default=None,
+        argument_docs.append(
+            docstring_parser.DocstringParam(
+                args=["param"],
+                description=flag_description,
+                arg_name=long_name,
+                type_name=flag_type,
+                is_optional=True,
+                default=None,
+            )
         )
 
-        docspec_arg = docspec.Argument(
-            location=NULL_LOCATION,
-            name=long_name,
-            type=docspec.Argument.Type.KEYWORD_ONLY,
-            decorations=None,
-            datatype=flag_type,
-            default_value="...",
+        arguments.append(
+            docspec.Argument(
+                location=NULL_LOCATION,
+                name=long_name,
+                type=docspec.Argument.Type.KEYWORD_ONLY,
+                decorations=None,
+                datatype=flag_type,
+                default_value="...",
+            )
         )
-        arguments.append((docspec_arg, docstring_param))
 
-    return arguments
+    return arguments, argument_docs
 
 
 def get_examples(title: bs4.Tag) -> docstring_parser.common.DocstringExample:
