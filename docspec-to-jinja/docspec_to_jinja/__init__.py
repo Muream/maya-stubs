@@ -24,6 +24,7 @@ env = Environment(
     trim_blocks=True,
 )
 env.globals["ArgumentType"] = Argument.Type
+env.globals["FunctionSemantic"] = FunctionSemantic
 
 
 def render(api_object: ApiObject, template_type: str) -> str:
