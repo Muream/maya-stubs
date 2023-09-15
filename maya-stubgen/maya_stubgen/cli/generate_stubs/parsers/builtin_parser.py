@@ -294,7 +294,11 @@ class BuiltinParser(Parser):
         elif inspect.ismodule(py_member):
             # Ignore modules
             return
-
+        elif (mod := inspect.getmodule(py_member)) and not mod.__name__.startswith(
+            "maya."
+        ):
+            # filter imported builtins
+            return
         elif inspect.isclass(py_member):
             # we will add classes in a 2nd pass
             docspec_member = self.parse_class(module_name, member_name)
