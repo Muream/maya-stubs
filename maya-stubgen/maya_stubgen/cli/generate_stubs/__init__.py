@@ -13,7 +13,7 @@ import docspec_to_jinja
 
 from maya_stubgen.cli.generate_stubs.parsers.cmds_parsers import CmdsParser
 from maya_stubgen.cli.generate_stubs.parsers.common import Parser
-from maya_stubgen.utils import initialize_maya, timed
+from ...utils import maya_standalone, timed
 
 from .parsers import BuiltinParser, CmdsParser
 
@@ -177,7 +177,13 @@ def dump_docspec():
         "maya.mel",
     ]
 
-    modules = MayaParser().parse_package("maya", whitelist=whitelist)
+    logger.info("Dumping Docspec for %s", ", ".join(whitelist))
+
+    with maya_standalone():
+        modules = MayaParser().parse_package(
+            "maya", whitelist=whitelist,
+        )
+
     for module in modules:
         docspec_cache = (
             Path().resolve()

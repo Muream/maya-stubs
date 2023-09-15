@@ -5,7 +5,6 @@ from pathlib import Path
 
 import click
 
-from ..utils import initialize_maya, uninitialize_maya
 from .generate_stubs import build_docs, build_stubs, dump_docspec
 
 logger = logging.getLogger("maya_stubgen")
@@ -13,12 +12,7 @@ logger = logging.getLogger("maya_stubgen")
 
 @click.group
 def cli():
-    initialize_maya()
-
-
-@cli.result_callback()
-def result(result):
-    uninitialize_maya()
+    pass
 
 
 @cli.command
