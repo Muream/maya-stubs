@@ -61,6 +61,15 @@ class BuiltinParser(Parser):
 
         return docspec.Module(NULL_LOCATION, name, docstring, docspec_members)
 
+    # built-in class attributes we don't need
+    _IGNORE_MEMBERS = [
+        "__dict__",
+        "__doc__",
+        "__hash__",
+        "__module__",
+        "__weakref__",
+    ]
+
     def parse_class(self, module_name: str, name: str) -> docspec.Class:
         logger.debug("Parsing class: %s", name)
 
@@ -71,45 +80,29 @@ class BuiltinParser(Parser):
         docstring = docspec.Docstring(NULL_LOCATION, inspect.getdoc(cls) or "")
         members = []
 
-        ignored_members = [
-            # These members somehow sometime share their id with their `super`
-            # but sometimes don't
-            "__dict__",
-            "__bases__",
-            "__mro__",
-            "__name__",
-            "__qualname__",
-            "__doc__",
-            "__hash__",
-            "__init_subclass__",
-            "__module__",
-            "__subclasscheck__",
-            "__subclasshook__",
-            "__weakref__",
-        ]
-
-        try:
-            parent = type.mro(cls)[1]
-        except IndexError:
-            parent = object
-
-        parent_members = []
-        if parent is not None:
-            parent_members = [id(member[1]) for member in inspect.getmembers(parent)]
+        parent_members = {
+            id(inspect.getattr_static(parent, name))
+            for parent in type.mro(cls)[1:]
+            for name, _ in inspect.getmembers(parent)
+        }
 
         for member_name, member in inspect.getmembers(cls):
-            if member_name in ignored_members:
+            if member_name in BuiltinParser._IGNORE_MEMBERS:
                 continue
 
+            member = inspect.getattr_static(cls, member_name)
             parser.add_member(member_name, member)
 
             is_inherited = id(member) in parent_members
             if is_inherited:
                 continue
 
-            if inspect.isclass(member):
+            # get the underlying object if decorated
+            unwrapped = inspect.unwrap(member)
+
+            if inspect.isclass(unwrapped):
                 members.append(parser.parse_class(module_name, member_name))
-            elif callable(member):
+            elif callable(unwrapped):
                 method = parser.parse_function(module_name, member_name, is_method=True)
                 members.append(method)
             # elif inspect.isgetsetdescriptor(member):
@@ -136,7 +129,8 @@ class BuiltinParser(Parser):
         self, module_name: str, name: str, is_method: bool = False
     ) -> docspec.Function:
         logger.debug("Parsing function: %s", name)
-        function: Callable = self._members[name]
+        member = self._members[name]
+        function: Callable = inspect.unwrap(member)
 
         docstring_content = inspect.getdoc(function)
         docstring = (
