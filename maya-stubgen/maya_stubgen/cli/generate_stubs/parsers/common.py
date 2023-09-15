@@ -63,7 +63,7 @@ def degraded_function(name: str) -> docspec.Function:
         args=[
             docspec.Argument(
                 NULL_LOCATION,
-                "*args",
+                "args",
                 docspec.Argument.Type.POSITIONAL_REMAINDER,
                 decorations=None,
                 datatype="Any",
@@ -71,7 +71,7 @@ def degraded_function(name: str) -> docspec.Function:
             ),
             docspec.Argument(
                 NULL_LOCATION,
-                "**kwargs",
+                "kwargs",
                 docspec.Argument.Type.KEYWORD_REMAINDER,
                 decorations=None,
                 datatype="Any",

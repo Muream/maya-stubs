@@ -75,7 +75,7 @@ class CmdsSynopsisParser(Parser):
             arguments = [
                 docspec.Argument(
                     NULL_LOCATION,
-                    "*args",
+                    "args",
                     docspec.Argument.Type.POSITIONAL_REMAINDER,
                     decorations=None,
                     datatype="Any",
@@ -83,7 +83,7 @@ class CmdsSynopsisParser(Parser):
                 ),
                 docspec.Argument(
                     NULL_LOCATION,
-                    "**kwargs",
+                    "kwargs",
                     docspec.Argument.Type.KEYWORD_REMAINDER,
                     decorations=None,
                     datatype="Any",
@@ -179,7 +179,7 @@ class CmdsSynopsisParser(Parser):
             return [
                 docspec.Argument(
                     NULL_LOCATION,
-                    "*args",
+                    "args",
                     docspec.Argument.Type.POSITIONAL_REMAINDER,
                     decorations=None,
                     datatype=mel_to_python_type(positional_args),

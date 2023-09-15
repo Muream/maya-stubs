@@ -99,15 +99,7 @@ class CmdsParser(Parser):
                 for arg in synopsis_docspec_function.args
                 if arg.type is docspec.Argument.Type.POSITIONAL_ONLY
             ]
-            if positional_args:
-                positional_args.append(
-                    docspec.Argument(
-                        NULL_LOCATION, "/", docspec.Argument.Type.POSITIONAL_ONLY
-                    )
-                )
-
-                for arg in reversed(positional_args):
-                    docs_docspec_function.args.insert(0, arg)
+            docs_docspec_function.args = positional_args + docs_docspec_function.args
 
         if docspec_function:
             docspec_function = synopsis_docspec_function

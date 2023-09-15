@@ -233,16 +233,20 @@ class BuiltinParser(Parser):
                     )
                 )
 
-            for _arg in ["*args", "**kwargs"]:
-                arg = docspec.Argument(
-                    location=NULL_LOCATION,
-                    name=_arg,
-                    type=docspec.Argument.Type.POSITIONAL,
-                    decorations=[],
-                    datatype="Any",
-                    default_value=None,
-                )
-                args.append(arg)
+            args.extend(
+                [
+                    docspec.Argument(
+                        location=NULL_LOCATION,
+                        name="args",
+                        type=docspec.Argument.Type.POSITIONAL_REMAINDER,
+                    ),
+                    docspec.Argument(
+                        location=NULL_LOCATION,
+                        name="kwargs",
+                        type=docspec.Argument.Type.KEYWORD_REMAINDER,
+                    ),
+                ]
+            )
         return args
 
     def get_return_type(self, function: Callable) -> str:
@@ -291,7 +295,7 @@ class BuiltinParser(Parser):
     ) -> docspec.Argument:
         """Convert an `inspect.Parameter` to a `docspec.Argument`"""
 
-        arg_name = str(param)
+        arg_name = param.name
         arg_type = docspec.Argument.Type(param.kind)
         arg_decorations = []
         arg_datatype = (
