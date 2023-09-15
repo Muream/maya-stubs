@@ -20,7 +20,7 @@ def mel_to_python_type(type_name: str) -> str:
         # str
         "string": "str",
         "name": "str",
-        "script": "Callable",
+        "script": "Callable[..., Any]",
         # float
         "float": "float",
         "length": "float",
