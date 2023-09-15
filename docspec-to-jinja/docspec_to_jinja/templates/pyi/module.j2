@@ -3,6 +3,10 @@ from __future__ import annotations
 
 from typing import *
 
+{% for imp in imports %}
+import {{ imp }}
+{% endfor %}
+
 Unknown = Any
 
 {% for member in module.members %}

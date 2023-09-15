@@ -1,5 +1,17 @@
+from collections.abc import Iterator
+from typing import List, Optional, Union
+
 import docstring_parser
-from docspec import ApiObject, Class, Docstring, Function, Module, Variable
+from docspec import (
+    ApiObject,
+    Class,
+    Docstring,
+    Function,
+    Module,
+    Variable,
+    Argument,
+    FunctionSemantic,
+)
 from jinja2 import Environment, PackageLoader, select_autoescape
 
 from .docstring import process_google_docstring
@@ -32,6 +44,55 @@ def render(api_object: ApiObject, template_type: str) -> str:
     raise TypeError(f"Rendering {api_object.__class__.__name__} is not supported.")
 
 
+def get_imports(module: Module) -> List[str]:
+    # remove type arguments
+    types = (type_name.split("[", 1)[0] for type_name in _get_module_types(module))
+    return sorted(
+        set(type_name.rsplit(".", 1)[0] for type_name in types if "." in type_name)
+    )
+
+
+def _get_module_types(module: Module) -> Iterator[str]:
+    for member in module.members:
+        if isinstance(member, Variable):
+            yield from _get_variable_types(member)
+        elif isinstance(member, Function):
+            yield from _get_function_types(member)
+        elif isinstance(member, Class):
+            yield from _get_class_types(member)
+
+
+def _get_class_types(cls: Class) -> Iterator[str]:
+    if cls.bases:
+        yield from cls.bases
+
+    for member in cls.members:
+        if isinstance(member, Variable):
+            yield from _get_variable_types(member)
+        elif isinstance(member, Function):
+            yield from _get_function_types(member)
+        elif isinstance(member, Class):
+            yield from _get_class_types(member)
+
+
+def _get_function_types(func: Function) -> Iterator[str]:
+    if func.return_type:
+        yield func.return_type
+
+    for arg in func.args:
+        yield from _get_argument_types(arg)
+
+
+def _get_argument_types(arg: Argument) -> Iterator[str]:
+    if arg.datatype:
+        yield arg.datatype
+
+
+def _get_variable_types(var: Variable) -> Iterator[str]:
+    if var.datatype:
+        yield var.datatype
+
+
 def render_module(module: Module, template_type: str, nested: bool = False) -> str:
     template = env.get_template(f"{template_type}/module.j2")
 
@@ -41,6 +102,7 @@ def render_module(module: Module, template_type: str, nested: bool = False) -> s
         render_function=render_function,
         render_class=render_class,
         nested=nested,
+        imports=get_imports(module),
     )
 
 
