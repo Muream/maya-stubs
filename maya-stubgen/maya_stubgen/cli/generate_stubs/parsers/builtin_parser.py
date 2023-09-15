@@ -301,9 +301,7 @@ class BuiltinParser(Parser):
         elif callable(py_member):
             docspec_member = self.parse_function(module_name, member_name)
         else:
-            # member has to be a variable now?
-            # docspec_member = parse_builtin_variable(name, py_member)
-            pass
+            docspec_member = self.parse_variable(module_name, member_name)
 
         return docspec_member
 
