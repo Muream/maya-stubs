@@ -62,6 +62,11 @@ class BuiltinParser(Parser):
 
         return docspec.Module(NULL_LOCATION, name, docstring, docspec_members)
 
+    # these crash maya 2024 when attempting to instantiate them
+    _SKIP_INSTANTIATE = [
+        "maya.OpenMayaMPx.MPxGlBuffer",
+    ]
+
     # built-in class attributes we don't need
     _IGNORE_MEMBERS = [
         "__dict__",
@@ -87,6 +92,16 @@ class BuiltinParser(Parser):
             for name, _ in inspect.getmembers(parent)
         }
 
+        # attempt to instantiate the class using the empty constructor
+        # to extract more information from it
+        instance = None
+        qualified_name = ".".join((module_name, cls.__qualname__))
+        if qualified_name not in BuiltinParser._SKIP_INSTANTIATE:
+            try:
+                instance = cls()
+            except Exception as e:
+                logger.warning("Could not instantiate type %s: %s", cls.__name__, e)
+
         for member_name, member in inspect.getmembers(cls):
             if member_name in BuiltinParser._IGNORE_MEMBERS:
                 continue
@@ -106,13 +121,10 @@ class BuiltinParser(Parser):
             elif callable(unwrapped):
                 method = parser.parse_function(module_name, member_name, is_method=True)
                 members.append(method)
-            # elif inspect.isgetsetdescriptor(member):
-            #     getter = Function.from_object(member, member_name, FunctionType.getter)
-            #     setter = Function.from_object(member, member_name, FunctionType.setter)
-            #     members.append(getter)
-            #     members.append(setter)
             else:
-                members.append(parser.parse_variable(module_name, member_name))
+                members.append(
+                    parser.parse_variable(module_name, member_name, instance=instance)
+                )
 
         return docspec.Class(
             location=NULL_LOCATION,
@@ -167,7 +179,9 @@ class BuiltinParser(Parser):
             semantic_hints=semantic_hints,
         )
 
-    def parse_variable(self, module_name: str, name: str) -> docspec.Variable:
+    def parse_variable(
+        self, module_name: str, name: str, instance: Any = None
+    ) -> docspec.Variable:
         logger.debug("Parsing variable: %s", name)
 
         variable = self._members[name]
@@ -175,15 +189,46 @@ class BuiltinParser(Parser):
         if self._is_simple_literal(variable):
             variable_value = repr(variable)
 
+        datatype = self._maybe_qualified(module_name, type(variable))
+        if isinstance(variable, property) or inspect.isgetsetdescriptor(variable):
+            datatype = self._get_descriptor_type(module_name, name, instance)
+
         return docspec.Variable(
             location=NULL_LOCATION,
             name=name,
             docstring=None,
-            datatype=variable.__class__.__name__,
+            datatype=datatype,
             value=variable_value,
             modifiers=[],
             semantic_hints=[],
         )
+
+    # these crash maya 2024 on access
+    _SKIP_DESCRIPTORS = [
+        "maya.api.OpenMayaUI.MSelectInfo.highestPriority",
+        "maya.api.OpenMaya.MArgParser.numberOfFlagsUsed",
+        "maya.api.OpenMaya.MPxGeometryData.matrix",
+        "maya.api.OpenMaya.MPxSurfaceShape.isRenderable",
+    ]
+
+    def _get_descriptor_type(self, module_name: str, name: str, instance: Any) -> str:
+        if instance is None:
+            return "Any"
+
+        qualified_name = ".".join((module_name, type(instance).__name__, name))
+        if qualified_name in BuiltinParser._SKIP_DESCRIPTORS:
+            return "Any"
+
+        try:
+            value = getattr(instance, name)
+        except Exception as e:
+            logger.warning("Could not access descriptor %s: %s", name, e)
+            return "Any"
+
+        if value is None:
+            return "Any"
+
+        return self._maybe_qualified(module_name, type(value))
 
     @staticmethod
     def _is_simple_literal(value: Any, allow_none: bool = False) -> bool:
