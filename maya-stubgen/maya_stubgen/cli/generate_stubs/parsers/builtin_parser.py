@@ -357,14 +357,16 @@ class BuiltinParser(Parser):
     def get_return_type(self, function: Callable) -> str:
         try:
             signature = inspect.signature(function)
-        except Exception:
+        except (ValueError, TypeError):
             return "Any"
 
-        return (
-            signature.return_annotation
-            if signature.return_annotation is not inspect.Signature.empty
-            else "Any"
-        )
+        if function.__name__ == "__init__":
+            return "None"
+
+        if signature.return_annotation is inspect.Signature.empty:
+            return "Any"
+
+        return signature.return_annotation
 
     def _arguments_from_signature(
         self,
