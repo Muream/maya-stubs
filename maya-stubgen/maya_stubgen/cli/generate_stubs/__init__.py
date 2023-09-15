@@ -7,7 +7,7 @@ import logging
 import os
 from pathlib import Path
 import pkgutil
-from typing import Optional
+from typing import Optional, List
 
 import docspec
 import docspec_to_jinja
@@ -116,7 +116,8 @@ class MayaParser(Parser):
     def parse_package(
         self,
         name: str,
-        whitelist: Optional[list[str]],
+        whitelist: Optional[list[str]] = None,
+        member_pattern: Optional[str] = None,
     ) -> list[docspec.Module]:
         logger.debug("Parsing package: %s", name)
 
@@ -139,9 +140,13 @@ class MayaParser(Parser):
                 continue
 
             if module_name == "maya.cmds":
-                docspec_module = CmdsParser(executor).parse_module(module_name)
+                docspec_module = CmdsParser(executor).parse_module(
+                    module_name, member_pattern=member_pattern
+                )
             else:
-                docspec_module = BuiltinParser(executor).parse_module(module_name)
+                docspec_module = BuiltinParser(executor).parse_module(
+                    module_name, member_pattern=member_pattern
+                )
 
             if ispkg:
                 docspec_module.name += ".__init__"
@@ -164,8 +169,10 @@ class MayaParser(Parser):
 
 
 @timed
-def dump_docspec():
-    whitelist = [
+def dump_docspec(
+    whitelist: Optional[List[str]] = None, member_pattern: Optional[str] = None
+) -> None:
+    whitelist = whitelist or [
         # OpenMaya 1.0
         "maya.OpenMaya",
         "maya.OpenMayaAnim",
@@ -191,7 +198,7 @@ def dump_docspec():
 
     with maya_standalone():
         modules = MayaParser().parse_package(
-            "maya", whitelist=whitelist,
+            "maya", whitelist=whitelist, member_pattern=member_pattern
         )
 
     for module in modules:
@@ -204,19 +211,42 @@ def dump_docspec():
 
         os.makedirs(docspec_cache.parent, exist_ok=True)
 
-        logger.debug("Dumping %s", module.name)
+        logger.debug("Dumping %s to %s", module.name, docspec_cache)
         docspec.dump_module(module, target=str(docspec_cache))
 
 
-def build_stubs(path: Path, reuse_cache: bool = False):
+def build_stubs(
+    path: Path,
+    reuse_cache: bool = False,
+    whitelist: Optional[List[str]] = None,
+    member_pattern: Optional[str] = None,
+):
     if not reuse_cache:
-        dump_docspec()
+        dump_docspec(whitelist=whitelist, member_pattern=member_pattern)
+
+    whitelist_patterns = []
+    if whitelist:
+        whitelist_patterns = [
+            pattern
+            for mod in whitelist
+            for pattern in (
+                # whitelist entry may be a module or a package
+                mod.replace(".", "/") + ".json",
+                mod.replace(".", "/") + "/__init__.json",
+            )
+        ]
 
     docspec_cache = Path().resolve() / ".cache" / "docspec"
-
     for f in docspec_cache.glob("**/*.json"):
+        if whitelist_patterns and not any(
+            f.match(pattern) for pattern in whitelist_patterns
+        ):
+            continue
+
+        logger.debug("Loading %s", f)
         module = docspec.load_module(str(f))
 
+        logger.debug("Rendering %s", module.name)
         stub = docspec_to_jinja.render_module(module, "pyi")
 
         stub_path = path / (

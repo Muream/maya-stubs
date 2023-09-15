@@ -2,6 +2,7 @@ import cProfile
 import logging
 import pstats
 from pathlib import Path
+from typing import List, Optional
 
 import click
 
@@ -29,14 +30,16 @@ def test_log():
 
 @cli.command()
 @click.option("-p", "--profile", is_flag=True)
-def generate_docspec(profile: bool) -> None:
-    logger.info("Dumping Docspec")
-
+@click.option("-m", "--module", type=str, multiple=True)
+@click.option("--members", type=str, default=None)
+def generate_docspec(
+    profile: bool, module: Optional[List[str]], members: Optional[str]
+) -> None:
     if profile:
         profiler = cProfile.Profile()
         profiler.enable()
 
-        dump_docspec()
+        dump_docspec(module, member_pattern=members)
 
         profiler.disable()
 
@@ -45,7 +48,7 @@ def generate_docspec(profile: bool) -> None:
         prof_file.parent.mkdir(exist_ok=True)
         stats.dump_stats(str(prof_file))
     else:
-        dump_docspec()
+        dump_docspec(module, member_pattern=members)
 
 
 @cli.command()
@@ -61,7 +64,15 @@ def generate_docspec(profile: bool) -> None:
 )
 @click.option("-p", "--profile", is_flag=True)
 @click.option("-rc", "--reuse-cache", is_flag=True)
-def generate_stubs(path: Path, profile: bool, reuse_cache: bool) -> None:
+@click.option("-m", "--module", type=str, multiple=True)
+@click.option("--members", type=str, default=None)
+def generate_stubs(
+    path: Path,
+    profile: bool,
+    reuse_cache: bool,
+    module: Optional[List[str]],
+    members: Optional[str],
+) -> None:
     logger.info("Generating Stubs")
 
     path.mkdir(parents=True, exist_ok=True)
@@ -70,7 +81,7 @@ def generate_stubs(path: Path, profile: bool, reuse_cache: bool) -> None:
         profiler = cProfile.Profile()
         profiler.enable()
 
-        build_stubs(path, reuse_cache)
+        build_stubs(path, reuse_cache, whitelist=module, member_pattern=members)
 
         profiler.disable()
 
@@ -79,7 +90,7 @@ def generate_stubs(path: Path, profile: bool, reuse_cache: bool) -> None:
         prof_file.parent.mkdir(exist_ok=True)
         stats.dump_stats(str(prof_file))
     else:
-        build_stubs(path, reuse_cache)
+        build_stubs(path, reuse_cache, whitelist=module, member_pattern=members)
 
 
 @cli.command()

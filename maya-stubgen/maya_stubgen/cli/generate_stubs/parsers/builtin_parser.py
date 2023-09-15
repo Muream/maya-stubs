@@ -7,10 +7,11 @@ from __future__ import annotations
 import importlib
 import inspect
 import logging
+import re
 from typing import Any, Callable, List, Optional
 
 import docspec
-from attrs import Factory, define
+from attrs import define
 
 from .common import NULL_LOCATION, Parser
 
@@ -24,7 +25,9 @@ class BuiltinParser(Parser):
     def parse_package(self) -> list[docspec.Module]:
         raise NotImplementedError
 
-    def parse_module(self, name: str) -> docspec.Module:
+    def parse_module(
+        self, name: str, member_pattern: Optional[str] = None
+    ) -> docspec.Module:
         logger.debug("Parsing module: %s", name)
 
         module = importlib.import_module(name)
@@ -43,8 +46,16 @@ class BuiltinParser(Parser):
             #             docspec_members.append(docspec_member)
         else:
             members = inspect.getmembers(module)
-            for member in members:
-                docspec_member = self._parse_builtin_member(member)
+            for member_name, member_value in members:
+                qualified_name = "{}.{}".format(name, member_name)
+                if member_pattern is not None and not re.search(
+                    member_pattern, qualified_name
+                ):
+                    continue
+
+                docspec_member = self._parse_builtin_member(
+                    member_name, member_value
+                )
                 if docspec_member is not None:
                     docspec_members.append(docspec_member)
 
@@ -166,7 +177,8 @@ class BuiltinParser(Parser):
 
     def _parse_builtin_member(
         self,
-        member: tuple[str, Any],
+        member_name: str,
+        py_member: Any,
     ) -> Optional[
         docspec.Class
         | docspec.Function
@@ -174,14 +186,12 @@ class BuiltinParser(Parser):
         | docspec.Module
         | docspec.Variable
     ]:
-        member_name, py_member = member
         self._members[member_name] = py_member
         docspec_member = None
 
         if member_name.startswith("_"):
             return
-
-        if inspect.ismodule(py_member):
+        elif inspect.ismodule(py_member):
             # Ignore modules
             return
 

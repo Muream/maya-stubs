@@ -1,10 +1,9 @@
 from __future__ import annotations
 
-import concurrent.futures
 import inspect
 import logging
-from pkgutil import ModuleInfo
-from typing import Optional
+import re
+from typing import Optional, List
 
 import docspec
 from attrs import Factory, define
@@ -27,7 +26,9 @@ class CmdsParser(Parser):
     def parse_package(self, name: str) -> list[docspec.Module]:
         raise NotImplementedError
 
-    def parse_module(self, name: str) -> docspec.Module:
+    def parse_module(
+        self, name: str, member_pattern: Optional[str] = None
+    ) -> docspec.Module:
         logger.debug("Parsing module: %s", name)
 
         module_name = name
@@ -37,6 +38,10 @@ class CmdsParser(Parser):
             command_name
             for command_name, _ in inspect.getmembers(cmds, callable)
             if not command_name[0].isupper()
+            and (
+                member_pattern is None
+                or re.search(member_pattern, "{}.{}".format(name, command_name))
+            )
         ]
 
         results = self.map(self.parse_function, commands)
