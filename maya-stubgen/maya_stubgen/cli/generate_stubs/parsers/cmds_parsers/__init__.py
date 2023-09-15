@@ -39,12 +39,7 @@ class CmdsParser(Parser):
             if not command_name[0].isupper()
         ]
 
-        if self.executor:
-            with self.executor:
-                results = self.executor.map(self.parse_function, commands)
-        else:
-            results = map(self.parse_function, commands)
-
+        results = self.map(self.parse_function, commands)
         for docspec_member in results:
             if docspec_member is not None:
                 docspec_members.append(docspec_member)
