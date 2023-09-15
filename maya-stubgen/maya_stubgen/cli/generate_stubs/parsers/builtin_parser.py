@@ -166,15 +166,29 @@ class BuiltinParser(Parser):
         logger.debug("Parsing variable: %s", name)
 
         variable = self._members[name]
+        variable_value = None
+        if self._is_simple_literal(variable):
+            variable_value = repr(variable)
 
         return docspec.Variable(
             location=NULL_LOCATION,
             name=name,
             docstring=None,
             datatype=variable.__class__.__name__,
-            value=str(variable),
+            value=variable_value,
             modifiers=[],
             semantic_hints=[],
+        )
+
+    @staticmethod
+    def _is_simple_literal(value: Any, allow_none: bool = False) -> bool:
+        simple_types = (str, bytes, int, float, complex)
+        collection_types = (list, dict)
+        simple_values = ([], {})
+        return (
+            (value is None and allow_none)
+            or isinstance(value, simple_types)
+            or (isinstance(value, collection_types) and value in simple_values)
         )
 
     def _parse_builtin_member(
@@ -309,9 +323,14 @@ class BuiltinParser(Parser):
             if param.annotation is not inspect.Signature.empty
             else None
         )
-        arg_default_value = (
-            str(param.default) if param.default is not inspect.Signature.empty else None
-        )
+
+        arg_default_value = None
+        if param.default is not inspect.Signature.empty:
+            if self._is_simple_literal(param.default, allow_none=True):
+                arg_default_value = repr(param.default)
+            else:
+                arg_default_value = "..."
+
         return docspec.Argument(
             location=NULL_LOCATION,
             name=arg_name,
