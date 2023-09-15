@@ -356,11 +356,13 @@ class BuiltinParser(Parser):
         arg_name = param.name
         arg_type = docspec.Argument.Type(param.kind)
         arg_decorations = []
-        arg_datatype = (
-            param.annotation
-            if param.annotation is not inspect.Signature.empty
-            else None
-        )
+
+        arg_datatype = None
+        if param.annotation is not inspect.Signature.empty:
+            arg_datatype = param.annotation
+        elif param.default is not inspect.Signature.empty and param.default is not None:
+            # guess datatype from default value
+            arg_datatype = self._maybe_qualified(module_name, type(param.default))
 
         arg_default_value = None
         if param.default is not inspect.Signature.empty:
