@@ -204,7 +204,7 @@ class CmdsSynopsisParser(Parser):
                         docspec.Argument.Type.POSITIONAL_ONLY,
                         decorations=None,
                         datatype=mel_to_python_type(data_type),
-                        default_value=None,
+                        default_value="...",
                     )
                 )
             return out_args
@@ -217,7 +217,7 @@ class CmdsSynopsisParser(Parser):
                     docspec.Argument.Type.POSITIONAL_ONLY,
                     decorations=None,
                     datatype=mel_to_python_type(positional_args),
-                    default_value=None,
+                    default_value="...",
                 )
             ]
 
