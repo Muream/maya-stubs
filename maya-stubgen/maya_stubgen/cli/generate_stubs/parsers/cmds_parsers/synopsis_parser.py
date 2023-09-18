@@ -25,6 +25,12 @@ synopsis_header_regex = re.compile(
     r"Synopsis: (?P<name>\w+)( (\[flags\])? ?(?P<positional_args>.*))?"
 )
 
+# used to tokenize the arguments of the synopsis header
+# https://regex101.com/r/65YWDk/1
+synopsis_args_regex = re.compile(
+    r"(?P<type>[\w+|]+)\[?(?P<repeat>\.\.\.)?\]?(?P<repeat2> \(up to \d+ times\))?"
+)
+
 #: Regex used to parse a flag line in the command's synopsis
 #: https://regex101.com/r/bBZoCh/3
 synopsis_flag_regex = re.compile(
@@ -163,59 +169,42 @@ class CmdsSynopsisParser(Parser):
             return []
 
         positional_args = positional_args.strip()
+        return_args = []
 
-        if "..." in positional_args:
-            # the type is a list. Eg: [String...]
-            # We'll convert that in `*args: str`
+        # arg list can look like:
+        # String -> arg0: str
+        # [String...] -> *args: str
+        # String String [String...] -> arg0: str, arg1: str, *args: str
+        # Float Float Float [String...] -> arg0: float, arg2: float, arg3: float, *args: str
+        # [String String String String ] -> arg0: str, arg1: str, arg2: str, arg3: str
+        # String Float Int String [String] (up to 6 times) -> arg0: str, arg1: float, arg2: int, arg3: str, *args: str
 
-            # Remove any unwanted characters to get a clean type string
-            positional_args = positional_args.replace("[", "").replace("]", "").strip()
-            positional_args = positional_args.replace("...", "")
-
-            return [
-                docspec.Argument(
-                    NULL_LOCATION,
-                    "args",
-                    docspec.Argument.Type.POSITIONAL_REMAINDER,
-                    decorations=None,
-                    datatype=mel_to_python_type(positional_args),
-                    default_value=None,
-                )
-            ]
-        elif positional_args.count(" ") > 0:
-            # the type is a tuple. Eg: [str, int, str]
-            # This means we need a specific number of positional only arguments
-            # each with the relevant type
-            # we'll convert that to `arg0: str, arg1: int, arg2: str`
-
-            # Remove any unwanted characters to get a clean "space" separated types string
-            positional_args = positional_args.replace("[", "").replace("]", "").strip()
-
-            out_args: list[docspec.Argument] = []
-            for i, data_type in enumerate(positional_args.split(" ")):
-                out_args.append(
+        for i, arg in enumerate(synopsis_args_regex.finditer(positional_args)):
+            groups = arg.groupdict()
+            datatype = mel_to_python_type(groups["type"])
+            if groups.get("repeat") or groups.get("repeat2"):
+                # *args
+                return_args.append(
                     docspec.Argument(
-                        NULL_LOCATION,
-                        f"arg{i}",
-                        docspec.Argument.Type.POSITIONAL_ONLY,
-                        decorations=None,
-                        datatype=mel_to_python_type(data_type),
+                        location=NULL_LOCATION,
+                        name="args",
+                        type=docspec.Argument.Type.POSITIONAL_REMAINDER,
+                        datatype=datatype,
+                    )
+                )
+            else:
+                # positional argument
+                return_args.append(
+                    docspec.Argument(
+                        location=NULL_LOCATION,
+                        name="arg{}".format(i),
+                        type=docspec.Argument.Type.POSITIONAL_ONLY,
+                        datatype=datatype,
                         default_value="...",
                     )
                 )
-            return out_args
-        else:
-            # the type is a basic type
-            return [
-                docspec.Argument(
-                    NULL_LOCATION,
-                    "arg0",
-                    docspec.Argument.Type.POSITIONAL_ONLY,
-                    decorations=None,
-                    datatype=mel_to_python_type(positional_args),
-                    default_value="...",
-                )
-            ]
+
+        return return_args
 
     def get_synopsis(self, command_name: str) -> str:
         """Get the synopsis for the given command
