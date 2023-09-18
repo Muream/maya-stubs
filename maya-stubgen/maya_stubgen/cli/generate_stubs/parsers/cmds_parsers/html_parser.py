@@ -39,6 +39,10 @@ properties_re = re.compile(
     r"(?P<not_editable>NOT )?editable"
 )
 
+# if this is present in the argument description,
+# the argument does not become bool in query mode
+query_requires_value_str = "In query mode, this flag needs a value"
+
 
 class DocumentationNotFound(Exception):
     """Raised when the HTML Documentation is not found for the maya command."""
@@ -75,17 +79,20 @@ class CmdsDocsParser(Parser):
 
         docspec_args: list[docspec.Argument] = []
         docstring_parser_params = []
+        queryable_types = []
         docspec_return = None
-        docstring_parser_return = None
+        docstring_parser_return = []
         docstring_parser_example = None
 
         # We iterate over the H2 titles as they act as nice section delimitations.
-        if return_title := soup.find("h2", string="Return value"):
-            docspec_return, docstring_parser_return = get_return_type(return_title)
         if flag_title := soup.find("h2", string="Flags"):
             synopsis_title = soup.select_one("#synopsis")
-            docspec_args, docstring_parser_params = get_arguments(
+            docspec_args, docstring_parser_params, queryable_types = get_arguments(
                 flag_title, synopsis_title
+            )
+        if return_title := soup.find("h2", string="Return value"):
+            docspec_return, docstring_parser_return = get_return_type(
+                return_title, queryable_types
             )
         if examples_title := soup.find("h2", string="Python examples"):
             docstring_parser_example = get_examples(examples_title)
@@ -100,8 +107,7 @@ class CmdsDocsParser(Parser):
         docstring_parser_docstring = docstring_parser.Docstring()
         docstring_parser_docstring.long_description = description
 
-        if docstring_parser_return is not None:
-            docstring_parser_docstring.meta.append(docstring_parser_return)
+        docstring_parser_docstring.meta.extend(docstring_parser_return)
         docstring_parser_docstring.meta.extend(docstring_parser_params)
 
         if docstring_parser_example:
@@ -131,39 +137,68 @@ class CmdsDocsParser(Parser):
         raise NotImplementedError
 
 
-def get_return_type(title: bs4.Tag) -> tuple[str, docstring_parser.DocstringReturns]:
+def get_return_type(
+    title: bs4.Tag,
+    queryable_types: list[str],
+) -> tuple[str, list[docstring_parser.DocstringReturns]]:
+    return_types = []
+    return_descriptions = []
     next_tag: bs4.Tag = title.find_next_sibling()
     if next_tag.name == "table":
-        first_return_type_row = next_tag.find("tr")
-        return_type, return_description = [
-            t.text.strip() for t in first_return_type_row.find_all("td")
-        ]
+        for return_type_row in next_tag.find_all("tr"):
+            columns = [t.text.strip() for t in return_type_row.find_all("td")]
+            try:
+                return_type, return_description = columns
+            except ValueError:
+                # the first row of the return value table sometimes only has one column
+                # in the 2024 documentation; seems to indicate no return value?
+                # see e.g. instanceable
+                return_type = None
+                (return_description,) = columns
+            return_types.append(return_type)
+            return_descriptions.append(return_description)
     elif next_tag.name == "p":
-        return_type = next_tag.text
-        return_description = "\n".join(
-            [p.text for p in next_tag.find_next_siblings("p")]
+        return_types.append(next_tag.text)
+        return_descriptions.append(
+            "\n".join([p.text for p in next_tag.find_next_siblings("p")])
         )
     else:
         raise ValueError(f"Unspported Tag Type for return types {next_tag.name}")
 
-    return_type = mel_to_python_type(return_type)
+    python_types = [
+        mel_to_python_type(return_type) if return_type is not None else "None"
+        for return_type in return_types
+    ]
+    # add the types of the flags that can be queried in query mode
+    python_types.extend(queryable_types)
 
-    return (
-        return_type,
+    docstring_returns = [
         docstring_parser.DocstringReturns(
             ["returns"],
             description=return_description,
             type_name=return_type,
             is_generator=False,
             return_name=None,
-        ),
+        )
+        for return_type, return_description in zip(python_types, return_descriptions)
+    ]
+
+    # using dict.fromkeys to dedup types instead of set to ensure order is preserved,
+    # so order can't change between executions
+    unique_types = list(dict.fromkeys(python_types))
+    union_type = (
+        unique_types[0]
+        if len(unique_types) == 1
+        else "Union[{}]".format(", ".join(unique_types))
     )
+
+    return union_type, docstring_returns
 
 
 def get_arguments(
     title: bs4.Tag,
     synopsis: Optional[bs4.BeautifulSoup],
-) -> tuple[list[docspec.Argument], list[docstring_parser.DocstringParam]]:
+) -> tuple[list[docspec.Argument], list[docstring_parser.DocstringParam], list[str]]:
     """Get the docspec arguments.
 
     Returns:
@@ -173,6 +208,7 @@ def get_arguments(
     #: The docspec arguments we'll return, along with their descriptions.
     arguments: list[docspec.Argument] = []
     argument_docs: list[docstring_parser.DocstringParam] = []
+    queryable_types: list[str] = []
 
     if synopsis is not None and (props := synopsis.find_next_sibling("p")):
         if m := properties_re.search(props.text):
@@ -248,6 +284,11 @@ def get_arguments(
         # Support markdown's hard line breaks
         flag_description = flag_description.replace("\n", "  \n")
 
+        if "query" in properties and query_requires_value_str not in flag_description:
+            queryable_types.append(flag_type)
+            if flag_type != "bool":
+                flag_type = "Union[{}, bool]".format(flag_type)
+
         argument_docs.append(
             docstring_parser.DocstringParam(
                 args=["param"],
@@ -270,7 +311,7 @@ def get_arguments(
             )
         )
 
-    return arguments, argument_docs
+    return arguments, argument_docs, list(dict.fromkeys(queryable_types))
 
 
 def get_examples(title: bs4.Tag) -> docstring_parser.common.DocstringExample:
@@ -301,6 +342,7 @@ def get_documentation(command_name: str) -> str:
     cache_page = cache_page.resolve()
     if not cache_page.exists():
         command_url = cmds_documentation_url.format(command_name)
+        logger.debug("Downloading documentation: %s", command_url)
 
         response = requests_session.get(command_url)
 
