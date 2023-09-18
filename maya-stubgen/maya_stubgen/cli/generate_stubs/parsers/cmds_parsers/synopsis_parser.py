@@ -30,7 +30,7 @@ synopsis_header_regex = re.compile(
 synopsis_flag_regex = re.compile(
     r"-(?P<short_name>\w+)\s+"
     r"-(?P<long_name>\w+)"
-    r"(?P<types>[\w\|\s\[\]]+)?\s?"
+    r"(?P<types>[\w\|\s\[\].]+)?\s?"
     r"(?P<multi_use>\(multi-use\))?\s?"
     r"(\(Query Arg (?P<query_arg_mandatory>Mandatory|Optional)\))?"
 )
@@ -122,7 +122,7 @@ class CmdsSynopsisParser(Parser):
     def parse_variable(self, module_name: str, name: str) -> docspec.Variable:
         return super().parse_variable(module_name, name)
 
-    def parse_flag(self, match_flag: re.Match) -> docspec.Argument:
+    def parse_flag(self, match_flag: re.Match[str]) -> docspec.Argument:
         """Generate a docstring Argument from a flag string."""
 
         long_name = match_flag["long_name"]
@@ -133,24 +133,20 @@ class CmdsSynopsisParser(Parser):
         else:
             arg_name = long_name
 
-        # types can be either
-        # - One type. eg: Float
-        # - Multiple types. eg: Float String Int
-        # - Union of types?. eg: [Float on|off]  # TODO: Unsupported
-        # - None (when no type is specified).
-        types = str(match_flag["types"]).split()
-        types = [mel_to_python_type(t) for t in types]
-
-        if len(types) == 0:
+        types = match_flag["types"]
+        types = types.strip() if types else None
+        if not types:
+            # boolean flag if no type specified
             arg_type = "bool"
-        elif len(types) == 1:
-            arg_type = types[0]
+        elif " " in types:
+            # multiple space-separated types; parse as tuple
+            arg_type = mel_to_python_type(f"[{types}]")
         else:
-            arg_type = f"Tuple[{', '.join(types)}]"
+            # single argument type
+            arg_type = mel_to_python_type(types)
 
-        multi_use = match_flag["multi_use"]
-        if multi_use:
-            arg_type = f"List[{arg_type}]"
+        if match_flag["multi_use"]:
+            arg_type = f"Multiuse[{arg_type}]"
 
         return docspec.Argument(
             NULL_LOCATION,
