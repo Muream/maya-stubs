@@ -9,6 +9,15 @@ import {{ imp }}
 
 Unknown = Any
 
+{% if module.name == "maya.cmds.__init__" %}
+_T = TypeVar("_T")
+
+Queryable = Union[bool, _T]
+Multiuse = Union[_T, List[_T]]
+Range = Union[Tuple[_T], Tuple[_T, _T]]
+NullableRange = Range[Optional[_T]]
+{% endif %}
+
 {% for member in module.members %}
 {% if member.__class__.__name__ == "Variable" %}
 {{ render_variable(member, template_type="pyi") }}
