@@ -1,5 +1,5 @@
 from collections.abc import Iterator
-from typing import List, Optional, Union
+from typing import Optional, Union
 
 import docstring_parser
 from docspec import (
@@ -23,8 +23,10 @@ env = Environment(
     autoescape=select_autoescape(),
     trim_blocks=True,
 )
-env.globals["ArgumentType"] = Argument.Type
-env.globals["FunctionSemantic"] = FunctionSemantic
+env.globals.update(  # type: ignore[reportUnknownMemberType,unused-ignore]
+    ArgumentType=Argument.Type,  # type: ignore[reportGeneralTypeIssues,unused-ignore]
+    FunctionSemantic=FunctionSemantic,  # type: ignore[reportGeneralTypeIssues,unused-ignore]
+)
 
 
 def render(api_object: ApiObject, template_type: str) -> str:
@@ -46,7 +48,7 @@ def render(api_object: ApiObject, template_type: str) -> str:
     raise TypeError(f"Rendering {api_object.__class__.__name__} is not supported.")
 
 
-def get_imports(module: Module) -> List[str]:
+def get_imports(module: Module) -> list[str]:
     # remove type arguments
     types = (type_name.split("[", 1)[0] for type_name in _get_module_types(module))
     return sorted(
@@ -128,7 +130,7 @@ def render_function(
 ) -> str:
     template = env.get_template(f"{template_type}/function.j2")
 
-    args: List[Union[str, Argument]] = []
+    args: list[Union[str, Argument]] = []
 
     positional_only = _get_all_args(function, Argument.Type.POSITIONAL_ONLY)
     positional = _get_all_args(function, Argument.Type.POSITIONAL)

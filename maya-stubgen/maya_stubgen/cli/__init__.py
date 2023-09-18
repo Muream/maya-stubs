@@ -2,22 +2,24 @@ import cProfile
 import logging
 import pstats
 from pathlib import Path
-from typing import List, Optional
+from typing import Optional
 
 import click
 
 from .generate_stubs import build_docs, build_stubs, dump_docspec
 
-logger = logging.getLogger("maya_stubgen")
+from .. import _logging
+
+logger = _logging.getLogger("maya_stubgen")
 
 
 @click.group
-def cli():
+def cli() -> None:
     pass
 
 
 @cli.command
-def test_log():
+def test_log() -> None:
     logger.setLevel(logging.DEBUG)
 
     logger.debug("Debug")
@@ -33,7 +35,7 @@ def test_log():
 @click.option("-m", "--module", type=str, multiple=True)
 @click.option("--members", type=str, default=None)
 def generate_docspec(
-    profile: bool, module: Optional[List[str]], members: Optional[str]
+    profile: bool, module: Optional[list[str]], members: Optional[str]
 ) -> None:
     if profile:
         profiler = cProfile.Profile()
@@ -70,7 +72,7 @@ def generate_stubs(
     path: Path,
     profile: bool,
     reuse_cache: bool,
-    module: Optional[List[str]],
+    module: Optional[list[str]],
     members: Optional[str],
 ) -> None:
     logger.info("Generating Stubs")

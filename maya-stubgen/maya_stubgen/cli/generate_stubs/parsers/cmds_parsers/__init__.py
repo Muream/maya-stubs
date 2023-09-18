@@ -1,19 +1,19 @@
 from __future__ import annotations
 
 import inspect
-import logging
 import re
-from typing import Optional, List
+from typing import Optional
 
 import docspec
 from attrs import Factory, define
 from maya import cmds
 
-from ..common import NULL_LOCATION, Parser, degraded_function
+from ..... import _logging
+from ..common import NULL_LOCATION, Parser, degraded_function, DocspecModuleMembers
 from .html_parser import CmdsDocsParser, DocumentationNotFound
 from .synopsis_parser import CmdsSynopsisParser, SynopsisNotFound
 
-logger = logging.getLogger(__name__)
+logger = _logging.getLogger(__name__)
 
 __all__ = ["CmdsParser"]
 
@@ -32,7 +32,7 @@ class CmdsParser(Parser):
         logger.debug("Parsing module: %s", name)
 
         module_name = name
-        docspec_members = []
+        docspec_members: list[DocspecModuleMembers] = []
 
         commands = [
             command_name
@@ -45,9 +45,7 @@ class CmdsParser(Parser):
         ]
 
         results = self.map(lambda cmd: self.parse_function(module_name, cmd), commands)
-        for docspec_member in results:
-            if docspec_member is not None:
-                docspec_members.append(docspec_member)
+        docspec_members.extend(results)
 
         return docspec.Module(
             location=NULL_LOCATION,
@@ -101,11 +99,10 @@ class CmdsParser(Parser):
             ]
             docs_docspec_function.args = positional_args + docs_docspec_function.args
 
-        if docspec_function:
-            docspec_function = synopsis_docspec_function
-
         if docs_docspec_function:
             docspec_function = docs_docspec_function
+        elif synopsis_docspec_function:
+            docspec_function = synopsis_docspec_function
 
         return docspec_function
 

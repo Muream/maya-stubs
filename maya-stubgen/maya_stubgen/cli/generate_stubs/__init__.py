@@ -1,26 +1,24 @@
 from __future__ import annotations
 
-import concurrent.futures
 import importlib
 import itertools
 import logging
 import os
 from pathlib import Path
 import pkgutil
-from typing import Optional, List
+from typing import Optional
 
 import docspec
 import docspec_to_jinja
 
-from maya_stubgen.cli.generate_stubs.parsers.cmds_parsers import CmdsParser
-from maya_stubgen.cli.generate_stubs.parsers.common import Parser
+from .parsers.cmds_parsers import CmdsParser
+from .parsers.common import Parser
+from ... import _logging
 from ...utils import maya_standalone, timed
 
 from .parsers import BuiltinParser, CmdsParser
 
-# from .common import get_stub_path
-
-logger = logging.getLogger(__name__)
+logger = _logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
 
@@ -170,7 +168,7 @@ class MayaParser(Parser):
 
 @timed
 def dump_docspec(
-    whitelist: Optional[List[str]] = None, member_pattern: Optional[str] = None
+    whitelist: Optional[list[str]] = None, member_pattern: Optional[str] = None
 ) -> None:
     whitelist = whitelist or [
         # OpenMaya 1.0
@@ -218,9 +216,9 @@ def dump_docspec(
 def build_stubs(
     path: Path,
     reuse_cache: bool = False,
-    whitelist: Optional[List[str]] = None,
+    whitelist: Optional[list[str]] = None,
     member_pattern: Optional[str] = None,
-):
+) -> None:
     if not reuse_cache:
         dump_docspec(whitelist=whitelist, member_pattern=member_pattern)
 
@@ -266,7 +264,7 @@ def build_stubs(
                 pass
 
 
-def build_docs(path: Path, reuse_cache: bool = False):
+def build_docs(path: Path, reuse_cache: bool = False) -> None:
     logger.info("Building docs")
 
     if not reuse_cache:
@@ -306,8 +304,8 @@ def build_docs(path: Path, reuse_cache: bool = False):
 
         os.makedirs(module_doc_path.parent, exist_ok=True)
 
-        with module_doc_path.open("w", encoding="utf-8") as f:
-            f.write(rendered_module)
+        with module_doc_path.open("w", encoding="utf-8") as doc_f:
+            doc_f.write(rendered_module)
 
         for member in module.members:
             logger.debug("Building docs for: %s", member.name)
@@ -329,5 +327,5 @@ def build_docs(path: Path, reuse_cache: bool = False):
 
             os.makedirs(member_doc_path.parent, exist_ok=True)
 
-            with member_doc_path.open("w", encoding="utf-8") as f:
-                f.write(rendered_member)
+            with member_doc_path.open("w", encoding="utf-8") as member_doc_f:
+                member_doc_f.write(rendered_member)

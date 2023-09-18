@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import keyword
-import logging
 import re
 from pathlib import Path
 
@@ -9,10 +8,11 @@ import docspec
 from attrs import define
 from maya import cmds
 
+from ..... import _logging
 from ..common import NULL_LOCATION, Parser
 from .common import mel_to_python_type
 
-logger = logging.getLogger(__name__)
+logger = _logging.getLogger(__name__)
 
 __all__ = [
     "SynopsisNotFound",
@@ -49,13 +49,13 @@ class SynopsisNotFound(Exception):
 @define
 class CmdsSynopsisParser(Parser):
     def parse_package(self, name: str) -> list[docspec.Module]:
-        return super().parse_package(name)
+        raise NotImplementedError
 
     def parse_module(self, name: str) -> docspec.Module:
-        return super().parse_module(name)
+        raise NotImplementedError
 
     def parse_class(self, module_name: str, name: str) -> docspec.Class:
-        return super().parse_class(module_name, name)
+        raise NotImplementedError
 
     def parse_function(self, module_name: str, name: str) -> docspec.Function:
         """Return a docspec Function parsed from command's synopsis
@@ -77,6 +77,7 @@ class CmdsSynopsisParser(Parser):
             # Explicitly re-raise the error
             raise exc from exc
 
+        arguments: list[docspec.Argument] = []
         if "Quick help is not available" in synopsis:
             arguments = [
                 docspec.Argument(
@@ -97,8 +98,6 @@ class CmdsSynopsisParser(Parser):
                 ),
             ]
         else:
-            arguments: list[docspec.Argument] = []
-
             for line in synopsis.splitlines():
                 line = line.strip()
 
@@ -126,7 +125,7 @@ class CmdsSynopsisParser(Parser):
         )
 
     def parse_variable(self, module_name: str, name: str) -> docspec.Variable:
-        return super().parse_variable(module_name, name)
+        raise NotImplementedError
 
     def parse_flag(self, match_flag: re.Match[str]) -> docspec.Argument:
         """Generate a docstring Argument from a flag string."""
@@ -169,7 +168,7 @@ class CmdsSynopsisParser(Parser):
             return []
 
         positional_args = positional_args.strip()
-        return_args = []
+        return_args: list[docspec.Argument] = []
 
         # arg list can look like:
         # String -> arg0: str

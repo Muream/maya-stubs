@@ -6,11 +6,14 @@ def process_google_docstring(
 ) -> docstring_parser.Docstring:
     # docstring_parser doesn't parse the examples properly, let's make our own.
     for example in docstring.examples:
+        if not example.description:
+            continue
+
         # First let's remove poorly parsed example from the docstring object
         docstring.meta.remove(example)
 
         example_sections = example.description.split("\n\n")
-        description = []
+        description: list[str] = []
         for example_section in example_sections:
             if example_section.startswith(">>>"):
                 docstring.meta.append(

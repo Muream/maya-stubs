@@ -8,8 +8,8 @@ import {{ imp }}
 {% endfor %}
 
 Unknown = Any
-
 {% if module.name == "maya.cmds.__init__" %}
+
 _T = TypeVar("_T")
 
 Queryable = Union[bool, _T]

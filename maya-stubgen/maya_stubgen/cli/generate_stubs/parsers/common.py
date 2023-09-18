@@ -3,17 +3,34 @@ from __future__ import annotations
 import concurrent.futures
 from collections.abc import Iterable, Iterator, Callable
 from abc import ABC, abstractmethod
-from typing import Any, Optional, TypeVar
+from typing import Any, Optional, TypeVar, Union
 
 import docspec
 from attrs import define, field
 
 __all__ = [
     "NULL_LOCATION",
+    "Parser",
+    "degraded_function",
+    "DocspecModuleMembers",
+    "DocspecClassMembers",
 ]
 
 
 NULL_LOCATION = docspec.Location("", 0)
+DocspecModuleMembers = Union[
+    docspec.Variable,
+    docspec.Function,
+    docspec.Class,
+    docspec.Module,
+    docspec.Indirection,
+]
+DocspecClassMembers = Union[
+    docspec.Variable,
+    docspec.Function,
+    docspec.Class,
+    docspec.Indirection,
+]
 
 T = TypeVar("T")
 V = TypeVar("V")

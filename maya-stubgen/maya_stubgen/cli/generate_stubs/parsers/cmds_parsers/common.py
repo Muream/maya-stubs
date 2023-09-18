@@ -1,7 +1,8 @@
-import logging
 import re
 
-logger = logging.getLogger(__name__)
+from ..... import _logging
+
+logger = _logging.getLogger(__name__)
 
 __all__ = [
     "mel_to_python_type",
@@ -75,7 +76,7 @@ def _parse_tuple(tuple_string: str) -> str:
     for token in tokens:
         if token == "[":
             # elements within brackets are optional; add as a new element group
-            optional_elements = []
+            optional_elements: list[str] = []
             # scan elements until end of group
             for subtoken in tokens:
                 if subtoken == "[":
@@ -96,8 +97,8 @@ def _parse_tuple(tuple_string: str) -> str:
             # and are placed in the first element group
             element_groups[0].append(token)
 
-    union_parts = []
-    seen_elements = []
+    union_parts: list[str] = []
+    seen_elements: list[str] = []
     for element_group in element_groups:
         seen_elements.extend(_parse_complex_type(element) for element in element_group)
         union_parts.append("Tuple[{}]".format(", ".join(seen_elements) or "()"))

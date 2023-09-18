@@ -1,24 +1,25 @@
 """A Docspec parser for maya.cmds"""
 from __future__ import annotations
 
-import logging
 import re
 import textwrap
 from pathlib import Path
-from typing import Optional
+from typing import Optional, Union
 
 import bs4
 import docspec
 import docstring_parser
 import requests
 
+from ..... import _logging
 from ..common import NULL_LOCATION, Parser
 from .common import mel_to_python_type
 
-logger = logging.getLogger(__name__)
+logger = _logging.getLogger(__name__)
 
 __all__ = [
     "DocumentationNotFound",
+    "CmdsDocsParser",
 ]
 
 #: The base URL for all maya commands doc pages
@@ -78,27 +79,33 @@ class CmdsDocsParser(Parser):
         soup = bs4.BeautifulSoup(documentation, "html.parser")
 
         docspec_args: list[docspec.Argument] = []
-        docstring_parser_params = []
-        queryable_types = []
+        docstring_parser_params: list[docstring_parser.DocstringParam] = []
+        queryable_types: list[str] = []
         docspec_return = None
-        docstring_parser_return = []
+        docstring_parser_return: list[docstring_parser.DocstringReturns] = []
         docstring_parser_example = None
 
         # We iterate over the H2 titles as they act as nice section delimitations.
-        if flag_title := soup.find("h2", string="Flags"):
+        if isinstance(flag_title := soup.find("h2", string="Flags"), bs4.Tag):
             synopsis_title = soup.select_one("#synopsis")
             docspec_args, docstring_parser_params, queryable_types = get_arguments(
                 flag_title, synopsis_title
             )
-        if return_title := soup.find("h2", string="Return value"):
+        if isinstance(return_title := soup.find("h2", string="Return value"), bs4.Tag):
             docspec_return, docstring_parser_return = get_return_type(
                 return_title, queryable_types
             )
-        if examples_title := soup.find("h2", string="Python examples"):
+        if isinstance(
+            examples_title := soup.find("h2", string="Python examples"), bs4.Tag
+        ):
             docstring_parser_example = get_examples(examples_title)
 
         # The docstring is the only piece of text in the body that has no tag.
-        body_text = [t.strip() for t in soup.body.findAll(text=True, recursive=False)]
+        body_text = []
+        if body := soup.body:
+            body_text = [
+                t.text.strip() for t in body.find_all(string=True, recursive=False)
+            ]
 
         # filter the "," and "", that we get with the previous line.
         body_text = [t for t in body_text if len(t) > 1]
@@ -141,11 +148,14 @@ def get_return_type(
     title: bs4.Tag,
     queryable_types: list[str],
 ) -> tuple[str, list[docstring_parser.DocstringReturns]]:
-    return_types = []
-    return_descriptions = []
-    next_tag: bs4.Tag = title.find_next_sibling()
-    if next_tag.name == "table":
+    return_types: list[Union[str, None]] = []
+    return_descriptions: list[str] = []
+    next_tag = title.find_next_sibling()
+    if isinstance(next_tag, bs4.Tag) and next_tag.name == "table":
         for return_type_row in next_tag.find_all("tr"):
+            if not isinstance(return_type_row, bs4.Tag):
+                continue
+
             columns = [t.text.strip() for t in return_type_row.find_all("td")]
             try:
                 return_type, return_description = columns
@@ -157,13 +167,15 @@ def get_return_type(
                 (return_description,) = columns
             return_types.append(return_type)
             return_descriptions.append(return_description)
-    elif next_tag.name == "p":
+    elif next_tag and next_tag.name == "p":
         return_types.append(next_tag.text)
         return_descriptions.append(
             "\n".join([p.text for p in next_tag.find_next_siblings("p")])
         )
     else:
-        raise ValueError(f"Unspported Tag Type for return types {next_tag.name}")
+        raise ValueError(
+            f"Unspported Tag Type for return types {next_tag.name if next_tag else 'Not Found'}"
+        )
 
     python_types = [
         mel_to_python_type(return_type) if return_type is not None else "None"
@@ -197,7 +209,7 @@ def get_return_type(
 
 def get_arguments(
     title: bs4.Tag,
-    synopsis: Optional[bs4.BeautifulSoup],
+    synopsis: Optional[bs4.Tag],
 ) -> tuple[list[docspec.Argument], list[docstring_parser.DocstringParam], list[str]]:
     """Get the docspec arguments.
 
@@ -234,20 +246,23 @@ def get_arguments(
                     )
                 )
 
+    flag_links: list[Union[bs4.Tag, bs4.NavigableString]] = []
     #: The <table> containing all the information for the flags.
-    table = title.find_next("table")
-
-    # each link in the table corresponds to a flag name
-    # this is the easiest way to get all the rows that define each argument
-    flag_links = table.find_all("a")
+    if isinstance(table := title.find_next("table"), bs4.Tag):
+        # each link in the table corresponds to a flag name
+        # this is the easiest way to get all the rows that define each argument
+        flag_links = table.find_all("a")
 
     for link in flag_links:
         # We can now easily get the parent row of the link to get access
-        flag_data_row: bs4.Tag = link.find_parent("tr")
+        flag_data_row = link.find_parent("tr")
+        if not flag_data_row:
+            continue
+
         long_name = None
-        flag_type = None
+        flag_type = "Unknown"
         properties = []
-        for i, child in enumerate(flag_data_row.findChildren("td")):
+        for i, child in enumerate(flag_data_row.find_all("td", recursive=False)):
             if i == 0:
                 # First column is the flag name
                 name = child.text.strip()
@@ -260,8 +275,16 @@ def get_arguments(
             elif i == 2:
                 properties = [img["alt"] for img in child.find_all("img")]
 
-        flag_description_row = flag_data_row.find_next_sibling("tr")
-        flag_description = flag_description_row.text.strip()
+        if not long_name:
+            logger.warning(
+                "Could not extract flag name from table row: %s", flag_data_row
+            )
+            continue
+
+        flag_description = ""
+        if flag_description_row := flag_data_row.find_next_sibling("tr"):
+            flag_description = flag_description_row.text.strip()
+
         flag_description = flag_description.replace("\\n\\0", "")
 
         # Standardize numbered lists
@@ -318,7 +341,9 @@ def get_arguments(
 
 
 def get_examples(title: bs4.Tag) -> docstring_parser.common.DocstringExample:
-    snippet = title.find_next("pre").text
+    snippet = ""
+    if pre := title.find_next("pre"):
+        snippet = pre.text
     snippet = snippet.replace("import maya.cmds as cmds", "from maya import cmds")
 
     return docstring_parser.common.DocstringExample(

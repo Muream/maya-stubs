@@ -6,17 +6,18 @@ from __future__ import annotations
 
 import importlib
 import inspect
-import logging
 import re
+from collections.abc import Callable
 from pkgutil import resolve_name
-from typing import Any, Callable, List, Optional, Type
+from typing import Any, Optional
 
 import docspec
 from attrs import define
 
-from .common import NULL_LOCATION, Parser
+from .... import _logging
+from .common import NULL_LOCATION, Parser, DocspecModuleMembers, DocspecClassMembers
 
-logger = logging.getLogger(__name__)
+logger = _logging.getLogger(__name__)
 
 
 @define
@@ -33,10 +34,10 @@ class BuiltinParser(Parser):
 
         module = importlib.import_module(name)
 
-        docspec_members: list[docspec.Class | docspec.Function | docspec.Variable] = []
-        docstring = inspect.getdoc(module)
-        if docstring is not None:
-            docstring = docspec.Docstring(NULL_LOCATION, docstring)
+        docspec_members: list[DocspecModuleMembers] = []
+        docspec_docstring = None
+        if docstring := inspect.getdoc(module):
+            docspec_docstring = docspec.Docstring(NULL_LOCATION, docstring)
 
         if self.executor:
             pass
@@ -60,7 +61,7 @@ class BuiltinParser(Parser):
                 if docspec_member is not None:
                     docspec_members.append(docspec_member)
 
-        return docspec.Module(NULL_LOCATION, name, docstring, docspec_members)
+        return docspec.Module(NULL_LOCATION, name, docspec_docstring, docspec_members)
 
     # these crash maya 2024 when attempting to instantiate them
     _SKIP_INSTANTIATE = [
@@ -84,7 +85,7 @@ class BuiltinParser(Parser):
         parser = BuiltinParser()
 
         docstring = docspec.Docstring(NULL_LOCATION, inspect.getdoc(cls) or "")
-        members = []
+        members: list[DocspecClassMembers] = []
 
         parent_members = {
             id(inspect.getattr_static(parent, name))
@@ -147,7 +148,7 @@ class BuiltinParser(Parser):
     ) -> docspec.Function:
         logger.debug("Parsing function: %s", name)
         member = self._members[name]
-        function: Callable = inspect.unwrap(member)
+        function: Callable[..., Any] = inspect.unwrap(member)
 
         docstring_content = inspect.getdoc(function)
         docstring = (
@@ -156,7 +157,7 @@ class BuiltinParser(Parser):
             else None
         )
 
-        semantic_hints = []
+        semantic_hints: list[docspec.FunctionSemantic] = []
         if is_method:
             if isinstance(member, classmethod):
                 semantic_hints.append(docspec.FunctionSemantic.CLASS_METHOD)
@@ -233,12 +234,11 @@ class BuiltinParser(Parser):
     @staticmethod
     def _is_simple_literal(value: Any, allow_none: bool = False) -> bool:
         simple_types = (str, bytes, int, float, complex)
-        collection_types = (list, dict)
-        simple_values = ([], {})
+        simple_values: tuple[Any, ...] = ([], {})
         return (
             (value is None and allow_none)
             or isinstance(value, simple_types)
-            or (isinstance(value, collection_types) and value in simple_values)
+            or (isinstance(value, (list, dict)) and value in simple_values)
         )
 
     _TYPE_OVERRIDES = {
@@ -250,7 +250,7 @@ class BuiltinParser(Parser):
     }
 
     @staticmethod
-    def _maybe_qualified(module_name: str, cls: Type[Any]) -> str:
+    def _maybe_qualified(module_name: str, cls: type[Any]) -> str:
         """
         Returns the fully qualified name of a class.
         """
@@ -279,26 +279,20 @@ class BuiltinParser(Parser):
         module_name: str,
         member_name: str,
         py_member: Any,
-    ) -> Optional[
-        docspec.Class
-        | docspec.Function
-        | docspec.Indirection
-        | docspec.Module
-        | docspec.Variable
-    ]:
+    ) -> Optional[DocspecModuleMembers]:
         self._members[member_name] = py_member
-        docspec_member = None
+        docspec_member: Optional[DocspecModuleMembers] = None
 
         if member_name.startswith("_"):
-            return
+            return None
         elif inspect.ismodule(py_member):
             # Ignore modules
-            return
+            return None
         elif (mod := inspect.getmodule(py_member)) and not mod.__name__.startswith(
             "maya."
         ):
             # filter imported builtins
-            return
+            return None
         elif inspect.isclass(py_member):
             # we will add classes in a 2nd pass
             docspec_member = self.parse_class(module_name, member_name)
@@ -313,13 +307,12 @@ class BuiltinParser(Parser):
         self,
         module_name: str,
         function: Callable[[Any], Any],
-        hints: Optional[List[docspec.FunctionSemantic]] = None,
-    ) -> List[docspec.Argument]:
+        hints: Optional[list[docspec.FunctionSemantic]] = None,
+    ) -> list[docspec.Argument]:
+        args: list[docspec.Argument] = []
         try:
             args = self._arguments_from_signature(module_name, function)
         except RuntimeError:
-            args = []
-
             if hints:
                 if docspec.FunctionSemantic.CLASS_METHOD in hints:
                     args.append(
@@ -354,7 +347,7 @@ class BuiltinParser(Parser):
             )
         return args
 
-    def get_return_type(self, function: Callable) -> str:
+    def get_return_type(self, function: Callable[..., Any]) -> str:
         try:
             signature = inspect.signature(function)
         except (ValueError, TypeError):
@@ -366,13 +359,15 @@ class BuiltinParser(Parser):
         if signature.return_annotation is inspect.Signature.empty:
             return "Any"
 
-        return signature.return_annotation
+        # this is already str when from __future__ import annotations is enabled,
+        # but include str call to make type checker happy
+        return str(signature.return_annotation)
 
     def _arguments_from_signature(
         self,
         module_name: str,
         function: Callable[[Any], Any],
-    ) -> List[docspec.Argument]:
+    ) -> list[docspec.Argument]:
         """Returns the docspec.Arguments from the function signature.
 
         Args:
@@ -391,7 +386,7 @@ class BuiltinParser(Parser):
                 f"Failed to get the signature from {function!r}"
             ) from exc
 
-        args = []
+        args: list[docspec.Argument] = []
         for param in signature.parameters.values():
             args.append(self._param_to_argument(module_name, param))
 
@@ -412,7 +407,7 @@ class BuiltinParser(Parser):
 
         arg_name = param.name
         arg_type = docspec.Argument.Type(param.kind)
-        arg_decorations = []
+        arg_decorations: list[docspec.Decoration] = []
 
         arg_datatype = None
         if param.annotation is not inspect.Signature.empty:
