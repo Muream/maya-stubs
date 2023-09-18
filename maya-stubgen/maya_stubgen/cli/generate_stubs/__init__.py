@@ -14,7 +14,7 @@ import docspec_to_jinja
 from .parsers.cmds_parsers import CmdsParser
 from .parsers.common import Parser
 from ... import _logging
-from ...utils import maya_standalone, timed
+from ...utils import maya_standalone, timed, cache_dir
 
 from .parsers import BuiltinParser, CmdsParser
 
@@ -201,10 +201,7 @@ def dump_docspec(
 
     for module in modules:
         docspec_cache = (
-            Path().resolve()
-            / ".cache"
-            / "docspec"
-            / (module.name.replace(".", "/") + ".json")
+            cache_dir() / "docspec" / (module.name.replace(".", "/") + ".json")
         )
 
         os.makedirs(docspec_cache.parent, exist_ok=True)
@@ -234,7 +231,7 @@ def build_stubs(
             )
         ]
 
-    docspec_cache = Path().resolve() / ".cache" / "docspec"
+    docspec_cache = cache_dir() / "docspec"
     for f in docspec_cache.glob("**/*.json"):
         if whitelist_patterns and not any(
             f.match(pattern) for pattern in whitelist_patterns
@@ -292,7 +289,7 @@ def build_docs(path: Path, reuse_cache: bool = False) -> None:
         "maya.utils": "maya/other/utils",
         "maya.standalone": "maya/other/standalone",
     }
-    docspec_cache = Path().resolve() / ".cache" / "docspec"
+    docspec_cache = cache_dir() / "docspec"
 
     for f in docspec_cache.glob("**/*.json"):
         module = docspec.load_module(str(f))

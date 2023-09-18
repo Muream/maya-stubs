@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import keyword
 import re
-from pathlib import Path
 
 import docspec
 from attrs import define
@@ -11,6 +10,7 @@ from maya import cmds
 from ..... import _logging
 from ..common import NULL_LOCATION, Parser
 from .common import mel_to_python_type
+from .....utils import cache_dir
 
 logger = _logging.getLogger(__name__)
 
@@ -79,6 +79,9 @@ class CmdsSynopsisParser(Parser):
 
         arguments: list[docspec.Argument] = []
         if "Quick help is not available" in synopsis:
+            logger.warning(
+                "Synopsis not available, using default arguments for function"
+            )
             arguments = [
                 docspec.Argument(
                     NULL_LOCATION,
@@ -220,8 +223,7 @@ class CmdsSynopsisParser(Parser):
         Returns:
             The synopsis for the command.
         """
-        cache_page = Path() / ".cache" / "synopsis" / f"{command_name}.txt"
-        cache_page = cache_page.resolve()
+        cache_page = cache_dir() / "synopsis" / f"{command_name}.txt"
 
         synopsis: str
         if not cache_page.exists():

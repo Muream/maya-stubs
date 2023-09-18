@@ -3,7 +3,6 @@ from __future__ import annotations
 
 import re
 import textwrap
-from pathlib import Path
 from typing import Optional, Union
 
 import bs4
@@ -14,6 +13,7 @@ import requests
 from ..... import _logging
 from ..common import NULL_LOCATION, Parser
 from .common import mel_to_python_type
+from .....utils import maya_version, cache_dir
 
 logger = _logging.getLogger(__name__)
 
@@ -22,10 +22,17 @@ __all__ = [
     "CmdsDocsParser",
 ]
 
-#: The base URL for all maya commands doc pages
-cmds_documentation_url = (
-    "https://help.autodesk.com/cloudhelp/2023/ENU/Maya-Tech-Docs/CommandsPython/{}.html"
+
+# The base URL for all maya commands doc pages
+_BASE_COMMAND_URL = (
+    "https://help.autodesk.com/cloudhelp/{maya_version}/"
+    "ENU/Maya-Tech-Docs/CommandsPython/{command}.html"
 )
+
+
+def cmds_documentation_url(command: str) -> str:
+    return _BASE_COMMAND_URL.format(maya_version=maya_version(), command=command)
+
 
 #: Reusable request session to improve performance when
 #: getting pages from the same domain
@@ -366,10 +373,9 @@ def get_documentation(command_name: str) -> str:
         The content of the HTML documentation page.
     """
 
-    cache_page = Path() / ".cache" / "docs" / "maya" / "cmds" / f"{command_name}.html"
-    cache_page = cache_page.resolve()
+    cache_page = cache_dir() / "docs" / "maya" / "cmds" / f"{command_name}.html"
     if not cache_page.exists():
-        command_url = cmds_documentation_url.format(command_name)
+        command_url = cmds_documentation_url(command_name)
         logger.debug("Downloading documentation: %s", command_url)
 
         response = requests_session.get(command_url)

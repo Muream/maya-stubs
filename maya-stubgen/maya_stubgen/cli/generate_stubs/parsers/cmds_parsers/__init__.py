@@ -77,13 +77,13 @@ class CmdsParser(Parser):
                 module_name, name
             )
         except SynopsisNotFound:
-            logger.debug("Couldn't find synopsis for %s.", name)
+            logger.warning("Couldn't find synopsis for %s.", name)
             synopsis_docspec_function = None
 
         try:
             docs_docspec_function = self.docs_parser.parse_function(module_name, name)
         except DocumentationNotFound:
-            logger.debug("Couldn't find documentation for %s", name)
+            logger.warning("Couldn't find documentation for %s", name)
             docs_docspec_function = None
 
         # The docs parser doesn't parse positional arguments but the synopsis parser does

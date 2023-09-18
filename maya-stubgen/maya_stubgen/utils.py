@@ -1,11 +1,12 @@
 import logging
+import pathlib
 import shutil
 import sys
 import time
 from collections.abc import Iterator, Callable
 from contextlib import contextmanager
 from pathlib import Path
-from typing import TypeVar
+from typing import TypeVar, Optional
 
 from typing_extensions import ParamSpec
 
@@ -21,6 +22,15 @@ except ModuleNotFoundError:
     _has_maya = False
 else:
     _has_maya = True
+
+__all__ = [
+    "initialize_maya",
+    "uninitialize_maya",
+    "maya_standalone",
+    "timed",
+    "maya_version",
+    "cache_dir",
+]
 
 # List of plugins that contain commands that should have generated stubs
 PLUGINS = ["invertShape.mll", "poseInterpolator.mll"]
@@ -80,6 +90,23 @@ def maya_standalone() -> Iterator[None]:
     initialize_maya()
     yield
     uninitialize_maya()
+
+
+_maya_version: Optional[str] = None
+
+
+def maya_version() -> str:
+    global _maya_version
+    import maya.cmds
+
+    if _maya_version is None:
+        _maya_version = maya.cmds.about(majorVersion=True)
+
+    return _maya_version
+
+
+def cache_dir() -> pathlib.Path:
+    return Path().resolve() / ".cache" / maya_version()
 
 
 P = ParamSpec("P")
