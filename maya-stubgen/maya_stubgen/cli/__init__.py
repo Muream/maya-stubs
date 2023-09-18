@@ -32,8 +32,20 @@ def test_log() -> None:
 
 @cli.command()
 @click.option("-p", "--profile", is_flag=True)
-@click.option("-m", "--module", type=str, multiple=True)
-@click.option("--members", type=str, default=None)
+@click.option(
+    "-m",
+    "--module",
+    type=str,
+    multiple=True,
+    help="Modules to generate docspec files for. Can be specified multiple times. "
+    "By default, docspec files are generated for all modules.",
+)
+@click.option(
+    "--members",
+    type=str,
+    default=None,
+    help="If specified, docspec files will only be generated for members matching this regex.",
+)
 def generate_docspec(
     profile: bool, module: Optional[list[str]], members: Optional[str]
 ) -> None:
@@ -66,8 +78,20 @@ def generate_docspec(
 )
 @click.option("-p", "--profile", is_flag=True)
 @click.option("-rc", "--reuse-cache", is_flag=True)
-@click.option("-m", "--module", type=str, multiple=True)
-@click.option("--members", type=str, default=None)
+@click.option(
+    "-m",
+    "--module",
+    type=str,
+    multiple=True,
+    help="Modules to generate stubs for. Can be specified multiple times. "
+    "By default, stubs are generated for all modules.",
+)
+@click.option(
+    "--members",
+    type=str,
+    default=None,
+    help="If specified, stubs will only be generated for members matching this regex.",
+)
 def generate_stubs(
     path: Path,
     profile: bool,

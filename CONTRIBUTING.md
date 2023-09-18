@@ -33,21 +33,26 @@ The Project contains a few different sub-projects:
 - `maya-docs` kinda deprecated, this is a project that contains generated documentation from the maya-stubgen docspec
 - `maya-stubs` is where the stubs are stored.
     All of the content of this project is meant to be automatically generated.
-    This project is compatible with python >2.7 and >3.7 so it can be installed in projects using any of these python versions.
-    This is the project that actually gets pushed to pypi
+    This project is compatible with python >3.7 so it can be installed in projects using any of these python versions.
+    This is the project that actually gets pushed to pypi.
 
 ## Generating the stubs
 
 ### Prerequisites
 
 - [Poetry](https://python-poetry.org/)
-- Python 3.9.7 (I recommend [pyenv](https://github.com/pyenv/pyenv) - or [pyenv-win](https://github.com/pyenv-win/pyenv-win) on Windows - to easily install multiple python versions)
-- Maya 2023
+- Maya 2023 or 2024
 
 ### Generate the stubs
 
+- Run `poetry env use $MAYA_LOCATION/bin/mayapy` (replace `$MAYA_LOCATION` with the path to your Maya installation).
+    - On Windows, use `mayapy.exe` rather than `mayapy`.
 - Run `poetry install`.
-  Note: This will create a `.venv` virtualenv inside of the repository with all the development dependencies.
-- activate the virtualenv `./.venv/scripts/activate`
-- Generate the stubs with `./mayapy.bat -m maya_stubgen generate-stubs`.
-  After the first run, you can re-use the docspec cache with `./mayapy.bat -m maya_stubgen generate-stubs --reuse-cache`
+    - If you want to generate stubs for another Maya version, simply select the correct `mayapy` using `poetry env use` again, and rerun `poetry install`.
+- Generate the stubs with `poetry run generate-stubs generate-stubs`.
+    - After the first run, you can re-use the docspec cache with `poetry run generate-stubs generate-stubs --reuse-cache`.
+    - You can generate stubs for specific modules or members by specifying the `-m/--module` and/or `--members` options:
+      ```
+      poetry run generate-stubs generate-stubs -m maya.cmds --members "(currentTime|playblast)$"
+      ```
+      This will only create stubs for the `currentTime` and `playblast` Python commands; useful for quickly testing changes.
