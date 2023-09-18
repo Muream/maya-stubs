@@ -2,20 +2,21 @@ from __future__ import annotations
 
 from typing import *
 
+
 Unknown = Any
 
-class MDGContextGuard(object):
+class MDGContextGuard:
     """Scoping object to manage changes to the current evaluation context"""
-    def _MDGContextGuard__save_state(self, new_current_context) -> Any:
+    def _MDGContextGuard__save_state(self, new_current_context: Unknown) -> Any:
         """Save the state of the current evaluation context"""
 
     def __enter__(self) -> Any:
         """Begin the scope, the work is done in __init__"""
 
-    def __exit__(self, object_type, value, traceback) -> Any:
+    def __exit__(self, object_type: Unknown, value: Unknown, traceback: Unknown) -> Any:
         """Ensure the state is restored if this object goes out of scope"""
 
-    def __init__(self, context) -> Any:
+    def __init__(self, context: Unknown) -> None:
         """Initialize the object with a specific context"""
 
     def context(self) -> Any:
@@ -27,11 +28,4 @@ class MDGContextGuard(object):
     def restore(self) -> Any:
         """Restore the context on entry/construction to be the current evaluation context"""
 
-
-class object:
-    """The base class of the class hierarchy.
-
-    When called, it accepts no arguments and returns a new featureless
-    instance that has no instance attributes and cannot be given any.
-    """
 
