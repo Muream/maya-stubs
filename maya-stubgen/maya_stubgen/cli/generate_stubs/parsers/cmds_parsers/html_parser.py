@@ -41,7 +41,7 @@ properties_re = re.compile(
 
 # if this is present in the argument description,
 # the argument does not become bool in query mode
-query_requires_value_str = "In query mode, this flag needs a value"
+query_mandatory_value_str = "In query mode, this flag needs a value"
 
 
 class DocumentationNotFound(Exception):
@@ -284,10 +284,13 @@ def get_arguments(
         # Support markdown's hard line breaks
         flag_description = flag_description.replace("\n", "  \n")
 
-        if "query" in properties and query_requires_value_str not in flag_description:
+        if "multiuse" in properties:
+            flag_type = "Multiuse[{}]".format(flag_type)
+
+        if "query" in properties and query_mandatory_value_str not in flag_description:
             queryable_types.append(flag_type)
             if flag_type != "bool":
-                flag_type = "Union[{}, bool]".format(flag_type)
+                flag_type = "Queryable[{}]".format(flag_type)
 
         argument_docs.append(
             docstring_parser.DocstringParam(
