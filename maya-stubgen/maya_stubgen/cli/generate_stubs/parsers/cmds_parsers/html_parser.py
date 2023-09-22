@@ -63,7 +63,12 @@ class CmdsDocsParser(Parser):
     def parse_module(self, name: str) -> docspec.Module:
         raise NotImplementedError
 
-    def parse_function(self, module_name: str, name: str) -> docspec.Function:
+    def parse_function(
+        self,
+        module_name: str,
+        name: str,
+        synopsis_function: Optional[docspec.Function] = None,
+    ) -> docspec.Function:
         """Returns a `Function` object from the command's HTML documentation
 
         Args:
@@ -96,7 +101,7 @@ class CmdsDocsParser(Parser):
         if isinstance(flag_title := soup.find("h2", string="Flags"), bs4.Tag):
             synopsis_title = soup.select_one("#synopsis")
             docspec_args, docstring_parser_params, queryable_types = get_arguments(
-                flag_title, synopsis_title
+                flag_title, synopsis_title, synopsis_function
             )
         if isinstance(return_title := soup.find("h2", string="Return value"), bs4.Tag):
             docspec_return, docstring_parser_return = get_return_type(
@@ -214,9 +219,27 @@ def get_return_type(
     return union_type, docstring_returns
 
 
+def copy_or_create_arg(
+    source_func: Optional[docspec.Function], name: str, datatype: str
+) -> docspec.Argument:
+    if source_func is not None and source_func.args:
+        for arg in source_func.args:
+            if arg.name == name:
+                return arg
+
+    return docspec.Argument(
+        location=NULL_LOCATION,
+        name=name,
+        type=docspec.Argument.Type.KEYWORD_ONLY,
+        datatype=datatype,
+        default_value="...",
+    )
+
+
 def get_arguments(
     title: bs4.Tag,
     synopsis: Optional[bs4.Tag],
+    synopsis_function: Optional[docspec.Function] = None,
 ) -> tuple[list[docspec.Argument], list[docstring_parser.DocstringParam], list[str]]:
     """Get the docspec arguments.
 
@@ -233,23 +256,19 @@ def get_arguments(
         if m := properties_re.search(props.text):
             if not m["not_editable"]:
                 arguments.append(
-                    docspec.Argument(
-                        location=NULL_LOCATION,
+                    copy_or_create_arg(
+                        synopsis_function,
                         name="edit",
-                        type=docspec.Argument.Type.KEYWORD_ONLY,
                         datatype="bool",
-                        default_value="...",
                     )
                 )
 
             if not m["not_queryable"]:
                 arguments.append(
-                    docspec.Argument(
-                        location=NULL_LOCATION,
+                    copy_or_create_arg(
+                        synopsis_function,
                         name="query",
-                        type=docspec.Argument.Type.KEYWORD_ONLY,
                         datatype="bool",
-                        default_value="...",
                     )
                 )
 

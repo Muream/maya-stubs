@@ -81,7 +81,9 @@ class CmdsParser(Parser):
             synopsis_docspec_function = None
 
         try:
-            docs_docspec_function = self.docs_parser.parse_function(module_name, name)
+            docs_docspec_function = self.docs_parser.parse_function(
+                module_name, name, synopsis_function=synopsis_docspec_function
+            )
         except DocumentationNotFound:
             logger.warning("Couldn't find documentation for %s", name)
             docs_docspec_function = None
