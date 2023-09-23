@@ -8,7 +8,7 @@ def ensure_maya() -> None:
     site.addsitedir(str(maya_stdlib / "site-packages"))
 
     try:
-        import maya  # type: ignore[reportUnusedImport,unused-ignore]
+        import maya  # pyright: ignore[reportUnusedImport]
     except ModuleNotFoundError as e:
         raise RuntimeError(
             "could not import maya module; ensure you're using mayapy as "

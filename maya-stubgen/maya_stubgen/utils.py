@@ -17,7 +17,7 @@ from . import _logging
 logger = _logging.getLogger(__name__)
 
 try:
-    import maya  # type: ignore[reportUnusedImport,unused-ignore]
+    import maya  # pyright: ignore[reportUnusedImport]
 except ModuleNotFoundError:
     _has_maya = False
 else:

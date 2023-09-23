@@ -23,9 +23,9 @@ env = Environment(
     autoescape=select_autoescape(),
     trim_blocks=True,
 )
-env.globals.update(  # type: ignore[reportUnknownMemberType,unused-ignore]
-    ArgumentType=Argument.Type,  # type: ignore[reportGeneralTypeIssues,unused-ignore]
-    FunctionSemantic=FunctionSemantic,  # type: ignore[reportGeneralTypeIssues,unused-ignore]
+env.globals.update(  # pyright: ignore[reportUnknownMemberType]
+    ArgumentType=Argument.Type,  # pyright: ignore[reportGeneralTypeIssues]
+    FunctionSemantic=FunctionSemantic,  # pyright: ignore[reportGeneralTypeIssues]
 )
 
 
