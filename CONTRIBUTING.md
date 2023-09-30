@@ -45,8 +45,25 @@ The Project contains a few different sub-projects:
 
 ### Generate the stubs
 
-- Run `poetry env use $MAYA_LOCATION/bin/mayapy` (replace `$MAYA_LOCATION` with the path to your Maya installation).
-    - On Windows, use `mayapy.exe` rather than `mayapy`.
+- Tell poetry to use `mayapy` using `poetry env use`; the path to use depends on your OS, see examples for Maya 2024 using default install paths below:
+    - Linux:
+      ```sh
+      poetry env use /usr/autodesk/maya2024/bin/mayapy
+      ```
+    - macOS:
+      ```sh
+      # mayapy cannot be used directly, use the framework distribution instead
+      poetry env use /Applications/Autodesk/maya2024/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3
+      ```
+    - Windows:
+      ```bat
+      :: we have to create an alias for mayapy.exe for it to work with venv
+      cd "C:\Program Files\Autodesk\Maya2024\bin"
+      mklink python.exe mayapy.exe
+      :: then use the alias as the base interpreter for poetry
+      cd C:\path\to\maya-stubs
+      poetry env use "C:\Program Files\Autodesk\Maya2024\bin\python.exe"
+      ```
 - Run `poetry install`.
     - If you want to generate stubs for another Maya version, simply select the correct `mayapy` using `poetry env use` again, and rerun `poetry install`.
 - Generate the stubs with `poetry run generate-stubs generate-stubs`.
