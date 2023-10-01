@@ -2,27 +2,24 @@ import cProfile
 import logging
 import pstats
 from pathlib import Path
+from typing import Optional
 
 import click
 
-from ..utils import initialize_maya, uninitialize_maya
 from .generate_stubs import build_docs, build_stubs, dump_docspec
 
-logger = logging.getLogger("maya_stubgen")
+from .. import _logging
+
+logger = _logging.getLogger("maya_stubgen")
 
 
 @click.group
-def cli():
-    initialize_maya()
-
-
-@cli.result_callback()
-def result(result):
-    uninitialize_maya()
+def cli() -> None:
+    pass
 
 
 @cli.command
-def test_log():
+def test_log() -> None:
     logger.setLevel(logging.DEBUG)
 
     logger.debug("Debug")
@@ -35,14 +32,28 @@ def test_log():
 
 @cli.command()
 @click.option("-p", "--profile", is_flag=True)
-def generate_docspec(profile: bool) -> None:
-    logger.info("Dumping Docspec")
-
+@click.option(
+    "-m",
+    "--module",
+    type=str,
+    multiple=True,
+    help="Modules to generate docspec files for. Can be specified multiple times. "
+    "By default, docspec files are generated for all modules.",
+)
+@click.option(
+    "--members",
+    type=str,
+    default=None,
+    help="If specified, docspec files will only be generated for members matching this regex.",
+)
+def generate_docspec(
+    profile: bool, module: Optional[list[str]], members: Optional[str]
+) -> None:
     if profile:
         profiler = cProfile.Profile()
         profiler.enable()
 
-        dump_docspec()
+        dump_docspec(module, member_pattern=members)
 
         profiler.disable()
 
@@ -51,7 +62,7 @@ def generate_docspec(profile: bool) -> None:
         prof_file.parent.mkdir(exist_ok=True)
         stats.dump_stats(str(prof_file))
     else:
-        dump_docspec()
+        dump_docspec(module, member_pattern=members)
 
 
 @cli.command()
@@ -67,7 +78,27 @@ def generate_docspec(profile: bool) -> None:
 )
 @click.option("-p", "--profile", is_flag=True)
 @click.option("-rc", "--reuse-cache", is_flag=True)
-def generate_stubs(path: Path, profile: bool, reuse_cache: bool) -> None:
+@click.option(
+    "-m",
+    "--module",
+    type=str,
+    multiple=True,
+    help="Modules to generate stubs for. Can be specified multiple times. "
+    "By default, stubs are generated for all modules.",
+)
+@click.option(
+    "--members",
+    type=str,
+    default=None,
+    help="If specified, stubs will only be generated for members matching this regex.",
+)
+def generate_stubs(
+    path: Path,
+    profile: bool,
+    reuse_cache: bool,
+    module: Optional[list[str]],
+    members: Optional[str],
+) -> None:
     logger.info("Generating Stubs")
 
     path.mkdir(parents=True, exist_ok=True)
@@ -76,7 +107,7 @@ def generate_stubs(path: Path, profile: bool, reuse_cache: bool) -> None:
         profiler = cProfile.Profile()
         profiler.enable()
 
-        build_stubs(path, reuse_cache)
+        build_stubs(path, reuse_cache, whitelist=module, member_pattern=members)
 
         profiler.disable()
 
@@ -85,7 +116,7 @@ def generate_stubs(path: Path, profile: bool, reuse_cache: bool) -> None:
         prof_file.parent.mkdir(exist_ok=True)
         stats.dump_stats(str(prof_file))
     else:
-        build_stubs(path, reuse_cache)
+        build_stubs(path, reuse_cache, whitelist=module, member_pattern=members)
 
 
 @cli.command()

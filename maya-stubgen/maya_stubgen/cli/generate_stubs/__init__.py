@@ -1,26 +1,24 @@
 from __future__ import annotations
 
-import concurrent.futures
 import importlib
+import itertools
 import logging
 import os
 from pathlib import Path
-from pkgutil import walk_packages
+import pkgutil
 from typing import Optional
 
-import black
 import docspec
 import docspec_to_jinja
 
-from maya_stubgen.cli.generate_stubs.parsers.cmds_parsers import CmdsParser
-from maya_stubgen.cli.generate_stubs.parsers.common import Parser
-from maya_stubgen.utils import initialize_maya, timed
+from .parsers.cmds_parsers import CmdsParser
+from .parsers.common import Parser
+from ... import _logging
+from ...utils import maya_standalone, timed, cache_dir, remove_outdated_cache
 
 from .parsers import BuiltinParser, CmdsParser
 
-# from .common import get_stub_path
-
-logger = logging.getLogger(__name__)
+logger = _logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
 
@@ -116,7 +114,8 @@ class MayaParser(Parser):
     def parse_package(
         self,
         name: str,
-        whitelist: Optional[list[str]],
+        whitelist: Optional[list[str]] = None,
+        member_pattern: Optional[str] = None,
     ) -> list[docspec.Module]:
         logger.debug("Parsing package: %s", name)
 
@@ -129,15 +128,26 @@ class MayaParser(Parser):
 
         package = importlib.import_module(name)
 
-        for module in walk_packages(package.__path__, package.__name__ + "."):
-
-            if whitelist is not None and module.name not in whitelist:
+        submodules = pkgutil.walk_packages(package.__path__, package.__name__ + ".")
+        # include root package
+        all_modules = itertools.chain(
+            [(package.__name__, True)], ((mod.name, mod.ispkg) for mod in submodules)
+        )
+        for module_name, ispkg in all_modules:
+            if whitelist is not None and module_name not in whitelist:
                 continue
 
-            if module.name == "maya.cmds":
-                docspec_module = CmdsParser(executor).parse_module(module.name)
+            if module_name == "maya.cmds":
+                docspec_module = CmdsParser(executor).parse_module(
+                    module_name, member_pattern=member_pattern
+                )
             else:
-                docspec_module = BuiltinParser(executor).parse_module(module.name)
+                docspec_module = BuiltinParser(executor).parse_module(
+                    module_name, member_pattern=member_pattern
+                )
+
+            if ispkg:
+                docspec_module.name += ".__init__"
 
             docspec_modules.append(docspec_module)
 
@@ -146,19 +156,21 @@ class MayaParser(Parser):
     def parse_module(self, name: str) -> docspec.Module:
         raise NotImplementedError
 
-    def parse_function(self, name: str) -> docspec.Function:
+    def parse_function(self, module_name: str, name: str) -> docspec.Function:
         raise NotImplementedError
 
-    def parse_class(self, name: str) -> docspec.Class:
+    def parse_class(self, module_name: str, name: str) -> docspec.Class:
         raise NotImplementedError
 
-    def parse_variable(self, name: str) -> docspec.Variable:
+    def parse_variable(self, module_name: str, name: str) -> docspec.Variable:
         raise NotImplementedError
 
 
 @timed
-def dump_docspec():
-    whitelist = [
+def dump_docspec(
+    whitelist: Optional[list[str]] = None, member_pattern: Optional[str] = None
+) -> None:
+    whitelist = whitelist or [
         # OpenMaya 1.0
         "maya.OpenMaya",
         "maya.OpenMayaAnim",
@@ -177,33 +189,60 @@ def dump_docspec():
         "maya.standalone",
         "maya.utils",
         "maya.mel",
+        "maya",
     ]
 
-    modules = MayaParser().parse_package("maya", whitelist=whitelist)
+    logger.info("Dumping Docspec for %s", ", ".join(whitelist))
+
+    with maya_standalone():
+        remove_outdated_cache()
+        modules = MayaParser().parse_package(
+            "maya", whitelist=whitelist, member_pattern=member_pattern
+        )
+
     for module in modules:
         docspec_cache = (
-            Path().resolve()
-            / ".cache"
-            / "docspec"
-            / (module.name.replace(".", "/") + ".json")
+            cache_dir() / "docspec" / (module.name.replace(".", "/") + ".json")
         )
 
         os.makedirs(docspec_cache.parent, exist_ok=True)
 
-        logger.debug("Dumping %s", module.name)
+        logger.debug("Dumping %s to %s", module.name, docspec_cache)
         docspec.dump_module(module, target=str(docspec_cache))
 
 
-def build_stubs(path: Path, reuse_cache: bool = False):
-
+def build_stubs(
+    path: Path,
+    reuse_cache: bool = False,
+    whitelist: Optional[list[str]] = None,
+    member_pattern: Optional[str] = None,
+) -> None:
     if not reuse_cache:
-        dump_docspec()
+        dump_docspec(whitelist=whitelist, member_pattern=member_pattern)
 
-    docspec_cache = Path().resolve() / ".cache" / "docspec"
+    whitelist_patterns = []
+    if whitelist:
+        whitelist_patterns = [
+            pattern
+            for mod in whitelist
+            for pattern in (
+                # whitelist entry may be a module or a package
+                mod.replace(".", "/") + ".json",
+                mod.replace(".", "/") + "/__init__.json",
+            )
+        ]
 
+    docspec_cache = cache_dir() / "docspec"
     for f in docspec_cache.glob("**/*.json"):
+        if whitelist_patterns and not any(
+            f.match(pattern) for pattern in whitelist_patterns
+        ):
+            continue
+
+        logger.debug("Loading %s", f)
         module = docspec.load_module(str(f))
 
+        logger.debug("Rendering %s", module.name)
         stub = docspec_to_jinja.render_module(module, "pyi")
 
         stub_path = path / (
@@ -212,11 +251,18 @@ def build_stubs(path: Path, reuse_cache: bool = False):
 
         os.makedirs(stub_path.parent, exist_ok=True)
 
-        with stub_path.open("w", encoding="utf-8") as f:
-            f.write(stub)
+        logger.debug("Writing %s to %s", module.name, stub_path)
+        with stub_path.open("w", encoding="utf-8") as out_f:
+            out_f.write(stub)
+
+        if stub_path.parent.resolve() != docspec_cache.resolve():
+            # create empty __init__ if it does not exist already
+            init_path = stub_path.parent / "__init__.pyi"
+            with init_path.open("a"):
+                pass
 
 
-def build_docs(path: Path, reuse_cache: bool = False):
+def build_docs(path: Path, reuse_cache: bool = False) -> None:
     logger.info("Building docs")
 
     if not reuse_cache:
@@ -244,10 +290,9 @@ def build_docs(path: Path, reuse_cache: bool = False):
         "maya.utils": "maya/other/utils",
         "maya.standalone": "maya/other/standalone",
     }
-    docspec_cache = Path().resolve() / ".cache" / "docspec"
+    docspec_cache = cache_dir() / "docspec"
 
     for f in docspec_cache.glob("**/*.json"):
-
         module = docspec.load_module(str(f))
 
         logger.debug("Building docs for: %s", module.name)
@@ -257,8 +302,8 @@ def build_docs(path: Path, reuse_cache: bool = False):
 
         os.makedirs(module_doc_path.parent, exist_ok=True)
 
-        with module_doc_path.open("w", encoding="utf-8") as f:
-            f.write(rendered_module)
+        with module_doc_path.open("w", encoding="utf-8") as doc_f:
+            doc_f.write(rendered_module)
 
         for member in module.members:
             logger.debug("Building docs for: %s", member.name)
@@ -280,5 +325,5 @@ def build_docs(path: Path, reuse_cache: bool = False):
 
             os.makedirs(member_doc_path.parent, exist_ok=True)
 
-            with member_doc_path.open("w", encoding="utf-8") as f:
-                f.write(rendered_member)
+            with member_doc_path.open("w", encoding="utf-8") as member_doc_f:
+                member_doc_f.write(rendered_member)

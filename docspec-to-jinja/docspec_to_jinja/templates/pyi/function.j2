@@ -5,7 +5,14 @@
 
 {% endfor %}
 {% endif %}
-def {{function.name}}({{ macros.render_args(function.args) }}) -> {{function.return_type}}:
+{% for hint in function.semantic_hints %}
+{% if hint == FunctionSemantic.CLASS_METHOD %}
+@classmethod
+{% elif hint == FunctionSemantic.STATIC_METHOD %}
+@staticmethod
+{% endif %}
+{% endfor %}
+def {{function.name}}({{ macros.render_args(args) }}) -> {{function.return_type}}:
 {%- if function.docstring %}
 
 {{macros.format_docstring(function.docstring)}}

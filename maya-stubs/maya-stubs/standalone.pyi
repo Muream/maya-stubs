@@ -2,9 +2,10 @@ from __future__ import annotations
 
 from typing import *
 
+
 Unknown = Any
 
-def initialize(*args: Any, **kwargs: Any) -> Any:
+def initialize(*args: Unknown, **kwargs: Unknown) -> Any:
     """This function initializes Maya within a standalone Python interpreter
 
     The Python modules that Maya exports (e.g. maya.cmds, maya.OpenMaya, etc.) may
@@ -19,6 +20,6 @@ def initialize(*args: Any, **kwargs: Any) -> Any:
     name - name of the application (defaults to 'python')
     """
 
-def uninitialize(*args: Any, **kwargs: Any) -> Any:
+def uninitialize(*args: Unknown, **kwargs: Unknown) -> Any:
     """This function uninitializes Maya within a standalone Python interpreter"""
 

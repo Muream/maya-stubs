@@ -1,28 +1,44 @@
 import logging
+import pathlib
 import shutil
 import sys
 import time
+from collections.abc import Iterator, Callable
 from contextlib import contextmanager
 from pathlib import Path
-from typing import *
+from typing import TypeVar, Optional
+
+from typing_extensions import ParamSpec
 
 from PySide2 import QtCore, QtWidgets
 
-logger = logging.getLogger(__name__)
+from . import _logging
+
+logger = _logging.getLogger(__name__)
 
 try:
-    import maya
-except:
-    HAS_MAYA = False
+    import maya  # pyright: ignore[reportUnusedImport]
+except ModuleNotFoundError:
+    _has_maya = False
 else:
-    HAS_MAYA = True
+    _has_maya = True
+
+__all__ = [
+    "initialize_maya",
+    "uninitialize_maya",
+    "maya_standalone",
+    "timed",
+    "maya_version",
+    "cache_dir",
+    "remove_outdated_cache",
+]
 
 # List of plugins that contain commands that should have generated stubs
 PLUGINS = ["invertShape.mll", "poseInterpolator.mll"]
 
 
-def initialize_maya():
-    if not HAS_MAYA:
+def initialize_maya() -> None:
+    if not _has_maya:
         return
 
     logger.info("Initializing Maya Standalone")
@@ -38,9 +54,10 @@ def initialize_maya():
     except BaseException:
         logger.error("Failed to initialize Maya Standalone")
     else:
-
         for plugin in PLUGINS:
             try:
+                import maya.cmds
+
                 maya.cmds.loadPlugin(plugin)
             except BaseException:
                 logger.warning("Couldn't load %s", plugin)
@@ -50,8 +67,8 @@ def initialize_maya():
         logger.success("Maya Standalone Initialized")
 
 
-def uninitialize_maya():
-    if not HAS_MAYA:
+def uninitialize_maya() -> None:
+    if not _has_maya:
         return
 
     logger.info("Uninitializing Maya Standalone")
@@ -70,14 +87,64 @@ def uninitialize_maya():
 
 
 @contextmanager
-def maya_standalone():
+def maya_standalone() -> Iterator[None]:
     initialize_maya()
     yield
     uninitialize_maya()
 
 
-def timed(func):
-    def wrap_func(*args, **kwargs):
+_maya_version: Optional[str] = None
+
+
+def maya_version() -> str:
+    global _maya_version
+    import maya.cmds
+
+    if _maya_version is None:
+        _maya_version = maya.cmds.about(majorVersion=True)
+
+    return _maya_version
+
+
+def remove_outdated_cache() -> None:
+    """Deletes the existing cache directory if it was generated using another version of Maya."""
+    version = maya_version()
+    cache = cache_dir()
+    if not cache.exists():
+        # we have no cache, nothing to do
+        return
+
+    maya_version_file = cache / ".maya_version"
+    try:
+        with maya_version_file.open("r") as f:
+            cache_version = f.read().strip()
+            if cache_version == version:
+                # cache is from current maya version, nothing to do
+                return
+            logger.warning(
+                "Running against Maya %s, but cache was generated using Maya %s; removing existing cache",
+                version,
+                cache_version,
+            )
+    except FileNotFoundError:
+        logger.warning("Cache from unknown Maya version found; removing existing cache")
+
+    shutil.rmtree(cache)
+    cache.mkdir(parents=True, exist_ok=True)
+    with maya_version_file.open("w") as f:
+        f.write(version)
+
+
+def cache_dir() -> pathlib.Path:
+    return Path().resolve() / ".cache"
+
+
+P = ParamSpec("P")
+T = TypeVar("T")
+
+
+def timed(func: Callable[P, T]) -> Callable[P, T]:
+    def wrap_func(*args: P.args, **kwargs: P.kwargs) -> T:
         t1 = time.perf_counter()
         result = func(*args, **kwargs)
         t2 = time.perf_counter()

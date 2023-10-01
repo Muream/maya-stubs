@@ -1,27 +1,8 @@
-try:
-    import maya
+import os
+import site
 
-    HAS_MAYA = True
-except:
-    HAS_MAYA = False
-
-
-if HAS_MAYA:
-    import site
-    import sys
-    from pathlib import Path
-
-    current_dir = Path().resolve()
-    if not (current_dir / "pyproject.toml").exists():
-        raise RuntimeError("maya_stubgen must be run from the root of the repo.")
-
-    venv_path = current_dir / ".venv"
-    if not venv_path.exists():
-        raise RuntimeError(
-            f"No virtual environment found at {venv_path}.\n"
-            "Make sure to run `poetry install` first."
-        )
-
-    site_dir = str(venv_path / "Lib" / "site-packages")
-    if site_dir not in sys.path:
-        site.addsitedir(site_dir)
+# read environment variable set in maya_stubgen.__main__
+# to ensure that maya-stubgen is available when running with mayapy
+if os.getenv("MAYASTUB_VENV"):
+    for path in os.getenv("MAYASTUB_VENV").split(":"):
+        site.addsitedir(path)

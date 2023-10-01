@@ -2,53 +2,63 @@ from __future__ import annotations
 
 from typing import *
 
+import maya.api.OpenMaya
+
 Unknown = Any
 
-class MAnimControl(object):
+class MAnimControl:
     """Control over animation playback and values"""
-    def animationEndTime(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def animationEndTime(*args: Unknown, **kwargs: Unknown) -> Any:
         """animationEndTime() -> MTime
 
         Return an MTime specifying the last frame of the animation, as specified by the Maya user in the Range Slider UI.
         """
 
-    def animationStartTime(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def animationStartTime(*args: Unknown, **kwargs: Unknown) -> Any:
         """animationStartTime() -> MTime
 
         Return an MTime specifying the first frame of the animation, as specified by the Maya user in the Range Slider UI.
         """
 
-    def autoKeyMode(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def autoKeyMode(*args: Unknown, **kwargs: Unknown) -> Any:
         """autoKeyMode() -> bool
 
         Return the autoKeyMode.
         """
 
-    def currentTime(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def currentTime(*args: Unknown, **kwargs: Unknown) -> Any:
         """currentTime() -> MTime
 
         Return an MTime instance containing the current animation frame.
         """
 
-    def globalInTangentType(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def globalInTangentType(*args: Unknown, **kwargs: Unknown) -> Any:
         """globalInTangentType() -> int
 
         Return the current global in tangent type.
         """
 
-    def globalOutTangentType(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def globalOutTangentType(*args: Unknown, **kwargs: Unknown) -> Any:
         """globalOutTangentType() -> int
 
         Return the current global out tangent type.
         """
 
-    def isPlaying(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def isPlaying(*args: Unknown, **kwargs: Unknown) -> Any:
         """isPlaying() -> bool
 
         Return a value indicating whether Maya is currently playing the animation
         """
 
-    def isScrubbing(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def isScrubbing(*args: Unknown, **kwargs: Unknown) -> Any:
         """isScrubbing() -> bool
 
         Return a value indicating whether interactive scrubbing is occuring while Maya is not currently playing an animation.
@@ -59,37 +69,43 @@ class MAnimControl(object):
     kPlaybackOscillate: int = 2
     kPlaybackViewActive: int = 1
     kPlaybackViewAll: int = 0
-    def maxTime(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def maxTime(*args: Unknown, **kwargs: Unknown) -> Any:
         """maxTime() -> MTime
 
         Return an MTime specifying the last frame of the current playback time range.
         """
 
-    def minTime(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def minTime(*args: Unknown, **kwargs: Unknown) -> Any:
         """minTime() -> MTime
 
         Return an MTime specifying the first frame of the current playback time range.
         """
 
-    def playBackward(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def playBackward(*args: Unknown, **kwargs: Unknown) -> Any:
         """playBackward() -> None
 
         Start playing the current animation backwards.
         """
 
-    def playForward(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def playForward(*args: Unknown, **kwargs: Unknown) -> Any:
         """playForward() -> None
 
         Start playing the current animation forwards.
         """
 
-    def playbackBy(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def playbackBy(*args: Unknown, **kwargs: Unknown) -> Any:
         """playbackBy() -> float
 
         Return a float specifying the increment between times viewed during the playing of the animation.
         """
 
-    def playbackMode(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def playbackMode(*args: Unknown, **kwargs: Unknown) -> Any:
         """playbackMode() -> int
 
         Return the playback mode currently in effect:
@@ -98,110 +114,128 @@ class MAnimControl(object):
           MAnimControl.kPlaybackOscillate    Play forwards, then backwards continuously.
         """
 
-    def playbackSpeed(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def playbackSpeed(*args: Unknown, **kwargs: Unknown) -> Any:
         """playbackSpeed() -> float
 
         Return the speed with with to play the animation.
         """
 
-    def setAnimationEndTime(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def setAnimationEndTime(*args: Unknown, **kwargs: Unknown) -> Any:
         """setAnimationEndTime(MTime) -> None
 
         Set the value of the last frame in the animation.
         """
 
-    def setAnimationStartEndTime(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def setAnimationStartEndTime(*args: Unknown, **kwargs: Unknown) -> Any:
         """setAnimationStartEndTime(MTime, MTime) -> None
 
         Set the values of the first and last frames in the animation.
         """
 
-    def setAnimationStartTime(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def setAnimationStartTime(*args: Unknown, **kwargs: Unknown) -> Any:
         """setAnimationStartTime(MTime) -> None
 
         Set the value of the first frame in the animation.
         """
 
-    def setAutoKeyMode(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def setAutoKeyMode(*args: Unknown, **kwargs: Unknown) -> Any:
         """setAutoKeyMode(bool) -> None
 
         Set the autoKeyMode.
         """
 
-    def setCurrentTime(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def setCurrentTime(*args: Unknown, **kwargs: Unknown) -> Any:
         """setMinTime(MTime) -> None
 
         Set the current animation frame.
         """
 
-    def setGlobalInTangentType(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def setGlobalInTangentType(*args: Unknown, **kwargs: Unknown) -> Any:
         """setGlobalInTangentType(int) -> None
 
         Set the current global in tangent type
         """
 
-    def setGlobalOutTangentType(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def setGlobalOutTangentType(*args: Unknown, **kwargs: Unknown) -> Any:
         """setGlobalOutTangentType(int) -> None
 
         Set the current global out tangent type.
         """
 
-    def setMaxTime(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def setMaxTime(*args: Unknown, **kwargs: Unknown) -> Any:
         """setMaxTime(MTime) -> None
 
         Set the value of the last frame of the current playback time range.
         """
 
-    def setMinMaxTime(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def setMinMaxTime(*args: Unknown, **kwargs: Unknown) -> Any:
         """setMinMaxTime(MTime, MTime) -> None
 
         Set the values of the first and last frames of the playback time range.
         """
 
-    def setMinTime(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def setMinTime(*args: Unknown, **kwargs: Unknown) -> Any:
         """setMinTime(MTime) -> None
 
         Set the value of the first frame of the current playback time range.
         """
 
-    def setPlaybackBy(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def setPlaybackBy(*args: Unknown, **kwargs: Unknown) -> Any:
         """setPlaybackBy(float) -> None
 
         Specify the increment between times viewed during the playing of the animation.
         """
 
-    def setPlaybackMode(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def setPlaybackMode(*args: Unknown, **kwargs: Unknown) -> Any:
         """setPlaybackMode(int) -> None
 
         Set the current playback mode.
         """
 
-    def setPlaybackSpeed(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def setPlaybackSpeed(*args: Unknown, **kwargs: Unknown) -> Any:
         """setPlaybackSpeed(float) -> None
 
         Set the desired speed factor at which the animation will play back.
         """
 
-    def setViewMode(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def setViewMode(*args: Unknown, **kwargs: Unknown) -> Any:
         """setViewMode(int) -> None
 
         Set the current viewing mode.
         Controls whether the animation is run in only the active view, or simultaneously in all views.
         """
 
-    def setWeightedTangents(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def setWeightedTangents(*args: Unknown, **kwargs: Unknown) -> Any:
         """setWeightedTangents(bool) -> None
 
         Sets whether or not the tangents on the Anim Curve are weighted.
         """
 
-    def stop(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def stop(*args: Unknown, **kwargs: Unknown) -> Any:
         """stop() -> None
 
         Stop playing the current animation.
         """
 
-    def viewMode(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def viewMode(*args: Unknown, **kwargs: Unknown) -> Any:
         """viewMode() -> int
 
         Return the viewing mode currently in effect:
@@ -209,56 +243,57 @@ class MAnimControl(object):
           MAnimControl.kPlaybackViewActive   Playback in only the active view.
         """
 
-    def weightedTangents(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def weightedTangents(*args: Unknown, **kwargs: Unknown) -> Any:
         """weightedTangents() -> bool
 
         Determine whether or not the tangents on the Anim Curve are weighted.
         """
 
 
-class MAnimCurveChange(object):
+class MAnimCurveChange:
     """Anim curve change cache."""
-    def __init__(self, *args, **kwargs) -> Any:
+    def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
-    def __new__(*args, **kwargs) -> Any:
+    def __new__(cls, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
 
-    def redoIt(self, *args: Any, **kwargs: Any) -> Any:
+    def redoIt(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Redo all of the Anim Curve changes in this cache."""
 
-    def undoIt(self, *args: Any, **kwargs: Any) -> Any:
+    def undoIt(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Undo all of the Anim Curve changes in this cache."""
 
 
-class MAnimCurveClipboard(object):
+class MAnimCurveClipboard:
     """Provides control over the animation clipboard.
 
     __init__()
     Initializes a new, empty MAnimCurveClipboard object.
     """
-    def __init__(self, *args, **kwargs) -> Any:
+    def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
-    def __new__(*args, **kwargs) -> Any:
+    def __new__(cls, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
 
-    def clear(self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """clear() -> self
 
         Clears the clipboard.
         """
 
-    def clipboardItems(self, *args: Any, **kwargs: Any) -> Any:
+    def clipboardItems(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """clipboardItems() -> MAnimCurveClipboardItemArray
 
         Returns the clipboard items.
         """
 
-    endTime: getset_descriptor = <attribute 'endTime' of 'OpenMayaAnim.MAnimCurveClipboard' objects>
-    endUnitlessInput: getset_descriptor = <attribute 'endUnitlessInput' of 'OpenMayaAnim.MAnimCurveClipboard' objects>
-    isEmpty: getset_descriptor = <attribute 'isEmpty' of 'OpenMayaAnim.MAnimCurveClipboard' objects>
-    def set(self, *args: Any, **kwargs: Any) -> Any:
+    endTime: maya.api.OpenMaya.MTime
+    endUnitlessInput: float
+    isEmpty: bool
+    def set(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """set( clipboard ) -> self
         set( items ) -> self
         set( items, startTime, endTime, startUnitlessInput, endUnitlessInput, strictValidation=True ) -> self
@@ -267,125 +302,126 @@ class MAnimCurveClipboard(object):
         'items' may be either an MAnimClipboardItemArray or a sequence of MAnimClipboardItems.
         """
 
-    startTime: getset_descriptor = <attribute 'startTime' of 'OpenMayaAnim.MAnimCurveClipboard' objects>
-    startUnitlessInput: getset_descriptor = <attribute 'startUnitlessInput' of 'OpenMayaAnim.MAnimCurveClipboard' objects>
-    theAPIClipboard: MAnimCurveClipboard = <OpenMayaAnim.MAnimCurveClipboard object at 0x0000026FF1513390>
+    startTime: maya.api.OpenMaya.MTime
+    startUnitlessInput: float
+    theAPIClipboard: MAnimCurveClipboard
 
-class MAnimCurveClipboardItem(object):
+class MAnimCurveClipboardItem:
     """This class provides a wrapper for a clipboard item.
 
     __init__()
     Initializes a new, empty MAnimCurveClipboardItem object.
     """
-    def __init__(self, *args, **kwargs) -> Any:
+    def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
-    def __new__(*args, **kwargs) -> Any:
+    def __new__(cls, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
 
-    animCurve: getset_descriptor = <attribute 'animCurve' of 'OpenMayaAnim.MAnimCurveClipboardItem' objects>
-    def animCurveType(self, *args: Any, **kwargs: Any) -> Any:
+    animCurve: maya.api.OpenMaya.MObject
+    def animCurveType(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """animCurveType() -> MFnAnimCurve.AnimCurveType
 
         Returns the type of the item's anim curve.
         """
 
-    fullAttributeName: getset_descriptor = <attribute 'fullAttributeName' of 'OpenMayaAnim.MAnimCurveClipboardItem' objects>
-    def getAddressingInfo(self, *args: Any, **kwargs: Any) -> Any:
+    fullAttributeName: str
+    def getAddressingInfo(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """getAddressingInfo() -> (unsigned int, unsigned int, unsigned int)
 
         Returns the addressing information for this clipboard item
         as (rowCount, childCount, attributeCount).
         """
 
-    leafAttributeName: getset_descriptor = <attribute 'leafAttributeName' of 'OpenMayaAnim.MAnimCurveClipboardItem' objects>
-    nodeName: getset_descriptor = <attribute 'nodeName' of 'OpenMayaAnim.MAnimCurveClipboardItem' objects>
-    def setAddressingInfo(self, *args: Any, **kwargs: Any) -> Any:
+    leafAttributeName: str
+    nodeName: str
+    def setAddressingInfo(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """setAddressingInfo(rowCount, childCount, attributeCount) -> self
 
         Sets the addressing information for this clipboard item.
         """
 
-    def setAnimCurve(self, *args: Any, **kwargs: Any) -> Any:
+    def setAnimCurve(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """setAnimCurve(object) -> self
 
         Sets the anim curve MObject.
         """
 
-    def setNameInfo(self, *args: Any, **kwargs: Any) -> Any:
+    def setNameInfo(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """setNameInfo(nodeName, fullName, leafName) -> self
 
         Sets the name information for this clipboard item.
         """
 
 
-class MAnimCurveClipboardItemArray(object):
+class MAnimCurveClipboardItemArray:
     """Array of MAnimCurveClipboardItem values."""
-    def __add__(self, value) -> Any:
+    def __add__(self, value: Unknown, /) -> Any:
         """Return self+value."""
 
-    def __contains__(self, key) -> Any:
+    def __contains__(self, key: Unknown, /) -> Any:
         """Return key in self."""
 
-    def __delitem__(self, key) -> Any:
+    def __delitem__(self, key: Unknown, /) -> Any:
         """Delete self[key]."""
 
-    def __getitem__(self, key) -> Any:
+    def __getitem__(self, key: Unknown, /) -> Any:
         """Return self[key]."""
 
-    def __iadd__(self, value) -> Any:
+    def __iadd__(self, value: Unknown, /) -> Any:
         """Implement self+=value."""
 
-    def __imul__(self, value) -> Any:
+    def __imul__(self, value: Unknown, /) -> Any:
         """Implement self*=value."""
 
-    def __init__(self, *args, **kwargs) -> Any:
+    def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
-    def __len__(self) -> Any:
+    def __len__(self, /) -> Any:
         """Return len(self)."""
 
-    def __mul__(self, value) -> Any:
+    def __mul__(self, value: Unknown, /) -> Any:
         """Return self*value."""
 
-    def __new__(*args, **kwargs) -> Any:
+    def __new__(cls, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
 
-    def __repr__(self) -> Any:
+    def __repr__(self, /) -> Any:
         """Return repr(self)."""
 
-    def __rmul__(self, value) -> Any:
+    def __rmul__(self, value: Unknown, /) -> Any:
         """Return value*self."""
 
-    def __setitem__(self, key, value) -> Any:
+    def __setitem__(self, key: Unknown, value: Unknown, /) -> Any:
         """Set self[key] to value."""
 
-    def __str__(self) -> Any:
+    def __str__(self, /) -> Any:
         """Return str(self)."""
 
-    def append(self, *args: Any, **kwargs: Any) -> Any:
+    def append(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Add a value to the end of the array."""
 
-    def clear(self, *args: Any, **kwargs: Any) -> Any:
+    def clear(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Remove all elements from the array."""
 
-    def copy(self, *args: Any, **kwargs: Any) -> Any:
+    def copy(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Replace the array contents with that of another or of a compatible Python sequence."""
 
-    def insert(self, *args: Any, **kwargs: Any) -> Any:
+    def insert(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Insert a new value into the array at the given index."""
 
-    def remove(self, *args: Any, **kwargs: Any) -> Any:
+    def remove(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Remove an element from the array."""
 
-    def setLength(self, *args: Any, **kwargs: Any) -> Any:
+    def setLength(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Grow or shrink the array to contain a specific number of elements."""
 
-    sizeIncrement: getset_descriptor = <attribute 'sizeIncrement' of 'OpenMaya.MAnimCurveClipboardItemArray' objects>
+    sizeIncrement: int
 
-class MAnimMessage(MMessage):
+class MAnimMessage(maya.api.OpenMaya.MMessage):
     """Class used to register callbacks for anim related messages."""
-    def addAnimCurveEditedCallback(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def addAnimCurveEditedCallback(*args: Unknown, **kwargs: Unknown) -> Any:
         """addAnimCurveEditedCallback(function, clientData=None) -> id
 
         This method registers a callback that is called whenever an
@@ -398,7 +434,8 @@ class MAnimMessage(MMessage):
          * return: Identifier used for removing the callback.
         """
 
-    def addAnimKeyframeEditCheckCallback(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def addAnimKeyframeEditCheckCallback(*args: Unknown, **kwargs: Unknown) -> Any:
         """addAnimKeyframeEditCheckCallback(function, clientData=None) -> id
 
         This method registers a callback that is used by the setKeyframe command
@@ -414,7 +451,8 @@ class MAnimMessage(MMessage):
          * return: Identifier used for removing the callback.
         """
 
-    def addAnimKeyframeEditedCallback(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def addAnimKeyframeEditedCallback(*args: Unknown, **kwargs: Unknown) -> Any:
         """addAnimKeyframeEditedCallback(function, clientData=None) -> id
 
         This method registers a callback that is called whenever an
@@ -433,7 +471,8 @@ class MAnimMessage(MMessage):
          * return: Identifier used for removing the callback.
         """
 
-    def addDisableImplicitControlCallback(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def addDisableImplicitControlCallback(*args: Unknown, **kwargs: Unknown) -> Any:
         """addDisableImplicitControlCallback(function, clientData=None) -> id
 
         This method registers a callback that is called from bakeResults
@@ -451,7 +490,8 @@ class MAnimMessage(MMessage):
          * return: Identifier used for removing the callback.
         """
 
-    def addNodeAnimKeyframeEditedCallback(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def addNodeAnimKeyframeEditedCallback(*args: Unknown, **kwargs: Unknown) -> Any:
         """addNodeAnimKeyframeEditedCallback(animNode, function, clientData=None) -> id
 
         This method registers a callback that is called whenever an a
@@ -473,7 +513,8 @@ class MAnimMessage(MMessage):
          * return: Identifier used for removing the callback.
         """
 
-    def addPostBakeResultsCallback(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def addPostBakeResultsCallback(*args: Unknown, **kwargs: Unknown) -> Any:
         """addPostBakeResultsCallback(function, clientData=None) -> id
 
         This method registers a callback that is called from bakeResults
@@ -490,7 +531,8 @@ class MAnimMessage(MMessage):
          * return: Identifier used for removing the callback.
         """
 
-    def addPreBakeResultsCallback(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def addPreBakeResultsCallback(*args: Unknown, **kwargs: Unknown) -> Any:
         """addPreBakeResultsCallback(function, clientData=None) -> id
 
         This method registers a callback that is called from bakeResults
@@ -507,7 +549,8 @@ class MAnimMessage(MMessage):
          * return: Identifier used for removing the callback.
         """
 
-    def flushAnimKeyframeEditedCallbacks(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def flushAnimKeyframeEditedCallbacks(*args: Unknown, **kwargs: Unknown) -> Any:
         """flushAnimKeyframeEditedCallbacks() -> None
 
         Animation keyframe edited callbacks are queued to only be issued on an
@@ -518,9 +561,10 @@ class MAnimMessage(MMessage):
         """
 
 
-class MAnimUtil(object):
+class MAnimUtil:
     """Static class providing common animation helper methods."""
-    def findAnimatablePlugs(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def findAnimatablePlugs(*args: Unknown, **kwargs: Unknown) -> Any:
         """findAnimatablePlugs(MSelectionList) -> MPlugArray
 
         Find the list of attributes (MPlugs) on any member of an MSelectionList
@@ -531,7 +575,8 @@ class MAnimUtil(object):
         good way to determine if parts of a shape are animatable or not.
         """
 
-    def findAnimatedPlugs(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def findAnimatedPlugs(*args: Unknown, **kwargs: Unknown) -> Any:
         """findAnimatedPlugs(MObject, bool) -> MPlugArray
         findAnimatedPlugs(MDagPath, bool) -> MPlugArray
         findAnimatedPlugs(MSelectionList selectionList, bool checkParent) -> MPlugArray
@@ -539,7 +584,8 @@ class MAnimUtil(object):
         Find the list of attributes (MPlugs) on the input object that is animated.
         """
 
-    def findAnimation(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def findAnimation(*args: Unknown, **kwargs: Unknown) -> Any:
         """findAnimation(MPlug) -> MObjectArray
 
         Find the animCurve(s) that are animating a given attribute (MPlug).
@@ -550,7 +596,8 @@ class MAnimUtil(object):
         Compound attributes are not expanded to include any child attributes.
         """
 
-    def findConstraint(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def findConstraint(*args: Unknown, **kwargs: Unknown) -> Any:
         """findConstraint(Mplug) -> (MObject, MObjectArray)
 
         Find any constraint that is directly driving the specified attribute.
@@ -560,7 +607,8 @@ class MAnimUtil(object):
         Compound attributes are not expanded to include any child attributes.
         """
 
-    def findSetDrivenKeyAnimation(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def findSetDrivenKeyAnimation(*args: Unknown, **kwargs: Unknown) -> Any:
         """findSetDrivenKeyAnimation(MPlug) -> (MObjectArray, MPlugArray)
 
         Find any driven keyframe animCurves, the blendWeighted node and the
@@ -580,7 +628,8 @@ class MAnimUtil(object):
         Compound attributes are not expanded to include any child attributes.
         """
 
-    def isAnimated(self, *args: Any, **kwargs: Any) -> Any:
+    @staticmethod
+    def isAnimated(*args: Unknown, **kwargs: Unknown) -> Any:
         """isAnimated(MObject, bool) -> bool
         isAnimated(MDagPath, bool) -> bool
         isAnimated(MPlug, bool) -> bool
@@ -592,7 +641,7 @@ class MAnimUtil(object):
         """
 
 
-class MFnAnimCurve(MFnDependencyNode):
+class MFnAnimCurve(maya.api.OpenMaya.MFnDependencyNode):
     """Function set for operations on anim curves.
 
     __init__()
@@ -606,13 +655,13 @@ class MFnAnimCurve(MFnDependencyNode):
     Initializes a new MFnAnimCurve and attaches it
     to the single animCurve node connected to the given MPlug.
     """
-    def __init__(self, *args, **kwargs) -> Any:
+    def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
-    def __new__(*args, **kwargs) -> Any:
+    def __new__(cls, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
 
-    def addKey(self, *args: Any, **kwargs: Any) -> Any:
+    def addKey(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """addKey(at, value, tangentInType=kTangentGlobal, tangentOutType=kTangentGlobal, change=None) -> unsigned int
 
         Adds a new key with the given value at the specified time.
@@ -620,20 +669,20 @@ class MFnAnimCurve(MFnDependencyNode):
         change is an optional MAnimCurveChange.
         """
 
-    def addKeys(self, *args: Any, **kwargs: Any) -> Any:
+    def addKeys(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """addKeys(times, values, tangentInType=kTangentGlobal, tangentOutType=kTangentGlobal, keepExistingKeys=False, change=None) -> self
 
         Add a set of new keys with the given corresponding values and tangent typesat the specified times.  This method only works for animCurves of typekAnimCurveTA, kAnimCurveTL and kAnimCurveTU.
         """
 
-    def addKeysWithTangents(self, *args: Any, **kwargs: Any) -> Any:
+    def addKeysWithTangents(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """addKeysWithTangents(times, values, tangentInType=kTangentGlobal, tangentOutType=kTangentGlobal, tangentInTypeArray=None, tangentOutTypeArray=None, tangentInXArray=None, tangentInYArray=None, tangentOutXArray=None, tangentOutYArray=None, tangentsLockedArray=None, weightsLockedArray=None, convertUnits=True, keepExistingKeys=False, change=None) -> self
 
         Add a set of new keys with the given corresponding values, tangent types and tangents at the specified times.  This method only works for animCurves of typekAnimCurveTA, kAnimCurveTL and kAnimCurveTU.
         """
 
-    animCurveType: getset_descriptor = <attribute 'animCurveType' of 'OpenMayaAnim.MFnAnimCurve' objects>
-    def create(self, *args: Any, **kwargs: Any) -> Any:
+    animCurveType: Any
+    def create(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """create(node, attribute, animCurveType=kAnimCurveUnknown [, modifier] ) -> MObject
         create(plug, animCurveType=kAnimCurveUnknown [, modifier] ) -> MObject
         create(animCurveType [, modifier] ) -> MObject
@@ -654,7 +703,7 @@ class MFnAnimCurve(MFnDependencyNode):
         kAnimCurveUnknown       Unknown type
         """
 
-    def evaluate(self, *args: Any, **kwargs: Any) -> Any:
+    def evaluate(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """evaluate(at) -> value
 
         Evalutes the curve.
@@ -662,44 +711,44 @@ class MFnAnimCurve(MFnDependencyNode):
         For curves of type kAnimCurveTT and kAnimCurveUT,the value is an MTime, otherwise it is a double.
         """
 
-    def find(self, *args: Any, **kwargs: Any) -> Any:
+    def find(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """find(at) -> unsigned int
 
         Determines the index of the key which is set at the specifiedMTime (time-input curves) or double (unitless-input curves).
         Returns None if the key is not found.
         """
 
-    def findClosest(self, *args: Any, **kwargs: Any) -> Any:
+    def findClosest(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """findClosest(at) -> unsigned int
 
         Determines the index of the key which is set at theMTime (time-input curves) or double (unitless-input curves)closest to the specified time.
         """
 
-    def getTangentAngleWeight(self, *args: Any, **kwargs: Any) -> Any:
+    def getTangentAngleWeight(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """getTangentAngleWeight(index, isInTangent) -> (MAngle,double)
 
         Determines the angle and weight of the in- or out-tangent to the curvefor the key at the specified index
         """
 
-    def getTangentXY(self, *args: Any, **kwargs: Any) -> Any:
+    def getTangentXY(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """getTangentXY(index, isInTangent) -> (x,y)
 
         Determines the x,y value representing the vector of the in- orout-tangent (depending on the value of the isInTangent parameter) tothe curve for the key at the specified index.  The values returnedwill be in Maya's internal units (seconds for time, centimeters forlinear, radians for angles).
         """
 
-    def inTangentType(self, *args: Any, **kwargs: Any) -> Any:
+    def inTangentType(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """inTangentType(index) -> TangentType
 
         Determines the type of the tangent to the curve entering the current key.
         """
 
-    def input(self, *args: Any, **kwargs: Any) -> Any:
+    def input(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """input(index) -> MTime or double
 
         Determines the input (MTime for T* curves or double for U* curves) of the key at the specified index.
         """
 
-    def insertKey(self, *args: Any, **kwargs: Any) -> Any:
+    def insertKey(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """addKey(time, breakdown=False, change=None) -> unsigned int
 
         Inserts a new key at the specified time adjusting neighboring
@@ -710,16 +759,16 @@ class MFnAnimCurve(MFnDependencyNode):
         Returns the index of the newly inserted key.
         """
 
-    def isBreakdown(self, *args: Any, **kwargs: Any) -> Any:
+    def isBreakdown(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """isBreakdown(index) -> bool
 
         Determines whether or not a key is a breakdown.
         """
 
-    isStatic: getset_descriptor = <attribute 'isStatic' of 'OpenMayaAnim.MFnAnimCurve' objects>
-    isTimeInput: getset_descriptor = <attribute 'isTimeInput' of 'OpenMayaAnim.MFnAnimCurve' objects>
-    isUnitlessInput: getset_descriptor = <attribute 'isUnitlessInput' of 'OpenMayaAnim.MFnAnimCurve' objects>
-    isWeighted: getset_descriptor = <attribute 'isWeighted' of 'OpenMayaAnim.MFnAnimCurve' objects>
+    isStatic: Any
+    isTimeInput: Any
+    isUnitlessInput: Any
+    isWeighted: Any
     kTangentAuto: int = 11
     kTangentAutoCustom: int = 29
     kTangentAutoEase: int = 28
@@ -736,30 +785,36 @@ class MFnAnimCurve(MFnDependencyNode):
     kTangentShared8: int = 26
     kTangentStepNext: int = 10
     kTangentTypeCount: int = 32768
-    numKeys: getset_descriptor = <attribute 'numKeys' of 'OpenMayaAnim.MFnAnimCurve' objects>
-    def outTangentType(self, *args: Any, **kwargs: Any) -> Any:
+    numKeys: Any
+    def outTangentType(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """outTangentType(index) -> TangentType
 
         Determines the type of the tangent to the curve leaving the current key.
         """
 
-    postInfinityType: getset_descriptor = <attribute 'postInfinityType' of 'OpenMayaAnim.MFnAnimCurve' objects>
-    preInfinityType: getset_descriptor = <attribute 'preInfinityType' of 'OpenMayaAnim.MFnAnimCurve' objects>
-    def remove(self, *args: Any, **kwargs: Any) -> Any:
+    postInfinityType: Any
+    preInfinityType: Any
+    def quaternionW(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """quaternionW(index) -> double
+
+        Returns the quaternionW of the key at the specified index.  This methodshould only be used on Anim Curves of type kAnimCurveTA.
+        """
+
+    def remove(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """remove(index, change=None) -> self
 
         Removes the key at the specified index.
         change is an optional MAnimCurveChange.
         """
 
-    def setAngle(self, *args: Any, **kwargs: Any) -> Any:
+    def setAngle(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """setAngle(index, setAngle, isInTangent, change=None) -> self
 
         Sets the in- or out-angle of the tangent for the key at the given index.
         isInTangent is True to modify the inTangent or False to modify the outTangent.
         """
 
-    def setInTangentType(self, *args: Any, **kwargs: Any) -> Any:
+    def setInTangentType(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """setInTangentType(index, tangentType, change=None) -> self
 
         Sets the type of the tangent to the curve entering the key at thespecified index.
@@ -778,37 +833,37 @@ class MFnAnimCurve(MFnDependencyNode):
         kTangentAuto            AutokTangentAutoMix             AutoMixkTangentAutoEase         AutoEasekTangentAutoCustom              AutoCustom
         """
 
-    def setInput(self, *args: Any, **kwargs: Any) -> Any:
+    def setInput(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """setInput(index, at, change=None) -> self
 
         Sets the input (MTime for T* curves or double for U* curves) of the key at the specified index.  This will fail ifsetting the input would require re-ordering of the keys.
         """
 
-    def setIsBreakdown(self, *args: Any, **kwargs: Any) -> Any:
+    def setIsBreakdown(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """setIsBreakdown(index, isBreakdown, change=None) -> self
 
         Sets the breakdown state of a key at a given index.
         """
 
-    def setIsWeighted(self, *args: Any, **kwargs: Any) -> Any:
+    def setIsWeighted(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """setIsWeighted(isWeighted, change=None) -> self
 
         Sets whether or not the curve has weighted tangents.
         """
 
-    def setOutTangentType(self, *args: Any, **kwargs: Any) -> Any:
+    def setOutTangentType(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """setOutTangentType(index, tangentType, change=None) -> self
 
         Sets the type of the tangent to the curve leaving the key at thespecified index.
         """
 
-    def setPostInfinityType(self, *args: Any, **kwargs: Any) -> Any:
+    def setPostInfinityType(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """setPostInfinityType(infinityType, change=None) -> self
 
         Sets the behaviour of the curve for the range occurring after the last key.
         """
 
-    def setPreInfinityType(self, *args: Any, **kwargs: Any) -> Any:
+    def setPreInfinityType(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """setPreInfinityType(infinityType, change=None) -> self
 
         Sets the behaviour of the curve for the range occurring before the first key.
@@ -820,7 +875,13 @@ class MFnAnimCurve(MFnDependencyNode):
         kOscillate                      Oscillate
         """
 
-    def setTangent(self, *args: Any, **kwargs: Any) -> Any:
+    def setQuaternionW(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """setQuaternionW(index, quaternionW, change=None) -> self
+
+        Sets the quaternionW of the key at the specified index.  This methodshould only be used on Anim Curves of type kAnimCurve*A.
+        """
+
+    def setTangent(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """setTangent(index, xOrAngle, yOrWeight, isInTangent, change=None, convertUnits=True) -> self
 
         Sets the tangent for the key at the specified index.
@@ -828,69 +889,69 @@ class MFnAnimCurve(MFnDependencyNode):
         isInTangent is True to modify the inTangent or False to modify the outTangent.
         """
 
-    def setTangentTypes(self, *args: Any, **kwargs: Any) -> Any:
+    def setTangentTypes(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """setTangentTypes(indexArray, tangentInType=kTangentGlobal, tangentOutType=kTangentGlobal, change=None) -> self
 
         Sets the tangent types for multiple keys.
         """
 
-    def setTangentsLocked(self, *args: Any, **kwargs: Any) -> Any:
+    def setTangentsLocked(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """setTangentsLocked(index, locked, change=None) -> self
 
         Lock or unlock the tangents at the given key.
         """
 
-    def setValue(self, *args: Any, **kwargs: Any) -> Any:
+    def setValue(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """setValue(index, value, change=None) -> self
 
         Sets the value of the key at the specified index.  This methodshould only be used on Anim Curves of type kAnimCurve*A, kAnimCurve*Lor kAnimCurve*U.
         """
 
-    def setWeight(self, *args: Any, **kwargs: Any) -> Any:
+    def setWeight(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """setWeight(index, weight, isInTangent, change=None) -> self
 
         Sets the in- or out-weight of the tangent for the key at the given index.
         isInTangent is True to modify the inTangent or False to modify the outTangent.
         """
 
-    def setWeightsLocked(self, *args: Any, **kwargs: Any) -> Any:
+    def setWeightsLocked(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """setWeightsLocked(index, locked, change=None) -> self
 
         Lock or unlock the weights at the given key.
         """
 
-    def tangentsLocked(self, *args: Any, **kwargs: Any) -> Any:
+    def tangentsLocked(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """tangentsLocked(index) -> bool
 
         Determines whether the tangents are locked at the given key.
         """
 
-    def timedAnimCurveTypeForPlug(self, *args: Any, **kwargs: Any) -> Any:
+    def timedAnimCurveTypeForPlug(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """timedAnimCurveTypeForPlug(plug) -> AnimCurveType
 
         Returns the timed animCurve type appropriate for the specified plug.
         """
 
-    def unitlessAnimCurveTypeForPlug(self, *args: Any, **kwargs: Any) -> Any:
+    def unitlessAnimCurveTypeForPlug(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """unitlessAnimCurveTypeForPlug(plug) -> AnimCurveType
 
         Returns the unitless animCurve type appropriate for the specified plug.
         """
 
-    def value(self, *args: Any, **kwargs: Any) -> Any:
+    def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """value(index) -> double
 
         Determines the value of the key at the specified index.  This methodshould only be used on Anim Curves of type kAnimCurve*A, kAnimCurve*Lor kAnimCurve*U.
         """
 
-    def weightsLocked(self, *args: Any, **kwargs: Any) -> Any:
+    def weightsLocked(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """weightsLocked(index) -> bool
 
         Determines whether the weights are locked at the given key.
         """
 
 
-class MFnGeometryFilter(MFnDependencyNode):
+class MFnGeometryFilter(maya.api.OpenMaya.MFnDependencyNode):
     """Function set for operating on geometryFilter nodes.
     geometryFilter is the abstract node type from which all
     deformer node types derive.
@@ -902,22 +963,22 @@ class MFnGeometryFilter(MFnDependencyNode):
     Initializes a new MFnGeometryFilter functionset and attaches it
     to a geometryFilter node.
     """
-    def __init__(self, *args, **kwargs) -> Any:
+    def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
-    def __new__(*args, **kwargs) -> Any:
+    def __new__(cls, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
 
-    deformerSet: getset_descriptor = <attribute 'deformerSet' of 'OpenMayaAnim.MFnGeometryFilter' objects>
-    envelope: getset_descriptor = <attribute 'envelope' of 'OpenMayaAnim.MFnGeometryFilter' objects>
-    def getComponentAtIndex(self, *args: Any, **kwargs: Any) -> Any:
+    deformerSet: Any
+    envelope: Any
+    def getComponentAtIndex(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """getComponentAtIndex(index) -> MObject
 
         Returns the component which contains the members of the deformer
         at the given index.
         """
 
-    def getInputGeometry(self, *args: Any, **kwargs: Any) -> Any:
+    def getInputGeometry(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """getInputGeometry() -> MObjectArray
 
         Returns the DAG nodes which provide input geometry to the deformer.
@@ -930,13 +991,13 @@ class MFnGeometryFilter(MFnDependencyNode):
         attribute on the deformer.
         """
 
-    def getOutputGeometry(self, *args: Any, **kwargs: Any) -> Any:
+    def getOutputGeometry(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """getOutputGeometry() -> MObjectArray
 
         Returns the DAG nodes which receive output geometry from the deformer.
         """
 
-    def getPathAtIndex(self, *args: Any, **kwargs: Any) -> Any:
+    def getPathAtIndex(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """getPathAtIndex(plugIndex) -> MDagPath
 
         Returns the DAG path of the specified output geometry.
@@ -944,7 +1005,7 @@ class MFnGeometryFilter(MFnDependencyNode):
         * plugIndex (unsigned int) - Plug index of the desired geometry.
         """
 
-    def groupIdAtIndex(self, *args: Any, **kwargs: Any) -> Any:
+    def groupIdAtIndex(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """groupIdAtIndex(plugIndex) -> long
 
         Returns the groupId associated with the specified geometry.
@@ -952,7 +1013,7 @@ class MFnGeometryFilter(MFnDependencyNode):
         * plugIndex (unsigned int) - Plug index of the desired geometry.
         """
 
-    def indexForGroupId(self, *args: Any, **kwargs: Any) -> Any:
+    def indexForGroupId(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """indexForGroupId(groupId) -> plugIndex
 
         Returns the plug index of the geometry associated with the specified groupId.
@@ -960,7 +1021,7 @@ class MFnGeometryFilter(MFnDependencyNode):
         * groupId (unsigned int) - groupId of the desired geometry.
         """
 
-    def indexForOutputConnection(self, *args: Any, **kwargs: Any) -> Any:
+    def indexForOutputConnection(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """indexForOutputConnection(connIndex) -> plugIndex
 
         Returns the plug index corresponding to a connection index. The
@@ -971,7 +1032,7 @@ class MFnGeometryFilter(MFnDependencyNode):
         * connIndex (unsigned int) - Connection index of the desired geometry.
         """
 
-    def indexForOutputShape(self, *args: Any, **kwargs: Any) -> Any:
+    def indexForOutputShape(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """indexForOutputShape(shape) -> plugIndex
 
         Returns the plug index for the specified output shape.
@@ -979,7 +1040,7 @@ class MFnGeometryFilter(MFnDependencyNode):
         * shape (MObject) - Shape for which the plug index is requested.
         """
 
-    def inputShapeAtIndex(self, *args: Any, **kwargs: Any) -> Any:
+    def inputShapeAtIndex(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """inputShapeAtIndex(plugIndex) -> MObject
 
         Returns the input shape corresponding to the plug index.
@@ -987,7 +1048,7 @@ class MFnGeometryFilter(MFnDependencyNode):
         * plugIndex (unsigned int) - Plug index of the desired shape.
         """
 
-    def numOutputConnections(self, *args: Any, **kwargs: Any) -> Any:
+    def numOutputConnections(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """numOutputConnections() -> long
 
         Returns the number of output geometries connected to this node. This
@@ -999,10 +1060,228 @@ class MFnGeometryFilter(MFnDependencyNode):
         to iterate through the affected objects.
         """
 
-    def outputShapeAtIndex(self, *args: Any, **kwargs: Any) -> Any:
+    def outputShapeAtIndex(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """outputShapeAtIndex(index) -> MObject
 
         Returns the DAG path to which this function set is attached, or the first path to the node if the function set is attached to an MObject.
+        """
+
+
+class MFnIkJoint(maya.api.OpenMaya.MFnTransform):
+    """Function set joints.
+
+    __init__()
+    Initializes a new, empty MFnIKJoint object.
+    """
+    def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+
+    def __new__(cls, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+
+    def create(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """create(parent=MObject.kNullObj) -> new joint node MObject
+
+
+        Create a new joint in a skeleton.  In maya, skeletons are defined
+        entirely by DAG hierarchy.  So, giving the joint you want to attach
+        to as a parent will add this joint to that skeleton.
+
+        parent: the parent object for this in the dag.  A value of
+                                                NULL specifies the world dag node as parent.
+        Return: The parent transform of the new joint
+        """
+
+    def degreesOfFreedom(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Gets degrees of freedom for this joint, that is, which axes are free
+        to rotate
+        """
+
+    def hikJointName(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Get the name that HIK uses to identify this joint"""
+
+    def maxRotateDampXRange(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Get the maximum of the damping range in X. This corresponds to the
+        maxRotateDampXRange attribute on the joint
+        """
+
+    def maxRotateDampXStrength(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Get the maximum of the damping strength in X. This corresponds to the
+        maxRotateDampXStrength attribute on the joint
+        """
+
+    def maxRotateDampYRange(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Get the maximum of the damping range in Y. This corresponds to the
+        maxRotateDampYRange attribute on the joint
+        """
+
+    def maxRotateDampYStrength(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Get the maximum of the damping strength in Y. This corresponds to the
+        maxRotateDampYStrength attribute on the joint
+        """
+
+    def maxRotateDampZRange(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Get the maximum of the damping range in Z. This corresponds to the
+        maxRotateDampZRange attribute on the joint
+        """
+
+    def maxRotateDampZStrength(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Get the maximum of the damping strength in Z. This corresponds to the
+        maxRotateDampZStrength attribute on the joint
+        """
+
+    def minRotateDampXRange(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Get the minimum of the damping range in X. This corresponds to the
+        minRotateDampXRange attribute on the joint
+        """
+
+    def minRotateDampXStrength(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Get the minimum of the damping strength in X. This corresponds to the
+        minRotateDampXStrength attribute on the joint
+        """
+
+    def minRotateDampYRange(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Get the minimum of the damping range in Y. This corresponds to the
+        minRotateDampYRange attribute on the joint
+        """
+
+    def minRotateDampYStrength(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Get the minimum of the damping strength in Y. This corresponds to the
+        minRotateDampYStrength attribute on the joint
+        """
+
+    def minRotateDampZRange(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Get the minimum of the damping range in Z. This corresponds to the
+        minRotateDampZRange attribute on the joint
+        """
+
+    def minRotateDampZStrength(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Get the minimum of the damping strength in Z. This corresponds to the
+        minRotateDampZStrength attribute on the joint
+        """
+
+    def orientation(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Gets the joint orientation as either an Euler rotation or a 
+        quaternion
+        """
+
+    def orientationComponents(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Get the joint orientation
+
+        Return: rotation angles and rotation order
+        """
+
+    def preferredAngle(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Get the preferred orientation angle for the joint.
+
+        Return: preferred angle
+        """
+
+    def scaleOrientation(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Gets the orientation of the coordinate axes, as either a quaternion
+        or a sequence of 4 values, namely, the Euler rotation components and
+        the order
+        """
+
+    def segmentScale(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Get the local space scale values for the joint segment (bone). This is
+        equivalent to calling MFnTransform::getScale.
+
+        Return: segment scale
+        """
+
+    def setDegreesOfFreedom(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Set the degrees of freedom for this joint by specifying which axes
+        are allowed to rotate
+        """
+
+    def setMaxRotateDampXRange(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Set the maximum of the damping range in X. This corresponds to the
+        setMaxRotateDampXRange attribute on the joint
+        """
+
+    def setMaxRotateDampXStrength(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Set the maximum of the damping strength in X. This corresponds to the
+        setMaxRotateDampXStrength attribute on the joint
+        """
+
+    def setMaxRotateDampYRange(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Set the maximum of the damping range in Y. This corresponds to the
+        setMaxRotateDampYRange attribute on the joint
+        """
+
+    def setMaxRotateDampYStrength(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Set the maximum of the damping strength in Y. This corresponds to the
+        setMaxRotateDampYStrength attribute on the joint
+        """
+
+    def setMaxRotateDampZRange(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Set the maximum of the damping range in Z. This corresponds to the
+        setMaxRotateDampZRange attribute on the joint
+        """
+
+    def setMaxRotateDampZStrength(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Set the maximum of the damping strength in Z. This corresponds to the
+        setMaxRotateDampZStrength attribute on the joint
+        """
+
+    def setMinRotateDampXRange(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Set the minimum of the damping range in X. This corresponds to the
+        setMinRotateDampXRange attribute on the joint
+        """
+
+    def setMinRotateDampXStrength(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Set the minimum of the damping strength in X. This corresponds to the
+        setMinRotateDampXStrength attribute on the joint
+        """
+
+    def setMinRotateDampYRange(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Set the minimum of the damping range in Y. This corresponds to the
+        setMinRotateDampYRange attribute on the joint
+        """
+
+    def setMinRotateDampYStrength(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Set the minimum of the damping strength in Y. This corresponds to the
+        setMinRotateDampYStrength attribute on the joint
+        """
+
+    def setMinRotateDampZRange(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Set the minimum of the damping range in Z. This corresponds to the
+        setMinRotateDampZRange attribute on the joint
+        """
+
+    def setMinRotateDampZStrength(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Set the minimum of the damping strength in Z. This corresponds to the
+        setMinRotateDampZStrength attribute on the joint
+        """
+
+    def setOrientation(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Sets the joint orientation, which can be specified as either an Euler
+        rotation, a quaternion, or a sequence of 4 values, namely, the Euler
+        rotation components and the order
+        """
+
+    def setPreferredAngle(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Set the preferred orientation angle for the joint."""
+
+    def setScaleOrientation(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Sets the orientation of the coordinate axes, which can be specified as either an Euler
+        rotation, a quaternion, or a sequence of 4 values, namely, the Euler
+        rotation components and the order
+        """
+
+    def setSegmentScale(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Set the segment scale for the joint."""
+
+    def setStiffness(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Set the stiffness for the joint. This is equivalent to calling
+        MFnTransform::setScale
+        """
+
+    def stiffness(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Get the stiffness for the joint.
+
+        Return: stiffness
         """
 
 
@@ -1024,13 +1303,13 @@ class MFnSkinCluster(MFnGeometryFilter):
     Initializes a new MFnSkinCluster functionset and attaches it to
     a skinCluster node.
     """
-    def __init__(self, *args, **kwargs) -> Any:
+    def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
-    def __new__(*args, **kwargs) -> Any:
+    def __new__(cls, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
 
-    def getBlendWeights(self, *args: Any, **kwargs: Any) -> Any:
+    def getBlendWeights(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """getBlendWeights(shape, components) -> MDoubleArray
 
         Returns blend weights for the specified components of the deformed
@@ -1043,7 +1322,7 @@ class MFnSkinCluster(MFnGeometryFilter):
         * components (MObject) - components for which weights should be returned
         """
 
-    def getPointsAffectedByInfluence(self, *args: Any, **kwargs: Any) -> Any:
+    def getPointsAffectedByInfluence(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """getPointsAffectedByInfluence(influence) -> (MSelectionList, MDoubleArray)
 
         During deformation, the skinCluster algorithm is applied for a given
@@ -1060,7 +1339,7 @@ class MFnSkinCluster(MFnGeometryFilter):
         * influence (MDagPath) - the influence object of interest
         """
 
-    def getWeights(self, *args: Any, **kwargs: Any) -> Any:
+    def getWeights(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """getWeights(shape, components) -> (MDoubleArray, int)
         getWeights(shape, components, influence) -> MDoubleArray
         getWeights(shape, components, influences) -> MDoubleArray
@@ -1088,7 +1367,7 @@ class MFnSkinCluster(MFnGeometryFilter):
         * influences (MIntArray) - indices of multiple influences to return weights for
         """
 
-    def indexForInfluenceObject(self, *args: Any, **kwargs: Any) -> Any:
+    def indexForInfluenceObject(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """indexForInfluenceObject(influenceObj) -> long
 
         Returns the logical index of the matrix array attribute where the
@@ -1097,13 +1376,13 @@ class MFnSkinCluster(MFnGeometryFilter):
         * influenceObj (MObject) - influence object for which the index is requested.
         """
 
-    def influenceObjects(self, *args: Any, **kwargs: Any) -> Any:
+    def influenceObjects(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """influenceObjects() -> MDagPathArray
 
         Returns an array of paths to the influence objects for the skinCluster.
         """
 
-    def setBlendWeights(self, *args: Any, **kwargs: Any) -> Any:
+    def setBlendWeights(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """setBlendWeights(shape, components, weights) -> self
 
         Sets blend weights for the specified components of the shape being
@@ -1119,7 +1398,7 @@ class MFnSkinCluster(MFnGeometryFilter):
                                    the two will be used.
         """
 
-    def setWeights(self, *args: Any, **kwargs: Any) -> Any:
+    def setWeights(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """setWeights(shape, components, influence, weight, normalize=True, returnOldWeights=False) -> None or MDoubleArray
         setWeights(shape, components, influences, weights, normalize=True, returnOldWeights=False) -> None or MDoubleArray
 
@@ -1163,3 +1442,7 @@ class MFnSkinCluster(MFnGeometryFilter):
         """
 
 
+key: str = '__file__'
+ourdict: Dict[str, Any]
+py2dict: Dict[str, Any]
+val: str = '/usr/autodesk/maya2024/lib/python3.10/site-packages/maya/api/_OpenMayaAnim_py2.so'

@@ -1,20 +1,19 @@
 from __future__ import annotations
 
-import concurrent.futures
 import inspect
-import logging
-from pkgutil import ModuleInfo
+import re
 from typing import Optional
 
 import docspec
 from attrs import Factory, define
 from maya import cmds
 
-from ..common import NULL_LOCATION, Parser, degraded_function
+from ..... import _logging
+from ..common import NULL_LOCATION, Parser, degraded_function, DocspecModuleMembers
 from .html_parser import CmdsDocsParser, DocumentationNotFound
 from .synopsis_parser import CmdsSynopsisParser, SynopsisNotFound
 
-logger = logging.getLogger(__name__)
+logger = _logging.getLogger(__name__)
 
 __all__ = ["CmdsParser"]
 
@@ -27,27 +26,26 @@ class CmdsParser(Parser):
     def parse_package(self, name: str) -> list[docspec.Module]:
         raise NotImplementedError
 
-    def parse_module(self, name: str) -> docspec.Module:
+    def parse_module(
+        self, name: str, member_pattern: Optional[str] = None
+    ) -> docspec.Module:
         logger.debug("Parsing module: %s", name)
 
         module_name = name
-        docspec_members = []
+        docspec_members: list[DocspecModuleMembers] = []
 
         commands = [
             command_name
             for command_name, _ in inspect.getmembers(cmds, callable)
             if not command_name[0].isupper()
+            and (
+                member_pattern is None
+                or re.search(member_pattern, "{}.{}".format(name, command_name))
+            )
         ]
 
-        if self.executor:
-            with self.executor:
-                results = self.executor.map(self.parse_function, commands)
-        else:
-            results = map(self.parse_function, commands)
-
-        for docspec_member in results:
-            if docspec_member is not None:
-                docspec_members.append(docspec_member)
+        results = self.map(lambda cmd: self.parse_function(module_name, cmd), commands)
+        docspec_members.extend(results)
 
         return docspec.Module(
             location=NULL_LOCATION,
@@ -56,7 +54,7 @@ class CmdsParser(Parser):
             members=docspec_members,
         )
 
-    def parse_function(self, name: str) -> docspec.Function:
+    def parse_function(self, module_name: str, name: str) -> docspec.Function:
         """Parse a cmds command and return a docspec Function.
 
         The html Documentation is scrapped first as it gives the best results.
@@ -64,7 +62,7 @@ class CmdsParser(Parser):
         If the synopsis also does not exist, we fallback to generating a degraded Function.
 
         Args:
-            command_name: The name of the maya command.
+            name: The name of the maya command.
 
         Returns:
             The Docspec Function for the maya command.
@@ -75,15 +73,19 @@ class CmdsParser(Parser):
         docspec_function = degraded_function(name)
 
         try:
-            synopsis_docspec_function = self.synposis_parser.parse_function(name)
+            synopsis_docspec_function = self.synposis_parser.parse_function(
+                module_name, name
+            )
         except SynopsisNotFound:
-            logger.debug("Couldn't find synopsis for %s.", name)
+            logger.warning("Couldn't find synopsis for %s.", name)
             synopsis_docspec_function = None
 
         try:
-            docs_docspec_function = self.docs_parser.parse_function(name)
+            docs_docspec_function = self.docs_parser.parse_function(
+                module_name, name, synopsis_function=synopsis_docspec_function
+            )
         except DocumentationNotFound:
-            logger.debug("Couldn't find documentation for %s", name)
+            logger.warning("Couldn't find documentation for %s", name)
             docs_docspec_function = None
 
         # The docs parser doesn't parse positional arguments but the synopsis parser does
@@ -97,26 +99,17 @@ class CmdsParser(Parser):
                 for arg in synopsis_docspec_function.args
                 if arg.type is docspec.Argument.Type.POSITIONAL_ONLY
             ]
-            if positional_args:
-                positional_args.append(
-                    docspec.Argument(
-                        NULL_LOCATION, "/", docspec.Argument.Type.POSITIONAL_ONLY
-                    )
-                )
-
-                for arg in reversed(positional_args):
-                    docs_docspec_function.args.insert(0, arg)
-
-        if docspec_function:
-            docspec_function = synopsis_docspec_function
+            docs_docspec_function.args = positional_args + docs_docspec_function.args
 
         if docs_docspec_function:
             docspec_function = docs_docspec_function
+        elif synopsis_docspec_function:
+            docspec_function = synopsis_docspec_function
 
         return docspec_function
 
-    def parse_class(self, name: str) -> docspec.Class:
+    def parse_class(self, module_name: str, name: str) -> docspec.Class:
         raise NotImplementedError
 
-    def parse_variable(self, name: str) -> docspec.Variable:
+    def parse_variable(self, module_name: str, name: str) -> docspec.Variable:
         raise NotImplementedError
