@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "maya-stubs-distrib"
-version = "0.3.1"
+version = "0.4.0"
 description = ""
 authors = ["Loïc Pinsard <muream@gmail.com>"]
 repository = "https://www.github.com/Muream/maya-stubs"

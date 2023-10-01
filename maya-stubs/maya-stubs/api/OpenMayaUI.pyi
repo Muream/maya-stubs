@@ -132,6 +132,12 @@ class M3dView:
         Get the current color mask
         """
 
+    def deviceContext(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """deviceContext() -> long
+
+        Returns a long containing a C++ 'void' pointer which points to the Windows device context for this view.
+        """
+
     def disallowPolygonOffset(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """disallowPolygonOffset() -> bool
 
@@ -141,8 +147,10 @@ class M3dView:
     def display(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """display() -> long
 
-        Returns a long containing a C++ 'void' pointer which points to the X display for this view.
-        The X display is neccessary for using openGL.
+        Returns a long containing a C++ 'void' pointer which points to the OpenGL context for this view.
+        On 32-bit OS X this is an AGLContext.
+        On 64-bit OS X this is an NSOpenGLContext pointer.
+        On Windows this is an HGLRC.
         """
 
     @staticmethod
@@ -318,13 +326,6 @@ class M3dView:
         Returns the current position of this view window in screen coordinates.
 
         This is useful for finding out the exact location of the window as it appears on the screen. These values are in UI coordinate space so the y value increases from bottom to top.
-        """
-
-    def glxContext(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
-        """glxContext() -> long
-
-        Returns a long containing a C++ 'void' pointer which points to the OpenGL context for this view.
-        This context is neccessary for using the offscreen rendering API to share textures and display lists with Maya.
         """
 
     @staticmethod
@@ -5971,6 +5972,7 @@ class MTimeSliderCustomDrawManager:
     def setDrawPriority(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setDrawVisible(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setEditPrimitiveFunction(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setSetCopyPrimitivesFunction(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setStartPrimitiveEditFunction(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setStopPrimitiveEditFunction(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setTooltip(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -6166,4 +6168,4 @@ class ShaderContext:
 key: str = '__file__'
 ourdict: Dict[str, Any]
 py2dict: Dict[str, Any]
-val: str = '/usr/autodesk/maya2024/lib/python3.10/site-packages/maya/api/_OpenMayaUI_py2.so'
+val: str = 'C:\\Program Files\\Autodesk\\Maya2024\\Python\\lib\\site-packages\\maya\\api\\_OpenMayaUI_py2.pyd'

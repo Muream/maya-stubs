@@ -5,7 +5,7 @@ from typing import *
 
 Unknown = Any
 
-MAYA_API_VERSION: int = 20240000
+MAYA_API_VERSION: int = 20240100
 MAYA_APP_VERSION: int = 2024
 MAYA_CUSTOM_VERSION: int = 20240000
 MAYA_CUSTOM_VERSION_CLIENT: str = ''
@@ -1275,7 +1275,6 @@ class MEulerRotation:
     def __repr__(self) -> Any: ...
     def __sub__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    _padding: str
     def alternateSolution(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def asMatrix(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def asQuaternion(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -8398,6 +8397,7 @@ class MWeight:
     thisown: bool
 
 NULL: int = 0
+STRICT: int = 1
 class array2dDouble:
     """
     """

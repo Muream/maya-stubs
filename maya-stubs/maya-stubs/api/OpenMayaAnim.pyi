@@ -1442,7 +1442,77 @@ class MFnSkinCluster(MFnGeometryFilter):
         """
 
 
+class MFnWeightGeometryFilter(MFnGeometryFilter):
+    """Function set for operating on weightGeometryFilter nodes.
+    weightGeometryFilter is the abstract node type from which 
+    weighted deformer node types derive.
+
+    __init__()
+    Initializes a new, empty MFnWeightGeometryFilter functionset.
+
+    __init__(MObject)
+    Initializes a new MFnWeightGeometryFilter functionset and attaches it
+    to a geometryFilter node.
+    """
+    def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+
+    def __new__(cls, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Create and return a new object.  See help(type) for accurate signature."""
+
+    def getEnvelopeWeights(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """getEnvelopeWeights(index) -> MFloatArray
+
+
+        Returns the weights the deformer uses for the geometry at the specified plug index.
+        * index (unsigned int) - Plug index of the desired geometry.
+        """
+
+    def getWeightPlugStrings(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """weightPlugStrings(list) -> MStringArray
+
+
+        Returns the names of the plugs on this node that correspond to the components in the selection list.
+        * list (MSelectionList) - selection list that contains components.
+        """
+
+    def getWeights(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """getWeights(index, components) -> MFloatArray
+        getWeights(path, components) -> MFloatArray
+
+
+        Returns the weight values of the components.
+        * plugIndex (unsigned int) - Plug index of the desired geometry.
+        * path (MDagPath) - The path of the DAG object that has the components.
+        * components (MObject) - The components whose weights are requested.
+        """
+
+    def setWeight(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """setWeight(path, index, components, weight, oldValues=None)
+        setWeight(path, index, components, values)
+        setWeight(path, components, weight, oldValues=None)
+        setWeight(path, components, values)
+
+
+        Returns the status of the operation.
+        * path (MDagPath) - The path of the DAG object that has the components.
+        * index (unsigned int) - Plug index of the desired geometry.
+        * components (MObject) - The components of the object.
+        * weight (float) - Weight weight value for the components.
+        * values (MFloatArray) -  An array of new values for the components.
+        * oldValues (MFloatArray) -  An array of old values for the components.
+        """
+
+    def weightPlugStrings(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """weightPlugStrings(list) -> MString
+
+
+        Returns a string (separated by spaces) containing the names of the plugs on this node that correspond to the components in the selection list.
+        * list (MSelectionList) - selection list that contains components.
+        """
+
+
 key: str = '__file__'
 ourdict: Dict[str, Any]
 py2dict: Dict[str, Any]
-val: str = '/usr/autodesk/maya2024/lib/python3.10/site-packages/maya/api/_OpenMayaAnim_py2.so'
+val: str = 'C:\\Program Files\\Autodesk\\Maya2024\\Python\\lib\\site-packages\\maya\\api\\_OpenMayaAnim_py2.pyd'

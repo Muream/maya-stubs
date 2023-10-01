@@ -204,7 +204,7 @@ class MArgList:
         Return index of first occurrence of specified flag.
         """
 
-    kInvalidArgIndex: int = 4294967295
+    kInvalidArgIndex: int = -1
     def lastArgUsed(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """lastArgUsed() -> int
 
@@ -20996,4 +20996,4 @@ ourdict: Dict[str, Any]
 py2dict: Dict[str, Any]
 def registerStringResource(*args: Unknown, **kwargs: Unknown) -> Any: ...
 def registerStringResources(*args: Unknown, **kwargs: Unknown) -> Any: ...
-val: str = '/usr/autodesk/maya2024/lib/python3.10/site-packages/maya/api/_OpenMaya_py2.so'
+val: str = 'C:\\Program Files\\Autodesk\\Maya2024\\Python\\lib\\site-packages\\maya\\api\\_OpenMaya_py2.pyd'

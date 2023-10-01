@@ -8175,4 +8175,4 @@ class MVertexBufferDescriptorList:
 key: str = '__file__'
 ourdict: Dict[str, Any]
 py2dict: Dict[str, Any]
-val: str = '/usr/autodesk/maya2024/lib/python3.10/site-packages/maya/api/_OpenMayaRender_py2.so'
+val: str = 'C:\\Program Files\\Autodesk\\Maya2024\\Python\\lib\\site-packages\\maya\\api\\_OpenMayaRender_py2.pyd'
