@@ -14,7 +14,7 @@ import docspec_to_jinja
 from .parsers.cmds_parsers import CmdsParser
 from .parsers.common import Parser
 from ... import _logging
-from ...utils import maya_standalone, timed, cache_dir
+from ...utils import maya_standalone, timed, cache_dir, remove_outdated_cache
 
 from .parsers import BuiltinParser, CmdsParser
 
@@ -195,6 +195,7 @@ def dump_docspec(
     logger.info("Dumping Docspec for %s", ", ".join(whitelist))
 
     with maya_standalone():
+        remove_outdated_cache()
         modules = MayaParser().parse_package(
             "maya", whitelist=whitelist, member_pattern=member_pattern
         )

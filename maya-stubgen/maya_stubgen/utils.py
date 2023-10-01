@@ -30,6 +30,7 @@ __all__ = [
     "timed",
     "maya_version",
     "cache_dir",
+    "remove_outdated_cache",
 ]
 
 # List of plugins that contain commands that should have generated stubs
@@ -105,8 +106,37 @@ def maya_version() -> str:
     return _maya_version
 
 
+def remove_outdated_cache() -> None:
+    """Deletes the existing cache directory if it was generated using another version of Maya."""
+    version = maya_version()
+    cache = cache_dir()
+    if not cache.exists():
+        # we have no cache, nothing to do
+        return
+
+    maya_version_file = cache / ".maya_version"
+    try:
+        with maya_version_file.open("r") as f:
+            cache_version = f.read().strip()
+            if cache_version == version:
+                # cache is from current maya version, nothing to do
+                return
+            logger.warning(
+                "Running against Maya %s, but cache was generated using Maya %s; removing existing cache",
+                version,
+                cache_version,
+            )
+    except FileNotFoundError:
+        logger.warning("Cache from unknown Maya version found; removing existing cache")
+
+    shutil.rmtree(cache)
+    cache.mkdir(parents=True, exist_ok=True)
+    with maya_version_file.open("w") as f:
+        f.write(version)
+
+
 def cache_dir() -> pathlib.Path:
-    return Path().resolve() / ".cache" / maya_version()
+    return Path().resolve() / ".cache"
 
 
 P = ParamSpec("P")

@@ -407,10 +407,11 @@ def get_documentation(command_name: str) -> str:
                 f"Documentation not found for {command_name}"
             ) from exc
 
+        logger.debug("Writing documentation cache: %s", cache_page)
         cache_page.parent.mkdir(parents=True, exist_ok=True)
         with cache_page.open("w", encoding="utf8") as f:
             f.write(response.text)
-
-    logger.debug("Documentation cache: %s", str(cache_page))
+    else:
+        logger.debug("Found existing documentation cache: %s", cache_page)
 
     return cache_page.read_text()

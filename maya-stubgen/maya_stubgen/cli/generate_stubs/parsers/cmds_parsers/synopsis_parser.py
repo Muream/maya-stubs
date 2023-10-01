@@ -227,6 +227,8 @@ class CmdsSynopsisParser(Parser):
 
         synopsis: str
         if not cache_page.exists():
+            logger.debug("Fetching synopsis from Maya")
+
             try:
                 synopsis = cmds.help(command_name)  # type: ignore
             except RuntimeError as exc:
@@ -235,11 +237,13 @@ class CmdsSynopsisParser(Parser):
                     f"Synopsis not found for {command_name}"
                 ) from exc
 
+            logger.debug("Writing synopsis cache: %s", cache_page)
             cache_page.parent.mkdir(parents=True, exist_ok=True)
             with cache_page.open("w", encoding="utf8") as f:
                 f.write(synopsis.strip())
+        else:
+            logger.debug("Found existing synopsis cache: %s", cache_page)
 
-        logger.debug("Synopsis cache: %s", str(cache_page))
         synopsis = cache_page.read_text()
 
         return synopsis
