@@ -41,3 +41,16 @@ You can get the stubs with one of two ways:
 1. Run `pip install maya-stubs` from the python executable used by your IDE.
 2. Download them manually from the [Github releases](https://github.com/Muream/maya-stubs/releases) and let your IDE know of their location.
 
+## Notes
+
+### PyCharm maya.cmds completion
+
+PyCharm users may not see code completion for `maya.cmds` as the editor limits code insight features by default on files over 2.5 MB for performance reasons. Currently the cmds stub is over this limit.
+
+This value can be increased in [PyCharm's properties](https://www.jetbrains.com/help/pycharm/file-idea-properties.html), accessible via the `Help > Edit Custom Properties` menu.
+
+Code completion should work after adding the line below to the properties file and restarting PyCharm. This example overrides the default value from 2.5 MB to 10 MB. The value may be customized as needed, but keep in mind it can affect editor performance.
+
+```
+idea.max.intellisense.filesize = 10000
+```
