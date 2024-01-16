@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "maya-stubs-distrib"
-version = "0.4.0"
+version = "0.4.1"
 description = ""
 authors = ["Loïc Pinsard <muream@gmail.com>"]
 repository = "https://www.github.com/Muream/maya-stubs"
@@ -45,11 +45,7 @@ pythonVersion = "3.7"
 [tool.mypy]
 strict = true
 python_version = "3.9"
-packages = [
-    "maya",
-    "docspec_to_jinja",
-    "maya-stubgen.maya_stubgen",
-]
+packages = ["maya", "docspec_to_jinja", "maya-stubgen.maya_stubgen"]
 
 [[tool.mypy.overrides]]
 module = "maya.*"

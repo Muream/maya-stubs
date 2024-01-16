@@ -1,18 +1,16 @@
 [tool.poetry]
 name = "maya-stubs"
-version = "0.4.0"
+version = "0.4.1"
 description = "Type Annotated Stubs for Autodesk Maya's python APIs"
 authors = ["Loïc Pinsard <muream@gmail.com>"]
 license = "MIT"
-packages = [
-    {include = "maya-stubs"}
-]
+packages = [{ include = "maya-stubs" }]
 repository = "https://www.github.com/Muream/maya-stubs"
 keywords = ["stubs", "autodesk", "maya", "cmds", "OpenMaya"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^2.7 || ^3.7"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -21,14 +19,10 @@ build-backend = "poetry.core.masonry.api"
 [tool.pyright]
 typeCheckingMode = "strict"
 pythonVersion = "3.7"
-include = [
-    "maya-stubs",
-]
+include = ["maya-stubs"]
 
 [tool.mypy]
 strict = true
 python_version = "3.7"
 disable_error_code = ["override"]
-packages = [
-    "maya",
-]
+packages = ["maya"]
