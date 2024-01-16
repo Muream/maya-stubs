@@ -7,7 +7,7 @@ license = "MIT"
 packages = [{ include = "maya-stubs" }]
 repository = "https://www.github.com/Muream/maya-stubs"
 keywords = ["stubs", "autodesk", "maya", "cmds", "OpenMaya"]
-readme = "README.md"
+readme = "../README.md"
 
 [tool.poetry.dependencies]
 python = "^2.7 || ^3.7"
