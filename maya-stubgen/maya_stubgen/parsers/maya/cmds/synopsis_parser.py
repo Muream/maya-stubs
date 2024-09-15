@@ -7,10 +7,10 @@ import docspec
 from attrs import define
 from maya import cmds
 
-from ..... import _logging
-from ..common import NULL_LOCATION, Parser
+from maya_stubgen import _logging
+from maya_stubgen.parsers import NULL_LOCATION, Parser
 from .common import mel_to_python_type
-from .....utils import cache_dir
+from maya_stubgen.utils import cache_dir
 
 logger = _logging.getLogger(__name__)
 

@@ -8,6 +8,8 @@ from typing import Optional
 
 import docspec
 
+from maya_stubgen.parsers.common import NULL_LOCATION
+
 from .. import BuiltinParser, CmdsParser, Parser
 
 logger = logging.getLogger(__name__)
@@ -22,6 +24,9 @@ class MayaParser(Parser):
         member_pattern: Optional[str] = None,
     ) -> list[docspec.Module]:
         logger.debug("Parsing package: %s", name)
+
+        if whitelist is None:
+            whitelist = []
 
         docspec_modules: list[docspec.Module] = []
 
@@ -38,7 +43,7 @@ class MayaParser(Parser):
             [(package.__name__, True)], ((mod.name, mod.ispkg) for mod in submodules)
         )
         for module_name, ispkg in all_modules:
-            if whitelist is not None and module_name not in whitelist:
+            if module_name not in whitelist:
                 continue
 
             if module_name == "maya.cmds":

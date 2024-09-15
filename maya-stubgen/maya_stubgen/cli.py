@@ -6,7 +6,7 @@ from typing import Optional
 
 import click
 
-from .generate_stubs import build_docs, build_stubs, dump_docspec
+from .stubgen import build_docs, build_stubs, get_modules
 
 
 logger = logging.getLogger("maya_stubgen")
@@ -18,7 +18,13 @@ def cli() -> None:
 
 
 @cli.command()
-@click.option("-p", "--profile", is_flag=True)
+@click.option(
+    "-p",
+    "--profile",
+    is_flag=True,
+    help="Whether to profile the code using cProfile. "
+    "The profile file can be found in temp/generate_stubs.prof",
+)
 @click.option(
     "-m",
     "--module",
@@ -34,13 +40,15 @@ def cli() -> None:
     help="If specified, docspec files will only be generated for members matching this regex.",
 )
 def generate_docspec(
-    profile: bool, module: Optional[list[str]], members: Optional[str]
+    profile: bool,
+    module: Optional[list[str]],
+    members: Optional[str],
 ) -> None:
     if profile:
         profiler = cProfile.Profile()
         profiler.enable()
 
-        dump_docspec(module, member_pattern=members)
+        get_modules(module, member_pattern=members)
 
         profiler.disable()
 
@@ -49,7 +57,7 @@ def generate_docspec(
         prof_file.parent.mkdir(exist_ok=True)
         stats.dump_stats(str(prof_file))
     else:
-        dump_docspec(module, member_pattern=members)
+        get_modules(module, member_pattern=members)
 
 
 @cli.command()
@@ -63,8 +71,20 @@ def generate_docspec(
         path_type=Path,
     ),
 )
-@click.option("-p", "--profile", is_flag=True)
-@click.option("-rc", "--reuse-cache", is_flag=True)
+@click.option(
+    "-p",
+    "--profile",
+    is_flag=True,
+    help="Whether to profile the code using cProfile. "
+    "The profile file can be found in temp/generate_stubs.prof",
+)
+@click.option(
+    "-rc",
+    "--reuse-cache",
+    is_flag=True,
+    help="whether to re-use the docspec cache from the previous run. "
+    "Use this if you are only making changes to the stub generation side of things, not the parsing.",
+)
 @click.option(
     "-m",
     "--module",
@@ -117,8 +137,20 @@ def generate_stubs(
         path_type=Path,
     ),
 )
-@click.option("-p", "--profile", is_flag=True)
-@click.option("-rc", "--reuse-cache", is_flag=True)
+@click.option(
+    "-p",
+    "--profile",
+    is_flag=True,
+    help="Whether to profile the code using cProfile. "
+    "The profile file can be found in temp/generate_docs.prof",
+)
+@click.option(
+    "-rc",
+    "--reuse-cache",
+    is_flag=True,
+    help="whether to re-use the docspec cache from the previous run. "
+    "Use this if you are only making changes to the docs generation side of things, not the parsing.",
+)
 def generate_docs(path: Path, profile: bool, reuse_cache: bool) -> None:
     logger.info("Generating Docs")
 
