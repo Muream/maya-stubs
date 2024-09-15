@@ -9,6 +9,7 @@ from typing import Optional
 import docspec
 
 
+from maya_stubgen.parsers.common import NULL_LOCATION
 from .. import BuiltinParser, CmdsParser, Parser
 
 logger = logging.getLogger(__name__)
