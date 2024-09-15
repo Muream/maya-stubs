@@ -12,6 +12,7 @@ docspec-to-jinja = { path = "docspec-to-jinja/", develop = true }
 maya-stubs = { path = "maya-stubs/", develop = true }
 # maya-docs = { path = "maya-docs/", develop = true }
 attrs = "^22.2.0"
+aiofiles = "^24.1.0"
 
 [tool.poetry.dev-dependencies]
 black = "^22.6.0"

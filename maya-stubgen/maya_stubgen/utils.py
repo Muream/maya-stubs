@@ -115,24 +115,22 @@ def remove_outdated_cache() -> None:
         return
 
     maya_version_file = cache / ".maya_version"
-    try:
-        with maya_version_file.open("r") as f:
-            cache_version = f.read().strip()
-            if cache_version == version:
-                # cache is from current maya version, nothing to do
-                return
-            logger.warning(
-                "Running against Maya %s, but cache was generated using Maya %s; removing existing cache",
-                version,
-                cache_version,
-            )
-    except FileNotFoundError:
+    if not maya_version_file.exists():
+        cache_version = maya_version_file.read_text().strip()
+        if cache_version == version:
+            # cache is from current maya version, nothing to do
+            return
+        logger.warning(
+            "Running against Maya %s, but cache was generated using Maya %s; removing existing cache",
+            version,
+            cache_version,
+        )
+    else:
         logger.warning("Cache from unknown Maya version found; removing existing cache")
 
     shutil.rmtree(cache)
     cache.mkdir(parents=True, exist_ok=True)
-    with maya_version_file.open("w") as f:
-        f.write(version)
+    maya_version_file.write_text(version)
 
 
 def cache_dir() -> pathlib.Path:
