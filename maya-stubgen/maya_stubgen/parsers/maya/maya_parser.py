@@ -9,6 +9,7 @@ from typing import Optional
 import docspec
 
 
+from maya_stubgen.parsers.common import NULL_LOCATION
 from .. import BuiltinParser, CmdsParser, Parser
 
 logger = logging.getLogger(__name__)
@@ -44,6 +45,24 @@ class MayaParser(Parser):
                 docspec_module = CmdsParser().parse_module(
                     module_name, member_pattern=member_pattern
                 )
+                new_module = docspec.Module(
+                    NULL_LOCATION,
+                    name=f"{module_name}",
+                    docstring=docspec.Docstring(NULL_LOCATION, ""),
+                    members=[],
+                )
+
+                for cmds_function in docspec_module.members:
+                    cmds_module = docspec.Module(
+                        NULL_LOCATION,
+                        name=f"{module_name}._{cmds_function.name}",
+                        docstring=docspec.Docstring(NULL_LOCATION, ""),
+                        members=[cmds_function],
+                    )
+                    docspec_modules.append(cmds_module)
+                    new_module.members.append(cmds_module)
+
+                docspec_module = new_module
             else:
                 docspec_module = BuiltinParser().parse_module(
                     module_name, member_pattern=member_pattern

@@ -4585,7 +4585,7 @@ class MRenderTargetAssignment:
     def __new__(cls, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
 
-    target: MRenderTarget
+    target: Any
 
 class MRenderTargetDescription:
     """Class which provides a description of a hardware render target."""
@@ -6566,7 +6566,7 @@ class MTextureAssignment:
     def __new__(cls, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
 
-    texture: MTexture
+    texture: Any
 
 class MTextureDescription:
     """Texture description. Provides sufficient information to describe how a block of data can be interpreted as a texture."""

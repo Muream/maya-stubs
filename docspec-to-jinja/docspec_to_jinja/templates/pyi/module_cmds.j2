@@ -1,0 +1,9 @@
+{% for member in module.members %}
+from .{{ member.name.split(".")[-1] }} import {{ member.members[0].name }}
+{% endfor %}
+
+__all__ = [
+{% for member in module.members %}
+    "{{ member.members[0].name }}",
+{% endfor %}
+]

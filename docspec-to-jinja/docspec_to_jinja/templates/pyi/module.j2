@@ -8,7 +8,7 @@ import {{ imp }}
 {% endfor %}
 
 Unknown = Any
-{% if module.name == "maya.cmds.__init__" %}
+{% if "maya.cmds" in module.name %}
 
 _T = TypeVar("_T")
 

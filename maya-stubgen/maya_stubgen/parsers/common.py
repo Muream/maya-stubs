@@ -13,13 +13,6 @@ __all__ = [
 
 NULL_LOCATION = docspec.Location("", 0)
 
-# DocspecModuleMembers = (
-#     docspec.Variable
-#     | docspec.Function
-#     | docspec.Class
-#     | docspec.Module
-#     | docspec.Indirection
-# )
 DocspecModuleMembers = docspec._ModuleMemberType
 
 DocspecClassMembers = (
