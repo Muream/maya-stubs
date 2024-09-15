@@ -4,13 +4,13 @@ from typing import Optional, Union
 import docstring_parser
 from docspec import (
     ApiObject,
+    Argument,
     Class,
     Docstring,
     Function,
+    FunctionSemantic,
     Module,
     Variable,
-    Argument,
-    FunctionSemantic,
 )
 from jinja2 import Environment, PackageLoader, select_autoescape
 
@@ -51,9 +51,7 @@ def render(api_object: ApiObject, template_type: str) -> str:
 def get_imports(module: Module) -> list[str]:
     # remove type arguments
     types = (type_name.split("[", 1)[0] for type_name in _get_module_types(module))
-    return sorted(
-        set(type_name.rsplit(".", 1)[0] for type_name in types if "." in type_name)
-    )
+    return sorted(set(type_name.rsplit(".", 1)[0] for type_name in types if "." in type_name))
 
 
 def _get_module_types(module: Module) -> Iterator[str]:
@@ -98,7 +96,12 @@ def _get_variable_types(var: Variable) -> Iterator[str]:
 
 
 def render_module(module: Module, template_type: str, nested: bool = False) -> str:
-    template = env.get_template(f"{template_type}/module.j2")
+    # TODO: docspec-to-jinja should not be the one to decide which
+    # TODO: template to chose for maya.cmds
+    if module.name == "maya.cmds.__init__":
+        template = env.get_template(f"{template_type}/module_cmds.j2")
+    else:
+        template = env.get_template(f"{template_type}/module.j2")
 
     return template.render(
         module=module,

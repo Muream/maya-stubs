@@ -4585,7 +4585,7 @@ class MRenderTargetAssignment:
     def __new__(cls, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
 
-    target: MRenderTarget
+    target: Any
 
 class MRenderTargetDescription:
     """Class which provides a description of a hardware render target."""
