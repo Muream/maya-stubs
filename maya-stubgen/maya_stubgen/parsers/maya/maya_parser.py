@@ -8,7 +8,6 @@ from typing import Optional
 
 import docspec
 
-from maya_stubgen.parsers.common import NULL_LOCATION
 
 from .. import BuiltinParser, CmdsParser, Parser
 
@@ -30,11 +29,6 @@ class MayaParser(Parser):
 
         docspec_modules: list[docspec.Module] = []
 
-        # Executor with pre-initialized maya interpreters passed around to
-        # the different parsers
-        # executor = concurrent.futures.ProcessPoolExecutor(initializer=initialize_maya)
-        executor = None
-
         package = importlib.import_module(name)
 
         submodules = pkgutil.walk_packages(package.__path__, package.__name__ + ".")
@@ -47,11 +41,11 @@ class MayaParser(Parser):
                 continue
 
             if module_name == "maya.cmds":
-                docspec_module = CmdsParser(executor).parse_module(
+                docspec_module = CmdsParser().parse_module(
                     module_name, member_pattern=member_pattern
                 )
             else:
-                docspec_module = BuiltinParser(executor).parse_module(
+                docspec_module = BuiltinParser().parse_module(
                     module_name, member_pattern=member_pattern
                 )
 

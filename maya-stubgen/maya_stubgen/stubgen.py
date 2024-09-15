@@ -15,6 +15,7 @@ logger = logging.getLogger(__name__)
 def get_modules(
     whitelist: Optional[list[str]] = None,
     member_pattern: Optional[str] = None,
+    reuse_cache: bool = False,
 ) -> list[docspec.Module]:
     whitelist = whitelist or [
         # OpenMaya 1.0
@@ -40,21 +41,43 @@ def get_modules(
 
     logger.info("Dumping Docspec for %s", ", ".join(whitelist))
 
-    with maya_standalone():
-        remove_outdated_cache()
-        modules = MayaParser().parse_package("maya", whitelist=whitelist, member_pattern=member_pattern)
+    if reuse_cache:
+        modules = []
+        docspec_cache_dir = cache_dir() / "docspec"
+        for docspec_cache in docspec_cache_dir.rglob("*.json"):
+            module_name = (
+                docspec_cache.relative_to(docspec_cache_dir)
+                .with_suffix("")
+                .as_posix()
+                .replace("/", ".")
+                .replace(".__init__", "")
+            )
+            if module_name not in whitelist:
+                continue
 
-        # for module in modules:
-        #     docspec_cache = (
-        #         cache_dir() / "docspec" / (module.name.replace(".", "/") + ".json")
-        #     )
+            logger.debug("Loading Docspec Cache for %s.", docspec_cache.stem)
+            module = docspec.load_module(str(docspec_cache))
+            modules.append(module)
+    else:
+        with maya_standalone():
+            remove_outdated_cache()
+            modules = MayaParser().parse_package(
+                "maya",
+                whitelist=whitelist,
+                member_pattern=member_pattern,
+            )
 
-        #     os.makedirs(docspec_cache.parent, exist_ok=True)
+            for module in modules:
+                docspec_cache = (
+                    cache_dir() / "docspec" / (module.name.replace(".", "/") + ".json")
+                )
 
-        #     logger.debug("Dumping %s to %s", module.name, docspec_cache)
-        #     docspec.dump_module(module, target=str(docspec_cache))
+                os.makedirs(docspec_cache.parent, exist_ok=True)
 
-        return modules
+                logger.debug("Dumping %s to %s", module.name, docspec_cache)
+                docspec.dump_module(module, target=str(docspec_cache))
+
+    return modules
 
 
 def build_stubs(
@@ -63,36 +86,19 @@ def build_stubs(
     whitelist: Optional[list[str]] = None,
     member_pattern: Optional[str] = None,
 ) -> None:
-    # if not reuse_cache:
-    modules = get_modules(whitelist=whitelist, member_pattern=member_pattern)
+    modules = get_modules(
+        whitelist=whitelist,
+        member_pattern=member_pattern,
+        reuse_cache=reuse_cache,
+    )
 
-    # whitelist_patterns = []
-    # if whitelist:
-    #     whitelist_patterns = [
-    #         pattern
-    #         for mod in whitelist
-    #         for pattern in (
-    #             # whitelist entry may be a module or a package
-    #             mod.replace(".", "/") + ".json",
-    #             mod.replace(".", "/") + "/__init__.json",
-    #         )
-    #     ]
-
-    # docspec_cache = cache_dir() / "docspec"
     for module in modules:
-        # for f in docspec_cache.glob("**/*.json"):
-        #     if whitelist_patterns and not any(
-        #         f.match(pattern) for pattern in whitelist_patterns
-        #     ):
-        #         continue
-
-        #     logger.debug("Loading %s", f)
-        #     module = docspec.load_module(str(f))
-
         logger.debug("Rendering %s", module.name)
         stub = docspec_to_jinja.render_module(module, "pyi")
 
-        stub_path = path / (module.name.replace("maya", "maya-stubs").replace(".", "/") + ".pyi")
+        stub_path = path / (
+            module.name.replace("maya", "maya-stubs").replace(".", "/") + ".pyi"
+        )
 
         os.makedirs(stub_path.parent, exist_ok=True)
 
@@ -100,11 +106,9 @@ def build_stubs(
         with stub_path.open("w", encoding="utf-8") as out_f:
             out_f.write(stub)
 
-        # if stub_path.parent.resolve() != docspec_cache.resolve():
-        #     # create empty __init__ if it does not exist already
-        #     init_path = stub_path.parent / "__init__.pyi"
-        #     with init_path.open("a"):
-        #         pass
+        # create empty __init__ if it does not exist already
+        if not (init_path := stub_path.parent / "__init__.pyi").exists():
+            init_path.write_text("")
 
 
 def build_docs(path: Path, reuse_cache: bool = False) -> None:
@@ -160,7 +164,13 @@ def build_docs(path: Path, reuse_cache: bool = False) -> None:
             else:
                 continue
 
-            member_doc_path = Path().resolve() / "docs" / "content" / module_paths[module.name] / f"{member.name}.md"
+            member_doc_path = (
+                Path().resolve()
+                / "docs"
+                / "content"
+                / module_paths[module.name]
+                / f"{member.name}.md"
+            )
 
             os.makedirs(member_doc_path.parent, exist_ok=True)
 

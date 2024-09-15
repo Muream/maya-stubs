@@ -16,21 +16,24 @@ There are two ways into which you can contribute to this:
 The Project contains a few different sub-projects:
 
 - `maya-stubgen` is the library that generates the stubs.
-  the most interesting bits are tucked under `maya_stubgen/cli/generate_stubs/docspec_parser` where you'll find:
-    - `docspec_from_builtin.py`: This module generates a `docspec.Module` for any python module.
+  the most interesting bits are tucked under `maya_stubgen/parsers` where you'll find:
+    - `parsers/builtin_parser`: This module generates a `docspec.Module` for any python module.
       Since it works with introspection, it is able work with builtin modules.
       This is the fallback if any of the other parsers fail.
-    - `docspec_from_cmds`: This package generates a `docspec.Module` for `maya.cmds` specifically.
-      It contains two different parsers:
-        - `html_parser.py`: which parses the html documentation 
-          This parser is generally able to get pretty accurate stubs including return types, flag types, docstrings and examples.
-        - `synopsis_parser.py`: which parses the result of `cmds.help("MyCommand")`.
-          This parser generally will only produce accurate flag types but has the benefit of working for _all_ commands available in the maya session. 
-          Including plug-in commands which are not on the HTML docs and generally not included in other stubs.
-    - `docspec_from_api1`: Doesn't exist yet but this is where the dedicate API 1.0 parser will live
-    - `docspec_from_api2`: Doesn't exist yet but this is where the dedicate API 2.0 parser will live
+    - `/parsers/maya` contains all the different parsers dedicated to parsing the different maya modules.
+      - `MayaParser`: is a "Parser" that decides which actual parser to call for each module
+      - `parsers/maya/cmds`: This package generates a `docspec.Module` for `maya.cmds` specifically.
+        It contains three different parsers:
+          - `CmdsParser`: This "Parser" simply decides which of the Docs or Synopsis parser to use for each command
+          - `CmdsDocsParser`: Parses the html documentation 
+            This parser is generally able to get pretty accurate stubs including return types, flag types, docstrings and examples.
+          - `CmdsSynopsisParser`: parses the result of `cmds.help("MyCommand")`.
+            This parser generally will only produce accurate flag types but has the benefit of working for _all_ commands available in the maya session. 
+            Including plug-in commands which are not on the HTML docs and generally not included in other stubs.
+      - `parsers/OpenMaya1`: Doesn't exist yet but this is where the dedicate API 1.0 parser will live
+      - `parsers/OpenMaya2`: Doesn't exist yet but this is where the dedicate API 2.0 parser will live
 - `docspec-to-jinja`: This library converts the docspec objects to `pyi` and `md` files through jinja2 templates (it is a dependency of `maya-stubgen`)
-- `maya-docs` kinda deprecated, this is a project that contains generated documentation from the maya-stubgen docspec
+- `maya-docs` Kind of deprecated, this is a project that contains generated documentation from the maya-stubgen docspec
 - `maya-stubs` is where the stubs are stored.
     All of the content of this project is meant to be automatically generated.
     This project is compatible with python >3.7 so it can be installed in projects using any of these python versions.
@@ -41,7 +44,7 @@ The Project contains a few different sub-projects:
 ### Prerequisites
 
 - [Poetry](https://python-poetry.org/)
-- Maya 2023 or 2024
+- Maya 2023 or above
 
 ### Generate the stubs
 

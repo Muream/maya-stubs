@@ -41,27 +41,17 @@ class BuiltinParser(Parser):
         if docstring := inspect.getdoc(module):
             docspec_docstring = docspec.Docstring(NULL_LOCATION, docstring)
 
-        if self.executor:
-            pass
-            # with self.executor:
-            #     results = self.executor.map(self._parse_builtin_member, members)
-            #     for docspec_member in results:
-            #         if docspec_member is not None:
-            #             docspec_members.append(docspec_member)
-        else:
-            members = inspect.getmembers(module)
-            for member_name, member_value in members:
-                qualified_name = "{}.{}".format(name, member_name)
-                if member_pattern is not None and not re.search(
-                    member_pattern, qualified_name
-                ):
-                    continue
+        members = inspect.getmembers(module)
+        for member_name, member_value in members:
+            qualified_name = "{}.{}".format(name, member_name)
+            if member_pattern is not None and not re.search(
+                member_pattern, qualified_name
+            ):
+                continue
 
-                docspec_member = self._parse_builtin_member(
-                    name, member_name, member_value
-                )
-                if docspec_member is not None:
-                    docspec_members.append(docspec_member)
+            docspec_member = self._parse_builtin_member(name, member_name, member_value)
+            if docspec_member is not None:
+                docspec_members.append(docspec_member)
 
         return docspec.Module(NULL_LOCATION, name, docspec_docstring, docspec_members)
 

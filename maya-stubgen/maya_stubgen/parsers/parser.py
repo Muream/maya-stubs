@@ -1,9 +1,8 @@
 """Abstract parser defining the interface used by all the different parsers"""
 
-import concurrent.futures
 from abc import ABC, abstractmethod
 from collections.abc import Callable, Iterable, Iterator
-from typing import Any, Optional, TypeVar
+from typing import Any, TypeVar
 
 import docspec
 from attrs import define, field
@@ -18,16 +17,12 @@ __all__ = [
 
 @define
 class Parser(ABC):
-    executor: Optional[concurrent.futures.Executor] = None
-
     _members: dict[str, Any] = field(init=False, factory=dict)
 
     def add_member(self, name: str, member: Any) -> None:
         self._members[name] = member
 
     def map(self, f: Callable[[T], V], items: Iterable[T]) -> Iterator[V]:
-        if self.executor is not None:
-            return self.executor.map(f, items)
         return map(f, items)
 
     @abstractmethod
