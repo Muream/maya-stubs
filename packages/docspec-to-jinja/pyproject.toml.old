@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "docspec-to-jinja"
+version = "0.1.0"
+description = "Convert python code to any kind of documentation format."
+authors = ["Loïc Pinsard <muream@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+Jinja2 = "^3.1.2"
+docstring-parser = "^0.14.1"
+docspec-python = "^2.0.1"
+docspec = "^2.0.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = "^22.6.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

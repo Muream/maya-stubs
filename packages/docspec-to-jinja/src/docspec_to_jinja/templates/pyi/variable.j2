@@ -1,0 +1,4 @@
+{{ variable.name }}: {{ variable.datatype }}
+{%- if variable.value is not none %}
+ = {{ variable.value }}
+{%- endif %}

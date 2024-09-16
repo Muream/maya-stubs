@@ -1,0 +1,60 @@
+{% if doc %}
+{{ doc.short_description }}
+
+{% if doc.long_description %}
+{{ doc.long_description }}
+{% endif %}
+{% if doc.params %}
+
+### Arguments
+
+{% for param in doc.params %}
+- `{{ param.arg_name }}` ({{ param.type_name }}{% if param.optional %}, Optional{% endif %}): 
+{% if param.description -%}
+{%- set description_lines = param.description.split("\n") -%}
+{%- for line in description_lines -%}
+{%- if loop.first -%}
+{{ line }}
+{% else %}
+    {{ line }}
+{% endif %}
+{% endfor %}
+{% endif %}
+
+{% endfor %}
+{% endif %}
+{% if doc.many_returns %}
+
+### Returns
+
+{% for return in doc.many_returns %}
+- {{ return.type_name }}: {{ return.description }}
+{% endfor %}
+{% elif doc.returns %}
+
+### Returns
+
+{{ doc.returns.type_name }}: {{ doc.returns.description }}
+{% endif %}
+{% if doc.raises %}
+
+### Raises
+
+{% for exc in doc.raises %}
+- `{{ exc.type_name }}`: {{ exc.description }}
+{% endfor %}
+{% endif %}
+{% if doc.examples %}
+
+### Examples
+
+{% for example in doc.examples %}
+{{ example.description }}
+{% if example.snippet %}
+```python
+{{ example.snippet }}
+```
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endif %}
