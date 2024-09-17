@@ -79,6 +79,20 @@ wheels = [
 ]
 
 [[package]]
+name = "cattrs"
+version = "24.1.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "attrs" },
+    { name = "exceptiongroup", marker = "python_full_version < '3.11'" },
+    { name = "typing-extensions", marker = "python_full_version < '3.11'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/3c/ba/08912e7e6e796fa7d5da1aaf3f53235ee6b2a73ec51d93bdf69b77b1c0d1/cattrs-24.1.1.tar.gz", hash = "sha256:16e94a13f9aaf6438bd5be5df521e072b1b00481b4cf807bcb1acbd49f814c08", size = 426413 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ca/a1/90fa8e601c28937a8426eaae853e0009807e6287c7bf03fe7af4296ec510/cattrs-24.1.1-py3-none-any.whl", hash = "sha256:ec8ce8fdc725de9d07547cd616f968670687c6fa7a2e263b088370c46d834d97", size = 66417 },
+]
+
+[[package]]
 name = "certifi"
 version = "2024.8.30"
 source = { registry = "https://pypi.org/simple" }
@@ -409,6 +423,7 @@ source = { editable = "packages/maya-stubgen" }
 dependencies = [
     { name = "attrs" },
     { name = "beautifulsoup4" },
+    { name = "cattrs" },
     { name = "click" },
     { name = "docspec" },
     { name = "docspec-python" },
@@ -422,6 +437,7 @@ dependencies = [
 requires-dist = [
     { name = "attrs", specifier = ">=24.2.0" },
     { name = "beautifulsoup4", specifier = ">=4.12.3" },
+    { name = "cattrs", specifier = ">=24.1.1" },
     { name = "click", specifier = ">=8.1.7" },
     { name = "docspec", specifier = ">=2.2.1" },
     { name = "docspec-python", specifier = ">=2.2.1" },
@@ -433,7 +449,7 @@ requires-dist = [
 
 [[package]]
 name = "maya-stubs"
-version = "0.1.0"
+version = "0.4.1"
 source = { editable = "." }
 
 [package.dev-dependencies]

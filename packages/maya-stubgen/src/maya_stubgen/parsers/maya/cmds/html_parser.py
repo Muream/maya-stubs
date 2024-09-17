@@ -11,7 +11,6 @@ import bs4
 import docspec
 import docstring_parser
 import httpx
-import requests
 
 from ....utils import cache_dir, maya_version
 from ...common import NULL_LOCATION
