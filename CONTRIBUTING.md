@@ -60,16 +60,16 @@ The project is setup as an `uv` workspace where:
       mklink python.exe mayapy.exe
       :: then use the alias as the base interpreter for poetry
       cd C:\path\to\maya-stubs
-      uv venv -p "C:\Program Files\Autodesk\Maya2024\bin\mayapy.exe"
+      uv venv --python "C:\Program Files\Autodesk\Maya2024\bin\mayapy.exe"
       ```
     - Linux
       ```bash
-      uv venv -p /usr/autodesk/maya2024/bin/mayapy
+      uv venv --python /usr/autodesk/maya2024/bin/mayapy
       ```
     - MacOS
       ```bash
       # mayapy cannot be used directly, use the framework distribution instead
-      uv venv -p /Applications/Autodesk/maya2024/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3
+      uv venv --python /Applications/Autodesk/maya2024/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3
       ```
     Note: I don't use Linux or MacOS so I can't say that this will work for sure.
 - Generate the stubs with `uv run maya-stubgen generate-stubs src/maya-stubs`.
