@@ -53,11 +53,25 @@ The project is setup as an `uv` workspace where:
 - Create a virtualenv with `uv` that uses mayapy as its base interpreter
   You should use the mayapy version for the stubs you want to generate.
     - Windows:
+      Because of a (bug)[https://github.com/astral-sh/uv/issues/7521] in `uv` we can't use mayapy directly as the base interpreter for our virtualenv  
       ```bat
-      uv venv .venv --python "C:\Program Files\Autodesk\Maya2024\bin\mayapy.exe"
+      :: we have to create an alias for mayapy.exe for it to work with venv
+      cd "C:\Program Files\Autodesk\Maya2024\bin"
+      mklink python.exe mayapy.exe
+      :: then use the alias as the base interpreter for poetry
+      cd C:\path\to\maya-stubs
+      uv venv -p "C:\Program Files\Autodesk\Maya2024\bin\mayapy.exe"
       ```
-    Note: I don't use Linux or MacOS so I'm not sure if doing the same as on windows would work
-- Run `uv sync`.
+    - Linux
+      ```bash
+      uv venv -p /usr/autodesk/maya2024/bin/mayapy
+      ```
+    - MacOS
+      ```bash
+      # mayapy cannot be used directly, use the framework distribution instead
+      uv venv -p /Applications/Autodesk/maya2024/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3
+      ```
+    Note: I don't use Linux or MacOS so I can't say that this will work for sure.
 - Generate the stubs with `uv run maya-stubgen generate-stubs src/maya-stubs`.
     - After the first run, you can re-use the docspec cache with `uv run maya-stubgen generate-stubs src/maya-stubs --reuse-cache`.
     - You can generate stubs for specific modules or members by specifying the `-m/--module` and/or `--members` options:
