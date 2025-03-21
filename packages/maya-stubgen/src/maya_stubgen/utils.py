@@ -10,7 +10,11 @@ from typing import TypeVar, Optional
 
 from typing_extensions import ParamSpec
 
-from PySide2 import QtCore, QtWidgets
+try:
+    from PySide2 import QtCore, QtWidgets
+except:
+    from PySide6 import QtCore, QtWidgets
+
 
 from . import _logging
 
