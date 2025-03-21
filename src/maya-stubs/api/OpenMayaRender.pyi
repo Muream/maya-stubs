@@ -873,6 +873,23 @@ class MFragmentManager:
         Returns a list of the names of all registered fragments and fragment graphs.
         """
 
+    def getColorManagementFragmentInfo(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """getColorManagementFragmentInfo(string) -> tuple(string, string, string)
+
+        Returns the name and parameters of a shader fragment that converts a color from the
+        requested inputColorSpace to the current working color space.
+
+        The returned information can be used to extend a shader via MShaderManager::addInputFragment
+         or MShaderManager::addInputFragmentForMultiParams.
+
+        The fragment and output name will change, especially when the working color space changes.
+        Please do not persist or cache values returned by this API.
+
+        Returns a tuple containing the fragment, input, and output names, or None on failure.
+
+        - inputColorSpace (string) - Input color space to be converted to the current working color space.
+        """
+
     def getEffectOutputDirectory(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """getEffectOutputDirectory() -> string
 
@@ -1221,6 +1238,7 @@ class MFrameContext:
     kProjectionTranspInverseMtx: int = 11
     kSceneLights: int = 4
     kSelectedLights: int = 3
+    kSelectionHighlighting: int = 8192
     kShadeActiveOnly: int = 512
     kSmoothWireframe: int = 4096
     kTextured: int = 8
@@ -3852,6 +3870,12 @@ class MRenderItem:
         Enable or disable the render item for rendering.
         """
 
+    def excludedFromDefaultMaterialOverride(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """excludedFromDefaultMaterialOverride() -> bool
+
+        Get whether this item is excluded from the default material mode.
+        """
+
     def excludedFromPostEffects(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """excludedFromPostEffects() -> bool
 
@@ -4043,6 +4067,13 @@ class MRenderItem:
         If the draw mode is all, the render item will be drawn regardless of the viewport draw mode.
         Otherwise the render item will only be drawn when the viewport is set to draw objects in the specified mode.
         See MGeometry.drawModeString() for a list of valid draw modes.
+        """
+
+    def setExcludedFromDefaultMaterialOverride(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """setExcludedFromDefaultMaterialOverride(bool) -> self
+
+        Set whether this item should be excluded from the default material mode.
+        Default value is false (included).
         """
 
     def setExcludedFromPostEffects(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
@@ -5564,6 +5595,18 @@ class MShaderInstance:
         Must be called between calls to bind() and unbind().
         """
 
+    def addColorManagementTextures(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """addColorManagementTextures() -> self
+
+        Adds all the color management textures needed to render this shader instance.
+
+        Required if your shader references a color managed fragment returned by
+        MShaderInstance::getColorManagementFragmentInfo.
+
+        Can be called even if no color management textures are required for the current
+        shader instance.
+        """
+
     def addInputFragment(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """addInputFragment(fragmentName, outputName, inputName, promotedInputName=None) -> self
 
@@ -6967,11 +7010,11 @@ class MUIDrawManager:
     kStretchUnstretched: int = 100
     kTriStrip: int = 5
     kTriangles: int = 4
-    kWeightBlack: int = 87
-    kWeightBold: int = 75
-    kWeightDemiBold: int = 63
-    kWeightLight: int = 25
-    kWeightNormal: int = 50
+    kWeightBlack: int = 900
+    kWeightBold: int = 700
+    kWeightDemiBold: int = 600
+    kWeightLight: int = 300
+    kWeightNormal: int = 400
     def line(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """line(startPoint, endPoint) -> self
 
@@ -8175,4 +8218,4 @@ class MVertexBufferDescriptorList:
 key: str = '__file__'
 ourdict: Dict[str, Any]
 py2dict: Dict[str, Any]
-val: str = 'C:\\Program Files\\Autodesk\\Maya2024\\Python\\lib\\site-packages\\maya\\api\\_OpenMayaRender_py2.pyd'
+val: str = 'C:\\Program Files\\Autodesk\\Maya2025\\Python\\Lib\\site-packages\\maya\\api\\_OpenMayaRender_py2.pyd'

@@ -2399,7 +2399,7 @@ class MDagPath:
 
     @staticmethod
     def matchTransform(*args: Unknown, **kwargs: Unknown) -> Any:
-        """Do some new stuff."""
+        """Returns the transformationMatrix which, when applied to the source object, will bring the source object to the location of the target object."""
 
     def node(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Returns the DAG node at the end of the path."""
@@ -4398,12 +4398,12 @@ class MFloatVectorArray:
 
 class MFn:
     """Static class providing constants for all API types."""
-    kACos: int = 1158
+    kACos: int = 1160
     kAISEnvFacade: int = 978
-    kASin: int = 1160
-    kATan: int = 1161
-    kATan2: int = 1162
-    kAbsolute: int = 1157
+    kASin: int = 1162
+    kATan: int = 1163
+    kATan2: int = 1164
+    kAbsolute: int = 1159
     kAddDoubleLinear: int = 5
     kAdskMaterial: int = 1068
     kAffect: int = 6
@@ -4414,10 +4414,10 @@ class MFn:
     kAlignManip: int = 913
     kAlignSurface: int = 42
     kAmbientLight: int = 303
-    kAnd: int = 1159
+    kAnd: int = 1161
     kAngle: int = 270
     kAngleBetween: int = 21
-    kAngleToDoubleNode: int = 1155
+    kAngleToDoubleNode: int = 1157
     kAnimBlend: int = 795
     kAnimBlendInOut: int = 796
     kAnimCurve: int = 7
@@ -4453,12 +4453,13 @@ class MFn:
     kAttribute3Short: int = 754
     kAttribute4Double: int = 881
     kAudio: int = 22
-    kAverage: int = 1163
+    kAverage: int = 1165
     kAverageCurveManip: int = 149
     kAvgCurves: int = 45
     kAvgNurbsSurfacePoints: int = 47
     kAvgSurfacePoints: int = 46
     kAxesActionManip: int = 124
+    kAxisFromMatrix: int = 1199
     kBackground: int = 23
     kBallProjectionManip: int = 125
     kBarnDoorManip: int = 150
@@ -4522,7 +4523,7 @@ class MFn:
     kCameraPlaneManip: int = 143
     kCameraSet: int = 1012
     kCameraView: int = 34
-    kCeil: int = 1164
+    kCeil: int = 1166
     kCenterManip: int = 134
     kChainToSpline: int = 35
     kCharacter: int = 689
@@ -4537,7 +4538,7 @@ class MFn:
     kCirclePointManip: int = 231
     kCircleSweepManip: int = 128
     kClampColor: int = 39
-    kClampRange: int = 1165
+    kClampRange: int = 1167
     kClientDevice: int = 1078
     kClip: int = 810
     kClipGhostShape: int = 1083
@@ -4558,6 +4559,7 @@ class MFn:
     kColorBackground: int = 24
     kColorMgtGlobals: int = 1102
     kColorProfile: int = 1067
+    kColumnFromMatrix: int = 1204
     kCombinationShape: int = 337
     kCommCornerManip: int = 614
     kCommCornerOperManip: int = 615
@@ -4583,7 +4585,7 @@ class MFn:
     kControllerTag: int = 1129
     kCopyColorSet: int = 739
     kCopyUVSet: int = 808
-    kCos: int = 1166
+    kCos: int = 1168
     kCpManip: int = 156
     kCrater: int = 510
     kCreaseSet: int = 1091
@@ -4595,6 +4597,7 @@ class MFn:
     kCreateEPManip: int = 158
     kCreateSectionManip: int = 825
     kCreateUVSet: int = 809
+    kCrossProduct: int = 1196
     kCrossSectionEditManip: int = 826
     kCrossSectionManager: int = 824
     kCubicProjectionManip: int = 130
@@ -4662,7 +4665,7 @@ class MFn:
     kDependencyNode: int = 4
     kDetachCurve: int = 63
     kDetachSurface: int = 64
-    kDeterminant: int = 1167
+    kDeterminant: int = 1169
     kDiffuseMaterial: int = 387
     kDimension: int = 269
     kDimensionManip: int = 232
@@ -4678,13 +4681,15 @@ class MFn:
     kDistance: int = 272
     kDistanceBetween: int = 322
     kDistanceManip: int = 639
+    kDivide: int = 1200
     kDofManip: int = 162
+    kDotProduct: int = 1195
     kDoubleAngleAttribute: int = 567
     kDoubleArrayData: int = 585
     kDoubleIndexedComponent: int = 715
     kDoubleLinearAttribute: int = 569
     kDoubleShadingSwitch: int = 620
-    kDoubleToAngleNode: int = 1156
+    kDoubleToAngleNode: int = 1158
     kDrag: int = 258
     kDropOffFunction: int = 827
     kDropoffLocator: int = 282
@@ -4722,7 +4727,7 @@ class MFn:
     kEnvFogShape: int = 278
     kEnvSky: int = 494
     kEnvSphere: int = 495
-    kEqual: int = 1168
+    kEqual: int = 1170
     kExplodeNurbsShell: int = 693
     kExpression: int = 327
     kExtendCurve: int = 65
@@ -4754,7 +4759,7 @@ class MFn:
     kFloatLinearAttribute: int = 570
     kFloatMatrixAttribute: int = 579
     kFloatVectorArrayData: int = 1015
-    kFloor: int = 1169
+    kFloor: int = 1171
     kFlow: int = 72
     kFluid: int = 915
     kFluidData: int = 917
@@ -4787,7 +4792,7 @@ class MFn:
     kGreasePencilSequence: int = 1089
     kGreasePlane: int = 1087
     kGreasePlaneRenderShape: int = 1088
-    kGreaterThan: int = 1170
+    kGreaterThan: int = 1172
     kGrid: int = 502
     kGroundPlane: int = 290
     kGroupId: int = 356
@@ -4853,7 +4858,7 @@ class MFn:
     kIntArrayData: int = 586
     kIntersectSurface: int = 77
     kInvalid: int = 0
-    kInverseLinearInterpolation: int = 1171
+    kInverseLinearInterpolation: int = 1173
     kIsoparmComponent: int = 540
     kIsoparmManip: int = 146
     kItemList: int = 564
@@ -4883,8 +4888,8 @@ class MFn:
     kLayeredTexture: int = 805
     kLeastSquares: int = 379
     kLeather: int = 512
-    kLength: int = 1172
-    kLessThan: int = 1173
+    kLength: int = 1174
+    kLessThan: int = 1175
     kLight: int = 302
     kLightDataAttribute: int = 577
     kLightFogMaterial: int = 380
@@ -4899,12 +4904,12 @@ class MFn:
     kLineArrowManip: int = 235
     kLineManip: int = 147
     kLineModifier: int = 979
-    kLinearInterpolation: int = 1174
+    kLinearInterpolation: int = 1176
     kLinearLight: int = 306
     kLocator: int = 281
     kLodGroup: int = 774
     kLodThresholds: int = 772
-    kLog: int = 1175
+    kLog: int = 1177
     kLookAt: int = 112
     kLuminance: int = 384
     kMCsolver: int = 364
@@ -4933,7 +4938,7 @@ class MFn:
     kMatrixMult: int = 396
     kMatrixPass: int = 397
     kMatrixWtAdd: int = 398
-    kMax: int = 1176
+    kMax: int = 1178
     kMembrane: int = 1039
     kMentalRayTexture: int = 943
     kMergeVertsToolManip: int = 1040
@@ -4952,12 +4957,12 @@ class MFn:
     kMessageAttribute: int = 580
     kMidModifier: int = 399
     kMidModifierWithMatrix: int = 400
-    kMin: int = 1177
+    kMin: int = 1179
     kModel: int = 3
     kModifyEdgeBaseManip: int = 839
     kModifyEdgeCrvManip: int = 830
     kModifyEdgeManip: int = 831
-    kModulo: int = 1178
+    kModulo: int = 1180
     kMorph: int = 352
     kMotionPath: int = 445
     kMotionPathManip: int = 170
@@ -4967,8 +4972,10 @@ class MFn:
     kMultDoubleLinear: int = 775
     kMultiSubVertexComponent: int = 558
     kMultilisterLight: int = 447
-    kMultiply: int = 1179
+    kMultiply: int = 1181
     kMultiplyDivide: int = 448
+    kMultiplyPointByMatrix: int = 1197
+    kMultiplyVectorByMatrix: int = 1198
     kMute: int = 932
     kNBase: int = 999
     kNCloth: int = 1008
@@ -4982,7 +4989,7 @@ class MFn:
     kNRigid: int = 1010
     kNamedObject: int = 2
     kNearestPointOnCurve: int = 1066
-    kNegate: int = 1180
+    kNegate: int = 1182
     kNewton: int = 260
     kNodeGraphEditorBookmarkInfo: int = 1119
     kNodeGraphEditorBookmarks: int = 1118
@@ -4993,8 +5000,8 @@ class MFn:
     kNonExtendedLight: int = 307
     kNonLinear: int = 624
     kNormalConstraint: int = 238
-    kNormalize: int = 1181
-    kNot: int = 1182
+    kNormalize: int = 1183
+    kNot: int = 1184
     kNucleus: int = 998
     kNumericAttribute: int = 566
     kNumericData: int = 593
@@ -5032,18 +5039,20 @@ class MFn:
     kOffsetSurfaceManip: int = 653
     kOldGeometryConstraint: int = 449
     kOpaqueAttribute: int = 581
+    kOpenPBRSurface: int = 1209
     kOpticalFX: int = 450
-    kOr: int = 1183
+    kOr: int = 1185
     kOrientConstraint: int = 239
     kOrientationComponent: int = 556
     kOrientationLocator: int = 286
     kOrientationMarker: int = 284
     kOrthoGrid: int = 291
     kPASolver: int = 365
-    kPIConstant: int = 1184
+    kPIConstant: int = 1186
     kPairBlend: int = 928
     kParamDimension: int = 275
     kParentConstraint: int = 242
+    kParentMatrix: int = 1207
     kParticle: int = 311
     kParticleAgeMapper: int = 451
     kParticleCloud: int = 452
@@ -5113,10 +5122,11 @@ class MFn:
     kPolyAutoProj: int = 852
     kPolyAutoProjManip: int = 968
     kPolyAverageVertex: int = 851
-    kPolyAxis: int = 1154
+    kPolyAxis: int = 1156
     kPolyBevel: int = 401
     kPolyBevel2: int = 1099
     kPolyBevel3: int = 1103
+    kPolyBevelCutback: int = 1208
     kPolyBlindData: int = 759
     kPolyBoolOp: int = 618
     kPolyBridgeEdge: int = 996
@@ -5201,13 +5211,15 @@ class MFn:
     kPolyProjectionManip: int = 174
     kPolyPyramid: int = 970
     kPolyQuad: int = 427
-    kPolyReFormManip: int = 1153
-    kPolyReFormManipContainer: int = 1152
+    kPolyReFormManip: int = 1155
+    kPolyReFormManipContainer: int = 1154
     kPolyReduce: int = 771
     kPolyRemesh: int = 1114
     kPolySelectEditFeedbackManip: int = 1043
     kPolySeparate: int = 463
     kPolySewEdge: int = 698
+    kPolySmartExtrude: int = 1152
+    kPolySmartExtrudeManip: int = 1153
     kPolySmooth: int = 428
     kPolySmoothFacet: int = 700
     kPolySmoothProxy: int = 945
@@ -5239,7 +5251,7 @@ class MFn:
     kPoseInterpolatorManager: int = 1128
     kPositionMarker: int = 285
     kPostProcessList: int = 464
-    kPower: int = 1185
+    kPower: int = 1187
     kPrecompExport: int = 789
     kPrimitive: int = 86
     kPrimitiveFalloff: int = 1141
@@ -5320,16 +5332,19 @@ class MFn:
     kRotateLimitsManip: int = 217
     kRotateManip: int = 215
     kRotateUVManip2D: int = 708
-    kRotateVector: int = 1186
-    kRound: int = 1187
+    kRotateVector: int = 1188
+    kRotationFromMatrix: int = 1206
+    kRound: int = 1189
     kRoundConstantRadius: int = 646
     kRoundConstantRadiusManip: int = 649
     kRoundRadiusCrvManip: int = 648
     kRoundRadiusManip: int = 647
+    kRowFromMatrix: int = 1203
     kSCsolver: int = 366
     kSPbirailSrf: int = 52
     kSamplerInfo: int = 478
     kScaleConstraint: int = 244
+    kScaleFromMatrix: int = 1205
     kScaleLimitsManip: int = 218
     kScaleManip: int = 219
     kScalePointManip: int = 832
@@ -5360,7 +5375,7 @@ class MFn:
     kShot: int = 1052
     kShrinkWrapFilter: int = 1097
     kSimpleVolumeShader: int = 480
-    kSin: int = 1188
+    kSin: int = 1190
     kSingleIndexedComponent: int = 714
     kSingleShadingSwitch: int = 619
     kSketchPlane: int = 289
@@ -5371,7 +5386,7 @@ class MFn:
     kSl60: int = 481
     kSmear: int = 918
     kSmoothCurve: int = 701
-    kSmoothStep: int = 1189
+    kSmoothStep: int = 1191
     kSmoothTangentSrf: int = 783
     kSnapUVManip2D: int = 1094
     kSnapshot: int = 482
@@ -5452,7 +5467,8 @@ class MFn:
     kSubdivToNurbs: int = 821
     kSubdivToPoly: int = 720
     kSubsetFalloff: int = 1147
-    kSum: int = 1190
+    kSubtract: int = 1201
+    kSum: int = 1192
     kSummaryObject: int = 484
     kSuper: int = 485
     kSurface: int = 293
@@ -5470,7 +5486,7 @@ class MFn:
     kSymmetryLocator: int = 834
     kSymmetryMapCurve: int = 836
     kSymmetryMapVector: int = 835
-    kTan: int = 1191
+    kTan: int = 1193
     kTangentConstraint: int = 245
     kTension: int = 351
     kTexLattice: int = 200
@@ -5522,6 +5538,7 @@ class MFn:
     kTranslateManip2D: int = 206
     kTranslateUVManip: int = 213
     kTranslateUVManip2D: int = 707
+    kTranslationFromMatrix: int = 1202
     kTriadManip: int = 237
     kTrim: int = 105
     kTrimLocator: int = 287
@@ -5534,7 +5551,7 @@ class MFn:
     kTrsManip: int = 189
     kTrsTransManip: int = 202
     kTrsXformManip: int = 204
-    kTruncate: int = 1192
+    kTruncate: int = 1194
     kTurbulence: int = 262
     kTweak: int = 345
     kTwoPointArcManip: int = 651
@@ -5869,6 +5886,7 @@ class MFnAttribute(MFnBase):
     connectable: Any
     disconnectBehavior: Any
     dynamic: Any
+    enforcingUniqueName: Any
     extension: Any
     def getAddAttrCmd(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Returns a string containing a MEL 'addAttr' command capable of recreating the attribute."""
@@ -5887,6 +5905,9 @@ class MFnAttribute(MFnBase):
     keyable: Any
     name: Any
     parent: Any
+    def pathName(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """Returns the pathName for the attribute."""
+
     readable: Any
     renderSource: Any
     def setNiceNameOverride(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
@@ -15870,6 +15891,20 @@ class MModelMessage(MMessage):
          * return: Identifier used for removing the callback.
         """
 
+    @staticmethod
+    def addPostDuplicateNodeListCallback(*args: Unknown, **kwargs: Unknown) -> Any:
+        """addPostDuplicateNodeListCallback(function, clientData=None) -> id
+
+        This method registers a callback that is called after a duplicate
+        command is made. The callback will be called after everything is
+        duplicated, and provides a list of originals and duplicates.
+
+         * function - callable which will be passed the clientData object
+         * clientData - User defined data passed to the callback function
+
+         * return: Identifier used for removing the callback.
+        """
+
 
 class MNamespace:
     """Access Maya namespace functionality."""
@@ -20996,4 +21031,4 @@ ourdict: Dict[str, Any]
 py2dict: Dict[str, Any]
 def registerStringResource(*args: Unknown, **kwargs: Unknown) -> Any: ...
 def registerStringResources(*args: Unknown, **kwargs: Unknown) -> Any: ...
-val: str = 'C:\\Program Files\\Autodesk\\Maya2024\\Python\\lib\\site-packages\\maya\\api\\_OpenMaya_py2.pyd'
+val: str = 'C:\\Program Files\\Autodesk\\Maya2025\\Python\\Lib\\site-packages\\maya\\api\\_OpenMaya_py2.pyd'

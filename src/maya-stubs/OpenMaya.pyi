@@ -5,9 +5,9 @@ from typing import *
 
 Unknown = Any
 
-MAYA_API_VERSION: int = 20240100
-MAYA_APP_VERSION: int = 2024
-MAYA_CUSTOM_VERSION: int = 20240000
+MAYA_API_VERSION: int = 20250300
+MAYA_APP_VERSION: int = 2025
+MAYA_CUSTOM_VERSION: int = 20250000
 MAYA_CUSTOM_VERSION_CLIENT: str = ''
 MAYA_CUSTOM_VERSION_MAJOR: int = 0
 MAYA_CUSTOM_VERSION_MINOR: int = 0
@@ -507,6 +507,39 @@ class MClosedTimeInterval:
     def empty(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     max: MTime
     min: MTime
+    thisown: bool
+
+class MCloudWebService:
+    """
+    """
+    def __init__(self, *args: Unknown) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+
+    def __repr__(self) -> Any: ...
+    @staticmethod
+    def className(*args: Unknown, **kwargs: Unknown) -> Any: ...
+    @staticmethod
+    def getLoginUserName(*args: Unknown, **kwargs: Unknown) -> Any: ...
+    @staticmethod
+    def getOAuth2AccessToken(*args: Unknown, **kwargs: Unknown) -> Any: ...
+    @staticmethod
+    def getOxygenID(*args: Unknown, **kwargs: Unknown) -> Any: ...
+    @staticmethod
+    def getUserEmail(*args: Unknown, **kwargs: Unknown) -> Any: ...
+    @staticmethod
+    def initializeWebServices(*args: Unknown, **kwargs: Unknown) -> Any: ...
+    @staticmethod
+    def isLoggedIn(*args: Unknown, **kwargs: Unknown) -> Any: ...
+    @staticmethod
+    def isLoginValid(*args: Unknown, **kwargs: Unknown) -> Any: ...
+    @staticmethod
+    def login(*args: Unknown, **kwargs: Unknown) -> Any: ...
+    @staticmethod
+    def logout(*args: Unknown, **kwargs: Unknown) -> Any: ...
+    @staticmethod
+    def removeCallback(*args: Unknown, **kwargs: Unknown) -> Any: ...
+    @staticmethod
+    def setCallback(*args: Unknown, **kwargs: Unknown) -> Any: ...
     thisown: bool
 
 class MColor:
@@ -1269,6 +1302,7 @@ class MEulerRotation:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
     def __isub__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def __len__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __mul__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __ne__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __neg__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -1522,6 +1556,7 @@ class MFileIO:
     kVersion2022: int = 278
     kVersion2023: int = 304
     kVersion2024: int = 327
+    kVersion2025: int = 350
     kVersion4_0: int = 74
     kVersion4_5: int = 83
     kVersion5_0: int = 90
@@ -1702,6 +1737,7 @@ class MFloatPoint:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
     def __isub__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def __len__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __mul__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __ne__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __repr__(self) -> Any: ...
@@ -1830,12 +1866,12 @@ class MFn:
 
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    kACos: int = 1158
+    kACos: int = 1160
     kAISEnvFacade: int = 978
-    kASin: int = 1160
-    kATan: int = 1161
-    kATan2: int = 1162
-    kAbsolute: int = 1157
+    kASin: int = 1162
+    kATan: int = 1163
+    kATan2: int = 1164
+    kAbsolute: int = 1159
     kAddDoubleLinear: int = 5
     kAdskMaterial: int = 1068
     kAffect: int = 6
@@ -1846,10 +1882,10 @@ class MFn:
     kAlignManip: int = 913
     kAlignSurface: int = 42
     kAmbientLight: int = 303
-    kAnd: int = 1159
+    kAnd: int = 1161
     kAngle: int = 270
     kAngleBetween: int = 21
-    kAngleToDoubleNode: int = 1155
+    kAngleToDoubleNode: int = 1157
     kAnimBlend: int = 795
     kAnimBlendInOut: int = 796
     kAnimCurve: int = 7
@@ -1887,12 +1923,13 @@ class MFn:
     kAttribute3Short: int = 754
     kAttribute4Double: int = 881
     kAudio: int = 22
-    kAverage: int = 1163
+    kAverage: int = 1165
     kAverageCurveManip: int = 149
     kAvgCurves: int = 45
     kAvgNurbsSurfacePoints: int = 47
     kAvgSurfacePoints: int = 46
     kAxesActionManip: int = 124
+    kAxisFromMatrix: int = 1199
     kBackground: int = 23
     kBallProjectionManip: int = 125
     kBarnDoorManip: int = 150
@@ -1956,7 +1993,7 @@ class MFn:
     kCameraPlaneManip: int = 143
     kCameraSet: int = 1012
     kCameraView: int = 34
-    kCeil: int = 1164
+    kCeil: int = 1166
     kCenterManip: int = 134
     kChainToSpline: int = 35
     kCharacter: int = 689
@@ -1971,7 +2008,7 @@ class MFn:
     kCirclePointManip: int = 231
     kCircleSweepManip: int = 128
     kClampColor: int = 39
-    kClampRange: int = 1165
+    kClampRange: int = 1167
     kClientDevice: int = 1078
     kClip: int = 810
     kClipGhostShape: int = 1083
@@ -1992,6 +2029,7 @@ class MFn:
     kColorBackground: int = 24
     kColorMgtGlobals: int = 1102
     kColorProfile: int = 1067
+    kColumnFromMatrix: int = 1204
     kCombinationShape: int = 337
     kCommCornerManip: int = 614
     kCommCornerOperManip: int = 615
@@ -2017,7 +2055,7 @@ class MFn:
     kControllerTag: int = 1129
     kCopyColorSet: int = 739
     kCopyUVSet: int = 808
-    kCos: int = 1166
+    kCos: int = 1168
     kCpManip: int = 156
     kCrater: int = 510
     kCreaseSet: int = 1091
@@ -2029,6 +2067,7 @@ class MFn:
     kCreateEPManip: int = 158
     kCreateSectionManip: int = 825
     kCreateUVSet: int = 809
+    kCrossProduct: int = 1196
     kCrossSectionEditManip: int = 826
     kCrossSectionManager: int = 824
     kCubicProjectionManip: int = 130
@@ -2098,7 +2137,7 @@ class MFn:
     kDependencyNode: int = 4
     kDetachCurve: int = 63
     kDetachSurface: int = 64
-    kDeterminant: int = 1167
+    kDeterminant: int = 1169
     kDiffuseMaterial: int = 387
     kDimension: int = 269
     kDimensionManip: int = 232
@@ -2114,13 +2153,15 @@ class MFn:
     kDistance: int = 272
     kDistanceBetween: int = 322
     kDistanceManip: int = 639
+    kDivide: int = 1200
     kDofManip: int = 162
+    kDotProduct: int = 1195
     kDoubleAngleAttribute: int = 567
     kDoubleArrayData: int = 585
     kDoubleIndexedComponent: int = 715
     kDoubleLinearAttribute: int = 569
     kDoubleShadingSwitch: int = 620
-    kDoubleToAngleNode: int = 1156
+    kDoubleToAngleNode: int = 1158
     kDrag: int = 258
     kDropOffFunction: int = 827
     kDropoffLocator: int = 282
@@ -2158,7 +2199,7 @@ class MFn:
     kEnvFogShape: int = 278
     kEnvSky: int = 494
     kEnvSphere: int = 495
-    kEqual: int = 1168
+    kEqual: int = 1170
     kExplodeNurbsShell: int = 693
     kExpression: int = 327
     kExtendCurve: int = 65
@@ -2190,7 +2231,7 @@ class MFn:
     kFloatLinearAttribute: int = 570
     kFloatMatrixAttribute: int = 579
     kFloatVectorArrayData: int = 1015
-    kFloor: int = 1169
+    kFloor: int = 1171
     kFlow: int = 72
     kFluid: int = 915
     kFluidData: int = 917
@@ -2223,7 +2264,7 @@ class MFn:
     kGreasePencilSequence: int = 1089
     kGreasePlane: int = 1087
     kGreasePlaneRenderShape: int = 1088
-    kGreaterThan: int = 1170
+    kGreaterThan: int = 1172
     kGrid: int = 502
     kGroundPlane: int = 290
     kGroupId: int = 356
@@ -2289,7 +2330,7 @@ class MFn:
     kIntArrayData: int = 586
     kIntersectSurface: int = 77
     kInvalid: int = 0
-    kInverseLinearInterpolation: int = 1171
+    kInverseLinearInterpolation: int = 1173
     kIsoparmComponent: int = 540
     kIsoparmManip: int = 146
     kItemList: int = 564
@@ -2311,7 +2352,7 @@ class MFn:
     kKeyingGroup: int = 688
     kLambert: int = 371
     kLambertMaterial: int = 388
-    kLast: int = 1193
+    kLast: int = 1210
     kLattice: int = 279
     kLatticeComponent: int = 546
     kLatticeData: int = 588
@@ -2320,8 +2361,8 @@ class MFn:
     kLayeredTexture: int = 805
     kLeastSquares: int = 379
     kLeather: int = 512
-    kLength: int = 1172
-    kLessThan: int = 1173
+    kLength: int = 1174
+    kLessThan: int = 1175
     kLight: int = 302
     kLightDataAttribute: int = 577
     kLightFogMaterial: int = 380
@@ -2336,12 +2377,12 @@ class MFn:
     kLineArrowManip: int = 235
     kLineManip: int = 147
     kLineModifier: int = 979
-    kLinearInterpolation: int = 1174
+    kLinearInterpolation: int = 1176
     kLinearLight: int = 306
     kLocator: int = 281
     kLodGroup: int = 774
     kLodThresholds: int = 772
-    kLog: int = 1175
+    kLog: int = 1177
     kLookAt: int = 112
     kLuminance: int = 384
     kMCsolver: int = 364
@@ -2370,7 +2411,7 @@ class MFn:
     kMatrixMult: int = 396
     kMatrixPass: int = 397
     kMatrixWtAdd: int = 398
-    kMax: int = 1176
+    kMax: int = 1178
     kMembrane: int = 1039
     kMentalRayTexture: int = 943
     kMergeVertsToolManip: int = 1040
@@ -2389,12 +2430,12 @@ class MFn:
     kMessageAttribute: int = 580
     kMidModifier: int = 399
     kMidModifierWithMatrix: int = 400
-    kMin: int = 1177
+    kMin: int = 1179
     kModel: int = 3
     kModifyEdgeBaseManip: int = 839
     kModifyEdgeCrvManip: int = 830
     kModifyEdgeManip: int = 831
-    kModulo: int = 1178
+    kModulo: int = 1180
     kMorph: int = 352
     kMotionPath: int = 445
     kMotionPathManip: int = 170
@@ -2404,8 +2445,10 @@ class MFn:
     kMultDoubleLinear: int = 775
     kMultiSubVertexComponent: int = 558
     kMultilisterLight: int = 447
-    kMultiply: int = 1179
+    kMultiply: int = 1181
     kMultiplyDivide: int = 448
+    kMultiplyPointByMatrix: int = 1197
+    kMultiplyVectorByMatrix: int = 1198
     kMute: int = 932
     kNBase: int = 999
     kNCloth: int = 1008
@@ -2419,7 +2462,7 @@ class MFn:
     kNRigid: int = 1010
     kNamedObject: int = 2
     kNearestPointOnCurve: int = 1066
-    kNegate: int = 1180
+    kNegate: int = 1182
     kNewton: int = 260
     kNodeGraphEditorBookmarkInfo: int = 1119
     kNodeGraphEditorBookmarks: int = 1118
@@ -2430,8 +2473,8 @@ class MFn:
     kNonExtendedLight: int = 307
     kNonLinear: int = 624
     kNormalConstraint: int = 238
-    kNormalize: int = 1181
-    kNot: int = 1182
+    kNormalize: int = 1183
+    kNot: int = 1184
     kNucleus: int = 998
     kNumericAttribute: int = 566
     kNumericData: int = 593
@@ -2469,18 +2512,20 @@ class MFn:
     kOffsetSurfaceManip: int = 653
     kOldGeometryConstraint: int = 449
     kOpaqueAttribute: int = 581
+    kOpenPBRSurface: int = 1209
     kOpticalFX: int = 450
-    kOr: int = 1183
+    kOr: int = 1185
     kOrientConstraint: int = 239
     kOrientationComponent: int = 556
     kOrientationLocator: int = 286
     kOrientationMarker: int = 284
     kOrthoGrid: int = 291
     kPASolver: int = 365
-    kPIConstant: int = 1184
+    kPIConstant: int = 1186
     kPairBlend: int = 928
     kParamDimension: int = 275
     kParentConstraint: int = 242
+    kParentMatrix: int = 1207
     kParticle: int = 311
     kParticleAgeMapper: int = 451
     kParticleCloud: int = 452
@@ -2550,10 +2595,11 @@ class MFn:
     kPolyAutoProj: int = 852
     kPolyAutoProjManip: int = 968
     kPolyAverageVertex: int = 851
-    kPolyAxis: int = 1154
+    kPolyAxis: int = 1156
     kPolyBevel: int = 401
     kPolyBevel2: int = 1099
     kPolyBevel3: int = 1103
+    kPolyBevelCutback: int = 1208
     kPolyBlindData: int = 759
     kPolyBoolOp: int = 618
     kPolyBridgeEdge: int = 996
@@ -2638,13 +2684,15 @@ class MFn:
     kPolyProjectionManip: int = 174
     kPolyPyramid: int = 970
     kPolyQuad: int = 427
-    kPolyReFormManip: int = 1153
-    kPolyReFormManipContainer: int = 1152
+    kPolyReFormManip: int = 1155
+    kPolyReFormManipContainer: int = 1154
     kPolyReduce: int = 771
     kPolyRemesh: int = 1114
     kPolySelectEditFeedbackManip: int = 1043
     kPolySeparate: int = 463
     kPolySewEdge: int = 698
+    kPolySmartExtrude: int = 1152
+    kPolySmartExtrudeManip: int = 1153
     kPolySmooth: int = 428
     kPolySmoothFacet: int = 700
     kPolySmoothProxy: int = 945
@@ -2676,7 +2724,7 @@ class MFn:
     kPoseInterpolatorManager: int = 1128
     kPositionMarker: int = 285
     kPostProcessList: int = 464
-    kPower: int = 1185
+    kPower: int = 1187
     kPrecompExport: int = 789
     kPrimitive: int = 86
     kPrimitiveFalloff: int = 1141
@@ -2757,16 +2805,19 @@ class MFn:
     kRotateLimitsManip: int = 217
     kRotateManip: int = 215
     kRotateUVManip2D: int = 708
-    kRotateVector: int = 1186
-    kRound: int = 1187
+    kRotateVector: int = 1188
+    kRotationFromMatrix: int = 1206
+    kRound: int = 1189
     kRoundConstantRadius: int = 646
     kRoundConstantRadiusManip: int = 649
     kRoundRadiusCrvManip: int = 648
     kRoundRadiusManip: int = 647
+    kRowFromMatrix: int = 1203
     kSCsolver: int = 366
     kSPbirailSrf: int = 52
     kSamplerInfo: int = 478
     kScaleConstraint: int = 244
+    kScaleFromMatrix: int = 1205
     kScaleLimitsManip: int = 218
     kScaleManip: int = 219
     kScalePointManip: int = 832
@@ -2797,7 +2848,7 @@ class MFn:
     kShot: int = 1052
     kShrinkWrapFilter: int = 1097
     kSimpleVolumeShader: int = 480
-    kSin: int = 1188
+    kSin: int = 1190
     kSingleIndexedComponent: int = 714
     kSingleShadingSwitch: int = 619
     kSketchPlane: int = 289
@@ -2808,7 +2859,7 @@ class MFn:
     kSl60: int = 481
     kSmear: int = 918
     kSmoothCurve: int = 701
-    kSmoothStep: int = 1189
+    kSmoothStep: int = 1191
     kSmoothTangentSrf: int = 783
     kSnapUVManip2D: int = 1094
     kSnapshot: int = 482
@@ -2889,7 +2940,8 @@ class MFn:
     kSubdivToNurbs: int = 821
     kSubdivToPoly: int = 720
     kSubsetFalloff: int = 1147
-    kSum: int = 1190
+    kSubtract: int = 1201
+    kSum: int = 1192
     kSummaryObject: int = 484
     kSuper: int = 485
     kSurface: int = 293
@@ -2907,7 +2959,7 @@ class MFn:
     kSymmetryLocator: int = 834
     kSymmetryMapCurve: int = 836
     kSymmetryMapVector: int = 835
-    kTan: int = 1191
+    kTan: int = 1193
     kTangentConstraint: int = 245
     kTension: int = 351
     kTexLattice: int = 200
@@ -2959,6 +3011,7 @@ class MFn:
     kTranslateManip2D: int = 206
     kTranslateUVManip: int = 213
     kTranslateUVManip2D: int = 707
+    kTranslationFromMatrix: int = 1202
     kTriadManip: int = 237
     kTrim: int = 105
     kTrimLocator: int = 287
@@ -2971,7 +3024,7 @@ class MFn:
     kTrsManip: int = 189
     kTrsTransManip: int = 202
     kTrsXformManip: int = 204
-    kTruncate: int = 1192
+    kTruncate: int = 1194
     kTurbulence: int = 262
     kTweak: int = 345
     kTwoPointArcManip: int = 651
@@ -3177,6 +3230,7 @@ class MFnAttribute(MFnBase):
     def isChannelBoxFlagSet(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isConnectable(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isDynamic(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def isEnforcingUniqueName(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isExtension(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isHidden(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isIndeterminant(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -3194,6 +3248,7 @@ class MFnAttribute(MFnBase):
     kReset: int = 1
     def name(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def parent(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def pathName(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def removeFromCategory(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setAffectsAppearance(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setAffectsWorldSpace(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -3202,6 +3257,7 @@ class MFnAttribute(MFnBase):
     def setChannelBox(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setConnectable(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setDisconnectBehavior(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setEnforcingUniqueName(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setHidden(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setIndeterminant(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setIndexMatters(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -4569,6 +4625,92 @@ class MFnNurbsSurfaceData(MFnGeometryData):
     def className(*args: Unknown, **kwargs: Unknown) -> Any: ...
     def create(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     thisown: bool
+
+class MFnOpenPBRSurfaceShader(MFnDependencyNode):
+    """
+    """
+    def __init__(self, *args: Unknown) -> None:
+        """Initialize self.  See help(type(self)) for accurate signature."""
+
+    def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def baseColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def baseDiffuseRoughness(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def baseMetalness(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def baseWeight(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    @staticmethod
+    def className(*args: Unknown, **kwargs: Unknown) -> Any: ...
+    def coatColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def coatDarkening(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def coatIOR(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def coatRoughness(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def coatRoughnessAnisotropy(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def coatWeight(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def create(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def emissionColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def emissionLuminance(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def fuzzColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def fuzzRoughness(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def fuzzWeight(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def geometryOpacity(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def geometryThinWalled(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setBaseColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setBaseDiffuseRoughness(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setBaseMetalness(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setBaseWeight(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setCoatColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setCoatDarkening(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setCoatIOR(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setCoatRoughness(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setCoatRoughnessAnisotropy(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setCoatWeight(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setEmissionColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setEmissionLuminance(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setFuzzColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setFuzzRoughness(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setFuzzWeight(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setGeometryOpacity(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setGeometryThinWalled(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setSpecularColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setSpecularIOR(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setSpecularRoughness(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setSpecularRoughnessAnisotropy(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setSpecularWeight(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setSubsurfaceColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setSubsurfaceRadius(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setSubsurfaceRadiusScale(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setSubsurfaceScatterAnisotropy(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setSubsurfaceWeight(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setThinFilmIOR(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setThinFilmThickness(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setThinFilmWeight(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setTransmissionColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setTransmissionDepth(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setTransmissionDispersionAbbeNumber(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setTransmissionDispersionScale(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setTransmissionScatter(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setTransmissionScatterAnisotropy(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setTransmissionWeight(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def specularColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def specularIOR(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def specularRoughness(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def specularRoughnessAnisotropy(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def specularWeight(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def subsurfaceColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def subsurfaceRadius(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def subsurfaceRadiusScale(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def subsurfaceScatterAnisotropy(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def subsurfaceWeight(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def thinFilmIOR(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def thinFilmThickness(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def thinFilmWeight(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    thisown: bool
+    def transmissionColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def transmissionDepth(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def transmissionDispersionAbbeNumber(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def transmissionDispersionScale(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def transmissionScatter(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def transmissionScatterAnisotropy(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def transmissionWeight(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnPartition(MFnDependencyNode):
     """
@@ -6471,6 +6613,8 @@ class MModelMessage(MMessage):
     @staticmethod
     def addNodeRemovedFromModelCallback(*args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
+    def addPostDuplicateNodeListCallback(*args: Unknown, **kwargs: Unknown) -> Any: ...
+    @staticmethod
     def className(*args: Unknown, **kwargs: Unknown) -> Any: ...
     thisown: bool
 
@@ -6911,6 +7055,7 @@ class MPoint:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
     def __isub__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def __len__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __mul__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __ne__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __repr__(self) -> Any: ...
@@ -7156,6 +7301,7 @@ class MQuaternion:
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
+    def __len__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __mul__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __ne__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __neg__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
