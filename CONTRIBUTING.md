@@ -72,10 +72,11 @@ The project is setup as an `uv` workspace where:
       uv venv --python /Applications/Autodesk/maya2024/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3
       ```
     Note: I don't use Linux or MacOS so I can't say that this will work for sure.
-- Generate the stubs with `uv run maya-stubgen generate-stubs src/maya-stubs`.
-    - After the first run, you can re-use the docspec cache with `uv run maya-stubgen generate-stubs src/maya-stubs --reuse-cache`.
+- Generate the stubs with `uv run maya-stubgen generate-stubs src/`.
+    - After the first run, you can re-use the docspec cache with `uv run maya-stubgen generate-stubs src/ --reuse-cache`.
+        This is useful if you're not making any changes to the parsers but only to the code generation side of things.
     - You can generate stubs for specific modules or members by specifying the `-m/--module` and/or `--members` options:
       ```
-      uv run maya-stubgen generate-stubs src/maya-stubs -m maya.cmds --members "(currentTime|playblast)$"
+      uv run maya-stubgen generate-stubs src/ -m maya.cmds --members "(currentTime|playblast)$"
       ```
       This will only create stubs for the `currentTime` and `playblast` Python commands; useful for quickly testing changes.
