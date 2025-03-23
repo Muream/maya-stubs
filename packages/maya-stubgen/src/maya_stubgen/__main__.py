@@ -33,7 +33,7 @@ def ensure_maya() -> bool:
     if not maya_install_dir.exists():
         raise RuntimeError(
             "Could not find mayapy, "
-            "The `MAYA_LOCATION` path does not exist: `{maya_install_dir}`"
+            f"The `MAYA_LOCATION` path does not exist: `{maya_install_dir}`"
         )
 
     if sys.platform == "win32":
