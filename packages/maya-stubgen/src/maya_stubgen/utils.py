@@ -119,7 +119,7 @@ def remove_outdated_cache() -> None:
         return
 
     maya_version_file = cache / ".maya_version"
-    if not maya_version_file.exists():
+    if maya_version_file.exists():
         cache_version = maya_version_file.read_text().strip()
         if cache_version == version:
             # cache is from current maya version, nothing to do
