@@ -1,5 +1,6 @@
 temp/
 .cache/
+.env
  
 # docs
 docs/public/
