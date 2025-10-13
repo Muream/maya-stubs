@@ -1,0 +1,19 @@
+{% import 'macros/macros.j2' as macros %}
+{% if function.decorations %}
+{% for decoration in function.decorations %}
+@{{ decoration.name }}{% if decoration.args %}{{ decoration.args }}{% endif %}
+
+{% endfor %}
+{% endif %}
+{% for hint in function.semantic_hints %}
+{% if hint == FunctionSemantic.CLASS_METHOD %}
+@classmethod
+{% elif hint == FunctionSemantic.STATIC_METHOD %}
+@staticmethod
+{% endif %}
+{% endfor %}
+def {{function.name}}({{ macros.render_args(args) }}) -> {{function.return_type}}: ...
+{#{%- if function.docstring %}#}
+{##}
+{#{{macros.format_docstring(function.docstring)}}#}
+{#{% else %} ...{% endif %}#}

@@ -1,53 +1,27 @@
-[tool.poetry]
-name = "maya-stubs-distrib"
+[project]
+name = "maya-stubs"
 version = "0.4.1"
-description = ""
-authors = ["Loïc Pinsard <muream@gmail.com>"]
-repository = "https://www.github.com/Muream/maya-stubs"
+description = "Type Annotated Stubs for Autodesk Maya's python APIs"
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = []
 
-[tool.poetry.dependencies]
-python = "^3.9"
-maya-stubgen = { path = "maya-stubgen/", develop = true }
-docspec-to-jinja = { path = "docspec-to-jinja/", develop = true }
-maya-stubs = { path = "maya-stubs/", develop = true }
-# maya-docs = { path = "maya-docs/", develop = true }
-attrs = "^22.2.0"
-aiofiles = "^24.1.0"
+[tool.uv.workspace]
+members = ["packages/*"]
 
-[tool.poetry.dev-dependencies]
-black = "^22.6.0"
-pylint = "^2.14.5"
-
-[tool.poetry.group.dev.dependencies]
-mayapy-launcher = "^0.1.0"
-pyright = "^1.1.327"
-types-pyside2 = "^5.15.2.1.6"
-mypy = "^1.5.1"
-types-beautifulsoup4 = "^4.12.0.6"
-types-requests = "^2.31.0.2"
+[tool.uv.sources]
+maya-stubgen = { workspace = true }
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
-[tool.pyright]
-typeCheckingMode = "strict"
-pythonVersion = "3.9"
-include = [
-    "maya-stubs/maya-stubs",
-    "maya-stubgen/maya_stubgen",
-    "docspec-to-jinja/docspec_to_jinja",
+[dependency-groups]
+dev = [
+    "maya-stubgen",
+    "ruff>=0.14.0",
+    "snakeviz>=2.2.2",
 ]
 
-[[tool.pyright.executionEnvironments]]
-root = "maya-stubs/maya-stubs"
-pythonVersion = "3.7"
-
-[tool.mypy]
-strict = true
-python_version = "3.9"
-packages = ["maya", "docspec_to_jinja", "maya-stubgen.maya_stubgen"]
-
-[[tool.mypy.overrides]]
-module = "maya.*"
-disable_error_code = ["override"]
+[tool.hatch.build.targets.wheel]
+packages = ["src/maya-stubs"]
