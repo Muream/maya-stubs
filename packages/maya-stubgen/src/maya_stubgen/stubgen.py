@@ -7,7 +7,8 @@ import docspec
 import docspec_to_jinja
 
 from .parsers.maya.maya_parser import MayaParser
-from .utils import cache_dir, maya_standalone, remove_outdated_cache
+from .utils import cache_dir, maya_standalone, remove_outdated_cache, ruff_format
+
 
 logger = logging.getLogger(__name__)
 
@@ -109,6 +110,8 @@ def build_stubs(
         # create empty __init__ if it does not exist already
         if not (init_path := stub_path.parent / "__init__.pyi").exists():
             init_path.write_text("")
+
+    ruff_format(path)
 
 
 def build_docs(path: Path, reuse_cache: bool = False) -> None:

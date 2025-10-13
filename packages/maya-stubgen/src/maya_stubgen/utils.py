@@ -1,4 +1,5 @@
 import logging
+import subprocess
 import pathlib
 import shutil
 import sys
@@ -154,3 +155,8 @@ def timed(func: Callable[P, T]) -> Callable[P, T]:
         return result
 
     return wrap_func
+
+
+def ruff_format(path: Path):
+    assert path.exists()
+    subprocess.run(["uv", "run", "ruff", "format", path.as_posix()])
