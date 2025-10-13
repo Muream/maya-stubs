@@ -1,8 +1,0 @@
-version: '3'
-
-dotenv: ['.env']
-
-tasks:
-  run:
-    cmds:
-      - uv run maya-stubgen generate-stubs src/

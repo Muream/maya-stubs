@@ -6,11 +6,6 @@ readme = "README.md"
 requires-python = ">=3.7"
 dependencies = []
 
-[tool.uv]
-dev-dependencies = [
-    "maya-stubgen",
-]
-
 [tool.uv.workspace]
 members = ["packages/*"]
 
@@ -20,6 +15,9 @@ maya-stubgen = { workspace = true }
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = ["maya-stubgen"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/maya-stubs"]
