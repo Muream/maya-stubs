@@ -12,8 +12,8 @@
 @staticmethod
 {% endif %}
 {% endfor %}
-def {{function.name}}({{ macros.render_args(args) }}) -> {{function.return_type}}:
-{%- if function.docstring %}
-
-{{macros.format_docstring(function.docstring)}}
-{% else %} ...{% endif %}
+def {{function.name}}({{ macros.render_args(args) }}) -> {{function.return_type}}: ...
+{#{%- if function.docstring %}#}
+{##}
+{#{{macros.format_docstring(function.docstring)}}#}
+{#{% else %} ...{% endif %}#}

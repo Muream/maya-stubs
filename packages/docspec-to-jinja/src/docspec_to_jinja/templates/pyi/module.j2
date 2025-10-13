@@ -26,4 +26,5 @@ NullableRange = Range[Optional[_T]]
 {% elif member.__class__.__name__ == "Class" %}
 {{ render_class(member, template_type="pyi") }}
 {% endif %}
+
 {% endfor %}

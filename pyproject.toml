@@ -20,6 +20,7 @@ build-backend = "hatchling.build"
 dev = [
     "maya-stubgen",
     "ruff>=0.14.0",
+    "snakeviz>=2.2.2",
 ]
 
 [tool.hatch.build.targets.wheel]
