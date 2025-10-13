@@ -1505,4 +1505,4 @@ class MFnWeightGeometryFilter(MFnGeometryFilter):
 key: str = "__file__"
 ourdict: Dict[str, Any]
 py2dict: Dict[str, Any]
-val: str = "C:\\Program Files\\Autodesk\\Maya2025\\Python\\Lib\\site-packages\\maya\\api\\_OpenMayaAnim_py2.pyd"
+val: str = "C:\\Program Files\\Autodesk\\Maya2026\\Python\\Lib\\site-packages\\maya\\api\\_OpenMayaAnim_py2.pyd"

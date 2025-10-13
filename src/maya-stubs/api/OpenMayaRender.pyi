@@ -1569,7 +1569,15 @@ class MGeometry:
         """
 
 class MGeometryExtractor:
-    """Class for extracting renderable geometry."""
+    """Class for extracting renderable geometry.
+
+    __init__(MGeometryRequirements, MDagObject, MPolyGeomOptions)
+        Initializes a new MGeometryExtractor attached to a MDagObject mesh shape.
+
+    __init__(MGeometryRequirements, MObject   , MPolyGeomOptions)
+        Initializes a new MGeometryExtractor attached to a mesh data MObject
+        of type MFn::kMeshData or MFn::kMeshGeom.
+    """
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -2955,7 +2963,7 @@ class MPxShaderOverride:
     def handlesConsolidatedGeometry(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """handlesConsolidatedGeometry() -> bool
 
-        Returns True if the shader instance should disable the consolidation
+        Returns True if the shader instance should enable the consolidation
         for the geometry it is applied to.
 
         Override this method if the shader instance should disable the consolidation
@@ -2964,7 +2972,7 @@ class MPxShaderOverride:
         the World position.
 
         The default implementation returns true indicating that the shader instance
-        should not be disable the consolidation of the geometry.
+        should enable the consolidation of the geometry.
         """
 
     def handlesDraw(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
@@ -3172,7 +3180,7 @@ class MPxShadingNodeOverride:
         """
 
     def fragmentName(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
-        """fragmentName() -> string
+        """fragmentName() -> stringfragmentName(isTexturedShading) -> string
 
         Override this method to return the name of the fragment or fragment graph to use for rendering the shading node associated with this override. This fragment will be automatically connected to the other fragments for the other nodes in the shading network to produce a complete shading effect.
 
@@ -3182,6 +3190,9 @@ class MPxShadingNodeOverride:
 
         The fragment will only be connected to the other fragments in the graph if the output parameter of the fragment has the same name as the output attribute of the node that is connected to the rest of the shading network. To support multiple output attributes of a node, the fragment should return a "struct" type parameter. The names of the members of the struct should match the names of the output attributes for which support is desired. The fragment must compute all output attributes on every execution.
 
+        This optional isTexturedShading parameter is to be used when the override can provide both a textured and an untextured version of itself. The flag will be set to true if this override is used with a textured drawing render item, false otherwise. Updates should be done using the corresponding updateShader(shader, mappings, isTexturedShading) function. The default behavior is to call the generic overload of the same name.
+
+        * isTexturedShading (optional, bool) - specifies if we are requesting a textured or untextured shading fragment name.
         Returns the name of the fragment to use
         """
 
@@ -3204,6 +3215,27 @@ class MPxShadingNodeOverride:
         By default, this method defines no custom mappings.
 
         * mappings [OUT] (MAttributeParameterMappingList) - An attribute parameter mapping list; fill with any desired custom mappings.
+        """
+
+    def handlesConsolidatedGeometry(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """handlesConsolidatedGeometry() -> bool
+
+        Returns True if the shading node should enable the consolidation
+        for the shading network it belongs to.
+
+        Override this method if the shading node should disable the consolidation
+        for the shading network it belongs to.This is to prevent inconsistency between consolidated and non-consolidated geometry,
+        particularly useful for shading effects that compute displacement based on
+        the World position.
+
+
+        Shading node is part of the shading network (a shader), the purpose to provide this method
+        in the shading node is to give an ability to change the consolidation status in the shading node level.
+        For exammple, if one shading node in the shading network is asking to disable the consolidation,
+        Then the whole shading network will be disabled for consolidation.
+
+        The default implementation returns true indicating that the shading node
+        should enable the consolidation for the shading network.
         """
 
     def outputForConnection(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
@@ -3244,7 +3276,7 @@ class MPxShadingNodeOverride:
         """
 
     def updateShader(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
-        """updateShader(shader, mappings) -> self
+        """updateShader(shader, mappings) -> selfupdateShader(shader, mappings, isTexturedShading) -> self
 
         This method is called every time Maya needs to update the parameter values on the final shading effect of which the fragment
         produced by this override is a part. Implementations may use the information from the mappings list to set parameter values on
@@ -3264,8 +3296,12 @@ class MPxShadingNodeOverride:
         It is an error to attempt to access the Maya dependency graph from within updateShader().
         Any attempt to do so will result in instability. Required data should be retrieved and cached in updateDG().
 
+        This optional isTexturedShading is to be used when the override can provide both a textured and an untextured version of itself
+        and implements fragmentName(bool isTexturedShading). The default behavior is to call the generic overload of the same name.
+
         * shader (MShaderInstance) - The shader instance.
         * mappings (MAttributeParameterMappingList) - The attribute parameter mappings for this override.
+        * isTexturedShading (optional, bool) - Are we updating textured or untextured shading
         """
 
     def valueChangeRequiresFragmentRebuild(
@@ -6107,8 +6143,10 @@ class MShaderManager:
     k3dFloat3NumericShader: int = 22
     k3dFloatNumericShader: int = 20
     k3dIntegerNumericShader: int = 19
+    k3dIsotropicOpenPBRSurfaceShader: int = 28
     k3dIsotropicStandardSurfaceShader: int = 26
     k3dOpacityLookupFatPointShader: int = 6
+    k3dOpenPBRSurfaceShader: int = 27
     k3dPointLightShadowerShader: int = 24
     k3dPointVectorShader: int = 23
     k3dShadowerShader: int = 8
@@ -8193,4 +8231,4 @@ class MVertexBufferDescriptorList:
 key: str = "__file__"
 ourdict: Dict[str, Any]
 py2dict: Dict[str, Any]
-val: str = "C:\\Program Files\\Autodesk\\Maya2025\\Python\\Lib\\site-packages\\maya\\api\\_OpenMayaRender_py2.pyd"
+val: str = "C:\\Program Files\\Autodesk\\Maya2026\\Python\\Lib\\site-packages\\maya\\api\\_OpenMayaRender_py2.pyd"

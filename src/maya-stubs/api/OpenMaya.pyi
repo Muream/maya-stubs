@@ -2390,6 +2390,10 @@ class MDagPath:
         """Returns the number of nodes on the path, not including the DAG's root node."""
 
     @staticmethod
+    def matchLocalMatrix(*args: Unknown, **kwargs: Unknown) -> Any:
+        """Returns the transformationMatrix which, when applied to the source object, will have the source object match the local matrix."""
+
+    @staticmethod
     def matchTransform(*args: Unknown, **kwargs: Unknown) -> Any:
         """Returns the transformationMatrix which, when applied to the source object, will bring the source object to the location of the target object."""
 
@@ -4412,6 +4416,7 @@ class MFn:
     kAnimCurveUnitlessToDistance: int = 13
     kAnimCurveUnitlessToTime: int = 14
     kAnimCurveUnitlessToUnitless: int = 15
+    kAnimInContextNode: int = 1210
     kAnimLayer: int = 1021
     kAnisotropy: int = 623
     kAnnotation: int = 271
@@ -5109,7 +5114,6 @@ class MFn:
     kPolyBevel: int = 401
     kPolyBevel2: int = 1099
     kPolyBevel3: int = 1103
-    kPolyBevelCutback: int = 1208
     kPolyBlindData: int = 759
     kPolyBoolOp: int = 618
     kPolyBridgeEdge: int = 996
@@ -5201,6 +5205,7 @@ class MFn:
     kPolySelectEditFeedbackManip: int = 1043
     kPolySeparate: int = 463
     kPolySewEdge: int = 698
+    kPolySmartBevel: int = 1208
     kPolySmartExtrude: int = 1152
     kPolySmartExtrudeManip: int = 1153
     kPolySmooth: int = 428
@@ -7624,6 +7629,13 @@ class MFnMesh(MFnDagNode):
 
         Replaces this mesh's geometry with the result of a boolean operation
         on the two specified meshes.
+        """
+
+    def booleanOperations(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+        """booleanOperations(Boolean Operation constant, MObjectArray) -> self
+
+        Replaces this mesh's geometry with the result of a boolean operation
+        on the specified meshes.
         """
 
     def booleanOps(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
@@ -20971,4 +20983,4 @@ py2dict: Dict[str, Any]
 def registerStringResource(*args: Unknown, **kwargs: Unknown) -> Any: ...
 def registerStringResources(*args: Unknown, **kwargs: Unknown) -> Any: ...
 
-val: str = "C:\\Program Files\\Autodesk\\Maya2025\\Python\\Lib\\site-packages\\maya\\api\\_OpenMaya_py2.pyd"
+val: str = "C:\\Program Files\\Autodesk\\Maya2026\\Python\\Lib\\site-packages\\maya\\api\\_OpenMaya_py2.pyd"

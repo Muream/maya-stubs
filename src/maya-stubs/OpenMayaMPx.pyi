@@ -1304,6 +1304,8 @@ class MPxImagePlane(MPxNode):
     displayOnlyIfCurrent: maya.OpenMaya.MObject
     def exactImageFile(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     fit: maya.OpenMaya.MObject
+    flipInX: maya.OpenMaya.MObject
+    flipInY: maya.OpenMaya.MObject
     frameExtension: maya.OpenMaya.MObject
     frameOffset: maya.OpenMaya.MObject
     height: maya.OpenMaya.MObject
