@@ -8,14 +8,13 @@ Unknown = Any
 
 class MColorMixingSpaceHelper:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def applyMixingTransform(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getMixingSpaceNames(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getViewNames(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     kForward: int = 0
     kInverse: int = 1
     def mixingSpace(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -25,27 +24,25 @@ class MColorMixingSpaceHelper:
     def setMixingSpace(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setView(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def sliderToMixing(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: bool
     def view(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MColorPickerCallback:
     """ """
-    def __init__(self, *args: Unknown, **kwargs: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown, **kwargs: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def className(*args: Unknown, **kwargs: Unknown) -> Any: ...
     def getColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getKey(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: Any
 
 class MColorPickerUtilities:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     @staticmethod
     def applyViewTransform(*args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -57,6 +54,7 @@ class MColorPickerUtilities:
     def grabColor(*args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def isRegisteredToColorPicking(*args: Unknown, **kwargs: Unknown) -> Any: ...
+
     kForward: int = 0
     kInverse: int = 1
     thisown: bool
@@ -65,13 +63,12 @@ class MColorPickerUtilities:
 
 class MCommonRenderSettingsData:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def className(*args: Unknown, **kwargs: Unknown) -> Any: ...
+
     customExt: Any
     customImageFormat: Any
     deviceAspectRatio: float
@@ -87,10 +84,12 @@ class MCommonRenderSettingsData:
     def getPostRenderFrameCmd(*args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def getPreRenderFrameCmd(*args: Unknown, **kwargs: Unknown) -> Any: ...
+
     height: int
     imageFormat: int
     def isAnimated(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isMovieFormat(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     kFullPathImage: int = 1
     kFullPathTmp: int = 2
     kRelativePath: int = 0
@@ -111,6 +110,7 @@ class MCommonRenderSettingsData:
     def setFieldName(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setPassName(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def shouldRenderFrameAtTime(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     skipExistingFrames: bool
     thisown: bool
     useCustomExt: bool
@@ -118,9 +118,7 @@ class MCommonRenderSettingsData:
 
 class MD3D9Renderer:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getD3D9Device(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -129,13 +127,12 @@ class MD3D9Renderer:
     def setBackgroundColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def theRenderer(*args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: bool
 
 class MDrawProcedureBase:
     """ """
-    def __init__(self, *args: Unknown, **kwargs: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown, **kwargs: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def enabled(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -143,13 +140,12 @@ class MDrawProcedureBase:
     def name(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setEnabled(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setName(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: Any
 
 class MFnImageSource(maya.OpenMaya.MFnDependencyNode):
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
@@ -157,13 +153,12 @@ class MFnImageSource(maya.OpenMaya.MFnDependencyNode):
     def getImageName(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def sourceCamera(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def sourceLayer(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: bool
 
 class MFnRenderLayer(maya.OpenMaya.MFnDependencyNode):
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def adjustmentPlug(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -185,13 +180,12 @@ class MFnRenderLayer(maya.OpenMaya.MFnDependencyNode):
     def listMembers(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def passHasLight(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def passHasObject(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: bool
 
 class MFnRenderPass(maya.OpenMaya.MFnDependencyNode):
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
@@ -202,14 +196,13 @@ class MFnRenderPass(maya.OpenMaya.MFnDependencyNode):
     def getImplementation(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def passID(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setImplementation(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: bool
     def usesFiltering(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MGLFunctionTable:
     """ """
-    def __init__(self, *args: Unknown, **kwargs: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown, **kwargs: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def extensionExists(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def glAccum(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -1070,6 +1063,7 @@ class MGLFunctionTable:
     def glVertexWeightfvEXT(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def glViewport(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def glWriteMaskEXT(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     kMGL_Version11: int = 0
     kMGL_Version12: int = 1
     kMGL_Version121: int = 2
@@ -1082,1680 +1076,3344 @@ class MGLFunctionTable:
     def numTexImageUnits(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def numTexInterpolants(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def numTexUnits(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: Any
 
 MGL_2D: int = 1536
+
 MGL_2X_BIT_ATI: int = 1
+
 MGL_2_BYTES: int = 5127
+
 MGL_3D: int = 1537
+
 MGL_3D_COLOR: int = 1538
+
 MGL_3D_COLOR_TEXTURE: int = 1539
+
 MGL_3_BYTES: int = 5128
+
 MGL_4D_COLOR_TEXTURE: int = 1540
+
 MGL_4X_BIT_ATI: int = 2
+
 MGL_4_BYTES: int = 5129
+
 MGL_8X_BIT_ATI: int = 4
+
 MGL_ABGR_EXT: int = 32768
+
 MGL_ACCUM: int = 256
+
 MGL_ACCUM_ALPHA_BITS: int = 3419
+
 MGL_ACCUM_BLUE_BITS: int = 3418
+
 MGL_ACCUM_BUFFER_BIT: int = 512
+
 MGL_ACCUM_CLEAR_VALUE: int = 2944
+
 MGL_ACCUM_GREEN_BITS: int = 3417
+
 MGL_ACCUM_RED_BITS: int = 3416
+
 MGL_ACTIVE_TEXTURE: int = 34016
+
 MGL_ACTIVE_TEXTURE_ARB: int = 34016
+
 MGL_ACTIVE_VARYINGS_NV: int = 35969
+
 MGL_ACTIVE_VARYING_MAX_LENGTH_NV: int = 35970
+
 MGL_ADD: int = 260
+
 MGL_ADD_ATI: int = 35171
+
 MGL_ADD_SIGNED: int = 34164
+
 MGL_ADD_SIGNED_EXT: int = 34164
+
 MGL_ALL_ATTRIB_BITS: int = 1048575
+
 MGL_ALL_COMPLETED_NV: int = 34034
+
 MGL_ALPHA: int = 6406
+
 MGL_ALPHA12: int = 32829
+
 MGL_ALPHA16: int = 32830
+
 MGL_ALPHA16F: int = 34844
+
 MGL_ALPHA32F: int = 34838
+
 MGL_ALPHA4: int = 32827
+
 MGL_ALPHA8: int = 32828
+
 MGL_ALPHA_BIAS: int = 3357
+
 MGL_ALPHA_BITS: int = 3413
+
 MGL_ALPHA_SCALE: int = 3356
+
 MGL_ALPHA_TEST: int = 3008
+
 MGL_ALPHA_TEST_FUNC: int = 3009
+
 MGL_ALPHA_TEST_REF: int = 3010
+
 MGL_ALWAYS: int = 519
+
 MGL_AMBIENT: int = 4608
+
 MGL_AMBIENT_AND_DIFFUSE: int = 5634
+
 MGL_AND: int = 5377
+
 MGL_AND_INVERTED: int = 5380
+
 MGL_AND_REVERSE: int = 5378
+
 MGL_ARB_depth_texture: int = 1
+
 MGL_ARB_shadow: int = 1
+
 MGL_ARB_shadow_ambient: int = 1
+
 MGL_ARB_texture_env_dot3: int = 1
+
 MGL_ARRAY_BUFFER_ARB: int = 34962
+
 MGL_ARRAY_BUFFER_BINDING_ARB: int = 34964
+
 MGL_ARRAY_ELEMENT_LOCK_COUNT_EXT: int = 33193
+
 MGL_ARRAY_ELEMENT_LOCK_FIRST_EXT: int = 33192
+
 MGL_ATTRIB_ARRAY_POINTER_NV: int = 34373
+
 MGL_ATTRIB_ARRAY_SIZE_NV: int = 34339
+
 MGL_ATTRIB_ARRAY_STRIDE_NV: int = 34340
+
 MGL_ATTRIB_ARRAY_TYPE_NV: int = 34341
+
 MGL_ATTRIB_STACK_DEPTH: int = 2992
+
 MGL_AUTO_NORMAL: int = 3456
+
 MGL_AUX0: int = 1033
+
 MGL_AUX1: int = 1034
+
 MGL_AUX2: int = 1035
+
 MGL_AUX3: int = 1036
+
 MGL_AUX_BUFFERS: int = 3072
+
 MGL_BACK: int = 1029
+
 MGL_BACK_LEFT: int = 1026
+
 MGL_BACK_PRIMARY_COLOR_NV: int = 35959
+
 MGL_BACK_RIGHT: int = 1027
+
 MGL_BACK_SECONDARY_COLOR_NV: int = 35960
+
 MGL_BGRA_EXT: int = 32993
+
 MGL_BGR_EXT: int = 32992
+
 MGL_BIAS_BIT_ATI: int = 8
+
 MGL_BIAS_BY_NEGATIVE_ONE_HALF_NV: int = 34113
+
 MGL_BITMAP: int = 6656
+
 MGL_BITMAP_TOKEN: int = 1796
+
 MGL_BLEND: int = 3042
+
 MGL_BLEND_COLOR: int = 32773
+
 MGL_BLEND_COLOR_EXT: int = 32773
+
 MGL_BLEND_DST: int = 3040
+
 MGL_BLEND_EQUATION: int = 32777
+
 MGL_BLEND_EQUATION_EXT: int = 32777
+
 MGL_BLEND_SRC: int = 3041
+
 MGL_BLUE: int = 6405
+
 MGL_BLUE_BIAS: int = 3355
+
 MGL_BLUE_BITS: int = 3412
+
 MGL_BLUE_BIT_ATI: int = 4
+
 MGL_BLUE_SCALE: int = 3354
+
 MGL_BOOL_ARB: int = 35670
+
 MGL_BOOL_VEC2_ARB: int = 35671
+
 MGL_BOOL_VEC3_ARB: int = 35672
+
 MGL_BOOL_VEC4_ARB: int = 35673
+
 MGL_BUFFER_ACCESS_ARB: int = 35003
+
 MGL_BUFFER_MAPPED_ARB: int = 35004
+
 MGL_BUFFER_MAP_POINTER_ARB: int = 35005
+
 MGL_BUFFER_SIZE_ARB: int = 34660
+
 MGL_BUFFER_USAGE_ARB: int = 34661
+
 MGL_BYTE: int = 5120
+
 MGL_C3F_V3F: int = 10788
+
 MGL_C4F_N3F_V3F: int = 10790
+
 MGL_C4UB_V2F: int = 10786
+
 MGL_C4UB_V3F: int = 10787
+
 MGL_CCW: int = 2305
+
 MGL_CLAMP: int = 10496
+
 MGL_CLAMP_FRAGMENT_COLOR: int = 35099
+
 MGL_CLAMP_READ_COLOR: int = 35100
+
 MGL_CLAMP_TO_BORDER: int = 33069
+
 MGL_CLAMP_TO_BORDER_ARB: int = 33069
+
 MGL_CLAMP_TO_BORDER_SGIS: int = 33069
+
 MGL_CLAMP_TO_EDGE: int = 33071
+
 MGL_CLAMP_VERTEX_COLOR: int = 35098
+
 MGL_CLEAR: int = 5376
+
 MGL_CLIENT_ACTIVE_TEXTURE: int = 34017
+
 MGL_CLIENT_ACTIVE_TEXTURE_ARB: int = 34017
+
 MGL_CLIENT_ALL_ATTRIB_BITS: int = -1
+
 MGL_CLIENT_ATTRIB_STACK_DEPTH: int = 2993
+
 MGL_CLIENT_PIXEL_STORE_BIT: int = 1
+
 MGL_CLIENT_VERTEX_ARRAY_BIT: int = 2
+
 MGL_CLIP_DISTANCE_NV: int = 35962
+
 MGL_CLIP_PLANE0: int = 12288
+
 MGL_CLIP_PLANE1: int = 12289
+
 MGL_CLIP_PLANE2: int = 12290
+
 MGL_CLIP_PLANE3: int = 12291
+
 MGL_CLIP_PLANE4: int = 12292
+
 MGL_CLIP_PLANE5: int = 12293
+
 MGL_CLIP_VOLUME_CLIPPING_HINT_EXT: int = 33008
+
 MGL_CND0_ATI: int = 35179
+
 MGL_CND_ATI: int = 35178
+
 MGL_COEFF: int = 2560
+
 MGL_COLOR: int = 6144
+
 MGL_COLOR_ALPHA_PAIRING_ATI: int = 35189
+
 MGL_COLOR_ARRAY: int = 32886
+
 MGL_COLOR_ARRAY_BUFFER_BINDING_ARB: int = 34968
+
 MGL_COLOR_ARRAY_COUNT_EXT: int = 32900
+
 MGL_COLOR_ARRAY_EXT: int = 32886
+
 MGL_COLOR_ARRAY_POINTER: int = 32912
+
 MGL_COLOR_ARRAY_POINTER_EXT: int = 32912
+
 MGL_COLOR_ARRAY_SIZE: int = 32897
+
 MGL_COLOR_ARRAY_SIZE_EXT: int = 32897
+
 MGL_COLOR_ARRAY_STRIDE: int = 32899
+
 MGL_COLOR_ARRAY_STRIDE_EXT: int = 32899
+
 MGL_COLOR_ARRAY_TYPE: int = 32898
+
 MGL_COLOR_ARRAY_TYPE_EXT: int = 32898
+
 MGL_COLOR_ATTACHMENT0: int = 36064
+
 MGL_COLOR_ATTACHMENT1: int = 36065
+
 MGL_COLOR_ATTACHMENT10: int = 36074
+
 MGL_COLOR_ATTACHMENT11: int = 36075
+
 MGL_COLOR_ATTACHMENT12: int = 36076
+
 MGL_COLOR_ATTACHMENT13: int = 36077
+
 MGL_COLOR_ATTACHMENT14: int = 36078
+
 MGL_COLOR_ATTACHMENT15: int = 36079
+
 MGL_COLOR_ATTACHMENT2: int = 36066
+
 MGL_COLOR_ATTACHMENT3: int = 36067
+
 MGL_COLOR_ATTACHMENT4: int = 36068
+
 MGL_COLOR_ATTACHMENT5: int = 36069
+
 MGL_COLOR_ATTACHMENT6: int = 36070
+
 MGL_COLOR_ATTACHMENT7: int = 36071
+
 MGL_COLOR_ATTACHMENT8: int = 36072
+
 MGL_COLOR_ATTACHMENT9: int = 36073
+
 MGL_COLOR_BUFFER_BIT: int = 16384
+
 MGL_COLOR_CLEAR_UNCLAMPED_VALUE_ATI: int = 34869
+
 MGL_COLOR_CLEAR_VALUE: int = 3106
+
 MGL_COLOR_INDEX: int = 6400
+
 MGL_COLOR_INDEX12_EXT: int = 32998
+
 MGL_COLOR_INDEX16_EXT: int = 32999
+
 MGL_COLOR_INDEX1_EXT: int = 32994
+
 MGL_COLOR_INDEX2_EXT: int = 32995
+
 MGL_COLOR_INDEX4_EXT: int = 32996
+
 MGL_COLOR_INDEX8_EXT: int = 32997
+
 MGL_COLOR_INDEXES: int = 5635
+
 MGL_COLOR_LOGIC_OP: int = 3058
+
 MGL_COLOR_MATERIAL: int = 2903
+
 MGL_COLOR_MATERIAL_FACE: int = 2901
+
 MGL_COLOR_MATERIAL_PARAMETER: int = 2902
+
 MGL_COLOR_SUM: int = 33880
+
 MGL_COLOR_SUM_CLAMP_NV: int = 34127
+
 MGL_COLOR_SUM_EXT: int = 33880
+
 MGL_COLOR_TABLE_ALPHA_SIZE_EXT: int = 32989
+
 MGL_COLOR_TABLE_BLUE_SIZE_EXT: int = 32988
+
 MGL_COLOR_TABLE_FORMAT_EXT: int = 32984
+
 MGL_COLOR_TABLE_GREEN_SIZE_EXT: int = 32987
+
 MGL_COLOR_TABLE_INTENSITY_SIZE_EXT: int = 32991
+
 MGL_COLOR_TABLE_LUMINANCE_SIZE_EXT: int = 32990
+
 MGL_COLOR_TABLE_RED_SIZE_EXT: int = 32986
+
 MGL_COLOR_TABLE_WIDTH_EXT: int = 32985
+
 MGL_COLOR_WRITEMASK: int = 3107
+
 MGL_COMBINE: int = 34160
+
 MGL_COMBINE4_NV: int = 34051
+
 MGL_COMBINER0_NV: int = 34128
+
 MGL_COMBINER1_NV: int = 34129
+
 MGL_COMBINER2_NV: int = 34130
+
 MGL_COMBINER3_NV: int = 34131
+
 MGL_COMBINER4_NV: int = 34132
+
 MGL_COMBINER5_NV: int = 34133
+
 MGL_COMBINER6_NV: int = 34134
+
 MGL_COMBINER7_NV: int = 34135
+
 MGL_COMBINER_AB_DOT_PRODUCT_NV: int = 34117
+
 MGL_COMBINER_AB_OUTPUT_NV: int = 34122
+
 MGL_COMBINER_BIAS_NV: int = 34121
+
 MGL_COMBINER_CD_DOT_PRODUCT_NV: int = 34118
+
 MGL_COMBINER_CD_OUTPUT_NV: int = 34123
+
 MGL_COMBINER_COMPONENT_USAGE_NV: int = 34116
+
 MGL_COMBINER_INPUT_NV: int = 34114
+
 MGL_COMBINER_MAPPING_NV: int = 34115
+
 MGL_COMBINER_MUX_SUM_NV: int = 34119
+
 MGL_COMBINER_SCALE_NV: int = 34120
+
 MGL_COMBINER_SUM_OUTPUT_NV: int = 34124
+
 MGL_COMBINE_ALPHA: int = 34162
+
 MGL_COMBINE_ALPHA_EXT: int = 34162
+
 MGL_COMBINE_EXT: int = 34160
+
 MGL_COMBINE_RGB: int = 34161
+
 MGL_COMBINE_RGB_EXT: int = 34161
+
 MGL_COMPARE_R_TO_TEXTURE_ARB: int = 34894
+
 MGL_COMPILE: int = 4864
+
 MGL_COMPILE_AND_EXECUTE: int = 4865
+
 MGL_COMPRESSED_ALPHA: int = 34025
+
 MGL_COMPRESSED_ALPHA_ARB: int = 34025
+
 MGL_COMPRESSED_INTENSITY: int = 34028
+
 MGL_COMPRESSED_INTENSITY_ARB: int = 34028
+
 MGL_COMPRESSED_LUMINANCE: int = 34026
+
 MGL_COMPRESSED_LUMINANCE_ALPHA: int = 34027
+
 MGL_COMPRESSED_LUMINANCE_ALPHA_ARB: int = 34027
+
 MGL_COMPRESSED_LUMINANCE_ARB: int = 34026
+
 MGL_COMPRESSED_RGB: int = 34029
+
 MGL_COMPRESSED_RGBA: int = 34030
+
 MGL_COMPRESSED_RGBA_ARB: int = 34030
+
 MGL_COMPRESSED_RGBA_S3TC_DXT1_EXT: int = 33777
+
 MGL_COMPRESSED_RGBA_S3TC_DXT3_EXT: int = 33778
+
 MGL_COMPRESSED_RGBA_S3TC_DXT5_EXT: int = 33779
+
 MGL_COMPRESSED_RGB_ARB: int = 34029
+
 MGL_COMPRESSED_RGB_S3TC_DXT1_EXT: int = 33776
+
 MGL_COMPRESSED_TEXTURE_FORMATS: int = 34467
+
 MGL_COMPRESSED_TEXTURE_FORMATS_ARB: int = 34467
+
 MGL_COMP_BIT_ATI: int = 2
+
 MGL_CONSTANT: int = 34166
+
 MGL_CONSTANT_ALPHA: int = 32771
+
 MGL_CONSTANT_ALPHA_EXT: int = 32771
+
 MGL_CONSTANT_ATTENUATION: int = 4615
+
 MGL_CONSTANT_COLOR: int = 32769
+
 MGL_CONSTANT_COLOR0_NV: int = 34090
+
 MGL_CONSTANT_COLOR1_NV: int = 34091
+
 MGL_CONSTANT_COLOR_EXT: int = 32769
+
 MGL_CONSTANT_EXT: int = 34166
+
 MGL_CONST_EYE_NV: int = 34533
+
 MGL_CON_0_ATI: int = 35137
+
 MGL_CON_10_ATI: int = 35147
+
 MGL_CON_11_ATI: int = 35148
+
 MGL_CON_12_ATI: int = 35149
+
 MGL_CON_13_ATI: int = 35150
+
 MGL_CON_14_ATI: int = 35151
+
 MGL_CON_15_ATI: int = 35152
+
 MGL_CON_16_ATI: int = 35153
+
 MGL_CON_17_ATI: int = 35154
+
 MGL_CON_18_ATI: int = 35155
+
 MGL_CON_19_ATI: int = 35156
+
 MGL_CON_1_ATI: int = 35138
+
 MGL_CON_20_ATI: int = 35157
+
 MGL_CON_21_ATI: int = 35158
+
 MGL_CON_22_ATI: int = 35159
+
 MGL_CON_23_ATI: int = 35160
+
 MGL_CON_24_ATI: int = 35161
+
 MGL_CON_25_ATI: int = 35162
+
 MGL_CON_26_ATI: int = 35163
+
 MGL_CON_27_ATI: int = 35164
+
 MGL_CON_28_ATI: int = 35165
+
 MGL_CON_29_ATI: int = 35166
+
 MGL_CON_2_ATI: int = 35139
+
 MGL_CON_30_ATI: int = 35167
+
 MGL_CON_31_ATI: int = 35168
+
 MGL_CON_3_ATI: int = 35140
+
 MGL_CON_4_ATI: int = 35141
+
 MGL_CON_5_ATI: int = 35142
+
 MGL_CON_6_ATI: int = 35143
+
 MGL_CON_7_ATI: int = 35144
+
 MGL_CON_8_ATI: int = 35145
+
 MGL_CON_9_ATI: int = 35146
+
 MGL_COPY: int = 5379
+
 MGL_COPY_INVERTED: int = 5388
+
 MGL_COPY_PIXEL_TOKEN: int = 1798
+
 MGL_CULL_FACE: int = 2884
+
 MGL_CULL_FACE_MODE: int = 2885
+
 MGL_CULL_FRAGMENT_NV: int = 34535
+
 MGL_CULL_MODES_NV: int = 34528
+
 MGL_CULL_VERTEX_EXT: int = 33194
+
 MGL_CULL_VERTEX_EYE_POSITION_EXT: int = 33195
+
 MGL_CULL_VERTEX_OBJECT_POSITION_EXT: int = 33196
+
 MGL_CURRENT_ATTRIB_NV: int = 34342
+
 MGL_CURRENT_BIT: int = 1
+
 MGL_CURRENT_COLOR: int = 2816
+
 MGL_CURRENT_FOG_COORDINATE_EXT: int = 33875
+
 MGL_CURRENT_INDEX: int = 2817
+
 MGL_CURRENT_MATRIX: int = 34369
+
 MGL_CURRENT_MATRIX_NV: int = 34369
+
 MGL_CURRENT_MATRIX_STACK_DEPTH: int = 34368
+
 MGL_CURRENT_MATRIX_STACK_DEPTH_NV: int = 34368
+
 MGL_CURRENT_NORMAL: int = 2818
+
 MGL_CURRENT_OCCLUSION_QUERY_ID_NV: int = 34917
+
 MGL_CURRENT_QUERY_ARB: int = 34917
+
 MGL_CURRENT_RASTER_COLOR: int = 2820
+
 MGL_CURRENT_RASTER_DISTANCE: int = 2825
+
 MGL_CURRENT_RASTER_INDEX: int = 2821
+
 MGL_CURRENT_RASTER_POSITION: int = 2823
+
 MGL_CURRENT_RASTER_POSITION_VALID: int = 2824
+
 MGL_CURRENT_RASTER_TEXTURE_COORDS: int = 2822
+
 MGL_CURRENT_SECONDARY_COLOR_EXT: int = 33881
+
 MGL_CURRENT_TEXTURE_COORDS: int = 2819
+
 MGL_CURRENT_VERTEX_ATTRIB: int = 34342
+
 MGL_CURRENT_VERTEX_EXT: int = 34786
+
 MGL_CURRENT_VERTEX_WEIGHT_EXT: int = 34059
+
 MGL_CW: int = 2304
+
 MGL_DECAL: int = 8449
+
 MGL_DECR: int = 7683
+
 MGL_DECR_WRAP_EXT: int = 34056
+
 MGL_DEPENDENT_AR_TEXTURE_2D_NV: int = 34537
+
 MGL_DEPENDENT_GB_TEXTURE_2D_NV: int = 34538
+
 MGL_DEPTH: int = 6145
+
 MGL_DEPTH_ATTACHMENT: int = 36096
+
 MGL_DEPTH_BIAS: int = 3359
+
 MGL_DEPTH_BITS: int = 3414
+
 MGL_DEPTH_BUFFER_BIT: int = 256
+
 MGL_DEPTH_CLEAR_VALUE: int = 2931
+
 MGL_DEPTH_COMPONENT: int = 6402
+
 MGL_DEPTH_COMPONENT16_ARB: int = 33189
+
 MGL_DEPTH_COMPONENT24_ARB: int = 33190
+
 MGL_DEPTH_COMPONENT32_ARB: int = 33191
+
 MGL_DEPTH_FUNC: int = 2932
+
 MGL_DEPTH_RANGE: int = 2928
+
 MGL_DEPTH_SCALE: int = 3358
+
 MGL_DEPTH_TEST: int = 2929
+
 MGL_DEPTH_TEXTURE_MODE_ARB: int = 34891
+
 MGL_DEPTH_WRITEMASK: int = 2930
+
 MGL_DIFFUSE: int = 4609
+
 MGL_DISCARD_NV: int = 34096
+
 MGL_DITHER: int = 3024
+
 MGL_DOMAIN: int = 2562
+
 MGL_DONT_CARE: int = 4352
+
 MGL_DOT2_ADD_ATI: int = 35180
+
 MGL_DOT3_ATI: int = 35174
+
 MGL_DOT3_RGB: int = 34478
+
 MGL_DOT3_RGBA: int = 34479
+
 MGL_DOT3_RGBA_ARB: int = 34479
+
 MGL_DOT3_RGBA_EXT: int = 34479
+
 MGL_DOT3_RGB_ARB: int = 34478
+
 MGL_DOT3_RGB_EXT: int = 34478
+
 MGL_DOT4_ATI: int = 35175
+
 MGL_DOT_PRODUCT_CONST_EYE_REFLECT_CUBE_MAP_NV: int = 34547
+
 MGL_DOT_PRODUCT_DEPTH_REPLACE_NV: int = 34541
+
 MGL_DOT_PRODUCT_DIFFUSE_CUBE_MAP_NV: int = 34545
+
 MGL_DOT_PRODUCT_NV: int = 34540
+
 MGL_DOT_PRODUCT_REFLECT_CUBE_MAP_NV: int = 34546
+
 MGL_DOT_PRODUCT_TEXTURE_2D_NV: int = 34542
+
 MGL_DOT_PRODUCT_TEXTURE_3D_NV: int = 34543
+
 MGL_DOT_PRODUCT_TEXTURE_CUBE_MAP_NV: int = 34544
+
 MGL_DOUBLE: int = 5130
+
 MGL_DOUBLEBUFFER: int = 3122
+
 MGL_DRAW_BUFFER: int = 3073
+
 MGL_DRAW_FRAMEBUFFER: int = 36009
+
 MGL_DRAW_PIXEL_TOKEN: int = 1797
+
 MGL_DSDT8_MAG8_INTENSITY8_NV: int = 34571
+
 MGL_DSDT8_MAG8_NV: int = 34570
+
 MGL_DSDT8_NV: int = 34569
+
 MGL_DSDT_MAG_INTENSITY_NV: int = 34524
+
 MGL_DSDT_MAG_NV: int = 34550
+
 MGL_DSDT_MAG_VIB_NV: int = 34551
+
 MGL_DSDT_NV: int = 34549
+
 MGL_DST_ALPHA: int = 772
+
 MGL_DST_COLOR: int = 774
+
 MGL_DS_BIAS_NV: int = 34582
+
 MGL_DS_SCALE_NV: int = 34576
+
 MGL_DT_BIAS_NV: int = 34583
+
 MGL_DT_SCALE_NV: int = 34577
+
 MGL_DYNAMIC_COPY_ARB: int = 35050
+
 MGL_DYNAMIC_DRAW_ARB: int = 35048
+
 MGL_DYNAMIC_READ_ARB: int = 35049
+
 MGL_EDGE_FLAG: int = 2883
+
 MGL_EDGE_FLAG_ARRAY: int = 32889
+
 MGL_EDGE_FLAG_ARRAY_BUFFER_BINDING_ARB: int = 34971
+
 MGL_EDGE_FLAG_ARRAY_COUNT_EXT: int = 32909
+
 MGL_EDGE_FLAG_ARRAY_EXT: int = 32889
+
 MGL_EDGE_FLAG_ARRAY_POINTER: int = 32915
+
 MGL_EDGE_FLAG_ARRAY_POINTER_EXT: int = 32915
+
 MGL_EDGE_FLAG_ARRAY_STRIDE: int = 32908
+
 MGL_EDGE_FLAG_ARRAY_STRIDE_EXT: int = 32908
+
 MGL_EIGHTH_BIT_ATI: int = 32
+
 MGL_ELEMENT_ARRAY_BUFFER_ARB: int = 34963
+
 MGL_ELEMENT_ARRAY_BUFFER_BINDING_ARB: int = 34965
+
 MGL_EMBOSS_CONSTANT_NV: int = 34142
+
 MGL_EMBOSS_LIGHT_NV: int = 34141
+
 MGL_EMBOSS_MAP_NV: int = 34143
+
 MGL_EMISSION: int = 5632
+
 MGL_ENABLE_BIT: int = 8192
+
 MGL_EQUAL: int = 514
+
 MGL_EQUIV: int = 5385
+
 MGL_EVAL_BIT: int = 65536
+
 MGL_EXP: int = 2048
+
 MGL_EXP2: int = 2049
+
 MGL_EXPAND_NEGATE_NV: int = 34105
+
 MGL_EXPAND_NORMAL_NV: int = 34104
+
 MGL_EXTENSIONS: int = 7939
+
 MGL_EXT_vertex_shader: int = 1
+
 MGL_EYE_LINEAR: int = 9216
+
 MGL_EYE_PLANE: int = 9474
+
 MGL_E_TIMES_F_NV: int = 34097
+
 MGL_FALSE: int = 0
+
 MGL_FASTEST: int = 4353
+
 MGL_FEEDBACK: int = 7169
+
 MGL_FEEDBACK_BUFFER_POINTER: int = 3568
+
 MGL_FEEDBACK_BUFFER_SIZE: int = 3569
+
 MGL_FEEDBACK_BUFFER_TYPE: int = 3570
+
 MGL_FENCE_CONDITION_NV: int = 34036
+
 MGL_FENCE_STATUS_NV: int = 34035
+
 MGL_FILL: int = 6914
+
 MGL_FIXED_ONLY: int = 35101
+
 MGL_FLAT: int = 7424
+
 MGL_FLOAT: int = 5126
+
 MGL_FLOAT_CLEAR_COLOR_VALUE_NV: int = 34957
+
 MGL_FLOAT_MAT2_ARB: int = 35674
+
 MGL_FLOAT_MAT3_ARB: int = 35675
+
 MGL_FLOAT_MAT4_ARB: int = 35676
+
 MGL_FLOAT_R16_NV: int = 34948
+
 MGL_FLOAT_R32_NV: int = 34949
+
 MGL_FLOAT_RG16_NV: int = 34950
+
 MGL_FLOAT_RG32_NV: int = 34951
+
 MGL_FLOAT_RGB16_NV: int = 34952
+
 MGL_FLOAT_RGB32_NV: int = 34953
+
 MGL_FLOAT_RGBA16_NV: int = 34954
+
 MGL_FLOAT_RGBA32_NV: int = 34955
+
 MGL_FLOAT_RGBA_MODE_NV: int = 34958
+
 MGL_FLOAT_RGBA_NV: int = 34947
+
 MGL_FLOAT_RGB_NV: int = 34946
+
 MGL_FLOAT_RG_NV: int = 34945
+
 MGL_FLOAT_R_NV: int = 34944
+
 MGL_FLOAT_VEC2_ARB: int = 35664
+
 MGL_FLOAT_VEC3_ARB: int = 35665
+
 MGL_FLOAT_VEC4_ARB: int = 35666
+
 MGL_FOG: int = 2912
+
 MGL_FOG_BIT: int = 128
+
 MGL_FOG_COLOR: int = 2918
+
 MGL_FOG_COORDINATE_ARRAY_BUFFER_BINDING_ARB: int = 34973
+
 MGL_FOG_COORDINATE_ARRAY_EXT: int = 33879
+
 MGL_FOG_COORDINATE_ARRAY_POINTER_EXT: int = 33878
+
 MGL_FOG_COORDINATE_ARRAY_STRIDE_EXT: int = 33877
+
 MGL_FOG_COORDINATE_ARRAY_TYPE_EXT: int = 33876
+
 MGL_FOG_COORDINATE_EXT: int = 33873
+
 MGL_FOG_COORDINATE_SOURCE_EXT: int = 33872
+
 MGL_FOG_DENSITY: int = 2914
+
 MGL_FOG_END: int = 2916
+
 MGL_FOG_HINT: int = 3156
+
 MGL_FOG_INDEX: int = 2913
+
 MGL_FOG_MODE: int = 2917
+
 MGL_FOG_SPECULAR_TEXTURE_WIN: int = 33004
+
 MGL_FOG_START: int = 2915
+
 MGL_FRAGMENT_DEPTH_EXT: int = 33874
+
 MGL_FRAGMENT_PROGRAM_ARB: int = 34820
+
 MGL_FRAGMENT_PROGRAM_BINDING_NV: int = 34931
+
 MGL_FRAGMENT_PROGRAM_NV: int = 34928
+
 MGL_FRAGMENT_SHADER_ARB: int = 35632
+
 MGL_FRAGMENT_SHADER_ATI: int = 35104
+
 MGL_FRAMEBUFFER: int = 36160
+
 MGL_FRAMEBUFFER_ATTACHMENT_OBJECT_NAME: int = 36049
+
 MGL_FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE: int = 36048
+
 MGL_FRAMEBUFFER_ATTACHMENT_TEXTURE_3D_ZOFFSET: int = 36052
+
 MGL_FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE: int = 36051
+
 MGL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL: int = 36050
+
 MGL_FRAMEBUFFER_BINDING: int = 36006
+
 MGL_FRAMEBUFFER_COMPLETE: int = 36053
+
 MGL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT: int = 36054
+
 MGL_FRAMEBUFFER_INCOMPLETE_DIMENSIONS: int = 36057
+
 MGL_FRAMEBUFFER_INCOMPLETE_DRAW_BUFFER: int = 36059
+
 MGL_FRAMEBUFFER_INCOMPLETE_DUPLICATE_ATTACHMENT: int = 36056
+
 MGL_FRAMEBUFFER_INCOMPLETE_FORMATS: int = 36058
+
 MGL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT: int = 36055
+
 MGL_FRAMEBUFFER_INCOMPLETE_READ_BUFFER: int = 36060
+
 MGL_FRAMEBUFFER_UNSUPPORTED: int = 36061
+
 MGL_FRONT: int = 1028
+
 MGL_FRONT_AND_BACK: int = 1032
+
 MGL_FRONT_FACE: int = 2886
+
 MGL_FRONT_LEFT: int = 1024
+
 MGL_FRONT_RIGHT: int = 1025
+
 MGL_FULL_RANGE_EXT: int = 34785
+
 MGL_FUNC_ADD: int = 32774
+
 MGL_FUNC_ADD_EXT: int = 32774
+
 MGL_FUNC_REVERSE_SUBTRACT: int = 32779
+
 MGL_FUNC_REVERSE_SUBTRACT_EXT: int = 32779
+
 MGL_FUNC_SUBTRACT: int = 32778
+
 MGL_FUNC_SUBTRACT_EXT: int = 32778
+
 MGL_GENERATE_MIPMAP_SGIS: int = 33169
+
 MGL_GENERIC_ATTRIB_NV: int = 35965
+
 MGL_GEQUAL: int = 518
+
 MGL_GPU_MEMORY_INFO_CURRENT_AVAILABLE_VIDMEM_NVX: int = 36937
+
 MGL_GPU_MEMORY_INFO_DEDICATED_VIDMEM_NVX: int = 36935
+
 MGL_GPU_MEMORY_INFO_EVICTED_MEMORY_NVX: int = 36939
+
 MGL_GPU_MEMORY_INFO_EVICTION_COUNT_NVX: int = 36938
+
 MGL_GPU_MEMORY_INFO_TOTAL_AVAILABLE_MEMORY_NVX: int = 36936
+
 MGL_GREATER: int = 516
+
 MGL_GREEN: int = 6404
+
 MGL_GREEN_BIAS: int = 3353
+
 MGL_GREEN_BITS: int = 3411
+
 MGL_GREEN_BIT_ATI: int = 2
+
 MGL_GREEN_SCALE: int = 3352
+
 MGL_HALF_BIAS_NEGATE_NV: int = 34107
+
 MGL_HALF_BIAS_NORMAL_NV: int = 34106
+
 MGL_HALF_BIT_ATI: int = 8
+
 MGL_HALF_FLOAT: int = 5131
+
 MGL_HILO16_NV: int = 34552
+
 MGL_HILO_NV: int = 34548
+
 MGL_HINT_BIT: int = 32768
+
 MGL_HI_BIAS_NV: int = 34580
+
 MGL_HI_SCALE_NV: int = 34574
+
 MGL_IBM_TEXTURE_MIRRORED_REPEAT: int = 1
+
 MGL_IDENTITY_NV: int = 34346
+
 MGL_INCR: int = 7682
+
 MGL_INCR_WRAP_EXT: int = 34055
+
 MGL_INDEX_ARRAY: int = 32887
+
 MGL_INDEX_ARRAY_BUFFER_BINDING_ARB: int = 34969
+
 MGL_INDEX_ARRAY_COUNT_EXT: int = 32903
+
 MGL_INDEX_ARRAY_EXT: int = 32887
+
 MGL_INDEX_ARRAY_POINTER: int = 32913
+
 MGL_INDEX_ARRAY_POINTER_EXT: int = 32913
+
 MGL_INDEX_ARRAY_STRIDE: int = 32902
+
 MGL_INDEX_ARRAY_STRIDE_EXT: int = 32902
+
 MGL_INDEX_ARRAY_TYPE: int = 32901
+
 MGL_INDEX_ARRAY_TYPE_EXT: int = 32901
+
 MGL_INDEX_BITS: int = 3409
+
 MGL_INDEX_CLEAR_VALUE: int = 3104
+
 MGL_INDEX_LOGIC_OP: int = 3057
+
 MGL_INDEX_MODE: int = 3120
+
 MGL_INDEX_OFFSET: int = 3347
+
 MGL_INDEX_SHIFT: int = 3346
+
 MGL_INDEX_WRITEMASK: int = 3105
+
 MGL_INT: int = 5124
+
 MGL_INTENSITY: int = 32841
+
 MGL_INTENSITY12: int = 32844
+
 MGL_INTENSITY16: int = 32845
+
 MGL_INTENSITY16F: int = 34845
+
 MGL_INTENSITY32F: int = 34839
+
 MGL_INTENSITY4: int = 32842
+
 MGL_INTENSITY8: int = 32843
+
 MGL_INTERLEAVED_ATTRIBS_EXT: int = 35980
+
 MGL_INTERLEAVED_ATTRIBS_NV: int = 35980
+
 MGL_INTERPOLATE: int = 34165
+
 MGL_INTERPOLATE_EXT: int = 34165
+
 MGL_INT_VEC2_ARB: int = 35667
+
 MGL_INT_VEC3_ARB: int = 35668
+
 MGL_INT_VEC4_ARB: int = 35669
+
 MGL_INVALID_ENUM: int = 1280
+
 MGL_INVALID_FRAMEBUFFER_OPERATION: int = 1286
+
 MGL_INVALID_OPERATION: int = 1282
+
 MGL_INVALID_VALUE: int = 1281
+
 MGL_INVARIANT_DATATYPE_EXT: int = 34795
+
 MGL_INVARIANT_EXT: int = 34754
+
 MGL_INVARIANT_VALUE_EXT: int = 34794
+
 MGL_INVERSE_NV: int = 34347
+
 MGL_INVERSE_TRANSPOSE_NV: int = 34349
+
 MGL_INVERT: int = 5386
+
 MGL_ISOTROPIC_BRDF_NV: int = 34539
+
 MGL_KEEP: int = 7680
+
 MGL_LEFT: int = 1030
+
 MGL_LEQUAL: int = 515
+
 MGL_LERP_ATI: int = 35177
+
 MGL_LESS: int = 513
+
 MGL_LIGHT0: int = 16384
+
 MGL_LIGHT1: int = 16385
+
 MGL_LIGHT2: int = 16386
+
 MGL_LIGHT3: int = 16387
+
 MGL_LIGHT4: int = 16388
+
 MGL_LIGHT5: int = 16389
+
 MGL_LIGHT6: int = 16390
+
 MGL_LIGHT7: int = 16391
+
 MGL_LIGHTING: int = 2896
+
 MGL_LIGHTING_BIT: int = 64
+
 MGL_LIGHT_MODEL_AMBIENT: int = 2899
+
 MGL_LIGHT_MODEL_COLOR_CONTROL: int = 33272
+
 MGL_LIGHT_MODEL_LOCAL_VIEWER: int = 2897
+
 MGL_LIGHT_MODEL_TWO_SIDE: int = 2898
+
 MGL_LINE: int = 6913
+
 MGL_LINEAR: int = 9729
+
 MGL_LINEAR_ATTENUATION: int = 4616
+
 MGL_LINEAR_MIPMAP_LINEAR: int = 9987
+
 MGL_LINEAR_MIPMAP_NEAREST: int = 9985
+
 MGL_LINES: int = 1
+
 MGL_LINE_BIT: int = 4
+
 MGL_LINE_LOOP: int = 2
+
 MGL_LINE_RESET_TOKEN: int = 1799
+
 MGL_LINE_SMOOTH: int = 2848
+
 MGL_LINE_SMOOTH_HINT: int = 3154
+
 MGL_LINE_STIPPLE: int = 2852
+
 MGL_LINE_STIPPLE_PATTERN: int = 2853
+
 MGL_LINE_STIPPLE_REPEAT: int = 2854
+
 MGL_LINE_STRIP: int = 3
+
 MGL_LINE_TOKEN: int = 1794
+
 MGL_LINE_WIDTH: int = 2849
+
 MGL_LINE_WIDTH_GRANULARITY: int = 2851
+
 MGL_LINE_WIDTH_RANGE: int = 2850
+
 MGL_LIST_BASE: int = 2866
+
 MGL_LIST_BIT: int = 131072
+
 MGL_LIST_INDEX: int = 2867
+
 MGL_LIST_MODE: int = 2864
+
 MGL_LOAD: int = 257
+
 MGL_LOCAL_CONSTANT_DATATYPE_EXT: int = 34797
+
 MGL_LOCAL_CONSTANT_EXT: int = 34755
+
 MGL_LOCAL_CONSTANT_VALUE_EXT: int = 34796
+
 MGL_LOCAL_EXT: int = 34756
+
 MGL_LOGIC_OP: int = 3057
+
 MGL_LOGIC_OP_MODE: int = 3056
+
 MGL_LO_BIAS_NV: int = 34581
+
 MGL_LO_SCALE_NV: int = 34575
+
 MGL_LUMINANCE: int = 6409
+
 MGL_LUMINANCE12: int = 32833
+
 MGL_LUMINANCE12_ALPHA12: int = 32839
+
 MGL_LUMINANCE12_ALPHA4: int = 32838
+
 MGL_LUMINANCE16: int = 32834
+
 MGL_LUMINANCE16F: int = 34846
+
 MGL_LUMINANCE16_ALPHA16: int = 32840
+
 MGL_LUMINANCE32F: int = 34840
+
 MGL_LUMINANCE4: int = 32831
+
 MGL_LUMINANCE4_ALPHA4: int = 32835
+
 MGL_LUMINANCE6_ALPHA2: int = 32836
+
 MGL_LUMINANCE8: int = 32832
+
 MGL_LUMINANCE8_ALPHA8: int = 32837
+
 MGL_LUMINANCE_ALPHA: int = 6410
+
 MGL_LUMINANCE_ALPHA16F: int = 34847
+
 MGL_LUMINANCE_ALPHA32F: int = 34841
+
 MGL_MAD_ATI: int = 35176
+
 MGL_MAGNITUDE_BIAS_NV: int = 34584
+
 MGL_MAGNITUDE_SCALE_NV: int = 34578
+
 MGL_MAP1_COLOR_4: int = 3472
+
 MGL_MAP1_GRID_DOMAIN: int = 3536
+
 MGL_MAP1_GRID_SEGMENTS: int = 3537
+
 MGL_MAP1_INDEX: int = 3473
+
 MGL_MAP1_NORMAL: int = 3474
+
 MGL_MAP1_TEXTURE_COORD_1: int = 3475
+
 MGL_MAP1_TEXTURE_COORD_2: int = 3476
+
 MGL_MAP1_TEXTURE_COORD_3: int = 3477
+
 MGL_MAP1_TEXTURE_COORD_4: int = 3478
+
 MGL_MAP1_VERTEX_3: int = 3479
+
 MGL_MAP1_VERTEX_4: int = 3480
+
 MGL_MAP1_VERTEX_ATTRIB0_4_NV: int = 34400
+
 MGL_MAP1_VERTEX_ATTRIB10_4_NV: int = 34410
+
 MGL_MAP1_VERTEX_ATTRIB11_4_NV: int = 34411
+
 MGL_MAP1_VERTEX_ATTRIB12_4_NV: int = 34412
+
 MGL_MAP1_VERTEX_ATTRIB13_4_NV: int = 34413
+
 MGL_MAP1_VERTEX_ATTRIB14_4_NV: int = 34414
+
 MGL_MAP1_VERTEX_ATTRIB15_4_NV: int = 34415
+
 MGL_MAP1_VERTEX_ATTRIB1_4_NV: int = 34401
+
 MGL_MAP1_VERTEX_ATTRIB2_4_NV: int = 34402
+
 MGL_MAP1_VERTEX_ATTRIB3_4_NV: int = 34403
+
 MGL_MAP1_VERTEX_ATTRIB4_4_NV: int = 34404
+
 MGL_MAP1_VERTEX_ATTRIB5_4_NV: int = 34405
+
 MGL_MAP1_VERTEX_ATTRIB6_4_NV: int = 34406
+
 MGL_MAP1_VERTEX_ATTRIB7_4_NV: int = 34407
+
 MGL_MAP1_VERTEX_ATTRIB8_4_NV: int = 34408
+
 MGL_MAP1_VERTEX_ATTRIB9_4_NV: int = 34409
+
 MGL_MAP2_COLOR_4: int = 3504
+
 MGL_MAP2_GRID_DOMAIN: int = 3538
+
 MGL_MAP2_GRID_SEGMENTS: int = 3539
+
 MGL_MAP2_INDEX: int = 3505
+
 MGL_MAP2_NORMAL: int = 3506
+
 MGL_MAP2_TEXTURE_COORD_1: int = 3507
+
 MGL_MAP2_TEXTURE_COORD_2: int = 3508
+
 MGL_MAP2_TEXTURE_COORD_3: int = 3509
+
 MGL_MAP2_TEXTURE_COORD_4: int = 3510
+
 MGL_MAP2_VERTEX_3: int = 3511
+
 MGL_MAP2_VERTEX_4: int = 3512
+
 MGL_MAP2_VERTEX_ATTRIB0_4_NV: int = 34416
+
 MGL_MAP2_VERTEX_ATTRIB10_4_NV: int = 34426
+
 MGL_MAP2_VERTEX_ATTRIB11_4_NV: int = 34427
+
 MGL_MAP2_VERTEX_ATTRIB12_4_NV: int = 34428
+
 MGL_MAP2_VERTEX_ATTRIB13_4_NV: int = 34429
+
 MGL_MAP2_VERTEX_ATTRIB14_4_NV: int = 34430
+
 MGL_MAP2_VERTEX_ATTRIB15_4_NV: int = 34431
+
 MGL_MAP2_VERTEX_ATTRIB1_4_NV: int = 34417
+
 MGL_MAP2_VERTEX_ATTRIB2_4_NV: int = 34418
+
 MGL_MAP2_VERTEX_ATTRIB3_4_NV: int = 34419
+
 MGL_MAP2_VERTEX_ATTRIB4_4_NV: int = 34420
+
 MGL_MAP2_VERTEX_ATTRIB5_4_NV: int = 34421
+
 MGL_MAP2_VERTEX_ATTRIB6_4_NV: int = 34422
+
 MGL_MAP2_VERTEX_ATTRIB7_4_NV: int = 34423
+
 MGL_MAP2_VERTEX_ATTRIB8_4_NV: int = 34424
+
 MGL_MAP2_VERTEX_ATTRIB9_4_NV: int = 34425
+
 MGL_MAP_COLOR: int = 3344
+
 MGL_MAP_STENCIL: int = 3345
+
 MGL_MATRIX0: int = 35008
+
 MGL_MATRIX0_NV: int = 34352
+
 MGL_MATRIX1: int = 35009
+
 MGL_MATRIX10: int = 35018
+
 MGL_MATRIX11: int = 35019
+
 MGL_MATRIX12: int = 35020
+
 MGL_MATRIX13: int = 35021
+
 MGL_MATRIX14: int = 35022
+
 MGL_MATRIX15: int = 35023
+
 MGL_MATRIX16: int = 35024
+
 MGL_MATRIX17: int = 35025
+
 MGL_MATRIX18: int = 35026
+
 MGL_MATRIX19: int = 35027
+
 MGL_MATRIX1_NV: int = 34353
+
 MGL_MATRIX2: int = 35010
+
 MGL_MATRIX20: int = 35028
+
 MGL_MATRIX21: int = 35029
+
 MGL_MATRIX22: int = 35030
+
 MGL_MATRIX23: int = 35031
+
 MGL_MATRIX24: int = 35032
+
 MGL_MATRIX25: int = 35033
+
 MGL_MATRIX26: int = 35034
+
 MGL_MATRIX27: int = 35035
+
 MGL_MATRIX28: int = 35036
+
 MGL_MATRIX29: int = 35037
+
 MGL_MATRIX2_NV: int = 34354
+
 MGL_MATRIX3: int = 35011
+
 MGL_MATRIX30: int = 35038
+
 MGL_MATRIX31: int = 35039
+
 MGL_MATRIX3_NV: int = 34355
+
 MGL_MATRIX4: int = 35012
+
 MGL_MATRIX4_NV: int = 34356
+
 MGL_MATRIX5: int = 35013
+
 MGL_MATRIX5_NV: int = 34357
+
 MGL_MATRIX6: int = 35014
+
 MGL_MATRIX6_NV: int = 34358
+
 MGL_MATRIX7: int = 35015
+
 MGL_MATRIX7_NV: int = 34359
+
 MGL_MATRIX8: int = 35016
+
 MGL_MATRIX9: int = 35017
+
 MGL_MATRIX_EXT: int = 34752
+
 MGL_MATRIX_MODE: int = 2976
+
 MGL_MAX: int = 32776
+
 MGL_MAX_3D_TEXTURE_SIZE: int = 32883
+
 MGL_MAX_3D_TEXTURE_SIZE_EXT: int = 32883
+
 MGL_MAX_ATTRIB_STACK_DEPTH: int = 3381
+
 MGL_MAX_CLIENT_ATTRIB_STACK_DEPTH: int = 3387
+
 MGL_MAX_CLIP_PLANES: int = 3378
+
 MGL_MAX_COLOR_ATTACHMENTS: int = 36063
+
 MGL_MAX_COMBINED_TEXTURE_IMAGE_UNITS_ARB: int = 35661
+
 MGL_MAX_CUBE_MAP_TEXTURE_SIZE: int = 34076
+
 MGL_MAX_CUBE_MAP_TEXTURE_SIZE_ARB: int = 34076
+
 MGL_MAX_EVAL_ORDER: int = 3376
+
 MGL_MAX_EXT: int = 32776
+
 MGL_MAX_FRAGMENT_PROGRAM_LOCAL_PARAMETERS_NV: int = 34920
+
 MGL_MAX_FRAGMENT_UNIFORM_COMPONENTS_ARB: int = 35657
+
 MGL_MAX_GENERAL_COMBINERS_NV: int = 34125
+
 MGL_MAX_LIGHTS: int = 3377
+
 MGL_MAX_LIST_NESTING: int = 2865
+
 MGL_MAX_MODELVIEW_STACK_DEPTH: int = 3382
+
 MGL_MAX_NAME_STACK_DEPTH: int = 3383
+
 MGL_MAX_OPTIMIZED_VERTEX_SHADER_INSTRUCTIONS_EXT: int = 34762
+
 MGL_MAX_OPTIMIZED_VERTEX_SHADER_INVARIANTS_EXT: int = 34764
+
 MGL_MAX_OPTIMIZED_VERTEX_SHADER_LOCALS_EXT: int = 34766
+
 MGL_MAX_OPTIMIZED_VERTEX_SHADER_LOCAL_CONSTANTS_EXT: int = 34765
+
 MGL_MAX_OPTIMIZED_VERTEX_SHADER_VARIANTS_EXT: int = 34763
+
 MGL_MAX_PIXEL_MAP_TABLE: int = 3380
+
 MGL_MAX_PN_TRIANGLES_TESSELATION_LEVEL_ATI: int = 34801
+
 MGL_MAX_PROGRAM_ADDRESS_REGISTERS: int = 34993
+
 MGL_MAX_PROGRAM_ALU_INSTRUCTIONS_ARB: int = 34827
+
 MGL_MAX_PROGRAM_ATTRIBS: int = 34989
+
 MGL_MAX_PROGRAM_ENV_PARAMETERS: int = 34997
+
 MGL_MAX_PROGRAM_INSTRUCTIONS: int = 34977
+
 MGL_MAX_PROGRAM_LOCAL_PARAMETERS: int = 34996
+
 MGL_MAX_PROGRAM_MATRICES: int = 34351
+
 MGL_MAX_PROGRAM_MATRIX_STACK_DEPTH: int = 34350
+
 MGL_MAX_PROGRAM_NATIVE_ADDRESS_REGISTERS: int = 34995
+
 MGL_MAX_PROGRAM_NATIVE_ALU_INSTRUCTIONS_ARB: int = 34830
+
 MGL_MAX_PROGRAM_NATIVE_ATTRIBS: int = 34991
+
 MGL_MAX_PROGRAM_NATIVE_INSTRUCTIONS: int = 34979
+
 MGL_MAX_PROGRAM_NATIVE_PARAMETERS: int = 34987
+
 MGL_MAX_PROGRAM_NATIVE_TEMPORARIES: int = 34983
+
 MGL_MAX_PROGRAM_NATIVE_TEX_INDIRECTIONS_ARB: int = 34832
+
 MGL_MAX_PROGRAM_NATIVE_TEX_INSTRUCTIONS_ARB: int = 34831
+
 MGL_MAX_PROGRAM_PARAMETERS: int = 34985
+
 MGL_MAX_PROGRAM_TEMPORARIES: int = 34981
+
 MGL_MAX_PROGRAM_TEX_INDIRECTIONS_ARB: int = 34829
+
 MGL_MAX_PROGRAM_TEX_INSTRUCTIONS_ARB: int = 34828
+
 MGL_MAX_PROJECTION_STACK_DEPTH: int = 3384
+
 MGL_MAX_RECTANGLE_TEXTURE_SIZE: int = 34040
+
 MGL_MAX_RENDERBUFFER_SIZE: int = 34024
+
 MGL_MAX_TEXTURE_COORDS_ARB: int = 34929
+
 MGL_MAX_TEXTURE_COORDS_NV: int = 34929
+
 MGL_MAX_TEXTURE_IMAGE_UNITS_ARB: int = 34930
+
 MGL_MAX_TEXTURE_IMAGE_UNITS_NV: int = 34930
+
 MGL_MAX_TEXTURE_MAX_ANISOTROPY_EXT: int = 34047
+
 MGL_MAX_TEXTURE_SIZE: int = 3379
+
 MGL_MAX_TEXTURE_STACK_DEPTH: int = 3385
+
 MGL_MAX_TEXTURE_UNITS: int = 34018
+
 MGL_MAX_TEXTURE_UNITS_ARB: int = 34018
+
 MGL_MAX_TRACK_MATRICES_NV: int = 34351
+
 MGL_MAX_TRACK_MATRIX_STACK_DEPTH_NV: int = 34350
+
 MGL_MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS_EXT: int = 35978
+
 MGL_MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS_NV: int = 35978
+
 MGL_MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS_EXT: int = 35979
+
 MGL_MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS_NV: int = 35979
+
 MGL_MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS_EXT: int = 35968
+
 MGL_MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS_NV: int = 35968
+
 MGL_MAX_VARYING_FLOATS_ARB: int = 35659
+
 MGL_MAX_VERTEX_ARRAY_RANGE_ELEMENT_NV: int = 34080
+
 MGL_MAX_VERTEX_ATTRIBS: int = 34921
+
 MGL_MAX_VERTEX_SHADER_INSTRUCTIONS_EXT: int = 34757
+
 MGL_MAX_VERTEX_SHADER_INVARIANTS_EXT: int = 34759
+
 MGL_MAX_VERTEX_SHADER_LOCALS_EXT: int = 34761
+
 MGL_MAX_VERTEX_SHADER_LOCAL_CONSTANTS_EXT: int = 34760
+
 MGL_MAX_VERTEX_SHADER_VARIANTS_EXT: int = 34758
+
 MGL_MAX_VERTEX_TEXTURE_IMAGE_UNITS_ARB: int = 35660
+
 MGL_MAX_VERTEX_UNIFORM_COMPONENTS_ARB: int = 35658
+
 MGL_MAX_VIEWPORT_DIMS: int = 3386
+
 MGL_MIN: int = 32775
+
 MGL_MIN_EXT: int = 32775
+
 MGL_MIRRORED_REPEAT_IBM: int = 33648
+
 MGL_MIRROR_CLAMP_ATI: int = 34626
+
 MGL_MIRROR_CLAMP_TO_EDGE_ATI: int = 34627
+
 MGL_MODELVIEW: int = 5888
+
 MGL_MODELVIEW0_EXT: int = 5888
+
 MGL_MODELVIEW0_MATRIX_EXT: int = 2982
+
 MGL_MODELVIEW0_STACK_DEPTH_EXT: int = 2979
+
 MGL_MODELVIEW1_EXT: int = 34058
+
 MGL_MODELVIEW1_STACK_DEPTH_EXT: int = 34050
+
 MGL_MODELVIEW_MATRIX: int = 2982
+
 MGL_MODELVIEW_MATRIX1_EXT: int = 34054
+
 MGL_MODELVIEW_PROJECTION_NV: int = 34345
+
 MGL_MODELVIEW_STACK_DEPTH: int = 2979
+
 MGL_MODULATE: int = 8448
+
 MGL_MOV_ATI: int = 35169
+
 MGL_MULT: int = 259
+
 MGL_MULTISAMPLE: int = 32925
+
 MGL_MULTISAMPLE_ARB: int = 32925
+
 MGL_MULTISAMPLE_BIT: int = 536870912
+
 MGL_MULTISAMPLE_BIT_ARB: int = 536870912
+
 MGL_MUL_ATI: int = 35172
+
 MGL_MVP_MATRIX_EXT: int = 34787
+
 MGL_N3F_V3F: int = 10789
+
 MGL_NAME_STACK_DEPTH: int = 3440
+
 MGL_NAND: int = 5390
+
 MGL_NEAREST: int = 9728
+
 MGL_NEAREST_MIPMAP_LINEAR: int = 9986
+
 MGL_NEAREST_MIPMAP_NEAREST: int = 9984
+
 MGL_NEGATE_BIT_ATI: int = 4
+
 MGL_NEGATIVE_ONE_EXT: int = 34783
+
 MGL_NEGATIVE_W_EXT: int = 34780
+
 MGL_NEGATIVE_X_EXT: int = 34777
+
 MGL_NEGATIVE_Y_EXT: int = 34778
+
 MGL_NEGATIVE_Z_EXT: int = 34779
+
 MGL_NEVER: int = 512
+
 MGL_NICEST: int = 4354
+
 MGL_NONE: int = 0
+
 MGL_NOOP: int = 5381
+
 MGL_NOR: int = 5384
+
 MGL_NORMALIZE: int = 2977
+
 MGL_NORMALIZED_RANGE_EXT: int = 34784
+
 MGL_NORMAL_ARRAY: int = 32885
+
 MGL_NORMAL_ARRAY_BUFFER_BINDING_ARB: int = 34967
+
 MGL_NORMAL_ARRAY_COUNT_EXT: int = 32896
+
 MGL_NORMAL_ARRAY_EXT: int = 32885
+
 MGL_NORMAL_ARRAY_POINTER: int = 32911
+
 MGL_NORMAL_ARRAY_POINTER_EXT: int = 32911
+
 MGL_NORMAL_ARRAY_STRIDE: int = 32895
+
 MGL_NORMAL_ARRAY_STRIDE_EXT: int = 32895
+
 MGL_NORMAL_ARRAY_TYPE: int = 32894
+
 MGL_NORMAL_ARRAY_TYPE_EXT: int = 32894
+
 MGL_NORMAL_MAP: int = 34065
+
 MGL_NORMAL_MAP_ARB: int = 34065
+
 MGL_NOTEQUAL: int = 517
+
 MGL_NO_ERROR: int = 0
+
 MGL_NUM_COMPRESSED_TEXTURE_FORMATS: int = 34466
+
 MGL_NUM_COMPRESSED_TEXTURE_FORMATS_ARB: int = 34466
+
 MGL_NUM_FRAGMENT_CONSTANTS_ATI: int = 35183
+
 MGL_NUM_FRAGMENT_REGISTERS_ATI: int = 35182
+
 MGL_NUM_GENERAL_COMBINERS_NV: int = 34126
+
 MGL_NUM_INPUT_INTERPOLATOR_COMPONENTS_ATI: int = 35187
+
 MGL_NUM_INSTRUCTIONS_PER_PASS_ATI: int = 35185
+
 MGL_NUM_INSTRUCTIONS_TOTAL_ATI: int = 35186
+
 MGL_NUM_LOOPBACK_COMPONENTS_ATI: int = 35188
+
 MGL_NUM_PASSES_ATI: int = 35184
+
 MGL_OBJECT_ACTIVE_ATTRIBUTES_ARB: int = 35721
+
 MGL_OBJECT_ACTIVE_ATTRIBUTE_MAX_LENGTH_ARB: int = 35722
+
 MGL_OBJECT_ACTIVE_UNIFORMS_ARB: int = 35718
+
 MGL_OBJECT_ACTIVE_UNIFORM_MAX_LENGTH_ARB: int = 35719
+
 MGL_OBJECT_ATTACHED_OBJECTS_ARB: int = 35717
+
 MGL_OBJECT_COMPILE_STATUS_ARB: int = 35713
+
 MGL_OBJECT_DELETE_STATUS_ARB: int = 35712
+
 MGL_OBJECT_INFO_LOG_LENGTH_ARB: int = 35716
+
 MGL_OBJECT_LINEAR: int = 9217
+
 MGL_OBJECT_LINK_STATUS_ARB: int = 35714
+
 MGL_OBJECT_PLANE: int = 9473
+
 MGL_OBJECT_SHADER_SOURCE_LENGTH_ARB: int = 35720
+
 MGL_OBJECT_SUBTYPE_ARB: int = 35663
+
 MGL_OBJECT_TYPE_ARB: int = 35662
+
 MGL_OBJECT_VALIDATE_STATUS_ARB: int = 35715
+
 MGL_OCCLUSION_TEST_HP: int = 33125
+
 MGL_OCCLUSION_TEST_RESULT_HP: int = 33126
+
 MGL_OFFSET_TEXTURE_2D_BIAS_NV: int = 34531
+
 MGL_OFFSET_TEXTURE_2D_MATRIX_NV: int = 34529
+
 MGL_OFFSET_TEXTURE_2D_NV: int = 34536
+
 MGL_OFFSET_TEXTURE_2D_SCALE_NV: int = 34530
+
 MGL_ONE: int = 1
+
 MGL_ONE_EXT: int = 34782
+
 MGL_ONE_MINUS_CONSTANT_ALPHA: int = 32772
+
 MGL_ONE_MINUS_CONSTANT_ALPHA_EXT: int = 32772
+
 MGL_ONE_MINUS_CONSTANT_COLOR: int = 32770
+
 MGL_ONE_MINUS_CONSTANT_COLOR_EXT: int = 32770
+
 MGL_ONE_MINUS_DST_ALPHA: int = 773
+
 MGL_ONE_MINUS_DST_COLOR: int = 775
+
 MGL_ONE_MINUS_SRC_ALPHA: int = 771
+
 MGL_ONE_MINUS_SRC_COLOR: int = 769
+
 MGL_OPERAND0_ALPHA: int = 34200
+
 MGL_OPERAND0_ALPHA_EXT: int = 34200
+
 MGL_OPERAND0_RGB: int = 34192
+
 MGL_OPERAND0_RGB_EXT: int = 34192
+
 MGL_OPERAND1_ALPHA: int = 34201
+
 MGL_OPERAND1_ALPHA_EXT: int = 34201
+
 MGL_OPERAND1_RGB: int = 34193
+
 MGL_OPERAND1_RGB_EXT: int = 34193
+
 MGL_OPERAND2_ALPHA: int = 34202
+
 MGL_OPERAND2_ALPHA_EXT: int = 34202
+
 MGL_OPERAND2_RGB: int = 34194
+
 MGL_OPERAND2_RGB_EXT: int = 34194
+
 MGL_OPERAND3_ALPHA_NV: int = 34203
+
 MGL_OPERAND3_RGB_NV: int = 34195
+
 MGL_OP_ADD_EXT: int = 34695
+
 MGL_OP_CLAMP_EXT: int = 34702
+
 MGL_OP_CROSS_PRODUCT_EXT: int = 34711
+
 MGL_OP_DOT3_EXT: int = 34692
+
 MGL_OP_DOT4_EXT: int = 34693
+
 MGL_OP_EXP_BASE_2_EXT: int = 34705
+
 MGL_OP_FLOOR_EXT: int = 34703
+
 MGL_OP_FRAC_EXT: int = 34697
+
 MGL_OP_INDEX_EXT: int = 34690
+
 MGL_OP_LOG_BASE_2_EXT: int = 34706
+
 MGL_OP_MADD_EXT: int = 34696
+
 MGL_OP_MAX_EXT: int = 34698
+
 MGL_OP_MIN_EXT: int = 34699
+
 MGL_OP_MOV_EXT: int = 34713
+
 MGL_OP_MULTIPLY_MATRIX_EXT: int = 34712
+
 MGL_OP_MUL_EXT: int = 34694
+
 MGL_OP_NEGATE_EXT: int = 34691
+
 MGL_OP_POWER_EXT: int = 34707
+
 MGL_OP_RECIP_EXT: int = 34708
+
 MGL_OP_RECIP_SQRT_EXT: int = 34709
+
 MGL_OP_ROUND_EXT: int = 34704
+
 MGL_OP_SET_GE_EXT: int = 34700
+
 MGL_OP_SET_LT_EXT: int = 34701
+
 MGL_OP_SUB_EXT: int = 34710
+
 MGL_OR: int = 5383
+
 MGL_ORDER: int = 2561
+
 MGL_OR_INVERTED: int = 5389
+
 MGL_OR_REVERSE: int = 5387
+
 MGL_OUTPUT_COLOR0_EXT: int = 34715
+
 MGL_OUTPUT_COLOR1_EXT: int = 34716
+
 MGL_OUTPUT_FOG_EXT: int = 34749
+
 MGL_OUTPUT_TEXTURE_COORD0_EXT: int = 34717
+
 MGL_OUTPUT_TEXTURE_COORD10_EXT: int = 34727
+
 MGL_OUTPUT_TEXTURE_COORD11_EXT: int = 34728
+
 MGL_OUTPUT_TEXTURE_COORD12_EXT: int = 34729
+
 MGL_OUTPUT_TEXTURE_COORD13_EXT: int = 34730
+
 MGL_OUTPUT_TEXTURE_COORD14_EXT: int = 34731
+
 MGL_OUTPUT_TEXTURE_COORD15_EXT: int = 34732
+
 MGL_OUTPUT_TEXTURE_COORD16_EXT: int = 34733
+
 MGL_OUTPUT_TEXTURE_COORD17_EXT: int = 34734
+
 MGL_OUTPUT_TEXTURE_COORD18_EXT: int = 34735
+
 MGL_OUTPUT_TEXTURE_COORD19_EXT: int = 34736
+
 MGL_OUTPUT_TEXTURE_COORD1_EXT: int = 34718
+
 MGL_OUTPUT_TEXTURE_COORD20_EXT: int = 34737
+
 MGL_OUTPUT_TEXTURE_COORD21_EXT: int = 34738
+
 MGL_OUTPUT_TEXTURE_COORD22_EXT: int = 34739
+
 MGL_OUTPUT_TEXTURE_COORD23_EXT: int = 34740
+
 MGL_OUTPUT_TEXTURE_COORD24_EXT: int = 34741
+
 MGL_OUTPUT_TEXTURE_COORD25_EXT: int = 34742
+
 MGL_OUTPUT_TEXTURE_COORD26_EXT: int = 34743
+
 MGL_OUTPUT_TEXTURE_COORD27_EXT: int = 34744
+
 MGL_OUTPUT_TEXTURE_COORD28_EXT: int = 34745
+
 MGL_OUTPUT_TEXTURE_COORD29_EXT: int = 34746
+
 MGL_OUTPUT_TEXTURE_COORD2_EXT: int = 34719
+
 MGL_OUTPUT_TEXTURE_COORD30_EXT: int = 34747
+
 MGL_OUTPUT_TEXTURE_COORD31_EXT: int = 34748
+
 MGL_OUTPUT_TEXTURE_COORD3_EXT: int = 34720
+
 MGL_OUTPUT_TEXTURE_COORD4_EXT: int = 34721
+
 MGL_OUTPUT_TEXTURE_COORD5_EXT: int = 34722
+
 MGL_OUTPUT_TEXTURE_COORD6_EXT: int = 34723
+
 MGL_OUTPUT_TEXTURE_COORD7_EXT: int = 34724
+
 MGL_OUTPUT_TEXTURE_COORD8_EXT: int = 34725
+
 MGL_OUTPUT_TEXTURE_COORD9_EXT: int = 34726
+
 MGL_OUTPUT_VERTEX_EXT: int = 34714
+
 MGL_OUT_OF_MEMORY: int = 1285
+
 MGL_PACK_ALIGNMENT: int = 3333
+
 MGL_PACK_IMAGE_HEIGHT: int = 32876
+
 MGL_PACK_IMAGE_HEIGHT_EXT: int = 32876
+
 MGL_PACK_LSB_FIRST: int = 3329
+
 MGL_PACK_ROW_LENGTH: int = 3330
+
 MGL_PACK_SKIP_IMAGES: int = 32875
+
 MGL_PACK_SKIP_IMAGES_EXT: int = 32875
+
 MGL_PACK_SKIP_PIXELS: int = 3332
+
 MGL_PACK_SKIP_ROWS: int = 3331
+
 MGL_PACK_SWAP_BYTES: int = 3328
+
 MGL_PASS_THROUGH_NV: int = 34534
+
 MGL_PASS_THROUGH_TOKEN: int = 1792
+
 MGL_PERSPECTIVE_CORRECTION_HINT: int = 3152
+
 MGL_PHONG_HINT_WIN: int = 33003
+
 MGL_PHONG_WIN: int = 33002
+
 MGL_PIXEL_COUNTER_BITS_ARB: int = 34916
+
 MGL_PIXEL_COUNTER_BITS_NV: int = 34916
+
 MGL_PIXEL_COUNT_AVAILABLE_NV: int = 34919
+
 MGL_PIXEL_COUNT_NV: int = 34918
+
 MGL_PIXEL_MAP_A_TO_A: int = 3193
+
 MGL_PIXEL_MAP_A_TO_A_SIZE: int = 3257
+
 MGL_PIXEL_MAP_B_TO_B: int = 3192
+
 MGL_PIXEL_MAP_B_TO_B_SIZE: int = 3256
+
 MGL_PIXEL_MAP_G_TO_G: int = 3191
+
 MGL_PIXEL_MAP_G_TO_G_SIZE: int = 3255
+
 MGL_PIXEL_MAP_I_TO_A: int = 3189
+
 MGL_PIXEL_MAP_I_TO_A_SIZE: int = 3253
+
 MGL_PIXEL_MAP_I_TO_B: int = 3188
+
 MGL_PIXEL_MAP_I_TO_B_SIZE: int = 3252
+
 MGL_PIXEL_MAP_I_TO_G: int = 3187
+
 MGL_PIXEL_MAP_I_TO_G_SIZE: int = 3251
+
 MGL_PIXEL_MAP_I_TO_I: int = 3184
+
 MGL_PIXEL_MAP_I_TO_I_SIZE: int = 3248
+
 MGL_PIXEL_MAP_I_TO_R: int = 3186
+
 MGL_PIXEL_MAP_I_TO_R_SIZE: int = 3250
+
 MGL_PIXEL_MAP_R_TO_R: int = 3190
+
 MGL_PIXEL_MAP_R_TO_R_SIZE: int = 3254
+
 MGL_PIXEL_MAP_S_TO_S: int = 3185
+
 MGL_PIXEL_MAP_S_TO_S_SIZE: int = 3249
+
 MGL_PIXEL_MODE_BIT: int = 32
+
 MGL_PN_TRIANGLES_ATI: int = 34800
+
 MGL_PN_TRIANGLES_NORMAL_MODE_ATI: int = 34803
+
 MGL_PN_TRIANGLES_NORMAL_MODE_LINEAR_ATI: int = 34807
+
 MGL_PN_TRIANGLES_NORMAL_MODE_QUADRATIC_ATI: int = 34808
+
 MGL_PN_TRIANGLES_POINT_MODE_ATI: int = 34802
+
 MGL_PN_TRIANGLES_POINT_MODE_CUBIC_ATI: int = 34806
+
 MGL_PN_TRIANGLES_POINT_MODE_LINEAR_ATI: int = 34805
+
 MGL_PN_TRIANGLES_TESSELATION_LEVEL_ATI: int = 34804
+
 MGL_POINT: int = 6912
+
 MGL_POINTS: int = 0
+
 MGL_POINT_BIT: int = 2
+
 MGL_POINT_DISTANCE_ATTENUATION_ARB: int = 33065
+
 MGL_POINT_FADE_THRESHOLD_SIZE_ARB: int = 33064
+
 MGL_POINT_SIZE: int = 2833
+
 MGL_POINT_SIZE_GRANULARITY: int = 2835
+
 MGL_POINT_SIZE_MAX_ARB: int = 33063
+
 MGL_POINT_SIZE_MIN_ARB: int = 33062
+
 MGL_POINT_SIZE_RANGE: int = 2834
+
 MGL_POINT_SMOOTH: int = 2832
+
 MGL_POINT_SMOOTH_HINT: int = 3153
+
 MGL_POINT_TOKEN: int = 1793
+
 MGL_POLYGON: int = 9
+
 MGL_POLYGON_BIT: int = 8
+
 MGL_POLYGON_MODE: int = 2880
+
 MGL_POLYGON_OFFSET_FACTOR: int = 32824
+
 MGL_POLYGON_OFFSET_FILL: int = 32823
+
 MGL_POLYGON_OFFSET_LINE: int = 10754
+
 MGL_POLYGON_OFFSET_POINT: int = 10753
+
 MGL_POLYGON_OFFSET_UNITS: int = 10752
+
 MGL_POLYGON_SMOOTH: int = 2881
+
 MGL_POLYGON_SMOOTH_HINT: int = 3155
+
 MGL_POLYGON_STIPPLE: int = 2882
+
 MGL_POLYGON_STIPPLE_BIT: int = 16
+
 MGL_POLYGON_TOKEN: int = 1795
+
 MGL_POSITION: int = 4611
+
 MGL_PREVIOUS: int = 34168
+
 MGL_PREVIOUS_EXT: int = 34168
+
 MGL_PREVIOUS_TEXTURE_INPUT_NV: int = 34532
+
 MGL_PRIMARY_COLOR: int = 34167
+
 MGL_PRIMARY_COLOR_EXT: int = 34167
+
 MGL_PRIMARY_COLOR_NV: int = 34092
+
 MGL_PRIMITIVES_GENERATED_EXT: int = 35975
+
 MGL_PRIMITIVES_GENERATED_NV: int = 35975
+
 MGL_PRIMITIVE_ID_NV: int = 35964
+
 MGL_PRIMITIVE_RESTART_INDEX_NV: int = 34137
+
 MGL_PRIMITIVE_RESTART_NV: int = 34136
+
 MGL_PROGRAM_ADDRESS_REGISTERS: int = 34992
+
 MGL_PROGRAM_ALU_INSTRUCTIONS_ARB: int = 34821
+
 MGL_PROGRAM_ATTRIBS: int = 34988
+
 MGL_PROGRAM_BINDING: int = 34423
+
 MGL_PROGRAM_ERROR_POSITION: int = 34379
+
 MGL_PROGRAM_ERROR_POSITION_NV: int = 34379
+
 MGL_PROGRAM_ERROR_STRING: int = 34932
+
 MGL_PROGRAM_ERROR_STRING_NV: int = 34932
+
 MGL_PROGRAM_FORMAT: int = 34934
+
 MGL_PROGRAM_FORMAT_ASCII: int = 34933
+
 MGL_PROGRAM_INSTRUCTIONS: int = 34976
+
 MGL_PROGRAM_LENGTH: int = 34343
+
 MGL_PROGRAM_LENGTH_NV: int = 34343
+
 MGL_PROGRAM_NATIVE_ADDRESS_REGISTERS: int = 34994
+
 MGL_PROGRAM_NATIVE_ALU_INSTRUCTIONS_ARB: int = 34824
+
 MGL_PROGRAM_NATIVE_ATTRIBS: int = 34990
+
 MGL_PROGRAM_NATIVE_INSTRUCTIONS: int = 34978
+
 MGL_PROGRAM_NATIVE_PARAMETERS: int = 34986
+
 MGL_PROGRAM_NATIVE_TEMPORARIES: int = 34982
+
 MGL_PROGRAM_NATIVE_TEX_INDIRECTIONS_ARB: int = 34826
+
 MGL_PROGRAM_NATIVE_TEX_INSTRUCTIONS_ARB: int = 34825
+
 MGL_PROGRAM_OBJECT_ARB: int = 35648
+
 MGL_PROGRAM_PARAMETERS: int = 34984
+
 MGL_PROGRAM_PARAMETER_NV: int = 34372
+
 MGL_PROGRAM_RESIDENT_NV: int = 34375
+
 MGL_PROGRAM_STRING: int = 34344
+
 MGL_PROGRAM_STRING_NV: int = 34344
+
 MGL_PROGRAM_TARGET_NV: int = 34374
+
 MGL_PROGRAM_TEMPORARIES: int = 34980
+
 MGL_PROGRAM_TEX_INDIRECTIONS_ARB: int = 34823
+
 MGL_PROGRAM_TEX_INSTRUCTIONS_ARB: int = 34822
+
 MGL_PROGRAM_UNDER_NATIVE_LIMITS: int = 34998
+
 MGL_PROJECTION: int = 5889
+
 MGL_PROJECTION_MATRIX: int = 2983
+
 MGL_PROJECTION_STACK_DEPTH: int = 2980
+
 MGL_PROXY_TEXTURE_1D: int = 32867
+
 MGL_PROXY_TEXTURE_2D: int = 32868
+
 MGL_PROXY_TEXTURE_3D: int = 32880
+
 MGL_PROXY_TEXTURE_3D_EXT: int = 32880
+
 MGL_PROXY_TEXTURE_CUBE_MAP: int = 34075
+
 MGL_PROXY_TEXTURE_CUBE_MAP_ARB: int = 34075
+
 MGL_PROXY_TEXTURE_RECTANGLE: int = 34039
+
 MGL_Q: int = 8195
+
 MGL_QUADRATIC_ATTENUATION: int = 4617
+
 MGL_QUADS: int = 7
+
 MGL_QUAD_STRIP: int = 8
+
 MGL_QUARTER_BIT_ATI: int = 16
+
 MGL_QUERY_RESULT_ARB: int = 34918
+
 MGL_QUERY_RESULT_AVAILABLE_ARB: int = 34919
+
 MGL_R: int = 8194
+
 MGL_R3_G3_B2: int = 10768
+
 MGL_RASTERIZER_DISCARD_EXT: int = 35977
+
 MGL_RASTERIZER_DISCARD_NV: int = 35977
+
 MGL_READ_BUFFER: int = 3074
+
 MGL_READ_FRAMEBUFFER: int = 36008
+
 MGL_READ_ONLY_ARB: int = 35000
+
 MGL_READ_WRITE_ARB: int = 35002
+
 MGL_RED: int = 6403
+
 MGL_RED_BIAS: int = 3349
+
 MGL_RED_BITS: int = 3410
+
 MGL_RED_BIT_ATI: int = 1
+
 MGL_RED_SCALE: int = 3348
+
 MGL_REFLECTION_MAP: int = 34066
+
 MGL_REFLECTION_MAP_ARB: int = 34066
+
 MGL_REGISTER_COMBINERS_NV: int = 34082
+
 MGL_REG_0_ATI: int = 35105
+
 MGL_REG_10_ATI: int = 35115
+
 MGL_REG_11_ATI: int = 35116
+
 MGL_REG_12_ATI: int = 35117
+
 MGL_REG_13_ATI: int = 35118
+
 MGL_REG_14_ATI: int = 35119
+
 MGL_REG_15_ATI: int = 35120
+
 MGL_REG_16_ATI: int = 35121
+
 MGL_REG_17_ATI: int = 35122
+
 MGL_REG_18_ATI: int = 35123
+
 MGL_REG_19_ATI: int = 35124
+
 MGL_REG_1_ATI: int = 35106
+
 MGL_REG_20_ATI: int = 35125
+
 MGL_REG_21_ATI: int = 35126
+
 MGL_REG_22_ATI: int = 35127
+
 MGL_REG_23_ATI: int = 35128
+
 MGL_REG_24_ATI: int = 35129
+
 MGL_REG_25_ATI: int = 35130
+
 MGL_REG_26_ATI: int = 35131
+
 MGL_REG_27_ATI: int = 35132
+
 MGL_REG_28_ATI: int = 35133
+
 MGL_REG_29_ATI: int = 35134
+
 MGL_REG_2_ATI: int = 35107
+
 MGL_REG_30_ATI: int = 35135
+
 MGL_REG_31_ATI: int = 35136
+
 MGL_REG_3_ATI: int = 35108
+
 MGL_REG_4_ATI: int = 35109
+
 MGL_REG_5_ATI: int = 35110
+
 MGL_REG_6_ATI: int = 35111
+
 MGL_REG_7_ATI: int = 35112
+
 MGL_REG_8_ATI: int = 35113
+
 MGL_REG_9_ATI: int = 35114
+
 MGL_RENDER: int = 7168
+
 MGL_RENDERBUFFER: int = 36161
+
 MGL_RENDERBUFFER_ALPHA_SIZE: int = 36179
+
 MGL_RENDERBUFFER_BINDING: int = 36007
+
 MGL_RENDERBUFFER_BLUE_SIZE: int = 36178
+
 MGL_RENDERBUFFER_DEPTH_SIZE: int = 36180
+
 MGL_RENDERBUFFER_FREE_MEMORY_ATI: int = 34813
+
 MGL_RENDERBUFFER_GREEN_SIZE: int = 36177
+
 MGL_RENDERBUFFER_HEIGHT: int = 36163
+
 MGL_RENDERBUFFER_INTERNAL_FORMAT: int = 36164
+
 MGL_RENDERBUFFER_RED_SIZE: int = 36176
+
 MGL_RENDERBUFFER_STENCIL_SIZE: int = 36181
+
 MGL_RENDERBUFFER_WIDTH: int = 36162
+
 MGL_RENDERER: int = 7937
+
 MGL_RENDER_MODE: int = 3136
+
 MGL_REPEAT: int = 10497
+
 MGL_REPLACE: int = 7681
+
 MGL_RESCALE_NORMAL_EXT: int = 32826
+
 MGL_RETURN: int = 258
+
 MGL_RGB: int = 6407
+
 MGL_RGB10: int = 32850
+
 MGL_RGB10_A2: int = 32857
+
 MGL_RGB12: int = 32851
+
 MGL_RGB16: int = 32852
+
 MGL_RGB16F: int = 34843
+
 MGL_RGB32F: int = 34837
+
 MGL_RGB4: int = 32847
+
 MGL_RGB5: int = 32848
+
 MGL_RGB5_A1: int = 32855
+
 MGL_RGB8: int = 32849
+
 MGL_RGBA: int = 6408
+
 MGL_RGBA12: int = 32858
+
 MGL_RGBA16: int = 32859
+
 MGL_RGBA16F: int = 34842
+
 MGL_RGBA2: int = 32853
+
 MGL_RGBA32F: int = 34836
+
 MGL_RGBA4: int = 32854
+
 MGL_RGBA8: int = 32856
+
 MGL_RGBA_FLOAT_MODE: int = 34848
+
 MGL_RGBA_FLOAT_MODE_ATI: int = 34848
+
 MGL_RGBA_MODE: int = 3121
+
 MGL_RGBA_UNSIGNED_DOT_PRODUCT_MAPPING_NV: int = 34521
+
 MGL_RGB_SCALE: int = 34163
+
 MGL_RGB_SCALE_EXT: int = 34163
+
 MGL_RIGHT: int = 1031
+
 MGL_S: int = 8192
+
 MGL_SAMPLES: int = 32937
+
 MGL_SAMPLES_ARB: int = 32937
+
 MGL_SAMPLES_PASSED_ARB: int = 35092
+
 MGL_SAMPLE_ALPHA_TO_COVERAGE: int = 32926
+
 MGL_SAMPLE_ALPHA_TO_COVERAGE_ARB: int = 32926
+
 MGL_SAMPLE_ALPHA_TO_ONE: int = 32927
+
 MGL_SAMPLE_ALPHA_TO_ONE_ARB: int = 32927
+
 MGL_SAMPLE_BUFFERS: int = 32936
+
 MGL_SAMPLE_BUFFERS_ARB: int = 32936
+
 MGL_SAMPLE_COVERAGE: int = 32928
+
 MGL_SAMPLE_COVERAGE_ARB: int = 32928
+
 MGL_SAMPLE_COVERAGE_INVERT: int = 32939
+
 MGL_SAMPLE_COVERAGE_INVERT_ARB: int = 32939
+
 MGL_SAMPLE_COVERAGE_VALUE: int = 32938
+
 MGL_SAMPLE_COVERAGE_VALUE_ARB: int = 32938
+
 MGL_SATURATE_BIT_ATI: int = 64
+
 MGL_SCALAR_EXT: int = 34750
+
 MGL_SCALE_BY_FOUR_NV: int = 34111
+
 MGL_SCALE_BY_ONE_HALF_NV: int = 34112
+
 MGL_SCALE_BY_TWO_NV: int = 34110
+
 MGL_SCISSOR_BIT: int = 524288
+
 MGL_SCISSOR_BOX: int = 3088
+
 MGL_SCISSOR_TEST: int = 3089
+
 MGL_SECONDARY_COLOR_ARRAY_BUFFER_BINDING_ARB: int = 34972
+
 MGL_SECONDARY_COLOR_ARRAY_EXT: int = 33886
+
 MGL_SECONDARY_COLOR_ARRAY_POINTER_EXT: int = 33885
+
 MGL_SECONDARY_COLOR_ARRAY_SIZE_EXT: int = 33882
+
 MGL_SECONDARY_COLOR_ARRAY_STRIDE_EXT: int = 33884
+
 MGL_SECONDARY_COLOR_ARRAY_TYPE_EXT: int = 33883
+
 MGL_SECONDARY_COLOR_NV: int = 34093
+
 MGL_SECONDARY_INTERPOLATOR_ATI: int = 35181
+
 MGL_SELECT: int = 7170
+
 MGL_SELECTION_BUFFER_POINTER: int = 3571
+
 MGL_SELECTION_BUFFER_SIZE: int = 3572
+
 MGL_SEPARATE_ATTRIBS_EXT: int = 35981
+
 MGL_SEPARATE_ATTRIBS_NV: int = 35981
+
 MGL_SEPARATE_SPECULAR_COLOR: int = 33274
+
 MGL_SET: int = 5391
+
 MGL_SHADER_CONSISTENT_NV: int = 34525
+
 MGL_SHADER_OBJECT_ARB: int = 35656
+
 MGL_SHADER_OPERATION_NV: int = 34527
+
 MGL_SHADE_MODEL: int = 2900
+
 MGL_SHININESS: int = 5633
+
 MGL_SHORT: int = 5122
+
 MGL_SIGNED_ALPHA8_NV: int = 34566
+
 MGL_SIGNED_ALPHA_NV: int = 34565
+
 MGL_SIGNED_HILO16_NV: int = 34554
+
 MGL_SIGNED_HILO_NV: int = 34553
+
 MGL_SIGNED_IDENTITY_NV: int = 34108
+
 MGL_SIGNED_INTENSITY8_NV: int = 34568
+
 MGL_SIGNED_INTENSITY_NV: int = 34567
+
 MGL_SIGNED_LUMINANCE8_ALPHA8_NV: int = 34564
+
 MGL_SIGNED_LUMINANCE8_NV: int = 34562
+
 MGL_SIGNED_LUMINANCE_ALPHA_NV: int = 34563
+
 MGL_SIGNED_LUMINANCE_NV: int = 34561
+
 MGL_SIGNED_NEGATE_NV: int = 34109
+
 MGL_SIGNED_RGB8_NV: int = 34559
+
 MGL_SIGNED_RGB8_UNSIGNED_ALPHA8_NV: int = 34573
+
 MGL_SIGNED_RGBA8_NV: int = 34556
+
 MGL_SIGNED_RGBA_NV: int = 34555
+
 MGL_SIGNED_RGB_NV: int = 34558
+
 MGL_SIGNED_RGB_UNSIGNED_ALPHA_NV: int = 34572
+
 MGL_SINGLE_COLOR: int = 33273
+
 MGL_SMOOTH: int = 7425
+
 MGL_SOURCE0_ALPHA: int = 34184
+
 MGL_SOURCE0_ALPHA_EXT: int = 34184
+
 MGL_SOURCE0_RGB: int = 34176
+
 MGL_SOURCE0_RGB_EXT: int = 34176
+
 MGL_SOURCE1_ALPHA: int = 34185
+
 MGL_SOURCE1_ALPHA_EXT: int = 34185
+
 MGL_SOURCE1_RGB: int = 34177
+
 MGL_SOURCE1_RGB_EXT: int = 34177
+
 MGL_SOURCE2_ALPHA: int = 34186
+
 MGL_SOURCE2_ALPHA_EXT: int = 34186
+
 MGL_SOURCE2_RGB: int = 34178
+
 MGL_SOURCE2_RGB_EXT: int = 34178
+
 MGL_SOURCE3_ALPHA_NV: int = 34187
+
 MGL_SOURCE3_RGB_NV: int = 34179
+
 MGL_SPARE0_NV: int = 34094
+
 MGL_SPARE0_PLUS_SECONDARY_COLOR_NV: int = 34098
+
 MGL_SPARE1_NV: int = 34095
+
 MGL_SPECULAR: int = 4610
+
 MGL_SPHERE_MAP: int = 9218
+
 MGL_SPOT_CUTOFF: int = 4614
+
 MGL_SPOT_DIRECTION: int = 4612
+
 MGL_SPOT_EXPONENT: int = 4613
+
 MGL_SRC_ALPHA: int = 770
+
 MGL_SRC_ALPHA_SATURATE: int = 776
+
 MGL_SRC_COLOR: int = 768
+
 MGL_STACK_OVERFLOW: int = 1283
+
 MGL_STACK_UNDERFLOW: int = 1284
+
 MGL_STATIC_COPY_ARB: int = 35046
+
 MGL_STATIC_DRAW_ARB: int = 35044
+
 MGL_STATIC_READ_ARB: int = 35045
+
 MGL_STENCIL: int = 6146
+
 MGL_STENCIL_ATTACHMENT: int = 36128
+
 MGL_STENCIL_BITS: int = 3415
+
 MGL_STENCIL_BUFFER_BIT: int = 1024
+
 MGL_STENCIL_CLEAR_VALUE: int = 2961
+
 MGL_STENCIL_FAIL: int = 2964
+
 MGL_STENCIL_FUNC: int = 2962
+
 MGL_STENCIL_INDEX: int = 6401
+
 MGL_STENCIL_INDEX1: int = 36166
+
 MGL_STENCIL_INDEX16: int = 36169
+
 MGL_STENCIL_INDEX4: int = 36167
+
 MGL_STENCIL_INDEX8: int = 36168
+
 MGL_STENCIL_PASS_DEPTH_FAIL: int = 2965
+
 MGL_STENCIL_PASS_DEPTH_PASS: int = 2966
+
 MGL_STENCIL_REF: int = 2967
+
 MGL_STENCIL_TEST: int = 2960
+
 MGL_STENCIL_VALUE_MASK: int = 2963
+
 MGL_STENCIL_WRITEMASK: int = 2968
+
 MGL_STEREO: int = 3123
+
 MGL_STREAM_COPY_ARB: int = 35042
+
 MGL_STREAM_DRAW_ARB: int = 35040
+
 MGL_STREAM_READ_ARB: int = 35041
+
 MGL_SUBPIXEL_BITS: int = 3408
+
 MGL_SUBTRACT: int = 34023
+
 MGL_SUB_ATI: int = 35173
+
 MGL_SWIZZLE_STQ_ATI: int = 35191
+
 MGL_SWIZZLE_STQ_DQ_ATI: int = 35193
+
 MGL_SWIZZLE_STRQ_ATI: int = 35194
+
 MGL_SWIZZLE_STRQ_DQ_ATI: int = 35195
+
 MGL_SWIZZLE_STR_ATI: int = 35190
+
 MGL_SWIZZLE_STR_DR_ATI: int = 35192
+
 MGL_T: int = 8193
+
 MGL_T2F_C3F_V3F: int = 10794
+
 MGL_T2F_C4F_N3F_V3F: int = 10796
+
 MGL_T2F_C4UB_V3F: int = 10793
+
 MGL_T2F_N3F_V3F: int = 10795
+
 MGL_T2F_V3F: int = 10791
+
 MGL_T4F_C4F_N3F_V4F: int = 10797
+
 MGL_T4F_V4F: int = 10792
+
 MGL_TEXTURE: int = 5890
+
 MGL_TEXTURE0: int = 33984
+
 MGL_TEXTURE0_ARB: int = 33984
+
 MGL_TEXTURE1: int = 33985
+
 MGL_TEXTURE10: int = 33994
+
 MGL_TEXTURE10_ARB: int = 33994
+
 MGL_TEXTURE11: int = 33995
+
 MGL_TEXTURE11_ARB: int = 33995
+
 MGL_TEXTURE12: int = 33996
+
 MGL_TEXTURE12_ARB: int = 33996
+
 MGL_TEXTURE13: int = 33997
+
 MGL_TEXTURE13_ARB: int = 33997
+
 MGL_TEXTURE14: int = 33998
+
 MGL_TEXTURE14_ARB: int = 33998
+
 MGL_TEXTURE15: int = 33999
+
 MGL_TEXTURE15_ARB: int = 33999
+
 MGL_TEXTURE16: int = 34000
+
 MGL_TEXTURE16_ARB: int = 34000
+
 MGL_TEXTURE17: int = 34001
+
 MGL_TEXTURE17_ARB: int = 34001
+
 MGL_TEXTURE18: int = 34002
+
 MGL_TEXTURE18_ARB: int = 34002
+
 MGL_TEXTURE19: int = 34003
+
 MGL_TEXTURE19_ARB: int = 34003
+
 MGL_TEXTURE1_ARB: int = 33985
+
 MGL_TEXTURE2: int = 33986
+
 MGL_TEXTURE20: int = 34004
+
 MGL_TEXTURE20_ARB: int = 34004
+
 MGL_TEXTURE21: int = 34005
+
 MGL_TEXTURE21_ARB: int = 34005
+
 MGL_TEXTURE22: int = 34006
+
 MGL_TEXTURE22_ARB: int = 34006
+
 MGL_TEXTURE23: int = 34007
+
 MGL_TEXTURE23_ARB: int = 34007
+
 MGL_TEXTURE24: int = 34008
+
 MGL_TEXTURE24_ARB: int = 34008
+
 MGL_TEXTURE25: int = 34009
+
 MGL_TEXTURE25_ARB: int = 34009
+
 MGL_TEXTURE26: int = 34010
+
 MGL_TEXTURE26_ARB: int = 34010
+
 MGL_TEXTURE27: int = 34011
+
 MGL_TEXTURE27_ARB: int = 34011
+
 MGL_TEXTURE28: int = 34012
+
 MGL_TEXTURE28_ARB: int = 34012
+
 MGL_TEXTURE29: int = 34013
+
 MGL_TEXTURE29_ARB: int = 34013
+
 MGL_TEXTURE2_ARB: int = 33986
+
 MGL_TEXTURE3: int = 33987
+
 MGL_TEXTURE30: int = 34014
+
 MGL_TEXTURE30_ARB: int = 34014
+
 MGL_TEXTURE31: int = 34015
+
 MGL_TEXTURE31_ARB: int = 34015
+
 MGL_TEXTURE3_ARB: int = 33987
+
 MGL_TEXTURE4: int = 33988
+
 MGL_TEXTURE4_ARB: int = 33988
+
 MGL_TEXTURE5: int = 33989
+
 MGL_TEXTURE5_ARB: int = 33989
+
 MGL_TEXTURE6: int = 33990
+
 MGL_TEXTURE6_ARB: int = 33990
+
 MGL_TEXTURE7: int = 33991
+
 MGL_TEXTURE7_ARB: int = 33991
+
 MGL_TEXTURE8: int = 33992
+
 MGL_TEXTURE8_ARB: int = 33992
+
 MGL_TEXTURE9: int = 33993
+
 MGL_TEXTURE9_ARB: int = 33993
+
 MGL_TEXTURE_1D: int = 3552
+
 MGL_TEXTURE_1D_BINDING: int = 32872
+
 MGL_TEXTURE_2D: int = 3553
+
 MGL_TEXTURE_2D_BINDING: int = 32873
+
 MGL_TEXTURE_3D: int = 32879
+
 MGL_TEXTURE_3D_EXT: int = 32879
+
 MGL_TEXTURE_ALPHA_SIZE: int = 32863
+
 MGL_TEXTURE_ALPHA_TYPE: int = 35859
+
 MGL_TEXTURE_BINDING_1D: int = 32872
+
 MGL_TEXTURE_BINDING_2D: int = 32873
+
 MGL_TEXTURE_BINDING_CUBE_MAP: int = 34068
+
 MGL_TEXTURE_BINDING_CUBE_MAP_ARB: int = 34068
+
 MGL_TEXTURE_BINDING_RECTANGLE: int = 34038
+
 MGL_TEXTURE_BIT: int = 262144
+
 MGL_TEXTURE_BLUE_SIZE: int = 32862
+
 MGL_TEXTURE_BLUE_TYPE: int = 35858
+
 MGL_TEXTURE_BORDER: int = 4101
+
 MGL_TEXTURE_BORDER_COLOR: int = 4100
+
 MGL_TEXTURE_BORDER_VALUES_NV: int = 34586
+
 MGL_TEXTURE_COMPARE_FAIL_VALUE_ARB: int = 32959
+
 MGL_TEXTURE_COMPARE_FUNC_ARB: int = 34893
+
 MGL_TEXTURE_COMPARE_MODE_ARB: int = 34892
+
 MGL_TEXTURE_COMPARE_OPERATOR_SGIX: int = 33179
+
 MGL_TEXTURE_COMPARE_SGIX: int = 33178
+
 MGL_TEXTURE_COMPONENTS: int = 4099
+
 MGL_TEXTURE_COMPRESSED: int = 34465
+
 MGL_TEXTURE_COMPRESSED_ARB: int = 34465
+
 MGL_TEXTURE_COMPRESSED_IMAGE_SIZE: int = 34464
+
 MGL_TEXTURE_COMPRESSION_HINT: int = 34031
+
 MGL_TEXTURE_COMPRESSION_HINT_ARB: int = 34031
+
 MGL_TEXTURE_COORD_ARRAY: int = 32888
+
 MGL_TEXTURE_COORD_ARRAY_BUFFER_BINDING_ARB: int = 34970
+
 MGL_TEXTURE_COORD_ARRAY_COUNT_EXT: int = 32907
+
 MGL_TEXTURE_COORD_ARRAY_EXT: int = 32888
+
 MGL_TEXTURE_COORD_ARRAY_POINTER: int = 32914
+
 MGL_TEXTURE_COORD_ARRAY_POINTER_EXT: int = 32914
+
 MGL_TEXTURE_COORD_ARRAY_SIZE: int = 32904
+
 MGL_TEXTURE_COORD_ARRAY_SIZE_EXT: int = 32904
+
 MGL_TEXTURE_COORD_ARRAY_STRIDE: int = 32906
+
 MGL_TEXTURE_COORD_ARRAY_STRIDE_EXT: int = 32906
+
 MGL_TEXTURE_COORD_ARRAY_TYPE: int = 32905
+
 MGL_TEXTURE_COORD_ARRAY_TYPE_EXT: int = 32905
+
 MGL_TEXTURE_COORD_NV: int = 35961
+
 MGL_TEXTURE_CUBE_MAP: int = 34067
+
 MGL_TEXTURE_CUBE_MAP_ARB: int = 34067
+
 MGL_TEXTURE_CUBE_MAP_NEGATIVE_X: int = 34070
+
 MGL_TEXTURE_CUBE_MAP_NEGATIVE_X_ARB: int = 34070
+
 MGL_TEXTURE_CUBE_MAP_NEGATIVE_Y: int = 34072
+
 MGL_TEXTURE_CUBE_MAP_NEGATIVE_Y_ARB: int = 34072
+
 MGL_TEXTURE_CUBE_MAP_NEGATIVE_Z: int = 34074
+
 MGL_TEXTURE_CUBE_MAP_NEGATIVE_Z_ARB: int = 34074
+
 MGL_TEXTURE_CUBE_MAP_POSITIVE_X: int = 34069
+
 MGL_TEXTURE_CUBE_MAP_POSITIVE_X_ARB: int = 34069
+
 MGL_TEXTURE_CUBE_MAP_POSITIVE_Y: int = 34071
+
 MGL_TEXTURE_CUBE_MAP_POSITIVE_Y_ARB: int = 34071
+
 MGL_TEXTURE_CUBE_MAP_POSITIVE_Z: int = 34073
+
 MGL_TEXTURE_CUBE_MAP_POSITIVE_Z_ARB: int = 34073
+
 MGL_TEXTURE_DEPTH: int = 32881
+
 MGL_TEXTURE_DEPTH_EXT: int = 32881
+
 MGL_TEXTURE_DEPTH_SIZE_ARB: int = 34890
+
 MGL_TEXTURE_DEPTH_TYPE: int = 35862
+
 MGL_TEXTURE_DS_SIZE_NV: int = 34589
+
 MGL_TEXTURE_DT_SIZE_NV: int = 34590
+
 MGL_TEXTURE_ENV: int = 8960
+
 MGL_TEXTURE_ENV_COLOR: int = 8705
+
 MGL_TEXTURE_ENV_MODE: int = 8704
+
 MGL_TEXTURE_FLOAT_COMPONENTS_NV: int = 34956
+
 MGL_TEXTURE_FREE_MEMORY_ATI: int = 34812
+
 MGL_TEXTURE_GEN_MODE: int = 9472
+
 MGL_TEXTURE_GEN_Q: int = 3171
+
 MGL_TEXTURE_GEN_R: int = 3170
+
 MGL_TEXTURE_GEN_S: int = 3168
+
 MGL_TEXTURE_GEN_T: int = 3169
+
 MGL_TEXTURE_GEQUAL_R_SGIX: int = 33181
+
 MGL_TEXTURE_GREEN_SIZE: int = 32861
+
 MGL_TEXTURE_GREEN_TYPE: int = 35857
+
 MGL_TEXTURE_HEIGHT: int = 4097
+
 MGL_TEXTURE_HI_SIZE_NV: int = 34587
+
 MGL_TEXTURE_IMAGE_SIZE_ARB: int = 34464
+
 MGL_TEXTURE_INTENSITY_SIZE: int = 32865
+
 MGL_TEXTURE_INTENSITY_TYPE: int = 35861
+
 MGL_TEXTURE_INTERNAL_FORMAT: int = 4099
+
 MGL_TEXTURE_LEQUAL_R_SGIX: int = 33180
+
 MGL_TEXTURE_LO_SIZE_NV: int = 34588
+
 MGL_TEXTURE_LUMINANCE_SIZE: int = 32864
+
 MGL_TEXTURE_LUMINANCE_TYPE: int = 35860
+
 MGL_TEXTURE_MAG_FILTER: int = 10240
+
 MGL_TEXTURE_MAG_SIZE_NV: int = 34591
+
 MGL_TEXTURE_MATRIX: int = 2984
+
 MGL_TEXTURE_MAX_ANISOTROPY_EXT: int = 34046
+
 MGL_TEXTURE_MIN_FILTER: int = 10241
+
 MGL_TEXTURE_PRIORITY: int = 32870
+
 MGL_TEXTURE_RECTANGLE: int = 34037
+
 MGL_TEXTURE_RED_SIZE: int = 32860
+
 MGL_TEXTURE_RED_TYPE: int = 35856
+
 MGL_TEXTURE_RESIDENT: int = 32871
+
 MGL_TEXTURE_SHADER_NV: int = 34526
+
 MGL_TEXTURE_STACK_DEPTH: int = 2981
+
 MGL_TEXTURE_WIDTH: int = 4096
+
 MGL_TEXTURE_WRAP_R: int = 32882
+
 MGL_TEXTURE_WRAP_R_EXT: int = 32882
+
 MGL_TEXTURE_WRAP_S: int = 10242
+
 MGL_TEXTURE_WRAP_T: int = 10243
+
 MGL_TRACK_MATRIX_NV: int = 34376
+
 MGL_TRACK_MATRIX_TRANSFORM_NV: int = 34377
+
 MGL_TRANSFORM_BIT: int = 4096
+
 MGL_TRANSFORM_FEEDBACK_ATTRIBS_NV: int = 35966
+
 MGL_TRANSFORM_FEEDBACK_BUFFER_BINDING_EXT: int = 35983
+
 MGL_TRANSFORM_FEEDBACK_BUFFER_BINDING_NV: int = 35983
+
 MGL_TRANSFORM_FEEDBACK_BUFFER_EXT: int = 35982
+
 MGL_TRANSFORM_FEEDBACK_BUFFER_MODE_EXT: int = 35967
+
 MGL_TRANSFORM_FEEDBACK_BUFFER_MODE_NV: int = 35967
+
 MGL_TRANSFORM_FEEDBACK_BUFFER_NV: int = 35982
+
 MGL_TRANSFORM_FEEDBACK_BUFFER_SIZE_EXT: int = 35973
+
 MGL_TRANSFORM_FEEDBACK_BUFFER_SIZE_NV: int = 35973
+
 MGL_TRANSFORM_FEEDBACK_BUFFER_START_EXT: int = 35972
+
 MGL_TRANSFORM_FEEDBACK_BUFFER_START_NV: int = 35972
+
 MGL_TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN_EXT: int = 35976
+
 MGL_TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN_NV: int = 35976
+
 MGL_TRANSFORM_FEEDBACK_RECORD_NV: int = 35974
+
 MGL_TRANSFORM_FEEDBACK_VARYINGS_EXT: int = 35971
+
 MGL_TRANSFORM_FEEDBACK_VARYINGS_NV: int = 35971
+
 MGL_TRANSFORM_FEEDBACK_VARYING_MAX_LENGTH_EXT: int = 35958
+
 MGL_TRANSPOSE_COLOR_MATRIX: int = 34022
+
 MGL_TRANSPOSE_COLOR_MATRIX_ARB: int = 34022
+
 MGL_TRANSPOSE_CURRENT_MATRIX: int = 34999
+
 MGL_TRANSPOSE_MODELVIEW_MATRIX: int = 34019
+
 MGL_TRANSPOSE_MODELVIEW_MATRIX_ARB: int = 34019
+
 MGL_TRANSPOSE_NV: int = 34348
+
 MGL_TRANSPOSE_PROJECTION_MATRIX: int = 34020
+
 MGL_TRANSPOSE_PROJECTION_MATRIX_ARB: int = 34020
+
 MGL_TRANSPOSE_TEXTURE_MATRIX: int = 34021
+
 MGL_TRANSPOSE_TEXTURE_MATRIX_ARB: int = 34021
+
 MGL_TRIANGLES: int = 4
+
 MGL_TRIANGLE_FAN: int = 6
+
 MGL_TRIANGLE_STRIP: int = 5
+
 MGL_TRUE: int = 1
+
 MGL_UNPACK_ALIGNMENT: int = 3317
+
 MGL_UNPACK_IMAGE_HEIGHT: int = 32878
+
 MGL_UNPACK_IMAGE_HEIGHT_EXT: int = 32878
+
 MGL_UNPACK_LSB_FIRST: int = 3313
+
 MGL_UNPACK_ROW_LENGTH: int = 3314
+
 MGL_UNPACK_SKIP_IMAGES: int = 32877
+
 MGL_UNPACK_SKIP_IMAGES_EXT: int = 32877
+
 MGL_UNPACK_SKIP_PIXELS: int = 3316
+
 MGL_UNPACK_SKIP_ROWS: int = 3315
+
 MGL_UNPACK_SWAP_BYTES: int = 3312
+
 MGL_UNSIGNED_BYTE: int = 5121
+
 MGL_UNSIGNED_BYTE_3_3_2_EXT: int = 32818
+
 MGL_UNSIGNED_IDENTITY_NV: int = 34102
+
 MGL_UNSIGNED_INT: int = 5125
+
 MGL_UNSIGNED_INT_10_10_10_2_EXT: int = 32822
+
 MGL_UNSIGNED_INT_8_8_8_8_EXT: int = 32821
+
 MGL_UNSIGNED_INT_S8_S8_8_8_NV: int = 34522
+
 MGL_UNSIGNED_INT_S8_S8_8_8_REV_NV: int = 34523
+
 MGL_UNSIGNED_INVERT_NV: int = 34103
+
 MGL_UNSIGNED_NORMALIZED: int = 35863
+
 MGL_UNSIGNED_SHORT: int = 5123
+
 MGL_UNSIGNED_SHORT_4_4_4_4_EXT: int = 32819
+
 MGL_UNSIGNED_SHORT_5_5_5_1_EXT: int = 32820
+
 MGL_V2F: int = 10784
+
 MGL_V3F: int = 10785
+
 MGL_VARIABLE_A_NV: int = 34083
+
 MGL_VARIABLE_B_NV: int = 34084
+
 MGL_VARIABLE_C_NV: int = 34085
+
 MGL_VARIABLE_D_NV: int = 34086
+
 MGL_VARIABLE_E_NV: int = 34087
+
 MGL_VARIABLE_F_NV: int = 34088
+
 MGL_VARIABLE_G_NV: int = 34089
+
 MGL_VARIANT_ARRAY_EXT: int = 34792
+
 MGL_VARIANT_ARRAY_POINTER_EXT: int = 34793
+
 MGL_VARIANT_ARRAY_STRIDE_EXT: int = 34790
+
 MGL_VARIANT_ARRAY_TYPE_EXT: int = 34791
+
 MGL_VARIANT_DATATYPE_EXT: int = 34789
+
 MGL_VARIANT_EXT: int = 34753
+
 MGL_VARIANT_VALUE_EXT: int = 34788
+
 MGL_VBO_FREE_MEMORY_ATI: int = 34811
+
 MGL_VECTOR_EXT: int = 34751
+
 MGL_VENDOR: int = 7936
+
 MGL_VERSION: int = 7938
+
 MGL_VERTEX_ARRAY: int = 32884
+
 MGL_VERTEX_ARRAY_BUFFER_BINDING_ARB: int = 34966
+
 MGL_VERTEX_ARRAY_COUNT_EXT: int = 32893
+
 MGL_VERTEX_ARRAY_EXT: int = 32884
+
 MGL_VERTEX_ARRAY_POINTER: int = 32910
+
 MGL_VERTEX_ARRAY_POINTER_EXT: int = 32910
+
 MGL_VERTEX_ARRAY_RANGE_LENGTH_NV: int = 34078
+
 MGL_VERTEX_ARRAY_RANGE_NV: int = 34077
+
 MGL_VERTEX_ARRAY_RANGE_POINTER_NV: int = 34081
+
 MGL_VERTEX_ARRAY_RANGE_VALID_NV: int = 34079
+
 MGL_VERTEX_ARRAY_RANGE_WITHOUT_FLUSH_NV: int = 34099
+
 MGL_VERTEX_ARRAY_SIZE: int = 32890
+
 MGL_VERTEX_ARRAY_SIZE_EXT: int = 32890
+
 MGL_VERTEX_ARRAY_STRIDE: int = 32892
+
 MGL_VERTEX_ARRAY_STRIDE_EXT: int = 32892
+
 MGL_VERTEX_ARRAY_TYPE: int = 32891
+
 MGL_VERTEX_ARRAY_TYPE_EXT: int = 32891
+
 MGL_VERTEX_ATTRIB_ARRAY0_NV: int = 34384
+
 MGL_VERTEX_ATTRIB_ARRAY10_NV: int = 34394
+
 MGL_VERTEX_ATTRIB_ARRAY11_NV: int = 34395
+
 MGL_VERTEX_ATTRIB_ARRAY12_NV: int = 34396
+
 MGL_VERTEX_ATTRIB_ARRAY13_NV: int = 34397
+
 MGL_VERTEX_ATTRIB_ARRAY14_NV: int = 34398
+
 MGL_VERTEX_ATTRIB_ARRAY15_NV: int = 34399
+
 MGL_VERTEX_ATTRIB_ARRAY1_NV: int = 34385
+
 MGL_VERTEX_ATTRIB_ARRAY2_NV: int = 34386
+
 MGL_VERTEX_ATTRIB_ARRAY3_NV: int = 34387
+
 MGL_VERTEX_ATTRIB_ARRAY4_NV: int = 34388
+
 MGL_VERTEX_ATTRIB_ARRAY5_NV: int = 34389
+
 MGL_VERTEX_ATTRIB_ARRAY6_NV: int = 34390
+
 MGL_VERTEX_ATTRIB_ARRAY7_NV: int = 34391
+
 MGL_VERTEX_ATTRIB_ARRAY8_NV: int = 34392
+
 MGL_VERTEX_ATTRIB_ARRAY9_NV: int = 34393
+
 MGL_VERTEX_ATTRIB_ARRAY_BUFFER_BINDING_ARB: int = 34975
+
 MGL_VERTEX_ATTRIB_ARRAY_ENABLED: int = 34338
+
 MGL_VERTEX_ATTRIB_ARRAY_NORMALIZED: int = 34922
+
 MGL_VERTEX_ATTRIB_ARRAY_POINTER: int = 34373
+
 MGL_VERTEX_ATTRIB_ARRAY_SIZE: int = 34339
+
 MGL_VERTEX_ATTRIB_ARRAY_STRIDE: int = 34340
+
 MGL_VERTEX_ATTRIB_ARRAY_TYPE: int = 34341
+
 MGL_VERTEX_ID_NV: int = 35963
+
 MGL_VERTEX_PROGRAM: int = 34336
+
 MGL_VERTEX_PROGRAM_BINDING_NV: int = 34378
+
 MGL_VERTEX_PROGRAM_NV: int = 34336
+
 MGL_VERTEX_PROGRAM_POINT_SIZE: int = 34370
+
 MGL_VERTEX_PROGRAM_POINT_SIZE_NV: int = 34370
+
 MGL_VERTEX_PROGRAM_TWO_SIDE: int = 34371
+
 MGL_VERTEX_PROGRAM_TWO_SIDE_NV: int = 34371
+
 MGL_VERTEX_SHADER_ARB: int = 35633
+
 MGL_VERTEX_SHADER_BINDING_EXT: int = 34689
+
 MGL_VERTEX_SHADER_EXT: int = 34688
+
 MGL_VERTEX_SHADER_INSTRUCTIONS_EXT: int = 34767
+
 MGL_VERTEX_SHADER_INVARIANTS_EXT: int = 34769
+
 MGL_VERTEX_SHADER_LOCALS_EXT: int = 34771
+
 MGL_VERTEX_SHADER_LOCAL_CONSTANTS_EXT: int = 34770
+
 MGL_VERTEX_SHADER_OPTIMIZED_EXT: int = 34772
+
 MGL_VERTEX_SHADER_VARIANTS_EXT: int = 34768
+
 MGL_VERTEX_STATE_PROGRAM_NV: int = 34337
+
 MGL_VERTEX_WEIGHTING_EXT: int = 34057
+
 MGL_VERTEX_WEIGHT_ARRAY_EXT: int = 34060
+
 MGL_VERTEX_WEIGHT_ARRAY_POINTER_EXT: int = 34064
+
 MGL_VERTEX_WEIGHT_ARRAY_SIZE_EXT: int = 34061
+
 MGL_VERTEX_WEIGHT_ARRAY_STRIDE_EXT: int = 34063
+
 MGL_VERTEX_WEIGHT_ARRAY_TYPE_EXT: int = 34062
+
 MGL_VIBRANCE_BIAS_NV: int = 34585
+
 MGL_VIBRANCE_SCALE_NV: int = 34579
+
 MGL_VIEWPORT: int = 2978
+
 MGL_VIEWPORT_BIT: int = 2048
+
 MGL_WEIGHT_ARRAY_BUFFER_BINDING_ARB: int = 34974
+
 MGL_WRITE_ONLY_ARB: int = 35001
+
 MGL_W_EXT: int = 34776
+
 MGL_XOR: int = 5382
+
 MGL_X_EXT: int = 34773
+
 MGL_Y_EXT: int = 34774
+
 MGL_ZERO: int = 0
+
 MGL_ZERO_EXT: int = 34781
+
 MGL_ZOOM_X: int = 3350
+
 MGL_ZOOM_Y: int = 3351
+
 MGL_Z_EXT: int = 34775
 
 class MGeometryData:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def collectionNumber(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -2765,6 +4423,7 @@ class MGeometryData:
     def elementSize(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def elementType(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def elementTypeSize(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     kAPISupported: int = 6
     kBiNormal: int = 8
     kChar: int = 2
@@ -2797,14 +4456,13 @@ class MGeometryData:
     def objectOwnsData(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setCollectionNumber(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setObjectOwnsData(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: Any
     def uniqueID(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MGeometryLegacy:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def assign(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -2818,21 +4476,21 @@ class MGeometryLegacy:
     def primitiveArrayCount(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def tangent(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def texCoord(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: Any
 
 class MGeometryList:
     """ """
 
     MSetupFlags: Any
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def addLast(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def cullMode(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def geometry(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isDone(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     kAll: int = -1
     kCullCCW: int = 2
     kCullCW: int = 1
@@ -2848,14 +4506,13 @@ class MGeometryList:
     def projectionMatrix(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def reset(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setCurrentElement(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: Any
     def viewMatrix(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MGeometryManager:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     @staticmethod
     def className(*args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -2863,24 +4520,25 @@ class MGeometryManager:
     def dereferenceDefaultGeometry(*args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def getGeometry(*args: Unknown, **kwargs: Unknown) -> Any: ...
+
     kDefaultCube: int = 2
     kDefaultPlane: int = 1
     kDefaultSphere: int = 0
     @staticmethod
     def referenceDefaultGeometry(*args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: bool
 
 class MGeometryPrimitive:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def data(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def dataType(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def drawPrimitiveType(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def elementCount(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     kInvalidIndexType: int = 0
     kLineLoop: int = 4
     kLineStrip: int = 3
@@ -2898,9 +4556,7 @@ class MGeometryPrimitive:
 
 class MGeometryRequirementsLegacy:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def addBinormal(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -2911,13 +4567,12 @@ class MGeometryRequirementsLegacy:
     def addPosition(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def addTangent(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def addTexCoord(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: bool
 
 class MHardwareRenderer:
     """ """
-    def __init__(self, *args: Unknown, **kwargs: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown, **kwargs: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def addDrawProcedure(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def backEndString(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -2951,6 +4606,7 @@ class MHardwareRenderer:
     def getTotalExposureCount(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def glFunctionTable(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def insertDrawProcedure(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     kDefaultCube: int = 2
     kDefaultPlane: int = 1
     kDefaultSphere: int = 0
@@ -2976,13 +4632,12 @@ class MHardwareRenderer:
     def restoreCurrent(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def theRenderer(*args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: Any
 
 class MHwTextureManager:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     @staticmethod
     def className(*args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -2994,13 +4649,12 @@ class MHwTextureManager:
     def registerTextureFile(*args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def textureFile(*args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: bool
 
 class MHwrCallback:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
@@ -3011,13 +4665,12 @@ class MHwrCallback:
     def deviceReset(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def removeCallback(*args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: bool
 
 class MLightLinks:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getIgnoredLights(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -3029,14 +4682,13 @@ class MLightLinks:
     def getShadowLinkedLights(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getShadowLinkedObjects(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def parseLinks(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: bool
 
 class MRenderCallback:
     """ """
     def __disown__(self) -> Any: ...
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
@@ -3050,15 +4702,15 @@ class MRenderCallback:
     def removeCallback(*args: Unknown, **kwargs: Unknown) -> Any: ...
     def renderCallback(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def shadowCastCallback(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: bool
 
 class MRenderData:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     aspectRatio: float
     bottom: int
     bytesPerChannel: int
@@ -3073,46 +4725,45 @@ class MRenderData:
     rgbaArr: Any
     right: int
     def screenToWorld(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: bool
     top: int
     viewDirection: maya.OpenMaya.MFloatVector
     worldToEyeMatrix: maya.OpenMaya.MFloatMatrix
     def worldToScreen(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     xsize: int
     ysize: int
 
 class MRenderProfile:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def addRenderer(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def hasRenderer(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     kMayaD3D: int = 2
     kMayaOpenGL: int = 1
     kMayaSoftware: int = 0
     def numberOfRenderers(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: bool
 
 class MRenderSetup:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     @staticmethod
     def className(*args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def getEnabledSelectedNodeNames(*args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: bool
 
 class MRenderSetupPrivate:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     @staticmethod
     def _switchToLegacyRenderLayer(*args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -3120,15 +4771,15 @@ class MRenderSetupPrivate:
     def _triggerSelectionChanged(*args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def className(*args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: bool
 
 class MRenderShadowData:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     depthMaps: Any
     internalData: Any
     kDirectional: int = 2
@@ -3150,21 +4801,18 @@ class MRenderShadowData:
 
 class MRenderTargetLegacy:
     """ """
-    def __init__(self, *args: Unknown, **kwargs: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown, **kwargs: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def height(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def makeTargetCurrent(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: Any
     def width(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def writeColorBuffer(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MRenderUtil:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     @staticmethod
     def className(*args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -3186,6 +4834,7 @@ class MRenderUtil:
     def hemisphereCoverage(*args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def inCurrentRenderLayer(*args: Unknown, **kwargs: Unknown) -> Any: ...
+
     kAll: int = 0
     kAmbientOnly: int = 3
     kBatchRender: int = 1
@@ -3235,15 +4884,14 @@ class MRenderUtil:
     def sampleShadingNetwork(*args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def sendRenderProgressInfo(*args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: bool
     @staticmethod
     def valueInNoiseTable(*args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MRenderView:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
@@ -3264,15 +4912,14 @@ class MRenderView:
     def startRegionRender(*args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def startRender(*args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: bool
     @staticmethod
     def updatePixels(*args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MRenderingInfo:
     """ """
-    def __init__(self, *args: Unknown, **kwargs: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown, **kwargs: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def cameraPath(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def height(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -3282,15 +4929,14 @@ class MRenderingInfo:
     def renderTarget(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def renderingAPI(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def renderingVersion(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: Any
     def viewMatrix(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def width(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MSwatchRenderBase:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
@@ -3306,17 +4952,17 @@ class MSwatchRenderBase:
     def resolution(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setRenderQuality(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def swatchNode(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: Any
 
 class MSwatchRenderRegister:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def registerSwatchRender(*args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: bool
     @staticmethod
     def unregisterSwatchRender(*args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -3324,9 +4970,7 @@ class MSwatchRenderRegister:
 class MUniformParameter:
     """ """
     def UIHidden(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def assign(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -3339,6 +4983,7 @@ class MUniformParameter:
     def getSource(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def hasChanged(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isATexture(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     kSemanticBackgroundColor: int = 46
     kSemanticBump: int = 11
     kSemanticBumpTexture: int = 30
@@ -3430,15 +5075,14 @@ class MUniformParameter:
     def setSoftRangeMin(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setUIHidden(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setUINiceName(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: bool
     def type(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def userData(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MUniformParameterList:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def append(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -3447,13 +5091,12 @@ class MUniformParameterList:
     def length(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setElement(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setLength(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: bool
 
 class MVaryingParameter:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def addElement(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -3467,6 +5110,7 @@ class MVaryingParameter:
     def getSourceSetName(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getSourceType(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getUpdateId(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     kBinormal: int = 8
     kChar: int = 3
     kColor: int = 4
@@ -3491,14 +5135,13 @@ class MVaryingParameter:
     def semantic(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def semanticName(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setSource(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: bool
     def type(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MVaryingParameterList:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def append(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -3507,18 +5150,18 @@ class MVaryingParameterList:
     def length(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setElement(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setLength(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: bool
 
 class MViewportRenderer:
     """ """
     def UIname(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def __init__(self, *args: Unknown, **kwargs: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown, **kwargs: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def deregisterRenderer(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def initialize(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     kDirect3D: int = 1
     kExcludeAll: int = -1
     kExcludeCVs: int = 131072
@@ -3571,16 +5214,16 @@ class MViewportRenderer:
     def renderingOverride(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setRenderingOverride(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setUIName(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: Any
     def uninitialize(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class RV_AOV:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     name: Any
     numberOfChannels: int
     pPixels: Any
@@ -3588,11 +5231,10 @@ class RV_AOV:
 
 class RV_PIXEL:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
     a: float
     b: float
     g: float
@@ -3601,213 +5243,304 @@ class RV_PIXEL:
 
 class boolPtr:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def assign(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def cast(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def frompointer(*args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: bool
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class charPtr:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def assign(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def cast(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def frompointer(*args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: bool
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class doublePtr:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def assign(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def cast(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def frompointer(*args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: bool
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class floatPtr:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def assign(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def cast(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def frompointer(*args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: bool
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class intPtr:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def assign(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def cast(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def frompointer(*args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: bool
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 kMGLext_ARB_ES2_compatibility: int = 53
+
 kMGLext_ARB_OpenMGL20: int = 50
+
 kMGLext_ARB_cl_event: int = 64
+
 kMGLext_ARB_color_buffer_float: int = 46
+
 kMGLext_ARB_depth_texture: int = 34
+
 kMGLext_ARB_explicit_attrib_location: int = 51
+
 kMGLext_ARB_fragment_program: int = 41
+
 kMGLext_ARB_fragment_program_shadow: int = 47
+
 kMGLext_ARB_half_float_pixel: int = 44
+
 kMGLext_ARB_instanced_arrays: int = 52
+
 kMGLext_ARB_matrix_palette: int = 31
+
 kMGLext_ARB_occlusion_query: int = 42
+
 kMGLext_ARB_point_parameters: int = 32
+
 kMGLext_ARB_shadow: int = 35
+
 kMGLext_ARB_shadow_ambient: int = 36
+
 kMGLext_ARB_sync: int = 63
+
 kMGLext_ARB_texgen_reflection: int = 39
+
 kMGLext_ARB_texture_env_crossbar: int = 33
+
 kMGLext_ARB_texture_float: int = 45
+
 kMGLext_ARB_texture_non_power_of_two: int = 20
+
 kMGLext_ARB_texture_rectangle: int = 21
+
 kMGLext_ARB_vertex_blend: int = 30
+
 kMGLext_ARB_vertex_buffer_object: int = 43
+
 kMGLext_ARB_vertex_program: int = 40
+
 kMGLext_ATI_fragment_shader: int = 65
+
 kMGLext_ATI_meminfo: int = 66
+
 kMGLext_ATI_pixel_format_float: int = 48
+
 kMGLext_ATI_texture_mirror_once: int = 67
+
 kMGLext_EXT_compiled_vertex_array: int = 54
+
 kMGLext_EXT_cull_vertex: int = 55
+
 kMGLext_EXT_fog_coord: int = 57
+
 kMGLext_EXT_secondary_color: int = 56
+
 kMGLext_EXT_texture_filter_anisotropic: int = 60
+
 kMGLext_EXT_transform_feedback: int = 62
+
 kMGLext_EXT_vertex_shader: int = 59
+
 kMGLext_EXT_vertex_weighting: int = 58
+
 kMGLext_MGLX_choose_fbconfig: int = 91
+
 kMGLext_MGLX_choose_fbconfig_sgix: int = 96
+
 kMGLext_MGLX_create_context_with_config_sgix: int = 97
+
 kMGLext_MGLX_create_new_context: int = 92
+
 kMGLext_MGLX_create_pbuffer: int = 90
+
 kMGLext_MGLX_create_pbuffer_sgix: int = 95
+
 kMGLext_MGLX_destroy_pbuffer: int = 94
+
 kMGLext_MGLX_destroy_window: int = 93
+
 kMGLext_MGLX_get_visual_from_fbconfig_sgix: int = 98
+
 kMGLext_NUMBER_OF_EXTENSIONS: int = 99
+
 kMGLext_NVX_gpu_memory_info: int = 77
+
 kMGLext_NV_fence: int = 68
+
 kMGLext_NV_float_buffer: int = 49
+
 kMGLext_NV_fragment_program: int = 73
+
 kMGLext_NV_occlusion_query: int = 74
+
 kMGLext_NV_primitive_restart: int = 75
+
 kMGLext_NV_register_combiners: int = 69
+
 kMGLext_NV_texture_shader: int = 70
+
 kMGLext_NV_transform_feedback: int = 76
+
 kMGLext_NV_vertex_array_range: int = 71
+
 kMGLext_NV_vertex_program: int = 72
+
 kMGLext_SGIS_generate_mipmap: int = 78
+
 kMGLext_SGIX_depth_texture: int = 37
+
 kMGLext_SGIX_shadow: int = 38
+
 kMGLext_WMGL_ARB_buffer_region: int = 84
+
 kMGLext_WMGL_ARB_extensions_string: int = 83
+
 kMGLext_WMGL_ARB_make_current_read: int = 87
+
 kMGLext_WMGL_ARB_pbuffer: int = 85
+
 kMGLext_WMGL_ARB_pixel_format: int = 86
+
 kMGLext_WMGL_ARB_render_texture: int = 88
+
 kMGLext_WMGL_NV_allocate_memory: int = 89
+
 kMGLext_abgr: int = 0
+
 kMGLext_bgra: int = 1
+
 kMGLext_blend_color: int = 23
+
 kMGLext_blend_minmax: int = 24
+
 kMGLext_blend_subtract: int = 25
+
 kMGLext_color_matrix: int = 27
+
 kMGLext_color_table: int = 28
+
 kMGLext_convolution: int = 29
+
 kMGLext_draw_range_elements: int = 2
+
 kMGLext_frame_buffer_object: int = 79
+
 kMGLext_framebuffer_multisample: int = 81
+
 kMGLext_histogram: int = 26
+
 kMGLext_imaging_subset: int = 22
+
 kMGLext_multi_draw_arrays: int = 18
+
 kMGLext_multisample: int = 10
+
 kMGLext_multitexture: int = 9
+
 kMGLext_packed_depth_stencil: int = 80
+
 kMGLext_packed_pixels: int = 3
+
 kMGLext_rescale_normal: int = 4
+
 kMGLext_separate_specular_color: int = 5
+
 kMGLext_texture3D: int = 6
+
 kMGLext_texture_array: int = 82
+
 kMGLext_texture_border_clamp: int = 16
+
 kMGLext_texture_compression: int = 11
+
 kMGLext_texture_compression_s3tc: int = 61
+
 kMGLext_texture_cube_map: int = 12
+
 kMGLext_texture_edge_clamp: int = 7
+
 kMGLext_texture_env_add: int = 13
+
 kMGLext_texture_env_combine: int = 14
+
 kMGLext_texture_env_dot3: int = 15
+
 kMGLext_texture_lod: int = 8
+
 kMGLext_texture_mirrored_repeat: int = 19
+
 kMGLext_transpose_matrix: int = 17
 
 class shortPtr:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def assign(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def cast(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def frompointer(*args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: bool
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class uCharPtr:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def assign(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def cast(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def frompointer(*args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: bool
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class uIntPtr:
     """ """
-    def __init__(self, *args: Unknown) -> None:
-        """Initialize self.  See help(type(self)) for accurate signature."""
-
+    def __init__(self, *args: Unknown) -> None: ...
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def assign(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def cast(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def frompointer(*args: Unknown, **kwargs: Unknown) -> Any: ...
+
     thisown: bool
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
