@@ -2,18 +2,17 @@ from __future__ import annotations
 
 from typing import *
 
-
 Unknown = Any
 
 MAYA_API_VERSION: int = 20250300
 MAYA_APP_VERSION: int = 2025
 MAYA_CUSTOM_VERSION: int = 20250000
-MAYA_CUSTOM_VERSION_CLIENT: str = ''
+MAYA_CUSTOM_VERSION_CLIENT: str = ""
 MAYA_CUSTOM_VERSION_MAJOR: int = 0
 MAYA_CUSTOM_VERSION_MINOR: int = 0
+
 class MAddRemoveAttrEdit(MEdit):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown, **kwargs: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -27,8 +26,7 @@ class MAddRemoveAttrEdit(MEdit):
     thisown: Any
 
 class MAngle:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -67,8 +65,7 @@ class MAngle:
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MArgDatabase(MArgParser):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -82,8 +79,7 @@ class MArgDatabase(MArgParser):
     thisown: bool
 
 class MArgList:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -112,8 +108,7 @@ class MArgList:
     thisown: bool
 
 class MArgParser:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -147,8 +142,7 @@ class MArgParser:
     thisown: bool
 
 class MArrayDataBuilder:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -168,8 +162,7 @@ class MArrayDataBuilder:
     thisown: Any
 
 class MArrayDataHandle:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -194,8 +187,7 @@ class MArrayDataHandle:
     thisown: Any
 
 class MAttributeIndex:
-    """
-    """
+    """ """
     def __eq__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -224,8 +216,7 @@ class MAttributeIndex:
     def type(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MAttributePattern:
-    """
-    """
+    """ """
     def __eq__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -249,8 +240,7 @@ class MAttributePattern:
     thisown: bool
 
 class MAttributePatternArray:
-    """
-    """
+    """ """
     def __getitem__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -273,8 +263,7 @@ class MAttributePatternArray:
     thisown: bool
 
 class MAttributeSpec:
-    """
-    """
+    """ """
     def __eq__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __getitem__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
@@ -292,8 +281,7 @@ class MAttributeSpec:
     thisown: bool
 
 class MAttributeSpecArray:
-    """
-    """
+    """ """
     def __getitem__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -316,8 +304,7 @@ class MAttributeSpecArray:
     thisown: bool
 
 class MBoundingBox:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -338,8 +325,7 @@ class MBoundingBox:
     def width(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MCacheConfigRuleRegistry:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown, **kwargs: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -357,8 +343,7 @@ class MCacheConfigRuleRegistry:
     def unregisterFilter(*args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MCacheFormatDescription:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown, **kwargs: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -396,8 +381,7 @@ class MCacheFormatDescription:
     thisown: Any
 
 class MCacheSchema:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown, **kwargs: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -408,8 +392,7 @@ class MCacheSchema:
     thisown: Any
 
 class MCacheSchemaAttributesIterator:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -422,8 +405,7 @@ class MCacheSchemaAttributesIterator:
     thisown: Any
 
 class MCacheSchemaAttributesIteratorSentinel:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -432,8 +414,7 @@ class MCacheSchemaAttributesIteratorSentinel:
     thisown: bool
 
 class MCacheSchemaAttributesRange:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown, **kwargs: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -443,8 +424,7 @@ class MCacheSchemaAttributesRange:
     thisown: Any
 
 class MCallbackIdArray:
-    """
-    """
+    """ """
     def __getitem__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -467,8 +447,7 @@ class MCallbackIdArray:
     thisown: bool
 
 class MCameraMessage(MMessage):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -482,8 +461,7 @@ class MCameraMessage(MMessage):
     thisown: bool
 
 class MCameraSetMessage(MMessage):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -497,8 +475,7 @@ class MCameraSetMessage(MMessage):
     thisown: bool
 
 class MClosedTimeInterval:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -510,8 +487,7 @@ class MClosedTimeInterval:
     thisown: bool
 
 class MCloudWebService:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -543,8 +519,7 @@ class MCloudWebService:
     thisown: bool
 
 class MColor:
-    """
-    """
+    """ """
     def __add__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __call__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __div__(self, *args: Unknown) -> Any: ...
@@ -579,8 +554,7 @@ class MColor:
     thisown: bool
 
 class MColorArray:
-    """
-    """
+    """ """
     def __getitem__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -604,8 +578,7 @@ class MColorArray:
     thisown: bool
 
 class MCommandMessage(MMessage):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -627,8 +600,7 @@ class MCommandMessage(MMessage):
     thisown: bool
 
 class MCommandResult:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -655,8 +627,7 @@ class MCommandResult:
     thisown: bool
 
 class MComputation:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -676,8 +647,7 @@ class MComputation:
     thisown: bool
 
 class MConditionMessage(MMessage):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -693,8 +663,7 @@ class MConditionMessage(MMessage):
     thisown: bool
 
 class MConnectDisconnectAttrEdit(MEdit):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown, **kwargs: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -709,8 +678,7 @@ class MConnectDisconnectAttrEdit(MEdit):
     thisown: Any
 
 class MContainerMessage(MMessage):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -724,8 +692,7 @@ class MContainerMessage(MMessage):
     thisown: bool
 
 class MCurveAttribute:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -754,8 +721,7 @@ class MCurveAttribute:
     thisown: bool
 
 class MDAGDrawOverrideInfo:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -776,8 +742,7 @@ class MDAGDrawOverrideInfo:
     thisown: bool
 
 class MDGContext:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -796,8 +761,7 @@ class MDGContext:
     thisown: bool
 
 class MDGContextGuard:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -806,8 +770,7 @@ class MDGContextGuard:
     thisown: Any
 
 class MDGMessage(MMessage):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -833,8 +796,7 @@ class MDGMessage(MMessage):
     thisown: bool
 
 class MDGModifier:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -851,7 +813,9 @@ class MDGModifier:
     def deleteNode(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def disconnect(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def doIt(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def linkExtensionAttributeToPlugin(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def linkExtensionAttributeToPlugin(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def newPlugValue(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def newPlugValueBool(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def newPlugValueChar(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -867,7 +831,9 @@ class MDGModifier:
     def pythonCommandToExecute(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def removeAttribute(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def removeExtensionAttribute(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def removeExtensionAttributeIfUnset(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def removeExtensionAttributeIfUnset(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def removeMultiInstance(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def renameAttribute(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def renameNode(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -875,11 +841,12 @@ class MDGModifier:
     def setNodeLockState(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     thisown: bool
     def undoIt(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def unlinkExtensionAttributeFromPlugin(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def unlinkExtensionAttributeFromPlugin(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
 
 class MDagMessage(MMessage):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -971,8 +938,7 @@ class MDagMessage(MMessage):
     thisown: bool
 
 class MDagModifier(MDGModifier):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -984,8 +950,7 @@ class MDagModifier(MDGModifier):
     thisown: bool
 
 class MDagPath:
-    """
-    """
+    """ """
     def __eq__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -1001,7 +966,9 @@ class MDagPath:
     def exclusiveMatrix(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def exclusiveMatrixInverse(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def extendToShape(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def extendToShapeDirectlyBelow(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def extendToShapeDirectlyBelow(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def fullPathName(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def getAPathTo(*args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -1023,7 +990,9 @@ class MDagPath:
     @staticmethod
     def matchTransform(*args: Unknown, **kwargs: Unknown) -> Any: ...
     def node(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def numberOfShapesDirectlyBelow(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def numberOfShapesDirectlyBelow(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def partialPathName(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def pathCount(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def pop(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -1033,8 +1002,7 @@ class MDagPath:
     def transform(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MDagPathArray:
-    """
-    """
+    """ """
     def __getitem__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -1057,8 +1025,7 @@ class MDagPathArray:
     thisown: bool
 
 class MDataBlock:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -1077,8 +1044,7 @@ class MDataBlock:
     thisown: Any
 
 class MDataHandle:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -1120,7 +1086,9 @@ class MDataHandle:
     def asNurbsCurve(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def asNurbsCurveTransformed(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def asNurbsSurface(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def asNurbsSurfaceTransformed(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def asNurbsSurfaceTransformed(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def asPluginData(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def asShort(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def asShort2(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -1183,8 +1151,7 @@ class MDataHandle:
     def typeId(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MDistance:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -1231,8 +1198,7 @@ class MDistance:
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MDoubleArray:
-    """
-    """
+    """ """
     def __add__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __delitem__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __eq__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -1264,8 +1230,7 @@ class MDoubleArray:
     thisown: bool
 
 class MEdit:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown, **kwargs: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -1291,8 +1256,7 @@ class MEdit:
     thisown: Any
 
 class MEulerRotation:
-    """
-    """
+    """ """
     def __add__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __eq__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __getitem__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -1345,8 +1309,7 @@ class MEulerRotation:
     z: float
 
 class MEvaluationManager:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown, **kwargs: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -1362,8 +1325,7 @@ class MEvaluationManager:
     thisown: Any
 
 class MEvaluationNode:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -1386,8 +1348,7 @@ class MEvaluationNode:
     thisown: Any
 
 class MEvaluationNodeIterator:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -1403,8 +1364,7 @@ class MEvaluationNodeIterator:
     thisown: Any
 
 class MEventMessage(MMessage):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -1418,8 +1378,7 @@ class MEventMessage(MMessage):
     thisown: bool
 
 class MFcurveEdit(MEdit):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown, **kwargs: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -1431,8 +1390,7 @@ class MFcurveEdit(MEdit):
     thisown: Any
 
 class MFileIO:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -1606,8 +1564,7 @@ class MFileIO:
     def unloadReferenceByNode(*args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFileObject:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -1656,8 +1613,7 @@ class MFileObject:
     thisown: bool
 
 class MFloatArray:
-    """
-    """
+    """ """
     def __add__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __delitem__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __eq__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -1689,8 +1645,7 @@ class MFloatArray:
     thisown: bool
 
 class MFloatMatrix:
-    """
-    """
+    """ """
     def __add__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __call__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __eq__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -1723,9 +1678,9 @@ class MFloatMatrix:
     def transpose(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 MFloatMatrix_kTol: float = 1e-05
+
 class MFloatPoint:
-    """
-    """
+    """ """
     def __add__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __call__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __div__(self, *args: Unknown) -> Any: ...
@@ -1762,8 +1717,7 @@ class MFloatPoint:
     z: float
 
 class MFloatPointArray:
-    """
-    """
+    """ """
     def __getitem__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -1787,9 +1741,9 @@ class MFloatPointArray:
     thisown: bool
 
 MFloatPoint_kTol: float = 1e-05
+
 class MFloatVector:
-    """
-    """
+    """ """
     def __add__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __call__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __div__(self, *args: Unknown) -> Any: ...
@@ -1833,8 +1787,7 @@ class MFloatVector:
     def zero(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFloatVectorArray:
-    """
-    """
+    """ """
     def __getitem__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -1858,9 +1811,9 @@ class MFloatVectorArray:
     thisown: bool
 
 MFloatVector_kTol: float = 1e-05
+
 class MFn:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -3085,8 +3038,7 @@ class MFn:
     thisown: bool
 
 class MFnAmbientLight(MFnLight):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -3103,8 +3055,7 @@ class MFnAmbientLight(MFnLight):
     thisown: bool
 
 class MFnAnisotropyShader(MFnDependencyNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -3118,7 +3069,9 @@ class MFnAnisotropyShader(MFnDependencyNode):
     def refractiveIndex(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def rotateAngle(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def roughness(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setAnisotropicReflectivity(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setAnisotropicReflectivity(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setCorrelationX(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setCorrelationY(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setRefractiveIndex(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -3131,8 +3084,7 @@ class MFnAnisotropyShader(MFnDependencyNode):
     thisown: bool
 
 class MFnAreaLight(MFnNonExtendedLight):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -3143,8 +3095,7 @@ class MFnAreaLight(MFnNonExtendedLight):
     thisown: bool
 
 class MFnArrayAttrsData(MFnData):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -3167,8 +3118,7 @@ class MFnArrayAttrsData(MFnData):
     def vectorArray(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnAssembly(MFnDagNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -3206,8 +3156,7 @@ class MFnAssembly(MFnDagNode):
     thisown: bool
 
 class MFnAttribute(MFnBase):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -3278,8 +3227,7 @@ class MFnAttribute(MFnBase):
     def usesArrayDataBuilder(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnBase:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown, **kwargs: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -3298,8 +3246,7 @@ class MFnBase:
     def typeString(*args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnBlinnShader(MFnReflectShader):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -3314,8 +3261,7 @@ class MFnBlinnShader(MFnReflectShader):
     thisown: bool
 
 class MFnCamera(MFnDagNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -3397,7 +3343,9 @@ class MFnCamera(MFnDagNode):
     def setFocalLength(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setFocusDistance(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setHorizontalFieldOfView(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setHorizontalFilmAperture(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setHorizontalFilmAperture(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setHorizontalFilmOffset(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setHorizontalPan(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setHorizontalRollPivot(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -3438,8 +3386,12 @@ class MFnCamera(MFnDagNode):
     def stereoHITEnabled(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     thisown: bool
     def tumblePivot(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def unnormalizedFarClippingPlane(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def unnormalizedNearClippingPlane(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def unnormalizedFarClippingPlane(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
+    def unnormalizedNearClippingPlane(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def upDirection(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def usePivotAsLocalSpace(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def verticalFieldOfView(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -3452,8 +3404,7 @@ class MFnCamera(MFnDagNode):
     def zoom(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnCameraSet(MFnDependencyNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -3480,8 +3431,7 @@ class MFnCameraSet(MFnDependencyNode):
     thisown: bool
 
 class MFnComponent(MFnBase):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -3501,8 +3451,7 @@ class MFnComponent(MFnBase):
     def weight(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnComponentListData(MFnData):
-    """
-    """
+    """ """
     def __getitem__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -3519,8 +3468,7 @@ class MFnComponentListData(MFnData):
     thisown: bool
 
 class MFnCompoundAttribute(MFnAttribute):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -3536,8 +3484,7 @@ class MFnCompoundAttribute(MFnAttribute):
     thisown: bool
 
 class MFnContainerNode(MFnDependencyNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -3559,8 +3506,7 @@ class MFnContainerNode(MFnDependencyNode):
     thisown: bool
 
 class MFnDagNode(MFnDependencyNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -3583,7 +3529,9 @@ class MFnDagNode(MFnDependencyNode):
     def duplicate(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def fullPathName(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getAllPaths(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def getConnectedSetsAndMembers(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def getConnectedSetsAndMembers(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def getPath(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def hasChild(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def hasParent(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -3621,8 +3569,7 @@ class MFnDagNode(MFnDependencyNode):
     def usingObjectColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnData(MFnBase):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -3659,15 +3606,16 @@ class MFnData(MFnBase):
     thisown: bool
 
 class MFnDependencyNode(MFnBase):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def absoluteName(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def addAttribute(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def addExternalContentForFileAttr(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def addExternalContentForFileAttr(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def affectsAnimation(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def allocateFlag(*args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -3743,7 +3691,9 @@ class MFnDependencyNode(MFnBase):
     def setAlias(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setDoNotWrite(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setExternalContent(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setExternalContentForFileAttr(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setExternalContentForFileAttr(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setFlag(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setIcon(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setLocked(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -3757,8 +3707,7 @@ class MFnDependencyNode(MFnBase):
     def uuid(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnDirectionalLight(MFnNonExtendedLight):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -3773,8 +3722,7 @@ class MFnDirectionalLight(MFnNonExtendedLight):
     def useLightPosition(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnDoubleArrayData(MFnData):
-    """
-    """
+    """ """
     def __getitem__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -3790,8 +3738,7 @@ class MFnDoubleArrayData(MFnData):
     thisown: bool
 
 class MFnDoubleIndexedComponent(MFnComponent):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -3808,8 +3755,7 @@ class MFnDoubleIndexedComponent(MFnComponent):
     thisown: bool
 
 class MFnEnumAttribute(MFnAttribute):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -3828,8 +3774,7 @@ class MFnEnumAttribute(MFnAttribute):
     thisown: bool
 
 class MFnExpression(MFnDependencyNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -3849,8 +3794,7 @@ class MFnExpression(MFnDependencyNode):
     def unitConversion(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnFloatArrayData(MFnData):
-    """
-    """
+    """ """
     def __getitem__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -3866,8 +3810,7 @@ class MFnFloatArrayData(MFnData):
     thisown: bool
 
 class MFnGenericAttribute(MFnAttribute):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -3884,8 +3827,7 @@ class MFnGenericAttribute(MFnAttribute):
     thisown: bool
 
 class MFnGeometryData(MFnData):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -3898,7 +3840,9 @@ class MFnGeometryData(MFnData):
     def className(*args: Unknown, **kwargs: Unknown) -> Any: ...
     def componentTagCategory(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def componentTagContents(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def componentTagExpressionSubsetState(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def componentTagExpressionSubsetState(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def componentTagType(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def componentTags(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def copyObjectGroups(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -3914,17 +3858,20 @@ class MFnGeometryData(MFnData):
     def objectGroupType(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def removeComponentTag(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def removeObjectGroup(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def removeObjectGroupComponent(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def removeObjectGroupComponent(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def renameComponentTag(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def resolveComponentTagExpression(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def resolveComponentTagExpression(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setComponentTagContents(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setMatrix(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setObjectGroupComponent(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     thisown: bool
 
 class MFnIntArrayData(MFnData):
-    """
-    """
+    """ """
     def __getitem__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -3940,8 +3887,7 @@ class MFnIntArrayData(MFnData):
     thisown: bool
 
 class MFnLambertShader(MFnDependencyNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -3964,7 +3910,9 @@ class MFnLambertShader(MFnDependencyNode):
     def setGlowIntensity(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setHideSource(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setIncandescence(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setRefractedRayDepthLimit(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setRefractedRayDepthLimit(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setRefractiveIndex(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setRtRefractedColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setTranslucenceCoeff(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -3974,8 +3922,7 @@ class MFnLambertShader(MFnDependencyNode):
     def transparency(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnLatticeData(MFnGeometryData):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -3987,8 +3934,7 @@ class MFnLatticeData(MFnGeometryData):
     thisown: bool
 
 class MFnLayeredShader(MFnDependencyNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -4011,8 +3957,7 @@ class MFnLayeredShader(MFnDependencyNode):
     def transparency(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnLight(MFnDagNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -4043,8 +3988,7 @@ class MFnLight(MFnDagNode):
     def useRayTraceShadows(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnLightDataAttribute(MFnAttribute):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -4058,8 +4002,7 @@ class MFnLightDataAttribute(MFnAttribute):
     thisown: bool
 
 class MFnMatrixArrayData(MFnData):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -4074,8 +4017,7 @@ class MFnMatrixArrayData(MFnData):
     thisown: bool
 
 class MFnMatrixAttribute(MFnAttribute):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -4088,8 +4030,7 @@ class MFnMatrixAttribute(MFnAttribute):
     thisown: bool
 
 class MFnMatrixData(MFnData):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -4104,8 +4045,7 @@ class MFnMatrixData(MFnData):
     def transformation(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnMesh(MFnDagNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -4120,17 +4060,23 @@ class MFnMesh(MFnDagNode):
     def assignUVs(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def autoUniformGridParams(*args: Unknown, **kwargs: Unknown) -> Any: ...
-    def binaryBlindDataComponentId(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def binaryBlindDataComponentId(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def booleanOp(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def booleanOps(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def cachedIntersectionAcceleratorInfo(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def cachedIntersectionAcceleratorInfo(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     @staticmethod
     def className(*args: Unknown, **kwargs: Unknown) -> Any: ...
     def cleanupEdgeSmoothing(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def clearBlindData(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def clearColors(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
-    def clearGlobalIntersectionAcceleratorInfo(*args: Unknown, **kwargs: Unknown) -> Any: ...
+    def clearGlobalIntersectionAcceleratorInfo(
+        *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def clearUVs(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def closestIntersection(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def collapseEdges(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -4146,9 +4092,13 @@ class MFnMesh(MFnDagNode):
     def createBlindDataType(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def createColorSetDataMesh(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def createColorSetWithName(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def createColorSetWithNameDataMesh(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def createColorSetWithNameDataMesh(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def createInPlace(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def createUVSetDataMeshWithName(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def createUVSetDataMeshWithName(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def createUVSetWithName(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def currentColorSetName(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def currentUVSetName(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -4163,17 +4113,27 @@ class MFnMesh(MFnDagNode):
     def extractFaces(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def extrudeEdges(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def extrudeFaces(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def freeCachedIntersectionAccelerator(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def freeCachedIntersectionAccelerator(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def generateSmoothMesh(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getAssignedUVs(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def getAssociatedColorSetInstances(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def getAssociatedUVSetInstances(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def getAssociatedUVSetTextures(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def getAssociatedColorSetInstances(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
+    def getAssociatedUVSetInstances(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
+    def getAssociatedUVSetTextures(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def getAxisAtPoint(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getBinaryBlindData(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getBinormals(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getBlindDataAttrNames(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def getBlindDataFaceVertexIndices(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def getBlindDataFaceVertexIndices(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def getBlindDataTypes(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getBoolBlindData(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getCheckSamePointTwice(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -4197,7 +4157,9 @@ class MFnMesh(MFnDagNode):
     def getFaceUVSetNames(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getFaceVertexBinormal(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getFaceVertexBinormals(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def getFaceVertexBlindDataIndex(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def getFaceVertexBlindDataIndex(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def getFaceVertexColorIndex(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getFaceVertexColors(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getFaceVertexNormal(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -4217,7 +4179,9 @@ class MFnMesh(MFnDagNode):
     def getPoints(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getPointsAtUV(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getPolygonNormal(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def getPolygonTriangleVertices(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def getPolygonTriangleVertices(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def getPolygonUV(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getPolygonUVid(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getPolygonVertices(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -4225,7 +4189,9 @@ class MFnMesh(MFnDagNode):
     def getRawNormals(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getRawPoints(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getRawUVs(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def getSmoothMeshDisplayOptions(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def getSmoothMeshDisplayOptions(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def getStringBlindData(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getTangentId(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getTangents(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -4244,7 +4210,9 @@ class MFnMesh(MFnDagNode):
     def getVertexNormals(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getVertices(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
-    def globalIntersectionAcceleratorsInfo(*args: Unknown, **kwargs: Unknown) -> Any: ...
+    def globalIntersectionAcceleratorsInfo(
+        *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def hasAlphaChannels(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def hasBlindData(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def hasBlindDataComponentId(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -4308,7 +4276,9 @@ class MFnMesh(MFnDagNode):
     def setPinUVs(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setPoint(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setPoints(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setSmoothMeshDisplayOptions(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setSmoothMeshDisplayOptions(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setSomeColors(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setSomeUVs(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setStringBlindData(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -4318,9 +4288,13 @@ class MFnMesh(MFnDagNode):
     def setVertexColors(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setVertexNormal(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setVertexNormals(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def sortIntersectionFaceTriIds(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def sortIntersectionFaceTriIds(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def split(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def stringBlindDataComponentId(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def stringBlindDataComponentId(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def subdivideEdges(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def subdivideFaces(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def syncObject(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -4332,8 +4306,7 @@ class MFnMesh(MFnDagNode):
     def updateSurface(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnMeshData(MFnGeometryData):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -4344,8 +4317,7 @@ class MFnMeshData(MFnGeometryData):
     thisown: bool
 
 class MFnMessageAttribute(MFnAttribute):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -4356,8 +4328,7 @@ class MFnMessageAttribute(MFnAttribute):
     thisown: bool
 
 class MFnNonAmbientLight(MFnLight):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -4369,8 +4340,7 @@ class MFnNonAmbientLight(MFnLight):
     thisown: bool
 
 class MFnNonExtendedLight(MFnNonAmbientLight):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -4398,8 +4368,7 @@ class MFnNonExtendedLight(MFnNonAmbientLight):
     def useDepthMapShadows(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnNumericAttribute(MFnAttribute):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -4429,8 +4398,7 @@ class MFnNumericAttribute(MFnAttribute):
     def unitType(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnNumericData(MFnData):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -4460,8 +4428,7 @@ class MFnNumericData(MFnData):
     thisown: bool
 
 class MFnNurbsCurve(MFnDagNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -4510,8 +4477,7 @@ class MFnNurbsCurve(MFnDagNode):
     def updateCurve(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnNurbsCurveData(MFnGeometryData):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -4522,8 +4488,7 @@ class MFnNurbsCurveData(MFnGeometryData):
     thisown: bool
 
 class MFnNurbsSurface(MFnDagNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -4615,8 +4580,7 @@ class MFnNurbsSurface(MFnDagNode):
     def updateSurface(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnNurbsSurfaceData(MFnGeometryData):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -4627,8 +4591,7 @@ class MFnNurbsSurfaceData(MFnGeometryData):
     thisown: bool
 
 class MFnOpenPBRSurfaceShader(MFnDependencyNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -4661,7 +4624,9 @@ class MFnOpenPBRSurfaceShader(MFnDependencyNode):
     def setCoatDarkening(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setCoatIOR(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setCoatRoughness(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setCoatRoughnessAnisotropy(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setCoatRoughnessAnisotropy(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setCoatWeight(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setEmissionColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setEmissionLuminance(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -4673,32 +4638,46 @@ class MFnOpenPBRSurfaceShader(MFnDependencyNode):
     def setSpecularColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setSpecularIOR(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setSpecularRoughness(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setSpecularRoughnessAnisotropy(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setSpecularRoughnessAnisotropy(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setSpecularWeight(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setSubsurfaceColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setSubsurfaceRadius(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setSubsurfaceRadiusScale(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setSubsurfaceScatterAnisotropy(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setSubsurfaceScatterAnisotropy(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setSubsurfaceWeight(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setThinFilmIOR(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setThinFilmThickness(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setThinFilmWeight(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setTransmissionColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setTransmissionDepth(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setTransmissionDispersionAbbeNumber(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setTransmissionDispersionScale(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setTransmissionDispersionAbbeNumber(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
+    def setTransmissionDispersionScale(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setTransmissionScatter(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setTransmissionScatterAnisotropy(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setTransmissionScatterAnisotropy(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setTransmissionWeight(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def specularColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def specularIOR(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def specularRoughness(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def specularRoughnessAnisotropy(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def specularRoughnessAnisotropy(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def specularWeight(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def subsurfaceColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def subsurfaceRadius(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def subsurfaceRadiusScale(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def subsurfaceScatterAnisotropy(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def subsurfaceScatterAnisotropy(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def subsurfaceWeight(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def thinFilmIOR(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def thinFilmThickness(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -4706,15 +4685,20 @@ class MFnOpenPBRSurfaceShader(MFnDependencyNode):
     thisown: bool
     def transmissionColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def transmissionDepth(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def transmissionDispersionAbbeNumber(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def transmissionDispersionScale(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def transmissionDispersionAbbeNumber(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
+    def transmissionDispersionScale(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def transmissionScatter(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def transmissionScatterAnisotropy(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def transmissionScatterAnisotropy(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def transmissionWeight(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnPartition(MFnDependencyNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -4728,8 +4712,7 @@ class MFnPartition(MFnDependencyNode):
     thisown: bool
 
 class MFnPhongEShader(MFnDependencyNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -4746,8 +4729,7 @@ class MFnPhongEShader(MFnDependencyNode):
     def whiteness(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnPhongShader(MFnReflectShader):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -4760,8 +4742,7 @@ class MFnPhongShader(MFnReflectShader):
     thisown: bool
 
 class MFnPluginData(MFnData):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -4775,8 +4756,7 @@ class MFnPluginData(MFnData):
     def typeId(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnPointArrayData(MFnData):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -4791,8 +4771,7 @@ class MFnPointArrayData(MFnData):
     thisown: bool
 
 class MFnPointLight(MFnNonExtendedLight):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -4803,8 +4782,7 @@ class MFnPointLight(MFnNonExtendedLight):
     thisown: bool
 
 class MFnReference(MFnDependencyNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -4830,8 +4808,7 @@ class MFnReference(MFnDependencyNode):
     thisown: bool
 
 class MFnReflectShader(MFnLambertShader):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -4842,15 +4819,16 @@ class MFnReflectShader(MFnLambertShader):
     def reflectedRayDepthLimit(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def reflectivity(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setReflectedColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setReflectedRayDepthLimit(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setReflectedRayDepthLimit(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setReflectivity(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setSpecularColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def specularColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     thisown: bool
 
 class MFnSet(MFnDependencyNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -4876,8 +4854,7 @@ class MFnSet(MFnDependencyNode):
     thisown: bool
 
 class MFnSingleIndexedComponent(MFnComponent):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -4895,8 +4872,7 @@ class MFnSingleIndexedComponent(MFnComponent):
     thisown: bool
 
 class MFnSphereData(MFnData):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -4909,8 +4885,7 @@ class MFnSphereData(MFnData):
     thisown: bool
 
 class MFnSpotLight(MFnNonExtendedLight):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -4937,8 +4912,7 @@ class MFnSpotLight(MFnNonExtendedLight):
     def useDecayRegions(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnStandardSurfaceShader(MFnDependencyNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -4996,10 +4970,16 @@ class MFnStandardSurfaceShader(MFnDependencyNode):
     def setTransmission(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setTransmissionColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setTransmissionDepth(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setTransmissionDispersion(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setTransmissionExtraRoughness(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setTransmissionDispersion(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
+    def setTransmissionExtraRoughness(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setTransmissionScatter(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setTransmissionScatterAnisotropy(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setTransmissionScatterAnisotropy(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def sheen(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def sheenColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def sheenRoughness(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -5022,13 +5002,16 @@ class MFnStandardSurfaceShader(MFnDependencyNode):
     def transmissionColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def transmissionDepth(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def transmissionDispersion(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def transmissionExtraRoughness(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def transmissionExtraRoughness(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def transmissionScatter(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def transmissionScatterAnisotropy(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def transmissionScatterAnisotropy(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
 
 class MFnStringArrayData(MFnData):
-    """
-    """
+    """ """
     def __getitem__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -5044,8 +5027,7 @@ class MFnStringArrayData(MFnData):
     thisown: bool
 
 class MFnStringData(MFnData):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -5058,8 +5040,7 @@ class MFnStringData(MFnData):
     thisown: bool
 
 class MFnSubd(MFnDagNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -5087,17 +5068,23 @@ class MFnSubd(MFnDagNode):
     def editsUpdateAll(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def evaluateNormal(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def evaluatePosition(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def evaluatePositionAndNormal(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def evaluatePositionAndNormal(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def getConnectedShaders(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getCubicSpline(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def levelFullySubdivideTo(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def levelMaxAllowed(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def levelMaxCurrent(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def polygonBaseMeshAdd(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def polygonBaseMeshAddWithUVs(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def polygonBaseMeshAddWithUVs(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def polygonChildren(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def polygonCount(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def polygonCountMaxWithGivenBaseMesh(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def polygonCountMaxWithGivenBaseMesh(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def polygonEdgeCount(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def polygonEdges(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def polygonGetCenterUV(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -5116,9 +5103,13 @@ class MFnSubd(MFnDagNode):
     def updateAllEditsAndCreases(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def updateSubdSurface(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def vertexAdjacentVertices(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def vertexBaseIndexFromVertexId(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def vertexBaseIndexFromVertexId(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def vertexBaseMeshAdd(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def vertexBaseMeshAddWithIndex(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def vertexBaseMeshAddWithIndex(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def vertexBaseMeshGet(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def vertexBaseMeshGetWithId(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def vertexBaseMeshSet(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -5128,10 +5119,14 @@ class MFnSubd(MFnDagNode):
     def vertexCreaseRelevant(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def vertexEditGet(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def vertexEditSet(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def vertexEditsClearAllNonBase(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def vertexEditsClearAllNonBase(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def vertexEditsGetAllNonBase(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def vertexEditsSetAllNonBase(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def vertexIdFromBaseVertexIndex(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def vertexIdFromBaseVertexIndex(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def vertexIncidentEdges(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def vertexIncidentPolygons(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def vertexIsBoundary(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -5145,8 +5140,7 @@ class MFnSubd(MFnDagNode):
     def vertexValence(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnSubdData(MFnGeometryData):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -5157,8 +5151,7 @@ class MFnSubdData(MFnGeometryData):
     thisown: bool
 
 class MFnSubdNames:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -5213,8 +5206,7 @@ class MFnSubdNames:
     def toSelectionIndices(*args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnTransform(MFnDagNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -5264,7 +5256,9 @@ class MFnTransform(MFnDagNode):
     def setRestPosition(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setRotateOrientation(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setRotatePivot(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setRotatePivotTranslation(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setRotatePivotTranslation(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setRotation(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setRotationOrder(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setRotationQuaternion(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -5280,8 +5274,7 @@ class MFnTransform(MFnDagNode):
     def translation(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnTripleIndexedComponent(MFnComponent):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -5298,8 +5291,7 @@ class MFnTripleIndexedComponent(MFnComponent):
     thisown: bool
 
 class MFnTypedAttribute(MFnAttribute):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -5313,8 +5305,7 @@ class MFnTypedAttribute(MFnAttribute):
     thisown: bool
 
 class MFnUInt64ArrayData(MFnData):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -5329,8 +5320,7 @@ class MFnUInt64ArrayData(MFnData):
     thisown: bool
 
 class MFnUint64SingleIndexedComponent(MFnComponent):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -5347,8 +5337,7 @@ class MFnUint64SingleIndexedComponent(MFnComponent):
     thisown: bool
 
 class MFnUnitAttribute(MFnAttribute):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -5376,8 +5365,7 @@ class MFnUnitAttribute(MFnAttribute):
     def unitType(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnVectorArrayData(MFnData):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -5392,8 +5380,7 @@ class MFnVectorArrayData(MFnData):
     thisown: bool
 
 class MFnVolumeLight(MFnPointLight):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -5418,8 +5405,7 @@ class MFnVolumeLight(MFnPointLight):
     def volumeLightDirection(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MGlobal:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -5627,8 +5613,7 @@ class MGlobal:
     def viewFrame(*args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MIffFile:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -5651,8 +5636,7 @@ class MIffFile:
     thisown: bool
 
 class MIffTag:
-    """
-    """
+    """ """
     def __eq__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -5674,8 +5658,7 @@ class MIffTag:
     thisown: bool
 
 class MImage:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -5720,8 +5703,7 @@ class MImage:
     def writeToFileWithDepth(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MImageFileInfo:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -5749,8 +5731,7 @@ class MImageFileInfo:
     def width(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MInt64Array:
-    """
-    """
+    """ """
     def __add__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __delitem__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __eq__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -5782,8 +5763,7 @@ class MInt64Array:
     thisown: bool
 
 class MIntArray:
-    """
-    """
+    """ """
     def __add__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __delitem__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __eq__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -5815,8 +5795,7 @@ class MIntArray:
     thisown: bool
 
 class MItCurveCV:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -5839,8 +5818,7 @@ class MItCurveCV:
     def updateCurve(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MItDag:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -5872,8 +5850,7 @@ class MItDag:
     def willTraverseUnderWorld(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MItDependencyGraph:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -5899,7 +5876,9 @@ class MItDependencyGraph:
     def isDone(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isPruningOnFilter(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isTraversalDepthFirst(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def isTraversingOverWorldSpaceDependents(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def isTraversingOverWorldSpaceDependents(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     kBreadthFirst: int = 1
     kConnectedTo: int = 1
     kDependsOn: int = 0
@@ -5920,7 +5899,9 @@ class MItDependencyGraph:
     def rootPlug(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setCurrentFilter(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setCurrentRelationship(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setTraversalOverWorldSpaceDependents(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setTraversalOverWorldSpaceDependents(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def thisNode(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def thisNodeHasUnknownType(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def thisPlug(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -5930,8 +5911,7 @@ class MItDependencyGraph:
     def toggleTraversal(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MItDependencyNodes:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -5948,8 +5928,8 @@ class MItDependencyNodes:
     thisown: bool
 
 class MItEdits:
-    """
-    """
+    """ """
+
     ALL_EDITS: int = 1
     SUCCESSFUL_EDITS: int = 0
     def __init__(self, *args: Unknown) -> None:
@@ -5978,8 +5958,7 @@ class MItEdits:
     thisown: Any
 
 class MItGeometry:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -6006,8 +5985,7 @@ class MItGeometry:
     def weight(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MItInstancer:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -6031,8 +6009,7 @@ class MItInstancer:
     thisown: bool
 
 class MItMeshEdge:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -6068,8 +6045,7 @@ class MItMeshEdge:
     def updateSurface(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MItMeshFaceVertex:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -6104,8 +6080,7 @@ class MItMeshFaceVertex:
     def vertId(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MItMeshPolygon:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -6179,8 +6154,7 @@ class MItMeshPolygon:
     def zeroUVArea(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MItMeshVertex:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -6227,8 +6201,7 @@ class MItMeshVertex:
     def vertex(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MItSelectionList:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -6255,8 +6228,7 @@ class MItSelectionList:
     thisown: Any
 
 class MItSubdEdge:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -6278,8 +6250,7 @@ class MItSubdEdge:
     thisown: Any
 
 class MItSubdFace:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -6298,8 +6269,7 @@ class MItSubdFace:
     thisown: Any
 
 class MItSubdVertex:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -6318,8 +6288,7 @@ class MItSubdVertex:
     thisown: Any
 
 class MItSurfaceCV:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -6345,8 +6314,7 @@ class MItSurfaceCV:
     def updateSurface(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MIteratorType:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -6365,8 +6333,7 @@ class MIteratorType:
     thisown: bool
 
 class MLockMessage(MMessage):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -6402,8 +6369,7 @@ class MLockMessage(MMessage):
     thisown: bool
 
 class MMatrix:
-    """
-    """
+    """ """
     def __add__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __call__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __eq__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -6438,8 +6404,7 @@ class MMatrix:
     def transpose(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MMatrixArray:
-    """
-    """
+    """ """
     def __getitem__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -6462,9 +6427,9 @@ class MMatrixArray:
     thisown: bool
 
 MMatrix_kTol: float = 1e-10
+
 class MMeshIntersector:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -6478,8 +6443,7 @@ class MMeshIntersector:
     thisown: bool
 
 class MMeshIsectAccelParams:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -6488,8 +6452,7 @@ class MMeshIsectAccelParams:
     thisown: bool
 
 class MMeshSmoothOptions:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -6522,18 +6485,30 @@ class MMeshSmoothOptions:
     def keepBorderEdge(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def keepHardEdge(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def openSubdivCreaseMethod(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def openSubdivFaceVaryingBoundary(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def openSubdivSmoothTriangles(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def openSubdivFaceVaryingBoundary(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
+    def openSubdivSmoothTriangles(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def openSubdivVertexBoundary(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def propEdgeHardness(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setBoundaryRule(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setDivisions(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setKeepBorderEdge(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setKeepHardEdge(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setOpenSubdivCreaseMethod(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setOpenSubdivFaceVaryingBoundary(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setOpenSubdivSmoothTriangles(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setOpenSubdivVertexBoundary(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setOpenSubdivCreaseMethod(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
+    def setOpenSubdivFaceVaryingBoundary(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
+    def setOpenSubdivSmoothTriangles(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
+    def setOpenSubdivVertexBoundary(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setPropEdgeHardness(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setSmoothUVs(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setSmoothness(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -6544,8 +6519,7 @@ class MMeshSmoothOptions:
     thisown: bool
 
 class MMessage:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -6579,8 +6553,7 @@ class MMessage:
     thisown: bool
 
 class MMessageNode:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -6596,8 +6569,7 @@ class MMessageNode:
     thisown: bool
 
 class MModelMessage(MMessage):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -6619,8 +6591,7 @@ class MModelMessage(MMessage):
     thisown: bool
 
 class MNamespace:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -6665,8 +6636,7 @@ class MNamespace:
     def validateName(*args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MNodeCacheDisablingInfo:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown, **kwargs: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -6679,8 +6649,7 @@ class MNodeCacheDisablingInfo:
     thisown: Any
 
 class MNodeCacheDisablingInfoHelper:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -6702,8 +6671,7 @@ class MNodeCacheDisablingInfoHelper:
     thisown: bool
 
 class MNodeCacheSetupInfo:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown, **kwargs: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -6719,8 +6687,7 @@ class MNodeCacheSetupInfo:
     thisown: Any
 
 class MNodeClass:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -6737,21 +6704,24 @@ class MNodeClass:
     def hasAttribute(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def pluginName(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def removeExtensionAttribute(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def removeExtensionAttributeIfUnset(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def removeExtensionAttributeIfUnset(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def removeFromClassification(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     thisown: Any
     def typeId(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def typeName(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MNodeMessage(MMessage):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
-    def addAttributeAddedOrRemovedCallback(*args: Unknown, **kwargs: Unknown) -> Any: ...
+    def addAttributeAddedOrRemovedCallback(
+        *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     @staticmethod
     def addAttributeChangedCallback(*args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
@@ -6790,8 +6760,7 @@ class MNodeMessage(MMessage):
     thisown: bool
 
 class MNurbsIntersector:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -6807,8 +6776,7 @@ class MNurbsIntersector:
     thisown: bool
 
 class MObject:
-    """
-    """
+    """ """
     def __eq__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -6825,8 +6793,7 @@ class MObject:
     thisown: bool
 
 class MObjectArray:
-    """
-    """
+    """ """
     def __getitem__(*args: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -6849,8 +6816,7 @@ class MObjectArray:
     thisown: bool
 
 class MObjectHandle:
-    """
-    """
+    """ """
     def __eq__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -6869,8 +6835,7 @@ class MObjectHandle:
     thisown: bool
 
 class MObjectSetMessage(MMessage):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -6882,8 +6847,7 @@ class MObjectSetMessage(MMessage):
     thisown: bool
 
 class MParentingEdit(MEdit):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown, **kwargs: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -6897,8 +6861,7 @@ class MParentingEdit(MEdit):
     thisown: Any
 
 class MPlane:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -6913,8 +6876,7 @@ class MPlane:
     thisown: bool
 
 class MPlug:
-    """
-    """
+    """ """
     def __eq__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __getitem__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
@@ -6943,15 +6905,21 @@ class MPlug:
     @staticmethod
     def className(*args: Unknown, **kwargs: Unknown) -> Any: ...
     def connectedTo(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def connectionByPhysicalIndex(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def connectionByPhysicalIndex(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def constructHandle(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def destinations(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def destinationsWithConversions(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def destinationsWithConversions(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def destructHandle(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def elementByLogicalIndex(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def elementByPhysicalIndex(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def evaluateNumElements(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def getExistingArrayAttributeIndices(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def getExistingArrayAttributeIndices(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def getSetAttrCmds(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def info(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isArray(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -6992,7 +6960,9 @@ class MPlug:
     def parent(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def partialName(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def proxied(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def selectAncestorLogicalIndex(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def selectAncestorLogicalIndex(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setAttribute(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setBool(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setCaching(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -7018,8 +6988,7 @@ class MPlug:
     thisown: bool
 
 class MPlugArray:
-    """
-    """
+    """ """
     def __getitem__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -7042,8 +7011,7 @@ class MPlugArray:
     thisown: bool
 
 class MPoint:
-    """
-    """
+    """ """
     def __add__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __call__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __div__(self, *args: Unknown) -> Any: ...
@@ -7079,8 +7047,7 @@ class MPoint:
     z: float
 
 class MPointArray:
-    """
-    """
+    """ """
     def __getitem__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -7104,8 +7071,7 @@ class MPointArray:
     thisown: bool
 
 class MPointOnMesh:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -7119,8 +7085,7 @@ class MPointOnMesh:
     def triangleIndex(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MPointOnNurbs:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -7132,9 +7097,9 @@ class MPointOnNurbs:
     thisown: bool
 
 MPoint_kTol: float = 1e-10
+
 class MPolyMessage(MMessage):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -7155,8 +7120,7 @@ class MPolyMessage(MMessage):
     thisown: bool
 
 class MProfiler:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown, **kwargs: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -7248,7 +7212,13 @@ class MProfiler:
     def signalEvent(*args: Unknown, **kwargs: Unknown) -> Any: ...
     thisown: Any
 
-def MProfilingContextManager(categoryId: Unknown, colorIndex: Unknown, eventName: Unknown, description: Unknown = None, associatedNode: MObject = ...) -> Any:
+def MProfilingContextManager(
+    categoryId: Unknown,
+    colorIndex: Unknown,
+    eventName: Unknown,
+    description: Unknown = None,
+    associatedNode: MObject = ...,
+) -> Any:
     """Context manager that defines a profiling scope around a block of code.
 
     Parameters
@@ -7276,12 +7246,11 @@ def MProfilingContextManager(categoryId: Unknown, colorIndex: Unknown, eventName
     ...                     result *= i
     ...     return result
     ...
-    >>> 
+    >>>
     """
 
 class MProfilingScope:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -7292,8 +7261,7 @@ class MProfilingScope:
     thisown: Any
 
 class MQuaternion:
-    """
-    """
+    """ """
     def __add__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __eq__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __getitem__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -7336,8 +7304,7 @@ class MQuaternion:
     z: float
 
 class MRampAttribute:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -7377,8 +7344,7 @@ class MRampAttribute:
     thisown: bool
 
 class MRenderPassDef:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown, **kwargs: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -7398,8 +7364,7 @@ class MRenderPassDef:
     thisown: Any
 
 class MRenderPassRegistry:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown, **kwargs: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -7413,8 +7378,7 @@ class MRenderPassRegistry:
     thisown: Any
 
 class MRichSelection:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -7432,8 +7396,7 @@ class MRichSelection:
     thisown: bool
 
 class MSceneMessage(MMessage):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -7509,8 +7472,7 @@ class MSceneMessage(MMessage):
     thisown: bool
 
 class MScriptUtil:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -7688,8 +7650,7 @@ class MScriptUtil:
     thisown: bool
 
 class MSelectionList:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -7719,8 +7680,7 @@ class MSelectionList:
     def toggle(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MSelectionMask:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -7824,8 +7784,7 @@ class MSelectionMask:
     thisown: bool
 
 class MSetAttrEdit(MEdit):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown, **kwargs: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -7837,8 +7796,7 @@ class MSetAttrEdit(MEdit):
     thisown: Any
 
 class MSpace:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -7854,8 +7812,7 @@ class MSpace:
     thisown: bool
 
 class MStreamUtils:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -7888,8 +7845,7 @@ class MStreamUtils:
     def writeInt(*args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MSyntax:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -7922,7 +7878,9 @@ class MSyntax:
     kTime: int = 9
     kUnsigned: int = 6
     def makeFlagMultiUse(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def makeFlagQueryWithFullArgs(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def makeFlagQueryWithFullArgs(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def maxObjects(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def minObjects(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setMaxObjects(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -7932,8 +7890,7 @@ class MSyntax:
     def useSelectionAsDefault(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MTesselationParams:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -7979,7 +7936,9 @@ class MTesselationParams:
     def setOutputType(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setRelativeFitTolerance(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setStdChordHeightRatio(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setStdFractionalTolerance(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setStdFractionalTolerance(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setStdMinEdgeLength(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setSubdivisionFlag(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setTriangleCount(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -7989,12 +7948,13 @@ class MTesselationParams:
     def setVDistanceFraction(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setVIsoparmType(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setVNumber(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setWorldspaceToScreenTransform(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setWorldspaceToScreenTransform(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     thisown: bool
 
 class MTime:
-    """
-    """
+    """ """
     def __add__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __div__(self, *args: Unknown) -> Any: ...
     def __eq__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -8095,8 +8055,7 @@ class MTime:
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MTimeArray:
-    """
-    """
+    """ """
     def __getitem__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -8119,8 +8078,7 @@ class MTimeArray:
     thisown: bool
 
 class MTimeRange:
-    """
-    """
+    """ """
     def __eq__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -8137,8 +8095,7 @@ class MTimeRange:
     thisown: bool
 
 class MTimer:
-    """
-    """
+    """ """
     def __eq__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -8154,8 +8111,7 @@ class MTimer:
     thisown: bool
 
 class MTimerMessage(MMessage):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -8171,8 +8127,7 @@ class MTimerMessage(MMessage):
     thisown: bool
 
 class MTransformationMatrix:
-    """
-    """
+    """ """
     def __eq__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -8219,7 +8174,9 @@ class MTransformationMatrix:
     def scalePivot(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def scalePivotTranslation(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setRotatePivot(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setRotatePivotTranslation(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setRotatePivotTranslation(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setRotation(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setRotationOrientation(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setRotationQuaternion(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -8233,9 +8190,9 @@ class MTransformationMatrix:
     def translation(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 MTransformationMatrix_kTol: float = 1e-10
+
 class MTrimBoundaryArray:
-    """
-    """
+    """ """
     def __getitem__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -8257,8 +8214,7 @@ class MTrimBoundaryArray:
     thisown: bool
 
 class MTypeId:
-    """
-    """
+    """ """
     def __eq__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -8273,8 +8229,7 @@ class MTypeId:
     thisown: bool
 
 class MURI:
-    """
-    """
+    """ """
     def __eq__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -8327,8 +8282,7 @@ class MURI:
     thisown: bool
 
 class MUint64Array:
-    """
-    """
+    """ """
     def __add__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __delitem__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __eq__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -8360,8 +8314,7 @@ class MUint64Array:
     thisown: bool
 
 class MUintArray:
-    """
-    """
+    """ """
     def __add__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __delitem__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __eq__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -8393,8 +8346,7 @@ class MUintArray:
     thisown: bool
 
 class MUserData:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -8407,8 +8359,7 @@ class MUserData:
     thisown: bool
 
 class MUserEventMessage(MMessage):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -8428,8 +8379,7 @@ class MUserEventMessage(MMessage):
     thisown: bool
 
 class MUuid:
-    """
-    """
+    """ """
     def __eq__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -8448,8 +8398,7 @@ class MUuid:
     def valid(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MVector:
-    """
-    """
+    """ """
     def __add__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __call__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __div__(self, *args: Unknown) -> Any: ...
@@ -8500,8 +8449,7 @@ class MVector:
     def zero(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MVectorArray:
-    """
-    """
+    """ """
     def __getitem__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -8525,9 +8473,9 @@ class MVectorArray:
     thisown: bool
 
 MVector_kTol: float = 1e-10
+
 class MWeight:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -8544,9 +8492,9 @@ class MWeight:
 
 NULL: int = 0
 STRICT: int = 1
+
 class array2dDouble:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -8558,8 +8506,7 @@ class array2dDouble:
     thisown: Any
 
 class array2dFloat:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -8571,8 +8518,7 @@ class array2dFloat:
     thisown: Any
 
 class array3dDouble:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -8584,8 +8530,7 @@ class array3dDouble:
     thisown: Any
 
 class array3dFloat:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -8597,8 +8542,7 @@ class array3dFloat:
     thisown: Any
 
 class array3dInt:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -8610,8 +8554,7 @@ class array3dInt:
     thisown: Any
 
 class array4dDouble:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -8623,8 +8566,7 @@ class array4dDouble:
     thisown: Any
 
 class array4dFloat:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -8636,8 +8578,7 @@ class array4dFloat:
     thisown: Any
 
 class array4dInt:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -8649,8 +8590,7 @@ class array4dInt:
     thisown: Any
 
 class boolPtr:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -8664,9 +8604,9 @@ class boolPtr:
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 def boolRefValue(ptr: Unknown) -> Any: ...
+
 class charPtr:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -8688,10 +8628,11 @@ def createIntRef() -> Any: ...
 def createShortRef() -> Any: ...
 def createUCharRef() -> Any: ...
 def createUIntRef() -> Any: ...
+
 cvar: Any
+
 class doublePtr:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -8705,9 +8646,9 @@ class doublePtr:
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 def doubleRefValue(ptr: Unknown) -> Any: ...
+
 class floatPtr:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -8721,9 +8662,9 @@ class floatPtr:
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 def floatRefValue(ptr: Unknown) -> Any: ...
+
 class intPtr:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -8737,7 +8678,8 @@ class intPtr:
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 def intRefValue(ptr: Unknown) -> Any: ...
-kDefaultNodeType: str = 'dependNode'
+
+kDefaultNodeType: str = "dependNode"
 kEulerRotationEpsilon: float = 1e-10
 kMFnMeshInstanceUnspecified: int = -1
 kMFnMeshPointTolerance: float = 1e-10
@@ -8746,11 +8688,12 @@ kMFnNurbsEpsilon: float = 0.001
 kMFnSubdPointTolerance: float = 1e-10
 kMFnSubdTolerance: float = 0.001
 kQuaternionEpsilon: float = 1e-10
-kUnknownParameter: str = 'unknown'
+kUnknownParameter: str = "unknown"
+
 def setRefValue(refObject: Unknown, value: Unknown) -> Any: ...
+
 class shortPtr:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -8764,9 +8707,9 @@ class shortPtr:
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 def shortRefValue(ptr: Unknown) -> Any: ...
+
 class uCharPtr:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -8780,9 +8723,9 @@ class uCharPtr:
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 def uCharRefValue(ptr: Unknown) -> Any: ...
+
 class uIntPtr:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 

@@ -7,8 +7,7 @@ import maya.OpenMaya
 Unknown = Any
 
 class MDynSweptLine:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -23,8 +22,7 @@ class MDynSweptLine:
     def vertex(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MDynSweptTriangle:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -40,8 +38,7 @@ class MDynSweptTriangle:
     def vertex(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MDynamicsUtil:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -62,8 +59,7 @@ class MDynamicsUtil:
     thisown: bool
 
 class MFnAirField(MFnField):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -87,8 +83,7 @@ class MFnAirField(MFnField):
     thisown: bool
 
 class MFnDragField(MFnField):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -102,8 +97,7 @@ class MFnDragField(MFnField):
     def useDirection(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnDynSweptGeometryData(maya.OpenMaya.MFnData):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -119,8 +113,7 @@ class MFnDynSweptGeometryData(maya.OpenMaya.MFnData):
     def triangleCount(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnField(maya.OpenMaya.MFnDagNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -131,7 +124,9 @@ class MFnField(maya.OpenMaya.MFnDagNode):
     def className(*args: Unknown, **kwargs: Unknown) -> Any: ...
     def falloffCurve(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getForceAtPoint(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def isFalloffCurveConstantOne(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def isFalloffCurveConstantOne(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def magnitude(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def maxDistance(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def perVertex(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -144,8 +139,7 @@ class MFnField(maya.OpenMaya.MFnDagNode):
     def useMaxDistance(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnFluid(maya.OpenMaya.MFnDagNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -194,8 +188,7 @@ class MFnFluid(maya.OpenMaya.MFnDagNode):
     def voxelCenterPosition(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnGravityField(MFnField):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -207,8 +200,7 @@ class MFnGravityField(MFnField):
     thisown: bool
 
 class MFnInstancer(maya.OpenMaya.MFnDagNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -222,8 +214,7 @@ class MFnInstancer(maya.OpenMaya.MFnDagNode):
     thisown: bool
 
 class MFnNIdData(maya.OpenMaya.MFnData):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -236,8 +227,7 @@ class MFnNIdData(maya.OpenMaya.MFnData):
     thisown: bool
 
 class MFnNObjectData(maya.OpenMaya.MFnData):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -256,8 +246,7 @@ class MFnNObjectData(maya.OpenMaya.MFnData):
     thisown: bool
 
 class MFnNewtonField(MFnField):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -269,8 +258,7 @@ class MFnNewtonField(MFnField):
     thisown: bool
 
 class MFnParticleSystem(maya.OpenMaya.MFnDagNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -296,9 +284,15 @@ class MFnParticleSystem(maya.OpenMaya.MFnDagNode):
     def hasOpacity(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def hasRgb(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isDeformedParticleShape(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def isPerParticleDoubleAttribute(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def isPerParticleIntAttribute(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def isPerParticleVectorAttribute(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def isPerParticleDoubleAttribute(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
+    def isPerParticleIntAttribute(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
+    def isPerParticleVectorAttribute(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def isValid(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def lifespan(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def mass(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -328,8 +322,7 @@ class MFnParticleSystem(maya.OpenMaya.MFnDagNode):
     def visibleInRefractions(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnPfxGeometry(maya.OpenMaya.MFnDagNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -342,8 +335,7 @@ class MFnPfxGeometry(maya.OpenMaya.MFnDagNode):
     thisown: bool
 
 class MFnRadialField(MFnField):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -355,8 +347,7 @@ class MFnRadialField(MFnField):
     thisown: bool
 
 class MFnTurbulenceField(MFnField):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -370,8 +361,7 @@ class MFnTurbulenceField(MFnField):
     thisown: bool
 
 class MFnUniformField(MFnField):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -383,8 +373,7 @@ class MFnUniformField(MFnField):
     thisown: bool
 
 class MFnVolumeAxisField(MFnField):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -417,8 +406,7 @@ class MFnVolumeAxisField(MFnField):
     def turbulenceSpeed(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnVortexField(MFnField):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -430,8 +418,7 @@ class MFnVortexField(MFnField):
     thisown: bool
 
 class MHairSystem:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -458,8 +445,7 @@ class MHairSystem:
     def unregisterCollisionSolverPreFrame(*args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MRenderLine:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -479,8 +465,7 @@ class MRenderLine:
     thisown: bool
 
 class MRenderLineArray:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -495,8 +480,7 @@ class MRenderLineArray:
     thisown: bool
 
 class MnCloth(MnObject):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -514,7 +498,9 @@ class MnCloth(MnObject):
     def setBendAngleDropoff(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setBendAngleScale(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setBendResistance(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setBendRestAngleFromPositions(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setBendRestAngleFromPositions(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setBounce(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setCollisionFlags(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setComputeRestAngles(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -524,13 +510,23 @@ class MnCloth(MnObject):
     def setDragAndLift(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setFriction(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setIncompressibility(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setInputMeshAttractAndRigidStrength(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setInputMeshAttractDamping(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setInputMeshAttractPositions(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setInputMeshAttractAndRigidStrength(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
+    def setInputMeshAttractDamping(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
+    def setInputMeshAttractPositions(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setInverseMass(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setLinksRestLengthFromPositions(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setLinksRestLengthFromPositions(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setMaxIterations(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setMaxSelfCollisionIterations(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setMaxSelfCollisionIterations(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setPositions(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setPressure(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setPressureDamping(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -545,7 +541,9 @@ class MnCloth(MnObject):
     def setSelfTrappedCheck(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setShearResistance(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setStartPressure(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setStretchAndCompressionResistance(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setStretchAndCompressionResistance(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setTangentialDrag(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setThickness(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setTopology(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -554,8 +552,7 @@ class MnCloth(MnObject):
     thisown: bool
 
 class MnObject:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -564,8 +561,7 @@ class MnObject:
     thisown: bool
 
 class MnParticle(MnObject):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -589,7 +585,9 @@ class MnParticle(MnObject):
     def setLiquidRadiusScale(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setLiquidSimulation(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setMaxIterations(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setMaxSelfCollisionIterations(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setMaxSelfCollisionIterations(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setPositions(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setRestDensity(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setSelfCollide(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -603,8 +601,7 @@ class MnParticle(MnObject):
     thisown: bool
 
 class MnRigid(MnObject):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -627,8 +624,7 @@ class MnRigid(MnObject):
     thisown: bool
 
 class MnSolver:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -653,8 +649,7 @@ class MnSolver:
     thisown: bool
 
 class boolPtr:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -668,8 +663,7 @@ class boolPtr:
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class charPtr:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -683,8 +677,7 @@ class charPtr:
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class doublePtr:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -698,8 +691,7 @@ class doublePtr:
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class floatPtr:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -713,8 +705,7 @@ class floatPtr:
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class intPtr:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -728,8 +719,7 @@ class intPtr:
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class shortPtr:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -743,8 +733,7 @@ class shortPtr:
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class uCharPtr:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -758,8 +747,7 @@ class uCharPtr:
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class uIntPtr:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -771,4 +759,3 @@ class uIntPtr:
     def frompointer(*args: Unknown, **kwargs: Unknown) -> Any: ...
     thisown: bool
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-

@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from typing import *
 
-
 Unknown = Any
 
 class MAngle:
@@ -73,7 +72,9 @@ class MArgDatabase(MArgParser):
     def __new__(cls, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
 
-    def commandArgumentMSelectionList(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+    def commandArgumentMSelectionList(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any:
         """commandArgumentMSelectionList(argIndex) -> MSelectionList
 
         Returns the specified command argument as an MSelectionList.
@@ -94,7 +95,6 @@ class MArgDatabase(MArgParser):
         MSelectionList. If any other object format is set then an empty
         selection list will be returned.
         """
-
 
 class MArgList:
     """Argument list for passing to commands."""
@@ -210,7 +210,6 @@ class MArgList:
 
         Return index of last argument used by the most recent as*() method.
         """
-
 
 class MArgParser:
     """Command argument list parser."""
@@ -441,7 +440,6 @@ class MArrayDataBuilder:
         * size (int) - the number of elements to allocate when growing the array
         """
 
-
 class MArrayDataHandle:
     """Data block handle for array data."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -569,7 +567,6 @@ class MArrayDataHandle:
         Do not use with an MArrayDataHandle which was returned by MPlug.asMDataHandle().
         """
 
-
 class MAttributeIndex:
     """The index information for an attribute specification."""
     def __eq__(self, value: Unknown, /) -> Any:
@@ -694,7 +691,6 @@ class MAttributeIndex:
           kFloat                Floating-poing index (e.g. curve.u[1.3])
         """
 
-
 class MAttributePattern:
     """Manipulate attribute structure patterns."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -732,7 +728,6 @@ class MAttributePattern:
 
     def rootAttrCount(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Return the number of root attributes in this pattern."""
-
 
 class MAttributeSpec:
     """Class that encapsulates component/attribute information for generating selection items."""
@@ -903,7 +898,6 @@ class MCacheSchema:
         Reset this schema to the minimal.
         """
 
-
 class MCallbackIdArray:
     """Array of MCallbackId values."""
     def __add__(self, value: Unknown, /) -> Any:
@@ -996,7 +990,6 @@ class MCameraMessage(MMessage):
          * return: Identifier used for removing the callback.
         """
 
-
 class MColor:
     """Manipulate color data."""
     def __add__(self, value: Unknown, /) -> Any:
@@ -1085,7 +1078,6 @@ class MColor:
     r: float
     def setColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Sets the color's components and color model."""
-
 
 class MColorArray:
     """Array of MColor values."""
@@ -1262,7 +1254,7 @@ class MConditionMessage(MMessage):
         The callback function will be passed the new state of the
         condition and any client data that the user wishes to pass in.
 
-         * conditionName (string) - the condition to register the 
+         * conditionName (string) - the condition to register the
         callback for
          * function - callable which will be passed a bool indicating
            the new state of the condition, and the clientData object.
@@ -1291,7 +1283,6 @@ class MConditionMessage(MMessage):
 
          * return: The current state of the condition.
         """
-
 
 class MContainerMessage(MMessage):
     """Class used to register callbacks for container related messages."""
@@ -1324,7 +1315,6 @@ class MContainerMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-
 
 class MDAGDrawOverrideInfo:
     """A data structure to store the per path draw override information."""
@@ -1379,7 +1369,6 @@ class MDGContext:
     kNormal: MDGContext
     def makeCurrent(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Makes this context the new current one being used for evaluation. Returns the previous evaluation context."""
-
 
 class MDGMessage(MMessage):
     """Class used to register callbacks for Dependency Graph related messages."""
@@ -1476,7 +1465,7 @@ class MDGMessage(MMessage):
         a separate step after creation (which does invoke this callback).
 
         Depending on the situation Maya may or may not use the new UUID by default.
-        For example, when importing a file, Maya reads the UUID from the file 
+        For example, when importing a file, Maya reads the UUID from the file
         but does not use it. The boolean argument to the callback function lets
         the callback know whether Maya is intending to use the UUID or not.
 
@@ -1549,7 +1538,6 @@ class MDGMessage(MMessage):
          * return: Identifier used for removing the callback.
         """
 
-
 class MDGModifier:
     """Used to change the structure of the dependency graph."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -1578,7 +1566,7 @@ class MDGModifier:
         """commandToExecute(command) -> self
 
         Adds an operation to the modifier to execute a MEL command. The command
-        should be fully undoable otherwise unexpected results may occur. If 
+        should be fully undoable otherwise unexpected results may occur. If
         the command contains no undoable portions whatsoever, the call to
         doIt() may fail, but only after executing the command. It is best to
         use multiple commandToExecute() calls rather than batching multiple
@@ -1652,7 +1640,9 @@ class MDGModifier:
         do all operations.
         """
 
-    def linkExtensionAttributeToPlugin(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+    def linkExtensionAttributeToPlugin(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any:
         """linkExtensionAttributeToPlugin(MObject plugin, MObject attribute) -> self
 
         The plugin can call this method to indicate that the extension attribute
@@ -1775,7 +1765,9 @@ class MDGModifier:
         call as their behaviour may become unpredictable.
         """
 
-    def removeExtensionAttributeIfUnset(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+    def removeExtensionAttributeIfUnset(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any:
         """removeExtensionAttributeIfUnset(MNodeClass nodeClass,
                                         MObject attribute) -> self
 
@@ -1795,7 +1787,7 @@ class MDGModifier:
         """
 
     def renameAttribute(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
-        """renameAttribute(MObject node, MObject attribute, 
+        """renameAttribute(MObject node, MObject attribute,
         string newShortName, string newShortName) -> self
 
         Adds an operation to the modifer that renames a dynamic attribute on the given dependency node.
@@ -1821,7 +1813,9 @@ class MDGModifier:
         called.
         """
 
-    def unlinkExtensionAttributeFromPlugin(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+    def unlinkExtensionAttributeFromPlugin(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any:
         """unlinkExtensionAttributeFromPlugin(MObject plugin,
                                            MObject attribute) -> self
 
@@ -1835,7 +1829,6 @@ class MDGModifier:
         immediately and is not affected by the modifier's doIt() or undoIt()
         methods.
         """
-
 
 class MDagMessage(MMessage):
     """Class used to register callbacks for Dag related messages.
@@ -2073,9 +2066,9 @@ class MDagMessage(MMessage):
         This method registers a callback that is called when the local matrix
         on the specified DAG node changes.
 
-        If the node's transformation is already dirty (i.e. it has not been 
-        evaluated since it was last changed) then the callback will not be triggered. 
-        So if the node's transformation is modified multiple times between 
+        If the node's transformation is already dirty (i.e. it has not been
+        evaluated since it was last changed) then the callback will not be triggered.
+        So if the node's transformation is modified multiple times between
         evaluations, only the first one will result in the callback being called.
 
          * affectedNode (MDagPath) - the DAG node to register the callback for
@@ -2176,17 +2169,17 @@ class MDagMessage(MMessage):
         This method registers a callback that is called when a parent matrix of the
         specified DAG node changes.
 
-        Since a node's worldMatrix is affected by the transforms of its ancestors in 
-        the DAG, it's possible for there to be two different nodes involved: the 
-        "trigger" node, whose transform has changed, and the "affected" node, whose 
+        Since a node's worldMatrix is affected by the transforms of its ancestors in
+        the DAG, it's possible for there to be two different nodes involved: the
+        "trigger" node, whose transform has changed, and the "affected" node, whose
         worldMatrix is affected by the change to the trigger.
 
-        The callback is placed on the affected node, but it is the trigger node which 
+        The callback is placed on the affected node, but it is the trigger node which
         is passed to the callback.
 
-        If the trigger node's transformation is already dirty (i.e. it has not been 
-        evaluated since it was last changed) then the callback will not be triggered. 
-        So if the trigger node's transformation is modified multiple times between 
+        If the trigger node's transformation is already dirty (i.e. it has not been
+        evaluated since it was last changed) then the callback will not be triggered.
+        So if the trigger node's transformation is modified multiple times between
         evaluations, only the first one will result in the callback being called.
 
          * affectedNode (MDagPath) - the DAG node to register the callback for
@@ -2301,7 +2294,6 @@ class MDagModifier(MDGModifier):
         world, so long as it is a transform type. If it is not a transform type
         then the doIt() will raise a RuntimeError.
         """
-
 
 class MDagPath:
     """Path to a DAG node from the top of the DAG."""
@@ -2424,7 +2416,6 @@ class MDagPath:
 
     def transform(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Returns the last transform node on the path."""
-
 
 class MDagPathArray:
     """Array of MDagPath values."""
@@ -2581,7 +2572,6 @@ class MDataBlock:
 
         * ctx (MDGContext) - the dependency graph context
         """
-
 
 class MDataHandle:
     """Data handle for information contained in a data block."""
@@ -3139,7 +3129,6 @@ class MDataHandle:
         If no data exists for this handle, the type id will be 0x0.
         """
 
-
 class MDistance:
     """Manipulate distance data."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -3465,7 +3454,6 @@ class MEvaluationNode:
     def iterator(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Returns an iterator at the beginning of the dirty plug list."""
 
-
 class MEvaluationNodeIterator:
     """A class providing access to the Evaluation Manager node dirty plug list."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -3485,7 +3473,6 @@ class MEvaluationNodeIterator:
 
     def reset(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Resets the iterator to the first position in the dirty plug list."""
-
 
 class MEventMessage(MMessage):
     """Class used to register callbacks for event related messages.
@@ -3517,7 +3504,7 @@ class MEventMessage(MMessage):
         The callback function will be passed the any client data that
         was provided when the callback was registered.
 
-         * eventName (string) - the event to register the 
+         * eventName (string) - the event to register the
         callback for
          * function - callable which will be passed the clientData object
          * clientData - User defined data passed to the callback function
@@ -3533,7 +3520,6 @@ class MEventMessage(MMessage):
 
          * return: tuple of available event names.
         """
-
 
 class MExternalContentInfoTable:
     """This is a table of all the external content for a given node."""
@@ -3588,7 +3574,6 @@ class MExternalContentInfoTable:
         * key (string) - See documentation of MExternalContentInfoTable.addResolvedEntry().
         """
 
-
 class MExternalContentLocationTable:
     """This is a table of the all the external content locations for a given node."""
     def __getitem__(self, key: Unknown, /) -> Any:
@@ -3626,7 +3611,6 @@ class MExternalContentLocationTable:
 
         * key (string) - See documentation of MExternalContentLocationTable.addEntry().
         """
-
 
 class MFileObject:
     """Manipulate filenames and search paths."""
@@ -3704,9 +3688,9 @@ class MFileObject:
                                    Relative paths will be considered to be relative to root of the current project.
                                    The resolution algorithm will not check if this file actually exists - the
                                    resolution will be considered successful whether it exists or not.
-                                   With this mode, the resolver will not continue on to attempt to resolve 
+                                   With this mode, the resolver will not continue on to attempt to resolve
                                    using any other resolve method.
-                                   The user must explicitly check MFileObject.exists() to determine if it is an 
+                                   The user must explicitly check MFileObject.exists() to determine if it is an
                                    existing path.
           kExact                   Checks if expanded paths exist. If paths are relative, assume it's relative to
                                    the current workspace (so check workspace current directory, file-rule directory and
@@ -3719,12 +3703,12 @@ class MFileObject:
                                    workspace, that is. So look in the workspace current directory, file-rules directory
                                    and the root directory.
           kBaseName                Strips away everything but the base file name and look in the current workspace,
-          kInputFile               This mode is the default on file open and import, and is suitable for 
-                                   files that are to be used as input files.  The file will be checked for 
+          kInputFile               This mode is the default on file open and import, and is suitable for
+                                   files that are to be used as input files.  The file will be checked for
                                    existence.
                                    Combination of kExact, kDirMap, kRelative and kBaseName.
           kInputReference          This mode is the default on file reference. In addition to the checks done for
-                                   a regular input file, it will also check the reference mappings. 
+                                   a regular input file, it will also check the reference mappings.
                                    Combination of kInputFile and kReferenceMappings.
           kStrict                  Combination of kExact and kDirMap.
         """
@@ -3874,7 +3858,6 @@ class MFileObject:
 
         * uri (string or MURI) - The unresolved URI.
         """
-
 
 class MFloatArray:
     """Array of float values."""
@@ -4044,7 +4027,6 @@ class MFloatMatrix:
 
     def transpose(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Returns a new matrix containing this matrix's transpose."""
-
 
 class MFloatPoint:
     """3D point with single-precision coordinates."""
@@ -4398,6 +4380,7 @@ class MFloatVectorArray:
 
 class MFn:
     """Static class providing constants for all API types."""
+
     kACos: int = 1160
     kAISEnvFacade: int = 978
     kASin: int = 1162
@@ -5860,7 +5843,6 @@ class MFnAssembly(MFnDagNode):
         Returns True if the assembly supports changes to its nodes
         """
 
-
 class MFnAttribute(MFnBase):
     """Base class for attribute functionsets."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -5940,7 +5922,6 @@ class MFnBase:
 
     def type(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Returns the type of the function set."""
-
 
 class MFnCamera(MFnDagNode):
     """Function set for cameras."""
@@ -6317,7 +6298,6 @@ class MFnComponent(MFnBase):
         where index can range from 0 to elementCount-1.
         """
 
-
 class MFnComponentListData(MFnData):
     """MFnComponentListData allows the creation and manipulation of component list
     (represented as MObjects) data objects for use in the dependency graph.
@@ -6383,7 +6363,6 @@ class MFnComponentListData(MFnData):
         raises IndexError if index is out of range
         """
 
-
 class MFnCompoundAttribute(MFnAttribute):
     """Functionset for creating and working with compound attributes."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -6409,7 +6388,6 @@ class MFnCompoundAttribute(MFnAttribute):
 
     def removeChild(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Remove a child attribute."""
-
 
 class MFnContainerNode(MFnDependencyNode):
     """Function set for containers."""
@@ -6491,7 +6469,6 @@ class MFnContainerNode(MFnDependencyNode):
 
         * isCurrent (True/False) - Specifies whether this container shall be current.
         """
-
 
 class MFnDagNode(MFnDependencyNode):
     """Function set for operating on DAG nodes.
@@ -6741,7 +6718,9 @@ class MFnDependencyNode(MFnBase):
     def addAttribute(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Adds a new dynamic attribute to the node."""
 
-    def addExternalContentForFileAttr(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+    def addExternalContentForFileAttr(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any:
         """Adds content info to the specified table from a file path attribute."""
 
     def affectsAnimation(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
@@ -6890,7 +6869,9 @@ class MFnDependencyNode(MFnBase):
     def setExternalContent(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Changes the location of external content."""
 
-    def setExternalContentForFileAttr(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+    def setExternalContentForFileAttr(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any:
         """Sets content info in the specified attribute from the table."""
 
     def setFlag(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
@@ -6912,7 +6893,6 @@ class MFnDependencyNode(MFnBase):
 
     def uuid(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Returns the node's UUID."""
-
 
 class MFnDisplayLayer(MFnDependencyNode):
     """Function set display layer.
@@ -6955,7 +6935,6 @@ class MFnDisplayLayer(MFnDependencyNode):
         (MString) or a Maya path (MDagPath).
         """
 
-
 class MFnDisplayLayerManager(MFnDependencyNode):
     """Function set display layer.
 
@@ -6992,7 +6971,6 @@ class MFnDisplayLayerManager(MFnDependencyNode):
         path string (MString) or a Maya object (MObject).
         """
 
-
 class MFnDoubleArrayData(MFnData):
     """Function set for node data consisting of an array of doubles."""
     def __delitem__(self, key: Unknown, /) -> Any:
@@ -7024,7 +7002,6 @@ class MFnDoubleArrayData(MFnData):
 
     def set(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Sets values in the encapsulated array."""
-
 
 class MFnDoubleIndexedComponent(MFnComponent):
     """This function set allows you to create, edit, and query double indexed
@@ -7094,7 +7071,6 @@ class MFnDoubleIndexedComponent(MFnComponent):
         component (i.e. the max U index is numU-1 and the max V index is numV-1).
         """
 
-
 class MFnEnumAttribute(MFnAttribute):
     """Functionset for creating and working with enumeration attributes."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -7125,7 +7101,6 @@ class MFnEnumAttribute(MFnAttribute):
     def setDefaultByName(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Set the default value using the name of an enumeration item. Equivalent to: attr.default = attr.fieldValue(name)"""
 
-
 class MFnGenericAttribute(MFnAttribute):
     """Functionset for creating and working with attributes which can accept several different types of data."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -7154,7 +7129,6 @@ class MFnGenericAttribute(MFnAttribute):
 
     def removeTypeId(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Removes the specified data typeId from the list of those accepted by the attribute."""
-
 
 class MFnGeometryData(MFnData):
     """This class is the function set for geometry data.
@@ -7208,7 +7182,9 @@ class MFnGeometryData(MFnData):
         with the given key.
         """
 
-    def componentTagExpressionSubsetState(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+    def componentTagExpressionSubsetState(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any:
         """componentTagExpressionSubsetState(expr,ctg) -> MFnGeometryData::SubsetState type constant
 
         Returns the state of the contents of the resolved componentTag expression.
@@ -7302,7 +7278,9 @@ class MFnGeometryData(MFnData):
         Renames a componentag with the given key the object.
         """
 
-    def resolveComponentTagExpression(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+    def resolveComponentTagExpression(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any:
         """resolveComponentTagExpression(key, ctg) -> MObject
 
         Returns a component which is the result of the resolved componentTag expression
@@ -7322,7 +7300,6 @@ class MFnGeometryData(MFnData):
         Sets the members of the object group with the given id
         to be only those in the given component.
         """
-
 
 class MFnIntArrayData(MFnData):
     """Function set for node data consisting of an array of ints."""
@@ -7355,7 +7332,6 @@ class MFnIntArrayData(MFnData):
 
     def set(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Sets values in the encapsulated array."""
-
 
 class MFnLightDataAttribute(MFnAttribute):
     """Functionset for creating and working with light data attributes."""
@@ -7405,7 +7381,6 @@ class MFnMatrixArrayData(MFnData):
     def set(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Sets values in the encapsulated array."""
 
-
 class MFnMatrixAttribute(MFnAttribute):
     """Functionset for creating and working with matrix attributes."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -7441,7 +7416,6 @@ class MFnMatrixData(MFnData):
 
     def transformation(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Returns the encapsulated matrix as an MTransformationMatrix."""
-
 
 class MFnMesh(MFnDagNode):
     """Function set for operation on meshes (polygonal surfaces).
@@ -7659,7 +7633,9 @@ class MFnMesh(MFnDagNode):
         on the specified meshes.
         """
 
-    def cachedIntersectionAcceleratorInfo(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+    def cachedIntersectionAcceleratorInfo(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any:
         """cachedIntersectionAcceleratorInfo() -> string
 
         Retrieves a string that describes the intersection acceleration
@@ -7719,7 +7695,9 @@ class MFnMesh(MFnDagNode):
         """
 
     @staticmethod
-    def clearGlobalIntersectionAcceleratorInfo(*args: Unknown, **kwargs: Unknown) -> Any:
+    def clearGlobalIntersectionAcceleratorInfo(
+        *args: Unknown, **kwargs: Unknown
+    ) -> Any:
         """clearGlobalIntersectionAcceleratorInfo()
 
         Clears the 'total count', 'total build time', and 'peak memory'
@@ -8084,7 +8062,9 @@ class MFnMesh(MFnDagNode):
         extrusion.
         """
 
-    def freeCachedIntersectionAccelerator(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+    def freeCachedIntersectionAccelerator(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any:
         """freeCachedIntersectionAccelerator() -> self
 
         If the mesh has a cached intersection accelerator structure, then
@@ -8132,7 +8112,9 @@ class MFnMesh(MFnDagNode):
         face-vertices which have UVs assigned.
         """
 
-    def getAssociatedColorSetInstances(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+    def getAssociatedColorSetInstances(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any:
         """getAssociatedColorSetInstances(colorSet) -> MIntArray
 
         Returns the instance numbers associated with the specified Color set.
@@ -8404,7 +8386,7 @@ class MFnMesh(MFnDagNode):
 
         Returns the names of all of the uv sets mapped to the specified face.
 
-        This method is not threadsafe. 
+        This method is not threadsafe.
         """
 
     def getFaceVertexBinormal(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
@@ -8889,7 +8871,7 @@ class MFnMesh(MFnDagNode):
         Returns true if any component of the given type on this mesh has
         blind data. If a component ID is provided then only that particular
         component is checked. If a blind data ID is provided then only blind
-        data of that type is checked. 
+        data of that type is checked.
         """
 
     def hasColorChannels(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
@@ -9531,7 +9513,6 @@ class MFnMesh(MFnDagNode):
         Signal that this polygonal mesh has changed and needs to be redrawn.
         """
 
-
 class MFnMeshData(MFnGeometryData):
     """MFnMeshData allows the creation and manipulation of Mesh
     data objects for use in the dependency graph.
@@ -9556,7 +9537,6 @@ class MFnMeshData(MFnGeometryData):
         and returns an MObject which references it.
         """
 
-
 class MFnMessageAttribute(MFnAttribute):
     """Functionset for creating and working with message attributes."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -9567,7 +9547,6 @@ class MFnMessageAttribute(MFnAttribute):
 
     def create(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Creates a new message attribute, attaches it to the function set and returns it as an MObject."""
-
 
 class MFnNumericAttribute(MFnAttribute):
     """Functionset for creating and working with numeric attributes."""
@@ -9632,7 +9611,6 @@ class MFnNumericAttribute(MFnAttribute):
     def setSoftMin(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Sets the attribute's soft minimum value."""
 
-
 class MFnNumericData(MFnData):
     """Function set for non-simple numeric node data."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -9652,7 +9630,6 @@ class MFnNumericData(MFnData):
 
     def setData(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Sets the value of the data in the attached data object."""
-
 
 class MFnNurbsCurve(MFnDagNode):
     """NURBS (Non-Uniform Rational B-Spline) curve function set.
@@ -10118,7 +10095,6 @@ class MFnNurbsCurve(MFnDagNode):
         any, that the curve has changed and needs to be redrawn.
         """
 
-
 class MFnNurbsCurveData(MFnGeometryData):
     """MFnNurbsCurveData allows the creation and manipulation of Nurbs Curve
     data objects for use in the dependency graph.
@@ -10142,7 +10118,6 @@ class MFnNurbsCurveData(MFnGeometryData):
         Creates a new nurbs curve data object, attaches it to this function set
         and returns an MObject which references it.
         """
-
 
 class MFnNurbsSurface(MFnDagNode):
     """NURBS (Non-Uniform Rational B-Spline) surface function set.
@@ -10950,7 +10925,7 @@ class MFnNurbsSurface(MFnDagNode):
     def setUVs(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """setUVs(uList, vList) -> self
 
-        Sets all of the texture coordinates (uvs) for this surface. The 
+        Sets all of the texture coordinates (uvs) for this surface. The
         arrays must be of equal length and must be at least of length numUVs.
         If the arrays are larger than numUVs then the uv list for this surface
         will be grown to accommodate the new uv values.
@@ -11015,7 +10990,6 @@ class MFnNurbsSurface(MFnDagNode):
         updates are complete.
         """
 
-
 class MFnNurbsSurfaceData(MFnGeometryData):
     """MFnNurbsSurfaceData allows the creation and manipulation of Nurbs Surface
     data objects for use in the dependency graph.
@@ -11040,7 +11014,6 @@ class MFnNurbsSurfaceData(MFnGeometryData):
         and returns an MObject which references it.
         """
 
-
 class MFnPlugin(MFnBase):
     """Register and deregister plug-in services with Maya."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -11052,7 +11025,9 @@ class MFnPlugin(MFnBase):
     def apiVersion(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Return the API version required by the plug-in."""
 
-    def deregisterAttributePatternFactory(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+    def deregisterAttributePatternFactory(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any:
         """Deregister a user defined attribute pattern factory type from Maya."""
 
     def deregisterCommand(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
@@ -11064,7 +11039,9 @@ class MFnPlugin(MFnBase):
     def deregisterData(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Deregister a user defined data type from Maya."""
 
-    def deregisterDragAndDropBehavior(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+    def deregisterDragAndDropBehavior(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any:
         """Deregister a user defined drag and drop behavior from Maya."""
 
     def deregisterNode(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
@@ -11080,7 +11057,9 @@ class MFnPlugin(MFnBase):
     def name(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Return the plug-in's name."""
 
-    def registerAttributePatternFactory(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+    def registerAttributePatternFactory(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any:
         """Register a new attribute pattern factory type with Maya."""
 
     def registerCommand(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
@@ -11153,7 +11132,6 @@ class MFnPluginData(MFnData):
         Return the unique MTypeId of the user defined data that is held by this instance
         """
 
-
 class MFnPointArrayData(MFnData):
     """Function set for node data consisting of an array of MPoints."""
     def __delitem__(self, key: Unknown, /) -> Any:
@@ -11185,7 +11163,6 @@ class MFnPointArrayData(MFnData):
 
     def set(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Sets values in the encapsulated array."""
-
 
 class MFnReference(MFnDependencyNode):
     """Function set for reference nodes."""
@@ -11279,11 +11256,10 @@ class MFnReference(MFnDependencyNode):
         """setIgnoreReferenceEdits(bool) -> None
 
         Specify whether reference edits should be tracked and logged or not.
-        This should be treated as a temporary state and should be enabled 
+        This should be treated as a temporary state and should be enabled
         around a batch of operations where reference edits should be ignored.
         Restore the previous value when the batch of operations is complete.
         """
-
 
 class MFnSet(MFnDependencyNode):
     """Function set for sets."""
@@ -11410,7 +11386,6 @@ class MFnSet(MFnDependencyNode):
         Sets the annotation string for this set.  This allows a description of the set to be stored with it.
         """
 
-
 class MFnSingleIndexedComponent(MFnComponent):
     """This function set allows you to create, edit, and query single indexed components.
     Single indexed components store 1 dimensional index values.
@@ -11473,7 +11448,6 @@ class MFnSingleIndexedComponent(MFnComponent):
         numElements indicates the number of elements in the complete component.
         """
 
-
 class MFnStringArrayData(MFnData):
     """Function set for node data consisting of an array of string."""
     def __delitem__(self, key: Unknown, /) -> Any:
@@ -11503,7 +11477,6 @@ class MFnStringArrayData(MFnData):
     def set(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Sets values in the encapsulated array."""
 
-
 class MFnStringData(MFnData):
     """Function set for string node data."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -11520,7 +11493,6 @@ class MFnStringData(MFnData):
 
     def string(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Returns the encapsulated string as a unicode object."""
-
 
 class MFnTransform(MFnDagNode):
     """Function set for operating on transform nodes."""
@@ -11668,7 +11640,6 @@ class MFnTransform(MFnDagNode):
     def translation(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Returns the transform's translation as an MVector."""
 
-
 class MFnTripleIndexedComponent(MFnComponent):
     """This function set allows you to create, edit, and query triple indexed
     components. Triple indexed components store 3 dimensional index values.
@@ -11738,7 +11709,6 @@ class MFnTripleIndexedComponent(MFnComponent):
         index is numT-1 and the max U index is numU-1).
         """
 
-
 class MFnTypedAttribute(MFnAttribute):
     """Functionset for creating and working typed attributes."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -11786,7 +11756,6 @@ class MFnUInt64ArrayData(MFnData):
 
     def set(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Sets values in the encapsulated array."""
-
 
 class MFnUnitAttribute(MFnAttribute):
     """Functionset for creating and working with angle, distance and time attributes."""
@@ -11841,7 +11810,6 @@ class MFnUnitAttribute(MFnAttribute):
     def unitType(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Returns the type of data handled by the attribute."""
 
-
 class MFnVectorArrayData(MFnData):
     """Function set for node data consisting of an array of MVectors."""
     def __delitem__(self, key: Unknown, /) -> Any:
@@ -11873,7 +11841,6 @@ class MFnVectorArrayData(MFnData):
 
     def set(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Sets values in the encapsulated array."""
-
 
 class MGlobal:
     """Static class providing common API global functions."""
@@ -11977,7 +11944,7 @@ class MGlobal:
     def disableStow(*args: Unknown, **kwargs: Unknown) -> Any:
         """disableStow() -> bool
 
-        This method is used to query if the disabling of Stowing (hiding) 
+        This method is used to query if the disabling of Stowing (hiding)
         and Unstowing (showing) windows is active.
         """
 
@@ -12044,10 +12011,10 @@ class MGlobal:
     def executeCommandStringResult(*args: Unknown, **kwargs: Unknown) -> Any:
         """executeCommandStringResult(string, bool displayEnabled=False, bool undoEnabled=False) -> string or [string, string, ...]
 
-        Executes a MEL command that returns a string or an array of strings 
+        Executes a MEL command that returns a string or an array of strings
         result from the command engine depending on the number of return values.
-        Optionally allows display of the command in the Command Window to be 
-        enabled or disabled.  Defaults to disabled.  Optionally allows undo 
+        Optionally allows display of the command in the Command Window to be
+        enabled or disabled.  Defaults to disabled.  Optionally allows undo
         for the command to be enabled or disabled.  Defaults to disabled.
 
         Note: This is not thread safe; you may use executeCommandOnIdle instead
@@ -12592,7 +12559,6 @@ class MGlobal:
         performance hit will be incurred.
         """
 
-
 class MImage:
     """Manipulate color data."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -12817,7 +12783,6 @@ class MImage:
         Optionally, the file can also be converted in a variety of image formats.
         If the writeDepth parameter is True then any depth information stored in MImage will be written to file.
         """
-
 
 class MInt64Array:
     """Array of MInt64 values."""
@@ -13046,7 +13011,6 @@ class MItCurveCV:
         When modifying a large number of CVs, it is most efficient to call this method after all of the CVs have been modified.
         """
 
-
 class MItDag:
     """DAG Iterator.
 
@@ -13269,7 +13233,7 @@ class MItDependencyGraph:
     downstream from the root node of the traversal. For non root nodes,
     only attributes that are affected by the incoming attribute to that
     node will be traversed.  Hence, only nodes to which data from the root
-    node is flowing will be traversed. 
+    node is flowing will be traversed.
 
 
     By default, the iterator does not traverse world-space attribute
@@ -13567,7 +13531,6 @@ class MItDependencyNodes:
         Retrieves the dependency node to which the iterator points.
         """
 
-
 class MItGeometry:
     """Geometry iterator.
 
@@ -13705,7 +13668,6 @@ class MItGeometry:
 
         Return the weight of the current point/CV/vertex component.
         """
-
 
 class MItMeshEdge:
     """An iterator for traversing a mesh's edges."""
@@ -13880,7 +13842,7 @@ class MItMeshEdge:
         Returns the index of the edge which was current before the change.
 
 
-        * index (int) - The index of desired edge to access. 
+        * index (int) - The index of desired edge to access.
         """
 
     def setPoint(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
@@ -13908,7 +13870,6 @@ class MItMeshEdge:
 
         * whichVertex (0 or 1) - Which of the edge's 2 vertices to use.
         """
-
 
 class MItMeshFaceVertex:
     """An iterator for traversing a mesh's face vertices."""
@@ -14107,7 +14068,6 @@ class MItMeshFaceVertex:
         current vertex.
         """
 
-
 class MItMeshPolygon:
     """This class is the iterator for polygonal surfaces (meshes)."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -14257,7 +14217,7 @@ class MItMeshPolygon:
     def getPoints(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """getPoints(space=kObject) -> MPointArray
 
-        Retrieves the positions of the vertices on the current face/polygon that the iterator is pointing to. Vertex positions will be inserted into the given array and will be indexed using face-relative vertex IDs (ie. ordered from 0 to (vertexCount of the face) - 1), which should not be confused with the vertexIDs of each vertex in relation to the entire mesh object. 
+        Retrieves the positions of the vertices on the current face/polygon that the iterator is pointing to. Vertex positions will be inserted into the given array and will be indexed using face-relative vertex IDs (ie. ordered from 0 to (vertexCount of the face) - 1), which should not be confused with the vertexIDs of each vertex in relation to the entire mesh object.
 
         * space (int) - The coordinate system for this operation
         """
@@ -14604,7 +14564,7 @@ class MItMeshPolygon:
         """vertexIndex(index) -> int
 
         Returns the object-relative index of the specified vertex of the current polygon.
-        The index returned may be used to refer to an element in the vertex list returned by MFnMesh.getPoints. 
+        The index returned may be used to refer to an element in the vertex list returned by MFnMesh.getPoints.
 
         * index (int) - The face-relative index of the vertex in the polygon
         """
@@ -14622,7 +14582,6 @@ class MItMeshPolygon:
 
         * uvSet (string) - UV set to work with
         """
-
 
 class MItMeshVertex:
     """This class is the iterator for polygonal surfaces (meshes)."""
@@ -14961,7 +14920,6 @@ class MItMeshVertex:
         Signal that this polygonal surface has changed and needs to redraw itself.
         """
 
-
 class MItSelectionList:
     """Class for iterating over the items in an MSelection list."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -15067,7 +15025,6 @@ class MItSelectionList:
         Apply a filter to the iteration.
         Selection items not matching the filter type will be excluded from the iteration.
         """
-
 
 class MItSurfaceCV:
     """NURBS surface CV iterator."""
@@ -15206,7 +15163,6 @@ class MItSurfaceCV:
         Get the u and v index of the current CV.
         """
 
-
 class MIteratorType:
     """The MIteratorType class is used on iterators where more than one type
     of filters can be specified. It also provides functionalities to set and
@@ -15234,6 +15190,7 @@ class MIteratorType:
 
 class MLockMessage(MMessage):
     """Class used to register callbacks for model related messages."""
+
     kAddAttr: int = 5
     kChildReorder: int = 4
     kCreateChildInstance: int = 6
@@ -15270,7 +15227,7 @@ class MLockMessage(MMessage):
          * otherPath - The other path involved, e.g. the new parent.
          * clientData - User defined data passed to the callback function.
          * eventType - Description of the event.
-        And return True to accept the default behavior and False to 
+        And return True to accept the default behavior and False to
         reject it.
 
          The meanings of the dagPath and otherPath parameters for each
@@ -15347,7 +15304,7 @@ class MLockMessage(MMessage):
            * clientData - User defined data passed to the
              callback function.
            * eventType - Description of the event.
-        And return True to accept the default behavior and False to 
+        And return True to accept the default behavior and False to
         reject it.
 
         The meanings of the node and aux parameters for each
@@ -15416,8 +15373,8 @@ class MLockMessage(MMessage):
         kLockAttr
            * node - The node that is having an attribute locked.
            * aux - The attribute to be locked.
-           * default actions - If node is locked then the default 
-             action is to not allow the locking of aux. If node is 
+           * default actions - If node is locked then the default
+             action is to not allow the locking of aux. If node is
              unlocked then aux can be locked.
 
          * node (MObject) - The node to register the callback for.
@@ -15507,7 +15464,6 @@ class MLockMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-
 
 class MMatrix:
     """4x4 matrix with double-precision elements."""
@@ -15618,7 +15574,6 @@ class MMatrix:
     def transpose(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Returns a new matrix containing this matrix's transpose."""
 
-
 class MMatrixArray:
     """Array of MMatrix values."""
     def __add__(self, value: Unknown, /) -> Any:
@@ -15727,9 +15682,9 @@ class MMeshIntersector:
 
 class MMeshIsectAccelParams:
     """Opaque class used to store parameters used by MFnMesh's
-    intersection calculations for later re-use. Use MFnMesh's 
+    intersection calculations for later re-use. Use MFnMesh's
     uniformGridParams() or autoUniformGridParams() to create one
-    of these to pass into the allIntersections(), 
+    of these to pass into the allIntersections(),
     closestIntersection(), and anyIntersection() methods
     """
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -15737,7 +15692,6 @@ class MMeshIsectAccelParams:
 
     def __new__(cls, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Create and return a new object.  See help(type) for accurate signature."""
-
 
 class MMeshSmoothOptions:
     """Options for control of smooth mesh generation."""
@@ -15811,7 +15765,6 @@ class MMessage:
 
          * idList (MCallbackIdArray) - list of callbacks to be removed.
         """
-
 
 class MModelMessage(MMessage):
     """Class used to register callbacks for model related messages.The class also provides the following Message constants which
@@ -15905,7 +15858,6 @@ class MModelMessage(MMessage):
          * return: Identifier used for removing the callback.
         """
 
-
 class MNamespace:
     """Access Maya namespace functionality."""
     @staticmethod
@@ -15918,22 +15870,22 @@ class MNamespace:
         The new namespace is added, but not made current. To make the
         new namespace be current use MNamespace.setCurrentNamespace().
         Note that adding a namespace changes the scene, so any code that calls
-        this method needs to handle undo.  
+        this method needs to handle undo.
 
-             name    The new namespace to create. A qualified or unqualified 
-                     name may be used. If a qualified name is used and one or 
-                     more of the higher level namespaces do not already exist, 
-                     they will be created automatically. For example, if the new 
-                     name is 'a:b:c' and 'a' does not yet exist, then it will be 
-                     created automatically and 'b' automatically created beneath 
+             name    The new namespace to create. A qualified or unqualified
+                     name may be used. If a qualified name is used and one or
+                     more of the higher level namespaces do not already exist,
+                     they will be created automatically. For example, if the new
+                     name is 'a:b:c' and 'a' does not yet exist, then it will be
+                     created automatically and 'b' automatically created beneath
                      it and finally 'c' will be created beneath 'b'.
-                     If the supplied name contains invalid characters it will first 
+                     If the supplied name contains invalid characters it will first
                      be modified as per the validateName() method.
-             parent  The fully qualified name of the namespace under which 
-                     the new one is to be created. If not provided then the 
-                     current namespace will be used. If the name of the new 
-                     namespace is absolute (i.e. begins with a colon, ':a:b:c') 
-                     then the 'parent' parameter will be ignored and the new namespace 
+             parent  The fully qualified name of the namespace under which
+                     the new one is to be created. If not provided then the
+                     current namespace will be used. If the name of the new
+                     namespace is absolute (i.e. begins with a colon, ':a:b:c')
+                     then the 'parent' parameter will be ignored and the new namespace
                      will be created under the root namespace.
         """
 
@@ -15941,8 +15893,8 @@ class MNamespace:
     def currentNamespace(*args: Unknown, **kwargs: Unknown) -> Any:
         """currentNamespace() -> MString
 
-        Get the name of the current namespace. This name is returned 
-        as an absolute namepath (i.e. fully qualfied from the root 
+        Get the name of the current namespace. This name is returned
+        as an absolute namepath (i.e. fully qualfied from the root
         namespace downwards, ':a:b:c').
         """
 
@@ -15950,18 +15902,18 @@ class MNamespace:
     def getNamespaceFromName(*args: Unknown, **kwargs: Unknown) -> Any:
         """getNamespaceFromName(MString fullName) -> MString
 
-        Get namespace from a full name. 
-        For example, given a full name: 'a:b:c:d:ball' this method 
-        would return: 'a:b:c:d'. 
+        Get namespace from a full name.
+        For example, given a full name: 'a:b:c:d:ball' this method
+        would return: 'a:b:c:d'.
         """
 
     @staticmethod
     def getNamespaceObjects(*args: Unknown, **kwargs: Unknown) -> Any:
         """getNamespaceObjects(MString parentNamespace, bool recurse=False) -> MObjectArray
 
-        Return an array of MObjects representing the object contained within 
-        the specified namespace. To query the current namespace, call this 
-        method in this way: 
+        Return an array of MObjects representing the object contained within
+        the specified namespace. To query the current namespace, call this
+        method in this way:
         """
 
     @staticmethod
@@ -15988,27 +15940,27 @@ class MNamespace:
     def makeNamepathAbsolute(*args: Unknown, **kwargs: Unknown) -> Any:
         """makeNamepathAbsolute(MString fullName) -> MString
 
-        Make a namepath which is relative to the root into an absolute 
-        namepath. For example, given the namepath 'a:sphere' this method 
-        returns ':a:sphere'. It also culls out duplicate and trailing 
-        separators, e.g. 'a:b::c:' will return ':a:b:c'. 
+        Make a namepath which is relative to the root into an absolute
+        namepath. For example, given the namepath 'a:sphere' this method
+        returns ':a:sphere'. It also culls out duplicate and trailing
+        separators, e.g. 'a:b::c:' will return ':a:b:c'.
         """
 
     @staticmethod
     def moveNamespace(*args: Unknown, **kwargs: Unknown) -> Any:
         """moveNamespace(MString src, MString dst, bool force=False)
 
-        Move the contents of the namespace 'src' into the namespace 'dst'. 
-        Note that moving namespace contents changes the scene, so any code 
-        that calls this method needs to handle undo. 
+        Move the contents of the namespace 'src' into the namespace 'dst'.
+        Note that moving namespace contents changes the scene, so any code
+        that calls this method needs to handle undo.
 
-                  src       source namespace from which objects will be moved. 
-                  dst       destination namespace to which objects will be moved. 
-                  force     optional parameter which if true forces the move 
-                            even if name clashes occur, in which case nodes are 
-                            renamed to ensure uniqueness. If false, the move 
-                            will not happen if there are clashes. The default 
-                            value is false. 
+                  src       source namespace from which objects will be moved.
+                  dst       destination namespace to which objects will be moved.
+                  force     optional parameter which if true forces the move
+                            even if name clashes occur, in which case nodes are
+                            renamed to ensure uniqueness. If false, the move
+                            will not happen if there are clashes. The default
+                            value is false.
         """
 
     @staticmethod
@@ -16022,47 +15974,47 @@ class MNamespace:
     def parentNamespace(*args: Unknown, **kwargs: Unknown) -> Any:
         """parentNamespace() -> MString
 
-        Get the name of the current namespace's parent. This name is returned 
-        as an absolute namepath (i.e. fully qualfied from the root namespace 
-        downwards, ':a:b'). If the root namespace is 
-        current, this method returns an error. 
+        Get the name of the current namespace's parent. This name is returned
+        as an absolute namepath (i.e. fully qualfied from the root namespace
+        downwards, ':a:b'). If the root namespace is
+        current, this method returns an error.
         """
 
     @staticmethod
     def relativeNames(*args: Unknown, **kwargs: Unknown) -> Any:
         """relativeNames() -> bool
 
-        Query Maya's current 'relative name lookup' state. Relative name 
-        lookup causes lookups to be relative to the current namespace. 
-        By default, relative name lookup in Maya is off, which causes 
-        name lookups to be relative to the root namespace. For example, 
-        if you have the object :a:b:sphere, and the current namespace is 
-        ':a:b', in relative name lookup mode you can issue a command like 
+        Query Maya's current 'relative name lookup' state. Relative name
+        lookup causes lookups to be relative to the current namespace.
+        By default, relative name lookup in Maya is off, which causes
+        name lookups to be relative to the root namespace. For example,
+        if you have the object :a:b:sphere, and the current namespace is
+        ':a:b', in relative name lookup mode you can issue a command like
 
-            setAttr sphere.translateX 10; 
+            setAttr sphere.translateX 10;
 
-        If relative name lookup is off, you need to specify the full 
-        namepath, e.g. 
+        If relative name lookup is off, you need to specify the full
+        namepath, e.g.
 
-            setAttr a:b:sphere.translateX 10; 
+            setAttr a:b:sphere.translateX 10;
         """
 
     @staticmethod
     def removeNamespace(*args: Unknown, **kwargs: Unknown) -> Any:
         """removeNamespace(MString name, bool removeContents=False)
 
-        Remove the specified namespace. 
-        Note that removing a namespace changes the scene, so any code 
-        that calls this method needs to handle undo. 
+        Remove the specified namespace.
+        Note that removing a namespace changes the scene, so any code
+        that calls this method needs to handle undo.
         """
 
     @staticmethod
     def renameNamespace(*args: Unknown, **kwargs: Unknown) -> Any:
         """renameNamespace(MString oldName, MString newName, MString parent=None)
 
-        Rename the specified namespace to a new name with optional parent name. 
-        Note that removing a namespace changes the scene, so any code 
-        that calls this method needs to handle undo. 
+        Rename the specified namespace to a new name with optional parent name.
+        Note that removing a namespace changes the scene, so any code
+        that calls this method needs to handle undo.
         """
 
     @staticmethod
@@ -16070,18 +16022,18 @@ class MNamespace:
         """rootNamespace() -> MString
 
         Get the name of the root namespace. This name is an absolute
-        namepath (i.e. prefixed by a ':'). 
+        namepath (i.e. prefixed by a ':').
         """
 
     @staticmethod
     def setCurrentNamespace(*args: Unknown, **kwargs: Unknown) -> Any:
         """setCurrentNamespace(MString name) -> MString
 
-        Set the specified namespace to be the current namespace. The 'name' 
-        parameter you specify is relative to whatever namespace is current, 
-        but any namespace can be specified by passing an absolute name (e.g. :a:b:c).  
-        Note that making a namespace current changes the scene, so any code 
-        that calls this method needs to handle undo. 
+        Set the specified namespace to be the current namespace. The 'name'
+        parameter you specify is relative to whatever namespace is current,
+        but any namespace can be specified by passing an absolute name (e.g. :a:b:c).
+        Note that making a namespace current changes the scene, so any code
+        that calls this method needs to handle undo.
 
         To make the root namespace become current, use:
             MNamespace.setCurrentNamespace(MNamespace.rootNamespace())
@@ -16091,47 +16043,46 @@ class MNamespace:
     def setRelativeNames(*args: Unknown, **kwargs: Unknown) -> Any:
         """setRelativeNames(bool newState)
 
-        Set relative name lookup mode. 
+        Set relative name lookup mode.
 
-        Note that turning on or off relativeNames mode can change the scene, 
-        so any code that calls this method needs to handle undo. 
-        See MNamespace.relativeNames() for details on relative name lookup. 
+        Note that turning on or off relativeNames mode can change the scene,
+        so any code that calls this method needs to handle undo.
+        See MNamespace.relativeNames() for details on relative name lookup.
 
-        Note: relative name lookup mode is intended for bracketing user 
-        code which needs to be namespace-independent. Leaving relative 
-        name lookup enabled outside of your specific code could cause 
-        functionality such as 3rd-party plugins that assume absolute 
-        name lookup to fail. 
+        Note: relative name lookup mode is intended for bracketing user
+        code which needs to be namespace-independent. Leaving relative
+        name lookup enabled outside of your specific code could cause
+        functionality such as 3rd-party plugins that assume absolute
+        name lookup to fail.
 
-           newState         true to turn on relative name lookup, false to 
-                            turn it off. Maya's default setting is false. 
+           newState         true to turn on relative name lookup, false to
+                            turn it off. Maya's default setting is false.
         """
 
     @staticmethod
     def stripNamespaceFromName(*args: Unknown, **kwargs: Unknown) -> Any:
         """stripNamespaceFromName(MString fullName) -> MString
 
-        Strips the namespace from a full name. 
-        For example, given a full name: 'a:b:c:d:ball' this method  
-        would return: 'ball'. 
+        Strips the namespace from a full name.
+        For example, given a full name: 'a:b:c:d:ball' this method
+        would return: 'ball'.
         """
 
     @staticmethod
     def validateName(*args: Unknown, **kwargs: Unknown) -> Any:
         """validateName(MString name) -> MString
 
-        Convert the specified name to a validated name which 
+        Convert the specified name to a validated name which
         contains no illegal characters.
         The leading illegal characters will be removed and
         other illegal characters will be converted to '_'.
 
         For example, name '@name@space@' will be converted to 'name_space_'.
 
-        If the entire name consists solely of illegal characters, 
-        e.g. '123' which contains only leading digits, then the 
+        If the entire name consists solely of illegal characters,
+        e.g. '123' which contains only leading digits, then the
         returned string will be empty.
         """
-
 
 class MNodeCacheDisablingInfo:
     """Defines additional info about why the node disables Cached Playback."""
@@ -16171,7 +16122,6 @@ class MNodeCacheDisablingInfo:
         Sets the reason for disabling Cached Playback.
         """
 
-
 class MNodeCacheSetupInfo:
     """Defines preferences and requirements the node has for Cached Playback."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -16208,7 +16158,6 @@ class MNodeCacheSetupInfo:
         Set a requirement flag for this node.
         """
 
-
 class MNodeClass:
     """A class for performing node class-level operations in the dependency graph."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -16241,7 +16190,9 @@ class MNodeClass:
     def removeExtensionAttribute(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Removes an extension attribute from the node class. Raises ValueError if attr is not an extension attribute of this node class."""
 
-    def removeExtensionAttributeIfUnset(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+    def removeExtensionAttributeIfUnset(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any:
         """Removes an extension attribute from the node class, but only if there are no nodes in the graph with non-default values for this attribute. Returns True if the attribute was removed, False otherwise. Raises ValueError if attr is not an extension attribute of this node class."""
 
     typeId: Any
@@ -16331,7 +16282,7 @@ class MNodeMessage(MMessage):
         changes the keyable state of an attribute.  When the callback is
         invoked, the API programmer can make a decision on how to handle
         the given keyable change event.  The programmer can either accept
-        the keyable state change by returning True 
+        the keyable state change by returning True
         or reject it by returning False.
 
         Note: you can only attach one callback keyable change override
@@ -16673,7 +16624,6 @@ class MObjectHandle:
         Returns the MObject associated with this handle. The returned MObject will be MObject.kNullObj if the object is invalid.
         """
 
-
 class MObjectSetMessage(MMessage):
     """Class used to register callbacks for set modified related messages."""
     @staticmethod
@@ -16690,7 +16640,6 @@ class MObjectSetMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-
 
 class MPlane:
     """This class describes a mathematical plane."""
@@ -16737,7 +16686,6 @@ class MPlane:
         * n (MVector) - The plane's normal
         * d (float) - The offset of the plane along the normal
         """
-
 
 class MPlug:
     """Create and access dependency node plugs."""
@@ -16845,12 +16793,14 @@ class MPlug:
         """Returns a plug for the element of this plug array having the specified logical index."""
 
     def elementByPhysicalIndex(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
-        """Returns a plug for the element of this plug array having the specified physical index. """
+        """Returns a plug for the element of this plug array having the specified physical index."""
 
     def evaluateNumElements(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Like numElements() but evaluates all connected elements first to ensure that they are included in the count."""
 
-    def getExistingArrayAttributeIndices(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+    def getExistingArrayAttributeIndices(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any:
         """Returns an array of all the plug's logical indices which are currently in use."""
 
     def getSetAttrCmds(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
@@ -16981,7 +16931,6 @@ class MPlug:
         sourceWithConversion() does not skip over unitconversion nodes, and returns the source plug on a unit conversionnode, if present.
         Note that the behavior of connectedTo() is identical to sourceWithConversion(), that is, do not skip over unit conversion nodes.
         """
-
 
 class MPlugArray:
     """Array of MPlug values."""
@@ -17297,7 +17246,6 @@ class MPolyMessage(MMessage):
          * return: Identifier used for removing the callback.
         """
 
-
 class MPxAttributePatternFactory:
     """Base class for custom attribute pattern factories."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -17308,7 +17256,6 @@ class MPxAttributePatternFactory:
 
     def __str__(self, /) -> Any:
         """Return str(self)."""
-
 
 class MPxCommand:
     """Base class for custom commands."""
@@ -17378,7 +17325,6 @@ class MPxCommand:
     def undoIt(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Called by Maya to undo a previously executed command."""
 
-
 class MPxData:
     """Base Class for User-defined Dependency Graph Data Types."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -17443,7 +17389,6 @@ class MPxData:
 
         Encodes Data in accordance with the binary file format and returns as bytearray.
         """
-
 
 class MPxGeometryData(MPxData):
     """Base Class for User-defined Dependency Graph Geometry Data Types."""
@@ -17528,7 +17473,6 @@ class MPxGeometryData(MPxData):
 
         * component (MObject) - the component to test
         """
-
 
 class MPxGeometryIterator:
     """Base class for user defined geometry iterators."""
@@ -17638,7 +17582,6 @@ class MPxGeometryIterator:
         * point (MPoint) - the positional value to set.
         """
 
-
 class MPxNode:
     """Base class for user defined dependency nodes."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -17661,7 +17604,9 @@ class MPxNode:
         * attr (MObject) - new attribute to add.
         """
 
-    def addExternalContentForFileAttr(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+    def addExternalContentForFileAttr(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any:
         """addExternalContentForFileAttr(table, attr) -> bool
 
         This method is a helper for derived clases implementing getExternalContent().  It augments the external content info table passed in with an entry describing external content whose location is described by the specified attribute.
@@ -17766,7 +17711,7 @@ class MPxNode:
     def doNotWrite(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """doNotWrite() -> bool
 
-        use this method to query the "do not write" state of this proxy node. True is returned if this node will not be saved when the maya model is written out. 
+        use this method to query the "do not write" state of this proxy node. True is returned if this node will not be saved when the maya model is written out.
         """
 
     def existWithoutInConnections(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
@@ -17880,7 +17825,9 @@ class MPxNode:
         * ctx (MDGContext) - the context the method is being evaluated in.
         """
 
-    def hasInvalidationRangeTransformation(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+    def hasInvalidationRangeTransformation(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any:
         """hasInvalidationRangeTransformation() -> bool
 
         Checks if this MPxNode derived node overrides the MPxNode::transformInvalidationRange method
@@ -18103,11 +18050,11 @@ class MPxNode:
     def setDoNotWrite(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """setDoNotWrite(bool) -> self
 
-        Use this method to mark the "do not write" state of this proxy node.  If set, this node will not be saved when the Maya model is written out. 
+        Use this method to mark the "do not write" state of this proxy node.  If set, this node will not be saved when the Maya model is written out.
 
         NOTES:
         1. Plug-in "requires" information will be written out with the model when saved.  But a subsequent reload and resave of the file will cause these to go away.
-        2. If this node is a DAG and has a parent or children, the "do not write" flag of the parent or children will not be set. It is the developer's responsibility to ensure that the resulting scene file is capable of being read in without errors due to unwritten nodes. 
+        2. If this node is a DAG and has a parent or children, the "do not write" flag of the parent or children will not be set. It is the developer's responsibility to ensure that the resulting scene file is capable of being read in without errors due to unwritten nodes.
         """
 
     def setExistWithoutInConnections(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
@@ -18124,7 +18071,9 @@ class MPxNode:
         * flag (bool) true if this node can exist without input connections, false otherwise
         """
 
-    def setExistWithoutOutConnections(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+    def setExistWithoutOutConnections(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any:
         """setExistWithoutOutConnections(bool) -> bool
 
         This method specifies whether or not the node can exist without
@@ -18152,7 +18101,9 @@ class MPxNode:
         * table Key->location table with new content locations.
         """
 
-    def setExternalContentForFileAttr(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+    def setExternalContentForFileAttr(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any:
         """setExternalContentForFileAttr(attr, table) -> bool
 
         This method is a helper for derived clases implementing setExternalContent().  It assigns a value to a plug with the one from the table whose key is the same as the passed in attribute name.
@@ -18198,7 +18149,7 @@ class MPxNode:
 
         This method is obsolete. Override MPxNode.setSchedulingType instead.
 
-        Set a flag to specify if a user defined shading node is safe for multi-processor rendering. For a shading node to be MP safe, it cannot access any shared global data and should only use attributes in the datablock to get input data and store output data. 
+        Set a flag to specify if a user defined shading node is safe for multi-processor rendering. For a shading node to be MP safe, it cannot access any shared global data and should only use attributes in the datablock to get input data and store output data.
 
         NOTE: This should be called from the postConstructor() method for shading node plug-ins only. If a shading node is non-safe, then it will only be useful during single processor rendering.
         """
@@ -18223,7 +18174,7 @@ class MPxNode:
     def transformInvalidationRange(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """transformInvalidationRange(plug, timeRange) -> timeRange
 
-        Override this method to register this node as an Invalidation-Range-Transformation kernel (IRT kernel) An IRT kernel node will change the invalidation time range for its downstream nodes For example, Dynamics-solver will transform invalidation time range [a,b] to [a,+inf) And Clip-Time-Editor will send out the invalidation range for each of the clip [a,b] to ( [t0+a,t0+b] U [t1+a,t1+b] U [t2+a,t2+b] U ... ) 
+        Override this method to register this node as an Invalidation-Range-Transformation kernel (IRT kernel) An IRT kernel node will change the invalidation time range for its downstream nodes For example, Dynamics-solver will transform invalidation time range [a,b] to [a,+inf) And Clip-Time-Editor will send out the invalidation range for each of the clip [a,b] to ( [t0+a,t0+b] U [t1+a,t1+b] U [t2+a,t2+b] U ... )
 
         * source (MPlug)     - The source plug in this node where the dirty propagation comes from
         * input (MTimeRange) - The incoming invalidation range
@@ -18281,7 +18232,6 @@ class MPxNode:
 
         Returns the type name of this node.  The type name identifies the node type to the ASCII file format
         """
-
 
 class MPxSurfaceShape(MPxNode):
     """Parent class of all user defined shapes."""
@@ -18713,7 +18663,6 @@ class MPxSurfaceShape(MPxNode):
         This method must be overridden if the shape is to support deformers.
         """
 
-
 class MQuaternion:
     """Quaternion math."""
     def __add__(self, value: Unknown, /) -> Any:
@@ -18914,7 +18863,6 @@ class MRampAttribute:
     def sort(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Sort the ramp by position. Indices are also re-ordered during sort."""
 
-
 class MRichSelection:
     """A selection list supporting soft selection and symmetry.
 
@@ -18993,7 +18941,6 @@ class MRichSelection:
         Sets the non-symmetry component of the rich selection.
         """
 
-
 class MSceneMessage(MMessage):
     """Class used to register callbacks for scene related messages."""
     @staticmethod
@@ -19047,7 +18994,7 @@ class MSceneMessage(MMessage):
         of the reference itself (i.e. read the nodes from file).
 
         The kBeforeCreateReference message will be sent when a reference is created.
-        So it will happen for both loaded and unloaded references. But the 
+        So it will happen for both loaded and unloaded references. But the
         kBeforeLoadReference message will only be sent when the file is read from disk.
 
         When opening a file with a loaded reference, the callback order is as follows:
@@ -19213,7 +19160,7 @@ class MSceneMessage(MMessage):
 
          * message - the scene Message constant that will trigger the callback
          * function - callable which will be passed a MObject indicating the
-           reference node, a MFileObject indicating he resolved file path of the 
+           reference node, a MFileObject indicating he resolved file path of the
            referenced file and the clientData object.
          * clientData - User defined data passed to the callback function
 
@@ -19462,7 +19409,6 @@ class MSelectionList:
         are already on it and adds those which are not.
         """
 
-
 class MSelectionMask:
     """Selection masks provide a way to control what is selectable in Maya."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -19708,9 +19654,9 @@ class MSelectionMask:
         * selType (int) - the selection type to be set.  See addMask() for a list of valid selection masks.
         """
 
-
 class MSpace:
     """Static class providing coordinate space constants."""
+
     kInvalid: int = 0
     kLast: int = 5
     kObject: int = 2
@@ -19775,7 +19721,6 @@ class MSyntax:
 
     def useSelectionAsDefault(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """If set to True then when no objects are provided on the command-line Maya will pass the current selection instead."""
-
 
 class MTime:
     """Manipulate time data."""
@@ -20044,7 +19989,6 @@ class MTimeRange:
         Checks if the given interval intersects with this time range.
         """
 
-
 class MTimerMessage(MMessage):
     """Class used to register callbacks for timer related messages."""
     @staticmethod
@@ -20075,7 +20019,6 @@ class MTimerMessage(MMessage):
 
          * return: Identifier used for removing the callback.
         """
-
 
 class MTransformationMatrix:
     """Manipulate the individual components of a transformation."""
@@ -20212,7 +20155,6 @@ class MTransformationMatrix:
     def translation(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Returns the transformation's translation component as a vector."""
 
-
 class MTypeId:
     """Stores a Maya object type identifier."""
     def __eq__(self, value: Unknown, /) -> Any:
@@ -20247,7 +20189,6 @@ class MTypeId:
 
     def id(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Returns the type id as a long."""
-
 
 class MURI:
     """Manipulate URIs."""
@@ -20512,7 +20453,6 @@ class MURI:
         Sets the user name part of the user info component.
         """
 
-
 class MUint64Array:
     """Array of MUint64 values."""
     def __add__(self, value: Unknown, /) -> Any:
@@ -20645,7 +20585,7 @@ class MUserData:
     """Virtual base class for user data caching.
 
     MUserData( deleteAfterUse=False, legacy=True )
-    * deleteAfterUse (bool) - Enabled if user data should be deleted immediately after use. DEPRECATED in 2022. 
+    * deleteAfterUse (bool) - Enabled if user data should be deleted immediately after use. DEPRECATED in 2022.
     * legacy (bool) - Enabled if legacy constructor arguments are used. DEPRECATED in 2022.
     """
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -20676,7 +20616,6 @@ class MUserData:
 
             DEPRECATED in 2022, deleteAfterUse is deprecated.
         """
-
 
 class MUserEventMessage(MMessage):
     """Class used to register callbacks for user event messages."""
@@ -20715,7 +20654,7 @@ class MUserEventMessage(MMessage):
 
         Checks if an event type exists with the given event name.
 
-         * eventName (string) - the name of the new event to check. 
+         * eventName (string) - the name of the new event to check.
         """
 
     @staticmethod
@@ -20745,7 +20684,6 @@ class MUserEventMessage(MMessage):
          * eventName (string) - the name of the new event to register.  Any
            non-empty string may be used as an event name.
         """
-
 
 class MUuid:
     """Manipulate UUID data."""
@@ -20804,7 +20742,6 @@ class MUuid:
 
         Return whether the UUID is valid.
         """
-
 
 class MVector:
     """3D vector with double-precision coordinates."""
@@ -21026,9 +20963,12 @@ class MWeight:
     seam: float
 
 def getStringResource(*args: Unknown, **kwargs: Unknown) -> Any: ...
-key: str = '__file__'
+
+key: str = "__file__"
 ourdict: Dict[str, Any]
 py2dict: Dict[str, Any]
+
 def registerStringResource(*args: Unknown, **kwargs: Unknown) -> Any: ...
 def registerStringResources(*args: Unknown, **kwargs: Unknown) -> Any: ...
-val: str = 'C:\\Program Files\\Autodesk\\Maya2025\\Python\\Lib\\site-packages\\maya\\api\\_OpenMaya_py2.pyd'
+
+val: str = "C:\\Program Files\\Autodesk\\Maya2025\\Python\\Lib\\site-packages\\maya\\api\\_OpenMaya_py2.pyd"

@@ -7,8 +7,7 @@ import maya.OpenMaya
 Unknown = Any
 
 class MAnimControl:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -90,8 +89,7 @@ class MAnimControl:
     def weightedTangents(*args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MAnimCurveChange:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -106,8 +104,7 @@ class MAnimCurveChange:
     def undoIt(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MAnimCurveClipboard:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -126,8 +123,7 @@ class MAnimCurveClipboard:
     thisown: bool
 
 class MAnimCurveClipboardItem:
-    """
-    """
+    """ """
     def __eq__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -149,8 +145,7 @@ class MAnimCurveClipboardItem:
     thisown: bool
 
 class MAnimCurveClipboardItemArray:
-    """
-    """
+    """ """
     def __getitem__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -174,8 +169,7 @@ class MAnimCurveClipboardItemArray:
     thisown: bool
 
 class MAnimMessage(maya.OpenMaya.MMessage):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -202,8 +196,7 @@ class MAnimMessage(maya.OpenMaya.MMessage):
     thisown: bool
 
 class MAnimUtil:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -227,8 +220,7 @@ class MAnimUtil:
     thisown: bool
 
 class MFnAnimCurve(maya.OpenMaya.MFnDependencyNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -295,15 +287,18 @@ class MFnAnimCurve(maya.OpenMaya.MFnDependencyNode):
     def tangentsLocked(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     thisown: bool
     def time(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def timedAnimCurveTypeForPlug(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def unitlessAnimCurveTypeForPlug(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def timedAnimCurveTypeForPlug(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
+    def unitlessAnimCurveTypeForPlug(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def unitlessInput(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def weightsLocked(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnBlendShapeDeformer(maya.OpenMaya.MFnDependencyNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -330,15 +325,16 @@ class MFnBlendShapeDeformer(maya.OpenMaya.MFnDependencyNode):
     def weightIndexList(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnCharacter(maya.OpenMaya.MFnSet):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
     def __repr__(self) -> Any: ...
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def addCurveToClip(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def attachInstanceToCharacter(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def attachInstanceToCharacter(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def attachSourceToCharacter(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def blendExists(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
@@ -359,8 +355,7 @@ class MFnCharacter(maya.OpenMaya.MFnSet):
     thisown: bool
 
 class MFnClip(maya.OpenMaya.MFnDependencyNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -371,7 +366,9 @@ class MFnClip(maya.OpenMaya.MFnDependencyNode):
     def createInstancedClip(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def createSourceClip(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getAbsolute(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def getAbsoluteChannelSettings(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def getAbsoluteChannelSettings(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def getCycle(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getEnabled(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getMemberAnimCurves(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -386,7 +383,9 @@ class MFnClip(maya.OpenMaya.MFnDependencyNode):
     def isInstancedClip(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isPose(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setAbsolute(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setAbsoluteChannelSettings(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setAbsoluteChannelSettings(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setCycle(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setEnabled(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setPoseClip(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -401,8 +400,7 @@ class MFnClip(maya.OpenMaya.MFnDependencyNode):
     thisown: bool
 
 class MFnGeometryFilter(maya.OpenMaya.MFnDependencyNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -428,8 +426,7 @@ class MFnGeometryFilter(maya.OpenMaya.MFnDependencyNode):
     thisown: bool
 
 class MFnHikEffector(maya.OpenMaya.MFnTransform):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -446,8 +443,7 @@ class MFnHikEffector(maya.OpenMaya.MFnTransform):
     thisown: bool
 
 class MFnIkEffector(maya.OpenMaya.MFnTransform):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -459,8 +455,7 @@ class MFnIkEffector(maya.OpenMaya.MFnTransform):
     thisown: bool
 
 class MFnIkHandle(maya.OpenMaya.MFnTransform):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -487,8 +482,7 @@ class MFnIkHandle(maya.OpenMaya.MFnTransform):
     def weight(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnIkJoint(maya.OpenMaya.MFnTransform):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -519,17 +513,29 @@ class MFnIkJoint(maya.OpenMaya.MFnTransform):
     def minRotateDampZStrength(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setDegreesOfFreedom(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setMaxRotateDampXRange(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setMaxRotateDampXStrength(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setMaxRotateDampXStrength(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setMaxRotateDampYRange(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setMaxRotateDampYStrength(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setMaxRotateDampYStrength(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setMaxRotateDampZRange(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setMaxRotateDampZStrength(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setMaxRotateDampZStrength(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setMinRotateDampXRange(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setMinRotateDampXStrength(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setMinRotateDampXStrength(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setMinRotateDampYRange(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setMinRotateDampYStrength(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setMinRotateDampYStrength(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setMinRotateDampZRange(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setMinRotateDampZStrength(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setMinRotateDampZStrength(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setOrientation(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setPreferedAngle(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setPreferredAngle(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -539,8 +545,7 @@ class MFnIkJoint(maya.OpenMaya.MFnTransform):
     thisown: bool
 
 class MFnIkSolver(maya.OpenMaya.MFnDependencyNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -555,8 +560,7 @@ class MFnIkSolver(maya.OpenMaya.MFnDependencyNode):
     def tolerance(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnKeyframeDelta(maya.OpenMaya.MFnBase):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -569,8 +573,7 @@ class MFnKeyframeDelta(maya.OpenMaya.MFnBase):
     thisown: bool
 
 class MFnKeyframeDeltaAddRemove(MFnKeyframeDelta):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -587,8 +590,7 @@ class MFnKeyframeDeltaAddRemove(MFnKeyframeDelta):
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnKeyframeDeltaBlockAddRemove(MFnKeyframeDelta):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -606,8 +608,7 @@ class MFnKeyframeDeltaBlockAddRemove(MFnKeyframeDelta):
     thisown: bool
 
 class MFnKeyframeDeltaBreakdown(MFnKeyframeDelta):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -619,8 +620,7 @@ class MFnKeyframeDeltaBreakdown(MFnKeyframeDelta):
     def wasBreakdown(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnKeyframeDeltaInfType(MFnKeyframeDelta):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -633,8 +633,7 @@ class MFnKeyframeDeltaInfType(MFnKeyframeDelta):
     thisown: bool
 
 class MFnKeyframeDeltaMove(MFnKeyframeDelta):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -649,8 +648,7 @@ class MFnKeyframeDeltaMove(MFnKeyframeDelta):
     thisown: bool
 
 class MFnKeyframeDeltaScale(MFnKeyframeDelta):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -665,8 +663,7 @@ class MFnKeyframeDeltaScale(MFnKeyframeDelta):
     thisown: bool
 
 class MFnKeyframeDeltaTangent(MFnKeyframeDelta):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -681,8 +678,7 @@ class MFnKeyframeDeltaTangent(MFnKeyframeDelta):
     thisown: bool
 
 class MFnKeyframeDeltaWeighted(MFnKeyframeDelta):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -693,8 +689,7 @@ class MFnKeyframeDeltaWeighted(MFnKeyframeDelta):
     def wasWeighted(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnLattice(maya.OpenMaya.MFnDagNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -710,8 +705,7 @@ class MFnLattice(maya.OpenMaya.MFnDagNode):
     thisown: bool
 
 class MFnLatticeDeformer(maya.OpenMaya.MFnDependencyNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -731,8 +725,7 @@ class MFnLatticeDeformer(maya.OpenMaya.MFnDependencyNode):
     thisown: bool
 
 class MFnMotionPath(maya.OpenMaya.MFnDependencyNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -776,8 +769,7 @@ class MFnMotionPath(maya.OpenMaya.MFnDependencyNode):
     def useNormal(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnSkinCluster(MFnGeometryFilter):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -785,7 +777,9 @@ class MFnSkinCluster(MFnGeometryFilter):
     @staticmethod
     def className(*args: Unknown, **kwargs: Unknown) -> Any: ...
     def getBlendWeights(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def getPointsAffectedByInfluence(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def getPointsAffectedByInfluence(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def getWeights(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def indexForInfluenceObject(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def influenceObjects(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -794,8 +788,7 @@ class MFnSkinCluster(MFnGeometryFilter):
     thisown: bool
 
 class MFnWeightGeometryFilter(MFnGeometryFilter):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -810,8 +803,7 @@ class MFnWeightGeometryFilter(MFnGeometryFilter):
     def weightPlugStrings(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnWireDeformer(maya.OpenMaya.MFnDependencyNode):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -846,8 +838,7 @@ class MFnWireDeformer(maya.OpenMaya.MFnDependencyNode):
     def wireScale(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MIkHandleGroup:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -868,8 +859,7 @@ class MIkHandleGroup:
     thisown: bool
 
 class MIkSystem:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -892,8 +882,7 @@ class MIkSystem:
     thisown: bool
 
 class MItKeyframe:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -935,8 +924,7 @@ class MItKeyframe:
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class boolPtr:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -950,8 +938,7 @@ class boolPtr:
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class charPtr:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -965,8 +952,7 @@ class charPtr:
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class doublePtr:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -980,8 +966,7 @@ class doublePtr:
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class floatPtr:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -995,8 +980,7 @@ class floatPtr:
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class intPtr:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -1010,8 +994,7 @@ class intPtr:
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class shortPtr:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -1025,8 +1008,7 @@ class shortPtr:
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class uCharPtr:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -1040,8 +1022,7 @@ class uCharPtr:
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class uIntPtr:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -1053,4 +1034,3 @@ class uIntPtr:
     def frompointer(*args: Unknown, **kwargs: Unknown) -> Any: ...
     thisown: bool
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-

@@ -8,8 +8,7 @@ import maya.OpenMayaRender
 Unknown = Any
 
 class M3dView:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -194,11 +193,17 @@ class M3dView:
     def setObjectListFilterName(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setPluginObjectDisplay(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setRenderOverrideName(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setShowObjectFilterNameInHUD(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setShowViewSelectedChildren(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setShowObjectFilterNameInHUD(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
+    def setShowViewSelectedChildren(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setUserDefinedColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setViewSelectedPrefix(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def showObjectFilterNameInHUD(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def showObjectFilterNameInHUD(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def showViewSelectedChildren(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def templateColor(*args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -217,15 +222,16 @@ class M3dView:
     def widget(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def window(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def wireframeOnShaded(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def wireframeOnlyInShadedMode(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def wireframeOnlyInShadedMode(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def worldToView(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def writeColorBuffer(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def xray(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def xrayJoints(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MCursor:
-    """
-    """
+    """ """
     def __eq__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -244,8 +250,7 @@ class MCursor:
     thisown: Any
 
 class MDeviceChannel:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -261,8 +266,7 @@ class MDeviceChannel:
     thisown: Any
 
 class MDeviceState:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown, **kwargs: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -277,8 +281,7 @@ class MDeviceState:
     thisown: Any
 
 class MDrawData:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -290,8 +293,7 @@ class MDrawData:
     thisown: bool
 
 class MDrawInfo:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -309,7 +311,9 @@ class MDrawInfo:
     def inclusiveMatrix(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def multiPath(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def objectDisplayStatus(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def pluginObjectDisplayStatus(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def pluginObjectDisplayStatus(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def projectionMatrix(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setMultiPath(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     thisown: bool
@@ -317,8 +321,7 @@ class MDrawInfo:
     def view(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MDrawRequest:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -358,8 +361,7 @@ class MDrawRequest:
     def view(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MDrawRequestQueue:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -374,8 +376,7 @@ class MDrawRequestQueue:
     thisown: bool
 
 class MDrawTraversal:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -399,8 +400,7 @@ class MDrawTraversal:
     def traverse(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MEvent:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -413,8 +413,12 @@ class MEvent:
     def getWindowPosition(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isModifierControl(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isModifierKeyRelease(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def isModifierLeftMouseButton(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def isModifierMiddleMouseButton(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def isModifierLeftMouseButton(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
+    def isModifierMiddleMouseButton(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def isModifierNone(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isModifierShift(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     kLeftMouse: int = 64
@@ -427,8 +431,7 @@ class MEvent:
     thisown: bool
 
 class MExternalDropCallback:
-    """
-    """
+    """ """
     def __disown__(self) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -450,8 +453,7 @@ class MExternalDropCallback:
     thisown: Any
 
 class MExternalDropData:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown, **kwargs: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -483,8 +485,7 @@ class MExternalDropData:
     def urls(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFeedbackLine:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -507,8 +508,7 @@ class MFeedbackLine:
     thisown: bool
 
 class MFnCircleSweepManip(MFnManip3D):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -534,8 +534,7 @@ class MFnCircleSweepManip(MFnManip3D):
     thisown: bool
 
 class MFnCurveSegmentManip(MFnManip3D):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -556,8 +555,7 @@ class MFnCurveSegmentManip(MFnManip3D):
     thisown: bool
 
 class MFnDirectionManip(MFnManip3D):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -576,8 +574,7 @@ class MFnDirectionManip(MFnManip3D):
     thisown: bool
 
 class MFnDiscManip(MFnManip3D):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -596,8 +593,7 @@ class MFnDiscManip(MFnManip3D):
     thisown: bool
 
 class MFnDistanceManip(MFnManip3D):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -621,8 +617,7 @@ class MFnDistanceManip(MFnManip3D):
     thisown: bool
 
 class MFnFreePointTriadManip(MFnManip3D):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -645,8 +640,7 @@ class MFnFreePointTriadManip(MFnManip3D):
     thisown: bool
 
 class MFnManip3D(maya.OpenMaya.MFnTransform):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -682,8 +676,7 @@ class MFnManip3D(maya.OpenMaya.MFnTransform):
     thisown: bool
 
 class MFnPointOnCurveManip(MFnManip3D):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -703,8 +696,7 @@ class MFnPointOnCurveManip(MFnManip3D):
     thisown: bool
 
 class MFnPointOnSurfaceManip(MFnManip3D):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -724,15 +716,16 @@ class MFnPointOnSurfaceManip(MFnManip3D):
     thisown: bool
 
 class MFnRotateManip(MFnManip3D):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
     def __swig_destroy__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def className(*args: Unknown, **kwargs: Unknown) -> Any: ...
-    def connectToRotationCenterPlug(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def connectToRotationCenterPlug(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def connectToRotationPlug(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def create(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def displayWithNode(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -749,8 +742,7 @@ class MFnRotateManip(MFnManip3D):
     thisown: bool
 
 class MFnScaleManip(MFnManip3D):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -775,8 +767,7 @@ class MFnScaleManip(MFnManip3D):
     thisown: bool
 
 class MFnStateManip(MFnManip3D):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -794,8 +785,7 @@ class MFnStateManip(MFnManip3D):
     thisown: bool
 
 class MFnToggleManip(MFnManip3D):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -819,8 +809,7 @@ class MFnToggleManip(MFnManip3D):
     def toggleIndex(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnToolContext(maya.OpenMaya.MFnBase):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -833,8 +822,7 @@ class MFnToolContext(maya.OpenMaya.MFnBase):
     def title(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MGraphEditorInfo(MPanelCanvasInfo):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -851,8 +839,7 @@ class MGraphEditorInfo(MPanelCanvasInfo):
     thisown: Any
 
 class MHWShaderSwatchGenerator(maya.OpenMayaRender.MSwatchRenderBase):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -867,8 +854,7 @@ class MHWShaderSwatchGenerator(maya.OpenMayaRender.MSwatchRenderBase):
     thisown: Any
 
 class MManipData:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -888,8 +874,7 @@ class MManipData:
     thisown: bool
 
 class MMaterial:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -906,7 +891,9 @@ class MMaterial:
     def evaluateShininess(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def evaluateSpecular(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def evaluateTexture(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def evaluateTextureTransformation(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def evaluateTextureTransformation(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def getDiffuse(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getEmission(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getHasTransparency(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -937,8 +924,7 @@ class MMaterial:
     thisown: bool
 
 class MMaterialArray:
-    """
-    """
+    """ """
     def __getitem__(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -961,8 +947,7 @@ class MMaterialArray:
     thisown: bool
 
 class MObjectListFilter:
-    """
-    """
+    """ """
     def UIname(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def __init__(self, *args: Unknown, **kwargs: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
@@ -990,8 +975,7 @@ class MObjectListFilter:
     thisown: Any
 
 class MPaintMessage(maya.OpenMaya.MMessage):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -1004,8 +988,7 @@ class MPaintMessage(maya.OpenMaya.MMessage):
     thisown: bool
 
 class MPanelCanvasInfo:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -1022,8 +1005,7 @@ class MPanelCanvasInfo:
     thisown: Any
 
 class MProgressWindow:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -1070,8 +1052,7 @@ class MProgressWindow:
     def title(*args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MQtUtil:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -1124,8 +1105,7 @@ class MQtUtil:
     def toQString(*args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MSelectInfo(MDrawInfo):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -1151,8 +1131,7 @@ class MSelectInfo(MDrawInfo):
     def view(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MTextureEditorDrawInfo:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -1173,8 +1152,7 @@ class MTextureEditorDrawInfo:
     thisown: bool
 
 class MToolsInfo:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -1191,8 +1169,7 @@ class MToolsInfo:
     thisown: bool
 
 class MUiMessage(maya.OpenMaya.MMessage):
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -1201,15 +1178,21 @@ class MUiMessage(maya.OpenMaya.MMessage):
     @staticmethod
     def add3dViewDestroyMsgCallback(*args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
-    def add3dViewPostMultipleDrawPassMsgCallback(*args: Unknown, **kwargs: Unknown) -> Any: ...
+    def add3dViewPostMultipleDrawPassMsgCallback(
+        *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     @staticmethod
     def add3dViewPostRenderMsgCallback(*args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
-    def add3dViewPreMultipleDrawPassMsgCallback(*args: Unknown, **kwargs: Unknown) -> Any: ...
+    def add3dViewPreMultipleDrawPassMsgCallback(
+        *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     @staticmethod
     def add3dViewPreRenderMsgCallback(*args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
-    def add3dViewRenderOverrideChangedCallback(*args: Unknown, **kwargs: Unknown) -> Any: ...
+    def add3dViewRenderOverrideChangedCallback(
+        *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     @staticmethod
     def add3dViewRendererChangedCallback(*args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
@@ -1221,8 +1204,7 @@ class MUiMessage(maya.OpenMaya.MMessage):
     thisown: bool
 
 class boolPtr:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -1236,8 +1218,7 @@ class boolPtr:
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class charPtr:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -1251,9 +1232,9 @@ class charPtr:
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 cvar: Any
+
 class doublePtr:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -1267,8 +1248,7 @@ class doublePtr:
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class floatPtr:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -1282,8 +1262,7 @@ class floatPtr:
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class intPtr:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -1297,8 +1276,7 @@ class intPtr:
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class shortPtr:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -1312,8 +1290,7 @@ class shortPtr:
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class uCharPtr:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -1327,8 +1304,7 @@ class uCharPtr:
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class uIntPtr:
-    """
-    """
+    """ """
     def __init__(self, *args: Unknown) -> None:
         """Initialize self.  See help(type(self)) for accurate signature."""
 
@@ -1340,4 +1316,3 @@ class uIntPtr:
     def frompointer(*args: Unknown, **kwargs: Unknown) -> Any: ...
     thisown: bool
     def value(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-

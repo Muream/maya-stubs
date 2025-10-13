@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from typing import *
 
-
 Unknown = Any
 
 class MDGContextGuard:
@@ -27,5 +26,3 @@ class MDGContextGuard:
 
     def restore(self) -> Any:
         """Restore the context on entry/construction to be the current evaluation context"""
-
-

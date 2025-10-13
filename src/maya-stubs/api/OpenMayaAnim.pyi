@@ -250,7 +250,6 @@ class MAnimControl:
         Determine whether or not the tangents on the Anim Curve are weighted.
         """
 
-
 class MAnimCurveChange:
     """Anim curve change cache."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -264,7 +263,6 @@ class MAnimCurveChange:
 
     def undoIt(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Undo all of the Anim Curve changes in this cache."""
-
 
 class MAnimCurveClipboard:
     """Provides control over the animation clipboard.
@@ -352,7 +350,6 @@ class MAnimCurveClipboardItem:
 
         Sets the name information for this clipboard item.
         """
-
 
 class MAnimCurveClipboardItemArray:
     """Array of MAnimCurveClipboardItem values."""
@@ -479,7 +476,7 @@ class MAnimMessage(maya.api.OpenMaya.MMessage):
         command after baking operation is completed, if disableImplicitControl
         is enabled. One example usage of this callback is to create the anim curve
         that is used to drive Maya rigidbody's bakeSimulationIndex, which defines
-        if the rigid body should take its input from anim curve or rigid body 
+        if the rigid body should take its input from anim curve or rigid body
         simulation.
 
          * function - callable which will be passed a MPlugArray containing the baked plugs
@@ -560,7 +557,6 @@ class MAnimMessage(maya.api.OpenMaya.MMessage):
         their callbacks with the data contained within.
         """
 
-
 class MAnimUtil:
     """Static class providing common animation helper methods."""
     @staticmethod
@@ -639,7 +635,6 @@ class MAnimUtil:
         If the MObject is a hierarchical object (such as a dag node) then
         you may also specify whether or not the input object's parents are examined.
         """
-
 
 class MFnAnimCurve(maya.api.OpenMaya.MFnDependencyNode):
     """Function set for operations on anim curves.
@@ -950,7 +945,6 @@ class MFnAnimCurve(maya.api.OpenMaya.MFnDependencyNode):
         Determines whether the weights are locked at the given key.
         """
 
-
 class MFnGeometryFilter(maya.api.OpenMaya.MFnDependencyNode):
     """Function set for operating on geometryFilter nodes.
     geometryFilter is the abstract node type from which all
@@ -1066,7 +1060,6 @@ class MFnGeometryFilter(maya.api.OpenMaya.MFnDependencyNode):
         Returns the DAG path to which this function set is attached, or the first path to the node if the function set is attached to an MObject.
         """
 
-
 class MFnIkJoint(maya.api.OpenMaya.MFnTransform):
     """Function set joints.
 
@@ -1161,7 +1154,7 @@ class MFnIkJoint(maya.api.OpenMaya.MFnTransform):
         """
 
     def orientation(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
-        """Gets the joint orientation as either an Euler rotation or a 
+        """Gets the joint orientation as either an Euler rotation or a
         quaternion
         """
 
@@ -1283,7 +1276,6 @@ class MFnIkJoint(maya.api.OpenMaya.MFnTransform):
 
         Return: stiffness
         """
-
 
 class MFnSkinCluster(MFnGeometryFilter):
     """Function set for operating on skinCluster nodes.
@@ -1441,10 +1433,9 @@ class MFnSkinCluster(MFnGeometryFilter):
         * returnOldWeights(bool) - if True, return the old weights, otherwise return None
         """
 
-
 class MFnWeightGeometryFilter(MFnGeometryFilter):
     """Function set for operating on weightGeometryFilter nodes.
-    weightGeometryFilter is the abstract node type from which 
+    weightGeometryFilter is the abstract node type from which
     weighted deformer node types derive.
 
     __init__()
@@ -1511,8 +1502,7 @@ class MFnWeightGeometryFilter(MFnGeometryFilter):
         * list (MSelectionList) - selection list that contains components.
         """
 
-
-key: str = '__file__'
+key: str = "__file__"
 ourdict: Dict[str, Any]
 py2dict: Dict[str, Any]
-val: str = 'C:\\Program Files\\Autodesk\\Maya2025\\Python\\Lib\\site-packages\\maya\\api\\_OpenMayaAnim_py2.pyd'
+val: str = "C:\\Program Files\\Autodesk\\Maya2025\\Python\\Lib\\site-packages\\maya\\api\\_OpenMayaAnim_py2.pyd"

@@ -1044,7 +1044,6 @@ class M3dView:
         Return True if the X-Ray Joints mode is enabled.
         """
 
-
 class MCursor:
     """Manipulate Cursors."""
     def __eq__(self, value: Unknown, /) -> Any:
@@ -1092,7 +1091,6 @@ class MDrawData:
         Returns a long containing a C++ 'void' pointer which points to the geometry associated with this draw data object.
         The geometry is set using the getDrawData method of MPxSurfaceShapeUI.
         """
-
 
 class MDrawInfo:
     """This class is used by the getDrawRequests method of MPxSurfaceShapeUI to specify the current object drawing state for a user defined shape."""
@@ -1206,7 +1204,6 @@ class MDrawInfo:
 
         Returns the view that the drawing will take place.
         """
-
 
 class MDrawProperties:
     """Draw properties"""
@@ -1613,7 +1610,6 @@ class MFnDirectionManip(MFnManip3D):
         Returns the index of the start point of the DirectionManip. The data type corresponding to this index is MFnNumericData.k3Double.
         """
 
-
 class MFnDiscManip(MFnManip3D):
     """The DiscManip allows the user to rotate a disc in order to specify a rotation about an axis. This manipulator generates a single floating point value corresponding to the rotation."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -1694,7 +1690,6 @@ class MFnDiscManip(MFnManip3D):
         * radius (float) - the radius of the DiscManip
         """
 
-
 class MFnDistanceManip(MFnManip3D):
     """The DistanceManip allows the user to manipulate a point that is constrained to move along a line. This manipulator generates a single floating point value. Scaling factors can be used to determine how the manipulator appears when it is drawn."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -1767,7 +1762,6 @@ class MFnDistanceManip(MFnManip3D):
 
         Returns the index of the start point of the DistanceManip. The data type corresponding to this index is MFnNumericData.k3Double.
         """
-
 
 class MFnFreePointTriadManip(MFnManip3D):
     """The FreePointTriadManip provides a moveable point, which can be moved anywhere, and has axes for constrained x, y, and z movement and obeys grid snapping, point snapping, and curve snapping. The FreePointTriadManip generates the 3D position of the moveable point. It is useful for specifying the position of an object in space.
@@ -1848,7 +1842,6 @@ class MFnFreePointTriadManip(MFnManip3D):
 
         * pointValue (MPoint) - The new value of the point manipValue
         """
-
 
 class MFnManip3D(maya.api.OpenMaya.MFnTransform):
     """MFnManip3D allows the creation and manipulation of 3D manipulators."""
@@ -1933,7 +1926,6 @@ class MFnManip3D(maya.api.OpenMaya.MFnTransform):
 
         Sets the manipulator line size.
         """
-
 
 class MFnPointOnCurveManip(MFnManip3D):
     """The PointOnCurveManip allows the user to manipulate a point constrained to move along a curve, in order to specify the "u" curve parameter value. This manipulator generates a single floating point value corresponding to the curve parameter.the sweep angle."""
@@ -2276,7 +2268,6 @@ class MFnStateManip(MFnManip3D):
         Returns the index of the state. The data type corresponding to this index is a int integer.
         """
 
-
 class MFnToggleManip(MFnManip3D):
     """The ToggleManip allows the user to switch between two modes or some on/off state. It is drawn as a circle with or without a dot. When the mode is on, the dot is drawn in the circle; when the mode is off, the circle is drawn without the dot. This manipulator generates a boolean value corresponding to whether or not the mode is on or off."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -2335,7 +2326,6 @@ class MFnToggleManip(MFnManip3D):
         Returns the index of the toggle of the ToggleManip. The data type corresponding to this index is a boolean.
         """
 
-
 class MHWShaderSwatchGenerator(maya.api.OpenMayaRender.MSwatchRenderBase):
     """Hardware shader swatch generator utility class."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -2379,7 +2369,6 @@ class MHWShaderSwatchGenerator(maya.api.OpenMayaRender.MSwatchRenderBase):
         This method sets a swatch name, and registers a new swatch generator creation function for the swatch name.
         The string returned from this method can be used for node classification purpose.
         """
-
 
 class MManipData:
     """Class that encapsulates manipulator data."""
@@ -2441,7 +2430,6 @@ class MManipData:
         Complex data is used to represent MObjects created by MFnData,
         or classes derived from MFnData.
         """
-
 
 class MMaterial:
     """This class is used in the draw functions of user defined shapes (see MPxSurfaceShapeUI) for setting up and querying materials in shaded mode drawing."""
@@ -2646,7 +2634,6 @@ class MMaterial:
           kReflectedColor      Blinn and Phong(E) only
         """
 
-
 class MMaterialArray:
     """An array of MMaterial."""
     def __getitem__(self, key: Unknown, /) -> Any:
@@ -2741,7 +2728,6 @@ class MPaintMessage(maya.api.OpenMaya.MMessage):
 
          * return: Identifier used for removing the callback.
         """
-
 
 class MPanelCanvas:
     """Provides API extension to panel canvas.
@@ -2904,7 +2890,6 @@ class MPanelCanvas:
         Return: None
         """
 
-
 class MPanelCanvasInfo:
     """Provides API extension to get/set panel canvas information.
 
@@ -2961,7 +2946,6 @@ class MPanelCanvasInfo:
         Graph Editor when it has not yet been opened, but exists by default).
         Return: bool
         """
-
 
 class MPxContext:
     """This is the base class for user defined drag and drop behaviors."""
@@ -3481,7 +3465,6 @@ class MPxContext:
         * event (MEvent) - The button press event information.
         """
 
-
 class MPxContextCommand:
     """Base class for custom context commands."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -3552,7 +3535,6 @@ class MPxContextCommand:
     def syntax(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """Returns the context command's MSyntax object, if it has one."""
 
-
 class MPxDragAndDropBehavior:
     """This is the base class for user defined drag and drop behaviors."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -3621,7 +3603,6 @@ class MPxDragAndDropBehavior:
         * sourcePlug (MPlug) - The source plug of the drag and drop or the plug being dragged (this may be null).
         * destinationPlug (MPlug) - The destination plug of the drag and drop or the plug being dropped upon (this may be null).
         """
-
 
 class MPxHardwareShader(maya.api.OpenMaya.MPxNode):
     """Base class for user defined hardware shaders."""
@@ -3758,7 +3739,6 @@ class MPxHardwareShader(maya.api.OpenMaya.MPxNode):
           - kNoTransparencyFrontBackCull : When kisTransparent is set and this flag is set, do not perform transparency drawing using the internal 2-pass front-face + back-face culling algorithm.
           - kNoTransparencyPolygonSort : When kisTransparent is set and this flag is set, do not perform transparency drawing using the internal 2-pass drawing of back-to-front sorted triangles.
         """
-
 
 class MPxHwShaderNode(maya.api.OpenMaya.MPxNode):
     """Base class for user defined hardware shaders."""
@@ -4146,7 +4126,6 @@ class MPxHwShaderNode(maya.api.OpenMaya.MPxNode):
         * view (M3dView) - the view in which to draw.
         """
 
-
 class MPxLocatorNode(maya.api.OpenMaya.MPxNode):
     """Base class for user defined locators."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -4182,7 +4161,7 @@ class MPxLocatorNode(maya.api.OpenMaya.MPxNode):
     def color(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
         """color(status) -> int
 
-        This method returns the index of the color that is the default draw color for the given display status.  The index should be used with the methods of M3dView.  The value is not an index into the OpenGL color table. 
+        This method returns the index of the color that is the default draw color for the given display status.  The index should be used with the methods of M3dView.  The value is not an index into the OpenGL color table.
 
         The index that is returned will be into the active, dormant, or template color tables depending on the display status passed in.
 
@@ -4213,8 +4192,8 @@ class MPxLocatorNode(maya.api.OpenMaya.MPxNode):
 
         * view (M3dView) - 3D view that is being drawn into.
         * path (MDagPath) - to the parent (transform node) of this locator in the DAG.
-        If there is a shape node parented directly beneath the transform node, you can access it 
-        by calling MDagPath.extendToShape(). 
+        If there is a shape node parented directly beneath the transform node, you can access it
+        by calling MDagPath.extendToShape().
         * style (int) - style to draw object in. See M3dView.displayStyle() for a list of valid styles.
         * status (int) - selection status of object. See M3dView.displayStatus() for a list of valid status.
 
@@ -4637,7 +4616,9 @@ class MPxManipContainer(maya.api.OpenMaya.MPxNode):
         * manipIndex (unsigned int) - The index of the value
         """
 
-    def getConverterManipMEulerRotationValue(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+    def getConverterManipMEulerRotationValue(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any:
         """getConverterManipMEulerRotationValue() -> MEulereRotation
 
         This method retrieves the value of a converterManipValue of type
@@ -4646,7 +4627,9 @@ class MPxManipContainer(maya.api.OpenMaya.MPxNode):
         * manipIndex (unsigned int) - The index of the value
         """
 
-    def getConverterManipMMatrixValue(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+    def getConverterManipMMatrixValue(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any:
         """getConverterManipMMatrixValue() -> MMatrix
 
         This method retrieves the value of a converterManipValue of type
@@ -4664,7 +4647,9 @@ class MPxManipContainer(maya.api.OpenMaya.MPxNode):
         * manipIndex (unsigned int) - The index of the value
         """
 
-    def getConverterManipMTransformationMatrixValue(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+    def getConverterManipMTransformationMatrixValue(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any:
         """getConverterManipMTransformationMatrixValue() -> MTransformationMatrix
 
         This method retrieves the value of a converterManipValue of type
@@ -4673,7 +4658,9 @@ class MPxManipContainer(maya.api.OpenMaya.MPxNode):
         * manipIndex (unsigned int) - The index of the value
         """
 
-    def getConverterManipMVectorValue(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+    def getConverterManipMVectorValue(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any:
         """getConverterManipMVectorValue() -> MVector
 
         This method retrieves the value of a converterManipValue of type
@@ -4709,7 +4696,9 @@ class MPxManipContainer(maya.api.OpenMaya.MPxNode):
         * plugIndex (unsigned int) - The index of the value
         """
 
-    def getConverterPlugMEulerRotationValue(self, /, *args: Unknown, **kwargs: Unknown) -> Any:
+    def getConverterPlugMEulerRotationValue(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any:
         """getConverterPlugMEulerRotationValue() -> MEulerRotation
 
         This method retrieves the value of a converterPlugValue of type
@@ -4785,7 +4774,7 @@ class MPxManipContainer(maya.api.OpenMaya.MPxNode):
         (e.g. the start point of a distance manip) you want this method to
         calculate, then implement this method to calculate those
         manipulator values. Each manipulator value is identified by the
-        unique index returned by the corresponding method of its functionset 
+        unique index returned by the corresponding method of its functionset
         (e.g. MFnDistanceManip::startPointIndex).
 
         * manipIndex (int) - The index of the manipulator value to be
@@ -4809,7 +4798,7 @@ class MPxManipContainer(maya.api.OpenMaya.MPxNode):
         MPxSelectionContext::addManipulator, to add
         user-defined manipulators to a context.
 
-        Returns a tuple consisting of new MPxManipContainer instance, 
+        Returns a tuple consisting of new MPxManipContainer instance,
         and the manipulator node.
 
         * manipName (string) - manipulator name
@@ -4863,7 +4852,6 @@ class MPxManipContainer(maya.api.OpenMaya.MPxNode):
 
         * mid (MTypeId) - Id of the user defined node
         """
-
 
 class MPxManipulatorNode(maya.api.OpenMaya.MPxNode):
     """Parent class of all user defined manipulators."""
@@ -5207,7 +5195,7 @@ class MPxManipulatorNode(maya.api.OpenMaya.MPxNode):
         MPxSelectionContext.addManipulator, to add
         user-defined manipulators to a context.
 
-        Returns a tuple consisting of new MPxManipulatorNode instance, 
+        Returns a tuple consisting of new MPxManipulatorNode instance,
         and the manipulator node.
 
         * manipName (string) - manipulator name
@@ -5322,7 +5310,6 @@ class MPxManipulatorNode(maya.api.OpenMaya.MPxNode):
 
         This method returns the color index of the z axis.
         """
-
 
 class MPxSelectionContext(MPxContext):
     """Base class for interative selection tools."""
@@ -5656,7 +5643,6 @@ class MPxSelectionContext(MPxContext):
         Returns the position of the button press.
         """
 
-
 class MPxSurfaceShapeUI:
     """(Deprecated: Please use MHWRender::MPxGeometryOverride, MHWRender::MPxSubSceneOverride, or MHWRender::MPxDrawOverride instead.)
     Base class for the UI portion of all user defined shapes.
@@ -5771,7 +5757,6 @@ class MPxSurfaceShapeUI:
         * path (MDagPath) - The full path to a surface shape, including the shape.
         """
 
-
 class MPxToolCommand(maya.api.OpenMaya.MPxCommand):
     """Base class for custom tool commands."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -5809,7 +5794,6 @@ class MPxToolCommand(maya.api.OpenMaya.MPxCommand):
         Users should override this method and contruct an MArgList and
         then pass it to <b>doFinalize</b> for journalling.
         """
-
 
 class MSelectInfo(MDrawInfo):
     """(Deprecated: Please use MHWRender::MPxGeometryOverride, MHWRender::MPxSubSceneOverride, or MHWRender::MPxDrawOverride instead.)
@@ -5929,7 +5913,6 @@ class MSelectInfo(MDrawInfo):
         Returns the view that the current selection is taking place in.
         """
 
-
 class MTextureEditorDrawInfo:
     """Drawing state for drawing to the UV texture window with custom shapes."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -5962,7 +5945,9 @@ class MTimeSliderCustomDrawManager:
     kBelow: int = 1
     kOn: int = 2
     def registerCustomDrawOn(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def registerCustomDrawOutside(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def registerCustomDrawOutside(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def requestTimeSliderRedraw(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setBackgroundColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setDrawHeight(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -5972,9 +5957,15 @@ class MTimeSliderCustomDrawManager:
     def setDrawPriority(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setDrawVisible(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setEditPrimitiveFunction(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setSetCopyPrimitivesFunction(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setStartPrimitiveEditFunction(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def setStopPrimitiveEditFunction(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def setSetCopyPrimitivesFunction(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
+    def setStartPrimitiveEditFunction(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
+    def setStopPrimitiveEditFunction(
+        self, /, *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     def setTooltip(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MTimeSliderDrawPrimitive:
@@ -6065,7 +6056,9 @@ class MUiMessage(maya.api.OpenMaya.MMessage):
         """
 
     @staticmethod
-    def add3dViewRenderOverrideChangedCallback(*args: Unknown, **kwargs: Unknown) -> Any:
+    def add3dViewRenderOverrideChangedCallback(
+        *args: Unknown, **kwargs: Unknown
+    ) -> Any:
         """add3dViewRenderOverrideChangedCallback(panelName, function, clientData=None) -> id
 
         This method registers a callback for when the render override for a
@@ -6141,7 +6134,6 @@ class MUiMessage(maya.api.OpenMaya.MMessage):
          * return: Identifier used for removing the callback.
         """
 
-
 class RenderParameters:
     """Provides information on how to render the image."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None:
@@ -6165,7 +6157,7 @@ class ShaderContext:
     path: maya.api.OpenMaya.MDagPath
     shadingEngine: maya.api.OpenMaya.MObject
 
-key: str = '__file__'
+key: str = "__file__"
 ourdict: Dict[str, Any]
 py2dict: Dict[str, Any]
-val: str = 'C:\\Program Files\\Autodesk\\Maya2025\\Python\\Lib\\site-packages\\maya\\api\\_OpenMayaUI_py2.pyd'
+val: str = "C:\\Program Files\\Autodesk\\Maya2025\\Python\\Lib\\site-packages\\maya\\api\\_OpenMayaUI_py2.pyd"
