@@ -9,7 +9,7 @@ from attrs import Factory, define
 from maya import cmds
 
 import logging
-from ...common import NULL_LOCATION, degraded_function, DocspecModuleMembers
+from ...common import degraded_function
 from .html_parser import CmdsDocsParser, DocumentationNotFound
 from .synopsis_parser import CmdsSynopsisParser, SynopsisNotFound
 
@@ -35,7 +35,7 @@ class CmdsParser(Parser):
         logger.debug("Parsing module: %s", name)
 
         module_name = name
-        docspec_members: list[DocspecModuleMembers] = []
+        docspec_members: list[docspec.Member] = []
 
         commands = [
             command_name
@@ -55,7 +55,6 @@ class CmdsParser(Parser):
         )
 
         return docspec.Module(
-            location=NULL_LOCATION,
             name=module_name,
             docstring=None,
             members=docspec_members,

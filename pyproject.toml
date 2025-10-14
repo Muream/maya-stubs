@@ -10,6 +10,8 @@ dependencies = []
 members = ["packages/*"]
 
 [tool.uv.sources]
+docspec = { workspace = true }
+docspec-to-jinja = { workspace = true }
 maya-stubgen = { workspace = true }
 
 [build-system]
@@ -17,11 +19,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [dependency-groups]
-dev = [
-    "maya-stubgen",
-    "ruff>=0.14.0",
-    "snakeviz>=2.2.2",
-]
+dev = ["maya-stubgen", "ruff>=0.14.0", "snakeviz>=2.2.2"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/maya-stubs"]

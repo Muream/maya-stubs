@@ -13,7 +13,6 @@ import docstring_parser
 import httpx
 
 from ....utils import cache_dir, maya_version
-from ...common import NULL_LOCATION
 from ... import Parser
 from .common import mel_to_python_type
 
@@ -138,10 +137,9 @@ class CmdsDocsParser(Parser):
             docstring_parser_docstring, docstring_parser.DocstringStyle.GOOGLE
         )
 
-        docspec_docstring = docspec.Docstring(NULL_LOCATION, content=docstring)
+        docspec_docstring = docspec.Docstring(content=docstring)
 
         return docspec.Function(
-            location=NULL_LOCATION,
             name=name,
             docstring=docspec_docstring,
             modifiers=[],
@@ -230,7 +228,6 @@ def copy_or_create_arg(
                 return arg
 
     return docspec.Argument(
-        location=NULL_LOCATION,
         name=name,
         type=docspec.Argument.Type.KEYWORD_ONLY,
         datatype=datatype,
@@ -356,10 +353,8 @@ def get_arguments(
 
         arguments.append(
             docspec.Argument(
-                location=NULL_LOCATION,
                 name=long_name,
                 type=docspec.Argument.Type.KEYWORD_ONLY,
-                decorations=None,
                 datatype=flag_type,
                 default_value="...",
             )

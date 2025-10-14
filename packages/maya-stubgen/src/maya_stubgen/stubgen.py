@@ -5,6 +5,7 @@ from typing import Optional
 
 import docspec
 import docspec_to_jinja
+from cattrs.preconf.json import make_converter
 
 from .parsers.maya.maya_parser import MayaParser
 from .utils import cache_dir, maya_standalone, remove_outdated_cache, ruff_format
@@ -43,6 +44,7 @@ def get_modules(
     logger.info("Dumping Docspec for %s", ", ".join(whitelist))
 
     if reuse_cache:
+        converter = make_converter()
         modules = []
         docspec_cache_dir = cache_dir() / "docspec"
         for docspec_cache in docspec_cache_dir.rglob("*.json"):
@@ -57,7 +59,9 @@ def get_modules(
                 continue
 
             logger.debug("Loading Docspec Cache for %s.", docspec_cache.stem)
-            module = docspec.load_module(str(docspec_cache))
+            module = converter.loads(docspec_cache.read_text(), docspec.Module)
+            # module = docspec.load_module(str(docspec_cache))
+            print(module)
             modules.append(module)
     else:
         with maya_standalone():

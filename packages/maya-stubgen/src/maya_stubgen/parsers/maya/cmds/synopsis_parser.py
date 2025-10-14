@@ -8,7 +8,7 @@ from attrs import define
 from maya import cmds
 
 from maya_stubgen import _logging
-from maya_stubgen.parsers import NULL_LOCATION, Parser
+from maya_stubgen.parsers import Parser
 from .common import mel_to_python_type
 from maya_stubgen.utils import cache_dir
 
@@ -84,18 +84,14 @@ class CmdsSynopsisParser(Parser):
             )
             arguments = [
                 docspec.Argument(
-                    NULL_LOCATION,
                     "args",
                     docspec.Argument.Type.POSITIONAL_REMAINDER,
-                    decorations=None,
                     datatype="Any",
                     default_value=None,
                 ),
                 docspec.Argument(
-                    NULL_LOCATION,
                     "kwargs",
                     docspec.Argument.Type.KEYWORD_REMAINDER,
-                    decorations=None,
                     datatype="Any",
                     default_value=None,
                 ),
@@ -117,7 +113,6 @@ class CmdsSynopsisParser(Parser):
                     continue
 
         return docspec.Function(
-            location=NULL_LOCATION,
             name=name,
             docstring=None,
             modifiers=[],
@@ -157,7 +152,6 @@ class CmdsSynopsisParser(Parser):
             arg_type = f"Multiuse[{arg_type}]"
 
         return docspec.Argument(
-            NULL_LOCATION,
             arg_name,
             docspec.Argument.Type.KEYWORD_ONLY,
             datatype=arg_type,
@@ -188,7 +182,6 @@ class CmdsSynopsisParser(Parser):
                 # *args
                 return_args.append(
                     docspec.Argument(
-                        location=NULL_LOCATION,
                         name="args",
                         type=docspec.Argument.Type.POSITIONAL_REMAINDER,
                         datatype=datatype,
@@ -198,7 +191,6 @@ class CmdsSynopsisParser(Parser):
                 # positional argument
                 return_args.append(
                     docspec.Argument(
-                        location=NULL_LOCATION,
                         name="arg{}".format(i),
                         type=docspec.Argument.Type.POSITIONAL_ONLY,
                         datatype=datatype,

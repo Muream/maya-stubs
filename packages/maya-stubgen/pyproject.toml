@@ -7,19 +7,20 @@ license = "MIT"
 requires-python = ">=3.9"
 dependencies = [
     "beautifulsoup4>=4.12.3",
-    "docspec>=2.2.1",
-    "docspec-python>=2.2.1",
     "requests>=2.32.3",
     "typing-extensions>=4.12.2",
-    "docspec-to-jinja",
     "click>=8.1.7",
     "attrs>=24.2.0",
     "httpx>=0.27.2",
     "cattrs>=24.1.1",
+    "ruff>=0.14.0",
+    "docspec",
+    "docspec-to-jinja",
 ]
 
 [tool.uv.sources]
-docspec-to-jinja = { workspace = true }
+docspec = { workspace = true, editable = true }
+docspec-to-jinja = { workspace = true, editable = true }
 
 [project.scripts]
 maya-stubgen = 'maya_stubgen.__main__:main'

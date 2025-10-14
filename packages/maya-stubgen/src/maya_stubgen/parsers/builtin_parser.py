@@ -16,7 +16,6 @@ from typing import Any, Optional
 import docspec
 from attrs import define
 
-from .common import NULL_LOCATION, DocspecClassMembers, DocspecModuleMembers
 from .parser import Parser
 
 logger = logging.getLogger(__name__)
@@ -36,10 +35,10 @@ class BuiltinParser(Parser):
 
         module = importlib.import_module(name)
 
-        docspec_members: list[DocspecModuleMembers] = []
+        docspec_members: list[docspec.Member] = []
         docspec_docstring = None
         if docstring := inspect.getdoc(module):
-            docspec_docstring = docspec.Docstring(NULL_LOCATION, docstring)
+            docspec_docstring = docspec.Docstring(docstring)
 
         members = inspect.getmembers(module)
         for member_name, member_value in members:
@@ -53,7 +52,7 @@ class BuiltinParser(Parser):
             if docspec_member is not None:
                 docspec_members.append(docspec_member)
 
-        return docspec.Module(NULL_LOCATION, name, docspec_docstring, docspec_members)
+        return docspec.Module(name, docspec_docstring, docspec_members)
 
     # these crash maya 2024 when attempting to instantiate them
     _SKIP_INSTANTIATE = [
@@ -76,7 +75,7 @@ class BuiltinParser(Parser):
 
         parser = BuiltinParser()
 
-        docstring = docspec.Docstring(NULL_LOCATION, inspect.getdoc(cls) or "")
+        docstring = docspec.Docstring(inspect.getdoc(cls) or "")
         members: list[DocspecClassMembers] = []
 
         parent_members = {
@@ -120,7 +119,6 @@ class BuiltinParser(Parser):
                 )
 
         return docspec.Class(
-            location=NULL_LOCATION,
             name=name,
             docstring=docstring,
             bases=[
@@ -143,11 +141,7 @@ class BuiltinParser(Parser):
         function: Callable[..., Any] = inspect.unwrap(member)
 
         docstring_content = inspect.getdoc(function)
-        docstring = (
-            docspec.Docstring(NULL_LOCATION, docstring_content)
-            if docstring_content
-            else None
-        )
+        docstring = docspec.Docstring(docstring_content) if docstring_content else None
 
         semantic_hints: list[docspec.FunctionSemantic] = []
         if is_method:
@@ -162,7 +156,6 @@ class BuiltinParser(Parser):
         return_type = self.get_return_type(function)
 
         return docspec.Function(
-            location=NULL_LOCATION,
             name=name,
             docstring=docstring,
             modifiers=[],
@@ -187,7 +180,6 @@ class BuiltinParser(Parser):
             datatype = self._get_descriptor_type(module_name, name, instance)
 
         return docspec.Variable(
-            location=NULL_LOCATION,
             name=name,
             docstring=None,
             datatype=datatype,
@@ -271,9 +263,9 @@ class BuiltinParser(Parser):
         module_name: str,
         member_name: str,
         py_member: Any,
-    ) -> Optional[DocspecModuleMembers]:
+    ) -> Optional[docspec.Member]:
         self._members[member_name] = py_member
-        docspec_member: Optional[DocspecModuleMembers] = None
+        docspec_member: docspec.Member | None = None
 
         if member_name.startswith("_"):
             return None
@@ -309,7 +301,6 @@ class BuiltinParser(Parser):
                 if docspec.FunctionSemantic.CLASS_METHOD in hints:
                     args.append(
                         docspec.Argument(
-                            location=NULL_LOCATION,
                             name="cls",
                             type=docspec.Argument.Type.POSITIONAL_ONLY,
                         )
@@ -317,7 +308,6 @@ class BuiltinParser(Parser):
                 elif docspec.FunctionSemantic.INSTANCE_METHOD in hints:
                     args.append(
                         docspec.Argument(
-                            location=NULL_LOCATION,
                             name="self",
                             type=docspec.Argument.Type.POSITIONAL_ONLY,
                         )
@@ -326,12 +316,10 @@ class BuiltinParser(Parser):
             args.extend(
                 [
                     docspec.Argument(
-                        location=NULL_LOCATION,
                         name="args",
                         type=docspec.Argument.Type.POSITIONAL_REMAINDER,
                     ),
                     docspec.Argument(
-                        location=NULL_LOCATION,
                         name="kwargs",
                         type=docspec.Argument.Type.KEYWORD_REMAINDER,
                     ),
@@ -384,7 +372,6 @@ class BuiltinParser(Parser):
 
         if function.__name__ == "__new__" and (not args or args[0].name != "cls"):
             cls_arg = docspec.Argument(
-                location=NULL_LOCATION,
                 name="cls",
                 type=docspec.Argument.Type.POSITIONAL_ONLY,
             )
@@ -399,7 +386,6 @@ class BuiltinParser(Parser):
 
         arg_name = param.name
         arg_type = docspec.Argument.Type(param.kind)
-        arg_decorations: list[docspec.Decoration] = []
 
         arg_datatype = None
         if param.annotation is not inspect.Signature.empty:
@@ -416,10 +402,8 @@ class BuiltinParser(Parser):
                 arg_default_value = "..."
 
         return docspec.Argument(
-            location=NULL_LOCATION,
             name=arg_name,
             type=arg_type,
-            decorations=arg_decorations,
             datatype=arg_datatype,
             default_value=arg_default_value,
         )
