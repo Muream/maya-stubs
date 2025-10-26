@@ -50,8 +50,11 @@ The project is setup as an `uv` workspace where:
 
 ### Generate the stubs
 
-- Set the environment variable `MAYA_LOCATION` to the maya install dir of the version you want to generate the stubs for.
-  for example on Windows: `C:\Program Files\Autodesk\Maya2025`
+- (Optional) Set the environment variable `MAYA_LOCATION` to the maya install dir of the version you want to generate the stubs for.
+  - Windows: `C:\Program Files\Autodesk\Maya2026`
+  - macOS: `/Applications/Autodesk/maya2026`
+  - Linux: `/usr/autodesk/maya2026`
+  - If `MAYA_LOCATION` is not set, the tool will automatically search for Maya installations in the default platform-specific locations, preferring the newest version found (current year + 2 down to Maya 2023).
 - Generate the stubs with `uv run maya-stubgen generate-stubs src/`.
 - After the first run, you can re-use the docspec cache with `uv run maya-stubgen generate-stubs src/ --reuse-cache`.
     This is useful if you're not making any changes to the parsers but only to the code generation side of things.

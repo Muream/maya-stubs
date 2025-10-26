@@ -162,6 +162,26 @@ class MFnFluid(maya.OpenMaya.MFnDagNode):
     def index(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isAutoResize(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isResizeToEmitter(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
+    kCenterGradient: int = 7
+    kConstant: int = 0
+    kDynamicColorGrid: int = 2
+    kDynamicGrid: int = 2
+    kFixed: int = 0
+    kGradient: int = 3
+    kGrid: int = 1
+    kNegXGradient: int = 4
+    kNegYGradient: int = 5
+    kNegZGradient: int = 6
+    kNoFalloffGrid: int = 0
+    kStaticColorGrid: int = 1
+    kStaticFalloffGrid: int = 1
+    kStaticGrid: int = 1
+    kUseShadingColor: int = 0
+    kXGradient: int = 1
+    kYGradient: int = 2
+    kZGradient: int = 3
+    kZero: int = 0
     def pressure(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setColorMode(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setCoordinateMode(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -279,6 +299,17 @@ class MFnParticleSystem(maya.OpenMaya.MFnDagNode):
         self, /, *args: Unknown, **kwargs: Unknown
     ) -> Any: ...
     def isValid(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
+    kBlobby: int = 2
+    kCloud: int = 0
+    kMultiPoint: int = 3
+    kMultiStreak: int = 4
+    kNumeric: int = 5
+    kPoints: int = 6
+    kSpheres: int = 7
+    kSprites: int = 8
+    kStreak: int = 9
+    kTube: int = 1
     def lifespan(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def mass(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def opacity(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...

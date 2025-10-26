@@ -398,6 +398,7 @@ def animContextManager(
     enable: bool = ...,
     featureAvailable: bool = ...,
     hasContext: bool = ...,
+    hasGap: int = ...,
     hasShotPadding: bool = ...,
     liveEdit: bool = ...,
     loadTimeline: str = ...,
@@ -408,7 +409,9 @@ def animContextManager(
     retryMediaDownload: int = ...,
     replaceShot: Tuple[int, int, int] = ...,
     recentShotMedia: bool = ...,
+    referenceTracks: bool = ...,
     shotCamera: str = ...,
+    showDemoDialog: int = ...,
     setDownloadError: Tuple[str, bool] = ...,
     shotIndex: int = ...,
     shotMedia: str = ...,
@@ -590,7 +593,7 @@ def applyMetadata(
     arg0: str = ..., /, *, format: str = ..., scene: bool = ..., value: str = ...
 ) -> bool: ...
 def applyTake(
-    *args: Any,
+    *,
     channel: Multiuse[str] = ...,
     device: Multiuse[str] = ...,
     filter: Multiuse[str] = ...,
@@ -634,7 +637,9 @@ def arrayMapper(
     type: str = ...,
 ) -> List[str]: ...
 def art3dPaintCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     accopacity: bool = ...,
@@ -740,7 +745,9 @@ def art3dPaintCtx(
 ]: ...
 def artAttr(*args: str) -> None: ...
 def artAttrCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     accopacity: bool = ...,
@@ -856,7 +863,9 @@ def artAttrCtx(
     Multiuse[float],
 ]: ...
 def artAttrPaintVertexCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     accopacity: bool = ...,
@@ -979,9 +988,12 @@ def artAttrPaintVertexCtx(
     Multiuse[Tuple[float, float]],
     Multiuse[float],
 ]: ...
+def artAttrSkinPaint(*args: str) -> None: ...
 def artAttrSkinPaintCmd(*args: Any, **kwargs: Any) -> None: ...
 def artAttrSkinPaintCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     accopacity: bool = ...,
@@ -1101,17 +1113,83 @@ def artAttrSkinPaintCtx(
     Multiuse[float],
 ]: ...
 def artAttrTool(
-    *args: Any,
+    *,
     query: bool = ...,
     add: str = ...,
     exists: Queryable[str] = ...,
     remove: str = ...,
 ) -> Union[bool, str]: ...
-def artBaseCtx(*args: Any, **kwargs: Any) -> None: ...
+def artBaseCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    accopacity: bool = ...,
+    afterStrokeCmd: str = ...,
+    brushalignment: bool = ...,
+    brushfeedback: bool = ...,
+    beforeStrokeCmd: str = ...,
+    history: bool = ...,
+    clear: bool = ...,
+    dynclonemode: bool = ...,
+    dragSlider: str = ...,
+    exportaspectratio: float = ...,
+    expandfilename: bool = ...,
+    exportfilemode: str = ...,
+    exportfiletype: str = ...,
+    exportfilesave: str = ...,
+    exists: bool = ...,
+    exportfilesizex: int = ...,
+    exportfilesizey: int = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    importfileload: str = ...,
+    importfilemode: str = ...,
+    importreassign: bool = ...,
+    lowerradius: float = ...,
+    lastRecorderCmd: str = ...,
+    lastStampName: str = ...,
+    mappressure: str = ...,
+    makeStroke: Multiuse[int] = ...,
+    name: str = ...,
+    outline: bool = ...,
+    opacity: float = ...,
+    outwhilepaint: bool = ...,
+    pickColor: bool = ...,
+    preserveclonesource: bool = ...,
+    playbackCursor: Multiuse[Tuple[float, float]] = ...,
+    playbackPressure: Multiuse[float] = ...,
+    paintmode: str = ...,
+    paintoperationtype: str = ...,
+    projective: bool = ...,
+    profileShapeFile: str = ...,
+    pickValue: bool = ...,
+    radius: float = ...,
+    reflectionaxis: str = ...,
+    record: bool = ...,
+    reflection: bool = ...,
+    reflectionaboutorigin: bool = ...,
+    showactive: bool = ...,
+    screenRadius: float = ...,
+    selectclonesource: bool = ...,
+    surfaceConformedBrushVertices: bool = ...,
+    strokesmooth: str = ...,
+    stampDepth: float = ...,
+    stampProfile: str = ...,
+    stampSpacing: float = ...,
+    tablet: bool = ...,
+    tangentOutline: bool = ...,
+    usepressure: bool = ...,
+    worldRadius: float = ...,
+) -> None: ...
 def artBuildPaintMenu(*args: str) -> bool: ...
-def artFluidAttr(*args: Any, **kwargs: Any) -> None: ...
+def artFluidAttr(*args: str) -> None: ...
 def artFluidAttrCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     accopacity: bool = ...,
@@ -1237,7 +1315,9 @@ def artFluidAttrCtx(
     Multiuse[float],
 ]: ...
 def artPuttyCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     accopacity: bool = ...,
@@ -1376,7 +1456,9 @@ def artPuttyCtx(
 ]: ...
 def artSelect(*args: str) -> None: ...
 def artSelectCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     accopacity: bool = ...,
@@ -1448,7 +1530,9 @@ def artSelectCtx(
 ]: ...
 def artSetPaint(*args: str) -> None: ...
 def artSetPaintCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     accopacity: bool = ...,
@@ -1518,7 +1602,9 @@ def artSetPaintCtx(
     bool, str, float, int, Multiuse[int], Multiuse[Tuple[float, float]], Multiuse[float]
 ]: ...
 def artUserPaintCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     accopacity: bool = ...,
@@ -1722,7 +1808,9 @@ def assignCommand(
     sourceUserCommands: bool = ...,
 ) -> Union[bool, str, Callable[..., Any], int]: ...
 def assignInputDevice(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     query: bool = ...,
     clutch: str = ...,
     continuous: bool = ...,
@@ -1762,7 +1850,7 @@ def attachCurve(
     replaceOriginal: bool = ...,
 ) -> Union[List[str], float, bool, int]: ...
 def attachDeviceAttr(
-    *args: Any,
+    *args: str,
     query: bool = ...,
     attribute: Multiuse[str] = ...,
     axis: str = ...,
@@ -2273,7 +2361,7 @@ def attributeInfo(
     type: str = ...,
 ) -> List[str]: ...
 def attributeMenu(
-    *args: Any,
+    *args: str,
     beginMenu: bool = ...,
     editor: str = ...,
     finishMenu: bool = ...,
@@ -2658,7 +2746,39 @@ def blend2(
     object: bool = ...,
     polygon: int = ...,
 ) -> Union[List[str], bool, float, int]: ...
-def blendCtx(*args: Any, **kwargs: Any) -> None: ...
+def blendCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    autoCreate: bool = ...,
+    autoDirection: bool = ...,
+    activeNodes: bool = ...,
+    caching: bool = ...,
+    crvsInFirstRail: int = ...,
+    constructionHistory: bool = ...,
+    exists: bool = ...,
+    flipLeft: bool = ...,
+    flipRight: bool = ...,
+    frozen: bool = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    immediate: bool = ...,
+    leftParameter: float = ...,
+    multipleKnots: bool = ...,
+    name: str = ...,
+    nodeState: int = ...,
+    object: bool = ...,
+    polygon: int = ...,
+    positionTolerance: float = ...,
+    rightParameter: float = ...,
+    reset: bool = ...,
+    toolNode: bool = ...,
+    tangentTolerance: float = ...,
+    useGlobalTol: bool = ...,
+) -> None: ...
 def blendShape(
     *args: str,
     edit: bool = ...,
@@ -2724,7 +2844,9 @@ def blendShape(
     Multiuse[Tuple[int, float]],
 ]: ...
 def blendShapeEditor(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     control: bool = ...,
@@ -2749,7 +2871,9 @@ def blendShapeEditor(
     verticalSliders: bool = ...,
 ) -> Union[str, bool]: ...
 def blendShapePanel(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     blendShapeEditor: bool = ...,
@@ -5176,26 +5300,515 @@ def createNode(
     shared: bool = ...,
     skipSelect: bool = ...,
 ) -> str: ...
-def createNurbsCircleCtx(*args: Any, **kwargs: Any) -> None: ...
-def createNurbsConeCtx(*args: Any, **kwargs: Any) -> None: ...
-def createNurbsCubeCtx(*args: Any, **kwargs: Any) -> None: ...
-def createNurbsCylinderCtx(*args: Any, **kwargs: Any) -> None: ...
-def createNurbsPlaneCtx(*args: Any, **kwargs: Any) -> None: ...
-def createNurbsSphereCtx(*args: Any, **kwargs: Any) -> None: ...
-def createNurbsSquareCtx(*args: Any, **kwargs: Any) -> None: ...
-def createNurbsTorusCtx(*args: Any, **kwargs: Any) -> None: ...
-def createPolyConeCtx(*args: Any, **kwargs: Any) -> None: ...
-def createPolyCubeCtx(*args: Any, **kwargs: Any) -> None: ...
-def createPolyCylinderCtx(*args: Any, **kwargs: Any) -> None: ...
-def createPolyHelixCtx(*args: Any, **kwargs: Any) -> None: ...
-def createPolyPipeCtx(*args: Any, **kwargs: Any) -> None: ...
-def createPolyPlaneCtx(*args: Any, **kwargs: Any) -> None: ...
-def createPolyPlatonicSolidCtx(*args: Any, **kwargs: Any) -> None: ...
-def createPolyPrismCtx(*args: Any, **kwargs: Any) -> None: ...
-def createPolyPyramidCtx(*args: Any, **kwargs: Any) -> None: ...
-def createPolySoccerBallCtx(*args: Any, **kwargs: Any) -> None: ...
-def createPolySphereCtx(*args: Any, **kwargs: Any) -> None: ...
-def createPolyTorusCtx(*args: Any, **kwargs: Any) -> None: ...
+def createNurbsCircleCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    attachToSections: bool = ...,
+    history: bool = ...,
+    degree: int = ...,
+    doDragEdit: bool = ...,
+    exists: bool = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    name: str = ...,
+    normal: Tuple[float, float, float] = ...,
+    normalType: int = ...,
+    radius: float = ...,
+    sections: int = ...,
+    sweep: float = ...,
+    toleranceType: int = ...,
+    tolerance: float = ...,
+    useTolerance: bool = ...,
+) -> None: ...
+def createNurbsConeCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    attachToHeightRatio: bool = ...,
+    attachToSections: bool = ...,
+    attachToSpans: bool = ...,
+    axis: Tuple[float, float, float] = ...,
+    axisType: int = ...,
+    history: bool = ...,
+    caps: int = ...,
+    doDragEdit: bool = ...,
+    endSweep: float = ...,
+    exists: bool = ...,
+    height: float = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    name: str = ...,
+    radius: float = ...,
+    sections: int = ...,
+    surfaceDegree: int = ...,
+    spans: int = ...,
+    startSweep: float = ...,
+    toleranceType: int = ...,
+    tolerance: float = ...,
+    useTolerance: bool = ...,
+    extraTransformOnCaps: bool = ...,
+) -> None: ...
+def createNurbsCubeCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    attachToPatchesU: bool = ...,
+    attachToPatchesV: bool = ...,
+    axis: Tuple[float, float, float] = ...,
+    axisType: int = ...,
+    history: bool = ...,
+    depth: float = ...,
+    doDragEdit: bool = ...,
+    exists: bool = ...,
+    height: float = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    name: str = ...,
+    surfaceDegree: int = ...,
+    uPatches: int = ...,
+    vPatches: int = ...,
+    width: float = ...,
+) -> None: ...
+def createNurbsCylinderCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    attachToHeightRatio: bool = ...,
+    attachToSections: bool = ...,
+    attachToSpans: bool = ...,
+    axis: Tuple[float, float, float] = ...,
+    axisType: int = ...,
+    history: bool = ...,
+    caps: int = ...,
+    doDragEdit: bool = ...,
+    endSweep: float = ...,
+    exists: bool = ...,
+    height: float = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    name: str = ...,
+    radius: float = ...,
+    sections: int = ...,
+    surfaceDegree: int = ...,
+    spans: int = ...,
+    startSweep: float = ...,
+    toleranceType: int = ...,
+    tolerance: float = ...,
+    useTolerance: bool = ...,
+    extraTransformOnCaps: bool = ...,
+) -> None: ...
+def createNurbsPlaneCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    attachToPatchesU: bool = ...,
+    attachToPatchesV: bool = ...,
+    axis: Tuple[float, float, float] = ...,
+    axisType: int = ...,
+    history: bool = ...,
+    doDragEdit: bool = ...,
+    exists: bool = ...,
+    height: float = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    name: str = ...,
+    surfaceDegree: int = ...,
+    uPatches: int = ...,
+    vPatches: int = ...,
+    width: float = ...,
+) -> None: ...
+def createNurbsSphereCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    attachToHeightRatio: bool = ...,
+    attachToSections: bool = ...,
+    attachToSpans: bool = ...,
+    axis: Tuple[float, float, float] = ...,
+    axisType: int = ...,
+    history: bool = ...,
+    degree: int = ...,
+    doDragEdit: bool = ...,
+    endSweep: float = ...,
+    exists: bool = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    name: str = ...,
+    radius: float = ...,
+    sections: int = ...,
+    spans: int = ...,
+    startSweep: float = ...,
+    toleranceType: int = ...,
+    tolerance: float = ...,
+    useTolerance: bool = ...,
+) -> None: ...
+def createNurbsSquareCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    attachToSpans: bool = ...,
+    axis: Tuple[float, float, float] = ...,
+    axisType: int = ...,
+    history: bool = ...,
+    doDragEdit: bool = ...,
+    exists: bool = ...,
+    height: float = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    name: str = ...,
+    surfaceDegree: int = ...,
+    spans: int = ...,
+    width: float = ...,
+) -> None: ...
+def createNurbsTorusCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    attachToHeightRatio: bool = ...,
+    attachToSections: bool = ...,
+    attachToSpans: bool = ...,
+    axis: Tuple[float, float, float] = ...,
+    axisType: int = ...,
+    history: bool = ...,
+    doDragEdit: bool = ...,
+    endSweep: float = ...,
+    exists: bool = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    minorRadius: float = ...,
+    minorSweep: float = ...,
+    name: str = ...,
+    radius: float = ...,
+    sections: int = ...,
+    surfaceDegree: int = ...,
+    spans: int = ...,
+    startSweep: float = ...,
+    toleranceType: int = ...,
+    tolerance: float = ...,
+    useTolerance: bool = ...,
+) -> None: ...
+def createPolyConeCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    attachToSubdivisionsAxis: bool = ...,
+    attachToSubdivisionsCap: bool = ...,
+    attachToSubdivisionsHeight: bool = ...,
+    axis: int = ...,
+    history: bool = ...,
+    createUVs: int = ...,
+    doDragEdit: bool = ...,
+    doSubdivisionsCapsEdit: bool = ...,
+    exists: bool = ...,
+    height: float = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    name: str = ...,
+    radius: float = ...,
+    roundCap: bool = ...,
+    subdivisionsDepth: int = ...,
+    subdivisionsHeight: int = ...,
+    subdivisionsWidth: int = ...,
+) -> None: ...
+def createPolyCubeCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    attachToSubdivisionsAll: bool = ...,
+    attachToSubdivisionsDepth: bool = ...,
+    attachToSubdivisionsHeight: bool = ...,
+    attachToSubdivisionsWidth: bool = ...,
+    axis: int = ...,
+    history: bool = ...,
+    createUVs: int = ...,
+    depth: float = ...,
+    doDragEdit: bool = ...,
+    doSubdivisionsCapsEdit: bool = ...,
+    exists: bool = ...,
+    height: float = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    name: str = ...,
+    subdivisionsDepth: int = ...,
+    subdivisionsHeight: int = ...,
+    subdivisionsWidth: int = ...,
+    width: float = ...,
+) -> None: ...
+def createPolyCylinderCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    attachToSubdivisionsAxis: bool = ...,
+    attachToSubdivisionsCap: bool = ...,
+    attachToSubdivisionsHeight: bool = ...,
+    axis: int = ...,
+    history: bool = ...,
+    createUVs: int = ...,
+    doDragEdit: bool = ...,
+    doSubdivisionsCapsEdit: bool = ...,
+    exists: bool = ...,
+    height: float = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    name: str = ...,
+    radius: float = ...,
+    roundCap: bool = ...,
+    subdivisionsAxis: int = ...,
+    subdivisionsCap: int = ...,
+    subdivisionsHeight: int = ...,
+) -> None: ...
+def createPolyHelixCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    attachToNumberCoils: bool = ...,
+    attachToSubdivisionsAxis: bool = ...,
+    attachToSubdivisionsCap: bool = ...,
+    attachToSubdivisionsCoil: bool = ...,
+    attachToRadius: bool = ...,
+    axis: int = ...,
+    coils: float = ...,
+    history: bool = ...,
+    createUVs: int = ...,
+    doDragEdit: bool = ...,
+    direction: bool = ...,
+    doSubdivisionsCapsEdit: bool = ...,
+    exists: bool = ...,
+    height: float = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    name: str = ...,
+    radius: float = ...,
+    roundCap: bool = ...,
+    subdivisionsAxis: int = ...,
+    subdivisionsCap: int = ...,
+    subdivisionsCoil: int = ...,
+    width: float = ...,
+) -> None: ...
+def createPolyPipeCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    attachToSubdivisionsAxis: bool = ...,
+    attachToSubdivisionsCap: bool = ...,
+    attachToSubdivisionsHeight: bool = ...,
+    attachToThickness: bool = ...,
+    axis: int = ...,
+    history: bool = ...,
+    createUVs: int = ...,
+    doDragEdit: bool = ...,
+    doSubdivisionsCapsEdit: bool = ...,
+    exists: bool = ...,
+    height: float = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    name: str = ...,
+    radius: float = ...,
+    roundCap: bool = ...,
+    subdivisionsAxis: int = ...,
+    subdivisionsCap: int = ...,
+    subdivisionsHeight: int = ...,
+    thickness: float = ...,
+) -> None: ...
+def createPolyPlaneCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    attachToSubdivisionsAll: bool = ...,
+    attachToSubdivisionsHeight: bool = ...,
+    attachToSubdivisionsWidth: bool = ...,
+    axis: int = ...,
+    history: bool = ...,
+    createUVs: int = ...,
+    doDragEdit: bool = ...,
+    doSubdivisionsCapsEdit: bool = ...,
+    exists: bool = ...,
+    height: float = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    name: str = ...,
+    subdivisionsHeight: int = ...,
+    subdivisionsWidth: int = ...,
+    width: float = ...,
+) -> None: ...
+def createPolyPlatonicSolidCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    axis: int = ...,
+    history: bool = ...,
+    createUVs: int = ...,
+    doDragEdit: bool = ...,
+    doSubdivisionsCapsEdit: bool = ...,
+    exists: bool = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    name: str = ...,
+    radius: float = ...,
+    sideLength: float = ...,
+    solidType: int = ...,
+) -> None: ...
+def createPolyPrismCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    attachToNumSides: bool = ...,
+    attachToSubdivisionsCap: bool = ...,
+    attachToSubdivisionsHeight: bool = ...,
+    axis: int = ...,
+    history: bool = ...,
+    createUVs: int = ...,
+    doDragEdit: bool = ...,
+    doSubdivisionsCapsEdit: bool = ...,
+    exists: bool = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    length: float = ...,
+    name: str = ...,
+    numberOfSides: int = ...,
+    subdivisionsCap: int = ...,
+    subdivisionsHeight: int = ...,
+    sideLength: float = ...,
+) -> None: ...
+def createPolyPyramidCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    attachToSubdivisionsCap: bool = ...,
+    attachToSubdivisionsHeight: bool = ...,
+    axis: int = ...,
+    history: bool = ...,
+    createUVs: int = ...,
+    doDragEdit: bool = ...,
+    doSubdivisionsCapsEdit: bool = ...,
+    exists: bool = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    name: str = ...,
+    numberOfSides: int = ...,
+    subdivisionsDepth: int = ...,
+    subdivisionsHeight: int = ...,
+    sideLength: float = ...,
+) -> None: ...
+def createPolySoccerBallCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    axis: int = ...,
+    history: bool = ...,
+    createUVs: int = ...,
+    doDragEdit: bool = ...,
+    doSubdivisionsCapsEdit: bool = ...,
+    exists: bool = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    name: str = ...,
+    radius: float = ...,
+    sideLength: float = ...,
+) -> None: ...
+def createPolySphereCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    attachToSubdivisionsAll: bool = ...,
+    attachToSubdivisionsHeight: bool = ...,
+    attachToSubdivisionsAxis: bool = ...,
+    axis: int = ...,
+    history: bool = ...,
+    createUVs: int = ...,
+    doDragEdit: bool = ...,
+    doSubdivisionsCapsEdit: bool = ...,
+    exists: bool = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    name: str = ...,
+    radius: float = ...,
+    subdivisionsHeight: int = ...,
+    subdivisionsWidth: int = ...,
+) -> None: ...
+def createPolyTorusCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    attachToSubdivisionsAxis: bool = ...,
+    attachToSubdivisionsHeight: bool = ...,
+    attachToSectionRadius: bool = ...,
+    axis: int = ...,
+    history: bool = ...,
+    createUVs: int = ...,
+    doDragEdit: bool = ...,
+    doSubdivisionsCapsEdit: bool = ...,
+    exists: bool = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    name: str = ...,
+    radius: float = ...,
+    subdivisionsHeight: int = ...,
+    sectionRadius: float = ...,
+    subdivisionsWidth: int = ...,
+    twist: float = ...,
+) -> None: ...
 def createRenderLayer(
     *args: str,
     empty: bool = ...,
@@ -5208,6 +5821,7 @@ def createRenderLayer(
 def createSubdivRegion(*args: Any) -> bool: ...
 def ctxAbort() -> bool: ...
 def ctxCompletion() -> bool: ...
+def ctxData() -> None: ...
 def ctxEditMode(*, buttonDown: bool = ..., buttonUp: bool = ...) -> bool: ...
 def ctxTraverse(
     *, down: bool = ..., left: bool = ..., right: bool = ..., up: bool = ...
@@ -5254,7 +5868,9 @@ def curve(
     worldSpace: bool = ...,
 ) -> str: ...
 def curveAddPtCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     exists: bool = ...,
@@ -5262,9 +5878,30 @@ def curveAddPtCtx(
     image2: Queryable[str] = ...,
     image3: Queryable[str] = ...,
 ) -> str: ...
-def curveBezierCtx(*args: Any, **kwargs: Any) -> None: ...
+def curveBezierCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    history: bool = ...,
+    degree: int = ...,
+    exists: bool = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    manipMode: str = ...,
+    name: str = ...,
+    preserveShapeFraction: float = ...,
+    preserveShape: bool = ...,
+    refit: bool = ...,
+    selectMode: str = ...,
+    uniform: bool = ...,
+) -> None: ...
 def curveCVCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     bezier: bool = ...,
@@ -5283,7 +5920,9 @@ def curveCVCtx(
     uniform: bool = ...,
 ) -> Union[str, bool, int]: ...
 def curveEPCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     bezier: bool = ...,
@@ -5300,7 +5939,9 @@ def curveEPCtx(
     uniform: bool = ...,
 ) -> Union[str, bool, int, float]: ...
 def curveEditorCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     direction: Queryable[int] = ...,
@@ -5331,7 +5972,9 @@ def curveIntersect(
     useDirection: bool = ...,
 ) -> Union[str, bool, Tuple[float, float, float], float, int]: ...
 def curveMoveEPCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     exists: bool = ...,
@@ -5365,7 +6008,9 @@ def curveRGBColor(
     resetToSaved: bool = ...,
 ) -> Union[List[float], bool]: ...
 def curveSketchCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     degree: Queryable[int] = ...,
@@ -5562,7 +6207,9 @@ def debug(*args: Any, **kwargs: Any) -> None: ...
 def debugNamespace(*args: Any, **kwargs: Any) -> None: ...
 def debugVar(*args: Any, **kwargs: Any) -> None: ...
 def defaultLightListCheckBox(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     annotation: Queryable[str] = ...,
@@ -5615,10 +6262,10 @@ def defaultNavigation(
     unignore: bool = ...,
 ) -> str: ...
 def defineDataServer(
-    *args: Any, device: str = ..., server: str = ..., undefine: bool = ...
+    *, device: str = ..., server: str = ..., undefine: bool = ...
 ) -> bool: ...
 def defineVirtualDevice(
-    *args: Any,
+    *,
     query: bool = ...,
     axis: int = ...,
     channel: str = ...,
@@ -5791,7 +6438,7 @@ def detachCurve(
     replaceOriginal: bool = ...,
 ) -> Union[List[str], bool, Multiuse[bool], int, Multiuse[float]]: ...
 def detachDeviceAttr(
-    *args: Any,
+    *args: str,
     query: bool = ...,
     all: bool = ...,
     attribute: str = ...,
@@ -5814,7 +6461,9 @@ def detachSurface(
     replaceOriginal: bool = ...,
 ) -> Union[List[str], bool, int, Multiuse[bool], Multiuse[float]]: ...
 def deviceEditor(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     control: bool = ...,
@@ -5837,7 +6486,7 @@ def deviceEditor(
     useTemplate: str = ...,
 ) -> Union[str, bool]: ...
 def deviceManager(
-    *args: Any,
+    *args: str,
     edit: bool = ...,
     query: bool = ...,
     attachment: bool = ...,
@@ -5852,7 +6501,9 @@ def deviceManager(
     numDevices: bool = ...,
 ) -> Union[bool, int]: ...
 def devicePanel(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     control: bool = ...,
@@ -6298,7 +6949,38 @@ def doubleProfileBirailSurface(
     object: bool = ...,
     polygon: int = ...,
 ) -> Union[List[str], float, bool, int]: ...
-def dpBirailCtx(*args: Any, **kwargs: Any) -> None: ...
+def dpBirailCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    autoCreate: bool = ...,
+    activeNodes: bool = ...,
+    blendFactor: float = ...,
+    bldProfiles: bool = ...,
+    bldProfileFirst: bool = ...,
+    bldProfileLast: bool = ...,
+    bldRailOne: bool = ...,
+    bldRailTwo: bool = ...,
+    caching: bool = ...,
+    constructionHistory: bool = ...,
+    exists: bool = ...,
+    frozen: bool = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    immediate: bool = ...,
+    name: str = ...,
+    nodeState: int = ...,
+    object: bool = ...,
+    polygon: int = ...,
+    reset: bool = ...,
+    transformMode: int = ...,
+    toolNode: bool = ...,
+    tangentContinuityProfile1: bool = ...,
+    tangentContinuityProfile2: bool = ...,
+) -> None: ...
 def drag(
     *args: str,
     edit: bool = ...,
@@ -6370,7 +7052,22 @@ def draggerContext(
     stepsCount: Queryable[int] = ...,
     undoMode: Queryable[str] = ...,
 ) -> Union[str, Tuple[float, float, float], int, Callable[..., Any], bool]: ...
-def drawExtrudeFacetCtx(*args: Any, **kwargs: Any) -> None: ...
+def drawExtrudeFacetCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    history: bool = ...,
+    degree: int = ...,
+    divisions: int = ...,
+    exists: bool = ...,
+    facesTogether: bool = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    name: str = ...,
+) -> None: ...
 def dropoffLocator(
     arg0: float = ..., arg1: float = ..., arg2: str = ..., /, *args: str
 ) -> List[str]: ...
@@ -6452,9 +7149,43 @@ def dynGlobals(
     listAll: bool = ...,
     overSampling: Queryable[int] = ...,
 ) -> Union[str, int, bool]: ...
-def dynPaintCtx(*args: Any, **kwargs: Any) -> None: ...
+def dynPaintCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    brushDrag: float = ...,
+    brushMass: float = ...,
+    drawAsMesh: bool = ...,
+    dragBrushSize: str = ...,
+    doProject: int = ...,
+    displayQuality: float = ...,
+    exists: bool = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    inputSamples: int = ...,
+    paintAtDepth: bool = ...,
+    pressureMapping1: int = ...,
+    pressureMapping2: int = ...,
+    pressureMapping3: int = ...,
+    pressureMin1: float = ...,
+    pressureMin2: float = ...,
+    pressureMin3: float = ...,
+    pressureMax1: float = ...,
+    pressureMax2: float = ...,
+    pressureMax3: float = ...,
+    pixelMode: int = ...,
+    surfaceOffset: float = ...,
+    sampleSeparation: float = ...,
+    setSelection: bool = ...,
+    usePressure: bool = ...,
+) -> None: ...
 def dynPaintEditor(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     activeOnly: bool = ...,
@@ -6568,9 +7299,52 @@ def dynPref(
     saveOnQuit: bool = ...,
     saveRuntimeState: bool = ...,
 ) -> Union[bool, int]: ...
-def dynSelectCtx(*args: Any, **kwargs: Any) -> None: ...
+def dynSelectCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    enable: bool = ...,
+    exists: bool = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+) -> None: ...
 def dynTestData(*, arrayAttrs: bool = ..., verbose: bool = ...) -> None: ...
-def dynWireCtx(*args: Any, **kwargs: Any) -> None: ...
+def dynWireCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    brushDrag: float = ...,
+    brushMass: float = ...,
+    drawAsMesh: bool = ...,
+    dragBrushSize: str = ...,
+    doProject: int = ...,
+    displayQuality: float = ...,
+    exists: bool = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    inputSamples: int = ...,
+    paintAtDepth: bool = ...,
+    pressureMapping1: int = ...,
+    pressureMapping2: int = ...,
+    pressureMapping3: int = ...,
+    pressureMin1: float = ...,
+    pressureMin2: float = ...,
+    pressureMin3: float = ...,
+    pressureMax1: float = ...,
+    pressureMax2: float = ...,
+    pressureMax3: float = ...,
+    pixelMode: int = ...,
+    surfaceOffset: float = ...,
+    sampleSeparation: float = ...,
+    setSelection: bool = ...,
+    usePressure: bool = ...,
+) -> None: ...
 def dynamicConstraintRemove() -> None: ...
 def dynamicLoad(*args: str) -> bool: ...
 def editDisplayLayerGlobals(
@@ -6743,7 +7517,7 @@ def emitter(
     Tuple[float, float, float],
 ]: ...
 def enableDevice(
-    *args: Any,
+    *args: str,
     query: bool = ...,
     apply: bool = ...,
     device: Queryable[str] = ...,
@@ -6832,7 +7606,9 @@ def exactWorldBoundingBox(
 ) -> List[float]: ...
 def excludeObjectDisplayPreset() -> str: ...
 def exclusiveLightCheckBox(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     annotation: Queryable[str] = ...,
@@ -7091,7 +7867,6 @@ def falloffCurveAttr(
 ) -> Union[
     str, Tuple[float, float, float], int, Tuple[float, float], bool, Callable[..., Any]
 ]: ...
-def fcheck(*args: str) -> bool: ...
 def file(
     arg0: str = ...,
     /,
@@ -7321,7 +8096,9 @@ def filletCurve(
     trim: bool = ...,
 ) -> Union[List[str], float, bool, int]: ...
 def filter(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     name: Queryable[str] = ...,
@@ -7723,7 +8500,9 @@ def floatSlider(
     width: Queryable[int] = ...,
 ) -> Union[str, Tuple[float, float, float], bool, int, float, Callable[..., Any]]: ...
 def floatSlider2(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     annotation: Queryable[str] = ...,
@@ -8033,7 +8812,7 @@ def fluidVoxelInfo(
     zIndex: int = ...,
 ) -> bool: ...
 def flushIdleQueue(*, resume: bool = ...) -> None: ...
-def flushThumbnailCache(*args: Any, **kwargs: Any) -> None: ...
+def flushThumbnailCache(arg0: bool = ..., /) -> None: ...
 def flushUndo() -> bool: ...
 def fontDialog(*, FontList: bool = ..., scalable: bool = ...) -> str: ...
 def formLayout(
@@ -8285,7 +9064,7 @@ def getFluidAttr(
     zvalue: bool = ...,
 ) -> bool: ...
 def getInputDeviceRange(
-    *args: Any, maxValue: bool = ..., minValue: bool = ...
+    arg0: str = ..., arg1: str = ..., /, *, maxValue: bool = ..., minValue: bool = ...
 ) -> List[float]: ...
 def getLastError() -> None: ...
 def getMetadata(
@@ -8574,7 +9353,9 @@ def graphDollyCtx(
     name: str = ...,
 ) -> str: ...
 def graphSelectContext(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     exists: bool = ...,
@@ -9160,7 +9941,9 @@ def hwRender(
 ) -> Union[bool, str, Tuple[int, int], int, Tuple[int, int, int, int]]: ...
 def hwRenderLoad() -> bool: ...
 def hyperGraph(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     addBookmark: bool = ...,
@@ -9298,7 +10081,9 @@ def hyperGraph(
     zoom: float = ...,
 ) -> Union[str, bool, Tuple[float, float], float, int]: ...
 def hyperPanel(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     control: bool = ...,
@@ -9325,7 +10110,9 @@ def hyperPanel(
     useTemplate: str = ...,
 ) -> Union[str, bool, Callable[..., Any]]: ...
 def hyperShade(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     assign: str = ...,
     clearWorkArea: bool = ...,
     collapse: str = ...,
@@ -9745,7 +10532,9 @@ def ikHandle(
     weight: Queryable[float] = ...,
 ) -> Union[str, bool, float, int]: ...
 def ikHandleCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     autoPriorityH: bool = ...,
@@ -9772,7 +10561,7 @@ def ikHandleCtx(
     twistType: str = ...,
     weightH: Queryable[float] = ...,
 ) -> Union[str, bool, float, int]: ...
-def ikHandleDisplayScale(*args: Any) -> float: ...
+def ikHandleDisplayScale(arg0: float = ..., /) -> float: ...
 def ikSolver(
     *args: str,
     edit: bool = ...,
@@ -9783,7 +10572,9 @@ def ikSolver(
     solverType: Queryable[str] = ...,
 ) -> Union[str, float, int]: ...
 def ikSplineHandleCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     autoPriorityH: bool = ...,
@@ -9994,7 +10785,9 @@ def inheritTransform(
 ) -> bool: ...
 def insertJoint(arg0: str = ..., /) -> str: ...
 def insertJointCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     exists: bool = ...,
@@ -10397,7 +11190,9 @@ def intersect(
 ) -> Union[List[str], bool, int, float]: ...
 def invertShape(arg0: str = ..., arg1: str = ..., /) -> None: ...
 def iprEngine(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     copy: str = ...,
@@ -10605,7 +11400,9 @@ def jointCluster(
     name: str = ...,
 ) -> Union[str, float, bool]: ...
 def jointCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     autoJointOrient: Queryable[str] = ...,
@@ -11187,7 +11984,9 @@ def layerButton(
     width: Queryable[int] = ...,
 ) -> Union[str, Tuple[float, float, float], bool, int, Callable[..., Any]]: ...
 def layeredShaderPort(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     annotation: Queryable[str] = ...,
@@ -11220,7 +12019,9 @@ def layeredShaderPort(
     width: Queryable[int] = ...,
 ) -> Union[str, Tuple[float, float, float], bool, int, Callable[..., Any]]: ...
 def layeredTexturePort(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     annotation: Queryable[str] = ...,
@@ -11395,7 +12196,7 @@ def listConnections(
     type: str = ...,
 ) -> List[str]: ...
 def listDeviceAttachments(
-    *args: Any,
+    *,
     attribute: str = ...,
     axis: str = ...,
     clutch: str = ...,
@@ -11423,10 +12224,10 @@ def listHistory(
     levels: int = ...,
     pruneDagObjects: bool = ...,
 ) -> Union[List[str], bool]: ...
-def listInputDeviceAxes(*args: Any) -> List[str]: ...
-def listInputDeviceButtons(*args: Any) -> List[str]: ...
+def listInputDeviceAxes(arg0: str = ..., /) -> List[str]: ...
+def listInputDeviceButtons(arg0: str = ..., /) -> List[str]: ...
 def listInputDevices(
-    *args: Any, free: bool = ..., primary: bool = ..., secondary: bool = ...
+    *, free: bool = ..., primary: bool = ..., secondary: bool = ...
 ) -> List[str]: ...
 def listNodeTypes(arg0: str = ..., /, *, exclude: str = ...) -> List[str]: ...
 def listNodesWithIncorrectNames() -> bool: ...
@@ -11974,15 +12775,6 @@ def matrixUtil(
 ) -> Union[
     str, bool, Tuple[float, float, float, float], Tuple[float, float, float]
 ]: ...
-def mayaDpiSetting(
-    *,
-    query: bool = ...,
-    mode: Queryable[int] = ...,
-    realScaleValue: bool = ...,
-    scaleValue: Queryable[float] = ...,
-    systemDpi: bool = ...,
-) -> Union[int, float, bool]: ...
-def mayaDpiSettingAction(*args: Any, **kwargs: Any) -> None: ...
 def mayaHasRenderSetup(
     *,
     edit: bool = ...,
@@ -12510,7 +13302,18 @@ def modelPanel(
     unParent: bool = ...,
     useTemplate: str = ...,
 ) -> Union[str, bool, Callable[..., Any]]: ...
-def modelingToolkitSuperCtx(*args: Any, **kwargs: Any) -> None: ...
+def modelingToolkitSuperCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    attach: Multiuse[str] = ...,
+    exists: bool = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+) -> None: ...
 def moduleInfo(
     *,
     definition: bool = ...,
@@ -12519,9 +13322,9 @@ def moduleInfo(
     path: bool = ...,
     version: bool = ...,
 ) -> List[str]: ...
-def mouldMesh(*args: Any, **kwargs: Any) -> None: ...
+def mouldMesh(*args: str) -> None: ...
 def mouldSrf(*args: str) -> None: ...
-def mouldSubdiv(*args: Any, **kwargs: Any) -> None: ...
+def mouldSubdiv(*args: str) -> None: ...
 def mouse(
     *,
     enableScrollWheel: bool = ...,
@@ -12604,7 +13407,9 @@ def moveVertexAlongDirection(
     uvNormalDirection: Multiuse[Tuple[float, float, float]] = ...,
     vDirection: Multiuse[float] = ...,
 ) -> bool: ...
-def movieCompressor(*args: Any, **kwargs: Any) -> None: ...
+def movieCompressor(
+    *, hardwareOptions: bool = ..., softwareOptions: bool = ...
+) -> None: ...
 def movieInfo(
     arg0: str = ...,
     /,
@@ -12624,7 +13429,37 @@ def movieInfo(
     twentyFourHourMax: bool = ...,
     width: bool = ...,
 ) -> bool: ...
-def mpBirailCtx(*args: Any, **kwargs: Any) -> None: ...
+def mpBirailCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    autoCreate: bool = ...,
+    activeNodes: bool = ...,
+    bldProfiles: bool = ...,
+    bldProfileFirst: bool = ...,
+    bldProfileLast: bool = ...,
+    bldRailOne: bool = ...,
+    bldRailTwo: bool = ...,
+    caching: bool = ...,
+    constructionHistory: bool = ...,
+    exists: bool = ...,
+    frozen: bool = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    immediate: bool = ...,
+    name: str = ...,
+    nodeState: int = ...,
+    object: bool = ...,
+    polygon: int = ...,
+    reset: bool = ...,
+    transformMode: int = ...,
+    toolNode: bool = ...,
+    tangentContinuityProfile1: bool = ...,
+    tangentContinuityProfile2: bool = ...,
+) -> None: ...
 def mrMapVisualizer() -> None: ...
 def mrShaderManager() -> None: ...
 def multiProfileBirailSurface(
@@ -12879,6 +13714,145 @@ def nodeCast(
     swapNames: bool = ...,
     swapValues: bool = ...,
 ) -> int: ...
+def nodeEditor(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    activeTab: Queryable[int] = ...,
+    addNewNodes: bool = ...,
+    addNode: Multiuse[str] = ...,
+    additiveGraphingMode: bool = ...,
+    allAttributes: bool = ...,
+    allNodes: bool = ...,
+    allowNewTabs: bool = ...,
+    allowTabTearoff: bool = ...,
+    autoSizeNodes: bool = ...,
+    beginCreateNode: bool = ...,
+    beginNewConnection: str = ...,
+    breakSelectedConnections: bool = ...,
+    closeAllTabs: bool = ...,
+    closeTab: int = ...,
+    connectSelectedNodes: bool = ...,
+    connectedGraphingMode: bool = ...,
+    connectionMinSegment: Queryable[float] = ...,
+    connectionOffset: Queryable[float] = ...,
+    connectionRoundness: Queryable[float] = ...,
+    connectionStyle: Queryable[str] = ...,
+    connectionTension: Queryable[int] = ...,
+    consistentNameSize: bool = ...,
+    contentsChangedCommand: Queryable[Callable[..., Any]] = ...,
+    control: bool = ...,
+    createInfo: str = ...,
+    createNodeCommand: Queryable[Callable[..., Any]] = ...,
+    createTab: Union[Tuple[int], Tuple[int, str]] = ...,
+    crosshairOnEdgeDragging: bool = ...,
+    customAttributeListEdit: Queryable[Union[Tuple[str], Tuple[str, str]]] = ...,
+    cycleHUD: bool = ...,
+    defaultPinnedState: bool = ...,
+    defineTemplate: str = ...,
+    deleteSelected: bool = ...,
+    docTag: Queryable[str] = ...,
+    dotFormat: str = ...,
+    downstream: bool = ...,
+    duplicateTab: Union[Tuple[int], Tuple[int, int]] = ...,
+    enableOpenGL: bool = ...,
+    exists: bool = ...,
+    extendToShapes: bool = ...,
+    feedbackConnection: bool = ...,
+    feedbackNode: bool = ...,
+    feedbackPlug: bool = ...,
+    feedbackTabIndex: bool = ...,
+    feedbackType: bool = ...,
+    filter: Queryable[str] = ...,
+    filterCreateNodeTypes: Queryable[Callable[..., Any]] = ...,
+    focusCommand: Queryable[Callable[..., Any]] = ...,
+    forceMainConnection: Queryable[str] = ...,
+    frameAll: bool = ...,
+    frameModelSelection: bool = ...,
+    frameSelected: bool = ...,
+    getNodeList: bool = ...,
+    graphSelectedConnections: bool = ...,
+    graphSelection: bool = ...,
+    gridSnap: bool = ...,
+    gridVisibility: bool = ...,
+    hasWatchpoint: bool = ...,
+    highlightConnection: Queryable[str] = ...,
+    highlightConnections: Queryable[Multiuse[Tuple[str, bool]]] = ...,
+    hudMessage: Tuple[str, int, float] = ...,
+    ignoreAssets: bool = ...,
+    island: bool = ...,
+    keyPressCommand: Queryable[Callable[..., Any]] = ...,
+    keyReleaseCommand: Queryable[Callable[..., Any]] = ...,
+    layout: bool = ...,
+    layoutCommand: Queryable[Callable[..., Any]] = ...,
+    lockMainConnection: bool = ...,
+    mainListConnection: Queryable[str] = ...,
+    nodeSwatchSize: str = ...,
+    nodeTitleMode: Queryable[str] = ...,
+    nodeViewMode: str = ...,
+    overrideNodeDropPosition: Tuple[float, float] = ...,
+    panView: Tuple[float, float] = ...,
+    panel: Queryable[str] = ...,
+    parent: Queryable[str] = ...,
+    pinSelectedNodes: bool = ...,
+    popupMenuScript: Queryable[Callable[..., Any]] = ...,
+    primary: bool = ...,
+    redockTab: bool = ...,
+    removeDownstream: bool = ...,
+    removeNode: Multiuse[str] = ...,
+    removeUnselected: bool = ...,
+    removeUpstream: bool = ...,
+    renameNode: str = ...,
+    renameTab: Union[Tuple[int], Tuple[int, str]] = ...,
+    restoreInfo: str = ...,
+    restoreLastClosedTab: bool = ...,
+    rootNode: Multiuse[str] = ...,
+    rootsFromSelection: bool = ...,
+    scaleView: float = ...,
+    selectAll: bool = ...,
+    selectConnectionNodes: bool = ...,
+    selectDownstream: bool = ...,
+    selectFeedbackConnection: bool = ...,
+    selectNode: Queryable[Multiuse[str]] = ...,
+    selectUpstream: bool = ...,
+    selectionConnection: Queryable[str] = ...,
+    setWatchpoint: bool = ...,
+    settingsChangedCallback: Queryable[Callable[..., Any]] = ...,
+    shaderNetworks: bool = ...,
+    showAllNodeAttributes: str = ...,
+    showNamespace: bool = ...,
+    showSGShapes: bool = ...,
+    showShapes: bool = ...,
+    showTabs: bool = ...,
+    showTransforms: bool = ...,
+    showUnitConversions: bool = ...,
+    stateString: bool = ...,
+    syncedSelection: bool = ...,
+    tabChangeCommand: Callable[..., Any] = ...,
+    toggleAttrFilter: bool = ...,
+    toggleSelectedPins: bool = ...,
+    toggleSwatchSize: str = ...,
+    toolTipCommand: Queryable[Callable[..., Any]] = ...,
+    traversalDepthLimit: Queryable[int] = ...,
+    unParent: bool = ...,
+    unlockMainConnection: bool = ...,
+    updateMainConnection: bool = ...,
+    upstream: bool = ...,
+    useAssets: bool = ...,
+    useLongName: Queryable[int] = ...,
+    useTemplate: str = ...,
+) -> Union[
+    str,
+    int,
+    bool,
+    float,
+    Callable[..., Any],
+    Union[Tuple[str], Tuple[str, str]],
+    Multiuse[Tuple[str, bool]],
+    Multiuse[str],
+]: ...
 def nodeGrapher(*args: Any, **kwargs: Any) -> None: ...
 def nodeIconButton(
     arg0: str = ...,
@@ -13837,10 +14811,7 @@ def outlinerPanel(
 ) -> Union[str, bool, int, Callable[..., Any]]: ...
 def outputWindow(*, query: bool = ..., show: bool = ...) -> bool: ...
 def overrideModifier(
-    *args: Any,
-    clear: bool = ...,
-    press: Multiuse[str] = ...,
-    release: Multiuse[str] = ...,
+    *, clear: bool = ..., press: Multiuse[str] = ..., release: Multiuse[str] = ...
 ) -> bool: ...
 def paint3d(*args: str) -> None: ...
 def paintEffectsDisplay(*, query: bool = ..., meshDrawEnable: bool = ...) -> bool: ...
@@ -14641,7 +15612,9 @@ def polyAppend(
     texture: Queryable[int] = ...,
 ) -> Union[str, bool, int]: ...
 def polyAppendFacetCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     append: bool = ...,
@@ -15056,7 +16029,7 @@ def polyCollapseTweaks(
     arg0: str = ..., /, *, query: bool = ..., hasVertexTweaks: bool = ...
 ) -> bool: ...
 def polyColorBlindData(
-    *args: Any,
+    *args: str,
     aboveMaxColorBlue: Multiuse[float] = ...,
     aboveMaxColorGreen: Multiuse[float] = ...,
     aboveMaxColorRed: Multiuse[float] = ...,
@@ -15164,7 +16137,7 @@ def polyColorSet(
     shareInstances: bool = ...,
     unshared: bool = ...,
 ) -> Union[bool, str]: ...
-def polyColorSetCmdWrapper(*args: Any, **kwargs: Any) -> None: ...
+def polyColorSetCmdWrapper() -> None: ...
 def polyCompare(
     *args: str,
     colorSetIndices: bool = ...,
@@ -15258,7 +16231,9 @@ def polyCrease(
     vertexValue: Queryable[Multiuse[float]] = ...,
 ) -> Union[bool, int, float, Multiuse[float]]: ...
 def polyCreaseCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     createSet: str = ...,
@@ -15281,7 +16256,9 @@ def polyCreateFacet(
     texture: Queryable[int] = ...,
 ) -> Union[List[str], bool, int]: ...
 def polyCreateFacetCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     append: bool = ...,
@@ -15346,7 +16323,9 @@ def polyCut(
     worldSpace: bool = ...,
 ) -> Union[str, bool, Tuple[float, float, float], float, Tuple[float, float], int]: ...
 def polyCutCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     deleteFaces: bool = ...,
@@ -15358,7 +16337,9 @@ def polyCutCtx(
     image3: Queryable[str] = ...,
 ) -> Union[bool, Tuple[float, float, float], str]: ...
 def polyCutUVCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     loopSpeed: Queryable[int] = ...,
@@ -15726,7 +16707,7 @@ def polyForceUV(
     uvSetName: str = ...,
 ) -> bool: ...
 def polyGeoSampler(
-    *args: Any,
+    *args: str,
     edit: bool = ...,
     alphaBlend: str = ...,
     averageColor: bool = ...,
@@ -15794,7 +16775,9 @@ def polyInfo(
     vertexToFace: bool = ...,
 ) -> str: ...
 def polyInstallAction(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     query: bool = ...,
     commandName: bool = ...,
     convertSelection: bool = ...,
@@ -15895,7 +16878,9 @@ def polyMergeEdge(
     secondEdge: Queryable[int] = ...,
 ) -> Union[str, bool, int]: ...
 def polyMergeEdgeCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     activeNodes: bool = ...,
@@ -15929,7 +16914,9 @@ def polyMergeFacet(
     secondFacet: Queryable[int] = ...,
 ) -> Union[str, bool, int]: ...
 def polyMergeFacetCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     activeNodes: bool = ...,
@@ -16262,7 +17249,7 @@ def polyOptUvs(
     worldSpace: bool = ...,
 ) -> Union[str, bool, int]: ...
 def polyOptions(
-    *args: Any,
+    *args: str,
     query: bool = ...,
     activeObjects: bool = ...,
     allEdges: bool = ...,
@@ -16643,7 +17630,19 @@ def polyRemesh(
     useRelativeValues: bool = ...,
 ) -> Union[str, bool, float, int]: ...
 def polyRetopo(*args: str) -> str: ...
-def polyRetopoCtx(*args: Any, **kwargs: Any) -> None: ...
+def polyRetopoCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    history: bool = ...,
+    exists: bool = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    name: str = ...,
+) -> None: ...
 def polySelect(
     *args: str,
     query: bool = ...,
@@ -16736,13 +17735,12 @@ def polySelectConstraint(
     bool, int, float, Tuple[float, float], Tuple[float, float, float], Tuple[int, int]
 ]: ...
 def polySelectConstraintMonitor(
-    *args: Any,
-    changeCommand: Tuple[str, str] = ...,
-    create: bool = ...,
-    delete: bool = ...,
+    *, changeCommand: Tuple[str, str] = ..., create: bool = ..., delete: bool = ...
 ) -> bool: ...
 def polySelectCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     exists: bool = ...,
@@ -16752,7 +17750,9 @@ def polySelectCtx(
     mode: Queryable[int] = ...,
 ) -> Union[bool, str, int]: ...
 def polySelectEditCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     adjustEdgeFlow: Queryable[float] = ...,
@@ -16801,7 +17801,9 @@ def polySewEdge(
     worldSpace: bool = ...,
 ) -> Union[str, bool, int, float]: ...
 def polyShortestPathCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     exists: bool = ...,
@@ -16816,7 +17818,25 @@ def polySlideEdge(
     edgeDirection: float = ...,
     symmetry: bool = ...,
 ) -> bool: ...
-def polySlideEdgeCtx(*args: Any, **kwargs: Any) -> None: ...
+def polySlideEdgeCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    absolute: bool = ...,
+    history: bool = ...,
+    direction: int = ...,
+    edgeDirection: float = ...,
+    exists: bool = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    name: str = ...,
+    snappingPoints: int = ...,
+    snappingTolerance: float = ...,
+    useSnapping: bool = ...,
+) -> None: ...
 def polySmartBevel(
     *args: str,
     edit: bool = ...,
@@ -17016,7 +18036,9 @@ def polySplit(
     subdivision: Queryable[int] = ...,
 ) -> Union[str, bool, float, int]: ...
 def polySplitCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     enablesnap: bool = ...,
@@ -17031,7 +18053,9 @@ def polySplitCtx(
     subdivision: Queryable[int] = ...,
 ) -> Union[bool, str, int, float]: ...
 def polySplitCtx2(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     exists: bool = ...,
@@ -17136,7 +18160,18 @@ def polySubdivideFacet(
     mode: Queryable[int] = ...,
     subdMethod: Queryable[int] = ...,
 ) -> Union[str, bool, int]: ...
-def polySuperCtx(*args: Any, **kwargs: Any) -> None: ...
+def polySuperCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    attach: Multiuse[str] = ...,
+    exists: bool = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+) -> None: ...
 def polyTestPop(*args: Any, **kwargs: Any) -> None: ...
 def polyToCurve(
     arg0: str = ...,
@@ -17294,7 +18329,21 @@ def polyUnsmooth(
     nodeState: Queryable[int] = ...,
     replaceOriginal: bool = ...,
 ) -> Union[str, bool, int]: ...
-def polyVertexNormalCtx(*args: Any, **kwargs: Any) -> None: ...
+def polyVertexNormalCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    deformmode: bool = ...,
+    exists: bool = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    lockmode: int = ...,
+    relativemode: int = ...,
+    rotatemode: int = ...,
+) -> None: ...
 def polyWarpImage(
     *args: str,
     bilinear: bool = ...,
@@ -17357,7 +18406,9 @@ def pose(
     name: Queryable[str] = ...,
 ) -> Union[str, bool]: ...
 def poseEditor(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     control: bool = ...,
@@ -17401,7 +18452,9 @@ def poseInterpolator(
     updatePose: str = ...,
 ) -> None: ...
 def posePanel(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     control: bool = ...,
@@ -17436,7 +18489,9 @@ def preferredRenderer(
     makeCurrent: bool = ...,
 ) -> Union[bool, str]: ...
 def preloadRefEd(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     control: bool = ...,
@@ -17526,7 +18581,7 @@ def profiler(
     signalMelEvent: bool = ...,
 ) -> Union[bool, int, str]: ...
 def profilerTool(
-    *args: Any,
+    *,
     edit: bool = ...,
     query: bool = ...,
     categoryView: bool = ...,
@@ -17658,7 +18713,9 @@ def projectTangent(
     replaceOriginal: bool = ...,
 ) -> Union[List[str], bool, float, int]: ...
 def projectionContext(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     exists: bool = ...,
@@ -18027,7 +19084,9 @@ def radioMenuItemCollection(
     useTemplate: str = ...,
 ) -> Union[str, bool]: ...
 def rampColorPort(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     annotation: Queryable[str] = ...,
@@ -18101,7 +19160,7 @@ def rangeControl(
 ) -> Union[str, Tuple[float, float, float], bool, int, Callable[..., Any]]: ...
 def readPDC(*args: str, file: str = ..., test: bool = ...) -> None: ...
 def readTake(
-    *args: Any,
+    *,
     angle: str = ...,
     device: str = ...,
     frequency: float = ...,
@@ -18166,7 +19225,7 @@ def recordAttr(
     *args: str, query: bool = ..., attribute: Multiuse[str] = ..., delete: bool = ...
 ) -> bool: ...
 def recordDevice(
-    *args: Any,
+    *,
     query: bool = ...,
     cleanup: bool = ...,
     data: bool = ...,
@@ -18359,7 +19418,7 @@ def renderQualityNode(
     skipSelect: bool = ...,
 ) -> str: ...
 def renderSettings(
-    *args: Any,
+    *,
     camera: str = ...,
     customTokenString: str = ...,
     firstImageName: bool = ...,
@@ -18378,10 +19437,12 @@ def renderSetupLocalOverride(*, query: bool = ..., state: bool = ...) -> None: .
 def renderSetupPostApply() -> None: ...
 def renderSetupSwitchVisibleRenderLayer() -> None: ...
 def renderThumbnailUpdate(
-    *args: Any, query: bool = ..., forceUpdate: str = ...
+    arg0: bool = ..., /, *, query: bool = ..., forceUpdate: str = ...
 ) -> bool: ...
 def renderWindowEditor(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     autoResize: bool = ...,
@@ -18462,7 +19523,9 @@ def renderWindowEditor(
     Tuple[str, str],
 ]: ...
 def renderWindowSelectContext(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     exists: bool = ...,
@@ -18811,7 +19874,35 @@ def rotate(
 def rotationInterpolation(
     *args: str, query: bool = ..., convert: Queryable[str] = ...
 ) -> Union[bool, str]: ...
-def roundCRCtx(*args: Any, **kwargs: Any) -> None: ...
+def roundCRCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    append: bool = ...,
+    autoCreate: bool = ...,
+    activeNodes: bool = ...,
+    caching: bool = ...,
+    currentEdge: bool = ...,
+    currentEdgeRadius: bool = ...,
+    constructionHistory: bool = ...,
+    exists: bool = ...,
+    frozen: bool = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    immediate: bool = ...,
+    name: str = ...,
+    nodeState: int = ...,
+    object: bool = ...,
+    radius: Multiuse[float] = ...,
+    reset: bool = ...,
+    radiusToUse: float = ...,
+    toolNode: bool = ...,
+    tolerance: float = ...,
+    useGlobalTolerance: bool = ...,
+) -> None: ...
 def roundConstantRadius(
     arg0: str = ...,
     /,
@@ -18994,7 +20085,7 @@ def runup(
 ) -> str: ...
 def safemodecheckhash() -> None: ...
 def sampleImage(
-    *args: Any, fastSample: bool = ..., resolution: Tuple[int, str] = ...
+    *args: str, fastSample: bool = ..., resolution: Tuple[int, str] = ...
 ) -> bool: ...
 def saveAllShelves() -> bool: ...
 def saveFluid(
@@ -19006,7 +20097,9 @@ def saveFluid(
     startTime: Queryable[int] = ...,
 ) -> Union[bool, int]: ...
 def saveImage(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     annotation: Queryable[str] = ...,
@@ -19150,7 +20243,9 @@ def scaleKeyCtx(
     type: Queryable[str] = ...,
 ) -> Union[str, bool]: ...
 def sceneEditor(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     control: bool = ...,
@@ -19671,14 +20766,16 @@ def sculptKeyCtx(
     strengthAll: Queryable[str] = ...,
 ) -> Union[str, int, bool, float]: ...
 def sculptMeshCacheChangeCloneSource(
-    *args: Any,
+    *,
     edit: bool = ...,
     query: bool = ...,
     blendShape: Queryable[str] = ...,
     target: Queryable[str] = ...,
 ) -> Union[bool, str]: ...
 def sculptMeshCacheCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     adjustSize: bool = ...,
@@ -20203,7 +21300,7 @@ def setAttr(
     type: str = ...,
 ) -> bool: ...
 def setAttrMapping(
-    *args: Any,
+    *args: str,
     query: bool = ...,
     absolute: bool = ...,
     attribute: Multiuse[str] = ...,
@@ -20288,7 +21385,7 @@ def setInfinity(
     shape: bool = ...,
 ) -> Union[bool, str]: ...
 def setInputDeviceMapping(
-    *args: Any,
+    *,
     absolute: bool = ...,
     axis: Multiuse[str] = ...,
     device: str = ...,
@@ -20442,7 +21539,9 @@ def shadingConnection(
     connectionState: bool = ...,
 ) -> bool: ...
 def shadingGeometryRelCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     exists: bool = ...,
@@ -20456,7 +21555,9 @@ def shadingGeometryRelCtx(
     shadingCentric: bool = ...,
 ) -> Union[str, bool]: ...
 def shadingLightRelCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     exists: bool = ...,
@@ -20481,7 +21582,9 @@ def shadingNetworkCompare(
     upstreamOnly: bool = ...,
 ) -> Union[Union[List[str], str, int], bool]: ...
 def shadingNode(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     asLight: bool = ...,
     asPostProcess: bool = ...,
     asRendering: bool = ...,
@@ -20496,7 +21599,9 @@ def shadingNode(
 ) -> str: ...
 def shapeCompare(*args: str) -> int: ...
 def shapeEditor(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     clearSelection: bool = ...,
@@ -20523,7 +21628,9 @@ def shapeEditor(
     verticalSliders: bool = ...,
 ) -> Union[str, bool]: ...
 def shapePanel(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     control: bool = ...,
@@ -20914,7 +22021,7 @@ def showMetadata(
     stream: Queryable[str] = ...,
 ) -> Union[str, bool, Tuple[float, float], float]: ...
 def showSelectionInTitle(arg0: str = ..., /) -> bool: ...
-def showShadingGroupAttrEditor(*args: Any) -> bool: ...
+def showShadingGroupAttrEditor(arg0: str = ..., arg1: str = ..., /) -> bool: ...
 def showWindow(arg0: str = ..., /) -> bool: ...
 def simplify(
     *args: str,
@@ -20955,7 +22062,9 @@ def skeletonEmbed(
     segmentationResolution: int = ...,
 ) -> bool: ...
 def skinBindCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     about: Queryable[str] = ...,
@@ -21222,6 +22331,20 @@ def softMod(
     weightedNode: Queryable[Tuple[str, str]] = ...,
 ) -> Union[str, bool, float, Multiuse[str], Tuple[str, str]]: ...
 def softModContext(*args: Any, **kwargs: Any) -> None: ...
+def softModCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    dragSlider: str = ...,
+    exists: bool = ...,
+    falseColor: bool = ...,
+    image1: Queryable[str] = ...,
+    image2: Queryable[str] = ...,
+    image3: Queryable[str] = ...,
+    reset: bool = ...,
+) -> Union[str, bool]: ...
 def softSelect(
     *args: str,
     edit: bool = ...,
@@ -21258,7 +22381,7 @@ def softSelectOptionsCtx(
     uvSize: float = ...,
 ) -> None: ...
 def soloMaterial(
-    *args: Any,
+    *args: str,
     query: bool = ...,
     attr: Queryable[str] = ...,
     last: bool = ...,
@@ -21266,6 +22389,13 @@ def soloMaterial(
     unsolo: bool = ...,
 ) -> Union[bool, str]: ...
 def sortCaseInsensitive(*args: str) -> List[str]: ...
+def sortStringArray(
+    *args: str,
+    ignoreCase: bool = ...,
+    indexArray: bool = ...,
+    reverse: bool = ...,
+    sortOrder: str = ...,
+) -> List[str]: ...
 def sound(
     arg0: str = ...,
     /,
@@ -21355,7 +22485,36 @@ def soundPopup(
     visibleChangeCommand: Callable[..., Any] = ...,
     width: int = ...,
 ) -> str: ...
-def spBirailCtx(*args: Any, **kwargs: Any) -> None: ...
+def spBirailCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    autoCreate: bool = ...,
+    activeNodes: bool = ...,
+    bldProfiles: bool = ...,
+    bldProfileFirst: bool = ...,
+    bldProfileLast: bool = ...,
+    bldRailOne: bool = ...,
+    bldRailTwo: bool = ...,
+    caching: bool = ...,
+    constructionHistory: bool = ...,
+    exists: bool = ...,
+    frozen: bool = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    immediate: bool = ...,
+    name: str = ...,
+    nodeState: int = ...,
+    object: bool = ...,
+    polygon: int = ...,
+    reset: bool = ...,
+    transformMode: int = ...,
+    toolNode: bool = ...,
+    tangentContinuityProfile1: bool = ...,
+) -> None: ...
 def spaceLocator(
     *args: str,
     edit: bool = ...,
@@ -21414,7 +22573,9 @@ def spotLight(
     useRayTraceShadows: bool = ...,
 ) -> Union[str, List[float], int, bool, float, Tuple[float, float, float]]: ...
 def spotLightPreviewPort(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     annotation: Queryable[str] = ...,
@@ -21587,7 +22748,48 @@ def stitchSurface(
 ) -> Union[
     List[str], float, bool, Multiuse[int], int, Multiuse[float], Multiuse[bool]
 ]: ...
-def stitchSurfaceCtx(*args: Any, **kwargs: Any) -> None: ...
+def stitchSurfaceCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    autoCreate: bool = ...,
+    activeNodes: bool = ...,
+    bias: float = ...,
+    cascade: bool = ...,
+    caching: bool = ...,
+    constructionHistory: bool = ...,
+    cvIthIndex: Multiuse[int] = ...,
+    cvJthIndex: Multiuse[int] = ...,
+    exists: bool = ...,
+    fixBoundary: bool = ...,
+    frozen: bool = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    immediate: bool = ...,
+    keepG0Continuity: bool = ...,
+    keepG1Continuity: bool = ...,
+    name: str = ...,
+    nodeState: int = ...,
+    numberOfSamples: int = ...,
+    object: bool = ...,
+    positionalContinuity: Multiuse[bool] = ...,
+    replaceOriginal: bool = ...,
+    reset: bool = ...,
+    stepCount: Multiuse[int] = ...,
+    tangentialContinuity: Multiuse[bool] = ...,
+    toolNode: bool = ...,
+    tolerance: Multiuse[float] = ...,
+    togglePointNormals: bool = ...,
+    togglePointPosition: bool = ...,
+    toggleTolerance: Multiuse[bool] = ...,
+    parameterU: Multiuse[float] = ...,
+    parameterV: Multiuse[float] = ...,
+    weight0: float = ...,
+    weight1: float = ...,
+) -> None: ...
 def stitchSurfacePoints(
     *args: str,
     edit: bool = ...,
@@ -21930,7 +23132,9 @@ def surfaceShaderList(
     *args: str, edit: bool = ..., query: bool = ..., add: str = ..., remove: str = ...
 ) -> bool: ...
 def swatchDisplayPort(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     annotation: Queryable[str] = ...,
@@ -21968,7 +23172,9 @@ def swatchDisplayPort(
 ) -> Union[str, Tuple[float, float, float], int, bool, Callable[..., Any]]: ...
 def swatchRefresh(*args: str) -> bool: ...
 def switchTable(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     annotation: Queryable[str] = ...,
@@ -22096,7 +23302,7 @@ def symmetricModelling(
     tolerance: Queryable[float] = ...,
     topoSymmetry: bool = ...,
 ) -> Union[bool, str, int, float]: ...
-def syncSculptCache(*args: Any, **kwargs: Any) -> None: ...
+def syncSculptCache() -> None: ...
 def sysFile(
     arg0: str = ...,
     /,
@@ -22202,7 +23408,9 @@ def tangentConstraint(
     worldUpVector: Queryable[Tuple[float, float, float]] = ...,
 ) -> Union[List[str], Tuple[float, float, float], str, bool, float]: ...
 def targetWeldCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     exists: bool = ...,
@@ -22248,7 +23456,9 @@ def testPassContribution(
     *args: str, renderLayer: str = ..., renderPass: str = ...
 ) -> None: ...
 def texCutContext(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     adjustSize: bool = ...,
@@ -22268,7 +23478,9 @@ def texCutContext(
     touchToSew: bool = ...,
 ) -> Union[float, bool, str]: ...
 def texLatticeDeformContext(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     envelope: Queryable[float] = ...,
@@ -22285,7 +23497,9 @@ def texLatticeDeformContext(
     useBoundingRect: bool = ...,
 ) -> Union[int, float, bool, str]: ...
 def texManipContext(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     exists: bool = ...,
@@ -22294,7 +23508,9 @@ def texManipContext(
     image3: Queryable[str] = ...,
 ) -> str: ...
 def texMoveContext(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     editPivotMode: bool = ...,
@@ -22310,7 +23526,9 @@ def texMoveContext(
     tweakMode: bool = ...,
 ) -> Union[str, bool, int, float]: ...
 def texMoveUVShellContext(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     exists: bool = ...,
@@ -22323,7 +23541,9 @@ def texMoveUVShellContext(
     shellBorder: Queryable[float] = ...,
 ) -> Union[str, int, bool, float]: ...
 def texRotateContext(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     editPivotMode: bool = ...,
@@ -22338,7 +23558,9 @@ def texRotateContext(
     tweakMode: bool = ...,
 ) -> Union[str, bool, float]: ...
 def texScaleContext(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     editPivotMode: bool = ...,
@@ -22354,7 +23576,9 @@ def texScaleContext(
     tweakMode: bool = ...,
 ) -> Union[str, bool, float]: ...
 def texSculptCacheContext(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     adjustSize: bool = ...,
@@ -22370,9 +23594,11 @@ def texSculptCacheContext(
     size: Queryable[float] = ...,
     strength: Queryable[float] = ...,
 ) -> Union[bool, int, str, float]: ...
-def texSculptCacheSync(*args: Any, **kwargs: Any) -> None: ...
+def texSculptCacheSync() -> None: ...
 def texSelectContext(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     exists: bool = ...,
@@ -22381,7 +23607,9 @@ def texSelectContext(
     image3: Queryable[str] = ...,
 ) -> str: ...
 def texSelectShortestPathCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     exists: bool = ...,
@@ -22389,9 +23617,25 @@ def texSelectShortestPathCtx(
     image2: Queryable[str] = ...,
     image3: Queryable[str] = ...,
 ) -> Union[bool, str]: ...
-def texSmoothContext(*args: Any, **kwargs: Any) -> None: ...
+def texSmoothContext(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    history: bool = ...,
+    exists: bool = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    name: str = ...,
+    pinBorder: bool = ...,
+    space: int = ...,
+) -> None: ...
 def texSmudgeUVContext(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     dragSlider: Queryable[str] = ...,
@@ -22408,7 +23652,9 @@ def texSmudgeUVContext(
     smudgeIsMiddle: bool = ...,
 ) -> Union[str, float, bool]: ...
 def texTweakUVContext(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     exists: bool = ...,
@@ -22419,7 +23665,9 @@ def texTweakUVContext(
     tolerance: Queryable[float] = ...,
 ) -> Union[str, bool, float]: ...
 def texWinToolCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     alternateContext: bool = ...,
@@ -22799,7 +24047,9 @@ def textureLassoContext(
     name: str = ...,
 ) -> None: ...
 def texturePlacementContext(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     exists: bool = ...,
@@ -22957,7 +24207,9 @@ def threadCount(
     *, query: bool = ..., numberOfThreads: Queryable[int] = ...
 ) -> Union[bool, int]: ...
 def threePointArcCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     degree: Queryable[int] = ...,
@@ -24071,7 +25323,34 @@ def trim(
     name: str = ...,
     object: bool = ...,
 ) -> Union[List[str], bool, Multiuse[float], int, float]: ...
-def trimCtx(*args: Any, **kwargs: Any) -> None: ...
+def trimCtx(
+    arg0: str = ...,
+    /,
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    autoCreate: bool = ...,
+    activeNodes: bool = ...,
+    caching: bool = ...,
+    constructionHistory: bool = ...,
+    exists: bool = ...,
+    frozen: bool = ...,
+    image1: str = ...,
+    image2: str = ...,
+    image3: str = ...,
+    immediate: bool = ...,
+    locatorU: Multiuse[float] = ...,
+    locatorV: Multiuse[float] = ...,
+    name: str = ...,
+    nodeState: int = ...,
+    object: bool = ...,
+    replaceOriginal: bool = ...,
+    reset: bool = ...,
+    shrink: bool = ...,
+    selected: int = ...,
+    toolNode: bool = ...,
+    tolerance: float = ...,
+) -> None: ...
 def truncateFluidCache(*args: str) -> bool: ...
 def truncateHairCache(*args: str) -> bool: ...
 def tumble(
@@ -24137,7 +25416,9 @@ def turbulence(
     Tuple[float, float, float],
 ]: ...
 def twoPointArcCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     degree: Queryable[int] = ...,
@@ -24162,7 +25443,7 @@ def uiTemplate(
 ) -> str: ...
 def unapplyOverride() -> None: ...
 def unassignInputDevice(
-    *args: Any, query: bool = ..., clutch: str = ..., device: str = ...
+    *, query: bool = ..., clutch: str = ..., device: str = ...
 ) -> bool: ...
 def undo() -> bool: ...
 def undoInfo(
@@ -24310,7 +25591,9 @@ def uvSnapshot(
     yResolution: int = ...,
 ) -> bool: ...
 def view2dToolCtx(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     alternateContext: bool = ...,
@@ -24426,7 +25709,9 @@ def viewSet(
     viewZ: bool = ...,
 ) -> bool: ...
 def visor(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     query: bool = ...,
     addFolder: bool = ...,
     addNodes: Queryable[str] = ...,
@@ -24599,7 +25884,7 @@ def webBrowser(
 ) -> Union[str, Tuple[float, float, float], bool, int, Callable[..., Any]]: ...
 def webBrowserPrefs(arg0: str = ..., /) -> None: ...
 def weightsColor(
-    *args: Any,
+    *args: str,
     query: bool = ...,
     colorRamp: Queryable[str] = ...,
     deformer: Queryable[str] = ...,
@@ -24734,7 +26019,9 @@ def wire(
     int,
 ]: ...
 def wireContext(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     crossingEffect: Queryable[float] = ...,
@@ -24907,7 +26194,9 @@ def wrinkle(
     wrinkleIntensity: float = ...,
 ) -> List[str]: ...
 def wrinkleContext(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     branchCount: Queryable[int] = ...,
@@ -24925,7 +26214,7 @@ def wrinkleContext(
     wrinkleIntensity: Queryable[float] = ...,
 ) -> Union[str, int, float]: ...
 def writeTake(
-    *args: Any,
+    *,
     angle: str = ...,
     device: str = ...,
     linear: str = ...,
@@ -25021,4 +26310,3 @@ def xformConstraint(
     live: bool = ...,
     type: Queryable[str] = ...,
 ) -> Union[bool, int, str]: ...
-def xpmPicker(*args: Any, fileName: str = ..., parent: str = ...) -> str: ...

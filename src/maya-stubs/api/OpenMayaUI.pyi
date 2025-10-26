@@ -31,7 +31,6 @@ class M3dView:
     def beginXorDrawing(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def colorAtIndex(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def colorMask(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
-    def deviceContext(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def disallowPolygonOffset(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def display(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
@@ -424,6 +423,10 @@ class MFnFreePointTriadManip(MFnManip3D):
     isDrawAxesOn: Any
     isKeyframeAllOn: Any
     isSnapModeOn: Any
+    kViewPlane: int = 3
+    kXYPlane: int = 2
+    kXZPlane: int = 1
+    kYZPlane: int = 0
     def pointIndex(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setDirection(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setDrawArrowHead(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -502,6 +505,9 @@ class MFnRotateManip(MFnManip3D):
     def displayWithNode(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
     isSnapModeOn: bool
+    kGimbal: int = 2
+    kObjectSpace: int = 0
+    kWorldSpace: int = 1
     rotateMode: int
     def rotationCenterIndex(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def rotationIndex(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -520,6 +526,8 @@ class MFnScaleManip(MFnManip3D):
     def displayWithNode(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
     isSnapModeOn: bool
+    kArbitraryOrientation: int = 1
+    kDefaultOrientation: int = 0
     orientation: Any
     orientationMode: Any
     def scaleCenterIndex(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -775,6 +783,9 @@ class MPxHardwareShader(maya.api.OpenMaya.MPxNode):
     @staticmethod
     def getHardwareShader(*args: Unknown, **kwargs: Unknown) -> Any: ...
 
+    kIsTransparent: int = 1
+    kNoTransparencyFrontBackCull: int = 2
+    kNoTransparencyPolygonSort: int = 4
     outColor: maya.api.OpenMaya.MObject
     outColorB: maya.api.OpenMaya.MObject
     outColorG: maya.api.OpenMaya.MObject
@@ -806,6 +817,22 @@ class MPxHwShaderNode(maya.api.OpenMaya.MPxNode):
     def glUnbind(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def hasTransparency(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def invertTexCoords(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
+    kDirtyAll: int = 15
+    kDirtyColorArrays: int = 4
+    kDirtyNone: int = 0
+    kDirtyNormalArray: int = 2
+    kDirtyTexCoordArrays: int = 8
+    kDirtyVertexArray: int = 1
+    kIsTransparent: int = 1
+    kNoTransparencyFrontBackCull: int = 2
+    kNoTransparencyPolygonSort: int = 4
+    kWriteAll: int = 15
+    kWriteColorArrays: int = 4
+    kWriteNone: int = 0
+    kWriteNormalArray: int = 2
+    kWriteTexCoordArrays: int = 8
+    kWriteVertexArray: int = 1
     def normalsPerVertex(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
     outColor: maya.api.OpenMaya.MObject
@@ -1235,4 +1262,4 @@ ourdict: Dict[str, Any]
 
 py2dict: Dict[str, Any]
 
-val: str = "C:\\Program Files\\Autodesk\\Maya2026\\Python\\Lib\\site-packages\\maya\\api\\_OpenMayaUI_py2.pyd"
+val: str = "/Applications/Autodesk/maya2026/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.11/site-packages/maya/api/_OpenMayaUI_py2.so"

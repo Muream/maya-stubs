@@ -104,6 +104,10 @@ class MClearOperation(MRenderOperation):
     def clearStencil(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
     kClearAll: int = -1
+    kClearColor: int = 1
+    kClearDepth: int = 2
+    kClearNone: int = 0
+    kClearStencil: int = 4
     def mask(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def overridesColors(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setClearColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -221,6 +225,9 @@ class MDrawContext(MFrameContext):
     def getRenderTargetSize(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getSceneBox(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getStateManager(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
+    kFilteredIgnoreLightLimit: int = 1
+    kFilteredToLightLimit: int = 0
     def numberOfActiveLights(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def viewDirectionAlongNegZ(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
@@ -803,6 +810,10 @@ class MPresentTarget(MRenderOperation):
     """Class which defines the operation of presenting a target for final output."""
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None: ...
     def __new__(cls, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
+    kCenterBuffer: int = 0
+    kLeftBuffer: int = 1
+    kRightBuffer: int = 2
     def presentDepth(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setPresentDepth(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setTargetBackBuffer(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -1253,7 +1264,7 @@ class MRenderTargetAssignment:
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None: ...
     def __new__(cls, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
-    target: MRenderTarget
+    target: Any
 
 class MRenderTargetDescription:
     """Class which provides a description of a hardware render target."""
@@ -1344,6 +1355,8 @@ class MRenderer:
     def findRenderOverride(*args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def getFragmentManager(*args: Unknown, **kwargs: Unknown) -> Any: ...
+    @staticmethod
+    def getOutputTargetOverrideSize(*args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def getRenderTargetManager(*args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
@@ -1449,7 +1462,11 @@ class MRenderer:
     @staticmethod
     def setLightsAndShadowsDirty(*args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
+    def setOutputTargetOverrideSize(*args: Unknown, **kwargs: Unknown) -> Any: ...
+    @staticmethod
     def setRenderOverrideName(*args: Unknown, **kwargs: Unknown) -> Any: ...
+    @staticmethod
+    def unsetOutputTargetOverrideSize(*args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MSamplerState:
     """Container class for an acquired complete GPU sampler state."""
@@ -1506,7 +1523,11 @@ class MSceneRender(MRenderOperation):
     def getParameters(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def hasUIDrawables(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
+    kAmbientLight: int = 2
     kBoundingBox: int = 16
+    kCullBackFaces: int = 2
+    kCullFrontFaces: int = 3
+    kCullNone: int = 1
     kDefaultMaterial: int = 32
     kExcludeAll: int = -1
     kExcludeCVs: int = 131072
@@ -1527,10 +1548,14 @@ class MSceneRender(MRenderOperation):
     kExcludeLights: int = 16
     kExcludeLocators: int = 2048
     kExcludeManipulators: int = 268435456
+    kExcludeMeshes: int = 4
     kExcludeMotionTrails: int = 1073741824
     kExcludeNCloths: int = 33554432
     kExcludeNParticles: int = 536870912
     kExcludeNRigids: int = 67108864
+    kExcludeNone: int = 0
+    kExcludeNurbsCurves: int = 1
+    kExcludeNurbsSurfaces: int = 2
     kExcludeParticleInstancers: int = 1024
     kExcludePivots: int = 16384
     kExcludePlanes: int = 8
@@ -1538,13 +1563,32 @@ class MSceneRender(MRenderOperation):
     kExcludeStrokes: int = 524288
     kExcludeSubdivSurfaces: int = 1048576
     kExcludeTextures: int = 32768
+    kFlatShaded: int = 4
+    kLightDefault: int = 3
+    kNoCullingOverride: int = 0
+    kNoDisplayModeOverride: int = 0
+    kNoLight: int = 1
+    kNoLightingModeOverride: int = 0
+    kNoSceneFilterOverride: int = 0
     kPostEffectDisableAll: int = -1
+    kPostEffectDisableDOF: int = 4
+    kPostEffectDisableMotionBlur: int = 2
+    kPostEffectDisableNone: int = 0
+    kPostEffectDisableSSAO: int = 1
     kRenderAllItems: int = -1
     kRenderNonShadedItems: int = 9
+    kRenderOpaqueShadedItems: int = 2
     kRenderPostSceneUIItems: int = 8
+    kRenderPreSceneUIItems: int = 1
+    kRenderShadedItems: int = 6
+    kRenderTransparentShadedItems: int = 4
     kRenderUIItems: int = 9
+    kSceneLights: int = 5
+    kSelectedLights: int = 4
     kShadeActiveOnly: int = 8
+    kShaded: int = 2
     kTextured: int = 64
+    kWireFrame: int = 1
     def lightModeOverride(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
     mClearOperation: Any
@@ -1867,7 +1911,7 @@ class MTextureAssignment:
     def __init__(self, /, *args: Unknown, **kwargs: Unknown) -> None: ...
     def __new__(cls, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
-    texture: MTexture
+    texture: Any
 
 class MTextureDescription:
     """Texture description. Provides sufficient information to describe how a block of data can be interpreted as a texture."""
@@ -2291,4 +2335,4 @@ ourdict: Dict[str, Any]
 
 py2dict: Dict[str, Any]
 
-val: str = "C:\\Program Files\\Autodesk\\Maya2026\\Python\\Lib\\site-packages\\maya\\api\\_OpenMayaRender_py2.pyd"
+val: str = "/Applications/Autodesk/maya2026/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.11/site-packages/maya/api/_OpenMayaRender_py2.so"

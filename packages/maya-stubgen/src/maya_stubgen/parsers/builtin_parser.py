@@ -80,7 +80,7 @@ class BuiltinParser(Parser):
         members: list[DocspecClassMembers] = []
 
         parent_members = {
-            id(inspect.getattr_static(parent, name))
+            (name, id(inspect.getattr_static(parent, name)))
             for parent in type.mro(cls)[1:]
             for name, _ in inspect.getmembers(parent)
         }
@@ -102,7 +102,7 @@ class BuiltinParser(Parser):
             member = inspect.getattr_static(cls, member_name)
             parser.add_member(member_name, member)
 
-            is_inherited = id(member) in parent_members
+            is_inherited = (member_name, id(member)) in parent_members
             if is_inherited:
                 continue
 

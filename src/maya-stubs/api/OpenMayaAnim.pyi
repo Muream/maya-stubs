@@ -224,12 +224,33 @@ class MFnAnimCurve(maya.api.OpenMaya.MFnDependencyNode):
     isTimeInput: Any
     isUnitlessInput: Any
     isWeighted: Any
+    kAnimCurveTA: int = 0
+    kAnimCurveTL: int = 1
+    kAnimCurveTT: int = 2
+    kAnimCurveTU: int = 3
+    kAnimCurveUA: int = 4
+    kAnimCurveUL: int = 5
+    kAnimCurveUT: int = 6
+    kAnimCurveUU: int = 7
+    kAnimCurveUnknown: int = 8
+    kConstant: int = 0
+    kCycle: int = 3
+    kCycleRelative: int = 4
+    kLinear: int = 1
+    kOscillate: int = 5
     kTangentAuto: int = 11
     kTangentAutoCustom: int = 29
     kTangentAutoEase: int = 28
     kTangentAutoMix: int = 27
+    kTangentClamped: int = 8
     kTangentCustomEnd: int = 32767
     kTangentCustomStart: int = 64
+    kTangentFast: int = 7
+    kTangentFixed: int = 1
+    kTangentFlat: int = 3
+    kTangentGlobal: int = 0
+    kTangentLinear: int = 2
+    kTangentPlateau: int = 9
     kTangentShared1: int = 19
     kTangentShared2: int = 20
     kTangentShared3: int = 21
@@ -238,6 +259,9 @@ class MFnAnimCurve(maya.api.OpenMaya.MFnDependencyNode):
     kTangentShared6: int = 24
     kTangentShared7: int = 25
     kTangentShared8: int = 26
+    kTangentSlow: int = 6
+    kTangentSmooth: int = 4
+    kTangentStep: int = 5
     kTangentStepNext: int = 10
     kTangentTypeCount: int = 32768
     numKeys: Any
@@ -417,4 +441,4 @@ ourdict: Dict[str, Any]
 
 py2dict: Dict[str, Any]
 
-val: str = "C:\\Program Files\\Autodesk\\Maya2026\\Python\\Lib\\site-packages\\maya\\api\\_OpenMayaAnim_py2.pyd"
+val: str = "/Applications/Autodesk/maya2026/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.11/site-packages/maya/api/_OpenMayaAnim_py2.so"

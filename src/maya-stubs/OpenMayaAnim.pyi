@@ -238,12 +238,33 @@ class MFnAnimCurve(maya.OpenMaya.MFnDependencyNode):
     def isUnitlessInput(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isWeighted(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
+    kAnimCurveTA: int = 0
+    kAnimCurveTL: int = 1
+    kAnimCurveTT: int = 2
+    kAnimCurveTU: int = 3
+    kAnimCurveUA: int = 4
+    kAnimCurveUL: int = 5
+    kAnimCurveUT: int = 6
+    kAnimCurveUU: int = 7
+    kAnimCurveUnknown: int = 8
+    kConstant: int = 0
+    kCycle: int = 3
+    kCycleRelative: int = 4
+    kLinear: int = 1
+    kOscillate: int = 5
     kTangentAuto: int = 11
     kTangentAutoCustom: int = 29
     kTangentAutoEase: int = 28
     kTangentAutoMix: int = 27
+    kTangentClamped: int = 8
     kTangentCustomEnd: int = 32767
     kTangentCustomStart: int = 64
+    kTangentFast: int = 7
+    kTangentFixed: int = 1
+    kTangentFlat: int = 3
+    kTangentGlobal: int = 0
+    kTangentLinear: int = 2
+    kTangentPlateau: int = 9
     kTangentShared1: int = 19
     kTangentShared2: int = 20
     kTangentShared3: int = 21
@@ -252,6 +273,9 @@ class MFnAnimCurve(maya.OpenMaya.MFnDependencyNode):
     kTangentShared6: int = 24
     kTangentShared7: int = 25
     kTangentShared8: int = 26
+    kTangentSlow: int = 6
+    kTangentSmooth: int = 4
+    kTangentStep: int = 5
     kTangentStepNext: int = 10
     kTangentTypeCount: int = 32768
     def numKeyframes(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -305,6 +329,15 @@ class MFnBlendShapeDeformer(maya.OpenMaya.MFnDependencyNode):
     def getBaseObjects(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getTargets(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def historyLocation(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
+    kFrontOfChain: int = 0
+    kLocalOrigin: int = 0
+    kNormal: int = 1
+    kObject: int = 0
+    kOther: int = 3
+    kPost: int = 2
+    kTangent: int = 1
+    kWorldOrigin: int = 1
     def numWeights(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def origin(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def removeTarget(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -452,6 +485,10 @@ class MFnIkHandle(maya.OpenMaya.MFnTransform):
     def create(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getEffector(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getStartJoint(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
+    kStickyOff: int = 0
+    kStickyOn: int = 1
+    kSuperSticky: int = 2
     def poWeight(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def priority(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setEffector(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -484,6 +521,11 @@ class MFnIkJoint(maya.OpenMaya.MFnTransform):
     def getSegmentScale(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getStiffness(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def hikJointName(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
+    kNone: int = 3
+    kXAxis: int = 0
+    kYAxis: int = 1
+    kZAxis: int = 2
     def maxRotateDampXRange(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def maxRotateDampXStrength(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def maxRotateDampYRange(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -718,6 +760,10 @@ class MFnMotionPath(maya.OpenMaya.MFnDependencyNode):
     def getOrientationMarker(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getPositionMarker(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def inverseNormal(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
+    kXaxis: int = 0
+    kYaxis: int = 1
+    kZaxis: int = 2
     def numOrientationMarkers(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def numPositionMarkers(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def pathObject(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
