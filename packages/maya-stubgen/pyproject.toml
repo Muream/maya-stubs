@@ -16,6 +16,8 @@ dependencies = [
     "ruff>=0.14.0",
     "docspec",
     "docspec-to-jinja",
+    "pyside2>=5.15.2.1",
+    "pyside6>=6.10.0",
 ]
 
 [tool.uv.sources]
