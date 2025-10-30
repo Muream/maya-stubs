@@ -988,7 +988,6 @@ def artAttrPaintVertexCtx(
     Multiuse[Tuple[float, float]],
     Multiuse[float],
 ]: ...
-def artAttrSkinPaint(*args: str) -> None: ...
 def artAttrSkinPaintCmd(*args: Any, **kwargs: Any) -> None: ...
 def artAttrSkinPaintCtx(
     arg0: str = ...,
@@ -3313,7 +3312,7 @@ def cameraView(
     setCamera: bool = ...,
     setView: bool = ...,
 ) -> str: ...
-def canCreateCaddyManip(*args: Any) -> bool: ...
+def canCreateCaddyManip(*args: str) -> bool: ...
 def canCreateManip(*args: str) -> bool: ...
 def canvas(
     arg0: str = ...,
@@ -3351,9 +3350,9 @@ def canvas(
     width: Queryable[int] = ...,
 ) -> Union[str, Tuple[float, float, float], bool, int, Callable[..., Any]]: ...
 def changeSubdivComponentDisplayLevel(
-    *args: Any, query: bool = ..., level: Queryable[int] = ..., relative: bool = ...
+    *args: str, query: bool = ..., level: Queryable[int] = ..., relative: bool = ...
 ) -> Union[int, bool]: ...
-def changeSubdivRegion(*args: Any, action: int = ..., level: int = ...) -> bool: ...
+def changeSubdivRegion(*args: str, action: int = ..., level: int = ...) -> bool: ...
 def channelBox(
     arg0: str = ...,
     /,
@@ -4157,7 +4156,7 @@ def cmdShell(
     visibleChangeCommand: Queryable[Callable[..., Any]] = ...,
     width: Queryable[int] = ...,
 ) -> Union[str, Tuple[float, float, float], bool, int, Callable[..., Any]]: ...
-def coarsenSubdivSelectionList(*args: Any) -> bool: ...
+def coarsenSubdivSelectionList(*args: str) -> bool: ...
 def collision(
     *args: str,
     edit: bool = ...,
@@ -5285,7 +5284,7 @@ def createEditor(
     queueForDelete: bool = ...,
 ) -> bool: ...
 def createLayeredPsdFile(
-    *args: Any,
+    *,
     imageFileName: Multiuse[Tuple[str, str, str]] = ...,
     psdFileName: str = ...,
     xResolution: int = ...,
@@ -5818,10 +5817,9 @@ def createRenderLayer(
     noRecurse: bool = ...,
     number: int = ...,
 ) -> str: ...
-def createSubdivRegion(*args: Any) -> bool: ...
+def createSubdivRegion(*args: str) -> bool: ...
 def ctxAbort() -> bool: ...
 def ctxCompletion() -> bool: ...
-def ctxData() -> None: ...
 def ctxEditMode(*, buttonDown: bool = ..., buttonUp: bool = ...) -> bool: ...
 def ctxTraverse(
     *, down: bool = ..., left: bool = ..., right: bool = ..., up: bool = ...
@@ -6204,7 +6202,7 @@ def dbtrace(
     verbose: bool = ...,
 ) -> Union[bool, str, Multiuse[str]]: ...
 def debug(*args: Any, **kwargs: Any) -> None: ...
-def debugNamespace(*args: Any, **kwargs: Any) -> None: ...
+def debugNamespace() -> None: ...
 def debugVar(*args: Any, **kwargs: Any) -> None: ...
 def defaultLightListCheckBox(
     arg0: str = ...,
@@ -6546,7 +6544,28 @@ def dgInfo(
 def dgPerformance(*args: Any, **kwargs: Any) -> None: ...
 def dgValidateCurve(*args: str, allCurves: bool = ..., verbose: bool = ...) -> int: ...
 def dgcontrol(*args: Any, **kwargs: Any) -> None: ...
-def dgdebug(*args: Any, **kwargs: Any) -> None: ...
+def dgdebug(
+    *,
+    allNodes: bool = ...,
+    attributeCheck: bool = ...,
+    attributeInfo: bool = ...,
+    connections: bool = ...,
+    dirty: bool = ...,
+    extensionInfo: bool = ...,
+    follow: bool = ...,
+    infected: bool = ...,
+    nodes: bool = ...,
+    nonDeletable: bool = ...,
+    nameLength: bool = ...,
+    object: str = ...,
+    outputFile: str = ...,
+    oneOfEach: bool = ...,
+    printNode: bool = ...,
+    static: bool = ...,
+    type: str = ...,
+    verbose: bool = ...,
+    verboseNode: bool = ...,
+) -> None: ...
 def dgdirty(
     *args: str,
     query: bool = ...,
@@ -6572,7 +6591,13 @@ def dgfilter(
     plug: str = ...,
 ) -> Union[str, List[str], bool]: ...
 def dgmodified() -> List[str]: ...
-def dgstats(*args: Any, **kwargs: Any) -> None: ...
+def dgstats(
+    *args: str,
+    ccsizes: bool = ...,
+    detail: bool = ...,
+    reset: bool = ...,
+    stat: Multiuse[str] = ...,
+) -> None: ...
 def dgtimer(
     *,
     query: bool = ...,
@@ -7867,6 +7892,7 @@ def falloffCurveAttr(
 ) -> Union[
     str, Tuple[float, float, float], int, Tuple[float, float], bool, Callable[..., Any]
 ]: ...
+def fcheck(*args: str) -> bool: ...
 def file(
     arg0: str = ...,
     /,
@@ -9595,7 +9621,9 @@ def headsUpDisplay(
     int, Union[str, int, Tuple[int, int]], bool, str, Callable[..., Any], Multiuse[str]
 ]: ...
 def headsUpMessage(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     horizontalOffset: int = ...,
     object: str = ...,
     selection: bool = ...,
@@ -9755,7 +9783,7 @@ def hotkeyCtx(
     typeArray: bool = ...,
     typeExists: str = ...,
 ) -> Union[bool, str]: ...
-def hotkeyEditor(*args: Any, **kwargs: Any) -> None: ...
+def hotkeyEditor(*args: Any, **kwargs: Any) -> Any: ...
 def hotkeyEditorPanel(
     arg0: str = ...,
     /,
@@ -9788,7 +9816,7 @@ def hotkeyEditorPanel(
     visibleChangeCommand: Queryable[Callable[..., Any]] = ...,
     width: Queryable[int] = ...,
 ) -> Union[str, Tuple[float, float, float], bool, int, Callable[..., Any]]: ...
-def hotkeyMapSet(*args: Any, **kwargs: Any) -> None: ...
+def hotkeyMapSet(*args: Any, **kwargs: Any) -> Any: ...
 def hotkeySet(
     arg0: str = ...,
     /,
@@ -11342,7 +11370,7 @@ def itemFilterType(
     text: Queryable[str] = ...,
     type: bool = ...,
 ) -> Union[str, List[str], bool]: ...
-def iterOnNurbs(*args: Any, **kwargs: Any) -> None: ...
+def iterOnNurbs(*args: str) -> None: ...
 def joint(
     *args: str,
     edit: bool = ...,
@@ -12466,7 +12494,7 @@ def makebot(
     output: str = ...,
     verbose: bool = ...,
 ) -> bool: ...
-def manipComponentPivot(*args: Any, **kwargs: Any) -> None: ...
+def manipComponentPivot(*args: Any, **kwargs: Any) -> Any: ...
 def manipComponentUpdate() -> None: ...
 def manipMoveContext(
     arg0: str = ...,
@@ -12742,7 +12770,7 @@ def matchTransform(
     scaleY: bool = ...,
     scaleZ: bool = ...,
 ) -> bool: ...
-def mateCtx(*args: Any, **kwargs: Any) -> None: ...
+def mateCtx(*args: Any, **kwargs: Any) -> Any: ...
 def matrixUtil(
     arg0: float = ...,
     arg1: float = ...,
@@ -12775,6 +12803,15 @@ def matrixUtil(
 ) -> Union[
     str, bool, Tuple[float, float, float, float], Tuple[float, float, float]
 ]: ...
+def mayaDpiSetting(
+    *,
+    query: bool = ...,
+    mode: Queryable[int] = ...,
+    realScaleValue: bool = ...,
+    scaleValue: Queryable[float] = ...,
+    systemDpi: bool = ...,
+) -> Union[int, float, bool]: ...
+def mayaDpiSettingAction(*args: Any, **kwargs: Any) -> Any: ...
 def mayaHasRenderSetup(
     *,
     edit: bool = ...,
@@ -13024,7 +13061,22 @@ def menuSetPref(
     saveBackup: bool = ...,
     version: bool = ...,
 ) -> bool: ...
-def meshIntersectTest(*args: Any, **kwargs: Any) -> None: ...
+def meshIntersectTest(
+    *args: str,
+    angleDivisions: int = ...,
+    bothDir: bool = ...,
+    drawRays: bool = ...,
+    hitType: str = ...,
+    maxParam: float = ...,
+    numRepeats: int = ...,
+    perfTest: bool = ...,
+    spatialDivisions: int = ...,
+    showHits: bool = ...,
+    testFaceTri: bool = ...,
+    testOld: bool = ...,
+    testUnsorted: bool = ...,
+    verbose: bool = ...,
+) -> None: ...
 def messageLine(
     arg0: str = ...,
     /,
@@ -13060,7 +13112,7 @@ def messageLine(
 def mimicManipulation(
     *, manipulations: str = ..., prevalidation: bool = ..., refresh: bool = ...
 ) -> List[bool]: ...
-def mimicMnipulation(*args: Any, **kwargs: Any) -> None: ...
+def mimicMnipulation(*args: Any, **kwargs: Any) -> Any: ...
 def minimizeApp() -> bool: ...
 def mirrorJoint(
     arg0: str = ...,
@@ -13481,12 +13533,12 @@ def multiProfileBirailSurface(
     polygon: int = ...,
 ) -> Union[List[str], bool, int]: ...
 def multiTouch(
-    *args: Any, query: bool = ..., gestures: bool = ..., trackpad: Queryable[int] = ...
+    *, query: bool = ..., gestures: bool = ..., trackpad: Queryable[int] = ...
 ) -> Union[bool, int]: ...
 def mute(
     *args: str, query: bool = ..., disable: bool = ..., force: bool = ...
 ) -> List[str]: ...
-def myTestCmd(*args: Any, **kwargs: Any) -> None: ...
+def myTestCmd(*, vlevel: int = ..., exampleFlag: bool = ...) -> None: ...
 def nBase(
     *args: str,
     edit: bool = ...,
@@ -13714,146 +13766,7 @@ def nodeCast(
     swapNames: bool = ...,
     swapValues: bool = ...,
 ) -> int: ...
-def nodeEditor(
-    arg0: str = ...,
-    /,
-    *,
-    edit: bool = ...,
-    query: bool = ...,
-    activeTab: Queryable[int] = ...,
-    addNewNodes: bool = ...,
-    addNode: Multiuse[str] = ...,
-    additiveGraphingMode: bool = ...,
-    allAttributes: bool = ...,
-    allNodes: bool = ...,
-    allowNewTabs: bool = ...,
-    allowTabTearoff: bool = ...,
-    autoSizeNodes: bool = ...,
-    beginCreateNode: bool = ...,
-    beginNewConnection: str = ...,
-    breakSelectedConnections: bool = ...,
-    closeAllTabs: bool = ...,
-    closeTab: int = ...,
-    connectSelectedNodes: bool = ...,
-    connectedGraphingMode: bool = ...,
-    connectionMinSegment: Queryable[float] = ...,
-    connectionOffset: Queryable[float] = ...,
-    connectionRoundness: Queryable[float] = ...,
-    connectionStyle: Queryable[str] = ...,
-    connectionTension: Queryable[int] = ...,
-    consistentNameSize: bool = ...,
-    contentsChangedCommand: Queryable[Callable[..., Any]] = ...,
-    control: bool = ...,
-    createInfo: str = ...,
-    createNodeCommand: Queryable[Callable[..., Any]] = ...,
-    createTab: Union[Tuple[int], Tuple[int, str]] = ...,
-    crosshairOnEdgeDragging: bool = ...,
-    customAttributeListEdit: Queryable[Union[Tuple[str], Tuple[str, str]]] = ...,
-    cycleHUD: bool = ...,
-    defaultPinnedState: bool = ...,
-    defineTemplate: str = ...,
-    deleteSelected: bool = ...,
-    docTag: Queryable[str] = ...,
-    dotFormat: str = ...,
-    downstream: bool = ...,
-    duplicateTab: Union[Tuple[int], Tuple[int, int]] = ...,
-    enableOpenGL: bool = ...,
-    exists: bool = ...,
-    extendToShapes: bool = ...,
-    feedbackConnection: bool = ...,
-    feedbackNode: bool = ...,
-    feedbackPlug: bool = ...,
-    feedbackTabIndex: bool = ...,
-    feedbackType: bool = ...,
-    filter: Queryable[str] = ...,
-    filterCreateNodeTypes: Queryable[Callable[..., Any]] = ...,
-    focusCommand: Queryable[Callable[..., Any]] = ...,
-    forceMainConnection: Queryable[str] = ...,
-    frameAll: bool = ...,
-    frameModelSelection: bool = ...,
-    frameSelected: bool = ...,
-    getNodeList: bool = ...,
-    graphSelectedConnections: bool = ...,
-    graphSelection: bool = ...,
-    gridSnap: bool = ...,
-    gridVisibility: bool = ...,
-    hasWatchpoint: bool = ...,
-    highlightConnection: Queryable[str] = ...,
-    highlightConnections: Queryable[Multiuse[Tuple[str, bool]]] = ...,
-    hudMessage: Tuple[str, int, float] = ...,
-    ignoreAssets: bool = ...,
-    island: bool = ...,
-    keyPressCommand: Queryable[Callable[..., Any]] = ...,
-    keyReleaseCommand: Queryable[Callable[..., Any]] = ...,
-    layout: bool = ...,
-    layoutCommand: Queryable[Callable[..., Any]] = ...,
-    lockMainConnection: bool = ...,
-    mainListConnection: Queryable[str] = ...,
-    nodeSwatchSize: str = ...,
-    nodeTitleMode: Queryable[str] = ...,
-    nodeViewMode: str = ...,
-    overrideNodeDropPosition: Tuple[float, float] = ...,
-    panView: Tuple[float, float] = ...,
-    panel: Queryable[str] = ...,
-    parent: Queryable[str] = ...,
-    pinSelectedNodes: bool = ...,
-    popupMenuScript: Queryable[Callable[..., Any]] = ...,
-    primary: bool = ...,
-    redockTab: bool = ...,
-    removeDownstream: bool = ...,
-    removeNode: Multiuse[str] = ...,
-    removeUnselected: bool = ...,
-    removeUpstream: bool = ...,
-    renameNode: str = ...,
-    renameTab: Union[Tuple[int], Tuple[int, str]] = ...,
-    restoreInfo: str = ...,
-    restoreLastClosedTab: bool = ...,
-    rootNode: Multiuse[str] = ...,
-    rootsFromSelection: bool = ...,
-    scaleView: float = ...,
-    selectAll: bool = ...,
-    selectConnectionNodes: bool = ...,
-    selectDownstream: bool = ...,
-    selectFeedbackConnection: bool = ...,
-    selectNode: Queryable[Multiuse[str]] = ...,
-    selectUpstream: bool = ...,
-    selectionConnection: Queryable[str] = ...,
-    setWatchpoint: bool = ...,
-    settingsChangedCallback: Queryable[Callable[..., Any]] = ...,
-    shaderNetworks: bool = ...,
-    showAllNodeAttributes: str = ...,
-    showNamespace: bool = ...,
-    showSGShapes: bool = ...,
-    showShapes: bool = ...,
-    showTabs: bool = ...,
-    showTransforms: bool = ...,
-    showUnitConversions: bool = ...,
-    stateString: bool = ...,
-    syncedSelection: bool = ...,
-    tabChangeCommand: Callable[..., Any] = ...,
-    toggleAttrFilter: bool = ...,
-    toggleSelectedPins: bool = ...,
-    toggleSwatchSize: str = ...,
-    toolTipCommand: Queryable[Callable[..., Any]] = ...,
-    traversalDepthLimit: Queryable[int] = ...,
-    unParent: bool = ...,
-    unlockMainConnection: bool = ...,
-    updateMainConnection: bool = ...,
-    upstream: bool = ...,
-    useAssets: bool = ...,
-    useLongName: Queryable[int] = ...,
-    useTemplate: str = ...,
-) -> Union[
-    str,
-    int,
-    bool,
-    float,
-    Callable[..., Any],
-    Union[Tuple[str], Tuple[str, str]],
-    Multiuse[Tuple[str, bool]],
-    Multiuse[str],
-]: ...
-def nodeGrapher(*args: Any, **kwargs: Any) -> None: ...
+def nodeGrapher(*args: Any, **kwargs: Any) -> Any: ...
 def nodeIconButton(
     arg0: str = ...,
     /,
@@ -14080,7 +13993,7 @@ def nonLinear(
     type: str = ...,
     useComponentTags: bool = ...,
 ) -> Union[List[str], bool, str, Multiuse[str]]: ...
-def nop(*args: Any, **kwargs: Any) -> None: ...
+def nop() -> None: ...
 def normalConstraint(
     *args: str,
     edit: bool = ...,
@@ -16787,7 +16700,21 @@ def polyInstallAction(
     uninstallConstraint: bool = ...,
     uninstallDisplay: bool = ...,
 ) -> Union[List[str], bool]: ...
-def polyIterOnPoly(*args: Any, **kwargs: Any) -> None: ...
+def polyIterOnPoly(
+    *args: str,
+    edge: int = ...,
+    edgeToFace: bool = ...,
+    edgeToLeftFace: bool = ...,
+    edgeToRightFace: bool = ...,
+    face: int = ...,
+    silent: bool = ...,
+    traverseEdge: bool = ...,
+    traverseFace: bool = ...,
+    traverseVertex: bool = ...,
+    vertex: int = ...,
+    vertexToEdge: bool = ...,
+    vertexToFace: bool = ...,
+) -> None: ...
 def polyLayoutUV(
     *args: str,
     edit: bool = ...,
@@ -17457,7 +17384,7 @@ def polyPrimitive(
     sideLength: Queryable[float] = ...,
     texture: Queryable[int] = ...,
 ) -> Union[List[str], bool, int, Tuple[float, float, float], float]: ...
-def polyPrimitiveMisc(*args: Any, **kwargs: Any) -> None: ...
+def polyPrimitiveMisc(*args: Any, **kwargs: Any) -> Any: ...
 def polyPrism(
     *args: str,
     edit: bool = ...,
@@ -17773,7 +17700,7 @@ def polySelectEditCtx(
     mode: Queryable[int] = ...,
     startVertexOffset: Queryable[float] = ...,
 ) -> Union[str, float, int, bool]: ...
-def polySelectEditCtxDataCmd(*args: Any, **kwargs: Any) -> None: ...
+def polySelectEditCtxDataCmd(*args: Any, **kwargs: Any) -> Any: ...
 def polySelectSp(
     *args: str, query: bool = ..., loop: bool = ..., ring: bool = ...
 ) -> None: ...
@@ -18172,7 +18099,13 @@ def polySuperCtx(
     image2: str = ...,
     image3: str = ...,
 ) -> None: ...
-def polyTestPop(*args: Any, **kwargs: Any) -> None: ...
+def polyTestPop(
+    *args: str,
+    bary: Tuple[float, float] = ...,
+    face: int = ...,
+    moveUv: Tuple[float, float] = ...,
+    triangle: int = ...,
+) -> None: ...
 def polyToCurve(
     arg0: str = ...,
     /,
@@ -18297,7 +18230,7 @@ def polyUVSet(
 def polyUVStackSimilarShells(
     *args: str, onlyMatch: bool = ..., tolerance: float = ...
 ) -> List[str]: ...
-def polyUVStackSimilarShellsCmd(*args: Any, **kwargs: Any) -> None: ...
+def polyUVStackSimilarShellsCmd(*args: Any, **kwargs: Any) -> Any: ...
 def polyUnite(
     *args: str,
     edit: bool = ...,
@@ -18803,7 +18736,9 @@ def proximityWrap(
     removeDrivers: Multiuse[str] = ...,
 ) -> Union[List[str], Multiuse[str], bool]: ...
 def psdChannelOutliner(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     addChild: Multiuse[Tuple[str, str]] = ...,
@@ -18842,9 +18777,25 @@ def psdChannelOutliner(
     visibleChangeCommand: Queryable[Callable[..., Any]] = ...,
     width: Queryable[int] = ...,
 ) -> Union[str, bool, Tuple[float, float, float], int, Callable[..., Any]]: ...
-def psdConvSolidTxOptions(*args: Any, **kwargs: Any) -> None: ...
+def psdConvSolidTxOptions(
+    *,
+    edit: bool = ...,
+    query: bool = ...,
+    antiAlias: bool = ...,
+    backgroundColor: Tuple[float, float, float] = ...,
+    backgroundMode: str = ...,
+    bakeTransparency: bool = ...,
+    bakeUsingVirtualPlane: bool = ...,
+    channelString: str = ...,
+    deleteAll: bool = ...,
+    exists: str = ...,
+    fillTextureSeams: bool = ...,
+    numberItems: int = ...,
+    resetAll: bool = ...,
+    saveAll: bool = ...,
+) -> None: ...
 def psdEditTextureFile(
-    *args: Any,
+    *,
     addChannel: Multiuse[str] = ...,
     addChannelColor: Multiuse[Tuple[str, float, float, float]] = ...,
     addChannelImage: Multiuse[Tuple[str, str]] = ...,
@@ -18854,7 +18805,7 @@ def psdEditTextureFile(
     uvSnapPostionTop: bool = ...,
 ) -> bool: ...
 def psdExport(
-    *args: Any,
+    *,
     query: bool = ...,
     alphaChannelIdx: Queryable[int] = ...,
     bytesPerChannel: Queryable[int] = ...,
@@ -18867,7 +18818,7 @@ def psdExport(
     psdFileName: str = ...,
 ) -> Union[bool, int, str]: ...
 def psdTextureFile(
-    *args: Any,
+    *,
     channelRGB: Multiuse[Tuple[str, int, int, int, int]] = ...,
     channels: Multiuse[Tuple[str, int, bool]] = ...,
     imageFileName: Multiuse[Tuple[str, str, int]] = ...,
@@ -18879,7 +18830,7 @@ def psdTextureFile(
 ) -> bool: ...
 def python(arg0: str = ..., /) -> None: ...
 def querySubdiv(
-    *args: Any, action: int = ..., level: int = ..., relative: bool = ...
+    *args: str, action: int = ..., level: int = ..., relative: bool = ...
 ) -> bool: ...
 def quit(*, abort: bool = ..., exitCode: int = ..., force: bool = ...) -> bool: ...
 def radial(
@@ -19120,8 +19071,8 @@ def rampColorPort(
     visibleChangeCommand: Queryable[Callable[..., Any]] = ...,
     width: Queryable[int] = ...,
 ) -> Union[str, Tuple[float, float, float], bool, int, Callable[..., Any]]: ...
-def rampWidget(*args: Any, **kwargs: Any) -> None: ...
-def rampWidgetAttrless(*args: Any, **kwargs: Any) -> None: ...
+def rampWidget(*args: Any, **kwargs: Any) -> Any: ...
+def rampWidgetAttrless(*args: Any, **kwargs: Any) -> Any: ...
 def rangeControl(
     arg0: str = ...,
     /,
@@ -19277,7 +19228,7 @@ def referenceQuery(
     editCommand: Queryable[Multiuse[str]] = ...,
     onReferenceNode: Queryable[Multiuse[str]] = ...,
 ) -> Union[List[str], Multiuse[str]]: ...
-def refineSubdivSelectionList(*args: Any) -> bool: ...
+def refineSubdivSelectionList(*args: str) -> bool: ...
 def refresh(
     *,
     currentView: bool = ...,
@@ -20275,10 +20226,7 @@ def sceneEditor(
     withoutCopyNumber: bool = ...,
 ) -> Union[str, bool, Callable[..., Any], int]: ...
 def sceneLint(
-    *args: Any,
-    query: bool = ...,
-    issueType: Queryable[Multiuse[str]] = ...,
-    verbose: bool = ...,
+    *, query: bool = ..., issueType: Queryable[Multiuse[str]] = ..., verbose: bool = ...
 ) -> Union[str, List[str], Multiuse[str], bool]: ...
 def sceneUIReplacement(
     *,
@@ -21485,7 +21433,7 @@ def setUITemplate(
     pushTemplate: bool = ...,
 ) -> str: ...
 def setXformManip(
-    *args: Any,
+    *,
     query: bool = ...,
     showUnits: bool = ...,
     suppress: bool = ...,
@@ -22250,7 +22198,7 @@ def snapshot(
     startTime: Queryable[int] = ...,
     update: Queryable[str] = ...,
 ) -> Union[List[str], bool, int, str]: ...
-def snapshotBeadContext(*args: Any, **kwargs: Any) -> None: ...
+def snapshotBeadContext(*args: Any, **kwargs: Any) -> Any: ...
 def snapshotBeadCtx(
     arg0: str = ...,
     /,
@@ -22330,21 +22278,7 @@ def softMod(
     useComponentTags: bool = ...,
     weightedNode: Queryable[Tuple[str, str]] = ...,
 ) -> Union[str, bool, float, Multiuse[str], Tuple[str, str]]: ...
-def softModContext(*args: Any, **kwargs: Any) -> None: ...
-def softModCtx(
-    arg0: str = ...,
-    /,
-    *,
-    edit: bool = ...,
-    query: bool = ...,
-    dragSlider: str = ...,
-    exists: bool = ...,
-    falseColor: bool = ...,
-    image1: Queryable[str] = ...,
-    image2: Queryable[str] = ...,
-    image3: Queryable[str] = ...,
-    reset: bool = ...,
-) -> Union[str, bool]: ...
+def softModContext(*args: Any, **kwargs: Any) -> Any: ...
 def softSelect(
     *args: str,
     edit: bool = ...,
@@ -22865,7 +22799,16 @@ def subdCollapse(
     name: str = ...,
     object: bool = ...,
 ) -> Union[List[str], bool, int]: ...
-def subdDisplayMode(*args: Any, **kwargs: Any) -> None: ...
+def subdDisplayMode(
+    *,
+    query: bool = ...,
+    hideFaceGadgets: bool = ...,
+    showComponentsAsNumerals: bool = ...,
+    subdivEdgeMask: int = ...,
+    showFaceRegions: bool = ...,
+    showVisualEdges: bool = ...,
+    showVisualEdgeVertices: bool = ...,
+) -> None: ...
 def subdDuplicateAndConnect(*args: str) -> bool: ...
 def subdEditUV(
     *args: str,
@@ -22901,7 +22844,7 @@ def subdLayoutUV(
     worldSpace: bool = ...,
 ) -> Union[str, bool, int, float]: ...
 def subdListComponentConversion(
-    *args: Any,
+    *args: str,
     border: bool = ...,
     fromEdge: bool = ...,
     fromFace: bool = ...,
@@ -22986,7 +22929,7 @@ def subdPlanarProjection(
     worldSpace: bool = ...,
 ) -> Union[str, bool, int, Tuple[float, float], float, Tuple[float, float, float]]: ...
 def subdToBlind(
-    *args: Any,
+    *args: str,
     absolutePosition: bool = ...,
     includeCreases: bool = ...,
     includeZeroOffsets: bool = ...,
@@ -23040,7 +22983,7 @@ def subdToPoly(
 ) -> Union[List[str], bool, int, Multiuse[Tuple[int, int]], Multiuse[int]]: ...
 def subdTransferUVsToCache(*args: str) -> bool: ...
 def subdiv(
-    *args: Any,
+    *args: str,
     query: bool = ...,
     currentLevel: bool = ...,
     currentSubdLevel: bool = ...,
@@ -23052,11 +22995,11 @@ def subdiv(
     proxyMode: Queryable[int] = ...,
     smallOffsets: bool = ...,
 ) -> Union[bool, int]: ...
-def subdivCrease(*args: Any, sharpness: bool = ...) -> bool: ...
+def subdivCrease(*args: str, sharpness: bool = ...) -> bool: ...
 def subdivDisplaySmoothness(
-    *args: Any, query: bool = ..., all: bool = ..., smoothness: Queryable[int] = ...
+    *args: str, query: bool = ..., all: bool = ..., smoothness: Queryable[int] = ...
 ) -> Union[bool, int]: ...
-def subgraph(*args: Any, **kwargs: Any) -> None: ...
+def subgraph(*args: Any, **kwargs: Any) -> Any: ...
 def substituteGeometry(
     *args: str,
     disableNonSkinDeformers: bool = ...,
@@ -23928,7 +23871,7 @@ def textFieldGrp(
     visibleChangeCommand: Queryable[Callable[..., Any]] = ...,
     width: Queryable[int] = ...,
 ) -> Union[str, Tuple[float, float, float], bool, int, Callable[..., Any]]: ...
-def textManip(*args: Any, query: bool = ..., visible: bool = ...) -> bool: ...
+def textManip(*, query: bool = ..., visible: bool = ...) -> bool: ...
 def textScrollList(
     arg0: str = ...,
     /,
@@ -24307,7 +24250,9 @@ def timeControl(
     width: Queryable[int] = ...,
 ) -> Union[str, bool, Tuple[float, float, float], int, float, Callable[..., Any]]: ...
 def timeEditor(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *args: str,
     query: bool = ...,
     allClips: str = ...,
     clipId: Multiuse[int] = ...,
@@ -24321,7 +24266,12 @@ def timeEditor(
     topLevelClips: str = ...,
 ) -> Union[str, bool]: ...
 def timeEditorAnimSource(
-    *args: Any,
+    arg0: str = ...,
+    arg1: str = ...,
+    arg2: str = ...,
+    arg3: str = ...,
+    /,
+    *args: str,
     edit: bool = ...,
     query: bool = ...,
     addSource: str = ...,
@@ -24358,7 +24308,7 @@ def timeEditorAnimSource(
     type: Queryable[Multiuse[str]] = ...,
 ) -> Union[str, bool, Multiuse[str]]: ...
 def timeEditorBakeClips(
-    *args: Any,
+    *,
     edit: bool = ...,
     query: bool = ...,
     bakeToAnimSource: str = ...,
@@ -24373,7 +24323,12 @@ def timeEditorBakeClips(
     targetTracksNode: str = ...,
 ) -> int: ...
 def timeEditorClip(
-    *args: Any,
+    arg0: str = ...,
+    arg1: str = ...,
+    arg2: str = ...,
+    arg3: str = ...,
+    /,
+    *args: str,
     edit: bool = ...,
     query: bool = ...,
     absolute: bool = ...,
@@ -24491,7 +24446,7 @@ def timeEditorClip(
     type: Queryable[Multiuse[str]] = ...,
 ) -> Union[str, bool, int, Multiuse[str]]: ...
 def timeEditorClipLayer(
-    *args: Any,
+    *args: str,
     edit: bool = ...,
     query: bool = ...,
     addAttribute: str = ...,
@@ -24518,7 +24473,9 @@ def timeEditorClipLayer(
     zeroKeying: bool = ...,
 ) -> Union[str, bool]: ...
 def timeEditorClipOffset(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *args: str,
     edit: bool = ...,
     query: bool = ...,
     applyToAllRoots: bool = ...,
@@ -24542,7 +24499,9 @@ def timeEditorClipOffset(
     upVectorZ: float = ...,
 ) -> Union[bool, Multiuse[str]]: ...
 def timeEditorComposition(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *args: str,
     edit: bool = ...,
     query: bool = ...,
     active: bool = ...,
@@ -24554,7 +24513,9 @@ def timeEditorComposition(
     tracksNode: bool = ...,
 ) -> Union[str, bool]: ...
 def timeEditorPanel(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *,
     edit: bool = ...,
     query: bool = ...,
     activeClipEditMode: Queryable[int] = ...,
@@ -24602,7 +24563,9 @@ def timeEditorPanel(
     useTemplate: str = ...,
 ) -> Union[str, int, bool]: ...
 def timeEditorTracks(
-    *args: Any,
+    arg0: str = ...,
+    /,
+    *args: str,
     edit: bool = ...,
     query: bool = ...,
     activeClipWeight: Queryable[int] = ...,
@@ -25636,7 +25599,7 @@ def viewLookAt(
     arg0: str = ..., /, *, position: Tuple[float, float, float] = ...
 ) -> bool: ...
 def viewManip(
-    *args: Any,
+    *,
     query: bool = ...,
     bottomLeft: bool = ...,
     bottomRight: bool = ...,
@@ -26310,3 +26273,4 @@ def xformConstraint(
     live: bool = ...,
     type: Queryable[str] = ...,
 ) -> Union[bool, int, str]: ...
+def xpmPicker(*, fileName: str = ..., parent: str = ...) -> str: ...

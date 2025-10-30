@@ -2335,4 +2335,4 @@ ourdict: Dict[str, Any]
 
 py2dict: Dict[str, Any]
 
-val: str = "/Applications/Autodesk/maya2026/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.11/site-packages/maya/api/_OpenMayaRender_py2.so"
+val: str = "C:\\Program Files\\Autodesk\\Maya2026\\Python\\Lib\\site-packages\\maya\\api\\_OpenMayaRender_py2.pyd"

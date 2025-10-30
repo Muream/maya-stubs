@@ -225,17 +225,23 @@ class CmdsSynopsisParser(Parser):
         """
         cache_page = cache_dir() / "synopsis" / f"{command_name}.txt"
 
-        synopsis: str
+        synopsis: str | None
         if not cache_page.exists():
             logger.debug("Fetching synopsis from Maya")
 
-            try:
-                synopsis = cmds.help(command_name)  # type: ignore
-            except RuntimeError as exc:
+            synopsis = get_synopsis(command_name)
+            if synopsis is None:
+                # NOTE: Some commands need to be called before their synopsis is available
+                # with `cmds.help`.
+                try:
+                    getattr(cmds, command_name)()
+                except Exception:
+                    pass
+                synopsis = get_synopsis(command_name)
+
+            if synopsis is None:
                 # Explicitly raise a more specific error that is meant to be caught upstream.
-                raise SynopsisNotFound(
-                    f"Synopsis not found for {command_name}"
-                ) from exc
+                raise SynopsisNotFound(f"Synopsis not found for {command_name}")
 
             logger.debug("Writing synopsis cache: %s", cache_page)
             cache_page.parent.mkdir(parents=True, exist_ok=True)
@@ -247,3 +253,16 @@ class CmdsSynopsisParser(Parser):
         synopsis = cache_page.read_text()
 
         return synopsis
+
+
+def get_synopsis(command_name: str) -> str | None:
+    synopsis = None
+    try:
+        synopsis = cmds.help(command_name)  # type: ignore
+    except RuntimeError:
+        pass
+
+    if isinstance(synopsis, str) and "Quick help is not available" in synopsis:
+        synopsis = None
+
+    return synopsis

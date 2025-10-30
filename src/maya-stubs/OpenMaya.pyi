@@ -8509,6 +8509,8 @@ class MWeight:
 
 NULL: int = 0
 
+STRICT: int = 1
+
 class array2dDouble:
     """ """
     def __init__(self, *args: Unknown) -> None: ...
