@@ -574,6 +574,11 @@ class MPxConstraint(MPxNode):
     enableRestPosition: maya.OpenMaya.MObject
     def getOutputAttributes(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
+    kLast: int = 4
+    kObject: int = 1
+    kObjectRotation: int = 2
+    kScene: int = 0
+    kVector: int = 3
     lockOutput: maya.OpenMaya.MObject
     def passiveOutputAttribute(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def targetAttribute(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -622,6 +627,10 @@ class MPxConstraintCommand(MPxCommand):
     def getObjectAttributesArray(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def handleNewTargets(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def hasVectorFlags(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
+    kGeometryShape: int = 1
+    kLast: int = 2
+    kTransform: int = 0
     def objectAttribute(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def offsetAttribute(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def parseArgs(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -830,6 +839,11 @@ class MPxEmitterNode(MPxNode):
         self, /, *args: Unknown, **kwargs: Unknown
     ) -> Any: ...
 
+    kCurve: int = 3
+    kDirectional: int = 0
+    kOmni: int = 1
+    kSurface: int = 2
+    kVolume: int = 4
     mCurrentTime: maya.OpenMaya.MObject
     mDeltaTime: maya.OpenMaya.MObject
     mDirection: maya.OpenMaya.MObject
@@ -1057,6 +1071,12 @@ class MPxGeometryFilter(MPxNode):
 
     input: maya.OpenMaya.MObject
     inputGeom: maya.OpenMaya.MObject
+    kDeformsAll: int = 6
+    kDeformsColors: int = 4
+    kDeformsUVs: int = 2
+    kNoChange: int = 0
+    kTopologyChange: int = 1
+    kWeightsChange: int = 2
     originalGeometry: maya.OpenMaya.MObject
     outputGeom: maya.OpenMaya.MObject
     def prepareDeform(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -1128,6 +1148,9 @@ class MPxHardwareShader(MPxNode):
     @staticmethod
     def getHardwareShaderPtr(*args: Unknown, **kwargs: Unknown) -> Any: ...
 
+    kIsTransparent: int = 1
+    kNoTransparencyFrontBackCull: int = 2
+    kNoTransparencyPolygonSort: int = 4
     outColor: maya.OpenMaya.MObject
     outColorB: maya.OpenMaya.MObject
     outColorG: maya.OpenMaya.MObject
@@ -1162,6 +1185,22 @@ class MPxHwShaderNode(MPxNode):
     def glUnbind(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def hasTransparency(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def invertTexCoords(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
+    kDirtyAll: int = 15
+    kDirtyColorArrays: int = 4
+    kDirtyNone: int = 0
+    kDirtyNormalArray: int = 2
+    kDirtyTexCoordArrays: int = 8
+    kDirtyVertexArray: int = 1
+    kIsTransparent: int = 1
+    kNoTransparencyFrontBackCull: int = 2
+    kNoTransparencyPolygonSort: int = 4
+    kWriteAll: int = 15
+    kWriteColorArrays: int = 4
+    kWriteNone: int = 0
+    kWriteNormalArray: int = 2
+    kWriteTexCoordArrays: int = 8
+    kWriteVertexArray: int = 1
     def normalsPerVertex(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
     outColor: maya.OpenMaya.MObject
@@ -1440,6 +1479,18 @@ class MPxManipContainer(MPxNode):
     @staticmethod
     def initialize(*args: Unknown, **kwargs: Unknown) -> Any: ...
     def isManipActive(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
+    kCircleSweepManip: int = 6
+    kCurveSegmentManip: int = 9
+    kCustomManip: int = 10
+    kDirectionManip: int = 1
+    kDiscManip: int = 5
+    kDistanceManip: int = 2
+    kFreePointTriadManip: int = 0
+    kPointOnCurveManip: int = 3
+    kPointOnSurfaceManip: int = 4
+    kStateManip: int = 8
+    kToggleManip: int = 7
     def manipToPlugConversion(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def newManipulator(*args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -1638,6 +1689,11 @@ class MPxMotionPathNode(MPxNode):
 
     inverseFront: maya.OpenMaya.MObject
     inverseUp: maya.OpenMaya.MObject
+    kUpNormal: int = 4
+    kUpObject: int = 1
+    kUpObjectRotation: int = 2
+    kUpScene: int = 0
+    kUpVector: int = 3
     def matrix(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
     normal: maya.OpenMaya.MObject
@@ -2085,6 +2141,25 @@ class MPxSurfaceShape(MPxNode):
     def isRenderable(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
     isTemplated: maya.OpenMaya.MObject
+    kBoundingBoxChanged: int = 1
+    kMatchInvalidAttribute: int = 4
+    kMatchInvalidAttributeDim: int = 7
+    kMatchInvalidAttributeIndex: int = 5
+    kMatchInvalidAttributeRange: int = 6
+    kMatchInvalidName: int = 3
+    kMatchNone: int = 1
+    kMatchOk: int = 0
+    kMatchTooMany: int = 2
+    kNoPointCaching: int = 0
+    kNormal: int = 0
+    kObjectChanged: int = 0
+    kRestorePoints: int = 2
+    kSavePoints: int = 1
+    kTransformOriginalPoints: int = 4
+    kUTangent: int = 1
+    kUVNTriad: int = 3
+    kUpdatePoints: int = 3
+    kVTangent: int = 2
     def localShapeInAttr(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def localShapeOutAttr(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 

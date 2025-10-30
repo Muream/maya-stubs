@@ -72,7 +72,7 @@ class MArgList:
     def asVector(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def flagIndex(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
-    kInvalidArgIndex: int = -1
+    kInvalidArgIndex: int = 4294967295
     def lastArgUsed(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MArgParser:
@@ -381,7 +381,12 @@ class MCommandMessage(MMessage):
     @staticmethod
     def addProcCallback(*args: Unknown, **kwargs: Unknown) -> Any: ...
 
+    kDisplay: int = 1
     kError: int = 4
+    kHistory: int = 0
+    kInfo: int = 2
+    kMELCommand: int = 1
+    kMELProc: int = 0
     kResult: int = 5
     kStackTrace: int = 6
     kWarning: int = 3
@@ -429,9 +434,13 @@ class MDGContext:
     def current(*args: Unknown, **kwargs: Unknown) -> Any: ...
     def getTime(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isCurrent(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def isManaged(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isNormal(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def isTimed(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
+    kManaged: MDGContext
     kNormal: MDGContext
+    kTimed: MDGContext
     def makeCurrent(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MDGMessage(MMessage):
@@ -551,12 +560,15 @@ class MDagMessage(MMessage):
     def addWorldMatrixModifiedCallback(*args: Unknown, **kwargs: Unknown) -> Any: ...
 
     kAll: int = 268435455
+    kChildAdded: int = 2
     kChildRemoved: int = 3
     kChildReordered: int = 4
     kInstanceAdded: int = 5
     kInstanceRemoved: int = 6
     kInvalidMsg: int = -1
     kLast: int = 7
+    kParentAdded: int = 0
+    kParentRemoved: int = 1
     kRotateOrder: int = 134217728
     kRotateOrient: int = 117440512
     kRotateOrientX: int = 16777216
@@ -583,6 +595,8 @@ class MDagMessage(MMessage):
     kScaleTransX: int = 262144
     kScaleTransY: int = 524288
     kScaleTransZ: int = 1048576
+    kScaleX: int = 1
+    kScaleY: int = 2
     kScaleZ: int = 4
     kShear: int = 56
     kShearXY: int = 8
@@ -2586,6 +2600,13 @@ class MFnCamera(MFnDagNode):
     def isOrtho(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
     isVerticalLock: Any
+    kFillFilmFit: int = 0
+    kHorizontalFilmFit: int = 1
+    kInvalid: int = 4
+    kOverscanFilmFit: int = 3
+    kRotateTranslate: int = 0
+    kTranslateRotate: int = 1
+    kVerticalFilmFit: int = 2
     lensSqueezeRatio: Any
     nearClippingPlane: Any
     nearFocusDistance: Any
@@ -2697,6 +2718,10 @@ class MFnContainerNode(MFnDependencyNode):
     def getRootTransform(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getSubcontainers(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isCurrent(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
+    kChildAnchor: int = 1
+    kGeneric: int = 2
+    kParentAnchor: int = 0
     def makeCurrent(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
 class MFnDagNode(MFnDependencyNode):
@@ -3013,6 +3038,16 @@ class MFnGeometryData(MFnData):
 
     isIdentity: Any
     isNotIdentity: Any
+    kAuto: int = 0
+    kCompleteGroup: int = 2
+    kEdges: int = 3
+    kEmptyGroup: int = 1
+    kFaces: int = 4
+    kInvalidGroup: int = 0
+    kNull: int = 1
+    kPartialGroup: int = 3
+    kUnsupported: int = 5
+    kVerts: int = 2
     matrix: Any
     def objectGroup(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def objectGroupComponent(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -3074,6 +3109,8 @@ class MFnMatrixAttribute(MFnAttribute):
     def create(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
     default: Any
+    kDouble: int = 1
+    kFloat: int = 0
 
 class MFnMatrixData(MFnData):
     """Function set for matrix node data."""
@@ -3255,11 +3292,35 @@ class MFnMesh(MFnDagNode):
     def isRightHandedTangent(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isUVSetPerInstance(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
+    kAlpha: int = 1
+    kBooleanCutOut: int = 8
+    kBooleanDifferenceAB: int = 2
+    kBooleanDifferenceBA: int = 4
+    kBooleanHolePunch: int = 7
+    kBooleanIntersection: int = 3
+    kBooleanSplit: int = 5
+    kBooleanSplitEdges: int = 6
+    kBooleanUnion: int = 1
+    kDifference: int = 2
+    kEdgeClassification: int = 1
     kGeomBorder: int = -2
     kInstanceUnspecified: int = -1
+    kInternalPoint: int = 1
     kIntersectTolerance: float = 1e-06
+    kIntersection: int = 3
+    kInvalid: int = 2
+    kLegacyMeshGeometryMode: int = 1
+    kMeshGeometryMode: int = 0
+    kNormalClassification: int = 2
+    kOnEdge: int = 0
     kPointTolerance: float = 1e-10
+    kRGB: int = 3
+    kRGBA: int = 4
+    kSharedUV: int = 0
     kUVBorder: int = -1
+    kUnion: int = 1
+    kUnsharedUV: int = 1
+    kVolumeGeometryMode: int = 2
     def lockFaceVertexNormals(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def lockVertexNormals(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
@@ -3381,6 +3442,29 @@ class MFnNumericData(MFnData):
     def __new__(cls, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def create(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getData(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
+    k2Double: int = 15
+    k2Float: int = 12
+    k2Int: int = 8
+    k2Long: int = 8
+    k2Short: int = 5
+    k3Double: int = 16
+    k3Float: int = 13
+    k3Int: int = 9
+    k3Long: int = 9
+    k3Short: int = 6
+    k4Double: int = 17
+    kAddr: int = 18
+    kBoolean: int = 1
+    kByte: int = 2
+    kChar: int = 3
+    kDouble: int = 14
+    kFloat: int = 11
+    kInt: int = 7
+    kInt64: int = 10
+    kLast: int = 19
+    kLong: int = 7
+    kShort: int = 4
     def numericType(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setData(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
@@ -3486,7 +3570,12 @@ class MFnNurbsCurve(MFnDagNode):
     isPlanar: bool
     def isPointOnCurve(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
+    kClosed: int = 2
     kFindParamTolerance: float = 1e-06
+    kInvalid: int = 0
+    kLast: int = 4
+    kOpen: int = 1
+    kPeriodic: int = 3
     kPointTolerance: float = 0.001
     def knot(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
@@ -3657,7 +3746,17 @@ class MFnNurbsSurface(MFnDagNode):
 
     isTrimmedSurface: Any
     isUniform: Any
+    kClosed: int = 2
+    kClosedSegment: int = 4
+    kInner: int = 2
+    kInvalid: int = 0
+    kInvalidBoundary: int = 0
+    kLast: int = 4
+    kOpen: int = 1
+    kOuter: int = 1
+    kPeriodic: int = 3
     kPointTolerance: float = 0.001
+    kSegment: int = 3
     knotDomainInU: Any
     knotDomainInV: Any
     def knotInU(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -3816,6 +3915,13 @@ class MFnSet(MFnDependencyNode):
     def hasRestrictions(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def intersectsWith(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isMember(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
+    kEdgesOnly: int = 2
+    kEditPointsOnly: int = 4
+    kFacetsOnly: int = 3
+    kNone: int = 0
+    kRenderableOnly: int = 5
+    kVerticesOnly: int = 1
     def removeMember(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def removeMembers(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def restriction(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -3880,7 +3986,17 @@ class MFnTransform(MFnDagNode):
     kRotateMinX: int = 12
     kRotateMinY: int = 14
     kRotateMinZ: int = 16
+    kScaleMaxX: int = 1
+    kScaleMaxY: int = 3
+    kScaleMaxZ: int = 5
+    kScaleMinX: int = 0
+    kScaleMinY: int = 2
+    kScaleMinZ: int = 4
+    kShearMaxXY: int = 7
+    kShearMaxXZ: int = 9
     kShearMaxYZ: int = 11
+    kShearMinXY: int = 6
+    kShearMinXZ: int = 8
     kShearMinYZ: int = 10
     kTranslateMaxX: int = 19
     kTranslateMaxY: int = 21
@@ -3985,6 +4101,9 @@ class MFnUnitAttribute(MFnAttribute):
     def hasSoftMax(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def hasSoftMin(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
+    kAngle: int = 1
+    kDistance: int = 2
+    kInvalid: int = 0
     kLast: int = 4
     kTime: int = 3
     def setMax(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -4047,6 +4166,8 @@ class MGlobal:
     @staticmethod
     def executeCommandOnIdle(*args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
+    def executeCommandOnIdleWithPriority(*args: Unknown, **kwargs: Unknown) -> Any: ...
+    @staticmethod
     def executeCommandStringResult(*args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def getAbsolutePathToResources(*args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -4083,8 +4204,10 @@ class MGlobal:
     kAddToList: int = 2
     kBaseUIMode: int = 3
     kBatch: int = 1
+    kHighIdlePriority: int = 0
     kInteractive: int = 0
     kLibraryApp: int = 2
+    kLowIdlePriority: int = 1
     kRemoveFromList: int = 3
     kReplaceList: int = 0
     kSelectComponentMode: int = 1
@@ -4093,6 +4216,7 @@ class MGlobal:
     kSelectRootMode: int = 2
     kSelectTemplateMode: int = 4
     kSurfaceSelectMethod: int = 0
+    kVeryLowIdlePriority: int = 2
     kWireframeSelectMethod: int = 1
     kXORWithList: int = 1
     @staticmethod
@@ -4777,6 +4901,11 @@ class MLockMessage(MMessage):
     kCreateChildInstance: int = 6
     kCreateNodeInstance: int = 5
     kCreateParentInstance: int = 7
+    kDelete: int = 2
+    kGroup: int = 1
+    kInvalid: int = 0
+    kInvalidDAG: int = 0
+    kInvalidPlug: int = 0
     kLast: int = 10
     kLastDAG: int = 8
     kLastPlug: int = 8
@@ -4785,11 +4914,15 @@ class MLockMessage(MMessage):
     kPlugAttrValChange: int = 3
     kPlugConnect: int = 6
     kPlugDisconnect: int = 7
+    kPlugLockAttr: int = 1
     kPlugRemoveAttr: int = 4
     kPlugRenameAttr: int = 5
+    kPlugUnlockAttr: int = 2
     kRemoveAttr: int = 6
+    kRename: int = 1
     kRenameAttr: int = 7
     kReparent: int = 3
+    kUnGroup: int = 2
     kUnlockAttr: int = 8
     kUnlockNode: int = 4
     @staticmethod
@@ -4944,6 +5077,8 @@ class MModelMessage(MMessage):
     @staticmethod
     def addPostDuplicateNodeListCallback(*args: Unknown, **kwargs: Unknown) -> Any: ...
 
+    kActiveListModified: int = 0
+
 class MNamespace:
     """Access Maya namespace functionality."""
     @staticmethod
@@ -5091,9 +5226,14 @@ class MNodeMessage(MMessage):
     kAttributeSet: int = 8
     kAttributeUnkeyable: int = 1024
     kAttributeUnlocked: int = 32
+    kConnectionBroken: int = 2
+    kConnectionMade: int = 1
     kIncomingDirection: int = 2048
+    kKeyChangeInvalid: int = 0
     kKeyChangeLast: int = 3
     kLast: int = 32768
+    kMakeKeyable: int = 1
+    kMakeUnkeyable: int = 2
     kOtherPlugSet: int = 16384
 
 class MObject:
@@ -5636,6 +5776,25 @@ class MPxSurfaceShape(MPxNode):
 
     isRenderable: Any
     isTemplated: MObject
+    kBoundingBoxChanged: int = 1
+    kMatchInvalidAttribute: int = 4
+    kMatchInvalidAttributeDim: int = 7
+    kMatchInvalidAttributeIndex: int = 5
+    kMatchInvalidAttributeRange: int = 6
+    kMatchInvalidName: int = 3
+    kMatchNone: int = 1
+    kMatchOk: int = 0
+    kMatchTooMany: int = 2
+    kNoPointCaching: int = 0
+    kNormal: int = 0
+    kObjectChanged: int = 0
+    kRestorePoints: int = 2
+    kSavePoints: int = 1
+    kTransformOriginalPoints: int = 4
+    kUTangent: int = 1
+    kUVNTriad: int = 3
+    kUpdatePoints: int = 3
+    kVTangent: int = 2
     def localShapeInAttr(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def localShapeOutAttr(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
@@ -5830,6 +5989,7 @@ class MSceneMessage(MMessage):
     kAfterImportReference: int = 19
     kAfterLoadReference: int = 37
     kAfterLoadReferenceAndRecordEdits: int = 48
+    kAfterNew: int = 2
     kAfterOpen: int = 6
     kAfterPluginLoad: int = 41
     kAfterPluginUnload: int = 43
@@ -5853,6 +6013,7 @@ class MSceneMessage(MMessage):
     kBeforeLoadReference: int = 36
     kBeforeLoadReferenceAndRecordEdits: int = 47
     kBeforeLoadReferenceCheck: int = 38
+    kBeforeNew: int = 1
     kBeforeNewCheck: int = 31
     kBeforeOpen: int = 5
     kBeforeOpenCheck: int = 32
@@ -5870,6 +6031,7 @@ class MSceneMessage(MMessage):
     kLast: int = 51
     kMayaExiting: int = 30
     kMayaInitialized: int = 29
+    kSceneUpdate: int = 0
     kSoftwareRenderInterrupted: int = 28
 
 class MSelectionList:
@@ -6529,4 +6691,4 @@ py2dict: Dict[str, Any]
 def registerStringResource(*args: Unknown, **kwargs: Unknown) -> Any: ...
 def registerStringResources(*args: Unknown, **kwargs: Unknown) -> Any: ...
 
-val: str = "C:\\Program Files\\Autodesk\\Maya2026\\Python\\Lib\\site-packages\\maya\\api\\_OpenMaya_py2.pyd"
+val: str = "/Applications/Autodesk/maya2026/Maya.app/Contents/Frameworks/Python.framework/Versions/Current/lib/python3.11/site-packages/maya/api/_OpenMaya_py2.so"

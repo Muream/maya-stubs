@@ -4,7 +4,7 @@ from typing import *
 
 Unknown = Any
 
-MAYA_API_VERSION: int = 20260000
+MAYA_API_VERSION: int = 20260200
 
 MAYA_APP_VERSION: int = 2026
 
@@ -579,7 +579,12 @@ class MCommandMessage(MMessage):
     @staticmethod
     def className(*args: Unknown, **kwargs: Unknown) -> Any: ...
 
+    kDisplay: int = 1
     kError: int = 4
+    kHistory: int = 0
+    kInfo: int = 2
+    kMELCommand: int = 1
+    kMELProc: int = 0
     kResult: int = 5
     kStackTrace: int = 6
     kWarning: int = 3
@@ -735,7 +740,9 @@ class MDGContext:
     fsNormal: MDGContext
     def getTime(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isCurrent(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def isManaged(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isNormal(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def isTimed(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def makeCurrent(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
     thisown: bool
@@ -871,12 +878,15 @@ class MDagMessage(MMessage):
     def className(*args: Unknown, **kwargs: Unknown) -> Any: ...
 
     kAll: int = 268435455
+    kChildAdded: int = 2
     kChildRemoved: int = 3
     kChildReordered: int = 4
     kInstanceAdded: int = 5
     kInstanceRemoved: int = 6
     kInvalidMsg: int = -1
     kLast: int = 7
+    kParentAdded: int = 0
+    kParentRemoved: int = 1
     kRotateOrder: int = 134217728
     kRotateOrient: int = 117440512
     kRotateOrientX: int = 16777216
@@ -903,6 +913,8 @@ class MDagMessage(MMessage):
     kScaleTransX: int = 262144
     kScaleTransY: int = 524288
     kScaleTransZ: int = 1048576
+    kScaleX: int = 1
+    kScaleY: int = 2
     kScaleZ: int = 4
     kShear: int = 56
     kShearXY: int = 8
@@ -3074,6 +3086,12 @@ class MFnArrayAttrsData(MFnData):
     def getStringData(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getVectorData(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def intArray(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
+    kDoubleArray: int = 2
+    kIntArray: int = 3
+    kLast: int = 5
+    kStringArray: int = 4
+    kVectorArray: int = 1
     def list(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def stringArray(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
@@ -3267,6 +3285,14 @@ class MFnCamera(MFnDagNode):
     def isMotionBlur(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isOrtho(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isVerticalLock(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
+    kFillFilmFit: int = 0
+    kHorizontalFilmFit: int = 1
+    kInvalid: int = 4
+    kOverscanFilmFit: int = 3
+    kRotateTranslate: int = 0
+    kTranslateRotate: int = 1
+    kVerticalFilmFit: int = 2
     def lensSqueezeRatio(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def nearClippingPlane(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def nearFocusDistance(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -3455,6 +3481,10 @@ class MFnContainerNode(MFnDependencyNode):
     def getRootTransform(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getSubcontainers(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isCurrent(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
+    kChildAnchor: int = 1
+    kGeneric: int = 2
+    kParentAnchor: int = 0
     def makeCurrent(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
     thisown: bool
@@ -3499,6 +3529,9 @@ class MFnDagNode(MFnDependencyNode):
     def isParentOf(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
     kNextPos: int = 255
+    kUseDefaultColor: int = 0
+    kUseIndexColor: int = 1
+    kUseRGBColor: int = 2
     def model(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def objectColor(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def objectColorIndex(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -3733,6 +3766,10 @@ class MFnExpression(MFnDependencyNode):
     def expression(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getDefaultObject(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isAnimated(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
+    kAll: int = 0
+    kAngularOnly: int = 2
+    kNone: int = 1
     def setAnimated(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setDefaultObject(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setExpression(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -3793,6 +3830,17 @@ class MFnGeometryData(MFnData):
     def getMatrix(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def hasComponentTag(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def hasObjectGroup(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
+    kAuto: int = 0
+    kCompleteGroup: int = 2
+    kEdges: int = 3
+    kEmptyGroup: int = 1
+    kFaces: int = 4
+    kInvalidGroup: int = 0
+    kNull: int = 1
+    kPartialGroup: int = 3
+    kUnsupported: int = 5
+    kVerts: int = 2
     def matrixIsIdentity(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def matrixIsNotIdentity(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def objectGroup(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -3962,6 +4010,9 @@ class MFnMatrixAttribute(MFnAttribute):
     def className(*args: Unknown, **kwargs: Unknown) -> Any: ...
     def create(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getDefault(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
+    kDouble: int = 1
+    kFloat: int = 0
     def setDefault(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
     thisown: bool
@@ -4151,6 +4202,7 @@ class MFnMesh(MFnDagNode):
     def hasAlphaChannels(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def hasBlindData(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def hasBlindDataComponentId(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+    def hasBlindDataComponentIds(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def hasColorChannels(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def intersect(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def intersectFaceAtUV(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -4164,8 +4216,32 @@ class MFnMesh(MFnDagNode):
     def isRightHandedTangent(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isUVSetPerInstance(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
+    kAlpha: int = 1
+    kBooleanCutOut: int = 8
+    kBooleanDifferenceAB: int = 2
+    kBooleanDifferenceBA: int = 4
+    kBooleanHolePunch: int = 7
+    kBooleanIntersection: int = 3
+    kBooleanSplit: int = 5
+    kBooleanSplitEdges: int = 6
+    kBooleanUnion: int = 1
+    kDifference: int = 2
+    kEdgeClassification: int = 1
     kGeomBorder: int = -2
+    kInternalPoint: int = 1
+    kIntersection: int = 3
+    kInvalid: int = 2
+    kLegacyMeshGeometryMode: int = 1
+    kMeshGeometryMode: int = 0
+    kNormalClassification: int = 2
+    kOnEdge: int = 0
+    kRGB: int = 3
+    kRGBA: int = 4
+    kSharedUV: int = 0
     kUVBorder: int = -1
+    kUnion: int = 1
+    kUnsharedUV: int = 1
+    kVolumeGeometryMode: int = 2
     def lockFaceVertexNormals(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def lockVertexNormals(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def numColorSets(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -4345,6 +4421,29 @@ class MFnNumericData(MFnData):
     def getData3Int(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getData3Short(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def getData4Double(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
+    k2Double: int = 15
+    k2Float: int = 12
+    k2Int: int = 8
+    k2Long: int = 8
+    k2Short: int = 5
+    k3Double: int = 16
+    k3Float: int = 13
+    k3Int: int = 9
+    k3Long: int = 9
+    k3Short: int = 6
+    k4Double: int = 17
+    kAddr: int = 18
+    kBoolean: int = 1
+    kByte: int = 2
+    kChar: int = 3
+    kDouble: int = 14
+    kFloat: int = 11
+    kInt: int = 7
+    kInt64: int = 10
+    kLast: int = 19
+    kLong: int = 7
+    kShort: int = 4
     def numericType(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setData2Double(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setData2Float(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -4387,6 +4486,12 @@ class MFnNurbsCurve(MFnDagNode):
     def isParamOnCurve(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isPlanar(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isPointOnCurve(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
+    kClosed: int = 2
+    kInvalid: int = 0
+    kLast: int = 4
+    kOpen: int = 1
+    kPeriodic: int = 3
     def knot(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def length(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def makeMultipleEndKnots(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -4469,6 +4574,17 @@ class MFnNurbsSurface(MFnDagNode):
     def isPointOnSurface(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isTrimmedSurface(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isUniform(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
+    kClosed: int = 2
+    kClosedSegment: int = 4
+    kInner: int = 2
+    kInvalid: int = 0
+    kInvalidBoundary: int = 0
+    kLast: int = 4
+    kOpen: int = 1
+    kOuter: int = 1
+    kPeriodic: int = 3
+    kSegment: int = 3
     def knotInU(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def knotInV(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def normal(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -4632,6 +4748,13 @@ class MFnPartition(MFnDependencyNode):
     def className(*args: Unknown, **kwargs: Unknown) -> Any: ...
     def create(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isRenderPartition(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
+    kEdgesOnly: int = 2
+    kEditPointsOnly: int = 4
+    kFacetsOnly: int = 3
+    kNone: int = 0
+    kRenderableOnly: int = 5
+    kVerticesOnly: int = 1
     def removeMember(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
     thisown: bool
@@ -4763,6 +4886,13 @@ class MFnSet(MFnDependencyNode):
     def hasRestrictions(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def intersectsWith(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def isMember(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
+    kEdgesOnly: int = 2
+    kEditPointsOnly: int = 4
+    kFacetsOnly: int = 3
+    kNone: int = 0
+    kRenderableOnly: int = 5
+    kVerticesOnly: int = 1
     def removeMember(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def removeMembers(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def restriction(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -4811,6 +4941,14 @@ class MFnSpotLight(MFnNonExtendedLight):
     def create(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def dropOff(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def endDistance(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
+    kBottom: int = 3
+    kFirst: int = 0
+    kLeft: int = 0
+    kRight: int = 1
+    kSecond: int = 1
+    kThird: int = 2
+    kTop: int = 2
     def penumbraAngle(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setBarnDoorAngle(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setBarnDoors(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -5137,7 +5275,17 @@ class MFnTransform(MFnDagNode):
     kRotateMinX: int = 12
     kRotateMinY: int = 14
     kRotateMinZ: int = 16
+    kScaleMaxX: int = 1
+    kScaleMaxY: int = 3
+    kScaleMaxZ: int = 5
+    kScaleMinX: int = 0
+    kScaleMinY: int = 2
+    kScaleMinZ: int = 4
+    kShearMaxXY: int = 7
+    kShearMaxXZ: int = 9
     kShearMaxYZ: int = 11
+    kShearMinXY: int = 6
+    kShearMinXZ: int = 8
     kShearMinYZ: int = 10
     kTranslateMaxX: int = 19
     kTranslateMaxY: int = 21
@@ -5257,6 +5405,9 @@ class MFnUnitAttribute(MFnAttribute):
     def hasSoftMax(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def hasSoftMin(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
 
+    kAngle: int = 1
+    kDistance: int = 2
+    kInvalid: int = 0
     kLast: int = 4
     kTime: int = 3
     def setDefault(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -5293,6 +5444,17 @@ class MFnVolumeLight(MFnPointLight):
     def coneEndRadius(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def create(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def emitAmbient(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
+
+    kBoxVolume: int = 0
+    kConeVolume: int = 3
+    kCylinderVolume: int = 2
+    kDownAxis: int = 2
+    kInward: int = 1
+    kOutward: int = 0
+    kSphereVolume: int = 1
+    kXaxis: int = 0
+    kYaxis: int = 1
+    kZaxis: int = 2
     def lightShape(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def penumbraRamp(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
     def setArc(self, /, *args: Unknown, **kwargs: Unknown) -> Any: ...
@@ -5362,11 +5524,17 @@ class MGlobal:
     @staticmethod
     def executeCommandOnIdle(*args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
+    def executeCommandOnIdleWithPriority(*args: Unknown, **kwargs: Unknown) -> Any: ...
+    @staticmethod
     def executeCommandStringResult(*args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def executePythonCommand(*args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
     def executePythonCommandOnIdle(*args: Unknown, **kwargs: Unknown) -> Any: ...
+    @staticmethod
+    def executePythonCommandOnIdleWithPriority(
+        *args: Unknown, **kwargs: Unknown
+    ) -> Any: ...
     @staticmethod
     def executePythonCommandStringResult(*args: Unknown, **kwargs: Unknown) -> Any: ...
     @staticmethod
@@ -5413,8 +5581,10 @@ class MGlobal:
     kBaseUIMode: int = 3
     kBatch: int = 1
     kComplete: int = 0
+    kHighIdlePriority: int = 0
     kInteractive: int = 0
     kLibraryApp: int = 2
+    kLowIdlePriority: int = 1
     kRemoveFromList: int = 3
     kReplaceList: int = 0
     kRestricted: int = 1
@@ -5424,6 +5594,7 @@ class MGlobal:
     kSelectRootMode: int = 2
     kSelectTemplateMode: int = 4
     kSurfaceSelectMethod: int = 0
+    kVeryLowIdlePriority: int = 2
     kWireframeSelectMethod: int = 1
     kXORWithList: int = 1
     @staticmethod
@@ -6231,6 +6402,11 @@ class MLockMessage(MMessage):
     kCreateChildInstance: int = 6
     kCreateNodeInstance: int = 5
     kCreateParentInstance: int = 7
+    kDelete: int = 2
+    kGroup: int = 1
+    kInvalid: int = 0
+    kInvalidDAG: int = 0
+    kInvalidPlug: int = 0
     kLast: int = 10
     kLastDAG: int = 8
     kLastPlug: int = 8
@@ -6239,11 +6415,15 @@ class MLockMessage(MMessage):
     kPlugAttrValChange: int = 3
     kPlugConnect: int = 6
     kPlugDisconnect: int = 7
+    kPlugLockAttr: int = 1
     kPlugRemoveAttr: int = 4
     kPlugRenameAttr: int = 5
+    kPlugUnlockAttr: int = 2
     kRemoveAttr: int = 6
+    kRename: int = 1
     kRenameAttr: int = 7
     kReparent: int = 3
+    kUnGroup: int = 2
     kUnlockAttr: int = 8
     kUnlockNode: int = 4
     @staticmethod
@@ -6470,6 +6650,7 @@ class MModelMessage(MMessage):
     @staticmethod
     def className(*args: Unknown, **kwargs: Unknown) -> Any: ...
 
+    kActiveListModified: int = 0
     thisown: bool
 
 class MNamespace:
@@ -6631,9 +6812,14 @@ class MNodeMessage(MMessage):
     kAttributeSet: int = 8
     kAttributeUnkeyable: int = 1024
     kAttributeUnlocked: int = 32
+    kConnectionBroken: int = 2
+    kConnectionMade: int = 1
     kIncomingDirection: int = 2048
+    kKeyChangeInvalid: int = 0
     kKeyChangeLast: int = 3
     kLast: int = 32768
+    kMakeKeyable: int = 1
+    kMakeUnkeyable: int = 2
     kOtherPlugSet: int = 16384
     thisown: bool
 
@@ -6981,7 +7167,16 @@ class MPolyMessage(MMessage):
     @staticmethod
     def deletedId(*args: Unknown, **kwargs: Unknown) -> Any: ...
 
+    kColorSetAdded: int = 0
+    kColorSetDeleted: int = 1
+    kCurrentColorSetChanged: int = 2
+    kCurrentUVSetChanged: int = 2
+    kEdgeIndex: int = 1
+    kFaceIndex: int = 2
     kLastErrorIndex: int = 3
+    kUVSetAdded: int = 0
+    kUVSetDeleted: int = 1
+    kVertexIndex: int = 0
     thisown: bool
 
 class MProfiler:
@@ -7261,6 +7456,7 @@ class MSceneMessage(MMessage):
     kAfterImportReference: int = 19
     kAfterLoadReference: int = 37
     kAfterLoadReferenceAndRecordEdits: int = 48
+    kAfterNew: int = 2
     kAfterOpen: int = 6
     kAfterPluginLoad: int = 41
     kAfterPluginUnload: int = 43
@@ -7284,6 +7480,7 @@ class MSceneMessage(MMessage):
     kBeforeLoadReference: int = 36
     kBeforeLoadReferenceAndRecordEdits: int = 47
     kBeforeLoadReferenceCheck: int = 38
+    kBeforeNew: int = 1
     kBeforeNewCheck: int = 31
     kBeforeOpen: int = 5
     kBeforeOpenCheck: int = 32
@@ -7301,6 +7498,7 @@ class MSceneMessage(MMessage):
     kLast: int = 51
     kMayaExiting: int = 30
     kMayaInitialized: int = 29
+    kSceneUpdate: int = 0
     kSoftwareRenderInterrupted: int = 28
     thisown: bool
 
@@ -8310,8 +8508,6 @@ class MWeight:
     thisown: bool
 
 NULL: int = 0
-
-STRICT: int = 1
 
 class array2dDouble:
     """ """
