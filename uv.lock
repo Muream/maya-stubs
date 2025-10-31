@@ -450,7 +450,7 @@ requires-dist = [
 
 [[package]]
 name = "maya-stubs"
-version = "0.4.1"
+version = "0.4.2"
 source = { editable = "." }
 
 [package.dev-dependencies]
