@@ -1,5 +1,0 @@
-cmds
-mayapy
-MDAG
-uninitialize
-Uninitializing

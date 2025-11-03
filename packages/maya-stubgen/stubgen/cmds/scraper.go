@@ -1,15 +1,21 @@
-package scraper
+package cmds
 
 import (
+	"encoding/json"
 	"fmt"
 	"log"
+	"os"
+	"path/filepath"
 	"regexp"
 	"slices"
 	"strconv"
 	"strings"
+	"sync"
 
 	"github.com/gocolly/colly"
 )
+
+const URL = "https://help.autodesk.com/cloudhelp/2026/ENU/Maya-Tech-Docs/CommandsPython/index_all.html"
 
 var global_command MayaCmd
 var global_flag string
@@ -18,6 +24,95 @@ var union_regex = regexp.MustCompile(`(?:\w+)\|(?:\w+)`)
 var array_regex = regexp.MustCompile(`(?P<type>\w+)\[(?P<length>\d+|\.\.\.)?\]`)
 var tuple_regex = regexp.MustCompile(`\[(?P<types>.+)\]`)
 var synposis_regex = regexp.MustCompile(`\((?P<args>.+)\)`)
+
+// if this is present in the argument description,
+// the argument does not become bool in query mode
+var query_mandatory_value_str = "In query mode, this flag needs a value"
+
+func ScrapeCmdsDocs(cacheDir string) {
+
+	// Thread-safe slice to collect results
+	var results []MayaCmd
+	var mu sync.Mutex
+
+	c := colly.NewCollector(
+		colly.AllowedDomains("help.autodesk.com"),
+		colly.MaxDepth(1),
+		colly.Async(true),
+	)
+	c2 := c.Clone()
+
+	c.OnHTML("a[href]", func(h *colly.HTMLElement) {
+		link := h.Request.AbsoluteURL(h.Attr("href"))
+		ctx := colly.NewContext()
+		cmd := MayaCmd{}
+		cmd.ReturnType = "None"
+		ctx.Put("cmd", &cmd) // attach a fresh struct for this page
+		c2.Request("GET", link, nil, ctx, nil)
+	})
+
+	c.OnError(func(r *colly.Response, err error) {
+		fmt.Println(err)
+	})
+
+	// Get the name of the command
+	c2.OnHTML("h1", func(h *colly.HTMLElement) {
+		scrapeName(h)
+	})
+
+	// Get positional arguments from the synopsis
+	c2.OnHTML("p[id=synopsis] code", func(h *colly.HTMLElement) {
+		scrapeSynopsis(h)
+	})
+
+	// Get the Flags (ie: Keyword Arguments)
+	c2.OnHTML("h2:contains('Flags') ~ a + table tr[bgcolor]", func(h *colly.HTMLElement) {
+		scrapeFlags(h)
+	})
+
+	// Used if the Return Value is a <table>
+	c2.OnHTML("h2:contains('Return value') + table", func(h *colly.HTMLElement) {
+		scrapeReturn(h)
+	})
+
+	// Used if the Return Value is a <p>
+	c2.OnHTML("h2:contains('Return value') + p", func(h *colly.HTMLElement) {
+		scrapeReturn(h)
+	})
+
+	// gather all the scraped commands
+	c2.OnScraped(func(r *colly.Response) {
+		cmd := r.Ctx.GetAny("cmd").(*MayaCmd)
+
+		mu.Lock()
+		results = append(results, *cmd)
+		mu.Unlock()
+	})
+
+	c.Visit(URL)
+	c.Wait()
+	c2.Wait()
+
+	slices.SortFunc(results, func(a MayaCmd, b MayaCmd) int {
+		asdf := []string{a.Name, b.Name}
+		slices.Sort(asdf)
+
+		if asdf[0] == a.Name {
+			return -1
+		} else {
+			return 1
+		}
+	})
+
+	data, err := json.MarshalIndent(results, "", "  ")
+	if err != nil {
+		log.Fatal("Error encoding JSON:", err)
+	}
+
+	if err := os.WriteFile(filepath.Join(cacheDir, "cmds.json"), data, 0644); err != nil {
+		log.Fatal("Error writing file:", err)
+	}
+}
 
 func scrapeName(h *colly.HTMLElement) {
 	cmd := h.Request.Ctx.GetAny("cmd").(*MayaCmd)
@@ -54,13 +149,13 @@ func scrapeSynopsis(h *colly.HTMLElement) {
 	for i, t := range va_args {
 		py_va_args[i] = mel_type_to_python(t)
 	}
-	fmt.Println(py_va_args)
-	// fmt.Println()
-	fmt.Println()
 }
 
 func scrapeFlags(h *colly.HTMLElement) {
 	cmd := h.Request.Ctx.GetAny("cmd").(*MayaCmd)
+
+	next := h.DOM.Next()
+	flag_description := strings.TrimSpace(next.Text())
 
 	name := strings.TrimSpace(h.ChildText("td:nth-child(1) code"))
 	name = strings.Split(name, "(")[0]
@@ -74,7 +169,20 @@ func scrapeFlags(h *colly.HTMLElement) {
 	typ := strings.TrimSpace(h.ChildText("td:nth-child(2) code i"))
 	typ = mel_type_to_python(typ)
 
-	cmd.KeywordArguments = append(cmd.KeywordArguments, Flag{name, typ, "..."})
+	modes := h.ChildAttrs("td:nth-child(3) img", "title")
+
+	if slices.Contains(modes, "multiuse") {
+		typ = fmt.Sprintf("Multiuse[%s]", typ)
+	}
+
+	is_query := slices.Contains(modes, "query")
+	is_mandatory_query := strings.Contains(flag_description, query_mandatory_value_str)
+
+	if is_query && !is_mandatory_query && typ != "bool" {
+		typ = fmt.Sprintf("Queryable[%s]", typ)
+	}
+
+	cmd.KeywordArguments = append(cmd.KeywordArguments, Flag{name, typ, modes, "..."})
 }
 
 func scrapeReturn(h *colly.HTMLElement) {
@@ -83,7 +191,6 @@ func scrapeReturn(h *colly.HTMLElement) {
 	var mel_return_type string
 	switch h.Name {
 	case "table":
-		// mel_return_type = h.ChildText("tr td[valign]")
 		types := []string{}
 		h.ForEach("tr td[valign]", func(i int, h *colly.HTMLElement) {
 			types = append(types, h.Text)
@@ -141,9 +248,9 @@ func mel_type_to_python_complex(type_name string) string {
 				s[i] = array_type
 			}
 			tuple_content := strings.Join(s, ", ")
-			python_type = fmt.Sprintf("tuple[%s]", tuple_content)
+			python_type = fmt.Sprintf("Tuple[%s]", tuple_content)
 		} else {
-			python_type = fmt.Sprintf("list[%s]", array_type)
+			python_type = fmt.Sprintf("List[%s]", array_type)
 		}
 
 	case tuple_regex.MatchString(type_name):
@@ -164,7 +271,7 @@ func mel_type_to_python_complex(type_name string) string {
 			python_types = append(python_types, mel_type_to_python(mel_type))
 		}
 
-		python_type = fmt.Sprintf("tuple[%s]", strings.Join(python_types, ", "))
+		python_type = fmt.Sprintf("Tuple[%s]", strings.Join(python_types, ", "))
 
 	default:
 		python_type = mel_type_to_python_simple(type_name)
@@ -206,8 +313,8 @@ func mel_type_to_python_simple(name string) string {
 	}
 	value, ok := type_map[strings.ToLower(name)]
 	if !ok {
-		// value = "Unknown"
-		fmt.Printf("%s::%s -> %s\n", global_command.Name, global_flag, name)
+		value = "Unknown"
+		// fmt.Printf("%s::%s -> %s\n", global_command.Name, global_flag, name)
 		value = name
 	}
 	return value

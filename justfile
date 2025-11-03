@@ -1,8 +1,10 @@
 set quiet := true
 set dotenv-load := true
 
-run:
-    uv run maya-stubgen generate-stubs src/
 
-profile:
-    uv run maya-stubgen generate-stubs src/ --profile
+build:
+    go build -C packages/maya-stubgen
+
+run: build
+    ./packages/maya-stubgen/maya-stubgen build cmds --out src
+    uvx ruff format src

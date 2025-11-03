@@ -1,4 +1,4 @@
-package stubs_writer
+package writer
 
 import (
 	"bufio"
@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"path/filepath"
 	"strings"
 	"text/template"
 )
@@ -24,7 +25,6 @@ type Flag struct {
 }
 
 func render_flag(flag Flag) string {
-
 	var value string
 	if flag.Value == "" {
 		value = ""
@@ -49,15 +49,14 @@ func RenderArgs(positional_flags []Flag, keyword_flags []Flag) string {
 	}
 
 	res := strings.Join(rendered_flags, ", ")
-	if res != "" {
-		res += ","
-	}
+	// if res != "" {
+	// 	res += ","
+	// }
 	return res
 }
 
-func WriteStubs() {
-
-	tmplfile := "stubs_writer/function.tmpl"
+func WriteStubs(cacheDir string, outDir string) {
+	tmplfile := filepath.Join("packages", "maya-stubgen", "stubgen", "writer", "function.tmpl")
 	tmpl, err := template.New("function.tmpl").Funcs(template.FuncMap{
 		"StringsJoin": strings.Join,
 		"RenderArgs":  RenderArgs,
@@ -67,7 +66,7 @@ func WriteStubs() {
 		panic(err)
 	}
 
-	content, err := os.ReadFile("maya_cmds.json")
+	content, err := os.ReadFile(filepath.Join(cacheDir, "cmds.json"))
 	if err != nil {
 		log.Fatal("Error when opening file: ", err)
 	}
@@ -78,7 +77,7 @@ func WriteStubs() {
 		log.Fatal("Error during Unmarshal: ", err)
 	}
 
-	f, err := os.Create("cmds.pyi")
+	f, err := os.Create(filepath.Join(outDir, "maya-stubs", "cmds", "__init__.pyi"))
 	if (err) != nil {
 		log.Fatal("Error creating file: ", err)
 	}

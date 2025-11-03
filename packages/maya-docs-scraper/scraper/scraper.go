@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"path/filepath"
 	"slices"
 	"sync"
 
@@ -21,11 +22,12 @@ type MayaCmd struct {
 }
 
 type Flag struct {
-	Name string `json:"name"`
-	Type string `json:"type"`
+	Name  string `json:"name"`
+	Type  string `json:"type"`
+	Value string `json:"value"`
 }
 
-func ScrapeCmdsDocs() {
+func ScrapeCmdsDocs(outDir string, cacheDir string) {
 
 	// Thread-safe slice to collect results
 	var results []MayaCmd
@@ -105,7 +107,7 @@ func ScrapeCmdsDocs() {
 		log.Fatal("Error encoding JSON:", err)
 	}
 
-	if err := os.WriteFile("maya_cmds.json", data, 0644); err != nil {
+	if err := os.WriteFile(filepath.Join(cacheDir, "maya_cmds.json"), data, 0644); err != nil {
 		log.Fatal("Error writing file:", err)
 	}
 }
