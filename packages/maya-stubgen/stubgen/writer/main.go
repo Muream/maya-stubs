@@ -66,7 +66,7 @@ func WriteStubs(cacheDir string, outDir string) {
 		panic(err)
 	}
 
-	content, err := os.ReadFile(filepath.Join(cacheDir, "cmds.json"))
+	content, err := os.ReadFile(filepath.Join(cacheDir, "docspec", "cmds.json"))
 	if err != nil {
 		log.Fatal("Error when opening file: ", err)
 	}

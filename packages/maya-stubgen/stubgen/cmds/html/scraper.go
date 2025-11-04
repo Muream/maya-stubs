@@ -1,4 +1,4 @@
-package cmds
+package html
 
 import (
 	"encoding/json"
@@ -12,13 +12,12 @@ import (
 	"strings"
 	"sync"
 
+	"maya-stubgen/stubgen/cmds/utils"
+
 	"github.com/gocolly/colly"
 )
 
 const URL = "https://help.autodesk.com/cloudhelp/2026/ENU/Maya-Tech-Docs/CommandsPython/index_all.html"
-
-var global_command MayaCmd
-var global_flag string
 
 var union_regex = regexp.MustCompile(`(?:\w+)\|(?:\w+)`)
 var array_regex = regexp.MustCompile(`(?P<type>\w+)\[(?P<length>\d+|\.\.\.)?\]`)
@@ -32,7 +31,7 @@ var query_mandatory_value_str = "In query mode, this flag needs a value"
 func ScrapeCmdsDocs(cacheDir string) {
 
 	// Thread-safe slice to collect results
-	var results []MayaCmd
+	var results []utils.MayaCmd
 	var mu sync.Mutex
 
 	c := colly.NewCollector(
@@ -45,7 +44,7 @@ func ScrapeCmdsDocs(cacheDir string) {
 	c.OnHTML("a[href]", func(h *colly.HTMLElement) {
 		link := h.Request.AbsoluteURL(h.Attr("href"))
 		ctx := colly.NewContext()
-		cmd := MayaCmd{}
+		cmd := utils.MayaCmd{}
 		cmd.ReturnType = "None"
 		ctx.Put("cmd", &cmd) // attach a fresh struct for this page
 		c2.Request("GET", link, nil, ctx, nil)
@@ -65,8 +64,8 @@ func ScrapeCmdsDocs(cacheDir string) {
 		scrapeSynopsis(h)
 	})
 
-	// Get the Flags (ie: Keyword Arguments)
-	c2.OnHTML("h2:contains('Flags') ~ a + table tr[bgcolor]", func(h *colly.HTMLElement) {
+	// Get the cmds.Flags (ie: Keyword Arguments)
+	c2.OnHTML("h2:contains('cmds.Flags') ~ a + table tr[bgcolor]", func(h *colly.HTMLElement) {
 		scrapeFlags(h)
 	})
 
@@ -82,7 +81,7 @@ func ScrapeCmdsDocs(cacheDir string) {
 
 	// gather all the scraped commands
 	c2.OnScraped(func(r *colly.Response) {
-		cmd := r.Ctx.GetAny("cmd").(*MayaCmd)
+		cmd := r.Ctx.GetAny("cmd").(*utils.MayaCmd)
 
 		mu.Lock()
 		results = append(results, *cmd)
@@ -93,7 +92,7 @@ func ScrapeCmdsDocs(cacheDir string) {
 	c.Wait()
 	c2.Wait()
 
-	slices.SortFunc(results, func(a MayaCmd, b MayaCmd) int {
+	slices.SortFunc(results, func(a utils.MayaCmd, b utils.MayaCmd) int {
 		asdf := []string{a.Name, b.Name}
 		slices.Sort(asdf)
 
@@ -109,23 +108,26 @@ func ScrapeCmdsDocs(cacheDir string) {
 		log.Fatal("Error encoding JSON:", err)
 	}
 
-	if err := os.WriteFile(filepath.Join(cacheDir, "cmds.json"), data, 0644); err != nil {
+	cmdsCacheDir := filepath.Join(cacheDir, "docspec")
+	if err := os.MkdirAll(cmdsCacheDir, os.ModePerm); err != nil {
+		log.Fatal("Error creating docspec cache dir", err)
+	}
+
+	cmdsCachefile := filepath.Join(cmdsCacheDir, "cmds.json")
+	if err := os.WriteFile(cmdsCachefile, data, os.ModePerm); err != nil {
 		log.Fatal("Error writing file:", err)
 	}
 }
 
 func scrapeName(h *colly.HTMLElement) {
-	cmd := h.Request.Ctx.GetAny("cmd").(*MayaCmd)
+	cmd := h.Request.Ctx.GetAny("cmd").(*utils.MayaCmd)
 
 	cmd.Name = strings.TrimSpace(h.Text)
 	cmd.Name = strings.Split(cmd.Name, " ")[0]
-
-	// log.Printf("Command: %s\n", cmd.Name)
-	global_command = *cmd
 }
 
 func scrapeSynopsis(h *colly.HTMLElement) {
-	// cmd := h.Request.Ctx.GetAny("cmd").(*MayaCmd)
+	// cmd := h.Request.Ctx.GetAny("cmd").(*cmds.MayaCmd)
 	txt := strings.ReplaceAll(h.Text, "\n", "")
 	matches := synposis_regex.FindStringSubmatch(txt)
 
@@ -152,7 +154,7 @@ func scrapeSynopsis(h *colly.HTMLElement) {
 }
 
 func scrapeFlags(h *colly.HTMLElement) {
-	cmd := h.Request.Ctx.GetAny("cmd").(*MayaCmd)
+	cmd := h.Request.Ctx.GetAny("cmd").(*utils.MayaCmd)
 
 	next := h.DOM.Next()
 	flag_description := strings.TrimSpace(next.Text())
@@ -163,8 +165,6 @@ func scrapeFlags(h *colly.HTMLElement) {
 	if name == "" {
 		return
 	}
-
-	global_flag = name
 
 	typ := strings.TrimSpace(h.ChildText("td:nth-child(2) code i"))
 	typ = mel_type_to_python(typ)
@@ -182,11 +182,11 @@ func scrapeFlags(h *colly.HTMLElement) {
 		typ = fmt.Sprintf("Queryable[%s]", typ)
 	}
 
-	cmd.KeywordArguments = append(cmd.KeywordArguments, Flag{name, typ, modes, "..."})
+	cmd.KeywordArguments = append(cmd.KeywordArguments, utils.Flag{Name: name, Type: typ, Value: "..."})
 }
 
 func scrapeReturn(h *colly.HTMLElement) {
-	cmd := h.Request.Ctx.GetAny("cmd").(*MayaCmd)
+	cmd := h.Request.Ctx.GetAny("cmd").(*utils.MayaCmd)
 
 	var mel_return_type string
 	switch h.Name {
@@ -314,7 +314,6 @@ func mel_type_to_python_simple(name string) string {
 	value, ok := type_map[strings.ToLower(name)]
 	if !ok {
 		value = "Unknown"
-		// fmt.Printf("%s::%s -> %s\n", global_command.Name, global_flag, name)
 		value = name
 	}
 	return value

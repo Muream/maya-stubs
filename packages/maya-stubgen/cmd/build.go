@@ -6,9 +6,6 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var outPath string
-var cachePath string
-
 // buildCmd represents the build command
 var buildCmd = &cobra.Command{
 	Use:   "build",
@@ -19,12 +16,6 @@ and usage of using your command. For example:
 Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
-	PersistentPreRunE: func(cmd *cobra.Command, args []string) error {
-		if outPath == "" {
-			return fmt.Errorf("--out is required")
-		}
-		return nil
-	},
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("build called")
 	},
@@ -34,8 +25,8 @@ func init() {
 	rootCmd.AddCommand(buildCmd)
 
 	// Here you will define your flags and configuration settings.
-	buildCmd.PersistentFlags().StringVarP(&outPath, "out", "o", "src", "output directory for the stubs.")
-	buildCmd.PersistentFlags().StringVarP(&outPath, "cache", "c", ".cache", "output directory for the stubs.")
+	buildCmd.PersistentFlags().StringP("out", "o", "src", "output directory for the stubs.")
+	buildCmd.PersistentFlags().StringP("cache", "c", ".cache", "output directory for the stubs.")
 
 	// Cobra supports Persistent Flags which will work for this command
 	// and all subcommands, e.g.:

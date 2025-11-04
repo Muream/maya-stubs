@@ -1,4 +1,4 @@
-package cmds
+package utils
 
 type MayaCmd struct {
 	Name                string `json:"name"`
@@ -10,6 +10,5 @@ type MayaCmd struct {
 type Flag struct {
 	Name  string   `json:"name"`
 	Type  string   `json:"type"`
-	modes []string `json:"modes"`
 	Value string   `json:"value"`
 }
