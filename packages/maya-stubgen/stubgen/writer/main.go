@@ -12,10 +12,10 @@ import (
 )
 
 type MayaCmd struct {
-	Name             string `json:"name"`
-	Arguments        []Flag `json:"arguments"`
-	KeywordArguments []Flag `json:"keyword_arguments"`
-	ReturnType       string `json:"return_type"`
+	Name                string `json:"name"`
+	PositionalArguments []Flag `json:"positional_arguments"`
+	KeywordArguments    []Flag `json:"keyword_arguments"`
+	ReturnType          string `json:"return_type"`
 }
 
 type Flag struct {
@@ -40,6 +40,9 @@ func RenderArgs(positional_flags []Flag, keyword_flags []Flag) string {
 		for i, flag := range positional_flags {
 			rendered_flags = append(rendered_flags, fmt.Sprintf("arg%d: %s", i, flag.Type))
 		}
+	}
+
+	if len(positional_flags) > 0 && len(keyword_flags) > 0 {
 		rendered_flags = append(rendered_flags, "/")
 	}
 
@@ -66,7 +69,7 @@ func WriteStubs(cacheDir string, outDir string) {
 		panic(err)
 	}
 
-	content, err := os.ReadFile(filepath.Join(cacheDir, "docspec", "cmds.json"))
+	content, err := os.ReadFile(filepath.Join(cacheDir, "docspec", "merged", "cmds.json"))
 	if err != nil {
 		log.Fatal("Error when opening file: ", err)
 	}
