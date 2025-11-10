@@ -2,6 +2,7 @@ package html
 
 import (
 	"fmt"
+	"log"
 	"path/filepath"
 	"regexp"
 	"slices"
@@ -94,6 +95,8 @@ func scrapeName(h *colly.HTMLElement) {
 
 	cmd.Name = strings.TrimSpace(h.Text)
 	cmd.Name = strings.Split(cmd.Name, " ")[0]
+
+	log.Println("[HTML Scraper] Scraping", cmd.Name)
 }
 
 func scrapeSynopsis(h *colly.HTMLElement) {

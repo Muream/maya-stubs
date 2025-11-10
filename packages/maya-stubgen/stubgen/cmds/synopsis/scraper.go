@@ -81,6 +81,7 @@ func ScrapeCmdsSynopsis(cacheDir string) {
 	for _, file := range files {
 		cmd := scrapeCmdSynopsis(file)
 		cmd.ReturnType = "Unknown"
+		log.Println("[Synopsis Scraper] Scraping", cmd.Name)
 		results = append(results, cmd)
 	}
 

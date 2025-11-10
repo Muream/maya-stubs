@@ -80,7 +80,13 @@ func WriteStubs(cacheDir string, outDir string) {
 		log.Fatal("Error during Unmarshal: ", err)
 	}
 
-	f, err := os.Create(filepath.Join(outDir, "maya-stubs", "cmds", "__init__.pyi"))
+	cmds_out_dir := filepath.Join(outDir, "maya-stubs", "cmds")
+	err = os.MkdirAll(cmds_out_dir, 0755)
+	if (err) != nil {
+		log.Fatal("Error creating directory: ", err)
+	}
+
+	f, err := os.Create(filepath.Join(cmds_out_dir, "__init__.pyi"))
 	if (err) != nil {
 		log.Fatal("Error creating file: ", err)
 	}

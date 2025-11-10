@@ -22,6 +22,7 @@ func Run(outDir string, cacheDir string) {
 }
 
 func merge_results(cacheDir string) {
+	log.Println("Merging Synopsis & HTML Docspec")
 	var err error
 
 	synopsis_file := filepath.Join(cacheDir, "docspec", "synopsis", "cmds.json")
