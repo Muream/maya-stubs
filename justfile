@@ -1,10 +1,25 @@
-set quiet := true
-set dotenv-load := true
+# The default `sh` (from git or mingw) has issues on windows
+# Eg: $(pwd) appends ";C" in the docker volume definition
+set windows-shell := ["pwsh.exe", "-NoLogo", "-CommandWithArgs"]
 
+default: build run
 
 build:
-    go build -C packages/maya-stubgen
+    docker build -t maya-stubs .
 
-run: build
-    ./packages/maya-stubgen/maya-stubgen build cmds --out src
-    uvx ruff format src
+run:
+    docker run \
+        --rm \
+        -v "$(pwd)/src:/maya-stubs/src:rw" \
+        -v "$(pwd)/packages:/maya-stubs/packages:rw" \
+        -it \
+        maya-stubs
+
+run-interactive:
+    docker run \
+        --rm \
+        -v "$(pwd)/src:/maya-stubs/src:rw" \
+        -v "$(pwd)/packages:/maya-stubs/packages:rw" \
+        -it \
+        maya-stubs \
+        bash
