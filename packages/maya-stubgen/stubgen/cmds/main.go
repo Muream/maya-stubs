@@ -55,7 +55,7 @@ func merge_results(cacheDir string) {
 	}
 
 	merged_file := filepath.Join(cacheDir, "docspec", "merged", "cmds.json")
-	err = os.MkdirAll(filepath.Dir(merged_file), 0750)
+	err = os.MkdirAll(filepath.Dir(merged_file), 0755)
 	if err != nil {
 		log.Fatal(err)
 	}
