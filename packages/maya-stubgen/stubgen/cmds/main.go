@@ -26,7 +26,7 @@ func merge_results(cacheDir string) {
 	var err error
 
 	synopsis_file := filepath.Join(cacheDir, "docspec", "synopsis", "cmds.json")
-	html_file := filepath.Join(cacheDir, "docspec", "synopsis", "cmds.json")
+	html_file := filepath.Join(cacheDir, "docspec", "html", "cmds.json")
 
 	synopsis_content, err := os.ReadFile(synopsis_file)
 	html_content, err := os.ReadFile(html_file)
