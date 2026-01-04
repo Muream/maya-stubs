@@ -16,19 +16,6 @@ var union_regex = regexp.MustCompile(`(?:\w+)\|(?:\w+)`)
 var array_regex = regexp.MustCompile(`(?P<type>\w+)\[(?P<length>\d+|\.\.\.)?\]`)
 var tuple_regex = regexp.MustCompile(`\[(?P<types>.+)\]`)
 
-type MayaCmd struct {
-	Name                string `json:"name"`
-	PositionalArguments []Flag `json:"positional_arguments"`
-	KeywordArguments    []Flag `json:"keyword_arguments"`
-	ReturnType          string `json:"return_type"`
-}
-
-type Flag struct {
-	Name  string `json:"name"`
-	Type  string `json:"type"`
-	Value string `json:"value"`
-}
-
 func MelTypeToPython(type_name string) string {
 	python_type := mel_type_to_python_complex(type_name)
 	if python_type == "Unknown" {
@@ -41,8 +28,20 @@ func mel_type_to_python_complex(type_name string) string {
 	var python_type string
 
 	switch {
-	case type_name == "on|off":
-		python_type = mel_type_to_python_simple(type_name)
+	case union_regex.MatchString(type_name):
+		if type_name != "on|off" {
+			mel_types := strings.Split(type_name, "|")
+			python_types := []string{}
+
+			for _, mel_type := range mel_types {
+				python_types = append(python_types, MelTypeToPython(mel_type))
+			}
+
+			python_type = fmt.Sprintf("Union[%s]", strings.Join(python_types, ", "))
+		} else {
+			python_type = mel_type_to_python_simple(type_name)
+		}
+
 	case array_regex.MatchString(type_name):
 		matches := array_regex.FindStringSubmatch(type_name)
 		type_index := array_regex.SubexpIndex("type")
@@ -85,16 +84,6 @@ func mel_type_to_python_complex(type_name string) string {
 
 		python_type = fmt.Sprintf("Tuple[%s]", strings.Join(python_types, ", "))
 
-	case union_regex.MatchString(type_name):
-		mel_types := strings.Split(type_name, "|")
-		python_types := []string{}
-
-		for _, mel_type := range mel_types {
-			python_types = append(python_types, MelTypeToPython(mel_type))
-		}
-
-		python_type = strings.Join(python_types, " | ")
-
 	default:
 		python_type = mel_type_to_python_simple(type_name)
 	}
@@ -110,33 +99,40 @@ func mel_type_to_python_simple(name string) string {
 		"selectionitem": "str",
 		"script":        "Callable[..., Any]",
 		// float
-		"float":  "float",
 		"double": "float",
 		"length": "float",
 		"angle":  "float",
 		"linear": "float",
 		// int
-		"int":         "int",
 		"int64":       "int",
 		"unsignedint": "int",
 		"uint":        "int",
 		"time":        "int",
 		"indexrange":  "int",
 		// bool
-		"":        "bool",
 		"boolean": "bool",
-		"None":    "bool",
-		"none":    "bool",
 		"on|off":  "bool",
-		"any":     "Any",
 		// ranges
 		"timerange":  "NullableRange[float]",
 		"floatrange": "Range[float]",
+		// misc
+		"any":  "Any",
+		"":     "None",
+		"none": "None",
+		// Python fallbacks
+		"str":                  "str",
+		"Callable[..., Any]":   "Callable[..., Any]",
+		"float":                "float",
+		"int":                  "int",
+		"bool":                 "bool",
+		"NullableRange[float]": "NullableRange[float]",
+		"Range[float]":         "Range[float]",
+		"Any":                  "Any",
+		"None":                 "None",
 	}
 	value, ok := type_map[strings.ToLower(name)]
 	if !ok {
 		value = "Unknown"
-		value = name
 	}
 	return value
 }

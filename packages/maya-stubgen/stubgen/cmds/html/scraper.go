@@ -38,8 +38,11 @@ func ScrapeCmdsDocs(cacheDir string) {
 	c.OnHTML("a[href]", func(h *colly.HTMLElement) {
 		link := h.Request.AbsoluteURL(h.Attr("href"))
 		ctx := colly.NewContext()
-		cmd := utils.MayaCmd{}
-		cmd.ReturnType = "None"
+		cmd := utils.MayaCmd{
+			ReturnType:    "None",
+			HasQueryFlags: false,
+			HasEditFlags:  false,
+		}
 		ctx.Put("cmd", &cmd) // attach a fresh struct for this page
 		c2.Request("GET", link, nil, ctx, nil)
 	})
@@ -58,8 +61,8 @@ func ScrapeCmdsDocs(cacheDir string) {
 		scrapeSynopsis(h)
 	})
 
-	// Get the cmds.Flags (ie: Keyword Arguments)
-	c2.OnHTML("h2:contains('cmds.Flags') ~ a + table tr[bgcolor]", func(h *colly.HTMLElement) {
+	// Get the Flags (ie: Keyword Arguments)
+	c2.OnHTML("h2:contains('Flags') ~ a + table tr[bgcolor]", func(h *colly.HTMLElement) {
 		scrapeFlags(h)
 	})
 
@@ -78,6 +81,7 @@ func ScrapeCmdsDocs(cacheDir string) {
 		cmd := r.Ctx.GetAny("cmd").(*utils.MayaCmd)
 
 		mu.Lock()
+		cmd.ResolveReturnTypes()
 		results = append(results, *cmd)
 		mu.Unlock()
 	})
@@ -100,7 +104,7 @@ func scrapeName(h *colly.HTMLElement) {
 }
 
 func scrapeSynopsis(h *colly.HTMLElement) {
-	// cmd := h.Request.Ctx.GetAny("cmd").(*cmds.MayaCmd)
+	cmd := h.Request.Ctx.GetAny("cmd").(*utils.MayaCmd)
 	txt := strings.ReplaceAll(h.Text, "\n", "")
 	matches := synposis_regex.FindStringSubmatch(txt)
 
@@ -119,10 +123,10 @@ func scrapeSynopsis(h *colly.HTMLElement) {
 		return
 	}
 
-	va_args := strings.Split(first_arg, " ")
-	py_va_args := make([]string, len(va_args))
-	for i, t := range va_args {
-		py_va_args[i] = utils.MelTypeToPython(t)
+	va_args := strings.SplitSeq(first_arg, " ")
+	for t := range va_args {
+		pyType := utils.MelTypeToPython(t)
+		cmd.PositionalArguments = append(cmd.PositionalArguments, utils.Flag{Type: pyType})
 	}
 }
 
@@ -139,23 +143,34 @@ func scrapeFlags(h *colly.HTMLElement) {
 		return
 	}
 
-	typ := strings.TrimSpace(h.ChildText("td:nth-child(2) code i"))
-	typ = utils.MelTypeToPython(typ)
+	melTyp := strings.TrimSpace(h.ChildText("td:nth-child(2) code i"))
+	typ := utils.MelTypeToPython(melTyp)
 
 	modes := h.ChildAttrs("td:nth-child(3) img", "title")
+	hasQueryMode := slices.Contains(modes, "query")
+	hasEditMode := slices.Contains(modes, "edit")
+	hasMultiUseMode := slices.Contains(modes, "multiuse")
 
-	if slices.Contains(modes, "multiuse") {
+	if hasMultiUseMode {
 		typ = fmt.Sprintf("Multiuse[%s]", typ)
 	}
 
-	is_query := slices.Contains(modes, "query")
 	is_mandatory_query := strings.Contains(flag_description, query_mandatory_value_str)
-
-	if is_query && !is_mandatory_query && typ != "bool" {
-		typ = fmt.Sprintf("Queryable[%s]", typ)
+	if hasQueryMode && !is_mandatory_query {
+		cmd.ReturnTypeList = append(cmd.ReturnTypeList, melTyp)
+		if typ != "bool" {
+			typ = fmt.Sprintf("Queryable[%s]", typ)
+		}
 	}
 
 	cmd.KeywordArguments = append(cmd.KeywordArguments, utils.Flag{Name: name, Type: typ, Value: "..."})
+
+	if !cmd.HasQueryFlags && hasQueryMode {
+		cmd.HasQueryFlags = true
+	}
+	if !cmd.HasEditFlags && hasEditMode {
+		cmd.HasEditFlags = true
+	}
 }
 
 func scrapeReturn(h *colly.HTMLElement) {
@@ -164,18 +179,11 @@ func scrapeReturn(h *colly.HTMLElement) {
 	var mel_return_type string
 	switch h.Name {
 	case "table":
-		types := []string{}
 		h.ForEach("tr td[valign]", func(i int, h *colly.HTMLElement) {
-			types = append(types, h.Text)
+			cmd.ReturnTypeList = append(cmd.ReturnTypeList, h.Text)
 		})
-		slices.Sort(types)
-		types = slices.Compact(types)
-		mel_return_type = strings.Join(types, "|")
 	case "p":
 		mel_return_type = strings.TrimSpace(h.Text)
+		cmd.ReturnTypeList = append(cmd.ReturnTypeList, mel_return_type)
 	}
-
-	python_return_type := utils.MelTypeToPython(mel_return_type)
-
-	cmd.ReturnType = python_return_type
 }

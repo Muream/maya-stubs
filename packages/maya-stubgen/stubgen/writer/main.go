@@ -5,26 +5,15 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
+	"maya-stubgen/stubgen/cmds/utils"
 	"os"
 	"path/filepath"
+	"sort"
 	"strings"
 	"text/template"
 )
 
-type MayaCmd struct {
-	Name                string `json:"name"`
-	PositionalArguments []Flag `json:"positional_arguments"`
-	KeywordArguments    []Flag `json:"keyword_arguments"`
-	ReturnType          string `json:"return_type"`
-}
-
-type Flag struct {
-	Name  string `json:"name"`
-	Type  string `json:"type"`
-	Value string `json:"value"`
-}
-
-func render_flag(flag Flag) string {
+func render_flag(flag utils.Flag) string {
 	var value string
 	if flag.Value == "" {
 		value = ""
@@ -34,16 +23,55 @@ func render_flag(flag Flag) string {
 	return fmt.Sprintf("%s: %s%s", flag.Name, flag.Type, value)
 }
 
-func RenderArgs(positional_flags []Flag, keyword_flags []Flag) string {
+func RenderArgs(positional_flags, keyword_flags []utils.Flag, has_edit_flag, has_query_flag bool) string {
+	starArgAdded := false
+
 	rendered_flags := []string{}
 	if len(positional_flags) > 0 {
 		for i, flag := range positional_flags {
-			rendered_flags = append(rendered_flags, fmt.Sprintf("arg%d: %s", i, flag.Type))
+			// TODO @eeyako: This might be getting a bit too granular, but works for now...
+			argName := flag.Name
+			argType := flag.Type
+
+			if !starArgAdded {
+				starArgAdded = strings.HasPrefix(argName, "*")
+			}
+
+			// If flag has no Name, use default name based on positinal flag index (arg0, arg1, etc...)
+			if argName == "" {
+				argName = fmt.Sprintf("arg%d", i)
+			}
+
+			// TODO @eeyako: Positional Flags are almost always strings?
+			if strings.Contains(flag.Type, "Unknown") {
+				argType = strings.ReplaceAll(flag.Type, "Unknown", "str")
+			}
+
+			// If it contains ellipsis, it usually means it accepts n or 0 args, equivalent to Python's *args
+			if strings.Contains(argType, "...") && !starArgAdded {
+				argName = "*" + argName
+				starArgAdded = true
+			}
+
+			// If a *arg exists and there were previous positional args, add a forward slash to indicate previous mandatory args
+			if starArgAdded && i != 0 && len(positional_flags) <= 1 {
+				rendered_flags = append(rendered_flags, "/")
+			}
+
+			rendered_flags = append(rendered_flags, fmt.Sprintf("%s: %s", argName, argType))
 		}
 	}
 
-	if len(positional_flags) > 0 && len(keyword_flags) > 0 {
+	if len(positional_flags) > 0 && len(keyword_flags) > 0 && !starArgAdded {
 		rendered_flags = append(rendered_flags, "/")
+	}
+
+	// Add edit and query accordingly
+	if has_edit_flag {
+		rendered_flags = append(rendered_flags, "edit: bool = ...")
+	}
+	if has_query_flag {
+		rendered_flags = append(rendered_flags, "query: bool = ...")
 	}
 
 	for _, flag := range keyword_flags {
@@ -74,11 +102,14 @@ func WriteStubs(cacheDir string, outDir string) {
 		log.Fatal("Error when opening file: ", err)
 	}
 
-	var payload []MayaCmd
+	var payload []utils.MayaCmd
 	err = json.Unmarshal(content, &payload)
 	if err != nil {
 		log.Fatal("Error during Unmarshal: ", err)
 	}
+	sort.Slice(payload, func(i, j int) bool {
+		return payload[i].Name < payload[j].Name
+	})
 
 	cmds_out_dir := filepath.Join(outDir, "maya-stubs", "cmds")
 	err = os.MkdirAll(cmds_out_dir, 0755)
@@ -94,17 +125,17 @@ func WriteStubs(cacheDir string, outDir string) {
 
 	w := bufio.NewWriter(f)
 
-	w.WriteString("# pyright: reportExplicitAny=false\n")
-	w.WriteString("from typing import Any, Callable, TypeVar\n\n\n")
+	w.WriteString("from __future__ import annotations\n\n")
+	w.WriteString("from typing import Any, Callable, List, Optional, Tuple, TypeAlias, TypeVar, Union\n\n\n")
 
 	w.WriteString("Unknown = Any\n\n")
 
-	w.WriteString("_T = TypeVar(\"_T\")\n\n")
+	w.WriteString("_T = TypeVar(name=\"_T\")\n\n")
 
-	w.WriteString("Queryable = bool | _T\n")
-	w.WriteString("Multiuse = _T | list[_T]\n")
-	w.WriteString("Range = tuple[_T] | tuple[_T, _T]\n")
-	w.WriteString("NullableRange = Range[_T | None]\n\n")
+	w.WriteString("Queryable: TypeAlias = Union[bool, _T]\n")
+	w.WriteString("Multiuse: TypeAlias = Union[_T, List[_T]]\n")
+	w.WriteString("Range: TypeAlias = Union[Tuple[_T], Tuple[_T, _T]]\n")
+	w.WriteString("NullableRange: TypeAlias = Range[Optional[_T]]\n\n")
 
 	for _, cmd := range payload {
 		if err := tmpl.Execute(w, cmd); err != nil {
