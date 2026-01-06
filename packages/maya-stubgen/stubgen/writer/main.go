@@ -23,7 +23,7 @@ func render_flag(flag utils.Flag) string {
 	return fmt.Sprintf("%s: %s%s", flag.Name, flag.Type, value)
 }
 
-func RenderArgs(positional_flags, keyword_flags []utils.Flag, has_edit_flag, has_query_flag bool) string {
+func RenderArgs(positional_flags []utils.Flag, keyword_flags []utils.Flag) string {
 	starArgAdded := false
 
 	rendered_flags := []string{}
@@ -64,14 +64,6 @@ func RenderArgs(positional_flags, keyword_flags []utils.Flag, has_edit_flag, has
 
 	if len(positional_flags) > 0 && len(keyword_flags) > 0 && !starArgAdded {
 		rendered_flags = append(rendered_flags, "/")
-	}
-
-	// Add edit and query accordingly
-	if has_edit_flag {
-		rendered_flags = append(rendered_flags, "edit: bool = ...")
-	}
-	if has_query_flag {
-		rendered_flags = append(rendered_flags, "query: bool = ...")
 	}
 
 	for _, flag := range keyword_flags {

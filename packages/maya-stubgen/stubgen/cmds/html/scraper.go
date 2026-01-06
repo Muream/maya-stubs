@@ -39,11 +39,15 @@ func ScrapeCmdsDocs(cacheDir string) {
 		link := h.Request.AbsoluteURL(h.Attr("href"))
 		ctx := colly.NewContext()
 		cmd := utils.MayaCmd{
-			ReturnType:    "None",
+			ReturnType: "None",
+		}
+		cmdInfo := utils.MayaCmdInfo{
+			Cmd:           &cmd,
 			HasQueryFlags: false,
 			HasEditFlags:  false,
 		}
-		ctx.Put("cmd", &cmd) // attach a fresh struct for this page
+		ctx.Put("cmd", &cmd)         // attach a fresh struct for this page
+		ctx.Put("cmdInfo", &cmdInfo) // attach a fresh info struct for this page
 		c2.Request("GET", link, nil, ctx, nil)
 	})
 
@@ -78,11 +82,12 @@ func ScrapeCmdsDocs(cacheDir string) {
 
 	// gather all the scraped commands
 	c2.OnScraped(func(r *colly.Response) {
-		cmd := r.Ctx.GetAny("cmd").(*utils.MayaCmd)
+		cmdInfo := r.Ctx.GetAny("cmdInfo").(*utils.MayaCmdInfo)
 
 		mu.Lock()
-		cmd.ResolveReturnTypes()
-		results = append(results, *cmd)
+		cmdInfo.ResolveQueryAndEdit()
+		cmdInfo.ResolveReturnTypes()
+		results = append(results, *cmdInfo.Cmd)
 		mu.Unlock()
 	})
 
@@ -131,7 +136,8 @@ func scrapeSynopsis(h *colly.HTMLElement) {
 }
 
 func scrapeFlags(h *colly.HTMLElement) {
-	cmd := h.Request.Ctx.GetAny("cmd").(*utils.MayaCmd)
+	cmdInfo := h.Request.Ctx.GetAny("cmdInfo").(*utils.MayaCmdInfo)
+	cmd := cmdInfo.Cmd
 
 	next := h.DOM.Next()
 	flag_description := strings.TrimSpace(next.Text())
@@ -157,7 +163,7 @@ func scrapeFlags(h *colly.HTMLElement) {
 
 	is_mandatory_query := strings.Contains(flag_description, query_mandatory_value_str)
 	if hasQueryMode && !is_mandatory_query {
-		cmd.ReturnTypeList = append(cmd.ReturnTypeList, melTyp)
+		cmdInfo.ReturnTypeList = append(cmdInfo.ReturnTypeList, melTyp)
 		if typ != "bool" {
 			typ = fmt.Sprintf("Queryable[%s]", typ)
 		}
@@ -165,25 +171,25 @@ func scrapeFlags(h *colly.HTMLElement) {
 
 	cmd.KeywordArguments = append(cmd.KeywordArguments, utils.Flag{Name: name, Type: typ, Value: "..."})
 
-	if !cmd.HasQueryFlags && hasQueryMode {
-		cmd.HasQueryFlags = true
+	if !cmdInfo.HasQueryFlags && hasQueryMode {
+		cmdInfo.HasQueryFlags = true
 	}
-	if !cmd.HasEditFlags && hasEditMode {
-		cmd.HasEditFlags = true
+	if !cmdInfo.HasEditFlags && hasEditMode {
+		cmdInfo.HasEditFlags = true
 	}
 }
 
 func scrapeReturn(h *colly.HTMLElement) {
-	cmd := h.Request.Ctx.GetAny("cmd").(*utils.MayaCmd)
+	cmdInfo := h.Request.Ctx.GetAny("cmdInfo").(*utils.MayaCmdInfo)
 
 	var mel_return_type string
 	switch h.Name {
 	case "table":
 		h.ForEach("tr td[valign]", func(i int, h *colly.HTMLElement) {
-			cmd.ReturnTypeList = append(cmd.ReturnTypeList, h.Text)
+			cmdInfo.ReturnTypeList = append(cmdInfo.ReturnTypeList, h.Text)
 		})
 	case "p":
 		mel_return_type = strings.TrimSpace(h.Text)
-		cmd.ReturnTypeList = append(cmd.ReturnTypeList, mel_return_type)
+		cmdInfo.ReturnTypeList = append(cmdInfo.ReturnTypeList, mel_return_type)
 	}
 }
