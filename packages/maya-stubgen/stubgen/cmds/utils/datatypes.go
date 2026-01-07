@@ -8,8 +8,8 @@ import (
 type MayaCmdInfo struct {
 	Cmd            *MayaCmd
 	ReturnTypeList []string
-	HasEditFlags   bool `json:"has_edit_flags"`
-	HasQueryFlags  bool `json:"has_query_flags"`
+	HasEditFlags   bool
+	HasQueryFlags  bool
 }
 
 type MayaCmd struct {
@@ -28,7 +28,7 @@ type Flag struct {
 func (cmdInfo *MayaCmdInfo) ResolveQueryAndEdit() {
 	var cmd *MayaCmd = cmdInfo.Cmd
 
-	// Add edit and query accordingly
+	// Add edit and query keyword arguments accordingly
 	if cmdInfo.HasQueryFlags {
 		queryFlag := Flag{Name: "query", Type: "bool", Value: "..."}
 		cmd.KeywordArguments = slices.Insert(cmd.KeywordArguments, 0, queryFlag)
@@ -37,17 +37,6 @@ func (cmdInfo *MayaCmdInfo) ResolveQueryAndEdit() {
 		editFlag := Flag{Name: "edit", Type: "bool", Value: "..."}
 		cmd.KeywordArguments = slices.Insert(cmd.KeywordArguments, 0, editFlag)
 	}
-
-	// Convert individual return types to python to avoid duplicates (e.g.: name, string => str, str)
-	pyList := []string{}
-	for _, typ := range cmdInfo.ReturnTypeList {
-		pyList = append(pyList, MelTypeToPython(typ))
-	}
-	slices.Sort(pyList)
-	pyList = slices.Compact(pyList)
-
-	// Final clean conversion without duplicates
-	cmd.ReturnType = MelTypeToPython(strings.Join(pyList, "|"))
 }
 
 func (cmdInfo *MayaCmdInfo) ResolveReturnTypes() {
