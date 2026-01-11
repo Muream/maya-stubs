@@ -1,6 +1,7 @@
 package utils
 
 import (
+	"fmt"
 	"slices"
 	"strings"
 )
@@ -54,5 +55,11 @@ func (cmdInfo *MayaCmdInfo) ResolveReturnTypes() {
 	pyList = slices.Compact(pyList)
 
 	// Final clean conversion without duplicates
-	cmd.ReturnType = MelTypeToPython(strings.Join(pyList, "|"))
+	if len(pyList) > 1 {
+		cmd.ReturnType = fmt.Sprintf("Union[%s]", strings.Join(pyList, ", "))
+	} else if len(pyList) == 1 {
+		cmd.ReturnType = pyList[0]
+	} else {
+		cmd.ReturnType = "None"
+	}
 }

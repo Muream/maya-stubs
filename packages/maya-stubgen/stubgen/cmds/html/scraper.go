@@ -16,6 +16,12 @@ import (
 
 var synposis_regex = regexp.MustCompile(`\((?P<args>.+)\)`)
 
+// pattern to capture: word, word[], or [bracketed content]
+var params_regex = regexp.MustCompile(`(\w+\[\]|\[.*?\]|\w+)`)
+
+// extract Tuple[...]
+var tuple_extract_regex = regexp.MustCompile(`Tuple\[(.+)\]`)
+
 const URL = "https://help.autodesk.com/cloudhelp/2026/ENU/Maya-Tech-Docs/CommandsPython/index_all.html"
 
 // if this is present in the argument description,
@@ -110,15 +116,17 @@ func scrapeName(h *colly.HTMLElement) {
 
 func scrapeSynopsis(h *colly.HTMLElement) {
 	cmd := h.Request.Ctx.GetAny("cmd").(*utils.MayaCmd)
-	txt := strings.ReplaceAll(h.Text, "\n", "")
-	matches := synposis_regex.FindStringSubmatch(txt)
 
+	// Clean up newlines
+	// e.g.: saveImage(\n[imageName]\n[imageName]\n    , ...)
+	txt := strings.ReplaceAll(h.Text, "\n", "")
+
+	matches := synposis_regex.FindStringSubmatch(txt)
 	if len(matches) == 0 {
 		return
 	}
 
-	args_str := strings.Trim(matches[0], "() ")
-	args := strings.Split(args_str, ",")
+	args := strings.Split(matches[1], ",")
 	if len(args) == 0 {
 		return
 	}
@@ -128,10 +136,38 @@ func scrapeSynopsis(h *colly.HTMLElement) {
 		return
 	}
 
-	va_args := strings.SplitSeq(first_arg, " ")
-	for t := range va_args {
-		pyType := utils.MelTypeToPython(t)
-		cmd.PositionalArguments = append(cmd.PositionalArguments, utils.Flag{Type: pyType})
+	// TODO @eeyako: The section below might be getting a bit too granular, but works for now...
+
+	// Compensate for no space between params
+	// e.g.: makePaintable([string][string], ...)
+	first_arg = strings.ReplaceAll(first_arg, "][", "] [")
+
+	// Match params
+	matchGroups := params_regex.FindAllStringSubmatch(first_arg, -1)
+	if matchGroups == nil {
+		return
+	}
+
+	for _, matches := range matchGroups {
+		var flagName string
+		pyType := utils.MelTypeToPython(matches[1])
+
+		// TODO @eeyako: Unknown positional args are most likely strings?
+		pyType = strings.ReplaceAll(pyType, "Unknown", "str")
+		if strings.Contains(pyType, "Tuple") {
+			pyType = tuple_extract_regex.FindStringSubmatch(pyType)[1]
+			if strings.Contains(pyType, "...") && !strings.Contains(pyType, "Callable") {
+				// If it contains ellipsis, it usually means it accepts n or 0 args, equivalent to Python's *args
+				pyType = strings.ReplaceAll(pyType, "...", "")
+				pyType = utils.MelTypeToPython(pyType)
+				pyType = strings.ReplaceAll(pyType, "Unknown", "str")
+				flagName = "*args"
+			} else {
+				// TODO @eeyako: For positional args, types between [ ] generally means optional param?
+				pyType = fmt.Sprintf("Union[%s, None]", pyType)
+			}
+		}
+		cmd.PositionalArguments = append(cmd.PositionalArguments, utils.Flag{Name: flagName, Type: pyType})
 	}
 }
 

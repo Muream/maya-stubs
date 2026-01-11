@@ -80,7 +80,7 @@ func ScrapeCmdsSynopsis(cacheDir string) {
 
 	for _, file := range files {
 		cmd := scrapeCmdSynopsis(file)
-		cmd.ReturnType = "Unknown"
+		cmd.ReturnType = "None"
 		log.Println("[Synopsis Scraper] Scraping", cmd.Name)
 		results = append(results, cmd)
 	}
@@ -110,7 +110,9 @@ func scrapeCmdSynopsis(file string) utils.MayaCmd {
 
 		case synopsis_flag_regex.MatchString(line):
 			flag := parse_flag(line)
-			cmd.KeywordArguments = append(cmd.KeywordArguments, flag)
+			if !slices.Contains(cmd.KeywordArguments, flag) {
+				cmd.KeywordArguments = append(cmd.KeywordArguments, flag)
+			}
 		default:
 		}
 	}
@@ -173,18 +175,30 @@ func parse_flag(line string) (flag utils.Flag) {
 	types_index := synopsis_flag_regex.SubexpIndex("types")
 	types := strings.TrimSpace(flags_match[types_index])
 
+	multi_use_index := synopsis_flag_regex.SubexpIndex("multi_use")
+	multi_use := strings.TrimSpace(flags_match[multi_use_index])
+
+	isTuple := (strings.Contains(types, "[") && strings.Contains(types, "]")) // e.g.: [ String Script ]
+
 	arg_type := "Unknown"
 	switch {
 
 	case types == "":
 		arg_type = "bool"
 
-	case strings.Contains(types, " "):
+	case isTuple:
+		arg_type = utils.MelTypeToPython(types)
+
+	case strings.Contains(types, " ") && !isTuple:
 		arg_type = utils.MelTypeToPython("[" + types + "]")
 
 	default:
 		arg_type = utils.MelTypeToPython(types)
 
+	}
+
+	if multi_use != "" {
+		arg_type = fmt.Sprintf("Multiuse[%s]", arg_type)
 	}
 
 	if slices.Contains(keywords, long_name) {

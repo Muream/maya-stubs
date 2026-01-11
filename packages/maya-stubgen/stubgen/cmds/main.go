@@ -5,11 +5,10 @@ import (
 	"log"
 	"maya-stubgen/stubgen/cmds/html"
 	"maya-stubgen/stubgen/cmds/synopsis"
+	"maya-stubgen/stubgen/cmds/utils"
 	"maya-stubgen/stubgen/writer"
 	"os"
 	"path/filepath"
-
-	"dario.cat/mergo"
 )
 
 func Run(outDir string, cacheDir string) {
@@ -31,8 +30,8 @@ func merge_results(cacheDir string) {
 	synopsis_content, err := os.ReadFile(synopsis_file)
 	html_content, err := os.ReadFile(html_file)
 
-	var a []any
-	var b []any
+	var a []utils.MayaCmd
+	var b []utils.MayaCmd
 
 	err = json.Unmarshal(synopsis_content, &a)
 	if err != nil {
@@ -44,12 +43,9 @@ func merge_results(cacheDir string) {
 		log.Fatal(err)
 	}
 
-	err = mergo.Merge(&a, b, mergo.WithOverride)
-	if err != nil {
-		log.Fatal(err)
-	}
+	c := utils.MergeMayaCmdSlices(a, b)
 
-	merged_content, err := json.Marshal(a)
+	merged_content, err := json.MarshalIndent(c, "", "  ")
 	if err != nil {
 		log.Fatal(err)
 	}

@@ -10,16 +10,25 @@ import (
 	"slices"
 	"strconv"
 	"strings"
+
+	"dario.cat/mergo"
 )
 
-var union_regex = regexp.MustCompile(`(?:\w+)\|(?:\w+)`)
+var _red_ = "\033[31m"
+var _yellow_ = "\033[33m"
+var _reset_ = "\033[0m"
+
+var tuple_union_regex = regexp.MustCompile(`\[(\w+)\|(\w+)\]`)
+var union_regex = regexp.MustCompile(`(?:\w+)(\|)(?:\w+)`)
 var array_regex = regexp.MustCompile(`(?P<type>\w+)\[(?P<length>\d+|\.\.\.)?\]`)
-var tuple_regex = regexp.MustCompile(`\[(?P<types>.+)\]`)
+var tuple_regex = regexp.MustCompile(`\[\s*(?P<types>\w+)?\s*(?P<types>.*?)\s*\]$`)
+var tuple_token_regex = regexp.MustCompile(`[\w|]+(?:\[[\d.]*\])?|[\[\]]`)
 
 func MelTypeToPython(type_name string) string {
 	python_type := mel_type_to_python_complex(type_name)
 	if python_type == "Unknown" {
-		log.Printf("Could not map MEL type to Python: %s", type_name)
+		// msg := fmt.Sprintf("Could not map MEL type to Python: %s", type_name)
+		// log.Printf("%s%s%s", _yellow_, msg, _reset_)
 	}
 	return python_type
 }
@@ -28,19 +37,40 @@ func mel_type_to_python_complex(type_name string) string {
 	var python_type string
 
 	switch {
-	case union_regex.MatchString(type_name):
-		if type_name != "on|off" {
-			mel_types := strings.Split(type_name, "|")
-			python_types := []string{}
+	case tuple_union_regex.MatchString(type_name): // (e.g.: [curve|surface])
+		type_name = strings.Trim(type_name, "[")
+		type_name = strings.Trim(type_name, "]")
+		mel_types := strings.Split(type_name, "|")
+		python_types := []string{}
 
-			for _, mel_type := range mel_types {
-				python_types = append(python_types, MelTypeToPython(mel_type))
-			}
-
-			python_type = fmt.Sprintf("Union[%s]", strings.Join(python_types, ", "))
-		} else {
-			python_type = mel_type_to_python_simple(type_name)
+		for _, mel_type := range mel_types {
+			python_types = append(python_types, MelTypeToPython(mel_type))
 		}
+		slices.Sort(python_types)
+		python_types = slices.Compact(python_types)
+		if len(python_types) > 1 {
+			python_type = fmt.Sprintf("Tuple[Union[%s]]", strings.Join(python_types, ", "))
+		} else {
+			python_type = fmt.Sprintf("Tuple[%s]", strings.Join(python_types, ", "))
+		}
+
+	case union_regex.MatchString(type_name):
+		var mel_types []string
+		match_groups := union_regex.FindAllStringSubmatch(type_name, -1)
+		for _, matches := range match_groups {
+			if matches[0] == "on|off" {
+				mel_types = append(mel_types, "bool")
+			} else {
+				mel_types = append(mel_types, strings.Split(matches[0], "|")...)
+			}
+		}
+		python_types := []string{}
+
+		for _, mel_type := range mel_types {
+			python_types = append(python_types, MelTypeToPython(mel_type))
+		}
+
+		python_type = fmt.Sprintf("Union[%s]", strings.Join(python_types, ", "))
 
 	case array_regex.MatchString(type_name):
 		matches := array_regex.FindStringSubmatch(type_name)
@@ -69,10 +99,23 @@ func mel_type_to_python_complex(type_name string) string {
 		// TODO: Should we delete the double brackets?
 		type_name_cleaned := strings.ReplaceAll(type_name, "[, ", "[")
 		type_name_cleaned = strings.ReplaceAll(type_name_cleaned, ", ]", "]")
+		type_name_cleaned = strings.ReplaceAll(type_name_cleaned, ", ", " ")
 
-		matches := tuple_regex.FindStringSubmatch(type_name_cleaned)
-		types_index := tuple_regex.SubexpIndex("types")
-		mel_types_str := matches[types_index]
+		var melTypes []string
+		var index int = 0
+		match_groups := tuple_regex.FindAllStringSubmatch(type_name_cleaned, -1)
+		for _, matches := range match_groups {
+			for _, match := range matches[1:] {
+				if strings.Contains(match, "...") {
+					melTypes[index-1] = fmt.Sprintf("%s...", melTypes[index-1])
+					index++
+					continue
+				}
+				melTypes = append(melTypes, match)
+				index++
+			}
+		}
+		mel_types_str := strings.Join(melTypes, " ")
 
 		mel_types := parse_tuple_types(mel_types_str)
 
@@ -132,7 +175,11 @@ func mel_type_to_python_simple(name string) string {
 	}
 	value, ok := type_map[strings.ToLower(name)]
 	if !ok {
-		value = "Unknown"
+		if !strings.Contains(name, "...") {
+			value = "Unknown"
+		} else {
+			value = name
+		}
 	}
 	return value
 }
@@ -208,4 +255,33 @@ func WriteDocspecJson(cacheDir string, commands []MayaCmd) {
 	if err := os.WriteFile(cmdsCachefile, data, os.ModePerm); err != nil {
 		log.Fatal("Error writing file:", err)
 	}
+}
+
+func MergeMayaCmdSlices(dst, src []MayaCmd) []MayaCmd {
+	mergedCmds := map[string]MayaCmd{}
+
+	for _, dstCmd := range dst {
+		mergedCmds[dstCmd.Name] = dstCmd
+	}
+
+	for _, srcCmd := range src {
+		if dstCmd, exists := mergedCmds[srcCmd.Name]; exists {
+			if err := mergo.Merge(&dstCmd, srcCmd, mergo.WithOverride); err != nil {
+				msg := fmt.Sprintf("Error merging cmd %s: %v", srcCmd.Name, err)
+				log.Printf("%s%s%s", _red_, msg, _reset_)
+				continue
+			}
+			mergedCmds[srcCmd.Name] = dstCmd
+		} else {
+			// Add cmd from src, if not already present
+			mergedCmds[srcCmd.Name] = srcCmd
+		}
+	}
+
+	result := make([]MayaCmd, 0, len(mergedCmds))
+	for _, cmd := range mergedCmds {
+		result = append(result, cmd)
+	}
+
+	return result
 }
