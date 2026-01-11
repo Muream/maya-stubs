@@ -1,1 +1,0 @@
-docker run -ti -v "$(pwd)/src:/maya-stubs/src:rw" -v "$(pwd)/packages:/maya-stubs/packages:rw" -v "$(pwd)/.cache:/maya-stubs/.cache:rw" --rm maya-stubs

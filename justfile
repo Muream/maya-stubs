@@ -12,6 +12,7 @@ run:
         --rm \
         -v "$(pwd)/src:/maya-stubs/src:rw" \
         -v "$(pwd)/packages:/maya-stubs/packages:rw" \
+        -v "$(pwd)/.cache:/maya-stubs/.cache:rw" \
         -it \
         maya-stubs
 
@@ -20,6 +21,7 @@ run-interactive:
         --rm \
         -v "$(pwd)/src:/maya-stubs/src:rw" \
         -v "$(pwd)/packages:/maya-stubs/packages:rw" \
+        -v "$(pwd)/.cache:/maya-stubs/.cache:rw" \
         -it \
         maya-stubs \
         bash
