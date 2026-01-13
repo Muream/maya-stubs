@@ -6,12 +6,16 @@
     "configurations": [
         {
             "name": "maya-stubgen: Debug",
-            "preLaunchTask": "maya-stubgen: Install",
             "type": "go",
             "request": "launch",
-            "mode": "exec",
-            "program": "${userHome}/go/bin/maya-stubgen",
-            "args": ["build", "cmds", "--out", "src"]
+            "mode": "debug",
+            "program": "${workspaceFolder}/packages/maya-stubgen",
+            "args": [
+                "build",
+                "cmds",
+                "--out", "${workspaceFolder}/src",
+                "--cache", "${workspaceFolder}/.cache"
+            ]
         }
     ]
 }
