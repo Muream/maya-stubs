@@ -178,18 +178,13 @@ func parse_flag(line string) (flag utils.Flag) {
 	multi_use_index := synopsis_flag_regex.SubexpIndex("multi_use")
 	multi_use := strings.TrimSpace(flags_match[multi_use_index])
 
-	isTuple := (strings.Contains(types, "[") && strings.Contains(types, "]")) // e.g.: [ String Script ]
-
 	arg_type := "Unknown"
 	switch {
 
 	case types == "":
 		arg_type = "bool"
 
-	case isTuple:
-		arg_type = utils.MelTypeToPython(types)
-
-	case strings.Contains(types, " ") && !isTuple:
+	case strings.Contains(types, " "):
 		arg_type = utils.MelTypeToPython("[" + types + "]")
 
 	default:

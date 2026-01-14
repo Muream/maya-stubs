@@ -66,10 +66,14 @@ func ScrapeCmdsDocs(cacheDir string) {
 		scrapeName(h)
 	})
 
-	// Get positional arguments from the synopsis
-	c2.OnHTML("p[id=synopsis] code", func(h *colly.HTMLElement) {
-		scrapeSynopsis(h)
-	})
+	// TODO @eeyako: skipping positinal args scraping for now, since as per python version:
+	// "The docs parser doesn't parse positional arguments but the synopsis parser does"
+	// should we skip html parsing altogether and just use the result from synopsis?
+	// 
+	// // Get positional arguments from the synopsis
+	// c2.OnHTML("p[id=synopsis] code", func(h *colly.HTMLElement) {
+	// 	scrapeSynopsis(h)
+	// })
 
 	// Get the Flags (ie: Keyword Arguments)
 	c2.OnHTML("h2:contains('Flags') ~ a + table tr[bgcolor]", func(h *colly.HTMLElement) {
@@ -114,62 +118,63 @@ func scrapeName(h *colly.HTMLElement) {
 	log.Println("[HTML Scraper] Scraping", cmd.Name)
 }
 
-func scrapeSynopsis(h *colly.HTMLElement) {
-	cmd := h.Request.Ctx.GetAny("cmd").(*utils.MayaCmd)
+// TODO @eeyako: check TODO on line 69
+// func scrapeSynopsis(h *colly.HTMLElement) {
+// 	cmd := h.Request.Ctx.GetAny("cmd").(*utils.MayaCmd)
 
-	// Clean up newlines
-	// e.g.: saveImage(\n[imageName]\n[imageName]\n    , ...)
-	txt := strings.ReplaceAll(h.Text, "\n", "")
+// 	// Clean up newlines
+// 	// e.g.: saveImage(\n[imageName]\n[imageName]\n    , ...)
+// 	txt := strings.ReplaceAll(h.Text, "\n", "")
 
-	matches := synposis_regex.FindStringSubmatch(txt)
-	if len(matches) == 0 {
-		return
-	}
+// 	matches := synposis_regex.FindStringSubmatch(txt)
+// 	if len(matches) == 0 {
+// 		return
+// 	}
 
-	args := strings.Split(matches[1], ",")
-	if len(args) == 0 {
-		return
-	}
+// 	args := strings.Split(matches[1], ",")
+// 	if len(args) == 0 {
+// 		return
+// 	}
 
-	first_arg := strings.TrimSpace(args[0])
-	if strings.Contains(first_arg, "=") {
-		return
-	}
+// 	first_arg := strings.TrimSpace(args[0])
+// 	if strings.Contains(first_arg, "=") {
+// 		return
+// 	}
 
-	// TODO @eeyako: The section below might be getting a bit too granular, but works for now...
+// 	// TODO @eeyako: The section below might be getting a bit too granular, but works for now...
 
-	// Compensate for no space between params
-	// e.g.: makePaintable([string][string], ...)
-	first_arg = strings.ReplaceAll(first_arg, "][", "] [")
+// 	// Compensate for no space between params
+// 	// e.g.: makePaintable([string][string], ...)
+// 	first_arg = strings.ReplaceAll(first_arg, "][", "] [")
 
-	// Match params
-	matchGroups := params_regex.FindAllStringSubmatch(first_arg, -1)
-	if matchGroups == nil {
-		return
-	}
+// 	// Match params
+// 	matchGroups := params_regex.FindAllStringSubmatch(first_arg, -1)
+// 	if matchGroups == nil {
+// 		return
+// 	}
 
-	for _, matches := range matchGroups {
-		var flagName string
-		pyType := utils.MelTypeToPython(matches[1])
+// 	for _, matches := range matchGroups {
+// 		var flagName string
+// 		pyType := utils.MelTypeToPython(matches[1])
 
-		// TODO @eeyako: Unknown positional args are most likely strings?
-		pyType = strings.ReplaceAll(pyType, "Unknown", "str")
-		if strings.Contains(pyType, "Tuple") {
-			pyType = tuple_extract_regex.FindStringSubmatch(pyType)[1]
-			if strings.Contains(pyType, "...") && !strings.Contains(pyType, "Callable") {
-				// If it contains ellipsis, it usually means it accepts n or 0 args, equivalent to Python's *args
-				pyType = strings.ReplaceAll(pyType, "...", "")
-				pyType = utils.MelTypeToPython(pyType)
-				pyType = strings.ReplaceAll(pyType, "Unknown", "str")
-				flagName = "*args"
-			} else {
-				// TODO @eeyako: For positional args, types between [ ] generally means optional param?
-				pyType = fmt.Sprintf("Union[%s, None]", pyType)
-			}
-		}
-		cmd.PositionalArguments = append(cmd.PositionalArguments, utils.Flag{Name: flagName, Type: pyType})
-	}
-}
+// 		// TODO @eeyako: Unknown positional args are most likely strings?
+// 		pyType = strings.ReplaceAll(pyType, "Unknown", "str")
+// 		if strings.Contains(pyType, "Tuple") {
+// 			pyType = tuple_extract_regex.FindStringSubmatch(pyType)[1]
+// 			if strings.Contains(pyType, "...") && !strings.Contains(pyType, "Callable") {
+// 				// If it contains ellipsis, it usually means it accepts n or 0 args, equivalent to Python's *args
+// 				pyType = strings.ReplaceAll(pyType, "...", "")
+// 				pyType = utils.MelTypeToPython(pyType)
+// 				pyType = strings.ReplaceAll(pyType, "Unknown", "str")
+// 				flagName = "*args"
+// 			} else {
+// 				// TODO @eeyako: For positional args, types between [ ] generally means optional param?
+// 				pyType = fmt.Sprintf("Union[%s, None]", pyType)
+// 			}
+// 		}
+// 		cmd.PositionalArguments = append(cmd.PositionalArguments, utils.Flag{Name: flagName, Type: pyType})
+// 	}
+// }
 
 func scrapeFlags(h *colly.HTMLElement) {
 	cmdInfo := h.Request.Ctx.GetAny("cmdInfo").(*utils.MayaCmdInfo)

@@ -30,22 +30,22 @@ func merge_results(cacheDir string) {
 	synopsis_content, err := os.ReadFile(synopsis_file)
 	html_content, err := os.ReadFile(html_file)
 
-	var a []utils.MayaCmd
-	var b []utils.MayaCmd
+	var synopsisCmds []utils.MayaCmd
+	var htmlCmds []utils.MayaCmd
 
-	err = json.Unmarshal(synopsis_content, &a)
+	err = json.Unmarshal(synopsis_content, &synopsisCmds)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	err = json.Unmarshal(html_content, &b)
+	err = json.Unmarshal(html_content, &htmlCmds)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	c := utils.MergeMayaCmdSlices(a, b)
+	mergedCmds := utils.MergeMayaCmdSlices(synopsisCmds, htmlCmds)
 
-	merged_content, err := json.MarshalIndent(c, "", "  ")
+	merged_content, err := json.MarshalIndent(mergedCmds, "", "  ")
 	if err != nil {
 		log.Fatal(err)
 	}

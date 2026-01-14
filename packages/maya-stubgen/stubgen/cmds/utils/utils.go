@@ -18,7 +18,6 @@ var _red_ = "\033[31m"
 var _yellow_ = "\033[33m"
 var _reset_ = "\033[0m"
 
-var tuple_union_regex = regexp.MustCompile(`\[(\w+)\|(\w+)\]`)
 var union_regex = regexp.MustCompile(`(?:\w+)(\|)(?:\w+)`)
 var array_regex = regexp.MustCompile(`(?P<type>\w+)\[(?P<length>\d+|\.\.\.)?\]`)
 var tuple_regex = regexp.MustCompile(`\[\s*(?P<types>\w+)?\s*(?P<types>.*?)\s*\]$`)
@@ -37,32 +36,11 @@ func mel_type_to_python_complex(type_name string) string {
 	var python_type string
 
 	switch {
-	case tuple_union_regex.MatchString(type_name): // (e.g.: [curve|surface])
-		type_name = strings.Trim(type_name, "[")
-		type_name = strings.Trim(type_name, "]")
-		mel_types := strings.Split(type_name, "|")
-		python_types := []string{}
-
-		for _, mel_type := range mel_types {
-			python_types = append(python_types, MelTypeToPython(mel_type))
-		}
-		slices.Sort(python_types)
-		python_types = slices.Compact(python_types)
-		if len(python_types) > 1 {
-			python_type = fmt.Sprintf("Tuple[Union[%s]]", strings.Join(python_types, ", "))
-		} else {
-			python_type = fmt.Sprintf("Tuple[%s]", strings.Join(python_types, ", "))
-		}
-
-	case union_regex.MatchString(type_name):
+	case union_regex.MatchString(type_name) && !strings.Contains(type_name, "on|off"):
 		var mel_types []string
 		match_groups := union_regex.FindAllStringSubmatch(type_name, -1)
 		for _, matches := range match_groups {
-			if matches[0] == "on|off" {
-				mel_types = append(mel_types, "bool")
-			} else {
-				mel_types = append(mel_types, strings.Split(matches[0], "|")...)
-			}
+			mel_types = append(mel_types, strings.Split(matches[0], "|")...)
 		}
 		python_types := []string{}
 
@@ -70,7 +48,11 @@ func mel_type_to_python_complex(type_name string) string {
 			python_types = append(python_types, MelTypeToPython(mel_type))
 		}
 
-		python_type = fmt.Sprintf("Union[%s]", strings.Join(python_types, ", "))
+		if len(python_types) > 1 {
+			python_type = fmt.Sprintf("Union[%s]", strings.Join(python_types, ", "))
+		} else {
+			python_type = python_types[0]
+		}
 
 	case array_regex.MatchString(type_name):
 		matches := array_regex.FindStringSubmatch(type_name)
@@ -257,24 +239,24 @@ func WriteDocspecJson(cacheDir string, commands []MayaCmd) {
 	}
 }
 
-func MergeMayaCmdSlices(dst, src []MayaCmd) []MayaCmd {
+func MergeMayaCmdSlices(synopsisCmds, htmlCmds []MayaCmd) []MayaCmd {
 	mergedCmds := map[string]MayaCmd{}
 
-	for _, dstCmd := range dst {
-		mergedCmds[dstCmd.Name] = dstCmd
+	for _, synopsisCmd := range synopsisCmds {
+		mergedCmds[synopsisCmd.Name] = synopsisCmd
 	}
 
-	for _, srcCmd := range src {
-		if dstCmd, exists := mergedCmds[srcCmd.Name]; exists {
-			if err := mergo.Merge(&dstCmd, srcCmd, mergo.WithOverride); err != nil {
-				msg := fmt.Sprintf("Error merging cmd %s: %v", srcCmd.Name, err)
+	for _, htmlCmd := range htmlCmds {
+		if synopsisCmd, exists := mergedCmds[htmlCmd.Name]; exists {
+			if err := mergo.Merge(&synopsisCmd, htmlCmd, mergo.WithOverride); err != nil {
+				msg := fmt.Sprintf("Error merging cmd %s: %v", htmlCmd.Name, err)
 				log.Printf("%s%s%s", _red_, msg, _reset_)
 				continue
 			}
-			mergedCmds[srcCmd.Name] = dstCmd
+			mergedCmds[htmlCmd.Name] = synopsisCmd
 		} else {
 			// Add cmd from src, if not already present
-			mergedCmds[srcCmd.Name] = srcCmd
+			mergedCmds[htmlCmd.Name] = htmlCmd
 		}
 	}
 
