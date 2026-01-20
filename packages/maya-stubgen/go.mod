@@ -3,7 +3,6 @@ module maya-stubgen
 go 1.25.3
 
 require (
-	dario.cat/mergo v1.0.2
 	github.com/gocolly/colly v1.2.0
 	github.com/spf13/cobra v1.10.1
 )

@@ -3,12 +3,13 @@ package cmds
 import (
 	"encoding/json"
 	"log"
+	"os"
+	"path/filepath"
+
 	"maya-stubgen/stubgen/cmds/html"
 	"maya-stubgen/stubgen/cmds/synopsis"
 	"maya-stubgen/stubgen/cmds/utils"
 	"maya-stubgen/stubgen/writer"
-	"os"
-	"path/filepath"
 )
 
 func Run(outDir string, cacheDir string) {
@@ -43,7 +44,7 @@ func merge_results(cacheDir string) {
 		log.Fatal(err)
 	}
 
-	mergedCmds := utils.MergeMayaCmdSlices(synopsisCmds, htmlCmds)
+	mergedCmds := utils.MergeMayaCmdSlices(&synopsisCmds, &htmlCmds)
 
 	merged_content, err := json.MarshalIndent(mergedCmds, "", "  ")
 	if err != nil {

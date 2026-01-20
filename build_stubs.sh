@@ -19,4 +19,4 @@ uvx ruff format src
 echo "Giving .cache ownership to user..."
 chown 1000:1000 --recursive .cache 
 
-echo "~~ Done ~~"
+echo -e "\033[32m~~ Done ~~\033[0m"

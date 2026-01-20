@@ -6,28 +6,34 @@ import (
 	"log"
 	"os"
 	"path/filepath"
+	"reflect"
 	"regexp"
 	"slices"
 	"strconv"
 	"strings"
-
-	"dario.cat/mergo"
 )
 
 var _red_ = "\033[31m"
 var _yellow_ = "\033[33m"
 var _reset_ = "\033[0m"
 
+// Regex used to parse union types, only used if "on|off" is not present
+// https://regex101.com/r/fjA44d/1
 var union_regex = regexp.MustCompile(`(?:\w+)(\|)(?:\w+)`)
+
+// Regex used to parse array types
+// https://regex101.com/r/JlTdUv/1
 var array_regex = regexp.MustCompile(`(?P<type>\w+)\[(?P<length>\d+|\.\.\.)?\]`)
-var tuple_regex = regexp.MustCompile(`\[\s*(?P<types>\w+)?\s*(?P<types>.*?)\s*\]$`)
-var tuple_token_regex = regexp.MustCompile(`[\w|]+(?:\[[\d.]*\])?|[\[\]]`)
+
+// Regex used to parse tuple types
+// https://regex101.com/r/ZOzAaK/1
+var tuple_regex = regexp.MustCompile(`\[\s*(?P<types>[\w|]+)?\s*(?P<types>.*?)\s*\]$`)
 
 func MelTypeToPython(type_name string) string {
 	python_type := mel_type_to_python_complex(type_name)
 	if python_type == "Unknown" {
-		// msg := fmt.Sprintf("Could not map MEL type to Python: %s", type_name)
-		// log.Printf("%s%s%s", _yellow_, msg, _reset_)
+		msg := fmt.Sprintf("Could not map MEL type to Python: %s", type_name)
+		log.Printf("%s%s%s", _yellow_, msg, _reset_)
 	}
 	return python_type
 }
@@ -84,17 +90,10 @@ func mel_type_to_python_complex(type_name string) string {
 		type_name_cleaned = strings.ReplaceAll(type_name_cleaned, ", ", " ")
 
 		var melTypes []string
-		var index int = 0
 		match_groups := tuple_regex.FindAllStringSubmatch(type_name_cleaned, -1)
 		for _, matches := range match_groups {
 			for _, match := range matches[1:] {
-				if strings.Contains(match, "...") {
-					melTypes[index-1] = fmt.Sprintf("%s...", melTypes[index-1])
-					index++
-					continue
-				}
 				melTypes = append(melTypes, match)
-				index++
 			}
 		}
 		mel_types_str := strings.Join(melTypes, " ")
@@ -239,31 +238,48 @@ func WriteDocspecJson(cacheDir string, commands []MayaCmd) {
 	}
 }
 
-func MergeMayaCmdSlices(synopsisCmds, htmlCmds []MayaCmd) []MayaCmd {
-	mergedCmds := map[string]MayaCmd{}
-
-	for _, synopsisCmd := range synopsisCmds {
-		mergedCmds[synopsisCmd.Name] = synopsisCmd
+func MergeMayaCmdSlices(synopsisCmds, htmlCmds *[]MayaCmd) []MayaCmd {
+	// Make a mergeCmds map and populate it with values from synopsisCmds
+	mergedCmdsMap := map[string]MayaCmd{}
+	for _, synopsisCmd := range *synopsisCmds {
+		mergedCmdsMap[synopsisCmd.Name] = synopsisCmd
 	}
 
-	for _, htmlCmd := range htmlCmds {
-		if synopsisCmd, exists := mergedCmds[htmlCmd.Name]; exists {
-			if err := mergo.Merge(&synopsisCmd, htmlCmd, mergo.WithOverride); err != nil {
-				msg := fmt.Sprintf("Error merging cmd %s: %v", htmlCmd.Name, err)
-				log.Printf("%s%s%s", _red_, msg, _reset_)
-				continue
-			}
-			mergedCmds[htmlCmd.Name] = synopsisCmd
-		} else {
-			// Add cmd from src, if not already present
-			mergedCmds[htmlCmd.Name] = htmlCmd
+	for _, htmlCmd := range *htmlCmds {
+		synopsisCmd, exists := mergedCmdsMap[htmlCmd.Name]
+
+		// Add cmd from src, if not already present
+		if !exists {
+			mergedCmdsMap[htmlCmd.Name] = htmlCmd
+			continue
 		}
+
+		mergedCmd := synopsisCmd
+
+		// Use reflection to iterate over fields
+		htmlReflect := reflect.ValueOf(htmlCmd)
+		mergedReflect := reflect.ValueOf(&mergedCmd).Elem()
+
+		numFields := htmlReflect.NumField()
+
+		// For each field, if the htmlCmd has a non-zero value,
+		// overwrite the previously set synopsisCmd value
+		for i := range numFields {
+			htmlField := htmlReflect.Field(i)
+			mergedField := mergedReflect.Field(i)
+
+			if !htmlField.IsZero() {
+				mergedField.Set(htmlField)
+			}
+		}
+		mergedCmdsMap[htmlCmd.Name] = mergedCmd
 	}
 
-	result := make([]MayaCmd, 0, len(mergedCmds))
-	for _, cmd := range mergedCmds {
-		result = append(result, cmd)
+	// Create slice from the map for returning
+	mergedCmds := make([]MayaCmd, 0, len(mergedCmdsMap))
+	for _, cmd := range mergedCmdsMap {
+		mergedCmds = append(mergedCmds, cmd)
 	}
 
-	return result
+	return mergedCmds
 }

@@ -5,12 +5,13 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
-	"maya-stubgen/stubgen/cmds/utils"
 	"os"
 	"path/filepath"
 	"sort"
 	"strings"
 	"text/template"
+
+	"maya-stubgen/stubgen/cmds/utils"
 )
 
 func render_flag(flag utils.Flag) string {
