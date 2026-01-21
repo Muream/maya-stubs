@@ -7,7 +7,7 @@ def is_doc_valid(doc: str) -> bool:
 
 
 def is_cmd_valid(what_is: str, syntax: str) -> bool:
-    return "No syntax information" not in syntax and what_is == "Command"
+    return "No syntax information" not in syntax and "Command" in what_is
 
 
 def main(cache: Path):
@@ -21,8 +21,11 @@ def main(cache: Path):
     synopsis_cache.mkdir(parents=True, exist_ok=True)
 
     for cmd in cmds.help("*", list=True):
-        doc = cmds.help(cmd)
+        # Skip Runtime Commands that start with a capital letter
+        if cmd[0].isupper():
+            continue
 
+        doc = cmds.help(cmd)
         if not is_doc_valid(doc):
             try:
                 getattr(cmds, cmd)()
@@ -31,7 +34,7 @@ def main(cache: Path):
                 pass
 
         syntax = cmds.help(cmd, syntaxOnly=True).strip()
-        what_is = mel.eval(f"whatIs {cmd}")
+        what_is = mel.eval(f'whatIs "{cmd}"')
         if not is_cmd_valid(what_is, syntax):
             continue
 
@@ -49,7 +52,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "-c",
         "--cache",
-        help="Cache Directory to output the synopsys to",
+        help="Cache Directory to output the synopsis to",
         default=".cache",
         type=Path,
     )

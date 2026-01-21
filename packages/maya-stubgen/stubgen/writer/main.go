@@ -26,6 +26,7 @@ func render_flag(flag utils.Flag) string {
 
 func RenderArgs(positional_flags []utils.Flag, keyword_flags []utils.Flag) string {
 	starArgAdded := false
+	forwardSlashAdded := false
 
 	rendered_flags := []string{}
 	for i, flag := range positional_flags {
@@ -40,21 +41,24 @@ func RenderArgs(positional_flags []utils.Flag, keyword_flags []utils.Flag) strin
 		// If flag has no Name, use default name based on positinal flag index (arg0, arg1, etc...)
 		if argName == "" {
 			argName = fmt.Sprintf("arg%d", i)
-		} else if strings.HasPrefix(argName, "*") {
-			// *args found, indicate for forward slash placement
-			starArgAdded = true
 		}
 
 		// If a *arg exists and there were previous positional args, add a forward slash to indicate previous mandatory args
-		if starArgAdded && i != 0 && len(positional_flags) <= 1 {
+		if starArgAdded && i != 0 && len(positional_flags) >= 1 && !forwardSlashAdded {
 			rendered_flags = append(rendered_flags, "/")
+			forwardSlashAdded = true
 		}
 
 		rendered_flags = append(rendered_flags, fmt.Sprintf("%s: %s", argName, argType))
 	}
 
 	// Add "*" empty positional if there is at least one keyword flag
-	if !starArgAdded && len(positional_flags) == 0 && len(keyword_flags) > 0 {
+	if !starArgAdded && len(keyword_flags) > 0 {
+		// If there are previous positional args, add a forward slash first
+		if len(positional_flags) >= 1 && !forwardSlashAdded {
+			rendered_flags = append(rendered_flags, "/")
+			forwardSlashAdded = true
+		}
 		rendered_flags = append(rendered_flags, "*")
 		starArgAdded = true
 	}

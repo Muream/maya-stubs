@@ -135,14 +135,14 @@ func mel_type_to_python_simple(name string) string {
 		"indexrange":  "int",
 		// bool
 		"boolean": "bool",
+		"":        "bool",
+		"none":    "bool",
 		"on|off":  "bool",
 		// ranges
 		"timerange":  "NullableRange[float]",
 		"floatrange": "Range[float]",
 		// misc
-		"any":  "Any",
-		"":     "None",
-		"none": "None",
+		"any": "Any",
 		// Python fallbacks
 		"str":                  "str",
 		"Callable[..., Any]":   "Callable[..., Any]",
@@ -268,6 +268,7 @@ func MergeMayaCmdSlices(synopsisCmds, htmlCmds *[]MayaCmd) []MayaCmd {
 			htmlField := htmlReflect.Field(i)
 			mergedField := mergedReflect.Field(i)
 
+			// TODO @eeyako: Handle slices (e.g., KeywordArguments) by merging unique values
 			if !htmlField.IsZero() {
 				mergedField.Set(htmlField)
 			}
