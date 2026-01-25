@@ -156,6 +156,7 @@ func parse_header(line string) (command_name string, out_flags []utils.Flag) {
 			// NOTE: maya expects positional only arguments so the name doesn't mean much
 			flag.Name = fmt.Sprintf("arg%d", i)
 		}
+		flag.Value = "..."
 
 		out_flags = append(out_flags, flag)
 	}

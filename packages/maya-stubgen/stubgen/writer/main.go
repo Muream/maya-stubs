@@ -33,6 +33,7 @@ func RenderArgs(positional_flags []utils.Flag, keyword_flags []utils.Flag) strin
 
 		argName := flag.Name
 		argType := flag.Type
+		argVal := flag.Value
 
 		if !starArgAdded {
 			starArgAdded = strings.HasPrefix(argName, "*")
@@ -49,7 +50,12 @@ func RenderArgs(positional_flags []utils.Flag, keyword_flags []utils.Flag) strin
 			forwardSlashAdded = true
 		}
 
-		rendered_flags = append(rendered_flags, fmt.Sprintf("%s: %s", argName, argType))
+		if starArgAdded {
+			rendered_flags = append(rendered_flags, fmt.Sprintf("%s: %s", argName, argType))
+		} else {
+			rendered_flags = append(rendered_flags, fmt.Sprintf("%s: %s = %s", argName, argType, argVal))
+		}
+
 	}
 
 	// Add "*" empty positional if there is at least one keyword flag

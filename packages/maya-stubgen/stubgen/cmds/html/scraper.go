@@ -39,9 +39,9 @@ func ScrapeCmdsDocs(cacheDir string) {
 			ReturnType: "None",
 		}
 		cmdInfo := utils.MayaCmdInfo{
-			Cmd:           &cmd,
-			HasQueryFlags: false,
-			HasEditFlags:  false,
+			Cmd:               &cmd,
+			HasQueryableFlags: false,
+			HasEditableFlags:  false,
 		}
 		ctx.Put("cmd", &cmd)         // attach a fresh struct for this page
 		ctx.Put("cmdInfo", &cmdInfo) // attach a fresh info struct for this page
@@ -134,13 +134,13 @@ func scrapeFlags(h *colly.HTMLElement) {
 		}
 	}
 
-	cmd.KeywordArguments = append(cmd.KeywordArguments, utils.Flag{Name: name, Type: typ, Value: "..."})
+	cmd.KeywordArguments = append(cmd.KeywordArguments, utils.Flag{Name: name, Type: typ})
 
-	if !cmdInfo.HasQueryFlags && hasQueryMode {
-		cmdInfo.HasQueryFlags = true
+	if !cmdInfo.HasQueryableFlags && hasQueryMode {
+		cmdInfo.HasQueryableFlags = true
 	}
-	if !cmdInfo.HasEditFlags && hasEditMode {
-		cmdInfo.HasEditFlags = true
+	if !cmdInfo.HasEditableFlags && hasEditMode {
+		cmdInfo.HasEditableFlags = true
 	}
 }
 

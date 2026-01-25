@@ -7,10 +7,10 @@ import (
 )
 
 type MayaCmdInfo struct {
-	Cmd            *MayaCmd
-	ReturnTypeList []string
-	HasEditFlags   bool
-	HasQueryFlags  bool
+	Cmd               *MayaCmd
+	ReturnTypeList    []string
+	HasEditableFlags  bool
+	HasQueryableFlags bool
 }
 
 type MayaCmd struct {
@@ -30,12 +30,12 @@ func (cmdInfo *MayaCmdInfo) ResolveQueryAndEdit() {
 	var cmd *MayaCmd = cmdInfo.Cmd
 
 	// Add edit and query keyword arguments accordingly
-	if cmdInfo.HasQueryFlags {
-		queryFlag := Flag{Name: "query", Type: "bool", Value: "..."}
+	if cmdInfo.HasQueryableFlags {
+		queryFlag := Flag{Name: "query", Type: "bool"}
 		cmd.KeywordArguments = slices.Insert(cmd.KeywordArguments, 0, queryFlag)
 	}
-	if cmdInfo.HasEditFlags {
-		editFlag := Flag{Name: "edit", Type: "bool", Value: "..."}
+	if cmdInfo.HasEditableFlags {
+		editFlag := Flag{Name: "edit", Type: "bool"}
 		cmd.KeywordArguments = slices.Insert(cmd.KeywordArguments, 0, editFlag)
 	}
 }

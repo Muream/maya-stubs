@@ -6,7 +6,6 @@ import (
 	"log"
 	"os"
 	"path/filepath"
-	"reflect"
 	"regexp"
 	"slices"
 	"strconv"
@@ -18,8 +17,8 @@ var _yellow_ = "\033[33m"
 var _reset_ = "\033[0m"
 
 // Regex used to parse union types, only used if "on|off" is not present
-// https://regex101.com/r/fjA44d/1
-var union_regex = regexp.MustCompile(`(?:\w+)(\|)(?:\w+)`)
+// https://regex101.com/r/F7eUmS/1
+var union_regex = regexp.MustCompile(`(?:[^\|]+)(\|)(?:[^\|]+)`)
 
 // Regex used to parse array types
 // https://regex101.com/r/JlTdUv/1
@@ -254,26 +253,77 @@ func MergeMayaCmdSlices(synopsisCmds, htmlCmds *[]MayaCmd) []MayaCmd {
 			continue
 		}
 
-		mergedCmd := synopsisCmd
+		// Prioritize synopsis positional arguments as they are more reliable than html docs
+		mergedCmd := MayaCmd{
+			Name:                htmlCmd.Name,
+			PositionalArguments: synopsisCmd.PositionalArguments,
+			KeywordArguments:    htmlCmd.KeywordArguments,
+			ReturnType:          htmlCmd.ReturnType,
+		}
 
-		// Use reflection to iterate over fields
-		htmlReflect := reflect.ValueOf(htmlCmd)
-		mergedReflect := reflect.ValueOf(&mergedCmd).Elem()
-
-		numFields := htmlReflect.NumField()
-
-		// For each field, if the htmlCmd has a non-zero value,
-		// overwrite the previously set synopsisCmd value
-		for i := range numFields {
-			htmlField := htmlReflect.Field(i)
-			mergedField := mergedReflect.Field(i)
-
-			// TODO @eeyako: Handle slices (e.g., KeywordArguments) by merging unique values
-			if !htmlField.IsZero() {
-				mergedField.Set(htmlField)
+		// Check if html and synopsis have query flags
+		// If both have it, compare types and combine if they are not the same
+		// (`optionVar` command has a union of str | bool for `query` kwarg)
+		queryFlag := Flag {
+			Name: "query",
+			Type: "bool",
+		}
+		var synopsisQueryFlag Flag
+		hasSynopsisQueryFlag := false
+		for _, kwarg := range synopsisCmd.KeywordArguments {
+			if hasSynopsisQueryFlag {
+				break
+			}
+			if kwarg.Name == "query" {
+				hasSynopsisQueryFlag = true
+				synopsisQueryFlag = kwarg
 			}
 		}
-		mergedCmdsMap[htmlCmd.Name] = mergedCmd
+
+		var htmlQueryFlag Flag
+		hasHtmlQueryFlag := false
+		htmlQueryIndex := -1
+		for i, kwarg := range htmlCmd.KeywordArguments {
+			if hasHtmlQueryFlag {
+				break
+			}
+			if kwarg.Name == "query" {
+				hasHtmlQueryFlag = true
+				htmlQueryFlag = kwarg
+				htmlQueryIndex = i
+			}
+		}
+
+		if hasSynopsisQueryFlag && hasHtmlQueryFlag {
+			if htmlQueryFlag.Type != synopsisQueryFlag.Type {
+				queryFlag.Type = fmt.Sprintf("Union[%s, %s]", htmlQueryFlag.Type, synopsisQueryFlag.Type)
+			}
+			mergedCmd.KeywordArguments[htmlQueryIndex] = queryFlag
+		} else if hasSynopsisQueryFlag && !hasHtmlQueryFlag {
+			mergedCmd.KeywordArguments = slices.Insert(mergedCmd.KeywordArguments, 0, synopsisQueryFlag)
+		}
+
+		// Check if either html or synopsis have edit flag
+		// if any of it does, certify it's first item on the kwargs slice
+		editFlag := Flag{
+			Name: "edit",
+			Type: "bool",
+		}
+		
+		htmlEditFlagIndex := slices.Index(htmlCmd.KeywordArguments, editFlag)
+		if htmlEditFlagIndex > 0 {
+			// It exists and is not the first item in the slice
+			// pop it so it can be inserted at start afterwards
+			mergedCmd.KeywordArguments = append(htmlCmd.KeywordArguments[:htmlEditFlagIndex], htmlCmd.KeywordArguments[htmlEditFlagIndex+1:]...)
+		}
+		
+		// Certify `edit` kwarg is first on the slice
+		synopsisEditFlagIndex := slices.Index(synopsisCmd.KeywordArguments, editFlag)
+		if synopsisEditFlagIndex > 0 || htmlEditFlagIndex > 0 {
+			mergedCmd.KeywordArguments = slices.Insert(mergedCmd.KeywordArguments, 0, editFlag)
+		}
+
+		mergedCmdsMap[mergedCmd.Name] = mergedCmd
 	}
 
 	// Create slice from the map for returning
