@@ -3,7 +3,7 @@ name = "maya-stubs"
 version = "0.4.2"
 description = "Type Annotated Stubs for Autodesk Maya's python APIs"
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.8"
 dependencies = []
 
 [build-system]
@@ -12,3 +12,6 @@ build-backend = "uv_build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/maya-stubs"]
+
+# Force ruff defaults
+[tool.ruff]

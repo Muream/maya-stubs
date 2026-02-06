@@ -12,27 +12,27 @@ import (
 	"strings"
 )
 
-var union_regex = regexp.MustCompile(`(?:\w+)\|(?:\w+)`)
+var _red_ = "\033[31m"
+var _yellow_ = "\033[33m"
+var _reset_ = "\033[0m"
+
+// Regex used to parse union types, only used if "on|off" is not present
+// https://regex101.com/r/F7eUmS/1
+var union_regex = regexp.MustCompile(`(?:[^\|]+)(\|)(?:[^\|]+)`)
+
+// Regex used to parse array types
+// https://regex101.com/r/JlTdUv/1
 var array_regex = regexp.MustCompile(`(?P<type>\w+)\[(?P<length>\d+|\.\.\.)?\]`)
-var tuple_regex = regexp.MustCompile(`\[(?P<types>.+)\]`)
 
-type MayaCmd struct {
-	Name                string `json:"name"`
-	PositionalArguments []Flag `json:"positional_arguments"`
-	KeywordArguments    []Flag `json:"keyword_arguments"`
-	ReturnType          string `json:"return_type"`
-}
-
-type Flag struct {
-	Name  string `json:"name"`
-	Type  string `json:"type"`
-	Value string `json:"value"`
-}
+// Regex used to parse tuple types
+// https://regex101.com/r/ZOzAaK/1
+var tuple_regex = regexp.MustCompile(`\[\s*(?P<types>[\w|]+)?\s*(?P<types>.*?)\s*\]$`)
 
 func MelTypeToPython(type_name string) string {
 	python_type := mel_type_to_python_complex(type_name)
 	if python_type == "Unknown" {
-		log.Printf("Could not map MEL type to Python: %s", type_name)
+		msg := fmt.Sprintf("Could not map MEL type to Python: %s", type_name)
+		log.Printf("%s%s%s", _yellow_, msg, _reset_)
 	}
 	return python_type
 }
@@ -41,8 +41,24 @@ func mel_type_to_python_complex(type_name string) string {
 	var python_type string
 
 	switch {
-	case type_name == "on|off":
-		python_type = mel_type_to_python_simple(type_name)
+	case union_regex.MatchString(type_name) && !strings.Contains(type_name, "on|off"):
+		var mel_types []string
+		match_groups := union_regex.FindAllStringSubmatch(type_name, -1)
+		for _, matches := range match_groups {
+			mel_types = append(mel_types, strings.Split(matches[0], "|")...)
+		}
+		python_types := []string{}
+
+		for _, mel_type := range mel_types {
+			python_types = append(python_types, MelTypeToPython(mel_type))
+		}
+
+		if len(python_types) > 1 {
+			python_type = fmt.Sprintf("Union[%s]", strings.Join(python_types, ", "))
+		} else {
+			python_type = python_types[0]
+		}
+
 	case array_regex.MatchString(type_name):
 		matches := array_regex.FindStringSubmatch(type_name)
 		type_index := array_regex.SubexpIndex("type")
@@ -70,10 +86,16 @@ func mel_type_to_python_complex(type_name string) string {
 		// TODO: Should we delete the double brackets?
 		type_name_cleaned := strings.ReplaceAll(type_name, "[, ", "[")
 		type_name_cleaned = strings.ReplaceAll(type_name_cleaned, ", ]", "]")
+		type_name_cleaned = strings.ReplaceAll(type_name_cleaned, ", ", " ")
 
-		matches := tuple_regex.FindStringSubmatch(type_name_cleaned)
-		types_index := tuple_regex.SubexpIndex("types")
-		mel_types_str := matches[types_index]
+		var melTypes []string
+		match_groups := tuple_regex.FindAllStringSubmatch(type_name_cleaned, -1)
+		for _, matches := range match_groups {
+			for _, match := range matches[1:] {
+				melTypes = append(melTypes, match)
+			}
+		}
+		mel_types_str := strings.Join(melTypes, " ")
 
 		mel_types := parse_tuple_types(mel_types_str)
 
@@ -84,16 +106,6 @@ func mel_type_to_python_complex(type_name string) string {
 		}
 
 		python_type = fmt.Sprintf("Tuple[%s]", strings.Join(python_types, ", "))
-
-	case union_regex.MatchString(type_name):
-		mel_types := strings.Split(type_name, "|")
-		python_types := []string{}
-
-		for _, mel_type := range mel_types {
-			python_types = append(python_types, MelTypeToPython(mel_type))
-		}
-
-		python_type = strings.Join(python_types, " | ")
 
 	default:
 		python_type = mel_type_to_python_simple(type_name)
@@ -110,33 +122,44 @@ func mel_type_to_python_simple(name string) string {
 		"selectionitem": "str",
 		"script":        "Callable[..., Any]",
 		// float
-		"float":  "float",
 		"double": "float",
 		"length": "float",
 		"angle":  "float",
 		"linear": "float",
 		// int
-		"int":         "int",
 		"int64":       "int",
 		"unsignedint": "int",
 		"uint":        "int",
 		"time":        "int",
 		"indexrange":  "int",
 		// bool
-		"":        "bool",
 		"boolean": "bool",
-		"None":    "bool",
+		"":        "bool",
 		"none":    "bool",
 		"on|off":  "bool",
-		"any":     "Any",
 		// ranges
 		"timerange":  "NullableRange[float]",
 		"floatrange": "Range[float]",
+		// misc
+		"any": "Any",
+		// Python fallbacks
+		"str":                  "str",
+		"Callable[..., Any]":   "Callable[..., Any]",
+		"float":                "float",
+		"int":                  "int",
+		"bool":                 "bool",
+		"NullableRange[float]": "NullableRange[float]",
+		"Range[float]":         "Range[float]",
+		"Any":                  "Any",
+		"None":                 "None",
 	}
 	value, ok := type_map[strings.ToLower(name)]
 	if !ok {
-		value = "Unknown"
-		value = name
+		if !strings.Contains(name, "...") {
+			value = "Unknown"
+		} else {
+			value = name
+		}
 	}
 	return value
 }
@@ -212,4 +235,102 @@ func WriteDocspecJson(cacheDir string, commands []MayaCmd) {
 	if err := os.WriteFile(cmdsCachefile, data, os.ModePerm); err != nil {
 		log.Fatal("Error writing file:", err)
 	}
+}
+
+func MergeMayaCmdSlices(synopsisCmds, htmlCmds *[]MayaCmd) []MayaCmd {
+	// Make a mergeCmds map and populate it with values from synopsisCmds
+	mergedCmdsMap := map[string]MayaCmd{}
+	for _, synopsisCmd := range *synopsisCmds {
+		mergedCmdsMap[synopsisCmd.Name] = synopsisCmd
+	}
+
+	for _, htmlCmd := range *htmlCmds {
+		synopsisCmd, exists := mergedCmdsMap[htmlCmd.Name]
+
+		// Add cmd from src, if not already present
+		if !exists {
+			mergedCmdsMap[htmlCmd.Name] = htmlCmd
+			continue
+		}
+
+		// Prioritize synopsis positional arguments as they are more reliable than html docs
+		mergedCmd := MayaCmd{
+			Name:                htmlCmd.Name,
+			PositionalArguments: synopsisCmd.PositionalArguments,
+			KeywordArguments:    htmlCmd.KeywordArguments,
+			ReturnType:          htmlCmd.ReturnType,
+		}
+
+		// Check if html and synopsis have query flags
+		// If both have it, compare types and combine if they are not the same
+		// (`optionVar` command has a union of str | bool for `query` kwarg)
+		queryFlag := Flag {
+			Name: "query",
+			Type: "bool",
+		}
+		var synopsisQueryFlag Flag
+		hasSynopsisQueryFlag := false
+		for _, kwarg := range synopsisCmd.KeywordArguments {
+			if hasSynopsisQueryFlag {
+				break
+			}
+			if kwarg.Name == "query" {
+				hasSynopsisQueryFlag = true
+				synopsisQueryFlag = kwarg
+			}
+		}
+
+		var htmlQueryFlag Flag
+		hasHtmlQueryFlag := false
+		htmlQueryIndex := -1
+		for i, kwarg := range htmlCmd.KeywordArguments {
+			if hasHtmlQueryFlag {
+				break
+			}
+			if kwarg.Name == "query" {
+				hasHtmlQueryFlag = true
+				htmlQueryFlag = kwarg
+				htmlQueryIndex = i
+			}
+		}
+
+		if hasSynopsisQueryFlag && hasHtmlQueryFlag {
+			if htmlQueryFlag.Type != synopsisQueryFlag.Type {
+				queryFlag.Type = fmt.Sprintf("Union[%s, %s]", htmlQueryFlag.Type, synopsisQueryFlag.Type)
+			}
+			mergedCmd.KeywordArguments[htmlQueryIndex] = queryFlag
+		} else if hasSynopsisQueryFlag && !hasHtmlQueryFlag {
+			mergedCmd.KeywordArguments = slices.Insert(mergedCmd.KeywordArguments, 0, synopsisQueryFlag)
+		}
+
+		// Check if either html or synopsis have edit flag
+		// if any of it does, certify it's first item on the kwargs slice
+		editFlag := Flag{
+			Name: "edit",
+			Type: "bool",
+		}
+		
+		htmlEditFlagIndex := slices.Index(htmlCmd.KeywordArguments, editFlag)
+		if htmlEditFlagIndex > 0 {
+			// It exists and is not the first item in the slice
+			// pop it so it can be inserted at start afterwards
+			mergedCmd.KeywordArguments = append(htmlCmd.KeywordArguments[:htmlEditFlagIndex], htmlCmd.KeywordArguments[htmlEditFlagIndex+1:]...)
+		}
+		
+		// Certify `edit` kwarg is first on the slice
+		synopsisEditFlagIndex := slices.Index(synopsisCmd.KeywordArguments, editFlag)
+		if synopsisEditFlagIndex > 0 || htmlEditFlagIndex > 0 {
+			mergedCmd.KeywordArguments = slices.Insert(mergedCmd.KeywordArguments, 0, editFlag)
+		}
+
+		mergedCmdsMap[mergedCmd.Name] = mergedCmd
+	}
+
+	// Create slice from the map for returning
+	mergedCmds := make([]MayaCmd, 0, len(mergedCmdsMap))
+	for _, cmd := range mergedCmdsMap {
+		mergedCmds = append(mergedCmds, cmd)
+	}
+
+	return mergedCmds
 }

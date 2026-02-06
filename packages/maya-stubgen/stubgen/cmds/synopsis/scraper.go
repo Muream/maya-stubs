@@ -80,7 +80,7 @@ func ScrapeCmdsSynopsis(cacheDir string) {
 
 	for _, file := range files {
 		cmd := scrapeCmdSynopsis(file)
-		cmd.ReturnType = "Unknown"
+		cmd.ReturnType = "None"
 		log.Println("[Synopsis Scraper] Scraping", cmd.Name)
 		results = append(results, cmd)
 	}
@@ -110,7 +110,9 @@ func scrapeCmdSynopsis(file string) utils.MayaCmd {
 
 		case synopsis_flag_regex.MatchString(line):
 			flag := parse_flag(line)
-			cmd.KeywordArguments = append(cmd.KeywordArguments, flag)
+			if !slices.Contains(cmd.KeywordArguments, flag) {
+				cmd.KeywordArguments = append(cmd.KeywordArguments, flag)
+			}
 		default:
 		}
 	}
@@ -154,6 +156,7 @@ func parse_header(line string) (command_name string, out_flags []utils.Flag) {
 			// NOTE: maya expects positional only arguments so the name doesn't mean much
 			flag.Name = fmt.Sprintf("arg%d", i)
 		}
+		flag.Value = "..."
 
 		out_flags = append(out_flags, flag)
 	}
@@ -173,6 +176,9 @@ func parse_flag(line string) (flag utils.Flag) {
 	types_index := synopsis_flag_regex.SubexpIndex("types")
 	types := strings.TrimSpace(flags_match[types_index])
 
+	multi_use_index := synopsis_flag_regex.SubexpIndex("multi_use")
+	multi_use := strings.TrimSpace(flags_match[multi_use_index])
+
 	arg_type := "Unknown"
 	switch {
 
@@ -185,6 +191,10 @@ func parse_flag(line string) (flag utils.Flag) {
 	default:
 		arg_type = utils.MelTypeToPython(types)
 
+	}
+
+	if multi_use != "" {
+		arg_type = fmt.Sprintf("Multiuse[%s]", arg_type)
 	}
 
 	if slices.Contains(keywords, long_name) {

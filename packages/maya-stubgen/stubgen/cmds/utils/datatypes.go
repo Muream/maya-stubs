@@ -1,0 +1,65 @@
+package utils
+
+import (
+	"fmt"
+	"slices"
+	"strings"
+)
+
+type MayaCmdInfo struct {
+	Cmd               *MayaCmd
+	ReturnTypeList    []string
+	HasEditableFlags  bool
+	HasQueryableFlags bool
+}
+
+type MayaCmd struct {
+	Name                string `json:"name"`
+	PositionalArguments []Flag `json:"positional_arguments"`
+	KeywordArguments    []Flag `json:"keyword_arguments"`
+	ReturnType          string `json:"return_type"`
+}
+
+type Flag struct {
+	Name  string `json:"name"`
+	Type  string `json:"type"`
+	Value string `json:"value"`
+}
+
+func (cmdInfo *MayaCmdInfo) ResolveQueryAndEdit() {
+	var cmd *MayaCmd = cmdInfo.Cmd
+
+	// Add edit and query keyword arguments accordingly
+	if cmdInfo.HasQueryableFlags {
+		queryFlag := Flag{Name: "query", Type: "bool"}
+		cmd.KeywordArguments = slices.Insert(cmd.KeywordArguments, 0, queryFlag)
+	}
+	if cmdInfo.HasEditableFlags {
+		editFlag := Flag{Name: "edit", Type: "bool"}
+		cmd.KeywordArguments = slices.Insert(cmd.KeywordArguments, 0, editFlag)
+	}
+}
+
+func (cmdInfo *MayaCmdInfo) ResolveReturnTypes() {
+	var cmd *MayaCmd = cmdInfo.Cmd
+
+	slices.Sort(cmdInfo.ReturnTypeList)
+	cmdInfo.ReturnTypeList = slices.Compact(cmdInfo.ReturnTypeList)
+
+	// Convert individual return types to python to avoid duplicates (e.g.: name, string => str, str)
+	pyList := []string{}
+	for _, typ := range cmdInfo.ReturnTypeList {
+		pyList = append(pyList, MelTypeToPython(typ))
+	}
+	slices.Sort(pyList)
+	pyList = slices.Compact(pyList)
+
+	// Final clean conversion without duplicates
+	if len(pyList) > 1 {
+		cmd.ReturnType = fmt.Sprintf("Union[%s]", strings.Join(pyList, ", "))
+	} else if len(pyList) == 1 {
+		cmd.ReturnType = pyList[0]
+	} else {
+		cmd.ReturnType = "None"
+	}
+}

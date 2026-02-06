@@ -3,13 +3,13 @@ package cmds
 import (
 	"encoding/json"
 	"log"
-	"maya-stubgen/stubgen/cmds/html"
-	"maya-stubgen/stubgen/cmds/synopsis"
-	"maya-stubgen/stubgen/writer"
 	"os"
 	"path/filepath"
 
-	"dario.cat/mergo"
+	"maya-stubgen/stubgen/cmds/html"
+	"maya-stubgen/stubgen/cmds/synopsis"
+	"maya-stubgen/stubgen/cmds/utils"
+	"maya-stubgen/stubgen/writer"
 )
 
 func Run(outDir string, cacheDir string) {
@@ -26,36 +26,33 @@ func merge_results(cacheDir string) {
 	var err error
 
 	synopsis_file := filepath.Join(cacheDir, "docspec", "synopsis", "cmds.json")
-	html_file := filepath.Join(cacheDir, "docspec", "synopsis", "cmds.json")
+	html_file := filepath.Join(cacheDir, "docspec", "html", "cmds.json")
 
 	synopsis_content, err := os.ReadFile(synopsis_file)
 	html_content, err := os.ReadFile(html_file)
 
-	var a []any
-	var b []any
+	var synopsisCmds []utils.MayaCmd
+	var htmlCmds []utils.MayaCmd
 
-	err = json.Unmarshal(synopsis_content, &a)
+	err = json.Unmarshal(synopsis_content, &synopsisCmds)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	err = json.Unmarshal(html_content, &b)
+	err = json.Unmarshal(html_content, &htmlCmds)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	err = mergo.Merge(&a, b, mergo.WithOverride)
-	if err != nil {
-		log.Fatal(err)
-	}
+	mergedCmds := utils.MergeMayaCmdSlices(&synopsisCmds, &htmlCmds)
 
-	merged_content, err := json.Marshal(a)
+	merged_content, err := json.MarshalIndent(mergedCmds, "", "  ")
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	merged_file := filepath.Join(cacheDir, "docspec", "merged", "cmds.json")
-	err = os.MkdirAll(filepath.Dir(merged_file), 0750)
+	err = os.MkdirAll(filepath.Dir(merged_file), 0755)
 	if err != nil {
 		log.Fatal(err)
 	}

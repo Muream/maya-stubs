@@ -1,8 +1,6 @@
-FROM mottosso/maya:2026
+FROM mottosso/maya:2026 AS installs_stage
 
-# RUN dnf update -y
-
-# install go
+# Install go
 RUN dnf install -y golang
 ENV GOPATH="/root/go"
 ENV GOBIN="/root/go/bin"
@@ -14,25 +12,31 @@ RUN go1.25.4 download
 ADD https://astral.sh/uv/install.sh /uv-installer.sh
 RUN sh /uv-installer.sh && rm /uv-installer.sh
 ENV PATH=:"$PATH:/root/.local/bin/"
+RUN uv tool install ruff@latest
+
+
+# Setup project
+FROM installs_stage AS project_setup_stage
 
 # Setup folder structure
 RUN mkdir /maya-stubs
 WORKDIR /maya-stubs
 RUN mkdir src
 
-# Copy all the relevant files from the host
+# Copy go project the relevant files from the host
 COPY packages packages
 COPY go.work go.work
-COPY build_stubs.sh build_stubs.sh
-RUN chmod +x build_stubs.sh
-
-# Get the synopsis from mayapy
-RUN mayapy packages/maya-stubgen/scripts/get_synopsis.py
 
 # Download go dependencies
 RUN go1.25.4 work sync
 
-# build the stubgen binary
+# Build and install the stubgen binary
 RUN go1.25.4 install -C packages/maya-stubgen
 
+
+# Setup project
+FROM project_setup_stage AS build_stubs_stage
+
+# Copy build script and run it
+COPY build_stubs.sh build_stubs.sh
 CMD ["sh", "build_stubs.sh"]

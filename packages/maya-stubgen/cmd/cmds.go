@@ -1,9 +1,11 @@
 package cmd
 
 import (
-	"fmt"
-	"github.com/spf13/cobra"
+	"log"
+
 	"maya-stubgen/stubgen/cmds"
+
+	"github.com/spf13/cobra"
 )
 
 // cmdsCmd represents the cmds command
@@ -20,12 +22,12 @@ to quickly create a Cobra application.`,
 
 		outPath, err := cmd.Flags().GetString("out")
 		if err != nil {
-			fmt.Errorf("Could not read out path: %s", err)
+			log.Fatalf("Could not read out path: %s", err)
 		}
 		cachePath, err := cmd.Flags().GetString("cache")
 
 		if err != nil {
-			fmt.Errorf("Could not read out path: %s", err)
+			log.Fatalf("Could not read cache path: %s", err)
 		}
 
 		cmds.Run(outPath, cachePath)
